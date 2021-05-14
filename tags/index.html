@@ -437,7 +437,7 @@
       <!-- 标签云 -->
       <div id='tag_cloud' class="tags">
         
-        <a href="#Java" title="Java" rel="28">Java</a>
+        <a href="#Java" title="Java" rel="29">Java</a>
         
         <a href="#面试题" title="面试题" rel="1">面试题</a>
         
@@ -488,6 +488,8 @@
         <a href="#Hexo" title="Hexo" rel="2">Hexo</a>
         
         <a href="#jsdelivr" title="jsdelivr" rel="1">jsdelivr</a>
+        
+        <a href="#JVM" title="JVM" rel="1">JVM</a>
         
         <a href="#Mac" title="Mac" rel="1">Mac</a>
         
@@ -894,6 +896,16 @@
           <a href="/2020/SpringBoot整合ELK实现日志收集/">
             <h2 class="post-title">
               SpringBoot整合ELK实现日志收集
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/Java类加载/">
+            <h2 class="post-title">
+              Java类加载
             </h2>
             
           </a>
@@ -2072,6 +2084,23 @@
             <h3 class="post-subtitle">
               GitHub静态资源访问免费CDN提速，以及使用Hexo-theme-livemylife主题后，
             </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="JVM">
+          <span class="tag-text">JVM</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2020/Java类加载/">
+            <h2 class="post-title">
+              Java类加载
+            </h2>
             
           </a>
         </div>
@@ -3523,5 +3552,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>
