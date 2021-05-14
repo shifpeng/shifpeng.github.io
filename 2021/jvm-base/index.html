@@ -582,6 +582,7 @@ ps：0X表示16进制</p>
 </li>
 <li>Initlalizing：静态变量赋值为<strong>初始值</strong></li>
 </ul>
+<p><img src="/2021/jvm-base/image-20210514152056010.png" alt="image-20210514152056010"></p>
 <p>JVM有一个类加载器的层次，这个类加载器本身就是一个普通的class,类加载器的层次加载不同的class，jvm中所有的class都是被类加载器加载到内存中的，这个类加载器就叫做<code>ClassLoader</code></p>
 <p><img src="/2021/jvm-base/image-20210513103710126.png" alt="image-20210513103710126"></p>
 <blockquote>
@@ -1523,20 +1524,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 </html>
