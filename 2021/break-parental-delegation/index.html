@@ -140,10 +140,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://www.shifpeng.cn/archives/4/">
+  <link rel="canonical" href="https://www.shifpeng.cn/2021/break-parental-delegation/">
   <title>
     
-      Steven | java
+      （二）打破双亲委派？ - Steven | java
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -350,18 +350,18 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
-      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io');
-      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
     }
     header.intro-header {
-       /*config*/
-        background-image: var(--intro-header-background-image-url-home);
-        /* background-image: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg'); */
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg'); */
       
     }
 
@@ -384,10 +384,44 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="site-heading">
-            <h1>石福鹏</h1>
-            <!--<hr class="small">-->
-            <span class="subheading">的个人博客</span>
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+              
+              <a class="tag" href="/tags/#JVM" title="JVM">JVM</a>
+              
+            </div>
+            <h1>（二）打破双亲委派？</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by Steven on
+              2021-05-12
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">4</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">1.2k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
           </div>
           
         </div>
@@ -428,860 +462,327 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-		<!-- Main Content -->
-<div class="container">
-  <div class="row">
-    
-
-    <!-- USE SIDEBAR -->
-    <!-- Post Container -->
-    <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-
-      <!-- Main Content -->
-
-
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2020/Hexo博客搭建-博客上传后访问页面返回404问题排查/">
-    <h2 class="post-title">
-      Hexo博客搭建-博客上传后访问页面返回404问题排查
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      前言
-给自己的Mac重新做了系统之后，按照正常的流程，安装nvm（安装的最新的版本）,安装node，然后安装hexo,一切都很顺利的进行，然后在之前已经备份好的博客源文件的根目录执行hexo g、hexo d，然后去访问博客发现404了
-
-问题发现
-查看了下_config.yml配置文件，没啥问题，这些应该没啥问题，因为源码都是之前一直用鱼发布博客用的，没做过什么修改，所以肯定没问题了，就上......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by 石福鹏 on
-    2020-10-28
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#博客" title="博客">博客</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2020/【每日一题】如何解决ABA问题？为什么能解决？解决思路是什么？/">
-    <h2 class="post-title">
-      【每日一题】如何解决ABA问题？为什么能解决？解决思路是什么？
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      问题分析
-aba问题出现在cas机制的操作中，cas 比较并更新，比如说cas(期望的值，更新的值)，如果发现变量是期望的值，那么就将该值替换为更新的值。
-这里面存在的问题就在于，如果期望的值中途被人改掉了，但是后面又被改了回来， cas机制不能发现这个过程，也是发现期望值其实中间发生过变动。
-解决方式
-给数据加上版本号或者时间戳，比较期望值的时候 比较的是值和版本号或者时间戳，即使值相同，......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by 石福鹏 on
-    2020-10-15
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#每日一题" title="每日一题">每日一题</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2020/【每日一题】Java-多线程中notify和notifyall的区别是/">
-    <h2 class="post-title">
-      【每日一题】Java 多线程中notify和notifyall的区别是?
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      notify
-notify唤醒在此对象监视器上等待的单个线程。
-如果所有线程都在此对象上等待，则会选择唤醒其中一个线程。选择是任意性的，并在对实现做出决定时发生。线程通过调用其中一个 wait 方法，在对象的监视器上等待。 直到当前线程放弃此对象上的锁定，才能继续执行被唤醒的线程。被唤醒的线程将以常规方式与在该对象上主动同步的其他所有线程进行竞争；
-例如，唤醒的线程在作为锁定此对象的下一个线......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by 石福鹏 on
-    2020-10-14
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#每日一题" title="每日一题">每日一题</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2020/macOS-Catalina-已损坏无法打开解决办法/">
-    <h2 class="post-title">
-      macOS Catalina 已损坏无法打开解决办法
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      App 在macOS Catalina下提示已损坏无法打开解决办法：
-
-
-打开终端；
-
-
-输入以下命令，回车；
-1sudo xattr -d com.apple.quarantine /Applications/xxxx.app
-注意：/Applications/xxxx.app 换成你的App路径（推荐直接将.app文件拖入终端中自动生成路径，以防空格等转义字符手动复制或输入出现错误）
-
-......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by 石福鹏 on
-    2020-10-13
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Mac" title="Mac">Mac</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2020/【每日一题】形成数据库死锁的原因有哪些？如何能避免死锁/">
-    <h2 class="post-title">
-      【每日一题】形成数据库死锁的原因有哪些？如何能避免死锁
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      1、什么是死锁
-会话A持有一行数据的锁，会话B持有另一行数据的锁。 A申请获取B持有的那个锁，但是被B占用着，所以A等待。 B申请获取A持有的那个锁，但是被A占用着，所以B等待。
-2、死锁的本质
-两个或多个会话/线程，本身拥有一个锁，但是去互相申请对方拥有的锁，导致都在锁等待，即为死锁。索引失效会造成表锁，比死锁更严重
-3、举例
-在RR隔离级别下，数据库有两条数据id=1和id=10。 且i......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by 石福鹏 on
-    2020-09-24
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#每日一题" title="每日一题">每日一题</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2020/【每日一题】聊一聊线上oom的排查方案？/">
-    <h2 class="post-title">
-      【每日一题】聊一聊线上oom的排查方案？
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      oom，先说排查思路，oom是内存溢出，则有
-
-堆内存区域溢出
-方法区或者元数据区溢出
-非堆空间(DirectMemory)溢出
-
-三种场景的情况。 首先通过溢出的异常报错，先确认是哪种类型。
-
-如果确认是堆内存区域溢出，可能原因是内存泄露 或者堆空间回收的速度赶不上对象创建的速度，排查方案就是看gc日志，如果是gc频率很高 但是回收对象却很少 就要怀疑是内存泄露，这个时候看dump日志 找......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by 石福鹏 on
-    2020-09-23
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#每日一题" title="每日一题">每日一题</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2020/给自己，也给27岁以上的年轻人的财务建议/">
-    <h2 class="post-title">
-      给自己，也给27岁以上的年轻人的财务建议
-    </h2>
-    <h3 class="post-subtitle">
-      推特上一位网友问到：“27岁以上的网友们，请给出你们觉得最有用的财务建议，金融知识是很重要的！”
-    </h3>
-    <div class="post-content-preview">
-      2020年终于结束，对于职场的年轻人，尤其对于刚步入职场的年轻人来说，太难了，赚钱难，稍有不慎就丢了工作，各种开销，压力巨大，活下来就已经精疲力尽了。
-国外其实更是乱的一锅粥，之前在看川建国同志的推特的时候，偶尔看到有个国外网友的转推让我翻了好久，虽然是19年的，但是分享一下，看看对我们自己有没有用
-推特上一位网友问到：“27岁以上的网友们，请给出你们觉得最有用的财务建议，金融知识是很重要的......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by 石福鹏 on
-    2020-09-22
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#生活笔记" title="生活笔记">生活笔记</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2020/企业常用开发规范/">
-    <h2 class="post-title">
-      企业常用开发规范
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      分层领域模型规约：
-
-DO（Data Object）：与数据库表结构一一对应，通过 DAO 层向上传输数据源对象。
-DTO（Data Transfer Object）：数据传输对象，Service 和 Manager 向外传输的对象。
-BO（Business Object）：业务对象。可以由 Service 层输出的封装业务逻辑的对象。
-Query：数据查询对象，各层接收上层的查询请求。注：......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Steven on
-    2020-09-17
-  </p>
-  <div class="tags">
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2020/企业常用Log规范/">
-    <h2 class="post-title">
-      企业常用Log规范
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      最近在帮团队整理一系列开发规范，发现日志规范这块内容大家之前一直都没有重视过。打日志永远看心情，没有特别规定什么样的信息该记录日志，什么样的信息不该记录。
-并且，对于后面的日志分析等基本上可以说是寸步难行。
-
-logback-spring.xml sample：（需要替换appName）
-1234567891011121314151617181920212223242526272829303......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by 石福鹏 on
-    2020-09-17
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Log" title="Log">Log</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2020/企业常用Mysql规范/">
-    <h2 class="post-title">
-      企业常用Mysql规范
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      1、命名规范
-
-所有表名库名字段索引名均小写字母，用下划线分割
-MySQL所有均忽略大小写设置lower_case_table_names为1.
-库名、表名、字段名最大支持64个字符，为了统一规范、易于辨识以及减少传输量,禁止超过32个字符
-库名、表名、字段名禁止使用MySQL保留字
-库名、表名、字段名必须见名知意。命名与业务、产品线等相关联
-临时库、表名必须以tmp为前缀，并以日期为后缀。......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Steven on
-    2020-09-17
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Mysql" title="Mysql">Mysql</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-
-  <!-- Pager -->
-  <ul class="pager">
-    
-    <li class="previous">
-      <a href="/archives/3/">&larr; 上一页</a>
-    </li>
-    
-    
-    <li class="next">
-      <a href="/archives/5/">下一页 &rarr;</a>
-    </li>
-    
-  </ul>
-
-
-      <!-- 如果开启评论功能 -->
-      
-    </div>
-
-    <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Visitors -->
-<h5><a href="/">来访者</a></h5>
-
-<div class="widget">
-  <span>
-    Viewed <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Times
-  </span>
-  <br />
-  <span>
-    <b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Visitors In Total
-  </span>
-</div>
-
-
-        <hr>
-    
-        <!-- Featured Tags -->
-
-<section>
-  <h5><a href="/tags/">特色标签</a></h5>
-  <div class="tags">
-    
-    
-    <a href="/tags/#Java" title="Java" rel="28">Java</a>
-    
-    
-    
-    <a href="/tags/#面试题" title="面试题" rel="1">面试题</a>
-    
-    
-    
-    <a href="/tags/#Docker" title="Docker" rel="4">Docker</a>
-    
-    
-    
-    <a href="/tags/#Elasticsearch" title="Elasticsearch" rel="3">Elasticsearch</a>
-    
-    
-    
-    <a href="/tags/#GitHub" title="GitHub" rel="3">GitHub</a>
-    
-    
-    
-    <a href="/tags/#博客" title="博客" rel="1">博客</a>
-    
-    
-    
-    <a href="/tags/#Java基础查漏补缺" title="Java基础查漏补缺" rel="5">Java基础查漏补缺</a>
-    
-    
-    
-    <a href="/tags/#XML" title="XML" rel="2">XML</a>
-    
-    
-    
-    <a href="/tags/#Linux" title="Linux" rel="3">Linux</a>
-    
-    
-    
-    <a href="/tags/#Nginx" title="Nginx" rel="2">Nginx</a>
-    
-    
-    
-    <a href="/tags/#小工具" title="小工具" rel="1">小工具</a>
-    
-    
-    
-    <a href="/tags/#PHP" title="PHP" rel="3">PHP</a>
-    
-    
-    
-    <a href="/tags/#Yii2" title="Yii2" rel="2">Yii2</a>
-    
-    
-    
-    <a href="/tags/#Redis" title="Redis" rel="9">Redis</a>
-    
-    
-    
-    <a href="/tags/#重学Redis" title="重学Redis" rel="9">重学Redis</a>
-    
-    
-    
-    <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶" rel="19">架构+大数据进阶</a>
-    
-    
-    
-    <a href="/tags/#科学上网" title="科学上网" rel="3">科学上网</a>
-    
-    
-    
-    <a href="/tags/#VPN" title="VPN" rel="2">VPN</a>
-    
-    
-    
-    <a href="/tags/#shadowsocks" title="shadowsocks" rel="1">shadowsocks</a>
-    
-    
-    
-    <a href="/tags/#Python" title="Python" rel="1">Python</a>
-    
-    
-    
-    <a href="/tags/#爬虫" title="爬虫" rel="1">爬虫</a>
-    
-    
-    
-    <a href="/tags/#PhantomJS" title="PhantomJS" rel="1">PhantomJS</a>
-    
-    
-    
-    <a href="/tags/#Selenim" title="Selenim" rel="1">Selenim</a>
-    
-    
-    
-    <a href="/tags/#CDN加速" title="CDN加速" rel="1">CDN加速</a>
-    
-    
-    
-    <a href="/tags/#Hexo" title="Hexo" rel="2">Hexo</a>
-    
-    
-    
-    <a href="/tags/#jsdelivr" title="jsdelivr" rel="1">jsdelivr</a>
-    
-    
-    
-    <a href="/tags/#JVM" title="JVM" rel="3">JVM</a>
-    
-    
-    
-    <a href="/tags/#Mac" title="Mac" rel="1">Mac</a>
-    
-    
-    
-    <a href="/tags/#Nodejs" title="Nodejs" rel="1">Nodejs</a>
-    
-    
-    
-    <a href="/tags/#Zookeeper" title="Zookeeper" rel="2">Zookeeper</a>
-    
-    
-    
-    <a href="/tags/#中间件" title="中间件" rel="3">中间件</a>
-    
-    
-    
-    <a href="/tags/#每日一题" title="每日一题" rel="4">每日一题</a>
-    
-    
-    
-    <a href="/tags/#Log" title="Log" rel="1">Log</a>
-    
-    
-    
-    <a href="/tags/#Mysql" title="Mysql" rel="4">Mysql</a>
-    
-    
-    
-    <a href="/tags/#Postman" title="Postman" rel="2">Postman</a>
-    
-    
-    
-    <a href="/tags/#OSS" title="OSS" rel="2">OSS</a>
-    
-    
-    
-    <a href="/tags/#签名" title="签名" rel="1">签名</a>
-    
-    
-    
-    <a href="/tags/#代理" title="代理" rel="1">代理</a>
-    
-    
-    
-    <a href="/tags/#集成开发环境" title="集成开发环境" rel="1">集成开发环境</a>
-    
-    
-    
-    <a href="/tags/#Kibana" title="Kibana" rel="2">Kibana</a>
-    
-    
-    
-    <a href="/tags/#集群" title="集群" rel="2">集群</a>
-    
-    
-    
-    <a href="/tags/#k8s" title="k8s" rel="1">k8s</a>
-    
-    
-    
-    <a href="/tags/#架构" title="架构" rel="5">架构</a>
-    
-    
-    
-    <a href="/tags/#大数据" title="大数据" rel="5">大数据</a>
-    
-    
-    
-    <a href="/tags/#从网络到分布式" title="从网络到分布式" rel="5">从网络到分布式</a>
-    
-    
-    
-    <a href="/tags/#Kafka" title="Kafka" rel="1">Kafka</a>
-    
-    
-    
-    <a href="/tags/#深度好文" title="深度好文" rel="2">深度好文</a>
-    
-    
-    
-    <a href="/tags/#数据结构" title="数据结构" rel="1">数据结构</a>
-    
-    
-    
-    <a href="/tags/#工具类" title="工具类" rel="2">工具类</a>
-    
-    
-    
-    <a href="/tags/#生活笔记" title="生活笔记" rel="1">生活笔记</a>
-    
-    
-    
-    <a href="/tags/#源码" title="源码" rel="1">源码</a>
-    
-    
-    
-    <a href="/tags/#源码解析" title="源码解析" rel="1">源码解析</a>
-    
-    
-    
-    <a href="/tags/#Websocket" title="Websocket" rel="1">Websocket</a>
-    
-    
-    
-    <a href="/tags/#ELK" title="ELK" rel="1">ELK</a>
-    
-    
-    
-    <a href="/tags/#多线程与高并发" title="多线程与高并发" rel="1">多线程与高并发</a>
-    
-    
-  </div>
-</section>
-
-
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-  <h5><a href="/about/">关于自己</a></h5>
-  <div class="short-about">
-
-    
-    <img id="avatar_pic" src="/img/avatar/IMG_0001.jpg" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);" />
-    
-
-    
-    <p>人最大的修养就是知人不评人</p>
-    
-
-    <!-- SNS Link -->
-    <ul class="list-inline">
-      
-
-      
-      <li>
-        <a target="_blank" href="https://github.com/shifpeng">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-      <li>
-        <a target="_blank" href="https://www.zhihu.com/people/Steven0T">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa  fa-stack-1x fa-inverse">知</i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-      <li>
-        <a target="_blank" href="http://weibo.com/Steven0T">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-    </ul>
-  </div>
-</section>
-
-        <hr>
-    
-        <!-- RECENT POSTS -->
-
-<h5><a href="/">最近博文</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="../../2021/jvm-tuning-01/">
-      <li>（三）JVM内存模型</li>
-    </a>
-    
-    <a href="../../2021/break-parental-delegation/">
-      <li>（二）打破双亲委派？</li>
-    </a>
-    
-    <a href="../../2021/jvm-base/">
-      <li>（一）JVM入门以及Class文件架构、类加载器</li>
-    </a>
-    
-    <a href="../../2021/zookeeper-principle/">
-      <li>Zookeeper原理知识</li>
-    </a>
-    
-    <a href="../../2021/zookeeper-base/">
-      <li>Zookeeper基础知识</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
-        <!-- Friends Blog -->
-
-<h5><a href="/">链友</a></h5>
-<ul class="list-inline">
-  
-  <li><a href="https://cuiqingcai.com/" target="_blank">静 觅 崔庆才</a></li>
-  
-  <li><a href="http://www.52nlp.cn/" target="_blank">我爱自然语言处理</a></li>
-  
-  <li><a href="https://www.cnblogs.com/Steven-shi/" target="_blank">博客园 石福鹏</a></li>
-  
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>上篇文章中说到，双亲委派是在<code>ClassLoader</code>类的<code>loadClass()</code>方法中实现的，因此想打破，那就是</p>
+<ol>
+<li>
+<p>重写<code>loadClass()</code></p>
+</li>
+<li>
+<p>打破过双亲委派机制的情况(周志明写的《深入理解java虚拟机》中有说)</p>
+<ul>
+<li>
+<p><strong>JDK1.2之前，自定义<code>ClassLoader</code>都必须重写<code>loadClass()</code>方法</strong></p>
+</li>
+<li>
+<p><strong>可以在一个线程设定自己线程上下文的<code>ClassLoader</code></strong><br>
+<code>ThreadContextClassLoader</code>可以实现基础类调用实现类代码，通过<code>thread.setContentClassLoader</code>指定<br>
+<img src="/2021/break-parental-delegation/image-20210514183843994.png" alt="image-20210514183843994"></p>
+</li>
+<li>
+<p><strong>热启动，热部署</strong><br>
+<code>osgi</code>、<code>tomcat</code>都有自己的模块指定<code>ClassLoader</code>(可以加载同一类库的不同版本)</p>
+<blockquote>
+<p>写一个web应用，扔到一个<code>Tomcat</code>指定的目录下，启动之后类加载进来了，但是如果有两个不同的web应用，是可以同时被加载的，如果web应用01加载了一个类叫A(v1)，web应用01也加载了一个类A(v2)， A的版本不同，这两个类的名字是一样的。这就已经打破了双亲委派机制</p>
+<p>如果用双亲委派机制，这两个A肯定不会都加载到一个空间</p>
+</blockquote>
+<blockquote>
+<p><strong>所以<code>Tomcat</code>中，每一个web应用都有自己的<code>ClassLoader</code></strong></p>
+</blockquote>
+<blockquote>
+<p><strong>Tomcat为什么要破坏双亲委派模型？</strong></p>
+<blockquote>
+<p><strong>每个Tomcat的webappClassLoader加载自己的目录下的class文件，不会传递给父类加载器</strong></p>
+<p>事实上，tomcat之所以造了一堆自己的classLoader，大致是出于下面三个目的：</p>
+<ul>
+<li>对于各个<em>webapp</em>中的<em>class</em>和<em>lib</em>，需要相互隔离，不能出现一个应用加载的类库会影响另一个应用的情况，而对于许多应用，需要共享的lib以便不浪费资源。</li>
+<li>与<em>jvm</em>一样的安全性问题。使用单独的<em>classloader</em>去装载<em>tomcat</em>自身的类库，以免其他恶意或无意的破坏。</li>
+<li>热部署。</li>
 </ul>
+</blockquote>
+</blockquote>
+</li>
+<li>
+<p><strong>JDBC</strong><br>
+<strong>那么JDBC为什么要破坏双亲委派模型？</strong></p>
+<blockquote>
+<p>因为类加载器收到加载范围的限制，在某些情况下父类加载器无法加载到需要的文件，这时候就需要委托子类加载器去加载class文件。</p>
+</blockquote>
+<p>JDBC的Driver接口定义在JDK中，其实现由各个数据库的服务商来提供，比如MySQL驱动包。DriverManager类中要加载各个实现了Driver接口的类，然后进行管理，但是DriverManager位于$JAVA_HOME中jre/lib/rt.java包，由BootStrap类加载器加载，而其Driver接口的实现类是位于服务商提供的jar包，</p>
+<blockquote>
+<p>根据类加载机制，当被状态的类引用了另外一个类的时候，虚拟机就会使用装载第一个类的类装载器装载被引用的类。</p>
+</blockquote>
+<p>这就是说BootStrap类加载器还要去加载jar包中的Driver接口的实现类。<br>
+我们知道，BootStrap类加载器默认只负责加载$JAVA_HOME中的jre/lib/rt.jar里的所有的class，所以需要由子类加载器去加载Driver实现，这就破坏了双亲委派模型。</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>这个例子演示只是重写<code>findClass()</code>是不能打破双亲委派机制的</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.shifpeng.scaffold.service.jvm;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Project</span>: scaffold</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>:</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span>: Steven</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ClassReloading01</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        CustomizeClassLoader customizeClassLoader = <span class="keyword">new</span> CustomizeClassLoader();</span><br><span class="line">        Class clazz = customizeClassLoader.loadClass(<span class="string">&quot;com.shifpeng.scaffold.service.jvm.dao&quot;</span>);</span><br><span class="line"></span><br><span class="line">        customizeClassLoader = <span class="keyword">null</span>;</span><br><span class="line">        System.out.println(clazz.hashCode());</span><br><span class="line"></span><br><span class="line">        customizeClassLoader = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">        customizeClassLoader = <span class="keyword">new</span> CustomizeClassLoader();</span><br><span class="line">        Class clazz1 = customizeClassLoader.loadClass(<span class="string">&quot;com.shifpeng.scaffold.service.jvm.dao&quot;</span>);</span><br><span class="line">        System.out.println(clazz1.hashCode());</span><br><span class="line"></span><br><span class="line">        System.out.println(clazz == clazz1);</span><br><span class="line">        <span class="comment">//输入 true</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>打破双亲委派的例子</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.shifpeng.scaffold.service.jvm;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.FileInputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Project</span>: scaffold</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>:</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span>: Steven</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ClassReloading02</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">//    定义自己的新的ClassLoader，继承ClassLoader</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">MyLoader</span> <span class="keyword">extends</span> <span class="title">ClassLoader</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//</span></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="keyword">public</span> Class&lt;?&gt; loadClass(String name) <span class="keyword">throws</span> ClassNotFoundException &#123;</span><br><span class="line">            <span class="comment">//首先去找要load的文件，如果没有找到，就让父亲去load，如果找到了就自己load</span></span><br><span class="line">            <span class="comment">//我这里没去找是不是加载过，反正只要拿到类明，我就去加载</span></span><br><span class="line">            <span class="comment">//如果要加载同一个Class是覆盖不了的，所以我直接把ClassLoader干掉就行了</span></span><br><span class="line">            File f = <span class="keyword">new</span> File(<span class="string">&quot;/Users/Steven/test/&quot;</span> + name.replace(<span class="string">&quot;.&quot;</span>, <span class="string">&quot;/&quot;</span>).concat(<span class="string">&quot;.class&quot;</span>));</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (!f.exists()) <span class="keyword">return</span> <span class="keyword">super</span>.loadClass(name);</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                InputStream is = <span class="keyword">new</span> FileInputStream(f);</span><br><span class="line">                <span class="keyword">byte</span>[] b = <span class="keyword">new</span> <span class="keyword">byte</span>[is.available()];</span><br><span class="line">                is.read(b);</span><br><span class="line">                <span class="keyword">return</span> defineClass(name, b, <span class="number">0</span>, b.length);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">super</span>.loadClass(name);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//所以tomcat就是这么干的，直接把web应用的整个ClassLoader干掉，重新再加载一遍</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        MyLoader m = <span class="keyword">new</span> MyLoader();</span><br><span class="line">        Class clazz = m.loadClass(<span class="string">&quot;com.shifpeng.scaffold.service.jvm.dao.Hello&quot;</span>);</span><br><span class="line">        </span><br><span class="line">      <span class="comment">//重新new MyLoader</span></span><br><span class="line">        m = <span class="keyword">new</span> MyLoader();</span><br><span class="line">        Class clazzNew = m.loadClass(<span class="string">&quot;com.shifpeng.scaffold.service.jvm.dao.Hello&quot;</span>);</span><br><span class="line"></span><br><span class="line">        System.out.println(clazz == clazzNew);</span><br><span class="line"></span><br><span class="line">      	<span class="comment">//返回</span></span><br><span class="line">        <span class="comment">//false</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>因此热部署就是这样：</p>
+<p>动态改了之后重新加载，我重新加调用一下<code>loadClass()</code>就可以了</p>
 
 
         <hr>
-    
-        <!-- Archives -->
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/2021/jvm-tuning-01/" data-toggle="tooltip" data-placement="top" title="（三）JVM内存模型">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/2021/jvm-base/" data-toggle="tooltip" data-placement="top" title="（一）JVM入门以及Class文件架构、类加载器">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
 
-<h5><a href="/archives/">archives</a></h5>
-<div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2021/05/">May 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/04/">April 2021</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/02/">February 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/06/">June 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/05/">May 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/03/">March 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/02/">February 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/07/">July 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/11/">November 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/08/">August 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/05/">May 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/10/">October 2016</a><span class="archive-list-count">1</span></li></ul>
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
 </div>
+<!-- tip end -->
 
+        <!-- tip end -->
+        
 
-        <hr>
-    
-        <!-- Categories -->
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
 
-<h5><a href="/categories/">categories</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="/categories/#Java">
-      <li>Java</li>
-    </a>
-    
-    <a href="/categories/#深度好文">
-      <li>深度好文</li>
-    </a>
-    
-    <a href="/categories/#CDN加速">
-      <li>CDN加速</li>
-    </a>
-    
-    <a href="/categories/#Hexo">
-      <li>Hexo</li>
-    </a>
-    
-    <a href="/categories/#JVM">
-      <li>JVM</li>
-    </a>
-    
-    <a href="/categories/#Linux">
-      <li>Linux</li>
-    </a>
-    
-    <a href="/categories/#Zookeeper">
-      <li>Zookeeper</li>
-    </a>
-    
-    <a href="/categories/#源码解析">
-      <li>源码解析</li>
-    </a>
-    
-    <a href="/categories/#Redis">
-      <li>Redis</li>
-    </a>
-    
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=（二）打破双亲委派？&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2021/break-parental-delegation/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
   </ul>
 </div>
 
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
 
+        <!-- Sharing End -->
+        
         <hr>
-    
-</div>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'a00494876d6f5f4bcbfd',
+      clientSecret: '33d3d0be81052a26f5a3535733b8b7854628564f',
+      repo: 'shifpeng.github.io',
+      owner: 'shifpeng',
+      admin: 'shifpeng',
+      id: 'Wed May 12 2021 17:21:47 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
 
 
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
     
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="nav">none</ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+            
+            <a class="tag" href="/tags/#JVM" title="JVM">JVM</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://cuiqingcai.com/" target="_blank">静 觅 崔庆才</a>
+          </li>
+          
+          <li>
+            <a href="http://www.52nlp.cn/" target="_blank">我爱自然语言处理</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cnblogs.com/Steven-shi/" target="_blank">博客园 石福鹏</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
   </div>
-</div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
 
 
 		<!-- Footer (contains ThemeColor、viewer) -->
@@ -1410,7 +911,7 @@ MySQL所有均忽略大小写设置lower_case_table_names为1.
     let jsdelivr = "https://cdn.jsdelivr.net/gh/";
     let gh = "shifpeng";
     let ghPages = gh + ".github.io";
-    let pagePath = "archives/4/index.html";
+    let pagePath = "2021/break-parental-delegation/";
     let jsdelivrurl;
     if (pagePath.indexOf("index.html") != -1) {
       jsdelivrurl = jsdelivr + gh + "/" + ghPages;
