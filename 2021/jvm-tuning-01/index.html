@@ -408,7 +408,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">353</span> In Total
+              Words <span class="post-count">6</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -470,26 +470,7 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="JVM之混合模式">JVM之混合模式</h2>
-<p>刚才一直说的是加载，这里要说一下编译</p>
-<p>Java是解释执行的，一个class文件<code>load</code>到内存中，通过Java的解释器（interpreter）解释执行。</p>
-<h3 id="JIT">JIT</h3>
-<p>Java有一个叫做JIT（Just in-Time compiler）的东西，有些代码需要编译成为本地代码，相当于win中的exe可执行文件</p>
-<h3 id="默认模式">默认模式</h3>
-<ul>
-<li>
-<p>混合使用解释器+热点代码编译</p>
-<blockquote>
-<p>热点代码编译：一段代码里面的一个循环活着一个方法在执行的时候刚开始是用解释器执行，结果发现在整个执行过程中，这段代码执行的频率非常高，我就会把这段代码编译成本地代码，将来再执行的时候执行我本地的这段代码，效率提升</p>
-</blockquote>
-<blockquote>
-<p>那么为什么不直接都编译成本地代码？那岂不是效率更高了<br>
-1、因为java的解释器现在的效率其实已经很高了，在一些简单的代码的执行上不输于编译器</p>
-<p>2、如果有一段代码执行文件特别多，各种各样的类库有好几十个class很正常，如果上来直接用编译器编译，编译过程会非常长，所以默认模式是混合模式</p>
-<p>3、但是完全可以使用参数来制定到底用什么模式</p>
-</blockquote>
-</li>
-</ul>
+        <h1>加载过程之Linking</h1>
 
 
         <hr>
@@ -634,7 +615,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#JVM%E4%B9%8B%E6%B7%B7%E5%90%88%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">JVM之混合模式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#JIT"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">JIT</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%BB%98%E8%AE%A4%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">默认模式</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">加载过程之Linking</span></a></li></ol>
         
         </div>
       </aside>
@@ -1259,5 +1240,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>
