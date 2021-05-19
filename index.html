@@ -617,10 +617,16 @@ AOF（Append Only File）描述的就是日志。
       
     </h3>
     <div class="post-content-preview">
-      加载过程之Linking
+      加载过程之Linking、Initializing
+Linking
 
+Linking分为三步：
 
-...
+Verfication: 校验，校验是否符合class文件的标准
+Preparation：将class文件中的静态变量赋默认值
+Resolution：把class文件中常量池用到的符号引用。转化成内存地址，可以直接使用
+将类、方法、属性等符号引用解析为指针、偏移量等内存地址的直接引用
+常亮池中的......
     </div>
   </a>
   
@@ -1904,5 +1910,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

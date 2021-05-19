@@ -406,11 +406,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">1</span> Minutes
+              Estimated Reading Time <span class="post-count">4</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">6</span> In Total
+              Words <span class="post-count">1.2k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -472,9 +472,48 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <div style="color:red;text-align:center;font-size:30px">加载过程之Linking</div>
-<h2 id></h2>
+        <div style="color:red;text-align:center;font-size:30px">加载过程之Linking、Initializing</div>
+<h2 id="Linking">Linking</h2>
 <p><img src="/2021/jvm-tuning-01/image-20210514152153556.png" alt="image-20210514152153556"></p>
+<p>Linking分为三步：</p>
+<ul>
+<li>Verfication: 校验，校验是否符合class文件的标准</li>
+<li>Preparation：将class文件中的静态变量赋<strong>默认值</strong></li>
+<li>Resolution：把class文件中常量池用到的符号引用。转化成内存地址，可以直接使用<br>
+将类、方法、属性等符号引用解析为指针、偏移量等内存地址的直接引用<br>
+常亮池中的各种符号引用解析为指针、偏移量等内存地址的直接引用</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.shifpeng.scaffold.service.jvm;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Project</span>: scaffold</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>:</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span>: Steven</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ClassLoaderProcedure</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(T.count);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">T</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> count = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> T t = <span class="keyword">new</span> T();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">T</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        count++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出结果 3</span></span><br></pre></td></tr></table></figure>
+<p>如果把15、16行代码换个位置，那么输出的就是<code>2</code>,拿交换后的代码分析：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ClassLoaderProcedure</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(T.count);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">T</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> T t = <span class="keyword">new</span> T();</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> count = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">T</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        count++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当我们调用<code>T.class</code>的时候，首先将<code>T.class</code> load进内存，接下来进行<code>Verfication</code>进行校验，校验完进行<code>Preparation</code>给静态变量<strong>赋默认值</strong> ，那么此时</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">t=<span class="keyword">null</span>;</span><br><span class="line">count=<span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+<p>接下来进行Resolution，这个不分析了，接下来进行initializing，给静态变量<strong>赋初始值</strong> ，</p>
+<p>此时</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">t=<span class="keyword">new</span> T();</span><br><span class="line"><span class="comment">//这个时候，就会执行count++,t变为1</span></span><br><span class="line">count=<span class="number">2</span>;</span><br><span class="line"><span class="comment">//所以最后T.count=2</span></span><br></pre></td></tr></table></figure>
+<p>还有一点非常类似的就是成员变量的赋值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ClassLoaderProcedure</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(T.count);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">T</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> count = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> T t = <span class="keyword">new</span> T();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> m = <span class="number">8</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">T</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        count++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>有一个成员变量，当new T()的时候，是一个申请内存的过程，申请完内存，他里面的成员变量先赋默认值0，然后开始调用构造方法，构造方法才会给赋初始值8。这跟Preparation、initializing有点像</p>
+<blockquote>
+<p>静态变量实在类加载之后进行Preparation、initializing等。而对象中的成员变量是new出来之后才会进行这两步</p>
+</blockquote>
+<h3 id="单例模式-双重检查">单例模式&amp;双重检查</h3>
+<p>有一道面试题：下面程序中的<code>Mgr06</code>需不需要加<code>volatile</code>？（DCL单例为什么要加<code>volatile</code>）</p>
+<p>答案：需要加，主要是指令重排的问题</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.shifpeng.scaffold.service.jvm;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 单例模式 DCL单例 （Double Check Loading 双重检查）</span></span><br><span class="line"><span class="comment"> * 需要给Mgr06做个单例</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Project</span>: scaffold</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>:</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span>: Steven</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Mgr06</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span> Mgr06 INSTANCE; <span class="comment">//JIT</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Mgr06</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Mgr06 <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      <span class="comment">//业务代码省略</span></span><br><span class="line">      <span class="comment">//先检查INSTANCE是否为空</span></span><br><span class="line">        <span class="keyword">if</span> (INSTANCE == <span class="keyword">null</span>) &#123; <span class="comment">//还没有任何线程对它初始化</span></span><br><span class="line">            <span class="comment">//双重检查</span></span><br><span class="line">            <span class="keyword">synchronized</span> (Mgr06.class) &#123;</span><br><span class="line">                <span class="keyword">if</span>(INSTANCE == <span class="keyword">null</span>) &#123;  <span class="comment">//这里做第二次检查，是因为在第一次判断到加锁成功这段时间，有可能被其他线程初始化</span></span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        Thread.sleep(<span class="number">1</span>);</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                        e.printStackTrace();</span><br><span class="line">                    &#125;</span><br><span class="line">                    INSTANCE = <span class="keyword">new</span> Mgr06(); <span class="comment">//依然为空，那么开始进行初始化</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> INSTANCE;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">m</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;m&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123; </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">100</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">new</span> Thread(()-&gt;&#123;</span><br><span class="line">                System.out.println(Mgr06.getInstance().hashCode());</span><br><span class="line">            &#125;).start();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>如果说不加<code>volatile</code>会发生什么情况？</p>
+<p><code>INSTANCE = new Mgr06(); </code>在对这个<code>INSTANCE</code>进行初始化的时候，如果初始化到一半的时候（什么叫初始化到一半？就是new Mgr06()，并且申请到了内存，里面的成员变量赋了默认值0；这个时候<code>INSTANCE</code>已经指向到这个内存了，所以不再是空了），这个时候另外一个线程来了，首先判断<code>INSTANCE == null</code>，发生不为空，所以就第二个线程就开始直接使用成员变量的默认值0了，而不是初始值了，这个时候就出问题了</p>
+<p>解决这个问题的关键就是加<code>volatile</code></p>
+<p>那为什么加上这个<code>volatile</code>就可以解决，这里是指令重排的问题</p>
+<p>下面的代码，编译一下，查看字节码文件：</p>
+<p>其中第一行，表示new T1,申请好内存空间</p>
+<p>第三行：invokespecial调用构造方法，将成员变量属性a赋值为8</p>
+<p>第4行：astore_1将上面的引用值赋值给t</p>
+<p><img src="/2021/jvm-tuning-01/image-20210519225011123.png" alt="image-20210519225011123"></p>
+<p>正常情况下，应该是先调用完<code>invokespecial</code>,再赋值给t，这样就不会出问题，由于指令有可能会重排，这两句指令发生的顺序有可能会不一样，即先把内存地址扔到t里了，然后在进行的初始化，就有可能发生有别的线程读到半初始化的现象</p>
+<h2 id="JMM-Java-Memory-Model">JMM(Java Memory Model)</h2>
+<p>1、高并发的情况下，Java内存内存模型是怎么提供支持的</p>
+<p>2、一个对象在内存中是怎么布局的？</p>
 
 
         <hr>
@@ -619,7 +658,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text"></span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Linking"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Linking</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F-%E5%8F%8C%E9%87%8D%E6%A3%80%E6%9F%A5"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">单例模式&amp;双重检查</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#JMM-Java-Memory-Model"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">JMM(Java Memory Model)</span></a></li></ol>
         
         </div>
       </aside>
@@ -1246,5 +1285,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>
