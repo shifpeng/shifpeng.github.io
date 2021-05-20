@@ -406,11 +406,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">4</span> Minutes
+              Estimated Reading Time <span class="post-count">7</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">1.2k</span> In Total
+              Words <span class="post-count">2.1k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -511,9 +511,49 @@
 <p>第4行：astore_1将上面的引用值赋值给t</p>
 <p><img src="/2021/jvm-tuning-01/image-20210519225011123.png" alt="image-20210519225011123"></p>
 <p>正常情况下，应该是先调用完<code>invokespecial</code>,再赋值给t，这样就不会出问题，由于指令有可能会重排，这两句指令发生的顺序有可能会不一样，即先把内存地址扔到t里了，然后在进行的初始化，就有可能发生有别的线程读到半初始化的现象</p>
-<h2 id="JMM-Java-Memory-Model">JMM(Java Memory Model)</h2>
+<h2 id="JMM-Java内存模型-Java-Memory-Model">JMM Java内存模型(Java Memory Model)</h2>
 <p>1、高并发的情况下，Java内存内存模型是怎么提供支持的</p>
 <p>2、一个对象在内存中是怎么布局的？</p>
+<p>这里需要先说一下硬件层的并发优化基础知识，再将java的内存模型到底在硬件的基础上怎么实现的</p>
+<h3 id="硬件层的并发优化">硬件层的并发优化</h3>
+<h4 id="存储器的层次结构">存储器的层次结构</h4>
+<p>（深入理解计算机系统 原书第三版 P421）</p>
+<p><img src="/2021/jvm-tuning-01/image-20210520074231139.png" alt="image-20210520074231139"></p>
+<p>离CPU越近，存储空间越小，但是速度越快，CPU要读数据的时候，假如一个数据是在硬盘上的（L5:)，他首先是被load到内存，如果读数据的时候，CPU先高速缓存中去找（L1:），如果没有，继续去下一层（L2:），如果有，先load到最近的一层(L1:)（下次再去找的话就快了）</p>
+<p><img src="/2021/jvm-tuning-01/image-20210520075248729.png" alt="image-20210520075248729"></p>
+<h5 id="系统总线-总线锁">系统总线-总线锁</h5>
+<p>但是这里就会产生一个<strong>很严重的问题：</strong></p>
+<p><img src="/2021/jvm-tuning-01/image-20210520143058339.png" alt="image-20210520143058339"></p>
+<p>现在有两个CPU（或者两个核），假如有一个数在内存中（main memory）,这个数会被load到L3 Cache中，L2和L1这两级缓存是在CPU的内部的，根据上面的图，我们就会想到，主存活着L3中的数据有可能会被load到不同的CPU内部，如果CPU1对修改X为1，CPU2修改X为2，那么就会存在数据不一致的情况。线程1拍跑在CPU1上，线程2跑在CPU2上，读到的数据是不一致的</p>
+<p><strong>那如何解决？</strong> 有许多种解决方式</p>
+<h5 id="多线程一致性的硬件层支持">多线程一致性的硬件层支持</h5>
+<p>通过<strong>系统总线</strong> ，即L2通过一个<code>系统总线</code> 访问L3缓存数据（加把锁）</p>
+<p>总线锁(<code>bus lock</code>)会锁住总线，使得其他CPU甚至不能访问内存中其他的地址，因为<strong>效率较低</strong></p>
+<p><img src="/2021/jvm-tuning-01/image-20210520144741337.png" alt="image-20210520144741337"></p>
+<p>因此，<strong>总线锁</strong> 是老的CPU使用的</p>
+<p><strong>那新的CPU怎么解决的？</strong> 有<strong>各种各样的一致性协议</strong> 解决这个问题，而IntelCPU使用的是MESI，所以我们大多数聊的是MESI</p>
+<blockquote>
+<p>因此，低层的一致性是怎么实现的？ MESI</p>
+</blockquote>
+<h4 id="Cache-Line-的概念、缓存行对其-伪共享">Cache Line 的概念、缓存行对其 伪共享</h4>
+<p>关于<code>MESI</code> Cache一致性协议</p>
+<p>有一篇文章可以看一下 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/z00377750/p/9180644.html">【并发编程】MESI–CPU缓存一致性协议</a> 可以参考学习一下，防止丢失，我截图出来：</p>
+<p><img src="/2021/jvm-tuning-01/image-20210520141850363.png" alt="image-20210520141850363"></p>
+<p>通过MESI协议让来让各个CPU之间的缓存保持一致性</p>
+<blockquote>
+<p>MESI称为缓存锁，缓存锁的一个实现就是MESI</p>
+<p>有些无法被缓存的数据，活着跨越多个缓存行的数据，依然必须使用总线锁</p>
+</blockquote>
+<p>现代CPU的数据一致性实现=缓存锁（MESI等）+ 总线锁</p>
+<h5 id="缓存行（面试可能问到）">缓存行（面试可能问到）</h5>
+<p>从内存中读取数据放到CPU缓存中，读取缓存是以cache line为单位，目前为64byte</p>
+<p>1、假如X、Y在一个缓存行，CPU1只用X，读取的时候，X、Y都会被读进来，CPU2只用Y，同样都会读进来</p>
+<p>那么当CPU1把X做了修改，要通知其他CPU，通知其他CPU说“整个缓存行被改过了，这个缓存行已经是<code>invalid</code>的状态了 ，麻烦你更新一下</p>
+<p>”，那么CPU2就会把缓存行重新再读一遍。</p>
+<p>2、同理，CPU2改完Y，通知一下，CPU1跟Y没有关系，但是还是重新读了一遍缓存行</p>
+<p>两个互相无关的值因为变化，都需要重新读取一次缓存行</p>
+<p>位于同一缓存行的两个不同数据，被两个不同的CPU锁定，产生互相影响， 这种就叫<code>伪共享</code></p>
+<p>举个例子证明一下这个问题：</p>
 
 
         <hr>
@@ -658,7 +698,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Linking"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Linking</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F-%E5%8F%8C%E9%87%8D%E6%A3%80%E6%9F%A5"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">单例模式&amp;双重检查</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#JMM-Java-Memory-Model"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">JMM(Java Memory Model)</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Linking"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Linking</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F-%E5%8F%8C%E9%87%8D%E6%A3%80%E6%9F%A5"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">单例模式&amp;双重检查</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#JMM-Java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B-Java-Memory-Model"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">JMM Java内存模型(Java Memory Model)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%A1%AC%E4%BB%B6%E5%B1%82%E7%9A%84%E5%B9%B6%E5%8F%91%E4%BC%98%E5%8C%96"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">硬件层的并发优化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AD%98%E5%82%A8%E5%99%A8%E7%9A%84%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84"><span class="toc-nav-number">2.1.1.</span> <span class="toc-nav-text">存储器的层次结构</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E7%B3%BB%E7%BB%9F%E6%80%BB%E7%BA%BF-%E6%80%BB%E7%BA%BF%E9%94%81"><span class="toc-nav-number">2.1.1.1.</span> <span class="toc-nav-text">系统总线-总线锁</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%80%E8%87%B4%E6%80%A7%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%B1%82%E6%94%AF%E6%8C%81"><span class="toc-nav-number">2.1.1.2.</span> <span class="toc-nav-text">多线程一致性的硬件层支持</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Cache-Line-%E7%9A%84%E6%A6%82%E5%BF%B5%E3%80%81%E7%BC%93%E5%AD%98%E8%A1%8C%E5%AF%B9%E5%85%B6-%E4%BC%AA%E5%85%B1%E4%BA%AB"><span class="toc-nav-number">2.1.2.</span> <span class="toc-nav-text">Cache Line 的概念、缓存行对其 伪共享</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E7%BC%93%E5%AD%98%E8%A1%8C%EF%BC%88%E9%9D%A2%E8%AF%95%E5%8F%AF%E8%83%BD%E9%97%AE%E5%88%B0%EF%BC%89"><span class="toc-nav-number">2.1.2.1.</span> <span class="toc-nav-text">缓存行（面试可能问到）</span></a></li></ol></li></ol></li></ol></li></ol>
         
         </div>
       </aside>
