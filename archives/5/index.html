@@ -791,33 +791,22 @@ Redis当用来做缓存使用时候，通常用来缓存热数据，同时会有
   <!-- top end -->
   
 
-  <a href="/2020/Redis集群实战/">
+  <a href="/2020/Redis集群之主从复制、CAP、PAXOS-1（二）/">
     <h2 class="post-title">
-      Redis集群实战
+      Redis集群之分区方式及Redis Cluster
     </h2>
     <h3 class="post-subtitle">
-      Redis集群实战、代理分区案例
+      当数据量很大的时候，通常每台服务器就几个G,该如何存储；Redis集群方式三
     </h3>
     <div class="post-content-preview">
-      无论是为了解决redis的高可用问题、还是为了可扩展性、或者是为了维护方便，用一款redis代理都是上佳的选择。在github上有众多开源的redis代理。
-
-predixy
-twemproxy
-codis
-redis-cerberus
-
-
-一、twemproxy
-GitHub地址
-1、安装部署
-先连接一台机器：然后下载源码
-12345678910[root@hadoop01 ~]# cd ......
+      redis内存总是有限的，即使服务器内存很大，假如180g,你也不会让一个redis实例使用180g的内存，因为redis在做持久化等等操作时时间成本很大，一般都是几个G就可以了，这样所有的环节都很轻盈，而且假如你让redis很大，因为一个redis进程要管理那么多的内存，序列化，持久化，就会相对慢一些，那么当数据量比较大的时候，我们要怎么往里面放呢？
+一、大数据量在集群中的存储（作为缓存用......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     Posted by 石福鹏 on
-    2020-04-08
+    2020-04-06
   </p>
   <div class="tags">
     
@@ -840,22 +829,36 @@ GitHub地址
   <!-- top end -->
   
 
-  <a href="/2020/Redis集群之主从复制、CAP、PAXOS-1（二）/">
+  <a href="/2020/Redis集群之主从复制、CAP、PAXOS-1（一）/">
     <h2 class="post-title">
-      Redis集群之分区方式及Redis Cluster
+      Redis集群之主从复制、哨兵模式
     </h2>
     <h3 class="post-subtitle">
-      当数据量很大的时候，通常每台服务器就几个G,该如何存储；Redis集群方式三
+      redis单节点可能存在的问题，以及CAP原则, Redis三种集群方式中其中两种方式
     </h3>
     <div class="post-content-preview">
-      redis内存总是有限的，即使服务器内存很大，假如180g,你也不会让一个redis实例使用180g的内存，因为redis在做持久化等等操作时时间成本很大，一般都是几个G就可以了，这样所有的环节都很轻盈，而且假如你让redis很大，因为一个redis进程要管理那么多的内存，序列化，持久化，就会相对慢一些，那么当数据量比较大的时候，我们要怎么往里面放呢？
-一、大数据量在集群中的存储（作为缓存用......
+      一、问题引入
+之前的几篇文章一直写的都是基于单机、或者单节点，或者单实例，那么他会有什么问题呢？
+1:单点故障
+2:容量有限
+3:压力(性能)
+如何解决？ 如何分别解决上面三个独立的问题？有没有整合方案？
+二、解决问题
+AKF：描述的是XYZ三个轴，分别对技术的一种拆解
+
+AKF：
+x:全量、镜像
+y:业务、功能
+z:优先级、逻辑再拆分
+
+1、解决单点故障问题（X轴）
+1、如果只有一台实例的......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     Posted by 石福鹏 on
-    2020-04-06
+    2020-03-28
   </p>
   <div class="tags">
     

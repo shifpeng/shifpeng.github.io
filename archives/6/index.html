@@ -454,36 +454,29 @@
   <!-- top end -->
   
 
-  <a href="/2020/Redis集群之主从复制、CAP、PAXOS-1（一）/">
+  <a href="/2020/Redis持久化/">
     <h2 class="post-title">
-      Redis集群之主从复制、哨兵模式
+      Redis持久化
     </h2>
     <h3 class="post-subtitle">
-      redis单节点可能存在的问题，以及CAP原则, Redis三种集群方式中其中两种方式
+      redis的持久化RDB、fork、copyonwrite、AOF、RDB&AOF混合使用
     </h3>
     <div class="post-content-preview">
-      一、问题引入
-之前的几篇文章一直写的都是基于单机、或者单节点，或者单实例，那么他会有什么问题呢？
-1:单点故障
-2:容量有限
-3:压力(性能)
-如何解决？ 如何分别解决上面三个独立的问题？有没有整合方案？
-二、解决问题
-AKF：描述的是XYZ三个轴，分别对技术的一种拆解
+      上一片文章中说到会拿redis做数据库，那么数据库就需要持久化，因为内存中的东西，掉电易失。
+首先是单机持久化 ，再有单机也不靠谱的时候，主从复制
 
-AKF：
-x:全量、镜像
-y:业务、功能
-z:优先级、逻辑再拆分
+数据存储，都关心两类东西：1:快照/副本；2:日志
 
-1、解决单点故障问题（X轴）
-1、如果只有一台实例的......
+在redis中，也有这两种持久化机制：
+RDB（Redis DataBase）描述的就是快照/副本。
+AOF（Append Only File）描述的就是日志。
+一、RDB（Redis Da......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
-    Posted by 石福鹏 on
-    2020-03-28
+    Posted by Steven on
+    2020-03-24
   </p>
   <div class="tags">
     

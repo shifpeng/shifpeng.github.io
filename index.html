@@ -564,29 +564,33 @@ window上的一个虚拟化环境
   <!-- top end -->
   
 
-  <a href="/2020/Redis持久化/">
+  <a href="/2020/Redis集群实战/">
     <h2 class="post-title">
-      Redis持久化
+      Redis集群实战
     </h2>
     <h3 class="post-subtitle">
-      redis的持久化RDB、fork、copyonwrite、AOF、RDB&AOF混合使用
+      Redis集群实战、代理分区案例
     </h3>
     <div class="post-content-preview">
-      上一片文章中说到会拿redis做数据库，那么数据库就需要持久化，因为内存中的东西，掉电易失。
-首先是单机持久化 ，再有单机也不靠谱的时候，主从复制
+      无论是为了解决redis的高可用问题、还是为了可扩展性、或者是为了维护方便，用一款redis代理都是上佳的选择。在github上有众多开源的redis代理。
 
-数据存储，都关心两类东西：1:快照/副本；2:日志
+predixy
+twemproxy
+codis
+redis-cerberus
 
-在redis中，也有这两种持久化机制：
-RDB（Redis DataBase）描述的就是快照/副本。
-AOF（Append Only File）描述的就是日志。
-一、RDB（Redis Da......
+
+一、twemproxy
+GitHub地址
+1、安装部署
+先连接一台机器：然后下载源码
+12345678910[root@hadoop01 ~]# cd ......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
-    Posted by Steven on
-    2020-03-24
+    Posted by 石福鹏 on
+    2020-04-08
   </p>
   <div class="tags">
     
