@@ -140,7 +140,7 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://www.shifpeng.cn/2021/Redis集群实战/">
+  <link rel="canonical" href="https://www.shifpeng.cn/2020/Redis集群实战/">
   <title>
     
       Redis集群实战 - Steven | java
@@ -398,7 +398,7 @@
             <h2 class="subheading">Redis集群实战、代理分区案例</h2>
             <span class="meta">
               Posted by 石福鹏 on
-              2021-04-08
+              2020-04-08
             </span>
 
 
@@ -479,7 +479,7 @@
 <li><a target="_blank" rel="noopener" href="https://github.com/CodisLabs/codis/">codis</a></li>
 <li><a target="_blank" rel="noopener" href="https://github.com/projecteru/redis-cerberus">redis-cerberus</a></li>
 </ul>
-<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E5%AE%9E%E6%88%98/image-20210408165309225.png" alt="image-20210408165309225"></p>
+<p><img src="/2020/Redis%E9%9B%86%E7%BE%A4%E5%AE%9E%E6%88%98/image-20210408165309225.png" alt="image-20210408165309225"></p>
 <h2 id="一、twemproxy">一、twemproxy</h2>
 <p><a target="_blank" rel="noopener" href="https://github.com/twitter/twemproxy">GitHub地址</a></p>
 <h3 id="1、安装部署">1、安装部署</h3>
@@ -501,7 +501,7 @@
 </blockquote>
 <p>那我们把这个文件拷贝过来,并给它重新起一个服务名</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 scripts]# cp nutcracker.init /etc/init.d/twemproxy</span><br><span class="line">[root@hadoop01 scripts]# cd /etc/init.d/</span><br><span class="line">[root@hadoop01 init.d]# ll</span><br><span class="line">总用量 56</span><br><span class="line">-rw-r--r--. 1 root root 18281 5月  22 2020 functions</span><br><span class="line">-rwxr-xr-x. 1 root root  4569 5月  22 2020 netconsole</span><br><span class="line">-rwxr-xr-x. 1 root root  7928 5月  22 2020 network</span><br><span class="line">-rw-r--r--. 1 root root  1160 10月  2 2020 README</span><br><span class="line">-rwxr-xr-x  1 root root  1702 3月  16 11:04 redis_6379</span><br><span class="line">-rwxr-xr-x  1 root root  1702 3月  16 11:14 redis_6380</span><br><span class="line">-rwxr-xr-x  1 root root  1702 3月  30 16:38 redis_6381</span><br><span class="line">-rw-r--r--  1 root root  1467 4月   9 15:19 twemproxy</span><br><span class="line">[root@hadoop01 init.d]# </span><br></pre></td></tr></table></figure>
-<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E5%AE%9E%E6%88%98/image-20210409152104662.png" alt="image-20210409152104662"></p>
+<p><img src="/2020/Redis%E9%9B%86%E7%BE%A4%E5%AE%9E%E6%88%98/image-20210409152104662.png" alt="image-20210409152104662"></p>
 <p>虽然拷贝过去了，但是文件的颜色还没有变绿，说明文件还不能执行：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 init.d]# chmod +x twemproxy </span><br></pre></td></tr></table></figure>
 <p>这样文件颜色就变绿了，但是还没好，因为这个init文件中的一些东西还需要准备,比如：</p>
@@ -548,7 +548,7 @@
 <p><a target="_blank" rel="noopener" href="https://github.com/joyieldInc/predixy/blob/master/README_CN.md">GitHub地址</a></p>
 <h3 id="1、安装">1、安装</h3>
 <p>查看Readme的Build,看着编译安装很简单，但是注意有一句话</p>
-<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E5%AE%9E%E6%88%98/image-20210409162722428.png" alt="image-20210409162722428"></p>
+<p><img src="/2020/Redis%E9%9B%86%E7%BE%A4%E5%AE%9E%E6%88%98/image-20210409162722428.png" alt="image-20210409162722428"></p>
 <p>但如果系统的Centos6版本，是没有11版本的编译器的，要升级挺麻烦的，所以直接拿编译好的直接使用：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 /]# mkdir soft</span><br><span class="line">[root@hadoop01 /]# cd soft/</span><br><span class="line">[root@hadoop01 soft]# wget https://github.com/joyieldInc/predixy/releases/download/1.0.5/predixy-1.0.5-bin-amd64-linux.tar.gz</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 soft]# tar xf predixy-1.0.5-bin-amd64-linux.tar.gz </span><br><span class="line">[root@hadoop01 soft]# ll</span><br><span class="line">总用量 5924</span><br><span class="line">drwxr-xr-x 6  501  501    4096 10月 20 2018 predixy-1.0.5</span><br><span class="line">-rw-r--r-- 1 root root 6061804 10月 20 2018 predixy-1.0.5-bin-amd64-linux.tar.gz</span><br><span class="line">[root@hadoop01 soft]# </span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -680,12 +680,12 @@
         <ul class="pager">
           
           <li class="previous">
-            <a href="/2021/SS客户端如何把代理分享给局域网内的其他设备/" data-toggle="tooltip" data-placement="top" title="SS客户端如何把代理分享给局域网内的其他设备">&larr; Previous Post</a>
+            <a href="/2020/redis-interview-problem/" data-toggle="tooltip" data-placement="top" title="Redis面试：击穿、穿透、雪崩、分布式锁、API">&larr; Previous Post</a>
           </li>
           
           
           <li class="next">
-            <a href="/2021/Redis集群之主从复制、CAP、PAXOS-1（二）/" data-toggle="tooltip" data-placement="top" title="Redis集群之分区方式及Redis Cluster">Next Post &rarr;</a>
+            <a href="/2020/Redis集群之主从复制、CAP、PAXOS-1（二）/" data-toggle="tooltip" data-placement="top" title="Redis集群之分区方式及Redis Cluster">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -734,7 +734,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=Redis集群实战&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2021/Redis集群实战/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Redis集群实战&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2020/Redis集群实战/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -768,7 +768,7 @@
       repo: 'shifpeng.github.io',
       owner: 'shifpeng',
       admin: 'shifpeng',
-      id: 'Thu Apr 08 2021 15:45:51 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Wed Apr 08 2020 15:45:51 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 10,
       pagerDirection: 'last',
@@ -1055,7 +1055,7 @@
     let jsdelivr = "https://cdn.jsdelivr.net/gh/";
     let gh = "shifpeng";
     let ghPages = gh + ".github.io";
-    let pagePath = "2021/Redis集群实战/";
+    let pagePath = "2020/Redis集群实战/";
     let jsdelivrurl;
     if (pagePath.indexOf("index.html") != -1) {
       jsdelivrurl = jsdelivr + gh + "/" + ghPages;
@@ -1448,20 +1448,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 </html>

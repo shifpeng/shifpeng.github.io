@@ -21,14 +21,6 @@
     <lastmod>2021-04-27</lastmod>
   </url>
   <url>
-    <loc>https://www.shifpeng.cn/2021/mac-install-centos7/</loc>
-    <lastmod>2021-04-25</lastmod>
-  </url>
-  <url>
-    <loc>https://www.shifpeng.cn/2021/redis-interview-problem/</loc>
-    <lastmod>2021-04-20</lastmod>
-  </url>
-  <url>
     <loc>https://www.shifpeng.cn/2021/Docker-%E6%9E%84%E5%BB%BA%E6%8A%A5%E9%94%99failed-to-fetch-oauth-token/</loc>
     <lastmod>2021-04-14</lastmod>
   </url>
@@ -37,40 +29,8 @@
     <lastmod>2021-04-14</lastmod>
   </url>
   <url>
-    <loc>https://www.shifpeng.cn/2021/Redis%E9%9B%86%E7%BE%A4%E5%AE%9E%E6%88%98/</loc>
-    <lastmod>2021-04-08</lastmod>
-  </url>
-  <url>
-    <loc>https://www.shifpeng.cn/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%BA%8C%EF%BC%89/</loc>
-    <lastmod>2021-04-06</lastmod>
-  </url>
-  <url>
-    <loc>https://www.shifpeng.cn/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/</loc>
-    <lastmod>2021-03-28</lastmod>
-  </url>
-  <url>
     <loc>https://www.shifpeng.cn/2021/%E5%9F%BA%E4%BA%8Ek8s%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%B2%BB%E7%90%86%E7%9A%84%E5%88%A9%E5%99%A8-KT-Connect/</loc>
     <lastmod>2021-03-25</lastmod>
-  </url>
-  <url>
-    <loc>https://www.shifpeng.cn/2021/Redis%E6%8C%81%E4%B9%85%E5%8C%96/</loc>
-    <lastmod>2021-03-24</lastmod>
-  </url>
-  <url>
-    <loc>https://www.shifpeng.cn/2021/Redis%E7%9A%84%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85%E3%80%81pipeline%E3%80%81%E4%BA%8B%E5%8A%A1%E3%80%81modules%E3%80%81%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8%E3%80%81%E7%BC%93%E5%AD%98LRU/</loc>
-    <lastmod>2021-03-21</lastmod>
-  </url>
-  <url>
-    <loc>https://www.shifpeng.cn/2021/Redis%E4%B8%AD%E7%9A%84list%E3%80%81set%E3%80%81hash%E3%80%81sorted-set/</loc>
-    <lastmod>2021-03-18</lastmod>
-  </url>
-  <url>
-    <loc>https://www.shifpeng.cn/2021/Redis%E7%9A%84String%E7%B1%BB%E5%9E%8B%E5%92%8Cbitmap%E7%B1%BB%E5%9E%8B/</loc>
-    <lastmod>2021-03-16</lastmod>
-  </url>
-  <url>
-    <loc>https://www.shifpeng.cn/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/</loc>
-    <lastmod>2021-03-13</lastmod>
   </url>
   <url>
     <loc>https://www.shifpeng.cn/2021/%E5%9F%BA%E4%BA%8Ekeepalived%E7%9A%84LVS%E7%9A%84%E6%90%AD%E5%BB%BA/</loc>
@@ -217,8 +177,40 @@
     <lastmod>2020-05-22</lastmod>
   </url>
   <url>
+    <loc>https://www.shifpeng.cn/2020/mac-install-centos7/</loc>
+    <lastmod>2020-04-25</lastmod>
+  </url>
+  <url>
     <loc>https://www.shifpeng.cn/2020/github-static-source-cdn/</loc>
     <lastmod>2020-04-21</lastmod>
+  </url>
+  <url>
+    <loc>https://www.shifpeng.cn/2020/redis-interview-problem/</loc>
+    <lastmod>2020-04-20</lastmod>
+  </url>
+  <url>
+    <loc>https://www.shifpeng.cn/2020/Redis%E9%9B%86%E7%BE%A4%E5%AE%9E%E6%88%98/</loc>
+    <lastmod>2020-04-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.shifpeng.cn/2020/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%BA%8C%EF%BC%89/</loc>
+    <lastmod>2020-04-06</lastmod>
+  </url>
+  <url>
+    <loc>https://www.shifpeng.cn/2020/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/</loc>
+    <lastmod>2020-03-28</lastmod>
+  </url>
+  <url>
+    <loc>https://www.shifpeng.cn/2020/Redis%E6%8C%81%E4%B9%85%E5%8C%96/</loc>
+    <lastmod>2020-03-24</lastmod>
+  </url>
+  <url>
+    <loc>https://www.shifpeng.cn/2020/Redis%E7%9A%84%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85%E3%80%81pipeline%E3%80%81%E4%BA%8B%E5%8A%A1%E3%80%81modules%E3%80%81%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8%E3%80%81%E7%BC%93%E5%AD%98LRU/</loc>
+    <lastmod>2020-03-21</lastmod>
+  </url>
+  <url>
+    <loc>https://www.shifpeng.cn/2020/Redis%E4%B8%AD%E7%9A%84list%E3%80%81set%E3%80%81hash%E3%80%81sorted-set/</loc>
+    <lastmod>2020-03-18</lastmod>
   </url>
   <url>
     <loc>https://www.shifpeng.cn/2020/%E5%BC%BA%E7%83%88%E6%8E%A8%E8%8D%90%E7%9A%84Docker%E5%8F%AF%E8%A7%86%E5%8C%96%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Portainer%E6%90%AD%E5%BB%BA/</loc>
@@ -227,6 +219,14 @@
   <url>
     <loc>https://www.shifpeng.cn/2020/SpringBoot%E6%95%B4%E5%90%88ELK%E5%AE%9E%E7%8E%B0%E6%97%A5%E5%BF%97%E6%94%B6%E9%9B%86/</loc>
     <lastmod>2020-03-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.shifpeng.cn/2020/Redis%E7%9A%84String%E7%B1%BB%E5%9E%8B%E5%92%8Cbitmap%E7%B1%BB%E5%9E%8B/</loc>
+    <lastmod>2020-03-16</lastmod>
+  </url>
+  <url>
+    <loc>https://www.shifpeng.cn/2020/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/</loc>
+    <lastmod>2020-03-13</lastmod>
   </url>
   <url>
     <loc>https://www.shifpeng.cn/2020/Java%E7%B1%BB%E5%8A%A0%E8%BD%BD/</loc>

@@ -140,7 +140,7 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://www.shifpeng.cn/2021/Redis集群之主从复制、CAP、PAXOS-1（一）/">
+  <link rel="canonical" href="https://www.shifpeng.cn/2020/Redis集群之主从复制、CAP、PAXOS-1（一）/">
   <title>
     
       Redis集群之主从复制、哨兵模式 - Steven | java
@@ -398,7 +398,7 @@
             <h2 class="subheading">redis单节点可能存在的问题，以及CAP原则, Redis三种集群方式中其中两种方式</h2>
             <span class="meta">
               Posted by 石福鹏 on
-              2021-03-28
+              2020-03-28
             </span>
 
 
@@ -499,7 +499,7 @@
 <h3 id="3、解决压力问题（Z轴）">3、解决压力问题（Z轴）</h3>
 <p>按照优先级、逻辑再拆分</p>
 <p>数据越越大，相当于X\Y轴同时扩展，类似于微服务</p>
-<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210330135324730.png" alt="image-20210330135324730"></p>
+<p><img src="/2020/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210330135324730.png" alt="image-20210330135324730"></p>
 <h2 id="三、新的问题">三、新的问题</h2>
 <p>什么问题都是有两面性的，解决上面的问题就会带来一些其他的问题</p>
 <h3 id="1、数据一致性问题">1、数据一致性问题</h3>
@@ -507,17 +507,17 @@
 <h4 id="a、强一致性">a、强一致性</h4>
 <p>所有的节点阻塞直到数据全部一致</p>
 <p>缺点：破坏可用性，即一个节点出问题（比如其中一个备机进程异常退出了，或者执行慢超时了，或网络异常等），导致此次数据写失败</p>
-<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210330140033994.png" alt="image-20210330140033994"></p>
+<p><img src="/2020/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210330140033994.png" alt="image-20210330140033994"></p>
 <h4 id="b、弱一致性">b、弱一致性</h4>
 <p>通过异步方式处理数据同步</p>
 <p>缺点：可能会丢失一部分数据（同步失败）</p>
-<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210330140106930.png" alt="image-20210330140106930"></p>
+<p><img src="/2020/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210330140106930.png" alt="image-20210330140106930"></p>
 <h4 id="c、最终一致性">c、最终一致性</h4>
 <blockquote>
 <p>解决上面的问题，还有一种解决方案：</p>
 <p>那就是在主机和备机之间增加一种可靠的、集群、且响应速度足够快的东西，<strong>比如</strong> ：<code>kafka</code></p>
 <p>客户端告诉redis,redis把写的请求先发给<code>kafka</code> （同步阻塞）,<code>kafka</code>接受成功后立即返回，在由于redis返回给客户端，而数据同步，因为kafk足够可靠，所以两台redis备机最终从kafka中取回需要的东西，数据就会达到一致</p>
-<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210330141135677.png" alt="image-20210330141135677"></p>
+<p><img src="/2020/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210330141135677.png" alt="image-20210330141135677"></p>
 </blockquote>
 <p>但是，基于最终一致性的解决方案：</p>
 <p>因为是最终一致性，就有可能取到不一致性的数据，但是强调有中间可靠的东西来实现强一致性</p>
@@ -531,7 +531,7 @@
 <p>所以又会引出一个问题：</p>
 <p>主又是一个单点，所以又要<strong>对主做高可用（HA）</strong> ，目的就是当主机挂掉的话，把备机变成一个主机，切换他。</p>
 <p>因为人肯定是不靠谱的，所以肯定要用一个程序来监控单点故障问题，同时只要是一个程序，程序依然有可能出现问题，所以<strong>监控程序本身也要成为一变多的集群</strong></p>
-<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210330150627550.png" alt="image-20210330150627550"></p>
+<p><img src="/2020/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210330150627550.png" alt="image-20210330150627550"></p>
 <blockquote>
 <p>为何建议的使用奇数台？</p>
 <p>以为偶数台和奇数台承担风险的能力是一致的，但是发生风险是不一样的</p>
@@ -613,9 +613,9 @@
 <p>发现一个问题：不开启AOF的时候，数据是增量同步，但是开启了AOF之后（根据上面33～41行代码可以看出），就变成了全量同步，这点没太理解就是这样设计的还是？</p>
 <p>RDB是会在<code>dump.rdb</code>记录追随主的xxid的，，那么我在进行数据同步的时候，这样我就可以判断是增量数据,但是开启AOF之后，<code>appendaof.aof</code>中并没有记录，前面部分就只是一个传统的RDB，并没有这个id,因此，在主机再写数据的时候，就无法判定是不是直接追加的，所以直接全量更新了。这个设计不知道是设计如此，还是一个bug,我目前还没搞懂。</p>
 <p><code>dump.rdb</code>文件</p>
-<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210331152452078.png" alt="image-20210331152452078"></p>
+<p><img src="/2020/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210331152452078.png" alt="image-20210331152452078"></p>
 <p><code>appendaof.aof</code>文件</p>
-<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210331152538929.png" alt="image-20210331152538929"></p>
+<p><img src="/2020/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210331152538929.png" alt="image-20210331152538929"></p>
 <p>所以，记住<strong>只要开启AOF,就是全量同步</strong> 这句话就可以了</p>
 <h6 id="主机挂了">主机挂了</h6>
 <p>首先，<strong>主机是知道有多少个从机的。</strong> 这句话需要记住，哨兵会用到，如果没有哨兵，是没法自动化的，那么<strong>人为</strong> 如何将其中一台变为主</p>
@@ -624,7 +624,7 @@
 <h6 id="从机支持增删改">从机支持增删改</h6>
 <p>上面讲的都是基于主机支持增删改查，从机只支持查询，但是这个是可以配置的.找到</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">################################ REPLICATION #################################</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> replicaof &lt;masterip&gt; &lt;masterport&gt; <span class="comment"># 可以在这里指定追随者</span></span></span><br><span class="line">replica-serve-stale-data yes # 如果redis刚启动过，也追随了某一个主，这个时候需要同步数据，比如主有4g的数据，传输过程有一会，这个过程中，备机中老的数据要不要对外暴露，要不要支持查询</span><br><span class="line">replica-read-only yes # 备机是不是只支持查询 no时支持write</span><br><span class="line">repl-diskless-sync no # 同步数据有两种方式，一种是主先落RDB，再通过网络IO讲RDB同步到从，另一种是直接通过网络IO直接传输给从，默认是不直接通过网络，即no,默认走磁盘。 见下图</span><br><span class="line">repl-backlog-size 1mb # 增量复制的队列大小</span><br><span class="line"> min-replicas-to-write 3</span><br><span class="line"> min-replicas-max-lag 10</span><br></pre></td></tr></table></figure>
-<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210331200831197.png" alt="image-20210331200831197"></p>
+<p><img src="/2020/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210331200831197.png" alt="image-20210331200831197"></p>
 <h5 id="b、【Redis集群方式二】主从复制高可用-Sentinel（哨兵）">b、【Redis集群方式二】主从复制高可用-Sentinel（哨兵）</h5>
 <p>Redis的Sentinel系统用于管理多个redis服务器，其实上面有讲到额监控其实就是哨兵sentinel</p>
 <p>它的三个任务是：<strong>监控、提醒、故障自动迁移</strong></p>
@@ -670,7 +670,7 @@
 </blockquote>
 <blockquote>
 <p>那么前面有说过一个问题，哨兵是如何知道主从，以及其他的哨兵的，就是通过发布订阅，哨兵通过监控主redis，然后主通过发布订阅发现其他哨兵，可以开一个主redis的客户端，通过<code>psubcribe</code> 查看发布订阅信息。</p>
-<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210402175917508.png" alt="image-20210402175917508"></p>
+<p><img src="/2020/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210402175917508.png" alt="image-20210402175917508"></p>
 </blockquote>
 
 
@@ -679,12 +679,12 @@
         <ul class="pager">
           
           <li class="previous">
-            <a href="/2021/Redis集群之主从复制、CAP、PAXOS-1（二）/" data-toggle="tooltip" data-placement="top" title="Redis集群之分区方式及Redis Cluster">&larr; Previous Post</a>
+            <a href="/2020/Redis集群之主从复制、CAP、PAXOS-1（二）/" data-toggle="tooltip" data-placement="top" title="Redis集群之分区方式及Redis Cluster">&larr; Previous Post</a>
           </li>
           
           
           <li class="next">
-            <a href="/2021/基于k8s开发环境治理的利器-KT-Connect/" data-toggle="tooltip" data-placement="top" title="基于k8s开发环境治理的利器-KT Connect">Next Post &rarr;</a>
+            <a href="/2020/Redis持久化/" data-toggle="tooltip" data-placement="top" title="Redis持久化">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -733,7 +733,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=Redis集群之主从复制、哨兵模式&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2021/Redis集群之主从复制、CAP、PAXOS-1（一）/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Redis集群之主从复制、哨兵模式&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2020/Redis集群之主从复制、CAP、PAXOS-1（一）/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -767,7 +767,7 @@
       repo: 'shifpeng.github.io',
       owner: 'shifpeng',
       admin: 'shifpeng',
-      id: 'Sun Mar 28 2021 23:16:04 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Sat Mar 28 2020 23:16:04 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 10,
       pagerDirection: 'last',
@@ -1054,7 +1054,7 @@
     let jsdelivr = "https://cdn.jsdelivr.net/gh/";
     let gh = "shifpeng";
     let ghPages = gh + ".github.io";
-    let pagePath = "2021/Redis集群之主从复制、CAP、PAXOS-1（一）/";
+    let pagePath = "2020/Redis集群之主从复制、CAP、PAXOS-1（一）/";
     let jsdelivrurl;
     if (pagePath.indexOf("index.html") != -1) {
       jsdelivrurl = jsdelivr + gh + "/" + ghPages;
@@ -1447,20 +1447,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 </html>

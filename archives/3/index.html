@@ -454,389 +454,6 @@
   <!-- top end -->
   
 
-  <a href="/2021/网络高并发负载均衡（三）/">
-    <h2 class="post-title">
-      网络高并发负载均衡（三）
-    </h2>
-    <h3 class="post-subtitle">
-      LVS的TUN模型推导
-    </h3>
-    <div class="post-content-preview">
-      我们按照DR模型，要求负载均衡服务器和real-server在一个局域网内，那我们就从这里出发，能不能让他们不在同一个局域网
-TUN隧道技术
-
-如果想从DIP到RIP,如果能单独产生一个数据包，从DIP-&gt;RIP（1），当请求的数据包（携带CIP-&gt;VIP（2））到VIP后，让1携带2，因为2是可以到达RIP的；
-生活中用到隧道技术的案例也很多，比如：
-
-家里设置路由器的时候，也......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by 石福鹏 on
-    2021-03-11
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Java" title="Java">Java</a>
-    
-    <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
-    
-    <a href="/tags/#架构" title="架构">架构</a>
-    
-    <a href="/tags/#大数据" title="大数据">大数据</a>
-    
-    <a href="/tags/#从网络到分布式" title="从网络到分布式">从网络到分布式</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2021/网络高并发负载均衡（二）/">
-    <h2 class="post-title">
-      网络高并发负载均衡（二）
-    </h2>
-    <h3 class="post-subtitle">
-      LVS的DR模型推导
-    </h3>
-    <div class="post-content-preview">
-      接着上一篇文章说到的，上篇文章说了一些负载均衡的思想，都是NAT模式的，但是有个弊端
-从客户端到服务端，再从服务端回到客户端，中间经过负载均衡服务器，它是有瓶颈的：
-即非对称：
-发出去东西很少，但是返回来的很多，但是来去都要经过负载均衡服务器，所以负载均衡服务器的带宽成为瓶颈，消耗算力（计算机的计算能力）
-那如何解决这个弊端？
-
-要解决这个问题，肯定不是NAT模式了，所以下面负载均衡服务器也......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by 石福鹏 on
-    2021-03-10
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Java" title="Java">Java</a>
-    
-    <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
-    
-    <a href="/tags/#架构" title="架构">架构</a>
-    
-    <a href="/tags/#大数据" title="大数据">大数据</a>
-    
-    <a href="/tags/#从网络到分布式" title="从网络到分布式">从网络到分布式</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2021/网络高并发负载均衡（一）/">
-    <h2 class="post-title">
-      网络高并发负载均衡（一）
-    </h2>
-    <h3 class="post-subtitle">
-      LVS的NAT模型推导
-    </h3>
-    <div class="post-content-preview">
-      先演示的是一个应用层协议：
-把www.baidu.com主页的HTML代码拿下来（不能使用浏览器，也没有wget、cron等）
-12345678cd /proc/$$/fdexec 8&lt;&gt; /dev/tcp/www.baidu.com/80   //与百度创建了一个通信echo -e &#x27;GET /HTTP/1.0\n&#x27; &gt;&amp; 8cat &lt;&......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by 石福鹏 on
-    2021-03-09
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Java" title="Java">Java</a>
-    
-    <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
-    
-    <a href="/tags/#架构" title="架构">架构</a>
-    
-    <a href="/tags/#大数据" title="大数据">大数据</a>
-    
-    <a href="/tags/#从网络到分布式" title="从网络到分布式">从网络到分布式</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2021/2021面试题汇总/">
-    <h2 class="post-title">
-      2021面试题汇总
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      拼多多
-1、说出 java 开启多线程的方式，
-线程池，4 个 java 自带的线程池有什么问题
-线程池 7 个参数都分别讲一下
-2、JVM 内存模型讲一下，垃圾回收大致说一下
-3、MySQL 索引，什么时候我们会创建索引？讲一下回表的含义。
-索引合并还有一些什么优化的玩意儿(涉及索引底层内容)
-分库分表了解么？水平和垂直，讲一下
-我们通过 select * from table limit......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by 石福鹏 on
-    2021-03-01
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#面试题" title="面试题">面试题</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2021/位运算的奇技淫巧/">
-    <h2 class="post-title">
-      位运算的奇技淫巧
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      计算机中数在内存中都是以二机制形式进行存储的，用位运算就是直接对整数在内存中的二机制位进行操作，因此执行效率很高，因此在程序中，按需尽量使用位运算进行操作
-位操作符
-
-
-&amp;  与运算：两位都是1时，结果才为1，否则为0；
-1234 10011&amp;11001----------- 10001 
-
-
-| 或运算：两位都是0时，结果才为0；
-1234 10011|11001-----......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by 石福鹏 on
-    2021-02-27
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Java" title="Java">Java</a>
-    
-    <a href="/tags/#Java基础查漏补缺" title="Java基础查漏补缺">Java基础查漏补缺</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2021/大数据技术之Kafka/">
-    <h2 class="post-title">
-      大数据技术之Kafka
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      Kafka概述
-1、定义
-kafka是一个分布式的基于发布/订阅模式的消息队列（Message Queue）
-2、消息队列
-好处：
-
-解藕： 允许你独立的扩展或者修改两边的处理过程，只要确保他们遵守同样的接口约束
-可恢复性： 系统的一部分组建失效时，不会影响到整个系统，即使一个处理消息的进程挂掉，加入队列中的消息仍然可以在系统恢复后被处理
-缓冲： 有助于控制和优化系统的速度，解决生产消息和消......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by 石福鹏 on
-    2021-01-29
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#中间件" title="中间件">中间件</a>
-    
-    <a href="/tags/#Kafka" title="Kafka">Kafka</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2020/满足某个日期满足条件的周、月日期处理工具类/">
-    <h2 class="post-title">
-      满足某个日期满足条件的周、月日期处理工具类
-    </h2>
-    <h3 class="post-subtitle">
-      满足某个日期满足条件的周、月日期处理工具类
-    </h3>
-    <div class="post-content-preview">
-      主要用法看一下main方法中的说明就知道了
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by 石福鹏 on
-    2020-12-04
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Java" title="Java">Java</a>
-    
-    <a href="/tags/#工具类" title="工具类">工具类</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2020/在Mac系统上使用Dokcer搭建LNMP环境/">
-    <h2 class="post-title">
-      在Mac系统上使用Dokcer搭建LNMP环境
-    </h2>
-    <h3 class="post-subtitle">
-      每次换电脑或者重装系统之后，开发环境的搭建很费事，整不好还遇到一些乱起八糟的大坑，所以最好是直接使用dokcer,换环境的时候，镜像拉起就OK了
-    </h3>
-    <div class="post-content-preview">
-      最开始准备自己头搭建一套，即直接在Mac上分别安装Nginx、Mysql、PHP，对于新手来说，刚毕业的同学来说，一定自己一步一步搭，刚开始会趟好多的坑，这些坑你一定要趟，这样也就知道了一些服务运行的原理，在服务架构上处于什么位置，发挥什么作用，都是通过一次一次的实践去理解的。
-但是我这里就不这样玩了，因为我就是为了省时间，并且也不再Docker上一个一个的搭建，有现成的轮子，拿过来，修改一......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by 石福鹏 on
-    2020-12-01
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Docker" title="Docker">Docker</a>
-    
-    <a href="/tags/#Linux" title="Linux">Linux</a>
-    
-    <a href="/tags/#Nginx" title="Nginx">Nginx</a>
-    
-    <a href="/tags/#PHP" title="PHP">PHP</a>
-    
-    <a href="/tags/#Mysql" title="Mysql">Mysql</a>
-    
-    <a href="/tags/#集成开发环境" title="集成开发环境">集成开发环境</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2020/生成的sign出现偶发性的签名验证失败问题排查/">
-    <h2 class="post-title">
-      生成的sign出现偶发性的签名验证失败问题排查
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      最近做了一个微信企业付款，即微信企业账户给用户下发红包的功能，从测试开始就出现偶发性的报SIGN_ERROR签名错误,因为自己的项目比较多，就让同时帮忙debug排查了，排查的结果就是没问题，红包发放正常。
-但是一上测试，就会偶发；
-发现问题
-无奈之下，我就把每次请求的request、response都打印出来了，通过微信支付接口签名校验工具测试了下，发现sign并不一致
-
-发现一个问题，后......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by 石福鹏 on
-    2020-11-24
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#工具类" title="工具类">工具类</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
   <a href="/2020/macOS-Catalina下安装nvm、node/">
     <h2 class="post-title">
       macOS Catalina下安装nvm、node及每次需要重载配置文件问题解决
@@ -863,6 +480,346 @@ npm：nodejs包管理工具
   <div class="tags">
     
     <a href="/tags/#Nodejs" title="Nodejs">Nodejs</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/2020/Hexo博客搭建-博客上传后访问页面返回404问题排查/">
+    <h2 class="post-title">
+      Hexo博客搭建-博客上传后访问页面返回404问题排查
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      前言
+给自己的Mac重新做了系统之后，按照正常的流程，安装nvm（安装的最新的版本）,安装node，然后安装hexo,一切都很顺利的进行，然后在之前已经备份好的博客源文件的根目录执行hexo g、hexo d，然后去访问博客发现404了
+
+问题发现
+查看了下_config.yml配置文件，没啥问题，这些应该没啥问题，因为源码都是之前一直用鱼发布博客用的，没做过什么修改，所以肯定没问题了，就上......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by 石福鹏 on
+    2020-10-28
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#博客" title="博客">博客</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/2020/【每日一题】如何解决ABA问题？为什么能解决？解决思路是什么？/">
+    <h2 class="post-title">
+      【每日一题】如何解决ABA问题？为什么能解决？解决思路是什么？
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      问题分析
+aba问题出现在cas机制的操作中，cas 比较并更新，比如说cas(期望的值，更新的值)，如果发现变量是期望的值，那么就将该值替换为更新的值。
+这里面存在的问题就在于，如果期望的值中途被人改掉了，但是后面又被改了回来， cas机制不能发现这个过程，也是发现期望值其实中间发生过变动。
+解决方式
+给数据加上版本号或者时间戳，比较期望值的时候 比较的是值和版本号或者时间戳，即使值相同，......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by 石福鹏 on
+    2020-10-15
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#每日一题" title="每日一题">每日一题</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/2020/【每日一题】Java-多线程中notify和notifyall的区别是/">
+    <h2 class="post-title">
+      【每日一题】Java 多线程中notify和notifyall的区别是?
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      notify
+notify唤醒在此对象监视器上等待的单个线程。
+如果所有线程都在此对象上等待，则会选择唤醒其中一个线程。选择是任意性的，并在对实现做出决定时发生。线程通过调用其中一个 wait 方法，在对象的监视器上等待。 直到当前线程放弃此对象上的锁定，才能继续执行被唤醒的线程。被唤醒的线程将以常规方式与在该对象上主动同步的其他所有线程进行竞争；
+例如，唤醒的线程在作为锁定此对象的下一个线......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by 石福鹏 on
+    2020-10-14
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#每日一题" title="每日一题">每日一题</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/2020/macOS-Catalina-已损坏无法打开解决办法/">
+    <h2 class="post-title">
+      macOS Catalina 已损坏无法打开解决办法
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      App 在macOS Catalina下提示已损坏无法打开解决办法：
+
+
+打开终端；
+
+
+输入以下命令，回车；
+1sudo xattr -d com.apple.quarantine /Applications/xxxx.app
+注意：/Applications/xxxx.app 换成你的App路径（推荐直接将.app文件拖入终端中自动生成路径，以防空格等转义字符手动复制或输入出现错误）
+
+......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by 石福鹏 on
+    2020-10-13
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Mac" title="Mac">Mac</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/2020/【每日一题】形成数据库死锁的原因有哪些？如何能避免死锁/">
+    <h2 class="post-title">
+      【每日一题】形成数据库死锁的原因有哪些？如何能避免死锁
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      1、什么是死锁
+会话A持有一行数据的锁，会话B持有另一行数据的锁。 A申请获取B持有的那个锁，但是被B占用着，所以A等待。 B申请获取A持有的那个锁，但是被A占用着，所以B等待。
+2、死锁的本质
+两个或多个会话/线程，本身拥有一个锁，但是去互相申请对方拥有的锁，导致都在锁等待，即为死锁。索引失效会造成表锁，比死锁更严重
+3、举例
+在RR隔离级别下，数据库有两条数据id=1和id=10。 且i......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by 石福鹏 on
+    2020-09-24
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#每日一题" title="每日一题">每日一题</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/2020/【每日一题】聊一聊线上oom的排查方案？/">
+    <h2 class="post-title">
+      【每日一题】聊一聊线上oom的排查方案？
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      oom，先说排查思路，oom是内存溢出，则有
+
+堆内存区域溢出
+方法区或者元数据区溢出
+非堆空间(DirectMemory)溢出
+
+三种场景的情况。 首先通过溢出的异常报错，先确认是哪种类型。
+
+如果确认是堆内存区域溢出，可能原因是内存泄露 或者堆空间回收的速度赶不上对象创建的速度，排查方案就是看gc日志，如果是gc频率很高 但是回收对象却很少 就要怀疑是内存泄露，这个时候看dump日志 找......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by 石福鹏 on
+    2020-09-23
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#每日一题" title="每日一题">每日一题</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/2020/给自己，也给27岁以上的年轻人的财务建议/">
+    <h2 class="post-title">
+      给自己，也给27岁以上的年轻人的财务建议
+    </h2>
+    <h3 class="post-subtitle">
+      推特上一位网友问到：“27岁以上的网友们，请给出你们觉得最有用的财务建议，金融知识是很重要的！”
+    </h3>
+    <div class="post-content-preview">
+      2020年终于结束，对于职场的年轻人，尤其对于刚步入职场的年轻人来说，太难了，赚钱难，稍有不慎就丢了工作，各种开销，压力巨大，活下来就已经精疲力尽了。
+国外其实更是乱的一锅粥，之前在看川建国同志的推特的时候，偶尔看到有个国外网友的转推让我翻了好久，虽然是19年的，但是分享一下，看看对我们自己有没有用
+推特上一位网友问到：“27岁以上的网友们，请给出你们觉得最有用的财务建议，金融知识是很重要的......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by 石福鹏 on
+    2020-09-22
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#生活笔记" title="生活笔记">生活笔记</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/2020/企业常用开发规范/">
+    <h2 class="post-title">
+      企业常用开发规范
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      分层领域模型规约：
+
+DO（Data Object）：与数据库表结构一一对应，通过 DAO 层向上传输数据源对象。
+DTO（Data Transfer Object）：数据传输对象，Service 和 Manager 向外传输的对象。
+BO（Business Object）：业务对象。可以由 Service 层输出的封装业务逻辑的对象。
+Query：数据查询对象，各层接收上层的查询请求。注：......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Steven on
+    2020-09-17
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/2020/企业常用Log规范/">
+    <h2 class="post-title">
+      企业常用Log规范
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      最近在帮团队整理一系列开发规范，发现日志规范这块内容大家之前一直都没有重视过。打日志永远看心情，没有特别规定什么样的信息该记录日志，什么样的信息不该记录。
+并且，对于后面的日志分析等基本上可以说是寸步难行。
+
+logback-spring.xml sample：（需要替换appName）
+1234567891011121314151617181920212223242526272829303......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by 石福鹏 on
+    2020-09-17
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Log" title="Log">Log</a>
     
   </div>
   
@@ -1269,7 +1226,7 @@ npm：nodejs包管理工具
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2021/05/">May 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/04/">April 2021</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/02/">February 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/06/">June 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/05/">May 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/03/">March 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/02/">February 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/07/">July 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/11/">November 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/08/">August 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/05/">May 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/10/">October 2016</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2021/05/">May 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/04/">April 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/02/">February 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/06/">June 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/05/">May 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/03/">March 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/02/">February 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/07/">July 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/11/">November 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/08/">August 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/05/">May 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/10/">October 2016</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1850,20 +1807,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 </html>

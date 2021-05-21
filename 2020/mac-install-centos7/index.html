@@ -140,7 +140,7 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://www.shifpeng.cn/2021/mac-install-centos7/">
+  <link rel="canonical" href="https://www.shifpeng.cn/2020/mac-install-centos7/">
   <title>
     
       在Mac上安装Linux系统centos7以及基本配置 - Steven | java
@@ -394,7 +394,7 @@
             <h2 class="subheading"></h2>
             <span class="meta">
               Posted by Steven on
-              2021-04-25
+              2020-04-25
             </span>
 
 
@@ -471,23 +471,23 @@
         <p>安于VMware-Funsion12的安装包以及Centos7的安装包可以联系我</p>
 <h2 id="1、安装">1、安装</h2>
 <p>下载Centos7的镜像的时候，记得下载DVD版本，如果是安装ubuntu的时候，记得选择英文，中文一般道97%左右就失败了</p>
-<p><img src="/2021/mac-install-centos7/image-20210428163832971.png" alt="image-20210428163832971"></p>
+<p><img src="/2020/mac-install-centos7/image-20210428163832971.png" alt="image-20210428163832971"></p>
 <p>选中一些开发者工具，Debug工具，编译库</p>
-<p><img src="/2021/mac-install-centos7/image-20210428164008454.png" alt="image-20210428164008454"></p>
+<p><img src="/2020/mac-install-centos7/image-20210428164008454.png" alt="image-20210428164008454"></p>
 <p>打开自动获取Ip</p>
-<p><img src="/2021/mac-install-centos7/image-20210428164102646.png" alt="image-20210428164102646"></p>
+<p><img src="/2020/mac-install-centos7/image-20210428164102646.png" alt="image-20210428164102646"></p>
 <p>关闭内核转储</p>
-<p><img src="/2021/mac-install-centos7/image-20210428164243358.png" alt="image-20210428164243358"></p>
+<p><img src="/2020/mac-install-centos7/image-20210428164243358.png" alt="image-20210428164243358"></p>
 <p>自动配置磁盘镜像</p>
-<p><img src="/2021/mac-install-centos7/image-20210428164423662.png" alt="image-20210428164423662"></p>
+<p><img src="/2020/mac-install-centos7/image-20210428164423662.png" alt="image-20210428164423662"></p>
 <p>点开始安装</p>
-<p><img src="/2021/mac-install-centos7/image-20210428164443927.png" alt="image-20210428164443927"></p>
+<p><img src="/2020/mac-install-centos7/image-20210428164443927.png" alt="image-20210428164443927"></p>
 <p>设置一个开机密码</p>
-<p><img src="/2021/mac-install-centos7/image-20210428164501049.png" alt="image-20210428164501049"></p>
+<p><img src="/2020/mac-install-centos7/image-20210428164501049.png" alt="image-20210428164501049"></p>
 <p>经过等待安装成功后，重启</p>
-<p><img src="/2021/mac-install-centos7/image-20210428170601205.png" alt="image-20210428170601205"></p>
+<p><img src="/2020/mac-install-centos7/image-20210428170601205.png" alt="image-20210428170601205"></p>
 <p>然后输入密码即可进去</p>
-<p><img src="/2021/mac-install-centos7/image-20210428171635415.png" alt="image-20210428171635415"></p>
+<p><img src="/2020/mac-install-centos7/image-20210428171635415.png" alt="image-20210428171635415"></p>
 <h2 id="2、使用">2、使用</h2>
 <p>1、<code>ip a</code>查看虚拟机的IP地址，用这个IP地址就可以使用xshell这种工具连接了，毕竟在虚拟机里直接造作不方便</p>
 <p>2、<code>hostnamectl set-hostname xxxx</code>设置虚拟机的名称</p>
@@ -500,14 +500,14 @@
 <p>重启网络服务</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@node04 network-scripts]# systemctl restart network</span><br><span class="line">[root@node04 network-scripts]# </span><br></pre></td></tr></table></figure>
 <p>4、关机，然后记录快照，也可以加上注释“模版机”</p>
-<p><img src="/2021/mac-install-centos7/image-20210428175609960.png" alt="image-20210428175609960"></p>
+<p><img src="/2020/mac-install-centos7/image-20210428175609960.png" alt="image-20210428175609960"></p>
 <p>如果之后环境出现问题，就可以还原快照</p>
-<p><img src="/2021/mac-install-centos7/image-20210428175945123.png" alt="image-20210428175945123"></p>
+<p><img src="/2020/mac-install-centos7/image-20210428175945123.png" alt="image-20210428175945123"></p>
 <p>5、克隆，在自己学习的时候，经常要做一些集群的搭建之类的，所以需要很多的节点，这个时候就需要用到克隆</p>
 <p>克隆的时候我们选择创建链接克隆，因为创建链接克隆的好处是，所需要的磁盘存储空间较少，创建时间快</p>
-<p><img src="/2021/mac-install-centos7/image-20210428180609285.png" alt="image-20210428180609285"></p>
+<p><img src="/2020/mac-install-centos7/image-20210428180609285.png" alt="image-20210428180609285"></p>
 <p>指定名称为<code>node05</code></p>
-<p><img src="/2021/mac-install-centos7/image-20210428180753222.png" alt="image-20210428180753222"></p>
+<p><img src="/2020/mac-install-centos7/image-20210428180753222.png" alt="image-20210428180753222"></p>
 <p>进去之后修改一下节点的名称</p>
 <p>6、Centos永久关闭SELinux</p>
 <p>Linux中又个安全机制叫做SELinux，查看状态发现是开启的</p>
@@ -532,10 +532,10 @@
 </blockquote>
 <p>8、在虚拟机中，选择网络类型的区别</p>
 <p>NAT模式：</p>
-<p><img src="/2021/mac-install-centos7/image-20210428193353896.png" alt="image-20210428193353896"></p>
+<p><img src="/2020/mac-install-centos7/image-20210428193353896.png" alt="image-20210428193353896"></p>
 <p>这是正常的上网设备</p>
 <p>NAT相当于以宿主机为载体，再来这样一份</p>
-<p><img src="/2021/mac-install-centos7/image-20210428194157796.png" alt="image-20210428194157796"></p>
+<p><img src="/2020/mac-install-centos7/image-20210428194157796.png" alt="image-20210428194157796"></p>
 <h2 id="安装基本开发环境">安装基本开发环境</h2>
 <p>1、安装<code>wget</code>、<code>vim</code></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install wget</span><br><span class="line">yum install vim</span><br></pre></td></tr></table></figure>
@@ -557,12 +557,12 @@
         <ul class="pager">
           
           <li class="previous">
-            <a href="/2021/zookeeper-base/" data-toggle="tooltip" data-placement="top" title="Zookeeper基础知识">&larr; Previous Post</a>
+            <a href="/2020/hexo-gitpage发布后，图片不展示/" data-toggle="tooltip" data-placement="top" title="hexo + gitpage发布后，图片不展示">&larr; Previous Post</a>
           </li>
           
           
           <li class="next">
-            <a href="/2021/redis-interview-problem/" data-toggle="tooltip" data-placement="top" title="Redis面试：击穿、穿透、雪崩、分布式锁、API">Next Post &rarr;</a>
+            <a href="/2020/github-static-source-cdn/" data-toggle="tooltip" data-placement="top" title="GitHub静态资源访问免费CDN提速">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -611,7 +611,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=在Mac上安装Linux系统centos7以及基本配置&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2021/mac-install-centos7/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=在Mac上安装Linux系统centos7以及基本配置&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2020/mac-install-centos7/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -645,7 +645,7 @@
       repo: 'shifpeng.github.io',
       owner: 'shifpeng',
       admin: 'shifpeng',
-      id: 'Sun Apr 25 2021 16:37:57 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Sat Apr 25 2020 16:37:57 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 10,
       pagerDirection: 'last',
@@ -928,7 +928,7 @@
     let jsdelivr = "https://cdn.jsdelivr.net/gh/";
     let gh = "shifpeng";
     let ghPages = gh + ".github.io";
-    let pagePath = "2021/mac-install-centos7/";
+    let pagePath = "2020/mac-install-centos7/";
     let jsdelivrurl;
     if (pagePath.indexOf("index.html") != -1) {
       jsdelivrurl = jsdelivr + gh + "/" + ghPages;
@@ -1321,20 +1321,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 </html>

@@ -140,10 +140,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://www.shifpeng.cn/2021/Redis集群之主从复制、CAP、PAXOS-1（二）/">
+  <link rel="canonical" href="https://www.shifpeng.cn/2020/Redis持久化/">
   <title>
     
-      Redis集群之分区方式及Redis Cluster - Steven | java
+      Redis持久化 - Steven | java
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -394,11 +394,11 @@
               <a class="tag" href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
               
             </div>
-            <h1>Redis集群之分区方式及Redis Cluster</h1>
-            <h2 class="subheading">当数据量很大的时候，通常每台服务器就几个G,该如何存储；Redis集群方式三</h2>
+            <h1>Redis持久化</h1>
+            <h2 class="subheading">redis的持久化RDB、fork、copyonwrite、AOF、RDB&amp;AOF混合使用</h2>
             <span class="meta">
-              Posted by 石福鹏 on
-              2021-04-06
+              Posted by Steven on
+              2020-03-24
             </span>
 
 
@@ -406,11 +406,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">10</span> Minutes
+              Estimated Reading Time <span class="post-count">18</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">3k</span> In Total
+              Words <span class="post-count">4.5k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -472,108 +472,188 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <p>redis内存总是有限的，即使服务器内存很大，假如180g,你也不会让一个redis实例使用180g的内存，因为redis在做持久化等等操作时时间成本很大，一般都是几个G就可以了，这样所有的环节都很轻盈，而且假如你让redis很大，因为一个redis进程要管理那么多的内存，序列化，持久化，就会相对慢一些，那么当数据量比较大的时候，我们要怎么往里面放呢？</p>
-<h2 id="一、大数据量在集群中的存储（作为缓存用）">一、大数据量在集群中的存储（作为缓存用）</h2>
-<h3 id="1、客户端层面解决">1、客户端层面解决</h3>
-<p>常用的三种分区方式：</p>
-<h4 id="a、按照业务划分（数据可以分类，交集不多）">a、按照业务划分（数据可以分类，交集不多）</h4>
-<p>根据上一篇文章中说的，在Y轴拓展，多个redis实例，比如一个实例存a开头的key，另一个实例存b开头的key，或者按照业务划分，一个实例存商品，一个实例存购物车等等</p>
-<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%BA%8C%EF%BC%89/image-20210407104154736.png" alt="image-20210407104154736"></p>
-<h4 id="b、不能按照业务拆分时">b、不能按照业务拆分时</h4>
-<p>当数据按照上面的方式无法拆分的时候</p>
-<h5 id="按照算法拆分-modula">按照算法拆分(modula)</h5>
-<p>比如hash+取模，这个时候，其实就已经属于<code>sharding</code>分片了，所有的片数据何在一起就是所有的数据</p>
-<p><strong>弊端</strong>：</p>
-<p>hash+取模天生的弊端就是取模的值必须是固定的（模是redis实例的台数），那么因为台数的变化（分布式下扩展机器），取模结果就会是不一样的，那么同样的数据可能就会去到不同的实例。</p>
-<p>因此弊端就是： <strong>影响分布式下的扩展性</strong></p>
-<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%BA%8C%EF%BC%89/image-20210407104135181.png" alt="image-20210407104135181"></p>
-<h5 id="random方式">random方式</h5>
-<p>客户端的数据随机各个实例中去扔，比如我要扔许多key都为k1的数据，这种方式更倾向于使用list存储，并且使用lpush，那么因为是随机，所以各个实例中就都可能有k1，但是会有个问题，那就是因为是随机的，所以你找不出来。因此需要增加一个客户端，链接其他的redis,然后这个客户端使用rpop获得数据消费就可以了</p>
-<p>这种场景是消息队列用的最多的一个场景</p>
-<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%BA%8C%EF%BC%89/image-20210407120202390.png" alt="image-20210407120202390"></p>
-<p>而这里的k1，就是topic；每一个redis就是partition,说到这里，我们就回想到kafka也用的是这项技术，只不过kafka是基于磁盘的，数据可以重复消费。redis是基于内存的，速度非常快</p>
-<h5 id="一致性hash算法-kemata">一致性hash算法-kemata</h5>
-<p>hash算法，属于映射算法（无论给出多短、多长、多复杂的字符串，经过算法后，都会给出一个等宽的值，和字符串做一个映射），首先这个过程是不会取模的，所以不会受限于物理机的个数，其次，根据算法算出等宽的hash值，那应该放在那一台节点上呢？所以算法会要求key和节点node都要参与算法计算的，一般会抽象成一个hash环（这里暂时不对算法做过多解释）</p>
+        <p>上一片文章中说到会拿redis做数据库，那么数据库就需要持久化，因为内存中的东西，掉电易失。</p>
+<p>首先是<strong>单机持久化</strong> ，再有单机也不靠谱的时候，<strong>主从复制</strong></p>
 <blockquote>
-<p>1、首先有一个环形，这环形很大，比如从0开始，到2的32次方，注意现在上面的点都是虚拟的点；</p>
-<p>2、有几台redis节点，每台可以给它一个ID号，或者IP+端口号，或其他唯一的信息</p>
-<p>3、首先node01节点经过算法，可以产生一个映射值，同理node02也会拿着2中说的唯一值进行算法计算，映射到环上的某一个点，这个时候这个点是物理的</p>
-<p>4、当存数据的时候，key值也做hash计算，然后对应都某一个点。</p>
-<p>5、准备一个算法，比如treemap等具备排序的，将所有的物理点放在类似于treemap上，拿着key得出的hash值对应的点，在treemap中去找，找到凡是大于这个点的物理点有哪些，离的最近的点对应的物理及，就是数据存储的节点，存储即可</p>
-<p>6、如果相加一个node03,通过上面说的方式，计算之后的点正好对应到node01和node02之间</p>
-<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%BA%8C%EF%BC%89/image-20210407160145752.png" alt="image-20210407160145752"></p>
-<p>7、当需要查询一个key的时候，本来是存在node02的，但是因为加了一个节点，虽然不影响3～2区间的数据查找映射关系，但是4～3之间的数据就会从node01中去查。但这不是什么问题，因为我们的本意就是需要增加节点来分担部分数据量。只不过会有些缺点</p>
+<p>数据存储，都关心两类东西：1:快照/副本；2:日志</p>
+</blockquote>
+<p>在redis中，也有这两种持久化机制：</p>
+<p><code>RDB</code>（Redis DataBase）描述的就是快照/副本。</p>
+<p><code>AOF</code>（Append Only File）描述的就是日志。</p>
+<h2 id="一、RDB（Redis-DataBase）">一、RDB（Redis DataBase）</h2>
+<p>时点性：比如8点整开始备份，但a=1是8:00落的，等到备份到b=2的时候,已经是8:05分了，而8:00的时候，b可能还是0。时点混乱</p>
+<p><strong>期望：</strong></p>
+<p>1、非阻塞，即在对外提供服务的同时，依然可以将数据落地，持久化</p>
 <blockquote>
-<p><strong>缺点</strong> ：新增节点会造成一小部分数据不能命中</p>
+<p>Linux中的一个小知识-<strong>管道</strong></p>
+<p>衔接，前一个命令的输出作为后一个命令的输入</p>
+<p>管道会触发创建子进程</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">echo</span> $$ <span class="comment"># 打印当前的进程ID</span></span></span><br><span class="line">echo $$  |  more  # 使用管道会创建一个新的子进程，但是这里$$优于管道的，所以会被转化成当前进程</span><br><span class="line">echo $BASHPID |  more # 这里就会创建一个子进程</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># $$ 高于 |</span></span>  </span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
-<p><strong>优点</strong> ：增加了节点，的确可以分担其他节点的压力，不会造成全局洗牌（hash+取模就会造成洗牌）</p>
-</blockquote>
-<hr>
-<p><strong>由于增加节点带来什么问题呢？</strong></p>
-<p>如果数据是在数据库存储的，那么就会造成缓存击穿</p>
-<hr>
-<p><strong>稍显笨拙的解决方案</strong></p>
-<p>每次取离最近的两个节点，但是这样会增加复杂度，这个取舍就在与你怎么考虑了</p>
-<p>8、因为是用在缓存中的，所以数据是有可能缓存住的，有可能没缓存住的，没缓存住的，可以再加载一下，同时，可以对节点开启LRU、LFU淘汰机制</p>
-<p>9、当然也会存在数据倾斜的问题，比如就两个节点，可能所有的数据都落在小于某一个环值的节点上，这个时候可以在步骤2的过程中，在唯一值后拼10个数据，每个节点都这样，比如node01，我分别拼1～10，那么经过计算就会找到10个点，node2同理，那么这样实际上就会有20个点是物理点。</p>
-<p>因此可以通过虚拟节点间接解决数据倾斜的问题</p>
-</blockquote>
-<p><strong>因此这种方案一般都是倾向于在作为缓存使用，而不是数据库</strong></p>
-<h3 id="2、代理层面解决（redis客户端链接成本高的问题）">2、代理层面解决（redis客户端链接成本高的问题）</h3>
-<p>实际情况不会像上面举例说的一个客户端，通常会有很多客户端，一个key的数据可能存在不同的实例中，所以就会有下面这张图</p>
-<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%BA%8C%EF%BC%89/image-20210407165033852.png" alt="image-20210407165033852"></p>
-<p>这样就会对server端造成很大的链接成本，那该如何解决呢？可以通过nginx做反向代理服务器（很多人不知道正向代理和反向代理的区别，看<a href="https://www.shifpeng.cn/article/proxy/">这篇文章</a>），</p>
-<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%BA%8C%EF%BC%89/image-20210407173629931.png" alt="image-20210407173629931"></p>
-<p>这种方式就可以解决，客户端链接过多对server的成本。那么只需要关注代理的性能就可以了，</p>
-<p>那么当客户端非常多的时候，怎么才能hold压力----做一个<strong>nginx集群</strong></p>
-<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%BA%8C%EF%BC%89/image-20210407175252767.png" alt="image-20210407175252767"></p>
+<p>使用linux的时候：父子进程</p>
 <blockquote>
-<p><strong>redis作者强调过redis连多线程都没有涉及，就是单线程，单实例，所以它其实更期望实际中就拿redis单个去使用，不要引入太多的技术</strong></p>
+<p><strong>父进程的数据，子进程可不可以看得到？</strong></p>
 </blockquote>
-<p>以上的两大块问题涉及到的知识点来源于twitter的一个开源项目<a target="_blank" rel="noopener" href="https://github.com/twitter/twemproxy">twemproxy</a>，可以在这里看到你熟悉的东西，有兴趣的可以看一看</p>
-<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%BA%8C%EF%BC%89/image-20210407230103798.png" alt="image-20210407230103798"></p>
-<p><strong>因此讨论这么多，依然还是这三种模式，modula、random、kemata，只不是这三种模式是放在客户端实现还是在代理层实现的，如上面的的就是将模式放在代理层进行实现的</strong></p>
-<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%BA%8C%EF%BC%89/image-20210408101149021.png" alt="image-20210408101149021"></p>
-<p><strong>并且三种模式的缺点都是一致的，就是只能拿来做缓存，三个模式中最好的是一致性hash，但是一致性hash增删节点的时候会造成数据的时间窗的丢失、不可用，所以只能用来做缓存。</strong></p>
-<p>不能做分布式数据库使用</p>
-<p>那如何解决这个问题呢？</p>
-<h2 id="二、【Redis集群方式三】Redis-Cluster集群">二、【Redis集群方式三】Redis Cluster集群</h2>
-<p>上面说到三种模式都只能作为缓存使用，不能作为分布式数据库使用，那如何解决呢？–预分区</p>
-<p>不论是在客户端层面实现三种模式还是在代理层实现三种模式，我们都可以使用预分区的思路来解决</p>
-<h3 id="1、拿hash-取模举例">1、拿hash+取模举例</h3>
-<p>1、比如是hash+取模：之前两台时取模的时候是取2，那么为什么不直接使用10，也就是说未来可能增加到10个节点，如果是10，那么取值范围就是0～9，只需要在中间夹一层mapping关系。</p>
-<p>2、当是两个节点的时候，比如节点1领取01234槽位，节点2领取56789槽位，因此每个节点各有5个槽位或者分片</p>
-<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%BA%8C%EF%BC%89/image-20210408114010095.png" alt="image-20210408114010095"></p>
-<p>3、如果再加一个节点，在mapping中，让出一个节点，这样数据也不需要再rehash一遍，节点1让出3，4槽位的数据，节点2让出8.9槽位的数据，将这些数据迁移到新的节点即可</p>
-<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%BA%8C%EF%BC%89/image-20210408114819103.png" alt="image-20210408114819103"></p>
-<hr>
-<p>有了上面的知识，其实<strong>redis集群</strong> 自己要做的更好,不需要代理层：</p>
-<p>1、比如有N个节点，并且是没有主节点的，每个节点会分数所有数据的1/N,客户端连服务端的时候，想连谁就连谁。</p>
-<p>2、比如客户端现在要<code>get k1</code>,而<code>k1</code>真实存储在第三个节点上，并且在4号槽位（hash%10之后得出的槽位），而客户端直接链接到了节点2，相当于是将hash+取模操作放在了服务端，各个节点上去处理（之前是在客户端或者代理层处理），节点2收到请求之后，拿着k1做hash+取模算出槽位，和自己的mapping做比对，另外，每个节点上都会有所有节点的映射关系，也就是说，每个节点不但有算法，还有其他节点的映射关系</p>
-<p>3、如果取模后，发现槽位4实在节点3 ，那这个时候就会返回给客户端，需要客户端重定向到节点3，节点3还是拿着k1做hash+取模运算，然后找到返回就可以了</p>
+<p><strong>常规思想</strong> :进程是数据隔离的！</p>
+<p><strong>进阶思想</strong> :父进程其实可以让子进程看到数据！</p>
+<p>export的环境变量，</p>
+<p>子进程的修改不会破坏父进程</p>
+<p>父进程的修改也不会破坏子进程</p>
+</blockquote>
 <blockquote>
-<p>Redis集群是自动分片和高可用的首选方案</p>
+<p>Tips:执行一个脚本的时候，想让他在后台执行。只需要在命令后面加上<code>&amp;</code>,比如：<code>./test.sh &amp;</code></p>
 </blockquote>
-<hr>
-<p>上面👆就是redis的cluster模式，他是一种无主模型</p>
-<p><strong>那为什么要实现<code>redis Cluster</code></strong></p>
+<p>创建子进程的速度快吗？或者如果父进程是redis，内存数据有10个G，如果要做到非阻塞的情况下，还有做数据持久化，那么根据上面的知识，我们知道，我们可以在准备持久化的时候创建一个子进程，来处理数据持久化。那么：</p>
+<p>1、速度快吗？</p>
+<p>2、内存空间不够吗？父进程10g,那么子进程也是10个G，空间还够吗</p>
+<p>这个时候就有一种系统调用-<code>fork()</code></p>
+<h3 id="1、系统调用fork">1、系统调用<code>fork()</code></h3>
+<p>它其实使用的就是指针的引用，它可以达到效果：</p>
+<p>1、创建速度很快</p>
+<p>2、空间要求也是小的（子进程占用很小的空间）</p>
 <blockquote>
-<p>1.主从复制不能实现高可用</p>
-<p>2.随着公司发展，用户数量增多，并发越来越多，业务需要更高的QPS，而主从复制中单机的QPS可能无法满足业务需求</p>
-<p>3.数据量的考虑，现有服务器内存不能满足业务数据的需要时，单纯向服务器添加内存不能达到要求，此时需要考虑分布式需求，把数据分布到不同服务器上</p>
-<p>4.网络流量需求：业务的流量已经超过服务器的网卡的上限值，可以考虑使用分布式来进行分流</p>
-<p>5.离线计算，需要中间环节缓冲等别的需求</p>
+<p>计算机中有物理内存，其实就是一个线性的地址空间，里面是很大的字节数组，redis会有一个虚拟地址，它里面的地址会映射到物理内存的某个地址</p>
+<p>而通过系统调用fork()出来的子进程，也是一块虚拟内存，它并不是说把数据拷贝过去了，而是指针指向物理内存中的地址</p>
+<p><img src="/2020/Redis%E6%8C%81%E4%B9%85%E5%8C%96/image-20210325145345195.png" alt="image-20210325145345195"></p>
 </blockquote>
-<p>可参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/williamjie/p/11132211.html">https://www.cnblogs.com/williamjie/p/11132211.html</a></p>
-<p><a target="_blank" rel="noopener" href="http://redis.cn/topics/partitioning.html">官方总结：</a> 一定要看，非常重要，可以帮助很好的理解上面的推导～</p>
-<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%BA%8C%EF%BC%89/image-20210408145920721.png" alt="image-20210408145920721"></p>
-<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%BA%8C%EF%BC%89/image-20210408150432094.png" alt="image-20210408150432094"></p>
-<p>但是数据一旦分治之后，出现在不同的节点上，那么数据聚合就很难实现，比如一个操作需要几个key，比如相对两个list取交集，再比如事务，因为他们被存到了不同的节点上，那如何实现？</p>
-<h3 id="2、hash-tag解决数据聚合问题">2、<code>hash_tag</code>解决数据聚合问题</h3>
-<p>数据一旦分开，就很难整合起来，如果数据不被分开，那么前面担心的聚合操作就没问题了，</p>
-<p>如果key是这样的，<code>&#123;oo&#125;k1,&#123;oo&#125;k2</code>,做计算时拿着前面的{oo}做哈希取模运算，那数据肯定就会落在一个节点上，这样数据就不会分开了</p>
-<p>这就是<code>hash_tag</code>:将key进行hash_tag的包装，然后把tag用大括号括起来</p>
+<h3 id="2、copy-on-write写时复制机制，（COW）">2、<code>copy on write</code>写时复制机制，（COW）</h3>
+<p>即创建子进程的时候并不发生复制（指针拷贝）</p>
+<p><strong>优势：</strong></p>
+<p>1、创建进程变快</p>
+<p>2、根据经验，父、子进程不可能把所有数据都改一遍</p>
+<blockquote>
+<p>a在redis虚拟内存中的地址是3，指向物理内存地址为8的地方，改之前物理内存a的值是x，现在要把a的值改成8，那么要怎么改呢，需要先出现w，然后再把w的值赋給某一个引用</p>
+</blockquote>
+<blockquote>
+<p>如果有多个调用者（callers）同时要求相同资源（如内存或磁盘上的数据存储），他们会共同获取相同的指针指向相同的资源，直到某个调用者试图修改资源的内容时，系统才会真正复制一份专用副本（private copy）给该调用者，而其他调用者所见到的最初的资源仍然保持不变。这过程对其他的调用者都是透明的（transparently）。此作法主要的优点是如果调用者没有修改该资源，就不会有副本（private copy）被创建，因此多个调用者只是读取操作时可以共享同一份资源。</p>
+</blockquote>
+<p>因此这就会<strong>解决上面时点混乱的问题</strong> 了，8点创建的子进程，那么这个时候子进程就有了8点时所有的数据的指针，这之后，父进程的数据修改，不会影响子进程的数据（父子进程对数据的修改，对方看不到（数据是隔离的）），也就是父进程中a已经指向到了一个新的内存地址，但是子进程中的依然是8点时的内存地址</p>
+<blockquote>
+<p>注意：<code>fork()</code>是系统调用,<code>COW</code>是内核机制</p>
+</blockquote>
+<h3 id="3、具体实现">3、具体实现</h3>
+<h4 id="a、使用命令">a、使用命令</h4>
+<p><code>save</code>前台阻塞、<code>bgsave</code>后端异步的非阻塞命令，<code>bgsave</code>会触发<code>fork</code>，创建子进程。</p>
+<p>但是人为的执行多少有些不靠谱，所以也支持在配置文件中编写一个<code>bgsave</code>规则</p>
+<blockquote>
+<p>注意在配置文件中用的是<code>save</code>这个标识，但是触发的是<code>bgsave</code></p>
+</blockquote>
+<p>那是不是<code>save</code>命令一点优势都没有了，也不是，会在哪里用到呢，只要是服务不关机，不做任何停服的时候，肯定使用<code>bgsave</code>，但是如果是关机维护的时候，就必须做一个<code>save</code>，存一个全量数据，否则就丢失数据了，虽然这种场景不是特别常见</p>
+<p>redis中关于这块的配置</p>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">################################ SNAPSHOTTING  ################################</span><br><span class="line">#</span><br><span class="line"># Save the DB on disk:</span><br><span class="line">#</span><br><span class="line">#   save &lt;seconds&gt; &lt;changes&gt;</span><br><span class="line">#</span><br><span class="line">#   In the example below the behaviour will be to save:</span><br><span class="line">#   after <span class="number">900</span> sec (<span class="number">15</span> min) <span class="keyword">if</span> at least <span class="number">1</span> key changed</span><br><span class="line">#   after <span class="number">300</span> sec (<span class="number">5</span> min) <span class="keyword">if</span> at least <span class="number">10</span> keys changed</span><br><span class="line">#   after <span class="number">60</span> sec <span class="keyword">if</span> at least <span class="number">10000</span> keys changed</span><br><span class="line">#</span><br><span class="line">#   Note: you can disable saving completely by commenting out all <span class="string">&quot;save&quot;</span> lines.</span><br><span class="line">#</span><br><span class="line">#   It is also possible to remove all the previously configured save</span><br><span class="line">#   points by adding a save directive <span class="keyword">with</span> a single empty string argument</span><br><span class="line">#   like <span class="keyword">in</span> the following example:</span><br><span class="line">#</span><br><span class="line">#   save <span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"># 下面的save只是一个标识，触发的是bgsave</span><br><span class="line"></span><br><span class="line">save <span class="number">900</span> <span class="number">1</span> # 当到达<span class="number">900</span>秒的时候，操作数超过<span class="number">1</span>的时候，就触发bgsave</span><br><span class="line">save <span class="number">300</span> <span class="number">10</span> # 当到达<span class="number">300</span>秒的时候，操作数超过<span class="number">10</span>的时候，就触发bgsave</span><br><span class="line">save <span class="number">60</span> <span class="number">10000</span>  # 当到达<span class="number">60</span>秒的时候，操作数超过<span class="number">10000</span>的时候，就触发bgsave</span><br></pre></td></tr></table></figure>
+<p>上面的配置，也可以关闭不用，<code>save &quot;&quot;</code>即可，即打开18行的注释。注释22～24行</p>
+<blockquote>
+<p>redis默认是开启了RDB（快照/副本）功能的</p>
+</blockquote>
+<p>其他配置：</p>
+<p><code>rdbcompression yes</code>：是否开启压缩</p>
+<p><code>rdbchecksum yes</code>：新版本增加的，会在文件的最后写一个交易位</p>
+<p><code>dbfilename dump.rdb</code>：给落下来的文件起个名字<code>dump.rdb</code></p>
+<p><code>dir /var/lib/redis/6379</code>：落下来的文件存放路径</p>
+<h3 id="4、弊端">4、弊端</h3>
+<p>1、不支持拉链，只有一个dump.rdb,需要运维定制定时策略，备份每个备份按照日期存储</p>
+<p>2、丢失数据相对多，因为他不是实时记录数据的变化，时点和时点之间窗口的数据容易丢失，比如8点备份了，9点的备份还没做，挂机了，那么就丢失了一个小时的数据，和<code>hdfs</code>、<code>fsimage</code>弊端是一样的</p>
+<h3 id="5、优点">5、优点</h3>
+<p>类似Java中的序列化，其实就是把内存中的字节数组，以最快的速度搬到磁盘中去，所以恢复的时候也直接恢复，即恢复的速度相对快</p>
+<p>基于4中所说的弊端，就有了AOF</p>
+<h2 id="二、AOF-Append-Only-File">二、<code>AOF</code>(<code>Append Only File</code>)</h2>
+<p>AOF，即只会向文件追加，所谓的追加即服务器的写操作。</p>
+<p>1、每一个写的操作，都会追加到文件，这样做的好处就是丢失的数据少</p>
+<p>2、RDB、AOP可以同时开启，但是注意，如果同时开启，重启服务器的时候，恢复的时候只会拿AOF恢复</p>
+<blockquote>
+<p>新版本4.0之后，AOF中包含RDB全量，增加记录新的写操作</p>
+</blockquote>
+<blockquote>
+<p>问题：Redis运行了10年，开启了AOF，在10年的时候挂了：</p>
+<p>a：AOF多大？</p>
+<p>​	AOF可以有10个T嘛？可以，因为是一直append，写、删操作，记录的操作记录（操作指令）</p>
+<p>b：恢复需要多久？会存在内存溢出的情况嘛？</p>
+<p>​	不会发生溢出操作，这10个T很多前面创建，后面删除，后面拿删除的空间再去创建，，所以只要线性的执行这个文件，最终就会恢复，不会溢出</p>
+<p>​	要溢出，在写入内存的时候就会发生溢出，不会写到文件中去的。</p>
+<p>​	恢复多久？恢复5年可不可以？当然是有可能的，因为存的是指令，需要一条一条的执行</p>
+</blockquote>
+<p>因此，会存在的弊端：</p>
+<p>1、体量无限变大</p>
+<p>2、恢复慢，</p>
+<p>那如果在不丢失数据的情况下，AOF足够小</p>
+<blockquote>
+<p>在<code>hdfs</code>、<code>fsimage</code>中，用<code>hdfs</code>、<code>fsimage</code>+<code>edits.log</code>,把日志中的东西记到一个镜像当中，日志就会被清空，到下一个时点，日志就只会记增量</p>
+</blockquote>
+<p>Redis中是如何实现的</p>
+<p>1、4.0以前，重写，抵消和整合命令，删除抵消的命令，合并重复命令</p>
+<blockquote>
+<p>比如：一个key，前面一系列的创建，删除，最后一个还是创建，那么其实前面的都不需要管了</p>
+<p>或者有一个list，10年一直在push 1,那么可以计数后，直接一次push总和个1</p>
+</blockquote>
+<p>但是恢复成本还是挺高</p>
+<p>2、4.0以后，重写时，先将老的数据RDB,写到AOF文件中，再将增量的以指令的方式Append到AOF中</p>
+<blockquote>
+<p>AOF是一个混合体，利用了RDB恢复快，利用了日志的全量</p>
+</blockquote>
+<h3 id="1、AOF的三个级别">1、AOF的三个级别</h3>
+<p>Redis是一个内存数据库，但是现在增删改的时候，就回触发I/O操作，因为要向磁盘中去写，所以会拖慢Redis内存速度，因此AOF有三个界别配置可以调</p>
+<p><code>NO</code>、<code>always</code>、<code>everysec</code>：</p>
+<blockquote>
+<p>一个常识：</p>
+<p>在Java编程的时候嘛，如果要打开一个文件往里面写东西，写完之后，必须要写一个<code>flush</code>,因为，在计算机中，所有对磁盘硬件的I/O操作就需要调用内核的，比如内核中的文件描述符是8，那么在调用内核的时候，内核会开一个buffer,Java程序写的时候，先是写到buffer中，buffer满了之后，内核就会向磁盘去刷写，或者通过<code>flush</code>刷写。</p>
+<p>那么Redis同理</p>
+<p><img src="/2020/Redis%E6%8C%81%E4%B9%85%E5%8C%96/image-20210326161033793.png" alt="image-20210326161033793"></p>
+</blockquote>
+<p>Redis配置文件中，有一些配置</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">appendonly no  # 默认是关闭AOF的</span><br><span class="line">appendfilename &quot;appendonly.aof&quot; # 文件名称，也会存储在跟RDB一样的目录下</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 三个级别</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> appendfsync always</span> </span><br><span class="line">appendfsync everysec # 每秒</span><br><span class="line"><span class="meta">#</span><span class="bash"> appendfsync no</span></span><br><span class="line"></span><br><span class="line">no-appendfsync-on-rewrite no </span><br><span class="line"><span class="meta">#</span><span class="bash">yes: 如果redis抛出一个子进程在处理进行rdb或者aof的重写(bgrewriteaof)的时候，那么父进程不论哪个级别都不会把缓冲区的数据刷写到磁盘，因为子进程正在对着磁盘做写操作，减少争抢I/O，但是容易丢数据</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> no：不会丢失数据，但是要忍受阻塞的问题</span></span><br><span class="line"></span><br><span class="line">aof-use-rdb-preamble yes # 重写时，先将老的数据RDB,写到AOF文件中，再将增量的以指令的方式Append到AOF中</span><br></pre></td></tr></table></figure>
+<p><strong>三个级别：</strong></p>
+<p><code>no</code>: redis收到N个写操作，每笔都会写到内核的buffer中，no的意思就是redis不调用<code>flush</code>，而是buffer什么时候满了，什么时候去刷写，这样存在的问题就是可能丢失一个buffer大小的数据</p>
+<p><code>always</code> redis发生一次写操作，就调用一次内核，再调用一次<code>flush</code>，把数据刷进磁盘。数据最可靠的</p>
+<p><code>everysec</code>:redis每一秒中调用一次<code>flush</code>，相对丢的数据较少</p>
+<h2 id="三、实战">三、实战</h2>
+<h3 id="1、修改配置">1、修改配置</h3>
+<h4 id="a、老版本的配置">a、老版本的配置</h4>
+<p>修改<code>daemonize</code>为<code>no</code>,即我们不让他作为后台进程服务运行，，在前台阻塞着运行，</p>
+<p>注释文件地址，让日志直接打印到控制台，不然就会写到日志文件<code># logfile /var/log/redis_6379.log</code></p>
+<p>修改<code>appendonly</code>为<code>yes</code>,开启AOF，</p>
+<p>暂时先关闭混合，修改<code>aof-use-rdb-preamble</code>为<code>no</code></p>
+<p>如果<code>/var/lib/redis/6379</code>下已经有生成的<code>dump.rdb</code>文件，先删除（⚠️注意，这里是为了学习测试使用，别把真实的有用的数据删除了）</p>
+<p>先确定redis是没有启动的，然后启动服务</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 6379]# redis-server /etc/redis/6379.conf </span><br><span class="line">1835:C 26 Mar 2021 16:46:13.276 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo</span><br><span class="line">1835:C 26 Mar 2021 16:46:13.276 # Redis version=6.0.0, bits=64, commit=00000000, modified=0, pid=1835, just started</span><br><span class="line">1835:C 26 Mar 2021 16:46:13.276 # Configuration loaded</span><br><span class="line">1835:M 26 Mar 2021 16:46:13.281 * Increased maximum number of open files to 10032 (it was originally set to 1024).</span><br><span class="line">                _._                                                  </span><br><span class="line">           _.-``__ &#x27;&#x27;-._                                             </span><br><span class="line">      _.-``    `.  `_.  &#x27;&#x27;-._           Redis 6.0.0 (00000000/0) 64 bit</span><br><span class="line">  .-`` .-```.  ```\/    _.,_ &#x27;&#x27;-._                                   </span><br><span class="line"> (    &#x27;      ,       .-`  | `,    )     Running in standalone mode</span><br><span class="line"> |`-._`-...-` __...-.``-._|&#x27;` _.-&#x27;|     Port: 6379</span><br><span class="line"> |    `-._   `._    /     _.-&#x27;    |     PID: 1835</span><br><span class="line">  `-._    `-._  `-./  _.-&#x27;    _.-&#x27;                                   </span><br><span class="line"> |`-._`-._    `-.__.-&#x27;    _.-&#x27;_.-&#x27;|                                  </span><br><span class="line"> |    `-._`-._        _.-&#x27;_.-&#x27;    |           http://redis.io        </span><br><span class="line">  `-._    `-._`-.__.-&#x27;_.-&#x27;    _.-&#x27;                                   </span><br><span class="line"> |`-._`-._    `-.__.-&#x27;    _.-&#x27;_.-&#x27;|                                  </span><br><span class="line"> |    `-._`-._        _.-&#x27;_.-&#x27;    |                                  </span><br><span class="line">  `-._    `-._`-.__.-&#x27;_.-&#x27;    _.-&#x27;                                   </span><br><span class="line">      `-._    `-.__.-&#x27;    _.-&#x27;                                       </span><br><span class="line">          `-._        _.-&#x27;                                           </span><br><span class="line">              `-.__.-&#x27;                                               </span><br><span class="line"></span><br><span class="line">1835:M 26 Mar 2021 16:46:13.286 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.</span><br><span class="line">1835:M 26 Mar 2021 16:46:13.286 # Server initialized</span><br><span class="line">1835:M 26 Mar 2021 16:46:13.286 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add &#x27;vm.overcommit_memory = 1&#x27; to /etc/sysctl.conf and then reboot or run the command &#x27;sysctl vm.overcommit_memory=1&#x27; for this to take effect.</span><br><span class="line">1835:M 26 Mar 2021 16:46:13.286 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command &#x27;echo never &gt; /sys/kernel/mm/transparent_hugepage/enabled&#x27; as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.</span><br><span class="line">1835:M 26 Mar 2021 16:46:13.287 * Ready to accept connections</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>查看刚才目录下生成了一个文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 6379]# pwd</span><br><span class="line">/var/lib/redis/6379</span><br><span class="line">[root@hadoop01 6379]# ll</span><br><span class="line">总用量 0</span><br><span class="line">-rw-r--r-- 1 root root 0 3月  26 16:46 appendonly.aof</span><br><span class="line">[root@hadoop01 6379]# </span><br></pre></td></tr></table></figure>
+<p>再开启一个客户端:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 6379]# redis-cli </span><br><span class="line">127.0.0.1:6379&gt; set k1 hello</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; </span><br></pre></td></tr></table></figure>
+<p>再次看持久化目录<code>/var/lib/redis/6379</code>，没有<code>dump.rdb</code>,因为没有触发那三个条件，查看<code> appendonly.aof</code>文件,这是文件中的内容</p>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">*2  # * 代表有几个元素，分别是下面的select和0</span></span><br><span class="line"><span class="meta"><span class="meta-keyword">$6</span>  # $ 表示下面这个select元素是由几个字符或者自己组成</span></span><br><span class="line">SELECT</span><br><span class="line"><span class="meta"><span class="meta-keyword">$1</span></span></span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="comment">*3</span></span><br><span class="line"><span class="meta"><span class="meta-keyword">$3</span></span></span><br><span class="line"><span class="keyword">set</span></span><br><span class="line">$2</span><br><span class="line">k1</span><br><span class="line">$5</span><br><span class="line">hello</span><br></pre></td></tr></table></figure>
+<p>继续添加，文件也会继续追加。</p>
+<p>因为目前还没有满足<code>save</code>的触发条件，所以我们可以使用<code>save</code>或者<code>bsave</code>写rdb文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 6379]# redis-cli </span><br><span class="line">127.0.0.1:6379&gt; set k1 hello</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; bgsave</span><br><span class="line">Background saving started</span><br><span class="line">127.0.0.1:6379&gt; </span><br></pre></td></tr></table></figure>
+<p>同时我们看到服务端：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">1835:M 26 Mar 2021 16:46:13.287 * Ready to accept connections</span><br><span class="line">1835:M 26 Mar 2021 16:56:50.778 * Background saving started by pid 1967 # 开辟了一个子进程</span><br><span class="line">1967:C 26 Mar 2021 16:56:50.787 * DB saved on disk</span><br><span class="line">1967:C 26 Mar 2021 16:56:50.791 * RDB: 4 MB of memory used by copy-on-write # 写时复制完成</span><br><span class="line">1835:M 26 Mar 2021 16:56:50.827 * Background saving terminated with success</span><br></pre></td></tr></table></figure>
+<p>响应的目录下也多了一个<code>dump.rdb</code>，可以查看这个文件，但是存的是序列化的，所以可以使用<code>redis-check-rdb dump.rdb</code>看一些信息：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 6379]# redis-check-rdb dump.rdb</span><br><span class="line">[offset 0] Checking RDB file dump.rdb</span><br><span class="line">[offset 26] AUX FIELD redis-ver = &#x27;6.0.0&#x27;</span><br><span class="line">[offset 40] AUX FIELD redis-bits = &#x27;64&#x27;</span><br><span class="line">[offset 52] AUX FIELD ctime = &#x27;1616749010&#x27;</span><br><span class="line">[offset 67] AUX FIELD used-mem = &#x27;865048&#x27;</span><br><span class="line">[offset 83] AUX FIELD aof-preamble = &#x27;0&#x27;</span><br><span class="line">[offset 85] Selecting DB ID 0</span><br><span class="line">--- RDB ERROR DETECTED ---</span><br><span class="line">[offset 107] RDB CRC error</span><br><span class="line">[additional info] While doing: check-sum</span><br><span class="line">[info] 1 keys read</span><br><span class="line">[info] 0 expires</span><br><span class="line">[info] 0 already expired</span><br><span class="line">[root@hadoop01 6379]# </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>我现在继续在客户端对k1设置值</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; set k1 1</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; set k1 2</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; set k1 3</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; set k1 a</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; set k1 b</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; set k1 c</span><br></pre></td></tr></table></figure>
+<p>这个时候，<code> appendonly.aof</code>文件就会将这些命令追加了，文件大小此时为158个字节</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 6379]# ll</span><br><span class="line">总用量 8</span><br><span class="line">-rw-r--r-- 1 root root 158 3月  26 17:09 appendonly.aof</span><br><span class="line">-rw-r--r-- 1 root root 107 3月  26 16:56 dump.rdb</span><br><span class="line">[root@hadoop01 6379]# </span><br></pre></td></tr></table></figure>
+<p>那其实这个文件中许多就是没用的，所以我们做一个重写<code>BGREWRITEAOF</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; BGREWRITEAOF </span><br><span class="line">Background append only file rewriting started</span><br><span class="line">127.0.0.1:6379&gt; </span><br></pre></td></tr></table></figure>
+<p>再次查看文件大小,发现已经减少到了52个字节</p>
+<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 6379]<span class="comment"># ll</span></span><br><span class="line">总用量 8</span><br><span class="line">-rw-r--r--<span class="number"> 1 </span>root root <span class="number"> 51 </span>3月 <span class="number"> 26 </span>17:10 appendonly.aof</span><br><span class="line">-rw-r--r--<span class="number"> 1 </span>root root<span class="number"> 107 </span>3月 <span class="number"> 26 </span>16:56 dump.rdb</span><br><span class="line">[root@hadoop01 6379]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
+<p>再去看<code>appendonly.aof</code>文件，发现中间的一些命令在文件中已经没有了，抵消掉了</p>
+<h4 id="b、新版本的配置">b、新版本的配置</h4>
+<p><code>Ctrl+C</code>结束服务端，关闭客户端，把刚才生成的两个文件都删除掉</p>
+<p>修改配置<code>aof-use-rdb-preamble</code>为<code>yes</code>,目录下就会多一个<code>appendonly.aof</code>文件，目前还是空的，开一个客户端</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 6379]# redis-cli -p 6379  --raw</span><br><span class="line">127.0.0.1:6379&gt; set k1 aa</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; set k1 bb</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; set k1 cc</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; set k1 dd</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; </span><br></pre></td></tr></table></figure>
+<p>此时的<code>appendonly.aof</code>文件,依然是存的上面的每条指令，这个时候再执行：</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0.0.1:6379</span>&gt; BGREWRITEAOF</span><br><span class="line">Background append only file rewriting started</span><br><span class="line"><span class="number">127.0.0.1:6379</span>&gt; </span><br></pre></td></tr></table></figure>
+<p>这个时候再看<code>appendonly.aof</code>文件的时候，发现存的是RDB的内容了</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">REDIS0009ú      redis-ver^E6.0.0ú</span><br><span class="line">redis-bitsÀ@ú^EctimeÂ8©]`ú^Hused-memÂ^H3^M^@ú^Laof-preambleÀ^Aþ^@û^A^@^@^Bk1^Bddÿ;§¸^LÁ&lt;8b&gt;¯¼                                                                                   </span><br></pre></td></tr></table></figure>
+<p>继续set</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6379</span>&gt; set k<span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="attribute">OK</span></span><br><span class="line"><span class="attribute">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6379</span>&gt; set k<span class="number">1</span> <span class="number">2</span></span><br><span class="line"><span class="attribute">OK</span></span><br><span class="line"><span class="attribute">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6379</span>&gt; </span><br></pre></td></tr></table></figure>
+<p>这个时候<code>appendonly.aof</code>文件中，这两条命了就会以AOF的方式追加到文件中（时点数据+增量日志）</p>
+<p><img src="/2020/Redis%E6%8C%81%E4%B9%85%E5%8C%96/image-20210326173258759.png" alt="image-20210326173258759"></p>
+<p>等到下次再<code>BGREWRITEAOF</code>，就会再次触发重写，把刚才一些命令做抵消，以RDB的方式重新存在<code>appendonly.aof</code>中</p>
+<blockquote>
+<p>因此需要注意了，加入你再这个时候，不小心输入了<code>flushall</code>,内存中的数据都没有了，那这个一定要注意不要执行<code>BGREWRITEAOF</code>，因为<code>appendonly.aof</code>文件的最后就是<code>flushall</code>,可以认为的删除<code>flushall</code>及前面的<code>*</code>、<code>$</code>,这样恢复数据的时候就不会丢失</p>
+</blockquote>
 
 
         <hr>
@@ -581,12 +661,12 @@
         <ul class="pager">
           
           <li class="previous">
-            <a href="/2021/Redis集群实战/" data-toggle="tooltip" data-placement="top" title="Redis集群实战">&larr; Previous Post</a>
+            <a href="/2020/Redis集群之主从复制、CAP、PAXOS-1（一）/" data-toggle="tooltip" data-placement="top" title="Redis集群之主从复制、哨兵模式">&larr; Previous Post</a>
           </li>
           
           
           <li class="next">
-            <a href="/2021/Redis集群之主从复制、CAP、PAXOS-1（一）/" data-toggle="tooltip" data-placement="top" title="Redis集群之主从复制、哨兵模式">Next Post &rarr;</a>
+            <a href="/2020/Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU/" data-toggle="tooltip" data-placement="top" title="Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -635,7 +715,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=Redis集群之分区方式及Redis Cluster&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2021/Redis集群之主从复制、CAP、PAXOS-1（二）/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Redis持久化&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2020/Redis持久化/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -669,7 +749,7 @@
       repo: 'shifpeng.github.io',
       owner: 'shifpeng',
       admin: 'shifpeng',
-      id: 'Tue Apr 06 2021 13:59:59 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Tue Mar 24 2020 14:09:00 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 10,
       pagerDirection: 'last',
@@ -722,7 +802,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E5%A4%A7%E6%95%B0%E6%8D%AE%E9%87%8F%E5%9C%A8%E9%9B%86%E7%BE%A4%E4%B8%AD%E7%9A%84%E5%AD%98%E5%82%A8%EF%BC%88%E4%BD%9C%E4%B8%BA%E7%BC%93%E5%AD%98%E7%94%A8%EF%BC%89"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、大数据量在集群中的存储（作为缓存用）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B1%82%E9%9D%A2%E8%A7%A3%E5%86%B3"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">1、客户端层面解决</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#a%E3%80%81%E6%8C%89%E7%85%A7%E4%B8%9A%E5%8A%A1%E5%88%92%E5%88%86%EF%BC%88%E6%95%B0%E6%8D%AE%E5%8F%AF%E4%BB%A5%E5%88%86%E7%B1%BB%EF%BC%8C%E4%BA%A4%E9%9B%86%E4%B8%8D%E5%A4%9A%EF%BC%89"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">a、按照业务划分（数据可以分类，交集不多）</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#b%E3%80%81%E4%B8%8D%E8%83%BD%E6%8C%89%E7%85%A7%E4%B8%9A%E5%8A%A1%E6%8B%86%E5%88%86%E6%97%B6"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">b、不能按照业务拆分时</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%8C%89%E7%85%A7%E7%AE%97%E6%B3%95%E6%8B%86%E5%88%86-modula"><span class="toc-nav-number">1.1.2.1.</span> <span class="toc-nav-text">按照算法拆分(modula)</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#random%E6%96%B9%E5%BC%8F"><span class="toc-nav-number">1.1.2.2.</span> <span class="toc-nav-text">random方式</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E4%B8%80%E8%87%B4%E6%80%A7hash%E7%AE%97%E6%B3%95-kemata"><span class="toc-nav-number">1.1.2.3.</span> <span class="toc-nav-text">一致性hash算法-kemata</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81%E4%BB%A3%E7%90%86%E5%B1%82%E9%9D%A2%E8%A7%A3%E5%86%B3%EF%BC%88redis%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%93%BE%E6%8E%A5%E6%88%90%E6%9C%AC%E9%AB%98%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%89"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">2、代理层面解决（redis客户端链接成本高的问题）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E3%80%90Redis%E9%9B%86%E7%BE%A4%E6%96%B9%E5%BC%8F%E4%B8%89%E3%80%91Redis-Cluster%E9%9B%86%E7%BE%A4"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、【Redis集群方式三】Redis Cluster集群</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E6%8B%BFhash-%E5%8F%96%E6%A8%A1%E4%B8%BE%E4%BE%8B"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">1、拿hash+取模举例</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81hash-tag%E8%A7%A3%E5%86%B3%E6%95%B0%E6%8D%AE%E8%81%9A%E5%90%88%E9%97%AE%E9%A2%98"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2、hash_tag解决数据聚合问题</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81RDB%EF%BC%88Redis-DataBase%EF%BC%89"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、RDB（Redis DataBase）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8fork"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">1、系统调用fork()</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81copy-on-write%E5%86%99%E6%97%B6%E5%A4%8D%E5%88%B6%E6%9C%BA%E5%88%B6%EF%BC%8C%EF%BC%88COW%EF%BC%89"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">2、copy on write写时复制机制，（COW）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3%E3%80%81%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">3、具体实现</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#a%E3%80%81%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">1.3.1.</span> <span class="toc-nav-text">a、使用命令</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4%E3%80%81%E5%BC%8A%E7%AB%AF"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">4、弊端</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5%E3%80%81%E4%BC%98%E7%82%B9"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">5、优点</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81AOF-Append-Only-File"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、AOF(Append Only File)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81AOF%E7%9A%84%E4%B8%89%E4%B8%AA%E7%BA%A7%E5%88%AB"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">1、AOF的三个级别</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E5%AE%9E%E6%88%98"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、实战</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">1、修改配置</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#a%E3%80%81%E8%80%81%E7%89%88%E6%9C%AC%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">3.1.1.</span> <span class="toc-nav-text">a、老版本的配置</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#b%E3%80%81%E6%96%B0%E7%89%88%E6%9C%AC%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">3.1.2.</span> <span class="toc-nav-text">b、新版本的配置</span></a></li></ol></li></ol></li></ol>
         
         </div>
       </aside>
@@ -956,7 +1036,7 @@
     let jsdelivr = "https://cdn.jsdelivr.net/gh/";
     let gh = "shifpeng";
     let ghPages = gh + ".github.io";
-    let pagePath = "2021/Redis集群之主从复制、CAP、PAXOS-1（二）/";
+    let pagePath = "2020/Redis持久化/";
     let jsdelivrurl;
     if (pagePath.indexOf("index.html") != -1) {
       jsdelivrurl = jsdelivr + gh + "/" + ghPages;
@@ -1349,20 +1429,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 </html>

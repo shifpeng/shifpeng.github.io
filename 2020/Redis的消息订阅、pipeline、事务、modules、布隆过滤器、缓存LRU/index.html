@@ -140,7 +140,7 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://www.shifpeng.cn/2021/Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU/">
+  <link rel="canonical" href="https://www.shifpeng.cn/2020/Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU/">
   <title>
     
       Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU - Steven | java
@@ -398,7 +398,7 @@
             <h2 class="subheading">Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU以及缓存常见问题</h2>
             <span class="meta">
               Posted by 石福鹏 on
-              2021-03-21
+              2020-03-21
             </span>
 
 
@@ -514,19 +514,19 @@
 <p>所以一般把数据完整性不是特别强的，直接就搬到redis作为数据库，存那些实时写的数据，比如购买数，浏览数，收藏数等</p>
 </blockquote>
 <p>所以，实时性的，就可以使用redis的发布订阅，三天以前的历史数据，直接从数据库中读取。三天内的数据，可以使用sorted_set（这里面有个zremrangebyrank、zremrangebyscore）,根据排名，给定一个外围，删除三天以前的数据。存放的时候，将时间作为分值</p>
-<p><img src="/2021/Redis%E7%9A%84%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85%E3%80%81pipeline%E3%80%81%E4%BA%8B%E5%8A%A1%E3%80%81modules%E3%80%81%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8%E3%80%81%E7%BC%93%E5%AD%98LRU/image-20210322145152718.png" alt="image-20210322145152718"></p>
+<p><img src="/2020/Redis%E7%9A%84%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85%E3%80%81pipeline%E3%80%81%E4%BA%8B%E5%8A%A1%E3%80%81modules%E3%80%81%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8%E3%80%81%E7%BC%93%E5%AD%98LRU/image-20210322145152718.png" alt="image-20210322145152718"></p>
 <blockquote>
 <p>这里其实是可以使用两个redis进程，一台redis服务器只负责发布订阅，同时做sorted_set排序，另外一个redis进程订阅第一台，收到订阅消息，后转给kafka来做消息写入</p>
 </blockquote>
-<p><img src="/2021/Redis%E7%9A%84%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85%E3%80%81pipeline%E3%80%81%E4%BA%8B%E5%8A%A1%E3%80%81modules%E3%80%81%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8%E3%80%81%E7%BC%93%E5%AD%98LRU/image-20210322153102071.png" alt="image-20210322153102071"></p>
+<p><img src="/2020/Redis%E7%9A%84%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85%E3%80%81pipeline%E3%80%81%E4%BA%8B%E5%8A%A1%E3%80%81modules%E3%80%81%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8%E3%80%81%E7%BC%93%E5%AD%98LRU/image-20210322153102071.png" alt="image-20210322153102071"></p>
 <hr>
 <h2 id="三、Redis事务">三、Redis事务</h2>
 <p>使用Redis,永远记住一句话，就是redis速度快，才会使用redis,如果你把这个特征抹杀了，还不如不用。</p>
 <h3 id="1-、-mutli、exec">1)、 <code>mutli</code>、<code>exec</code></h3>
 <p>如图，两个客户端，分别执行两个事务，顺序是1先开启事务，然后2也开启一个事务，2事务中执行<code>del k1</code>,1事务中执行<code>get k1</code>,然后，client2先执行<code>exec</code>,稍后client1d的<code>exec</code>，因为redis是单线程的，所以不可能同时执行 ，一定是挨个执行的。</p>
 <p><strong>其实就是关注的是<code>exec</code>的执行谁先执行</strong></p>
-<p><img src="/2021/Redis%E7%9A%84%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85%E3%80%81pipeline%E3%80%81%E4%BA%8B%E5%8A%A1%E3%80%81modules%E3%80%81%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8%E3%80%81%E7%BC%93%E5%AD%98LRU/image-20210322174705336.png" alt="image-20210322174705336"></p>
-<p><img src="/2021/Redis%E7%9A%84%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85%E3%80%81pipeline%E3%80%81%E4%BA%8B%E5%8A%A1%E3%80%81modules%E3%80%81%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8%E3%80%81%E7%BC%93%E5%AD%98LRU/image-20210322173459881.png" alt="image-20210322173459881"></p>
+<p><img src="/2020/Redis%E7%9A%84%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85%E3%80%81pipeline%E3%80%81%E4%BA%8B%E5%8A%A1%E3%80%81modules%E3%80%81%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8%E3%80%81%E7%BC%93%E5%AD%98LRU/image-20210322174705336.png" alt="image-20210322174705336"></p>
+<p><img src="/2020/Redis%E7%9A%84%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85%E3%80%81pipeline%E3%80%81%E4%BA%8B%E5%8A%A1%E3%80%81modules%E3%80%81%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8%E3%80%81%E7%BC%93%E5%AD%98LRU/image-20210322173459881.png" alt="image-20210322173459881"></p>
 <p>如上图，同一个客户端发来的命令是放在一个缓冲区的，所以对着这个例子，就是client2先执行，1排在后面。所以肯定是2先把<code>k1</code>先删除了,等到1执行的时候，就会说k1不存在了</p>
 <blockquote>
 <p>对于两个事务同时来，谁先执行<code>exec</code>，先执行谁的事务</p>
@@ -553,9 +553,9 @@
 <p>采用二进制位来标记，比如每个元素，，然后经历n或者k个哈希函数或者映射函数，将二进制的某一位标记成了1，每个元素都会经历这个过程。但是有一个元素，在经过运算，这个时候可能会发生<code>碰撞</code>,也就是说，元素1和元素2 ，虽然他们的元素不同，但是某个函数重叠了，但是依然还有一些函数的位置是不重叠的</p>
 <p>但是即使有些搜索的东西数据库没有，也有可能放行过去。即元素3出现的位置即覆盖了元素1的某一个函数标，也覆盖了函数2的某个函数标，，虽然内存是数据库都没有，但是的确映射到了，也就是说：</p>
 <p><strong>有一定概率是</strong> 依然出现缓存穿透的情况的，但是这个概率是很低的，小于1%（应该是0.000x）,但是成本很低，速度很快</p>
-<p><img src="/2021/Redis%E7%9A%84%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85%E3%80%81pipeline%E3%80%81%E4%BA%8B%E5%8A%A1%E3%80%81modules%E3%80%81%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8%E3%80%81%E7%BC%93%E5%AD%98LRU/image-20210323113956128.png" alt="image-20210323113956128"></p>
+<p><img src="/2020/Redis%E7%9A%84%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85%E3%80%81pipeline%E3%80%81%E4%BA%8B%E5%8A%A1%E3%80%81modules%E3%80%81%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8%E3%80%81%E7%BC%93%E5%AD%98LRU/image-20210323113956128.png" alt="image-20210323113956128"></p>
 <p>以下三种方式解决缓存击穿问题：</p>
-<p><img src="/2021/Redis%E7%9A%84%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85%E3%80%81pipeline%E3%80%81%E4%BA%8B%E5%8A%A1%E3%80%81modules%E3%80%81%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8%E3%80%81%E7%BC%93%E5%AD%98LRU/image-20210323114238695.png" alt="image-20210323114238695"></p>
+<p><img src="/2020/Redis%E7%9A%84%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85%E3%80%81pipeline%E3%80%81%E4%BA%8B%E5%8A%A1%E3%80%81modules%E3%80%81%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8%E3%80%81%E7%BC%93%E5%AD%98LRU/image-20210323114238695.png" alt="image-20210323114238695"></p>
 <blockquote>
 <p>需要自己学习了解一下<code>counting bloom</code>、<code>布谷鸟过滤器cukcoo</code>，面试的时候也可以多说一点</p>
 </blockquote>
@@ -600,12 +600,12 @@
         <ul class="pager">
           
           <li class="previous">
-            <a href="/2021/Redis持久化/" data-toggle="tooltip" data-placement="top" title="Redis持久化">&larr; Previous Post</a>
+            <a href="/2020/Redis持久化/" data-toggle="tooltip" data-placement="top" title="Redis持久化">&larr; Previous Post</a>
           </li>
           
           
           <li class="next">
-            <a href="/2021/Redis中的list、set、hash、sorted-set/" data-toggle="tooltip" data-placement="top" title="Redis中的list、set、hash、sorted_set">Next Post &rarr;</a>
+            <a href="/2020/Redis中的list、set、hash、sorted-set/" data-toggle="tooltip" data-placement="top" title="Redis中的list、set、hash、sorted_set">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -654,7 +654,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2021/Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2020/Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -688,7 +688,7 @@
       repo: 'shifpeng.github.io',
       owner: 'shifpeng',
       admin: 'shifpeng',
-      id: 'Sun Mar 21 2021 15:34:15 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Sat Mar 21 2020 15:34:15 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 10,
       pagerDirection: 'last',
@@ -975,7 +975,7 @@
     let jsdelivr = "https://cdn.jsdelivr.net/gh/";
     let gh = "shifpeng";
     let ghPages = gh + ".github.io";
-    let pagePath = "2021/Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU/";
+    let pagePath = "2020/Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU/";
     let jsdelivrurl;
     if (pagePath.indexOf("index.html") != -1) {
       jsdelivrurl = jsdelivr + gh + "/" + ghPages;
@@ -1368,20 +1368,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 </html>

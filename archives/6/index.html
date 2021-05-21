@@ -454,29 +454,44 @@
   <!-- top end -->
   
 
-  <a href="/2020/开学，致儿子/">
+  <a href="/2020/Redis集群之主从复制、CAP、PAXOS-1（一）/">
     <h2 class="post-title">
-      开学，致儿子
+      Redis集群之主从复制、哨兵模式
     </h2>
     <h3 class="post-subtitle">
-      转载自中国著名记者唐师曾的《开学致儿子》
+      redis单节点可能存在的问题，以及CAP原则, Redis三种集群方式中其中两种方式
     </h3>
     <div class="post-content-preview">
-      孩子，就算吃酱油拌饭，也要铺上干净的餐巾，优雅地坐着。把简陋的生活过得很讲究。风度与境遇无关。
+      一、问题引入
+之前的几篇文章一直写的都是基于单机、或者单节点，或者单实例，那么他会有什么问题呢？
+1:单点故障
+2:容量有限
+3:压力(性能)
+如何解决？ 如何分别解决上面三个独立的问题？有没有整合方案？
+二、解决问题
+AKF：描述的是XYZ三个轴，分别对技术的一种拆解
 
-孩子，去远方的时候，除了相机，记得带上纸笔。风景是相同的，但看风景的心情千差万别、永不重复。徐霞客之所以是徐霞客，不是因为成天走路。随时观察自然、社会，绝不仅是游山玩水。要接近智者，自嘲、自省、自趣，培养希腊、罗马的“壮游”习惯。
+AKF：
+x:全量、镜像
+y:业务、功能
+z:优先级、逻辑再拆分
 
-孩子，一定要有属于自己的空间，哪怕只有5平米。它可以让你在和爱......
+1、解决单点故障问题（X轴）
+1、如果只有一台实例的......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
-    Posted by Steven on
-    2020-07-02
+    Posted by 石福鹏 on
+    2020-03-28
   </p>
   <div class="tags">
     
-    <a href="/tags/#深度好文" title="深度好文">深度好文</a>
+    <a href="/tags/#Redis" title="Redis">Redis</a>
+    
+    <a href="/tags/#重学Redis" title="重学Redis">重学Redis</a>
+    
+    <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
     
   </div>
   
@@ -491,36 +506,35 @@
   <!-- top end -->
   
 
-  <a href="/2020/VPN-系统代理模式（直连模式、PAC模式、全局模式）/">
+  <a href="/2020/Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU/">
     <h2 class="post-title">
-      VPN - 系统代理模式（直连模式、PAC模式、全局模式）
+      Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU
     </h2>
     <h3 class="post-subtitle">
-      科学上网知识点
+      Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU以及缓存常见问题
     </h3>
     <div class="post-content-preview">
-      系统代理模式区别
-
-
-直连模式：走网络数据时不经过VPN，跟没开启VPN的效果是一样的，不需要VPN的时候推荐使用这个模式。
-
-
-全局模式：VPN控制的是你电脑的整个网络，只要需要连接到互联网的流量都会经过VPN。你的IP会被更换为VPN的IP。连接VPN只需要知道IP和账号密码。使你的所有http/socks数据经过代理服务器的转发送出。
-
-
-PAC模式：PAC模式就是会在你连接网站的时候......
+      首先要注意拿Redis作为数据库或者缓存的区别，比如如果拿redis做缓存，那么常见的问题有哪些？击穿、雪崩、穿透、一致性等。
+一、管道（Pipelining）
+通常情况下，Redis一个请求会遵循：
+1)、客户端发送一个查询，并监听socket返回，通常是阻塞模式，等到服务端响应
+2)、服务端处理命令，，返回结果到客户端
+这个时间被称为RTT(Round Trip Time 往返时间)
+较......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
-    Posted by Steven on
-    2020-06-29
+    Posted by 石福鹏 on
+    2020-03-21
   </p>
   <div class="tags">
     
-    <a href="/tags/#科学上网" title="科学上网">科学上网</a>
+    <a href="/tags/#Redis" title="Redis">Redis</a>
     
-    <a href="/tags/#VPN" title="VPN">VPN</a>
+    <a href="/tags/#重学Redis" title="重学Redis">重学Redis</a>
+    
+    <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
     
   </div>
   
@@ -535,112 +549,33 @@ PAC模式：PAC模式就是会在你连接网站的时候......
   <!-- top end -->
   
 
-  <a href="/2020/Java自定义Bean实体类对象转为Map类型对象/">
+  <a href="/2020/Redis中的list、set、hash、sorted-set/">
     <h2 class="post-title">
-      Java自定义Bean实体类对象转为Map类型对象
+      Redis中的list、set、hash、sorted_set
     </h2>
     <h3 class="post-subtitle">
-      可以封装为Java的工具类
+      
     </h3>
     <div class="post-content-preview">
-      一、引入
-
-接入一些接口的时候常常要把Bean实体类转化成Map对象，但事在使用不同的方法的时候会有不同结果，所以在这里记录下，方便以后用到
-
-二、实现
-（1）、使用反射
-1234567891011121314151617public static HashMap&lt;String, String&gt; convertToMap(AtourBaseRequest obj)        ......
+      一、List链表
+list是一个链表，链表分为单向链表，双向链表，它是一个线性的。
+既能从前面找到我们想到的元素，也能总后面往前找，这叫双向的
+从最后一个能回到第一个，从第一个还能直接到最后一个，这叫有环。一般五环的双向链表，这叫做链表。
+Redis的key，包括两个东西，一个是head头指针，一个是tail尾指针，head可以指向到value链表中的第一个元素，tail可以指向到链表的最后......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
-    Posted by Steven on
-    2020-06-28
+    Posted by 石福鹏 on
+    2020-03-18
   </p>
   <div class="tags">
     
-    <a href="/tags/#Java" title="Java">Java</a>
+    <a href="/tags/#Redis" title="Redis">Redis</a>
     
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2020/hexo-gitpage发布后，图片不展示/">
-    <h2 class="post-title">
-      hexo + gitpage发布后，图片不展示
-    </h2>
-    <h3 class="post-subtitle">
-      hexo+gitpage部署博客之后遇到的问题
-    </h3>
-    <div class="post-content-preview">
-      1post_asset_folder: true
-当资源文件管理功能打开后，Hexo将会在你每一次通过
- 1hexo new [layout] &lt;title&gt;
-命令创建新文章时自动创建一个文件夹。这个资源文件夹将会有与这个文章文件一样的名字。将所有与你的文章有关的资源放在这个关联文件夹中之后，你可以通过相对路径来引用它们，这样你就得到了一个更简单而且方便得多的工作流。
-
-
-确保以......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Steven on
-    2020-05-22
-  </p>
-  <div class="tags">
+    <a href="/tags/#重学Redis" title="重学Redis">重学Redis</a>
     
-    <a href="/tags/#GitHub" title="GitHub">GitHub</a>
-    
-    <a href="/tags/#Hexo" title="Hexo">Hexo</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2020/github-static-source-cdn/">
-    <h2 class="post-title">
-      GitHub静态资源访问免费CDN提速
-    </h2>
-    <h3 class="post-subtitle">
-      GitHub静态资源访问免费CDN提速，以及使用Hexo-theme-livemylife主题后，
-    </h3>
-    <div class="post-content-preview">
-      JSDelivr 是一个免费开源的 CDN 解决方案，用于帮助开发者和站长。包含 JavaScript 库、jQuery 插件、CSS 框架、字体等等 Web 上常用的静态资源。我们来到其官网，可以看到它的介绍 Open Source CDN free, fast, and reliable。（免费、快速、可靠，不过据说可能会投毒广告，表示目前还没见过广告）
-用 Github Pages 部......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Steven on
-    2020-04-21
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#GitHub" title="GitHub">GitHub</a>
-    
-    <a href="/tags/#CDN加速" title="CDN加速">CDN加速</a>
-    
-    <a href="/tags/#Hexo" title="Hexo">Hexo</a>
-    
-    <a href="/tags/#jsdelivr" title="jsdelivr">jsdelivr</a>
+    <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
     
   </div>
   
@@ -717,6 +652,88 @@ Kibana:通过Web端的可......
     <a href="/tags/#Java" title="Java">Java</a>
     
     <a href="/tags/#ELK" title="ELK">ELK</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/2020/Redis的String类型和bitmap类型/">
+    <h2 class="post-title">
+      Redis的String类型和bitmap类型
+    </h2>
+    <h3 class="post-subtitle">
+      Redis基本的类型和位图bitmap
+    </h3>
+    <div class="post-content-preview">
+      首先确定Redis服务是启动的
+12345[root@hadoop01 ~]# ps -fe | grep redisroot      18725      1  0 05:29 ?        00:00:54 /usr/local/bin/redis-server 127.0.0.1:6379root      22528      1  0 05:39 ?        00:00......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by 石福鹏 on
+    2020-03-16
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Redis" title="Redis">Redis</a>
+    
+    <a href="/tags/#重学Redis" title="重学Redis">重学Redis</a>
+    
+    <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/2020/Redis介绍及NIO原理介绍/">
+    <h2 class="post-title">
+      Redis介绍及NIO原理介绍
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      一、引言
+刚有计算机的时候，数据可以存在文件里，那如果我们要查询数据的话，Linux中有grep、awk等这样的命令，用Java语言的话，写一个程序，基于这个文件的IO流读写操作，那还有什么其他问题嘛？
+一些常识
+
+在计算机中，数据是存在磁盘中的，磁盘有两个指标：
+​	1、寻址：寻址的速度是毫秒级的
+​	2、带宽：即单位时间内可以有多少个字节流过，多大的数据量流过去，一般是G或者M级别的
+另......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by 石福鹏 on
+    2020-03-13
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Redis" title="Redis">Redis</a>
+    
+    <a href="/tags/#重学Redis" title="重学Redis">重学Redis</a>
+    
+    <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
     
   </div>
   
@@ -1243,7 +1260,7 @@ Maven Plugins ：http://mvnrepository.com/
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2021/05/">May 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/04/">April 2021</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/02/">February 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/06/">June 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/05/">May 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/03/">March 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/02/">February 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/07/">July 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/11/">November 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/08/">August 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/05/">May 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/10/">October 2016</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2021/05/">May 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/04/">April 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/02/">February 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/06/">June 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/05/">May 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/03/">March 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/02/">February 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/07/">July 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/11/">November 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/08/">August 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/05/">May 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/10/">October 2016</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1824,20 +1841,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 </html>

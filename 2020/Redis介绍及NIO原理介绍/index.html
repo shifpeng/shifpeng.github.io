@@ -140,7 +140,7 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://www.shifpeng.cn/2021/Redis介绍及NIO原理介绍/">
+  <link rel="canonical" href="https://www.shifpeng.cn/2020/Redis介绍及NIO原理介绍/">
   <title>
     
       Redis介绍及NIO原理介绍 - Steven | java
@@ -398,7 +398,7 @@
             <h2 class="subheading"></h2>
             <span class="meta">
               Posted by 石福鹏 on
-              2021-03-13
+              2020-03-13
             </span>
 
 
@@ -492,7 +492,7 @@
 <p>因为假如<code>data page</code>是1k，那到底层还是4k，这就是上面说的浪费，数据库读1k，底层还是读4k,索性直接读4k.</p>
 <p>如果只是4k的小格子，其实查找数据的成本复杂度还是跟前面差不多，因为还是要从第一个4k开始，先读到内存中，挨个去找，所以还是走的是全量I/O，如何变快呢？</p>
 <p>这就是索引，索引依然是使用的的4k这种存储模型对应的模型，无非就是4k的格子存的是一行一行的数据，而4k索引中存的是前面格子中的某一列，比如身份证那一列。索引中每一个身份证号指向某一个<code>data page</code>，这个指向关系就是<strong>索引</strong></p>
-<img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210314214450434.png" alt="image-20210314214450434" style="zoom:70%;">
+<img src="/2020/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210314214450434.png" alt="image-20210314214450434" style="zoom:70%;">
 <blockquote>
 <p>知识点：建立关系型数据库表的时候，一般使用什么存储方式？</p>
 <p>通常我们建关系型数据库表的时候，必须给出<code>schema</code>,即这个表的列数，每个列的类型是什么，约束是什么。</p>
@@ -519,20 +519,20 @@
 <p>Redis 是一个开源（BSD许可）的，内存中的数据结构存储系统，它可以用作数据库、缓存和消息中间件。</p>
 <p>它支持多种类型的数据结构，如 字符串（strings）， 散列（hashes）， 列表（lists）， 集合（sets）， 有序集合（sorted sets） 与范围查询， bitmaps， hyperloglogs 和 地理空间（geospatial） 索引半径查询。</p>
 <p>Redis 内置了 复制（replication），LUA脚本（Lua scripting）， LRU驱动事件（LRU eviction），事务（transactions） 和不同级别的 磁盘持久化（persistence）， 并通过 Redis哨兵（Sentinel）和自动 分区（Cluster）提供高可用性（high availability）。</p>
-<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210315163233037.png" alt="image-20210315163233037"></p>
+<p><img src="/2020/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210315163233037.png" alt="image-20210315163233037"></p>
 <p>​</p>
 <p>如果客户端想通过缓存系统，取回value中的某一个元素，成本是不一样的，memchche需要返回所有的数据到client,server网卡IO就会是瓶颈，另外，client需要有实现的代码去解析。而redis，因为他有类型，其实类型不是很重要，重要的是redis server 中对每种类型都有自己的方法。用大数据中的词描述就是<strong>计算是向数据移动</strong> 的；</p>
 <blockquote>
 <p>计算是向数据移动:memcache获取需要的数据是需要返回后在客户端计算，而redis是在server中进行计算，只返回需要的少量数据</p>
 </blockquote>
-<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210315164344933.png" alt="image-20210315164344933"></p>
+<p><img src="/2020/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210315164344933.png" alt="image-20210315164344933"></p>
 <h2 id="三、安装Redis">三、安装Redis</h2>
 <h3 id="对于Linux">对于Linux</h3>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//如果没有wget，需要使用`yum install wget`安装一个</span><br><span class="line">wget http://download.redis.io/releases/redis-6.0.6.tar.gz</span><br></pre></td></tr></table></figure>
 <p>即可下载安装包到当前文件夹，解压</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar xf redis-6.0.6.tar.gz</span><br></pre></td></tr></table></figure>
 <p>解压完之后，进入到redis的源码目录</p>
-<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210315222508661.png" alt="image-20210315222508661"></p>
+<p><img src="/2020/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210315222508661.png" alt="image-20210315222508661"></p>
 <p>源码安装的，记得第一步需要看一下<code>README.me</code>,基本上就会告诉你怎么编译、清除、安装等等</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line">Building Redis   # 编译Redis</span><br><span class="line">--------------</span><br><span class="line"></span><br><span class="line">Redis can be compiled and used on Linux, OSX, OpenBSD, NetBSD, FreeBSD.</span><br><span class="line">We support big endian and little endian architectures, and both 32 bit</span><br><span class="line">and 64 bit systems.</span><br><span class="line"></span><br><span class="line">It may compile on Solaris derived systems (for instance SmartOS) but our</span><br><span class="line">support for this platform is *best effort* and Redis is not guaranteed to</span><br><span class="line">work as well as in Linux, OSX, and \*BSD there.</span><br><span class="line"></span><br><span class="line">It is as simple as:</span><br><span class="line"></span><br><span class="line">    % make   #直接执行make就可以编译</span><br><span class="line"></span><br><span class="line">To build with TLS support, you&#x27;ll need OpenSSL development libraries (e.g.</span><br><span class="line">libssl-dev on Debian/Ubuntu) and run:</span><br><span class="line"></span><br><span class="line">    % make BUILD_TLS=yes</span><br><span class="line"></span><br><span class="line">You can run a 32 bit Redis binary using:</span><br><span class="line"></span><br><span class="line">    % make 32bit   #也可以编译成32位的</span><br><span class="line"></span><br><span class="line">After building Redis, it is a good idea to test it using:</span><br><span class="line"></span><br><span class="line">    % make test</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">When you update the source code with `git pull` or when code inside the</span><br><span class="line">dependencies tree is modified in any other way, make sure to use the following</span><br><span class="line">command in order to really clean everything and rebuild from scratch:</span><br><span class="line"></span><br><span class="line">    make distclean   # 如果你之前编译出错的话，还可以清除，重新编译</span><br><span class="line"></span><br><span class="line">This will clean: jemalloc, lua, hiredis, linenoise.</span><br><span class="line"></span><br><span class="line">Running Redis  # 编译完可以找到可执行程序在源码中</span><br><span class="line">-------------</span><br><span class="line"></span><br><span class="line">To run Redis with the default configuration just type:</span><br><span class="line"></span><br><span class="line">    % cd src</span><br><span class="line">    % ./redis-server</span><br><span class="line"></span><br><span class="line">If you want to provide your redis.conf, you have to run it using an additional</span><br><span class="line">parameter (the path of the configuration file):</span><br><span class="line"></span><br><span class="line">    % cd src</span><br><span class="line">    % ./redis-server /path/to/redis.conf</span><br><span class="line"></span><br><span class="line">It is possible to alter the Redis configuration by passing parameters directly</span><br><span class="line">as options using the command line. Examples:</span><br><span class="line"></span><br><span class="line">    % ./redis-server --port 9999 --replicaof 127.0.0.1 6379</span><br><span class="line">    % ./redis-server /etc/redis/6379.conf --loglevel debug</span><br><span class="line"></span><br><span class="line">All the options in redis.conf are also supported as options using the command</span><br><span class="line">line, with exactly the same name.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Installing Redis  # 还可以安装到系统中直接使用它</span><br><span class="line">-----------------</span><br><span class="line">。</span><br><span class="line"></span><br><span class="line">In order to install Redis binaries into /usr/local/bin just use:</span><br><span class="line"></span><br><span class="line">    % make install</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 并且可以修改安装位置</span></span><br><span class="line">You can use `make PREFIX=/some/other/directory install` if you wish to use a</span><br><span class="line">different destination.</span><br><span class="line"></span><br><span class="line">Make install will just install binaries in your system, but will not configure</span><br><span class="line">init scripts and configuration files in the appropriate place. This is not</span><br><span class="line">needed if you want just to play a bit with Redis, but if you are installing</span><br><span class="line">it the proper way for a production system, we have a script doing this</span><br><span class="line">for Ubuntu and Debian systems:</span><br><span class="line"></span><br><span class="line">    % cd utils</span><br><span class="line">    % ./install_server.sh</span><br><span class="line"></span><br><span class="line">_Note_: `install_server.sh` will not work on Mac OSX; it is built for Linux only.</span><br><span class="line"></span><br><span class="line">The script will ask you a few questions and will setup everything you need</span><br><span class="line">to run Redis properly as a background daemon that will start again on</span><br><span class="line">system reboots.</span><br><span class="line"></span><br><span class="line">You&#x27;ll be able to stop and start Redis using the script named</span><br><span class="line">`/etc/init.d/redis_&lt;portnumber&gt;`, for instance `/etc/init.d/redis_6379`.</span><br><span class="line"></span><br><span class="line">Code contributions</span><br><span class="line">-----------------</span><br></pre></td></tr></table></figure>
 <p>所以，阅读<code>README.me</code>非常重要。</p>
@@ -547,7 +547,7 @@
 <p>如果什么都不输入的话，执行<code>make</code>命令，其实是<code>cd src</code>目录下，并执行<code>make</code>命令，当然，如果执行的是<code>make install</code> 其实就会走上面的第10行脚本</p>
 <p>所以其实真的执行是在<code>src</code>下，这里面会有一个<code>Makefile</code></p>
 <p>我们到源码的根目录下，执行<code>make</code>,发现报错了</p>
-<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210315230411544.png" alt="image-20210315230411544"></p>
+<p><img src="/2020/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210315230411544.png" alt="image-20210315230411544"></p>
 <p>发现系统中没有c语言的编译器，那就安装一下</p>
 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum <span class="keyword">install</span> gcc</span><br></pre></td></tr></table></figure>
 <p>安装完成之后，我们先执行一下clean<code>make distclean</code>,要清理一下刚才报错的那些临时文件，清理完之后，再次执行<code>make</code>,等到编译完成.执行<code>make test</code>测试一下.</p>
@@ -563,7 +563,7 @@
 <p>根据readme文件中的指示进行安装</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install PREFIX=<span class="regexp">/opt/</span>redis  <span class="comment"># PREFIX指定自定义安装目录</span></span><br></pre></td></tr></table></figure>
 <p>这里我安装到默认的安装目录，即不指定PREFIX.</p>
-<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316104400345.png" alt="image-20210316104400345"></p>
+<p><img src="/2020/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316104400345.png" alt="image-20210316104400345"></p>
 <p>就可以在<code>/usr/local/bin</code>下看到可执行程序。</p>
 <p>最后一步，把它变成服务。</p>
 <p>在utils目录下，有个<code>install_server.sh</code>，但是这个脚本需要知道程序安装在哪个文件了，所以需要创建环境变量</p>
@@ -588,14 +588,14 @@
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">service</span> redis_<span class="number">6379</span> start</span><br></pre></td></tr></table></figure>
 <h4 id="多实例安装">多实例安装</h4>
 <p>当然，我们也可以安装多个实例，还是到<code>utils</code>目录下。执行<code>./install_server.sh</code>,指定一个不同的端口好，比如6380</p>
-<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316111417960.png" alt="image-20210316111417960"></p>
+<p><img src="/2020/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316111417960.png" alt="image-20210316111417960"></p>
 <p>执行<code>ps -fe | grep redis</code>,不同的端口好，不同的进程</p>
-<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316111507495.png" alt="image-20210316111507495"></p>
+<p><img src="/2020/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316111507495.png" alt="image-20210316111507495"></p>
 <h3 id="对于Mac-OS">对于Mac OS</h3>
 <p>直接执行</p>
 <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span><span class="keyword">install </span>redis</span><br></pre></td></tr></table></figure>
 <h2 id="四、NIO原理介绍">四、NIO原理介绍</h2>
-<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316113510609.png" alt="image-20210316113510609"></p>
+<p><img src="/2020/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316113510609.png" alt="image-20210316113510609"></p>
 <p>每个计算机中可以有多个redis进程。另外。redis 是单进程，单线程，单实例，那么当并发很多的时候是如何变得很快的。</p>
 <blockquote>
 <p>操作系统是由一个内核（kernel）的概念的,所有的客户端的连接先到达内核，tcp握手，有很多的socket.</p>
@@ -608,7 +608,7 @@
 </blockquote>
 <hr>
 <h4 id="1、BIO时期">1、BIO时期</h4>
-<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316114628976.png" alt="image-20210316114628976"></p>
+<p><img src="/2020/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316114628976.png" alt="image-20210316114628976"></p>
 <p>因为socket在这个时期是阻塞的（blocking）,即socket产生的文件描述符，你读它的时候，在数据包还没到的时候，<code>read</code>命令就不能返回，就在这阻塞着</p>
 <p>这就是**<code>BIO</code>**.抛出一个线程来读取网卡的连接，有数据就处理，没数据就阻塞着，如果只有一颗CPU的话，某一时间片上只有一个线程可以处理。</p>
 <blockquote>
@@ -626,31 +626,31 @@
 <h4 id="2、NIO时期">2、NIO时期</h4>
 <p>这个时候内核发生了变化</p>
 <p>内核当中，socket可以是非阻塞的（nonblock）,不阻塞了就可以<strong>使用一个线程</strong> ，采用轮训（while死循环），因此称为同步非阻塞（NIO）</p>
-<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316145251293.png" alt="image-20210316145251293"></p>
+<p><img src="/2020/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316145251293.png" alt="image-20210316145251293"></p>
 <p>成本问题：如果有1000fd，代表用户进程轮询调用1000次kernel，如何解决？</p>
 <p>根据描述，那就是减少调用内核次数，这个用户是无法实现的，所以还是要从内核出发</p>
 <hr>
 <h4 id="3、多路复用的NIO（依然是同步非阻塞）">3、多路复用的NIO（依然是同步非阻塞）</h4>
 <p>就是将用户空间轮训的操作移到内核中，内核里从而多了一个系统调用<code>select</code>,内核监控更多的文件描述符。即以前调用1000次，现在调用1次，发现了50个，再拿这50个挨个挨个去read.–多路复用的NIO</p>
-<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316152241961.png" alt="image-20210316152241961"></p>
+<p><img src="/2020/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316152241961.png" alt="image-20210316152241961"></p>
 <p>但是文件描述符fd传来传去，成为累赘了</p>
 <hr>
 <h4 id="4、共享空间（mmap）">4、共享空间（<code>mmap</code>）</h4>
 <p>共享空间（<code>mmap</code>）（内核实现的），即用户态、内核台有一个空间是共享的，</p>
 <p>将之前的1000个文件描述符存储在共享空间</p>
-<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316153732236.png" alt="image-20210316153732236"></p>
+<p><img src="/2020/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316153732236.png" alt="image-20210316153732236"></p>
 <blockquote>
 <p>这点是为了解决文件描述符来回拷贝的问题，我们一般都会想到如果做到零拷贝，但是这里跟零拷贝是没有关系的，零拷贝是另外一个系统调用</p>
 <p>内核中多了一个系统调用<code>sendfile</code></p>
 <p>文件的数据先到内核的buffer缓冲区，再read到用户空间，然后再write回来，最后再发出去，这里是由拷贝过程的，但是有了<code>sendfile</code>之后，是直接调用了<code>sendfile</code>，内核读file放到缓冲区，再发出去，就不考来考去了</p>
-<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316154943064.png" alt="image-20210316154943064"></p>
+<p><img src="/2020/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316154943064.png" alt="image-20210316154943064"></p>
 </blockquote>
 <p>拓展：<code>sendfile</code>加上<code>mmap</code>就组建了一项高效的技术<code>kafka</code></p>
-<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316154054742.png" alt="image-20210316154054742"></p>
+<p><img src="/2020/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316154054742.png" alt="image-20210316154054742"></p>
 <p>以上就epoll最终出现的历程</p>
-<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316160214373.png" alt="image-20210316160214373"></p>
+<p><img src="/2020/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316160214373.png" alt="image-20210316160214373"></p>
 <p>有了以上epoll的知识，再回到这张图上来</p>
-<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210317115753806.png" alt="image-20210317115753806"></p>
+<p><img src="/2020/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210317115753806.png" alt="image-20210317115753806"></p>
 <p>有很多client都连接了redis，站在redis的角度来说，就是进来的socket很多。redis-server是一个进程，进程就会调用epoll来遍历寻找那一个socket进来了，redis是单进程，单线程来处理用户的数据</p>
 <blockquote>
 <p>但是redis就是一个线程么？不是，它还有其他线程再处理其他事，只是处理用户的数据操作是redis中的一个线程完成的。</p>
@@ -663,12 +663,12 @@
         <ul class="pager">
           
           <li class="previous">
-            <a href="/2021/Redis的String类型和bitmap类型/" data-toggle="tooltip" data-placement="top" title="Redis的String类型和bitmap类型">&larr; Previous Post</a>
+            <a href="/2020/Redis的String类型和bitmap类型/" data-toggle="tooltip" data-placement="top" title="Redis的String类型和bitmap类型">&larr; Previous Post</a>
           </li>
           
           
           <li class="next">
-            <a href="/2021/基于keepalived的LVS的搭建/" data-toggle="tooltip" data-placement="top" title="基于keepalived的LVS的搭建">Next Post &rarr;</a>
+            <a href="/2020/Java类加载/" data-toggle="tooltip" data-placement="top" title="Java类加载">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -717,7 +717,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=Redis介绍及NIO原理介绍&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2021/Redis介绍及NIO原理介绍/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Redis介绍及NIO原理介绍&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2020/Redis介绍及NIO原理介绍/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -751,7 +751,7 @@
       repo: 'shifpeng.github.io',
       owner: 'shifpeng',
       admin: 'shifpeng',
-      id: 'Sat Mar 13 2021 16:18:03 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Fri Mar 13 2020 16:18:03 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 10,
       pagerDirection: 'last',
@@ -1038,7 +1038,7 @@
     let jsdelivr = "https://cdn.jsdelivr.net/gh/";
     let gh = "shifpeng";
     let ghPages = gh + ".github.io";
-    let pagePath = "2021/Redis介绍及NIO原理介绍/";
+    let pagePath = "2020/Redis介绍及NIO原理介绍/";
     let jsdelivrurl;
     if (pagePath.indexOf("index.html") != -1) {
       jsdelivrurl = jsdelivr + gh + "/" + ghPages;
@@ -1431,20 +1431,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 </html>

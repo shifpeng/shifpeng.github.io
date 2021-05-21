@@ -140,7 +140,7 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://www.shifpeng.cn/2021/redis-interview-problem/">
+  <link rel="canonical" href="https://www.shifpeng.cn/2020/redis-interview-problem/">
   <title>
     
       Redis面试：击穿、穿透、雪崩、分布式锁、API - Steven | java
@@ -398,7 +398,7 @@
             <h2 class="subheading">Redis面试中常见的问题：击穿、穿透、雪崩、分布式锁、API（jedis、luttce、springboot:low/high level）</h2>
             <span class="meta">
               Posted by Steven on
-              2021-04-20
+              2020-04-20
             </span>
 
 
@@ -484,12 +484,12 @@
 2、发现没有key的时候都去<code>setnx</code><br>
 3、只有一个<code>setnx</code>成功(相当于获取一把锁)，然后去数据库获取最新的数据并做更新<br>
 4、setnx失败的请求，都sleep等待，稍后再次get key（再从第一步开始）<br>
-<img src="/2021/redis-interview-problem/image-20210422112506478.png" alt="image-20210422112506478"></p>
+<img src="/2020/redis-interview-problem/image-20210422112506478.png" alt="image-20210422112506478"></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">get</span><span class="params">(key)</span> </span>&#123;</span><br><span class="line">      String value = redis.get(key);</span><br><span class="line">      <span class="keyword">if</span> (value == <span class="keyword">null</span>) &#123; <span class="comment">//代表缓存值过期</span></span><br><span class="line">          <span class="comment">//设置3min的超时，防止del操作失败的时候，下次缓存过期一直不能load db</span></span><br><span class="line">      <span class="keyword">if</span> (redis.setnx(key_mutex, <span class="number">1</span>, <span class="number">3</span> * <span class="number">60</span>) == <span class="number">1</span>) &#123;  <span class="comment">//代表设置成功</span></span><br><span class="line">               value = db.get(key);</span><br><span class="line">                      redis.set(key, value, expire_secs);</span><br><span class="line">                      redis.del(key_mutex);</span><br><span class="line">              &#125; <span class="keyword">else</span> &#123;  <span class="comment">//这个时候代表同时候的其他线程已经load db并回设到缓存了，这时候重试获取缓存值即可</span></span><br><span class="line">                      sleep(<span class="number">50</span>);</span><br><span class="line">                      get(key);  <span class="comment">//重试</span></span><br><span class="line">              &#125;</span><br><span class="line">          &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">              <span class="keyword">return</span> value;      </span><br><span class="line">          &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 <h3 id="会存在什么问题？">会存在什么问题？</h3>
 <p>1、如果第一个人挂了（即死锁），那么其他的请求一直在进行上面的过程，这个时候我们可以设置锁的过期时间，当地一个请求挂了，那么其他肯定会有一个又能抢到锁</p>
 <p>2、没挂，但是锁超时了。这种情况可以使用多线程来解决，即第一个请求加了一把锁，设置时间为1s,这是服务中的一个线程，那我再加一个线程，每隔半秒去看看前面那个线程的结果取回来了没，如果没有，延长一下第一个线程锁的超时时间</p>
-<p><img src="/2021/redis-interview-problem/image-20210422142826835.png" alt="image-20210422142826835"></p>
+<p><img src="/2020/redis-interview-problem/image-20210422142826835.png" alt="image-20210422142826835"></p>
 <p>这个时候客户端的代码逻辑成本已经很高了，技术讨论到这个时候就可以了，项目中可能很少这么去做，因为到分布式的情况下，这样实现成本还是很高的，而说这些就是为了引入<code>zookeeper</code>，即因为实现分布式协调很麻烦，所有就有了<code>zookeeper</code></p>
 <h2 id="二、穿透">二、穿透</h2>
 <p>从业务接收到的查询是系统根本不存在的，比如你们公司的产品库都是电子产品，但是客户端搜的是母婴的，缓存中没有，数据库也没有</p>
@@ -498,7 +498,7 @@
 </blockquote>
 <h3 id="如何解决">如何解决</h3>
 <p>布隆过滤器，具体<a href="https://www.shifpeng.cn/2021/Redis%E7%9A%84%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85%E3%80%81pipeline%E3%80%81%E4%BA%8B%E5%8A%A1%E3%80%81modules%E3%80%81%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8%E3%80%81%E7%BC%93%E5%AD%98LRU/#redis%E6%89%A9%E5%B1%95%E6%A8%A1%E5%9D%97-%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8">布隆过滤器在这里</a>说说过</p>
-<p><img src="/2021/redis-interview-problem/image-20210422145405849.png" alt="image-20210422145405849"></p>
+<p><img src="/2020/redis-interview-problem/image-20210422145405849.png" alt="image-20210422145405849"></p>
 <h3 id="存在的问题">存在的问题</h3>
 <p>只能新增，不能删除</p>
 <h2 id="三、雪崩">三、雪崩</h2>
@@ -520,7 +520,7 @@
 </blockquote>
 <p>这种阻塞其实问题不是很大，后面进来的请求，其实发现前面的数据已经更新完了。有点类似于：</p>
 <p>客户端的请求就像一个高速公路，然后走着走着变城镇道路，最后变乡间小路</p>
-<p><img src="/2021/redis-interview-problem/image-20210422175713360.png" alt="image-20210422175713360"></p>
+<p><img src="/2020/redis-interview-problem/image-20210422175713360.png" alt="image-20210422175713360"></p>
 <h4 id="2、时点性无所谓">2、时点性无所谓</h4>
 <p>均匀分布过期时间、随机过期时间</p>
 <h2 id="四、分布式锁">四、分布式锁</h2>
@@ -534,9 +534,9 @@
 </blockquote>
 <h2 id="五、API">五、API</h2>
 <p>Redis火的其中一个原因就是他支持大部分语言：</p>
-<p><img src="/2021/redis-interview-problem/image-20210425115525931.png" alt="image-20210425115525931"></p>
+<p><img src="/2020/redis-interview-problem/image-20210425115525931.png" alt="image-20210425115525931"></p>
 <p>可能存在这种情况，就是写数据的时候是Java,取数据的时候是PHP，这就是Redis的二进制安全，存的是字节数组，这里我们重点看Java语言的，点Java可以看到许多的基于Java的客户端</p>
-<p><img src="/2021/redis-interview-problem/image-20210426061418706.png" alt="image-20210426061418706"></p>
+<p><img src="/2020/redis-interview-problem/image-20210426061418706.png" alt="image-20210426061418706"></p>
 <p>我们主要看常用的<code>jedis</code>、<code>lettuce</code></p>
 <h3 id="1、jedis">1、jedis</h3>
 <p>首先直接看<a target="_blank" rel="noopener" href="https://github.com/redis/jedis">jedis的Github</a></p>
@@ -609,7 +609,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyBean</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> StringRedisTemplate template;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyBean</span><span class="params">(StringRedisTemplate template)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.template = template;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="1、引入">1、引入</h4>
 <p>我们使用IDEA创建一个项目，同时引入简单的Redis</p>
-<p><img src="/2021/redis-interview-problem/image-20210426140313590.png" alt="image-20210426140313590"></p>
+<p><img src="/2020/redis-interview-problem/image-20210426140313590.png" alt="image-20210426140313590"></p>
 <p>这个项目暂时没有引入web模块，所以这里演示的不是基于网页的，而是基于功能开发的</p>
 <h4 id="2、使用">2、使用</h4>
 <h5 id="a、高阶API">a、高阶API</h5>
@@ -619,7 +619,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArchitectureLearningApplication</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ConfigurableApplicationContext ctx = SpringApplication.run(ArchitectureLearningApplication.class, args);</span><br><span class="line">        TestRedis redis = ctx.getBean(TestRedis.class);  <span class="comment">//下面通过@Component，这里就会找到这个类</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.shifpeng.architecturelearning;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.data.redis.core.RedisTemplate;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Component</span>  <span class="comment">//@Component注解会把这个类扔到容器中，然后在上面的代码中获取到</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestRedis</span> </span>&#123;</span><br><span class="line">  <span class="comment">//这里写一个注入,这里面redis会有一个start，start会把Redis所有的连接和对象准备好，注入到RedisTemplate中，。然后下面就可以使用它了</span></span><br><span class="line">    <span class="meta">@Autowired</span> </span><br><span class="line">    RedisTemplate redisTemplate; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这个时候就可以使用它</p>
-<p><img src="/2021/redis-interview-problem/image-20210426144859929.png" alt="image-20210426144859929"></p>
+<p><img src="/2020/redis-interview-problem/image-20210426144859929.png" alt="image-20210426144859929"></p>
 <blockquote>
 <p>opsForValue及字符串操作</p>
 </blockquote>
@@ -627,7 +627,7 @@
 <p>写好了之后，只需要在这里调用这个方法，即可打印</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.shifpeng.architecturelearning;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ConfigurableApplicationContext;</span><br><span class="line"></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArchitectureLearningApplication</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ConfigurableApplicationContext ctx = SpringApplication.run(ArchitectureLearningApplication.class, args);</span><br><span class="line">        TestRedis redis = ctx.getBean(TestRedis.class);</span><br><span class="line">        redis.testRedis(); <span class="comment">//调用方法</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>注意:Spring Boot会把各种配置放在配置文件中，如下</p>
-<p><img src="/2021/redis-interview-problem/image-20210426145244081.png" alt="image-20210426145244081"></p>
+<p><img src="/2020/redis-interview-problem/image-20210426145244081.png" alt="image-20210426145244081"></p>
 <p>我们先去虚拟机中，起一个redis服务</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]# cd /test/</span><br><span class="line">[root@hadoop01 test]# redis-server --port 6379</span><br></pre></td></tr></table></figure>
 <p>那我们redis的host是多少呢，</p>
@@ -642,7 +642,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; CONFIG SET  protected-mode no # 临时修改</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <p>然后运行一下：打印出来了</p>
-<p><img src="/2021/redis-interview-problem/image-20210426153339962.png" alt="image-20210426153339962"></p>
+<p><img src="/2020/redis-interview-problem/image-20210426153339962.png" alt="image-20210426153339962"></p>
 <p>再去redis看看，发现乱码了，这是因为redis是二进制安全的，只存二进制数组，任何客户端连接的时候</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; KEYS *</span><br><span class="line">1) &quot;\xac\xed\x00\x05t\x00\x02k1&quot;</span><br><span class="line">127.0.0.1:6379&gt; </span><br></pre></td></tr></table></figure>
 <p>spring中还有一个高阶的API，<code>StringRedisTemplate</code>,将上面的替换</p>
@@ -653,7 +653,7 @@
 <h5 id="b、低阶API">b、低阶API</h5>
 <p>也可以使用地阶API<code>RedisConnection</code></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestRedis</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    RedisTemplate redisTemplate;</span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//    @Autowired</span></span><br><span class="line"><span class="comment">//    StringRedisTemplate stringRedisTemplate;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testRedis</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="comment">//        stringRedisTemplate.opsForValue().set(&quot;k1&quot;, &quot;hello world&quot;);</span></span><br><span class="line"><span class="comment">//        System.out.println(redisTemplate.opsForValue().get(&quot;k1&quot;));</span></span><br><span class="line">        RedisConnection connection = redisTemplate.getConnectionFactory().getConnection();</span><br><span class="line">      <span class="comment">// 所有直接在redis中使用的命令，都可以在这里使用</span></span><br><span class="line">        connection.set(<span class="string">&quot;Hello&quot;</span>.getBytes(StandardCharsets.UTF_8), <span class="string">&quot;world&quot;</span>.getBytes(StandardCharsets.UTF_8));</span><br><span class="line">        System.out.println(<span class="keyword">new</span> String(connection.get(<span class="string">&quot;Hello&quot;</span>.getBytes(StandardCharsets.UTF_8))));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/2021/redis-interview-problem/image-20210426160132123.png" alt="image-20210426160132123"></p>
+<p><img src="/2020/redis-interview-problem/image-20210426160132123.png" alt="image-20210426160132123"></p>
 <h5 id="c、Redis序列化">c、Redis序列化</h5>
 <blockquote>
 <p>Redis类型中，可以分为两类，一类是单值，一类是复值的，复值就是<code>hash</code>，<code>hash</code> k-&gt;v，而value又可以是k-&gt;v</p>
@@ -663,7 +663,7 @@
 <p>如果我有一个对象，要怎么放到hash类型中呢？</p>
 <p><a target="_blank" rel="noopener" href="https://docs.spring.io/spring-data/redis/docs/2.5.0/reference/html/#redis.hashmappers.root">文档的这里哈希映射</a>其实有说明</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.shifpeng.architecturelearning;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(Integer age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/2021/redis-interview-problem/image-20210426192659042.png" alt="image-20210426192659042"></p>
+<p><img src="/2020/redis-interview-problem/image-20210426192659042.png" alt="image-20210426192659042"></p>
 <p>实现：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.shifpeng.architecturelearning;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.fasterxml.jackson.databind.ObjectMapper;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.data.redis.connection.RedisConnection;</span><br><span class="line"><span class="keyword">import</span> org.springframework.data.redis.core.HashOperations;</span><br><span class="line"><span class="keyword">import</span> org.springframework.data.redis.core.RedisTemplate;</span><br><span class="line"><span class="keyword">import</span> org.springframework.data.redis.core.StringRedisTemplate;</span><br><span class="line"><span class="keyword">import</span> org.springframework.data.redis.hash.Jackson2HashMapper;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.nio.charset.StandardCharsets;</span><br><span class="line"><span class="keyword">import</span> java.time.Period;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestRedis</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    RedisTemplate redisTemplate;</span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    StringRedisTemplate stringRedisTemplate;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    ObjectMapper objectMapper;<span class="comment">//需要引入spring-boot-starter-json的maven包</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testRedis</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        Person p = <span class="keyword">new</span> Person();</span><br><span class="line">        p.setAge(<span class="number">22</span>);</span><br><span class="line">        p.setName(<span class="string">&quot;zhangsan&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//因为value种存在整形，导致类型不匹配，所以需要序列化</span></span><br><span class="line">        stringRedisTemplate.setHashValueSerializer(<span class="keyword">new</span> Jackson2JsonRedisSerializer&lt;Object&gt;(Object.class));</span><br><span class="line">      </span><br><span class="line">        Jackson2HashMapper jackson2HashMapper = <span class="keyword">new</span> Jackson2HashMapper(objectMapper, <span class="keyword">true</span>);<span class="comment">//第二个参数可以控制里面的子对象页做map映射</span></span><br><span class="line">      <span class="comment">//jackson2HashMapper有tomap方法</span></span><br><span class="line">        <span class="comment">//value需要的是一个Map</span></span><br><span class="line">        stringRedisTemplate.opsForHash().putAll(<span class="string">&quot;Steven01&quot;</span>, jackson2HashMapper.toHash(p));</span><br><span class="line">        Map map = stringRedisTemplate.opsForHash().entries(<span class="string">&quot;Steven01&quot;</span>);</span><br><span class="line">        Person person = objectMapper.convertValue(map, Person.class);</span><br><span class="line"></span><br><span class="line">        System.out.println(person.getName());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>查看redis：</p>
@@ -686,12 +686,12 @@
         <ul class="pager">
           
           <li class="previous">
-            <a href="/2021/mac-install-centos7/" data-toggle="tooltip" data-placement="top" title="在Mac上安装Linux系统centos7以及基本配置">&larr; Previous Post</a>
+            <a href="/2020/github-static-source-cdn/" data-toggle="tooltip" data-placement="top" title="GitHub静态资源访问免费CDN提速">&larr; Previous Post</a>
           </li>
           
           
           <li class="next">
-            <a href="/2021/Docker-构建报错failed-to-fetch-oauth-token/" data-toggle="tooltip" data-placement="top" title="Docker构建报错failed to fetch oauth-token">Next Post &rarr;</a>
+            <a href="/2020/Redis集群实战/" data-toggle="tooltip" data-placement="top" title="Redis集群实战">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -740,7 +740,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=Redis面试：击穿、穿透、雪崩、分布式锁、API&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2021/redis-interview-problem/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Redis面试：击穿、穿透、雪崩、分布式锁、API&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2020/redis-interview-problem/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -774,7 +774,7 @@
       repo: 'shifpeng.github.io',
       owner: 'shifpeng',
       admin: 'shifpeng',
-      id: 'Tue Apr 20 2021 18:04:24 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Mon Apr 20 2020 18:04:24 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 10,
       pagerDirection: 'last',
@@ -1061,7 +1061,7 @@
     let jsdelivr = "https://cdn.jsdelivr.net/gh/";
     let gh = "shifpeng";
     let ghPages = gh + ".github.io";
-    let pagePath = "2021/redis-interview-problem/";
+    let pagePath = "2020/redis-interview-problem/";
     let jsdelivrurl;
     if (pagePath.indexOf("index.html") != -1) {
       jsdelivrurl = jsdelivr + gh + "/" + ghPages;
@@ -1454,20 +1454,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 </html>
