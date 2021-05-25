@@ -475,7 +475,7 @@
         <h2 id="一、List链表">一、<code>List</code>链表</h2>
 <p>list是一个链表，链表分为单向链表，双向链表，它是一个线性的。</p>
 <p>既能从前面找到我们想到的元素，也能总后面往前找，这叫双向的</p>
-<p>从最后一个能回到第一个，从第一个还能直接到最后一个，这叫有环。一般五环的双向链表，这叫做链表。</p>
+<p>从最后一个能回到第一个，从第一个还能直接到最后一个，这叫有环。一般无环的双向链表，这叫做链表。</p>
 <p>Redis的key，包括两个东西，一个是<code>head</code>头指针，一个是<code>tail</code>尾指针，<code>head</code>可以指向到<code>value</code>链表中的第一个元素，<code>tail</code>可以指向到链表的最后一个元素</p>
 <blockquote>
 <p>好处：当value的类型是list的时候，可以通过这两个属性快速的访问value链表中的第一个元素和最后一个元素</p>
@@ -1379,5 +1379,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

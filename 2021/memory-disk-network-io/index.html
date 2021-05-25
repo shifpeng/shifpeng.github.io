@@ -140,10 +140,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://www.shifpeng.cn/2018/Java里的位运算/">
+  <link rel="canonical" href="https://www.shifpeng.cn/2021/memory-disk-network-io/">
   <title>
     
-      Java里的位运算 - Steven | java
+      memory-disk-network-io - Steven | java
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -387,14 +387,12 @@
           <div class="post-heading">
             <div class="tags">
               
-              <a class="tag" href="/tags/#Java" title="Java">Java</a>
-              
             </div>
-            <h1>Java里的位运算</h1>
+            <h1>memory-disk-network-io</h1>
             <h2 class="subheading"></h2>
             <span class="meta">
-              Posted by 石福鹏 on
-              2018-11-09
+              Posted by Steven on
+              2021-05-21
             </span>
 
 
@@ -406,7 +404,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">142</span> In Total
+              Words <span class="post-count">41</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -468,34 +466,18 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h4 id="前言">前言</h4>
-<p>java通常在哪里会用到位运算</p>
-<ul>
-<li>Java中的类修饰符、成员变量修饰符、方法修饰符</li>
-<li>Java容器中的<code>HashMap</code>、<code>ConcurrentHashMap</code>的实现</li>
-<li>权限控制或者商品属性</li>
-<li>简单可逆加密</li>
-</ul>
-<h4 id="二进制">二进制</h4>
-<p>十进制：我们通常使用的就是十进制<br>
-逢十进一（每一位数不能超过十，最大为9，如果超过，就往高进位）</p>
-<p>​				208=2*100+0*10++8*1</p>
-<p>​					  =2*10^2+0*10^1+8*10^0</p>
-<h4 id="二进制-2">二进制</h4>
-<p>逢二进一：每个位置上的数字不能超过2，最大为1</p>
+        <p>一个操作系统中，有几个非常核心的东西，CPU、内存、输入输出设备（IO设备）</p>
+<p>程序的维度，有内核（一个程序）</p>
+<p>​</p>
 
 
         <hr>
         <!-- Pager -->
         <ul class="pager">
           
-          <li class="previous">
-            <a href="/2018/Node-js学习笔记/" data-toggle="tooltip" data-placement="top" title="Node.js学习笔记">&larr; Previous Post</a>
-          </li>
-          
           
           <li class="next">
-            <a href="/2018/使用Postman生成签名Sign作为参数发送请求/" data-toggle="tooltip" data-placement="top" title="使用Postman生成签名Sign作为参数发送请求">Next Post &rarr;</a>
+            <a href="/2021/jvm-tuning-01/" data-toggle="tooltip" data-placement="top" title="（三）JVM内存模型">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -544,7 +526,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=Java里的位运算&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2018/Java里的位运算/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=memory-disk-network-io&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2021/memory-disk-network-io/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -578,7 +560,7 @@
       repo: 'shifpeng.github.io',
       owner: 'shifpeng',
       admin: 'shifpeng',
-      id: 'Fri Nov 09 2018 17:43:58 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Fri May 21 2021 16:02:23 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 10,
       pagerDirection: 'last',
@@ -631,7 +613,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">前言</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BA%8C%E8%BF%9B%E5%88%B6"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二进制</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BA%8C%E8%BF%9B%E5%88%B6-2"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">二进制</span></a></li></ol>
+          <ol class="nav">none</ol>
         
         </div>
       </aside>
@@ -653,8 +635,6 @@
             <a href="/tags/">特色标签</a>
           </h5>
           <div class="tags">
-            
-            <a class="tag" href="/tags/#Java" title="Java">Java</a>
             
           </div>
         </section>
@@ -861,7 +841,7 @@
     let jsdelivr = "https://cdn.jsdelivr.net/gh/";
     let gh = "shifpeng";
     let ghPages = gh + ".github.io";
-    let pagePath = "2018/Java里的位运算/";
+    let pagePath = "2021/memory-disk-network-io/";
     let jsdelivrurl;
     if (pagePath.indexOf("index.html") != -1) {
       jsdelivrurl = jsdelivr + gh + "/" + ghPages;
