@@ -406,11 +406,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">32</span> Minutes
+              Estimated Reading Time <span class="post-count">42</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">7.4k</span> In Total
+              Words <span class="post-count">9.5k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -897,6 +897,51 @@ jhat -J-mx512M xxx.dump <a target="_blank" rel="noopener" href="http://192.168.1
 <li>watch  - watch method</li>
 <li>没有包含的功能：jmap</li>
 </ul>
+<h3 id="GC算法的基础概念">GC算法的基础概念</h3>
+<ul>
+<li>Card Table 由于做YGC时，需要扫描整个OLD区，效率非常低，所以JVM设计了CardTable， 如果一个OLD区CardTable中有对象指向Y区，就将它设为Dirty，下次扫描时，只需要扫描Dirty Card 在结构上，Card Table用BitMap来实现</li>
+</ul>
+<h3 id="CMS-2">CMS</h3>
+<h4 id="CMS的问题">CMS的问题</h4>
+<ol>
+<li>
+<p>Memory Fragmentation</p>
+<blockquote>
+<p>-XX:+UseCMSCompactAtFullCollection -XX:CMSFullGCsBeforeCompaction 默认为0 指的是经过多少次FGC才进行压缩</p>
+</blockquote>
+</li>
+<li>
+<p>Floating Garbage</p>
+<blockquote>
+<p>Concurrent Mode Failure 产生：if the concurrent collector is unable to finish reclaiming the unreachable objects before the tenured generation fills up, or if an allocation cannot be satisfiedwith the available free space blocks in the tenured generation, then theapplication is paused and the collection is completed with all the applicationthreads stopped</p>
+<p>解决方案：降低触发CMS的阈值</p>
+<p>PromotionFailed</p>
+<p>解决方案类似，保持老年代有足够的空间</p>
+<p>–XX:CMSInitiatingOccupancyFraction 92% 可以降低这个值，让CMS保持老年代足够的空间</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="CMS日志分析">CMS日志分析</h4>
+<p>执行命令：java -Xms20M -Xmx20M -XX:+PrintGCDetails -XX:+UseConcMarkSweepGC com.mashibing.jvm.gc.T15_FullGC_Problem01</p>
+<p>[GC (Allocation Failure) [ParNew: 6144K-&gt;640K(6144K), 0.0265885 secs] 6585K-&gt;2770K(19840K), 0.0268035 secs] [Times: user=0.02 sys=0.00, real=0.02 secs]</p>
+<blockquote>
+<p>ParNew：年轻代收集器</p>
+<p>6144-&gt;640：收集前后的对比</p>
+<p>（6144）：整个年轻代容量</p>
+<p>6585 -&gt; 2770：整个堆的情况</p>
+<p>（19840）：整个堆大小</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">[GC (CMS Initial Mark) [<span class="number">1</span> CMS-initial-mark: 8511K(13696K)] 9866K(19840K), <span class="number">0.0040321</span> secs] [Times: user=<span class="number">0.01</span> sys=<span class="number">0.00</span>, real=<span class="number">0.00</span> secs] </span><br><span class="line">	<span class="comment">//8511 (13696) : 老年代使用（最大）</span></span><br><span class="line">	<span class="comment">//9866 (19840) : 整个堆使用（最大）</span></span><br><span class="line">[CMS-concurrent-mark-start]</span><br><span class="line">[CMS-concurrent-mark: <span class="number">0.018</span>/<span class="number">0.018</span> secs] [Times: user=<span class="number">0.01</span> sys=<span class="number">0.00</span>, real=<span class="number">0.02</span> secs] </span><br><span class="line">	<span class="comment">//这里的时间意义不大，因为是并发执行</span></span><br><span class="line">[CMS-concurrent-preclean-start]</span><br><span class="line">[CMS-concurrent-preclean: <span class="number">0.000</span>/<span class="number">0.000</span> secs] [Times: user=<span class="number">0.00</span> sys=<span class="number">0.00</span>, real=<span class="number">0.00</span> secs] </span><br><span class="line">	<span class="comment">//标记Card为Dirty，也称为Card Marking</span></span><br><span class="line">[GC (CMS Final Remark) [YG occupancy: <span class="number">1597</span> K (<span class="number">6144</span> K)][Rescan (parallel) , <span class="number">0.0008396</span> secs][weak refs processing, <span class="number">0.0000138</span> secs][<span class="class"><span class="keyword">class</span> <span class="title">unloading</span>, 0.0005404 <span class="title">secs</span>][<span class="title">scrub</span> <span class="title">symbol</span> <span class="title">table</span>, 0.0006169 <span class="title">secs</span>][<span class="title">scrub</span> <span class="title">string</span> <span class="title">table</span>, 0.0004903 <span class="title">secs</span>][1 <span class="title">CMS</span>-<span class="title">remark</span>: 8511<span class="title">K</span>(13696<span class="title">K</span>)] 10108<span class="title">K</span>(19840<span class="title">K</span>), 0.0039567 <span class="title">secs</span>] [<span class="title">Times</span>: <span class="title">user</span></span>=<span class="number">0.00</span> sys=<span class="number">0.00</span>, real=<span class="number">0.00</span> secs] </span><br><span class="line">	<span class="comment">//STW阶段，YG occupancy:年轻代占用及容量</span></span><br><span class="line">	<span class="comment">//[Rescan (parallel)：STW下的存活对象标记</span></span><br><span class="line">	<span class="comment">//weak refs processing: 弱引用处理</span></span><br><span class="line">	<span class="comment">//class unloading: 卸载用不到的class</span></span><br><span class="line">	<span class="comment">//scrub symbol(string) table: </span></span><br><span class="line">		<span class="comment">//cleaning up symbol and string tables which hold class-level metadata and </span></span><br><span class="line">		<span class="comment">//internalized string respectively</span></span><br><span class="line">	<span class="comment">//CMS-remark: 8511K(13696K): 阶段过后的老年代占用及容量</span></span><br><span class="line">	<span class="comment">//10108K(19840K): 阶段过后的堆占用及容量</span></span><br><span class="line"></span><br><span class="line">[CMS-concurrent-sweep-start]</span><br><span class="line">[CMS-concurrent-sweep: <span class="number">0.005</span>/<span class="number">0.005</span> secs] [Times: user=<span class="number">0.00</span> sys=<span class="number">0.00</span>, real=<span class="number">0.01</span> secs] </span><br><span class="line">	<span class="comment">//标记已经完成，进行并发清理</span></span><br><span class="line">[CMS-concurrent-reset-start]</span><br><span class="line">[CMS-concurrent-reset: <span class="number">0.000</span>/<span class="number">0.000</span> secs] [Times: user=<span class="number">0.00</span> sys=<span class="number">0.00</span>, real=<span class="number">0.00</span> secs]</span><br><span class="line">	<span class="comment">//重置内部结构，为下次GC做准备</span></span><br></pre></td></tr></table></figure>
+<h3 id="G1">G1</h3>
+<ol>
+<li>▪https://www.oracle.com/technical-resources/articles/java/g1gc.html</li>
+<li></li>
+</ol>
+<p><img src="/2020/gc-and-gctuning/image-20210526114830218.png" alt="image-20210526114830218"></p>
+<p><img src="/2020/gc-and-gctuning/image-20210526114649724.png" alt="image-20210526114649724"></p>
+<h4 id="G1日志详解">G1日志详解</h4>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">[GC pause (G1 Evacuation Pause) (young) (initial-mark), 0.0015790 secs]</span></span><br><span class="line"><span class="comment">//young -&gt; 年轻代 Evacuation-&gt; 复制存活对象 </span></span><br><span class="line"><span class="comment">//initial-mark 混合回收的阶段，这里是YGC混合老年代回收</span></span><br><span class="line"><span class="string">   [Parallel Time: 1.5 ms, GC Workers: 1]</span> <span class="comment">//一个GC线程</span></span><br><span class="line"><span class="string">      [GC Worker Start (ms):  92635.7]</span></span><br><span class="line"><span class="string">      [Ext Root Scanning (ms):  1.1]</span></span><br><span class="line"><span class="string">      [Update RS (ms):  0.0]</span></span><br><span class="line"><span class="string">         [Processed Buffers:  1]</span></span><br><span class="line"><span class="string">      [Scan RS (ms):  0.0]</span></span><br><span class="line"><span class="string">      [Code Root Scanning (ms):  0.0]</span></span><br><span class="line"><span class="string">      [Object Copy (ms):  0.1]</span></span><br><span class="line"><span class="string">      [Termination (ms):  0.0]</span></span><br><span class="line"><span class="string">         [Termination Attempts:  1]</span></span><br><span class="line"><span class="string">      [GC Worker Other (ms):  0.0]</span></span><br><span class="line"><span class="string">      [GC Worker Total (ms):  1.2]</span></span><br><span class="line"><span class="string">      [GC Worker End (ms):  92636.9]</span></span><br><span class="line"><span class="string">   [Code Root Fixup: 0.0 ms]</span></span><br><span class="line"><span class="string">   [Code Root Purge: 0.0 ms]</span></span><br><span class="line"><span class="string">   [Clear CT: 0.0 ms]</span></span><br><span class="line"><span class="string">   [Other: 0.1 ms]</span></span><br><span class="line"><span class="string">      [Choose CSet: 0.0 ms]</span></span><br><span class="line"><span class="string">      [Ref Proc: 0.0 ms]</span></span><br><span class="line"><span class="string">      [Ref Enq: 0.0 ms]</span></span><br><span class="line"><span class="string">      [Redirty Cards: 0.0 ms]</span></span><br><span class="line"><span class="string">      [Humongous Register: 0.0 ms]</span></span><br><span class="line"><span class="string">      [Humongous Reclaim: 0.0 ms]</span></span><br><span class="line"><span class="string">      [Free CSet: 0.0 ms]</span></span><br><span class="line"><span class="string">   [Eden: 0.0B(1024.0K)-&gt;0.0B(1024.0K) Survivors: 0.0B-&gt;0.0B Heap: 18.8M(20.0M)-&gt;18.8M(20.0M)]</span></span><br><span class="line"><span class="string"> [Times: user=0.00 sys=0.00, real=0.00 secs]</span> </span><br><span class="line"><span class="comment">//以下是混合回收其他阶段</span></span><br><span class="line"><span class="string">[GC concurrent-root-region-scan-start]</span></span><br><span class="line"><span class="string">[GC concurrent-root-region-scan-end, 0.0000078 secs]</span></span><br><span class="line"><span class="string">[GC concurrent-mark-start]</span></span><br><span class="line"><span class="comment">//无法evacuation，进行FGC</span></span><br><span class="line"><span class="string">[Full GC (Allocation Failure)  18M-&gt;18M(20M), 0.0719656 secs]</span></span><br><span class="line"><span class="string">   [Eden: 0.0B(1024.0K)-&gt;0.0B(1024.0K) Survivors: 0.0B-&gt;0.0B Heap: 18.8M(20.0M)-&gt;18.8M(20.0M)]</span>, [Metaspace: <span class="number">38</span></span><br><span class="line"><span class="number">76</span>K-&gt;<span class="number">3876</span>K(<span class="number">1056768</span>K)] [Times: user=<span class="number">0.07</span> sys=<span class="number">0.00</span>, real=<span class="number">0.07</span> secs]</span><br></pre></td></tr></table></figure>
+<p><img src="/2020/gc-and-gctuning/image-20210526135013718.png" alt="image-20210526135013718"></p>
 <h3 id="案例汇总">案例汇总</h3>
 <p>OOM产生的原因多种多样，有些程序未必产生OOM，不断FGC(CPU飙高，但内存回收特别少) （上面案例）</p>
 <ol>
@@ -947,6 +992,174 @@ System.gc() (这个比较Low)</p>
 </li>
 <li>
 <p>new 大量线程，会产生 native thread OOM，（low）应该用线程池， 解决方案：减少堆空间（太TMlow了）,预留更多内存产生native thread JVM内存占物理内存比例 50% - 80%</p>
+</li>
+</ol>
+<blockquote>
+<p>设计架构上的两大重要思想</p>
+<p>1、分而治之</p>
+<p>2、分层</p>
+</blockquote>
+<h3 id="GC常用参数">GC常用参数</h3>
+<ul>
+<li>-Xmn -Xms -Xmx -Xss 年轻代 最小堆 最大堆 栈空间</li>
+<li>-XX:+UseTLAB 使用TLAB，默认打开</li>
+<li>-XX:+PrintTLAB 打印TLAB的使用情况</li>
+<li>-XX:TLABSize 设置TLAB大小</li>
+<li>-XX:+DisableExplictGC 作用就是让<code>System.gc()</code>不管用 ，FGC</li>
+<li>-XX:+PrintGC</li>
+<li>-XX:+PrintGCDetails</li>
+<li>-XX:+PrintHeapAtGC</li>
+<li>-XX:+PrintGCTimeStamps</li>
+<li>-XX:+PrintGCApplicationConcurrentTime (低) 打印应用程序时间</li>
+<li>-XX:+PrintGCApplicationStoppedTime （低） 打印暂停时长</li>
+<li>-XX:+PrintReferenceGC （重要性低） 记录回收了多少种不同引用类型的引用</li>
+<li>-verbose:class 类加载详细过程</li>
+<li>-XX:+PrintVMOptions</li>
+<li><strong>-XX:+PrintFlagsFinal  -XX:+PrintFlagsInitial 必须会用</strong></li>
+<li>-Xloggc:opt/log/gc.log</li>
+<li>-XX:MaxTenuringThreshold 升代年龄，最大值15</li>
+<li>锁自旋次数 -XX:PreBlockSpin 热点代码检测参数-XX:CompileThreshold 逃逸分析 标量替换 … 这些不建议设置</li>
+</ul>
+<h3 id="Parallel常用参数">Parallel常用参数</h3>
+<ul>
+<li>-XX:SurvivorRatio</li>
+<li>-XX:PreTenureSizeThreshold 大对象到底多大</li>
+<li>-XX:MaxTenuringThreshold</li>
+<li>-XX:+ParallelGCThreads 并行收集器的线程数，同样适用于CMS，一般设为和CPU核数相同</li>
+<li>-XX:+UseAdaptiveSizePolicy 自动选择各区大小比例</li>
+</ul>
+<h3 id="CMS常用参数">CMS常用参数</h3>
+<ul>
+<li>-XX:+UseConcMarkSweepGC</li>
+<li>-XX:ParallelCMSThreads CMS线程数量</li>
+<li>-XX:CMSInitiatingOccupancyFraction 使用多少比例的老年代后开始CMS收集，默认是68%(近似值)，如果频繁发生SerialOld卡顿，应该调小，（频繁CMS回收）</li>
+<li>-XX:+UseCMSCompactAtFullCollection 在FGC时进行压缩</li>
+<li>-XX:CMSFullGCsBeforeCompaction 多少次FGC之后进行压缩</li>
+<li>-XX:+CMSClassUnloadingEnabled</li>
+<li>-XX:CMSInitiatingPermOccupancyFraction 达到什么比例时进行Perm回收</li>
+<li>GCTimeRatio 设置GC时间占用程序运行时间的百分比</li>
+<li>-XX:MaxGCPauseMillis 停顿时间，是一个建议时间，GC会尝试用各种手段达到这个时间，比如减小年轻代</li>
+</ul>
+<h3 id="G1常用参数">G1常用参数</h3>
+<ul>
+<li>-XX:+UseG1GC</li>
+<li>-XX:MaxGCPauseMillis 建议值，G1会尝试调整Young区的块数来达到这个值</li>
+<li>-XX:GCPauseIntervalMillis ？GC的间隔时间</li>
+<li>-XX:+G1HeapRegionSize 分区大小，建议逐渐增大该值，1 2 4 8 16 32。 随着size增加，垃圾的存活时间更长，GC间隔更长，但每次GC的时间也会更长 ZGC做了改进（动态区块大小）</li>
+<li>G1NewSizePercent 新生代最小比例，默认为5%</li>
+<li>G1MaxNewSizePercent 新生代最大比例，默认为60%</li>
+<li>GCTimeRatio GC时间建议比例，G1会根据这个值调整堆空间</li>
+<li>ConcGCThreads 线程数量</li>
+<li>InitiatingHeapOccupancyPercent 启动G1的堆空间占用比例</li>
+</ul>
+<h4 id="作业">作业</h4>
+<ol>
+<li>
+<p>-XX:MaxTenuringThreshold控制的是什么？ A: 对象升入老年代的年龄 B: 老年代触发FGC时的内存垃圾比例</p>
+</li>
+<li>
+<p>生产环境中，倾向于将最大堆内存和最小堆内存设置为：（为什么？） A: 相同 B：不同</p>
+</li>
+<li>
+<p>JDK1.8默认的垃圾回收器是： A: ParNew + CMS B: G1 C: PS + ParallelOld D: 以上都不是</p>
+</li>
+<li>
+<p>什么是响应时间优先？</p>
+</li>
+<li>
+<p>什么是吞吐量优先？</p>
+</li>
+<li>
+<p>ParNew和PS的区别是什么？</p>
+</li>
+<li>
+<p>ParNew和ParallelOld的区别是什么？（年代不同，算法不同）</p>
+</li>
+<li>
+<p>长时间计算的场景应该选择：A：停顿时间 B: 吞吐量</p>
+</li>
+<li>
+<p>大规模电商网站应该选择：A：停顿时间 B: 吞吐量</p>
+</li>
+<li>
+<p>HotSpot的垃圾收集器最常用有哪些？</p>
+</li>
+<li>
+<p>常见的HotSpot垃圾收集器组合有哪些？</p>
+</li>
+<li>
+<p>JDK1.7 1.8 1.9的默认垃圾回收器是什么？如何查看？</p>
+</li>
+<li>
+<p>所谓调优，到底是在调什么？</p>
+</li>
+<li>
+<p>如果采用PS + ParrallelOld组合，怎么做才能让系统基本不产生FGC</p>
+</li>
+<li>
+<p>如果采用ParNew + CMS组合，怎样做才能够让系统基本不产生FGC</p>
+<p>1.加大JVM内存</p>
+<p>2.加大Young的比例</p>
+<p>3.提高Y-O的年龄</p>
+<p>4.提高S区比例</p>
+<p>5.避免代码内存泄漏</p>
+</li>
+<li>
+<p>G1是否分代？G1垃圾回收器会产生FGC吗？</p>
+</li>
+<li>
+<p>如果G1产生FGC，你应该做什么？</p>
+<ol>
+<li>扩内存</li>
+<li>提高CPU性能（回收的快，业务逻辑产生对象的速度固定，垃圾回收越快，内存空间越大）</li>
+<li>降低MixedGC触发的阈值，让MixedGC提早发生（默认是45%）</li>
+</ol>
+</li>
+<li>
+<p>问：生产环境中能够随随便便的dump吗？ 小堆影响不大，大堆会有服务暂停或卡顿（加live可以缓解），dump前会有FGC</p>
+</li>
+<li>
+<p>问：常见的OOM问题有哪些？ 栈 堆 MethodArea 直接内存</p>
+</li>
+</ol>
+<h3 id="参考资料">参考资料</h3>
+<ol>
+<li>
+<p><a target="_blank" rel="noopener" href="https://blogs.oracle.com/jonthecollector/our-collectors">https://blogs.oracle.com/</a><a target="_blank" rel="noopener" href="https://blogs.oracle.com/jonthecollector/our-collectors">jonthecollector</a><a target="_blank" rel="noopener" href="https://blogs.oracle.com/jonthecollector/our-collectors">/our-collectors</a></p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html">https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html</a></p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://java.sun.com/javase/technologies/hotspot/vmoptions.jsp">http://java.sun.com/javase/technologies/hotspot/vmoptions.jsp</a></p>
+</li>
+<li>
+<p>JVM调优参考文档：<a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/13/gctuning/introduction-garbage-collection-tuning.html#GUID-8A443184-7E07-4B71-9777-4F12947C8184">https://docs.oracle.com/en/java/javase/13/gctuning/introduction-garbage-collection-tuning.html#GUID-8A443184-7E07-4B71-9777-4F12947C8184</a></p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/nxlhero/p/11660854.html">https://www.cnblogs.com/nxlhero/p/11660854.html</a> 在线排查工具</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/507f7e0cc3a3">https://www.jianshu.com/p/507f7e0cc3a3</a> arthas常用命令</p>
+</li>
+<li>
+<p>Arthas手册：</p>
+<ol>
+<li>启动arthas java -jar arthas-boot.jar</li>
+<li>绑定java进程</li>
+<li>dashboard命令观察系统整体情况</li>
+<li>help 查看帮助</li>
+<li>help xx 查看具体命令帮助</li>
+</ol>
+</li>
+<li>
+<p>jmap命令参考：</p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/507f7e0cc3a3">https://www.jianshu.com/p/507f7e0cc3a3</a></p>
+<ol>
+<li>jmap -heap pid</li>
+<li>jmap -histo pid</li>
+<li>jmap -clstats pid</li>
+</ol>
 </li>
 </ol>
 
@@ -1097,7 +1310,7 @@ System.gc() (这个比较Low)</p>
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BD%95%E4%B8%BAGarbage"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">何为Garbage?</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%89%BE%E5%88%B0%E5%9E%83%E5%9C%BE%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">找到垃圾的方式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95%EF%BC%88GC%E7%AE%97%E6%B3%95%EF%BC%89"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">垃圾回收算法（GC算法）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#JVM%E5%86%85%E5%AD%98%E5%88%86%E4%BB%A3%E6%A8%A1%E5%9E%8B%EF%BC%88%E7%94%A8%E4%BA%8E%E5%88%86%E4%BB%A3%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95%EF%BC%89"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">JVM内存分代模型（用于分代垃圾回收算法）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AF%B9%E8%B1%A1%E5%A6%82%E4%BD%95%E8%BF%9B%E5%85%A5%E8%80%81%E5%B9%B4%E4%BB%A3"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">对象如何进入老年代</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#jvm%E8%AF%AF%E5%8C%BA%E2%80%93%E5%8A%A8%E6%80%81%E5%AF%B9%E8%B1%A1%E5%B9%B4%E9%BE%84%E5%88%A4%E5%AE%9A"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">jvm误区–动态对象年龄判定</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">常见的垃圾回收器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Serial"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">Serial</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Serial-Old"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">Serial Old</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#parallel-Scavenge%EF%BC%88PS%EF%BC%89-PS-PO"><span class="toc-nav-number">6.3.</span> <span class="toc-nav-text">parallel Scavenge（PS） PS+PO</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#parallel-old-PO"><span class="toc-nav-number">6.4.</span> <span class="toc-nav-text">parallel old(PO)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#ParNew%EF%BC%88PN%EF%BC%89"><span class="toc-nav-number">6.5.</span> <span class="toc-nav-text">ParNew（PN）</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#CMS"><span class="toc-nav-number">6.6.</span> <span class="toc-nav-text">CMS</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#CMS%E7%9A%84%E4%B8%A4%E5%A4%A7%E9%97%AE%E9%A2%98"><span class="toc-nav-number">6.6.1.</span> <span class="toc-nav-text">CMS的两大问题</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#concurrent-mark-%E9%98%B6%E6%AE%B5%E7%9A%84%E7%AE%97%E6%B3%95%EF%BC%88%E5%B9%B6%E5%8F%91%E6%A0%87%E8%AE%B0%EF%BC%89"><span class="toc-nav-number">6.6.2.</span> <span class="toc-nav-text">concurrent mark 阶段的算法（并发标记）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8%E8%B7%9F%E5%86%85%E5%AD%98%E5%A4%A7%E5%B0%8F%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-nav-number">6.7.</span> <span class="toc-nav-text">垃圾收集器跟内存大小的关系</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%B8%B8%E8%A7%81%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8%E7%BB%84%E5%90%88%E5%8F%82%E6%95%B0%E8%AE%BE%E5%AE%9A%EF%BC%9A-1-8"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">常见垃圾回收器组合参数设定：(1.8)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#JVM%E8%B0%83%E4%BC%98%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%8CJVM%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">JVM调优第一步，JVM常用命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#GC%E6%97%A5%E5%BF%97%E8%AF%A6%E8%A7%A3"><span class="toc-nav-number">8.1.</span> <span class="toc-nav-text">GC日志详解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%B0%83%E4%BC%98%E5%89%8D%E7%9A%84%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%EF%BC%9A"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">调优前的基础概念：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%B0%83%E4%BC%98"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">什么是调优</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%B0%83%E4%BC%98%EF%BC%8C%E4%BB%8E%E8%A7%84%E5%88%92%E5%BC%80%E5%A7%8B"><span class="toc-nav-number">11.</span> <span class="toc-nav-text">调优，从规划开始</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E9%A2%84%E8%B0%83%E4%BC%98%E6%A1%88%E4%BE%8B"><span class="toc-nav-number">11.1.</span> <span class="toc-nav-text">预调优案例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BC%98%E5%8C%96%E7%8E%AF%E5%A2%83"><span class="toc-nav-number">12.</span> <span class="toc-nav-text">优化环境</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%A7%A3%E5%86%B3JVM%E8%BF%90%E8%A1%8C%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-nav-number">13.</span> <span class="toc-nav-text">解决JVM运行中的问题</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%B8%80%E4%B8%AA%E6%A1%88%E4%BE%8B%E7%90%86%E8%A7%A3%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7"><span class="toc-nav-number">13.1.</span> <span class="toc-nav-text">一个案例理解常用工具</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%80%8E%E4%B9%88%E5%AE%9A%E4%BD%8DCPU%E9%A3%99%E5%8D%87%E3%80%81OOM"><span class="toc-nav-number">14.</span> <span class="toc-nav-text">***怎么定位CPU飙升、OOM</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#jconsole%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5"><span class="toc-nav-number">14.1.</span> <span class="toc-nav-text">jconsole远程连接</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#jvisualvm%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5"><span class="toc-nav-number">14.2.</span> <span class="toc-nav-text">jvisualvm远程连接</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#jprofiler-%E6%94%B6%E8%B4%B9"><span class="toc-nav-number">14.3.</span> <span class="toc-nav-text">jprofiler (收费)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#arthas%E5%9C%A8%E7%BA%BF%E6%8E%92%E6%9F%A5%E5%B7%A5%E5%85%B7"><span class="toc-nav-number">14.4.</span> <span class="toc-nav-text">arthas在线排查工具</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%A1%88%E4%BE%8B%E6%B1%87%E6%80%BB"><span class="toc-nav-number">15.</span> <span class="toc-nav-text">案例汇总</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BD%95%E4%B8%BAGarbage"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">何为Garbage?</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%89%BE%E5%88%B0%E5%9E%83%E5%9C%BE%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">找到垃圾的方式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95%EF%BC%88GC%E7%AE%97%E6%B3%95%EF%BC%89"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">垃圾回收算法（GC算法）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#JVM%E5%86%85%E5%AD%98%E5%88%86%E4%BB%A3%E6%A8%A1%E5%9E%8B%EF%BC%88%E7%94%A8%E4%BA%8E%E5%88%86%E4%BB%A3%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95%EF%BC%89"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">JVM内存分代模型（用于分代垃圾回收算法）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AF%B9%E8%B1%A1%E5%A6%82%E4%BD%95%E8%BF%9B%E5%85%A5%E8%80%81%E5%B9%B4%E4%BB%A3"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">对象如何进入老年代</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#jvm%E8%AF%AF%E5%8C%BA%E2%80%93%E5%8A%A8%E6%80%81%E5%AF%B9%E8%B1%A1%E5%B9%B4%E9%BE%84%E5%88%A4%E5%AE%9A"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">jvm误区–动态对象年龄判定</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">常见的垃圾回收器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Serial"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">Serial</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Serial-Old"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">Serial Old</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#parallel-Scavenge%EF%BC%88PS%EF%BC%89-PS-PO"><span class="toc-nav-number">6.3.</span> <span class="toc-nav-text">parallel Scavenge（PS） PS+PO</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#parallel-old-PO"><span class="toc-nav-number">6.4.</span> <span class="toc-nav-text">parallel old(PO)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#ParNew%EF%BC%88PN%EF%BC%89"><span class="toc-nav-number">6.5.</span> <span class="toc-nav-text">ParNew（PN）</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#CMS"><span class="toc-nav-number">6.6.</span> <span class="toc-nav-text">CMS</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#CMS%E7%9A%84%E4%B8%A4%E5%A4%A7%E9%97%AE%E9%A2%98"><span class="toc-nav-number">6.6.1.</span> <span class="toc-nav-text">CMS的两大问题</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#concurrent-mark-%E9%98%B6%E6%AE%B5%E7%9A%84%E7%AE%97%E6%B3%95%EF%BC%88%E5%B9%B6%E5%8F%91%E6%A0%87%E8%AE%B0%EF%BC%89"><span class="toc-nav-number">6.6.2.</span> <span class="toc-nav-text">concurrent mark 阶段的算法（并发标记）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8%E8%B7%9F%E5%86%85%E5%AD%98%E5%A4%A7%E5%B0%8F%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-nav-number">6.7.</span> <span class="toc-nav-text">垃圾收集器跟内存大小的关系</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%B8%B8%E8%A7%81%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8%E7%BB%84%E5%90%88%E5%8F%82%E6%95%B0%E8%AE%BE%E5%AE%9A%EF%BC%9A-1-8"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">常见垃圾回收器组合参数设定：(1.8)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#JVM%E8%B0%83%E4%BC%98%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%8CJVM%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">JVM调优第一步，JVM常用命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#GC%E6%97%A5%E5%BF%97%E8%AF%A6%E8%A7%A3"><span class="toc-nav-number">8.1.</span> <span class="toc-nav-text">GC日志详解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%B0%83%E4%BC%98%E5%89%8D%E7%9A%84%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%EF%BC%9A"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">调优前的基础概念：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%B0%83%E4%BC%98"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">什么是调优</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%B0%83%E4%BC%98%EF%BC%8C%E4%BB%8E%E8%A7%84%E5%88%92%E5%BC%80%E5%A7%8B"><span class="toc-nav-number">11.</span> <span class="toc-nav-text">调优，从规划开始</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E9%A2%84%E8%B0%83%E4%BC%98%E6%A1%88%E4%BE%8B"><span class="toc-nav-number">11.1.</span> <span class="toc-nav-text">预调优案例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BC%98%E5%8C%96%E7%8E%AF%E5%A2%83"><span class="toc-nav-number">12.</span> <span class="toc-nav-text">优化环境</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%A7%A3%E5%86%B3JVM%E8%BF%90%E8%A1%8C%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-nav-number">13.</span> <span class="toc-nav-text">解决JVM运行中的问题</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%B8%80%E4%B8%AA%E6%A1%88%E4%BE%8B%E7%90%86%E8%A7%A3%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7"><span class="toc-nav-number">13.1.</span> <span class="toc-nav-text">一个案例理解常用工具</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%80%8E%E4%B9%88%E5%AE%9A%E4%BD%8DCPU%E9%A3%99%E5%8D%87%E3%80%81OOM"><span class="toc-nav-number">14.</span> <span class="toc-nav-text">***怎么定位CPU飙升、OOM</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#jconsole%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5"><span class="toc-nav-number">14.1.</span> <span class="toc-nav-text">jconsole远程连接</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#jvisualvm%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5"><span class="toc-nav-number">14.2.</span> <span class="toc-nav-text">jvisualvm远程连接</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#jprofiler-%E6%94%B6%E8%B4%B9"><span class="toc-nav-number">14.3.</span> <span class="toc-nav-text">jprofiler (收费)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#arthas%E5%9C%A8%E7%BA%BF%E6%8E%92%E6%9F%A5%E5%B7%A5%E5%85%B7"><span class="toc-nav-number">14.4.</span> <span class="toc-nav-text">arthas在线排查工具</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#GC%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5"><span class="toc-nav-number">15.</span> <span class="toc-nav-text">GC算法的基础概念</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#CMS-2"><span class="toc-nav-number">16.</span> <span class="toc-nav-text">CMS</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#CMS%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-nav-number">16.1.</span> <span class="toc-nav-text">CMS的问题</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#CMS%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90"><span class="toc-nav-number">16.2.</span> <span class="toc-nav-text">CMS日志分析</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#G1"><span class="toc-nav-number">17.</span> <span class="toc-nav-text">G1</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#G1%E6%97%A5%E5%BF%97%E8%AF%A6%E8%A7%A3"><span class="toc-nav-number">17.1.</span> <span class="toc-nav-text">G1日志详解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%A1%88%E4%BE%8B%E6%B1%87%E6%80%BB"><span class="toc-nav-number">18.</span> <span class="toc-nav-text">案例汇总</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#GC%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0"><span class="toc-nav-number">19.</span> <span class="toc-nav-text">GC常用参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Parallel%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0"><span class="toc-nav-number">20.</span> <span class="toc-nav-text">Parallel常用参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#CMS%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0"><span class="toc-nav-number">21.</span> <span class="toc-nav-text">CMS常用参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#G1%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0"><span class="toc-nav-number">22.</span> <span class="toc-nav-text">G1常用参数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BD%9C%E4%B8%9A"><span class="toc-nav-number">22.1.</span> <span class="toc-nav-text">作业</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-nav-number">23.</span> <span class="toc-nav-text">参考资料</span></a></li></ol>
         
         </div>
       </aside>
