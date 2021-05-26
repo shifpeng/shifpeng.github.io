@@ -259,9 +259,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/tags/">
               
-              关于
+              标签
               
               
             </a>
@@ -281,9 +281,9 @@
           
           
           <li>
-            <a href="/tags/">
+            <a href="/about/">
               
-              标签
+              关于
               
               
             </a>
@@ -441,13 +441,13 @@
         
         <a href="#Java" title="Java" rel="3">Java</a>
         
-        <a href="#JVM" title="JVM" rel="4">JVM</a>
+        <a href="#JVM" title="JVM" rel="5">JVM</a>
         
         <a href="#深度好文" title="深度好文" rel="2">深度好文</a>
         
-        <a href="#CDN加速" title="CDN加速" rel="1">CDN加速</a>
-        
         <a href="#Hexo" title="Hexo" rel="1">Hexo</a>
+        
+        <a href="#CDN加速" title="CDN加速" rel="1">CDN加速</a>
         
         <a href="#Linux" title="Linux" rel="1">Linux</a>
         
@@ -590,6 +590,25 @@
         </div>
         <hr>
         
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
+          <a href="/2020/gc-and-gctuning/">
+            <h2 class="post-title">
+              垃圾回收及JVM调优
+            </h2>
+            
+            <h3 class="post-subtitle">
+              GC相关
+            </h3>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
       </div>
       
       <div class="one-tag-list">
@@ -638,32 +657,6 @@
       </div>
       
       <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="CDN加速">
-          <span class="tag-text">CDN加速</span>
-        </span>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/2020/github-static-source-cdn/">
-            <h2 class="post-title">
-              GitHub静态资源访问免费CDN提速
-            </h2>
-            
-            <h3 class="post-subtitle">
-              GitHub静态资源访问免费CDN提速，以及使用Hexo-theme-livemylife主题后，
-            </h3>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
         <span class="fa fa-tag listing-seperator" id="Hexo">
           <span class="tag-text">Hexo</span>
         </span>
@@ -680,6 +673,32 @@
             
             <h3 class="post-subtitle">
               hexo+gitpage部署博客之后遇到的问题
+            </h3>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="CDN加速">
+          <span class="tag-text">CDN加速</span>
+        </span>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
+          <a href="/2020/github-static-source-cdn/">
+            <h2 class="post-title">
+              GitHub静态资源访问免费CDN提速
+            </h2>
+            
+            <h3 class="post-subtitle">
+              GitHub静态资源访问免费CDN提速，以及使用Hexo-theme-livemylife主题后，
             </h3>
             
           </a>

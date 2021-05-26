@@ -331,6 +331,13 @@
   </url>
   
   <url>
+    <loc>https://www.shifpeng.cn/2020/gc-and-gctuning/</loc>
+    
+    <lastmod>2020-05-23</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.shifpeng.cn/2020/hexo-gitpage%E5%8F%91%E5%B8%83%E5%90%8E%EF%BC%8C%E5%9B%BE%E7%89%87%E4%B8%8D%E5%B1%95%E7%A4%BA/</loc>
     
     <lastmod>2020-05-22</lastmod>
@@ -683,14 +690,14 @@
   </url>
   
   <url>
-    <loc>https://www.shifpeng.cn/tags/Elasticsearch/</loc>
+    <loc>https://www.shifpeng.cn/tags/GitHub/</loc>
     <lastmod>2021-05-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.shifpeng.cn/tags/GitHub/</loc>
+    <loc>https://www.shifpeng.cn/tags/Elasticsearch/</loc>
     <lastmod>2021-05-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -837,14 +844,14 @@
   </url>
   
   <url>
-    <loc>https://www.shifpeng.cn/tags/CDN%E5%8A%A0%E9%80%9F/</loc>
+    <loc>https://www.shifpeng.cn/tags/Hexo/</loc>
     <lastmod>2021-05-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.shifpeng.cn/tags/Hexo/</loc>
+    <loc>https://www.shifpeng.cn/tags/CDN%E5%8A%A0%E9%80%9F/</loc>
     <lastmod>2021-05-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1077,14 +1084,14 @@
   </url>
   
   <url>
-    <loc>https://www.shifpeng.cn/categories/CDN%E5%8A%A0%E9%80%9F/</loc>
+    <loc>https://www.shifpeng.cn/categories/Hexo/</loc>
     <lastmod>2021-05-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.shifpeng.cn/categories/Hexo/</loc>
+    <loc>https://www.shifpeng.cn/categories/CDN%E5%8A%A0%E9%80%9F/</loc>
     <lastmod>2021-05-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
