@@ -406,7 +406,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">187</span> In Total
+              Words <span class="post-count">236</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -473,6 +473,8 @@
 <p>这里面存在的问题就在于，如果期望的值中途被人改掉了，但是后面又被改了回来， cas机制不能发现这个过程，也是发现期望值其实中间发生过变动。</p>
 <h4 id="解决方式">解决方式</h4>
 <p>给数据加上版本号或者时间戳，比较期望值的时候 比较的是值和版本号或者时间戳，即使值相同，但是如果中间发生过变化 那么时间戳或者版本号也不同。</p>
+<p><strong>如果是基础类型：无所谓。不影响结果值；</strong></p>
+<p><strong>如果是引用类型：就像是你的女朋友和你分手之后又复合，中间经历了别的男人。</strong></p>
 
 
         <hr>
@@ -1244,5 +1246,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>
