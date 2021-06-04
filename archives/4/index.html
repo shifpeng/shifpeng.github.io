@@ -454,6 +454,82 @@
   <!-- top end -->
   
 
+  <a href="/2020/【每日一题】聊一聊线上oom的排查方案？/">
+    <h2 class="post-title">
+      【每日一题】聊一聊线上oom的排查方案？
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      oom，先说排查思路，oom是内存溢出，则有
+
+堆内存区域溢出
+方法区或者元数据区溢出
+非堆空间(DirectMemory)溢出
+
+三种场景的情况。 首先通过溢出的异常报错，先确认是哪种类型。
+
+如果确认是堆内存区域溢出，可能原因是内存泄露 或者堆空间回收的速度赶不上对象创建的速度，排查方案就是看gc日志，如果是gc频率很高 但是回收对象却很少 就要怀疑是内存泄露，这个时候看dump日志 找......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by 石福鹏 on
+    2020-09-23
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#每日一题" title="每日一题">每日一题</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/2020/给自己，也给27岁以上的年轻人的财务建议/">
+    <h2 class="post-title">
+      给自己，也给27岁以上的年轻人的财务建议
+    </h2>
+    <h3 class="post-subtitle">
+      推特上一位网友问到：“27岁以上的网友们，请给出你们觉得最有用的财务建议，金融知识是很重要的！”
+    </h3>
+    <div class="post-content-preview">
+      2020年终于结束，对于职场的年轻人，尤其对于刚步入职场的年轻人来说，太难了，赚钱难，稍有不慎就丢了工作，各种开销，压力巨大，活下来就已经精疲力尽了。
+国外其实更是乱的一锅粥，之前在看川建国同志的推特的时候，偶尔看到有个国外网友的转推让我翻了好久，虽然是19年的，但是分享一下，看看对我们自己有没有用
+推特上一位网友问到：“27岁以上的网友们，请给出你们觉得最有用的财务建议，金融知识是很重要的......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by 石福鹏 on
+    2020-09-22
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#生活笔记" title="生活笔记">生活笔记</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/2020/企业常用开发规范/">
     <h2 class="post-title">
       企业常用开发规范
@@ -744,78 +820,6 @@ A同学在大众创业、万众创新的大时代背景下开启他的创业之�
 </div>
 <hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2020/Java-8-Stream数据处理案例/">
-    <h2 class="post-title">
-      Java 8 Stream数据处理案例
-    </h2>
-    <h3 class="post-subtitle">
-      Java 8 Stream数据处理的案例，工作中常用到的，方便查阅
-    </h3>
-    <div class="post-content-preview">
-      取list中所有对象的某个字段先绝对值后的最大值得对象
-1234Optional&lt;QuestionnaireResult&gt; userOp = list.stream().map((x) -&gt; &#123;               x.setScore(Math.abs(x.getScore()));               return x;           &......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Steven on
-    2020-08-27
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Java" title="Java">Java</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2020/SpringBoot中集成WebSocket/">
-    <h2 class="post-title">
-      SpringBoot中集成WebSocket「支持多终端、共享session」
-    </h2>
-    <h3 class="post-subtitle">
-      SpringBoot中集成WebSocket
-    </h3>
-    <div class="post-content-preview">
-      知识点
-WebSocket和Http：
-WebSocket是HTML5 开始提供的一种在单个 TCP 连接上进行全双工通讯的协议，使得客户端和服务器之间的数据交换变得更加简单，允许服务端主动向客户端推送数据。在 WebSocket API 中，浏览器和服务器只需要完成一次握手，两者之间就直接可以创建持久性的连接，并进行双向数据传输。
-它是为了解决客户端发起多个http请求到服务器资源浏览器必......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Steven on
-    2020-08-06
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Java" title="Java">Java</a>
-    
-    <a href="/tags/#Websocket" title="Websocket">Websocket</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -932,7 +936,7 @@ WebSocket是HTML5 开始提供的一种在单个 TCP 连接上进行全双工通
     
     
     
-    <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶" rel="20">架构+大数据进阶</a>
+    <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶" rel="23">架构+大数据进阶</a>
     
     
     
@@ -992,7 +996,7 @@ WebSocket是HTML5 开始提供的一种在单个 TCP 连接上进行全双工通
     
     
     
-    <a href="/tags/#中间件" title="中间件" rel="3">中间件</a>
+    <a href="/tags/#中间件" title="中间件" rel="4">中间件</a>
     
     
     
@@ -1004,7 +1008,7 @@ WebSocket是HTML5 开始提供的一种在单个 TCP 连接上进行全双工通
     
     
     
-    <a href="/tags/#Mysql" title="Mysql" rel="4">Mysql</a>
+    <a href="/tags/#Mysql" title="Mysql" rel="6">Mysql</a>
     
     
     
@@ -1052,7 +1056,7 @@ WebSocket是HTML5 开始提供的一种在单个 TCP 连接上进行全双工通
     
     
     
-    <a href="/tags/#Kafka" title="Kafka" rel="1">Kafka</a>
+    <a href="/tags/#Kafka" title="Kafka" rel="2">Kafka</a>
     
     
     
@@ -1169,6 +1173,10 @@ WebSocket是HTML5 开始提供的一种在单个 TCP 连接上进行全双工通
 <div class="widget">
   <ul>
     
+    <a href="../../2021/kafka01/">
+      <li>kafka初始、架构模型、角色功能梳理</li>
+    </a>
+    
     <a href="../../2021/memory-disk-network-io/">
       <li>memory-disk-network-io</li>
     </a>
@@ -1183,10 +1191,6 @@ WebSocket是HTML5 开始提供的一种在单个 TCP 连接上进行全双工通
     
     <a href="../../2021/jvm-base/">
       <li>（一）JVM入门以及Class文件架构、类加载器</li>
-    </a>
-    
-    <a href="../../2021/zookeeper-principle/">
-      <li>Zookeeper原理知识</li>
     </a>
     
   </ul>
@@ -1215,7 +1219,7 @@ WebSocket是HTML5 开始提供的一种在单个 TCP 连接上进行全双工通
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2021/05/">May 2021</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/04/">April 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/02/">February 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/06/">June 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/05/">May 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/03/">March 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/02/">February 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/07/">July 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/11/">November 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/08/">August 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/05/">May 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/10/">October 2016</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2021/06/">June 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/05/">May 2021</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/04/">April 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/02/">February 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/06/">June 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/05/">May 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/03/">March 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/02/">February 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/07/">July 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/11/">November 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/08/">August 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/05/">May 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/10/">October 2016</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1261,6 +1265,14 @@ WebSocket是HTML5 开始提供的一种在单个 TCP 连接上进行全双工通
     
     <a href="/categories/#Redis">
       <li>Redis</li>
+    </a>
+    
+    <a href="/categories/#kafka">
+      <li>kafka</li>
+    </a>
+    
+    <a href="/categories/#Mysql">
+      <li>Mysql</li>
     </a>
     
   </ul>
@@ -1796,5 +1808,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>
