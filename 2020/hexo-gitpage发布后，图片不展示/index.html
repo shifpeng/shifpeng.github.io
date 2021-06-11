@@ -499,7 +499,7 @@
           
           
           <li class="next">
-            <a href="/2020/mac-install-centos7/" data-toggle="tooltip" data-placement="top" title="在Mac上安装Linux系统centos7以及基本配置">Next Post &rarr;</a>
+            <a href="/2020/memory-disk-network-io/" data-toggle="tooltip" data-placement="top" title="内存与IO，磁盘IO，网络IO">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -1260,5 +1260,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

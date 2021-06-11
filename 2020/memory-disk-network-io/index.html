@@ -140,10 +140,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://www.shifpeng.cn/2021/memory-disk-network-io/">
+  <link rel="canonical" href="https://www.shifpeng.cn/2020/memory-disk-network-io/">
   <title>
     
-      memory-disk-network-io - Steven | java
+      内存与IO，磁盘IO，网络IO - Steven | java
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -388,11 +388,11 @@
             <div class="tags">
               
             </div>
-            <h1>memory-disk-network-io</h1>
+            <h1>内存与IO，磁盘IO，网络IO</h1>
             <h2 class="subheading"></h2>
             <span class="meta">
               Posted by Steven on
-              2021-05-21
+              2020-05-21
             </span>
 
 
@@ -476,12 +476,12 @@
         <ul class="pager">
           
           <li class="previous">
-            <a href="/2021/kafka01/" data-toggle="tooltip" data-placement="top" title="kafka初始、架构模型、角色功能梳理">&larr; Previous Post</a>
+            <a href="/2020/hexo-gitpage发布后，图片不展示/" data-toggle="tooltip" data-placement="top" title="hexo + gitpage发布后，图片不展示">&larr; Previous Post</a>
           </li>
           
           
           <li class="next">
-            <a href="/2021/jvm-tuning-01/" data-toggle="tooltip" data-placement="top" title="（三）JVM内存模型">Next Post &rarr;</a>
+            <a href="/2020/mac-install-centos7/" data-toggle="tooltip" data-placement="top" title="在Mac上安装Linux系统centos7以及基本配置">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -530,7 +530,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=memory-disk-network-io&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2021/memory-disk-network-io/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=内存与IO，磁盘IO，网络IO&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2020/memory-disk-network-io/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -564,7 +564,7 @@
       repo: 'shifpeng.github.io',
       owner: 'shifpeng',
       admin: 'shifpeng',
-      id: 'Fri May 21 2021 16:02:23 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Thu May 21 2020 16:02:23 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 10,
       pagerDirection: 'last',
@@ -845,7 +845,7 @@
     let jsdelivr = "https://cdn.jsdelivr.net/gh/";
     let gh = "shifpeng";
     let ghPages = gh + ".github.io";
-    let pagePath = "2021/memory-disk-network-io/";
+    let pagePath = "2020/memory-disk-network-io/";
     let jsdelivrurl;
     if (pagePath.indexOf("index.html") != -1) {
       jsdelivrurl = jsdelivr + gh + "/" + ghPages;
@@ -1238,5 +1238,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>
