@@ -140,7 +140,7 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://www.shifpeng.cn/2021/kafka01/">
+  <link rel="canonical" href="https://www.shifpeng.cn/2020/kafka01/">
   <title>
     
       kafka初始、架构模型、角色功能梳理 - Steven | java
@@ -398,7 +398,7 @@
             <h2 class="subheading"></h2>
             <span class="meta">
               Posted by Steven on
-              2021-06-03
+              2020-06-03
             </span>
 
 
@@ -410,7 +410,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">0</span> In Total
+              Words <span class="post-count">294</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -472,15 +472,40 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        
+        <h2 id="引入">引入</h2>
+<p><code>Kafka</code>是一个消息队列，消息中间件，用于解藕、削峰、异步等</p>
+<p>特征：分布式、可靠的、可扩展的、高性能的</p>
+<p>分而治之<code>AKF</code>：</p>
+<p>联系在Redis中说的到<code>AKF</code></p>
+<p><strong>X轴：</strong> 解决单点故障问题，高可用，对应在kafka上，就是做副本，可以有独写分离（容易出现一致性问题，因此只能在主上进行读写）</p>
+<p><strong>Y轴：</strong> 解决容量有限问题（按照业务划分），对应在<code>Kafka</code>上，就是<code>topic</code>，按照业务进行划分成不同的<code>partition</code></p>
+<p><strong>Z轴：</strong></p>
+<p>无关的数据分散到不同的分区里，以追求并发并行</p>
+<p>有关的数据，一定要按照原有的顺利发送到同一个分区里</p>
+<p>分区内部是有序的，分区外部是无序的</p>
+<p><img src="/2020/kafka01/image-20210615001227159.png" alt="image-20210615001227159"></p>
+<blockquote>
+<p>kafka的broker的partition，保存了 producer发送来的数据，重点是“数据”。怎么去用，可以重复利用</p>
+</blockquote>
+<blockquote>
+<p>在单一的使用场景下，先要保证，即便追求性能，用多个consumer，应该注意，不能一个分区由多个consumer消费</p>
+</blockquote>
+<blockquote>
+<p>数据的重复利用是站在Group上的，但是group内要保障上述描述</p>
+</blockquote>
+
 
         <hr>
         <!-- Pager -->
         <ul class="pager">
           
+          <li class="previous">
+            <a href="/2020/spring-interview-top/" data-toggle="tooltip" data-placement="top" title="Spring面试专题">&larr; Previous Post</a>
+          </li>
+          
           
           <li class="next">
-            <a href="/2021/jvm-tuning-01/" data-toggle="tooltip" data-placement="top" title="（三）JVM内存模型">Next Post &rarr;</a>
+            <a href="/2020/mysql-tuning01/" data-toggle="tooltip" data-placement="top" title="mysql调优（一）">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -529,7 +554,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=kafka初始、架构模型、角色功能梳理&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2021/kafka01/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=kafka初始、架构模型、角色功能梳理&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2020/kafka01/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -563,7 +588,7 @@
       repo: 'shifpeng.github.io',
       owner: 'shifpeng',
       admin: 'shifpeng',
-      id: 'Thu Jun 03 2021 17:28:26 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Wed Jun 03 2020 17:28:26 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 10,
       pagerDirection: 'last',
@@ -616,7 +641,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%BC%95%E5%85%A5"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">引入</span></a></li></ol>
         
         </div>
       </aside>
@@ -850,7 +875,7 @@
     let jsdelivr = "https://cdn.jsdelivr.net/gh/";
     let gh = "shifpeng";
     let ghPages = gh + ".github.io";
-    let pagePath = "2021/kafka01/";
+    let pagePath = "2020/kafka01/";
     let jsdelivrurl;
     if (pagePath.indexOf("index.html") != -1) {
       jsdelivrurl = jsdelivr + gh + "/" + ghPages;
