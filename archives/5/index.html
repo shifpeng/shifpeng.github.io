@@ -699,7 +699,14 @@ PAC模式：PAC模式就是会在你连接网站的时候......
 在许多操作系统中，页大小通常为4k
 
 主存和磁盘以页为单位进行数据交换
-...
+
+不同的存储引擎，数据文件和索引文件存放的位置是不同的，因此有了分类
+
+
+聚簇索引：
+数据和索引文件存放在一起；-Innodb
+.frm：存放的是表结构
+.......
     </div>
   </a>
   
@@ -1831,20 +1838,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 </html>

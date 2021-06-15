@@ -410,7 +410,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">294</span> In Total
+              Words <span class="post-count">454</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -492,6 +492,20 @@
 </blockquote>
 <blockquote>
 <p>数据的重复利用是站在Group上的，但是group内要保障上述描述</p>
+</blockquote>
+<p>分区：桶</p>
+<p>消息</p>
+<p>如果没有顺序上的约束的话：水平扩展</p>
+<p>消息V</p>
+<p>一但消息(消息很多，但是消息种类一定多)，而且需要同一类消息的有序性</p>
+<p>消息是K,V，相同的key一定去到一个分区里</p>
+<p>broker会保证producer同送的消息的顺序</p>
+<p>一个分区可能有不同的key，且不同的key是交叉的，相同的key在一个分区里没有排列在一起</p>
+<p><img src="/2020/kafka01/image-20210615135637958.png" alt="image-20210615135637958"></p>
+<blockquote>
+<p>拉取v.s推送</p>
+<p>1，推送说的是server，主动去推送，网卡打满。。。</p>
+<p>2，拉取，consumer，自主，按需，去订阅拉取server的数据</p>
 </blockquote>
 
 
@@ -1268,20 +1282,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 </html>
