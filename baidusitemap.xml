@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.shifpeng.cn/2021/Mysql%20%E7%B4%A2%E5%BC%95/</loc>
-    <lastmod>2021-06-12</lastmod>
-  </url>
-  <url>
     <loc>https://www.shifpeng.cn/2021/jvm-tuning-01/</loc>
     <lastmod>2021-05-13</lastmod>
   </url>
@@ -183,6 +179,10 @@
   <url>
     <loc>https://www.shifpeng.cn/2020/Java%E8%87%AA%E5%AE%9A%E4%B9%89Bean%E5%AE%9E%E4%BD%93%E7%B1%BB%E5%AF%B9%E8%B1%A1%E8%BD%AC%E4%B8%BAMap%E7%B1%BB%E5%9E%8B%E5%AF%B9%E8%B1%A1/</loc>
     <lastmod>2020-06-28</lastmod>
+  </url>
+  <url>
+    <loc>https://www.shifpeng.cn/2020/Mysql-index/</loc>
+    <lastmod>2020-06-15</lastmod>
   </url>
   <url>
     <loc>https://www.shifpeng.cn/2020/algorithm-novice/</loc>
