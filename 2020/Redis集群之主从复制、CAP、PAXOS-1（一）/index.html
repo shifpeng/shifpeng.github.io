@@ -410,7 +410,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">7.4k</span> In Total
+              Words <span class="post-count">7.5k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -497,8 +497,7 @@
 <p>Redis只有4G的容量，但是数据有10个G，要怎么存？</p>
 <p>对要存的数据，按照功能、业务划分来存，每个redis中存的数据不是一类数据数据，比如一个redis存订单信息，另一个redis存用户信息。Mysql中类似的解决方式即分库。当然，存订单信息的实例有可能挂了，这个时候，就需要从X轴扩展，即1中的主备。</p>
 <h3 id="3、解决压力问题（Z轴）">3、解决压力问题（Z轴）</h3>
-<p>按照优先级、逻辑再拆分</p>
-<p>数据越越大，相当于X\Y轴同时扩展，类似于微服务</p>
+<p>数据量再大，按照优先级、逻辑再拆分，类似于微服务，或者说继续拿redis举例。使用一致性哈希，或者cluster的拆分原理，或者说按照业务直接划区，就像特斯拉在中国建工厂服务中国片区一样</p>
 <p><img src="/2020/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210330135324730.png" alt="image-20210330135324730"></p>
 <h2 id="三、新的问题">三、新的问题</h2>
 <p>什么问题都是有两面性的，解决上面的问题就会带来一些其他的问题</p>
