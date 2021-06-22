@@ -473,7 +473,7 @@
 <p>​		避重就轻：没有重点</p>
 <p>一个问题能占用面试官多少时间？问的越多可能露馅越多</p>
 <p>当面试官问到一个你熟悉的点的时候，一定要尽量拖时间</p>
-<h1>1.谈谈Spring IOC的理解，原理与实现?</h1>
+<h2 id="1-谈谈Spring-IOC的理解，原理与实现">1.谈谈Spring IOC的理解，原理与实现?</h2>
 <p><strong>总：</strong></p>
 <p>控制反转：理论思想，原来的对象是由使用者来进行控制，有了spring之后，可以把整个对象交给spring来帮我们进行管理</p>
 <p>​				DI：依赖注入，把对应的属性的值注入到具体的对象中，@Autowired，populateBean完成属性值的注入</p>
@@ -492,7 +492,7 @@
 <p>您由什么想问的？</p>
 <p>​			老师，我没看过源码怎么办？</p>
 <p>​		<strong>具体的细节我记不太清了，但是spring中的bean都是通过反射的方式生成的，同时其中包含了很多的扩展点，比如最常用的对BeanFactory的扩展，对bean的扩展（对占位符的处理），我们在公司对这方面的使用是比较多的，除此之外，ioc中最核心的也就是填充具体bean的属性，和生命周期（背一下）。</strong></p>
-<h1>2.谈一下spring IOC的底层实现</h1>
+<h2 id="2-谈一下spring-IOC的底层实现">2.谈一下spring IOC的底层实现</h2>
 <p>底层实现：工作原理，过程，数据结构，流程，设计模式，设计思想</p>
 <p>你对他的理解和你了解过的实现过程</p>
 <p>反射，工厂，设计模式（会的说，不会的不说），关键的几个方法</p>
@@ -502,7 +502,7 @@
 <p>3、通过createBean,doCreateBean方法，以反射的方式创建对象，一般情况下使用的是无参的构造方法（getDeclaredConstructor，newInstance）</p>
 <p>4、进行对象的属性填充populateBean</p>
 <p>5、进行其他的初始化操作（initializingBean）</p>
-<h1>3.描述一下bean的生命周期 ？</h1>
+<h2 id="3-描述一下bean的生命周期-？">3.描述一下bean的生命周期 ？</h2>
 <p>背图：记住图中的流程</p>
 <p><img src="/2020/spring-interview-top/image-20210605000106248.png" alt="image-20210605000106248"></p>
 <p>在表述的时候不要只说图中有的关键点，要学会扩展描述</p>
@@ -515,7 +515,7 @@
 <p>​		注册Destuction相关的回调接口：钩子函数</p>
 <p>7、获取到完整的对象，可以通过getBean的方式来进行对象的获取</p>
 <p>8、销毁流程，1；判断是否实现了DispoableBean接口，2，调用destroyMethod方法</p>
-<h1>4.Spring 是如何解决循环依赖的问题的？</h1>
+<h2 id="4-Spring-是如何解决循环依赖的问题的？">4.Spring 是如何解决循环依赖的问题的？</h2>
 <p>三级缓存，提前暴露对象，aop</p>
 <p>总：什么是循环依赖问题，A依赖B,B依赖A</p>
 <p>分：先说明bean的创建过程：实例化，初始化（填充属性）</p>
@@ -530,17 +530,17 @@
 <p>​		如果一个对象需要被代理，或者说需要生成代理对象，那么要不要优先生成一个普通对象？要</p>
 <p>​		普通对象和代理对象是不能同时出现在容器中的，因此当一个对象需要被代理的时候，就要使用代理对象覆盖掉之前的普通对象，在实际的调用过程中，是没有办法确定什么时候对象被使用，所以就要求当某个对象被调用的时候，优先判断此对象是否需要被代理，类似于一种回调机制的实现，因此传入lambda表达式的时候，可以通过lambda表达式来执行对象的覆盖过程，getEarlyBeanReference()</p>
 <p>​		因此，所有的bean对象在创建的时候都要优先放到三级缓存中，在后续的使用过程中，如果需要被代理则返回代理对象，如果不需要被代理，则直接返回普通对象</p>
-<h1>4.1缓存的放置时间和删除时间</h1>
+<h2 id="4-1缓存的放置时间和删除时间">4.1缓存的放置时间和删除时间</h2>
 <p>​		三级缓存：createBeanInstance之后：addSingletonFactory</p>
 <p>​		二级缓存：第一次从三级缓存确定对象是代理对象还是普通对象的时候，同时删除三级缓存 getSingleton</p>
 <p>​		一级缓存：生成完整对象之后放到一级缓存，删除二三级缓存:addSingleton</p>
-<h1>5.Bean Factory与FactoryBean有什么区别？</h1>
+<h2 id="5-Bean-Factory与FactoryBean有什么区别？">5.Bean Factory与FactoryBean有什么区别？</h2>
 <p>相同点：都是用来创建bean对象的</p>
 <p>不同点：使用BeanFactory创建对象的时候，必须要遵循严格的生命周期流程，太复杂了，，如果想要简单的自定义某个对象的创建，同时创建完成的对象想交给spring来管理，那么就需要实现FactroyBean接口了</p>
 <p>​			isSingleton:是否是单例对象</p>
 <p>​			getObjectType:获取返回对象的类型</p>
 <p>​			getObject:自定义创建对象的过程(new，反射，动态代理)</p>
-<h1>6.Spring中用到的设计模式?</h1>
+<h2 id="6-Spring中用到的设计模式">6.Spring中用到的设计模式?</h2>
 <p>单例模式：bean默认都是单例的</p>
 <p>原型模式：指定作用域为prototype</p>
 <p>工厂模式：BeanFactory</p>
@@ -553,7 +553,7 @@
 <p>代理模式：动态代理</p>
 <p>委托者模式：delegate</p>
 <p>。。。。。。。。。</p>
-<h1>7.Spring的AOP的底层实现原理?</h1>
+<h2 id="7-Spring的AOP的底层实现原理">7.Spring的AOP的底层实现原理?</h2>
 <p>动态代理</p>
 <p>aop是ioc的一个扩展功能，先有的ioc，再有的aop，只是在ioc的整个流程中新增的一个扩展点而已：BeanPostProcessor</p>
 <p>总：aop概念，应用场景，动态代理</p>
@@ -564,7 +564,7 @@
 <p>​		3、在执行方法调用的时候，会调用到生成的字节码文件中，直接回找到DynamicAdvisoredInterceptor类中的intercept方法，从此方法开始执行</p>
 <p>​		4、根据之前定义好的通知来生成拦截器链</p>
 <p>​		5、从拦截器链中依次获取每一个通知开始进行执行，在执行过程中，为了方便找到下一个通知是哪个，会有一个CglibMethodInvocation的对象，找的时候是从-1的位置一次开始查找并且执行的。</p>
-<h1>8.Spring的事务是如何回滚的?</h1>
+<h2 id="8-Spring的事务是如何回滚的">8.Spring的事务是如何回滚的?</h2>
 <p>​		spring的事务管理是如何实现的？</p>
 <p>​		总：spring的事务是由aop来实现的，首先要生成具体的代理对象，然后按照aop的整套流程来执行具体的操作逻辑，正常情况下要通过通知来完成核心功能，但是事务不是通过通知来实现的，而是通过一个TransactionInterceptor来实现的，然后调用invoke来实现具体的逻辑</p>
 <p>​		分：1、先做准备工作，解析各个方法上事务相关的属性，根据具体的属性来判断是否开始新事务</p>
@@ -574,7 +574,7 @@
 <p>​				5、如果执行过程中，没有任何意外情况的发生，那么通过commitTransactionAfterReturning来完成事务的提交操作，提交的具体逻辑是通过doCommit方法来实现的，实现的时候也是要获取连接，通过连接对象来提交</p>
 <p>​				6、当事务执行完毕之后需要清除相关的事务信息cleanupTransactionInfo</p>
 <p>如果想要聊的更加细致的话，需要知道TransactionInfo,TransactionStatus,</p>
-<h1>9.谈一下spring事务传播？</h1>
+<h2 id="9-谈一下spring事务传播？">9.谈一下spring事务传播？</h2>
 <p>​			传播特性有几种？7种</p>
 <p>​			Required,Requires_new,nested,Support,Not_Support,Never,Mandatory</p>
 <p>​			某一个事务嵌套另一个事务的时候怎么办？</p>
@@ -740,7 +740,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">1.谈谈Spring IOC的理解，原理与实现?</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">2.谈一下spring IOC的底层实现</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">3.描述一下bean的生命周期 ？</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">4.Spring 是如何解决循环依赖的问题的？</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">4.1缓存的放置时间和删除时间</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">5.Bean Factory与FactoryBean有什么区别？</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">6.Spring中用到的设计模式?</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">7.Spring的AOP的底层实现原理?</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">8.Spring的事务是如何回滚的?</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">9.谈一下spring事务传播？</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-%E8%B0%88%E8%B0%88Spring-IOC%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%8C%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E7%8E%B0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">1.谈谈Spring IOC的理解，原理与实现?</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-%E8%B0%88%E4%B8%80%E4%B8%8Bspring-IOC%E7%9A%84%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">2.谈一下spring IOC的底层实现</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3-%E6%8F%8F%E8%BF%B0%E4%B8%80%E4%B8%8Bbean%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F-%EF%BC%9F"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">3.描述一下bean的生命周期 ？</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#4-Spring-%E6%98%AF%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96%E7%9A%84%E9%97%AE%E9%A2%98%E7%9A%84%EF%BC%9F"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">4.Spring 是如何解决循环依赖的问题的？</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#4-1%E7%BC%93%E5%AD%98%E7%9A%84%E6%94%BE%E7%BD%AE%E6%97%B6%E9%97%B4%E5%92%8C%E5%88%A0%E9%99%A4%E6%97%B6%E9%97%B4"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">4.1缓存的放置时间和删除时间</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-Bean-Factory%E4%B8%8EFactoryBean%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">5.Bean Factory与FactoryBean有什么区别？</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#6-Spring%E4%B8%AD%E7%94%A8%E5%88%B0%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">6.Spring中用到的设计模式?</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#7-Spring%E7%9A%84AOP%E7%9A%84%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">7.Spring的AOP的底层实现原理?</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#8-Spring%E7%9A%84%E4%BA%8B%E5%8A%A1%E6%98%AF%E5%A6%82%E4%BD%95%E5%9B%9E%E6%BB%9A%E7%9A%84"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">8.Spring的事务是如何回滚的?</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#9-%E8%B0%88%E4%B8%80%E4%B8%8Bspring%E4%BA%8B%E5%8A%A1%E4%BC%A0%E6%92%AD%EF%BC%9F"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">9.谈一下spring事务传播？</span></a></li></ol>
         
         </div>
       </aside>
