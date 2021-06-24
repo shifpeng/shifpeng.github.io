@@ -655,6 +655,7 @@
 <p>设计一个临时节点，我在锁就在，我挂锁就没，别人就可以拿到这把锁</p>
 <p>如果依托一个父节点，且具备<code>-s</code>，代表父节点下可以有多把锁（队列式锁，事务的锁）</p>
 <p>2、高可用，选主</p>
+<p><img src="/2021/zookeeper-base/image-20210623135507538.png" alt="image-20210623135507538"></p>
 <h3 id="8、实战">8、实战</h3>
 <p>在node01上，我们看一下</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@node01 ~]netstat -natp | egrep &#x27;(2888|3888)&#x27;</span><br><span class="line">tcp6       0      0 172.16.197.6:3888       :::*                    LISTEN      2296/java           </span><br><span class="line">tcp6       0      0 172.16.197.6:3888       172.16.197.2:55854      ESTABLISHED 2296/java           </span><br><span class="line">tcp6       0      0 172.16.197.6:3888       172.16.197.4:46846      ESTABLISHED 2296/java           </span><br><span class="line">tcp6       0      0 172.16.197.6:52702      172.16.197.2:2888       ESTABLISHED 2296/java           </span><br><span class="line">tcp6       0      0 172.16.197.6:3888       172.16.197.3:34402      ESTABLISHED 2296/java           </span><br><span class="line">[root@node01 ~]# </span><br></pre></td></tr></table></figure>
@@ -681,7 +682,7 @@
         <ul class="pager">
           
           <li class="previous">
-            <a href="/2021/zookeeper-principle/" data-toggle="tooltip" data-placement="top" title="Zookeeper原理知识">&larr; Previous Post</a>
+            <a href="/2021/zookeeper-principle/" data-toggle="tooltip" data-placement="top" title="Zookeeper原理知识以及Paxos、Zab、角色功能">&larr; Previous Post</a>
           </li>
           
           

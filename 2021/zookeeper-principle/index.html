@@ -143,7 +143,7 @@
   <link rel="canonical" href="https://www.shifpeng.cn/2021/zookeeper-principle/">
   <title>
     
-      Zookeeper原理知识 - Steven | java
+      Zookeeper原理知识以及Paxos、Zab、角色功能 - Steven | java
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -394,7 +394,7 @@
               <a class="tag" href="/tags/#中间件" title="中间件">中间件</a>
               
             </div>
-            <h1>Zookeeper原理知识</h1>
+            <h1>Zookeeper原理知识以及Paxos、Zab、角色功能</h1>
             <h2 class="subheading">Zookeeper原理知识、paxos、ZAB、watch、API、callback等</h2>
             <span class="meta">
               Posted by Steven on
@@ -406,11 +406,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">7</span> Minutes
+              Estimated Reading Time <span class="post-count">8</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">2.2k</span> In Total
+              Words <span class="post-count">2.3k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -475,7 +475,7 @@
         <p>上一篇文章中说到Zookeeper的特征：可扩展（可以很多节点）、可靠性、时序性、快速</p>
 <p>首先<strong>扩展性</strong></p>
 <h2 id="一、扩展性">一、扩展性</h2>
-<p>一般在说到架构\框架的时候，都会谈到一个角色问题</p>
+<p>一般在说到架构、框架的时候，都会谈到一个角色问题</p>
 <blockquote>
 <p>因为现在大多数架构都是分布式，分布式就会有分布不同的角色，角色之前相互通信，联系，以及各自的职能</p>
 </blockquote>
@@ -493,18 +493,18 @@
 </blockquote>
 </li>
 </ul>
-<p>但是只有Follower才能选举，在zk中，如果leader挂了，那么所有的follower会选举，而observer就等待着，一旦follower选举出leader了，那么observ er就追随这个leader</p>
+<p>但是只有Follower才能选举，在zk中，如果leader挂了，那么所有的follower会选举，而observer（不参与投票）就等待着，一旦follower选举出leader了，那么observer就追随这个leader</p>
 <p><strong>observer可以放大发挥zk的读查询能力，因为zk更倾向于让用户做查询操作，而非写操作</strong></p>
 <p>怎么使用它？</p>
 <p><code>zoo.cfg</code>文件配置</p>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">server</span>.<span class="number">1</span>=node<span class="number">01</span>:<span class="number">2888</span>:<span class="number">3888</span> </span><br><span class="line"><span class="attribute">server</span>.<span class="number">2</span>=node<span class="number">02</span>:<span class="number">2888</span>:<span class="number">3888</span></span><br><span class="line"><span class="attribute">server</span>.<span class="number">3</span>=node<span class="number">03</span>:<span class="number">2888</span>:<span class="number">3888</span></span><br><span class="line"><span class="attribute">server</span>.<span class="number">4</span>=node<span class="number">04</span>:<span class="number">2888</span>:<span class="number">3888</span>:observer</span><br></pre></td></tr></table></figure>
 <h2 id="二、可靠性">二、可靠性</h2>
-<p>一句话<code>攘外必先安内</code>，<code>攘外</code>表示Leader可用，可以对外提供服务，<code>安内</code>表示选主的过程</p>
 <p>可靠性来自它的<strong>快速恢复</strong></p>
+<p>一句话<code>攘外必先安内</code>，<code>攘外</code>表示Leader可用，可以对外提供服务，<code>安内</code>表示选主的过程</p>
 <p>数据的可靠、可用、一致性（最终一致性）</p>
 <p>那么，过程中，节点是否对外提供服务呢？</p>
-<h2 id="Paxos">Paxos</h2>
-<p>先看一篇文章<a target="_blank" rel="noopener" href="https://www.douban.com/note/208430424/">Zookeeper全解析——Paxos作为灵魂</a></p>
+<h3 id="Paxos">Paxos</h3>
+<p>先看一篇文章<a target="_blank" rel="noopener" href="https://www.douban.com/note/208430424/">Zookeeper全解析——Paxos作为灵魂</a>，防止找不到，我摘下来：</p>
 <blockquote>
 <p>那么ZK Server最基础的东西是什么呢？我想应该是Paxos了。所以本文会介绍Paxos以及它在ZK Server中对应的实现。</p>
 <p>先说Paxos，它是一个基于消息传递的一致性算法，Leslie Lamport在1990年提出，近几年被广泛应用于分布式计算中，Google的Chubby，Apache的Zookeeper都是基于它的理论来实现的，Paxos还被认为是到目前为止唯一的分布式一致性算法，其它的算法都是Paxos的改进或简化。有个问题要提一下，Paxos有一个前提：没有拜占庭将军问题。就是说Paxos只有在一个可信的计算环境中才能成立，这个环境是不会被入侵所破坏的。</p>
@@ -591,7 +591,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=Zookeeper原理知识&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2021/zookeeper-principle/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Zookeeper原理知识以及Paxos、Zab、角色功能&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2021/zookeeper-principle/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -678,7 +678,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E6%89%A9%E5%B1%95%E6%80%A7"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、扩展性</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E5%8F%AF%E9%9D%A0%E6%80%A7"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、可靠性</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Paxos"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Paxos</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E6%89%A9%E5%B1%95%E6%80%A7"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、扩展性</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E5%8F%AF%E9%9D%A0%E6%80%A7"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、可靠性</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Paxos"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Paxos</span></a></li></ol></li></ol>
         
         </div>
       </aside>
