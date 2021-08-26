@@ -1,0 +1,3856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="人最大的修养就是知人不评人"/>
+  <meta name="keyword" content="Java,Steven,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://www.shifpeng.cn/tags/">
+  <title>
+    
+      Tags - Steven | java
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'StevenBlog/community'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">石福鹏</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.ioimg/header_img/tag_bg.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/tag_bg.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.ioimg/header_img/tag_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/tag_bg.jpg');
+    }
+    header.intro-header {
+       /*page*/
+        background-image: var(--intro-header-background-image-url-page);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/tag_bg.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="site-heading">
+            <h1>Tags</h1>
+            <!--<hr class="small">-->
+            <span class="subheading">I don’t know where I am going, but I am on my way......</span>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <!-- 标签列表 -->
+
+      <!-- 标签云 -->
+      <div id='tag_cloud' class="tags">
+        
+        <a href="#面试题" title="面试题" rel="1">面试题</a>
+        
+        <a href="#Java" title="Java" rel="29">Java</a>
+        
+        <a href="#Docker" title="Docker" rel="4">Docker</a>
+        
+        <a href="#Elasticsearch" title="Elasticsearch" rel="3">Elasticsearch</a>
+        
+        <a href="#Elasticsearch - 大数据" title="Elasticsearch - 大数据" rel="1">Elasticsearch - 大数据</a>
+        
+        <a href="#架构+大数据进阶" title="架构+大数据进阶" rel="27">架构+大数据进阶</a>
+        
+        <a href="#GitHub" title="GitHub" rel="3">GitHub</a>
+        
+        <a href="#博客" title="博客" rel="1">博客</a>
+        
+        <a href="#Java基础查漏补缺" title="Java基础查漏补缺" rel="5">Java基础查漏补缺</a>
+        
+        <a href="#JVM" title="JVM" rel="5">JVM</a>
+        
+        <a href="#XML" title="XML" rel="2">XML</a>
+        
+        <a href="#Linux" title="Linux" rel="3">Linux</a>
+        
+        <a href="#Nginx" title="Nginx" rel="2">Nginx</a>
+        
+        <a href="#小工具" title="小工具" rel="1">小工具</a>
+        
+        <a href="#PHP" title="PHP" rel="3">PHP</a>
+        
+        <a href="#Yii2" title="Yii2" rel="2">Yii2</a>
+        
+        <a href="#Mysql" title="Mysql" rel="7">Mysql</a>
+        
+        <a href="#Redis" title="Redis" rel="9">Redis</a>
+        
+        <a href="#重学Redis" title="重学Redis" rel="9">重学Redis</a>
+        
+        <a href="#科学上网" title="科学上网" rel="3">科学上网</a>
+        
+        <a href="#VPN" title="VPN" rel="2">VPN</a>
+        
+        <a href="#shadowsocks" title="shadowsocks" rel="1">shadowsocks</a>
+        
+        <a href="#Python" title="Python" rel="2">Python</a>
+        
+        <a href="#爬虫" title="爬虫" rel="1">爬虫</a>
+        
+        <a href="#PhantomJS" title="PhantomJS" rel="1">PhantomJS</a>
+        
+        <a href="#Selenim" title="Selenim" rel="1">Selenim</a>
+        
+        <a href="#算法与数据结构" title="算法与数据结构" rel="1">算法与数据结构</a>
+        
+        <a href="#JVM调优" title="JVM调优" rel="4">JVM调优</a>
+        
+        <a href="#CDN加速" title="CDN加速" rel="1">CDN加速</a>
+        
+        <a href="#Hexo" title="Hexo" rel="2">Hexo</a>
+        
+        <a href="#jsdelivr" title="jsdelivr" rel="1">jsdelivr</a>
+        
+        <a href="#Kafka" title="Kafka" rel="2">Kafka</a>
+        
+        <a href="#中间件" title="中间件" rel="4">中间件</a>
+        
+        <a href="#Mac" title="Mac" rel="1">Mac</a>
+        
+        <a href="#Nodejs" title="Nodejs" rel="1">Nodejs</a>
+        
+        <a href="#Go" title="Go" rel="1">Go</a>
+        
+        <a href="#工具类" title="工具类" rel="2">工具类</a>
+        
+        <a href="#Zookeeper" title="Zookeeper" rel="2">Zookeeper</a>
+        
+        <a href="#每日一题" title="每日一题" rel="4">每日一题</a>
+        
+        <a href="#Log" title="Log" rel="1">Log</a>
+        
+        <a href="#Postman" title="Postman" rel="2">Postman</a>
+        
+        <a href="#OSS" title="OSS" rel="2">OSS</a>
+        
+        <a href="#签名" title="签名" rel="1">签名</a>
+        
+        <a href="#代理" title="代理" rel="1">代理</a>
+        
+        <a href="#集成开发环境" title="集成开发环境" rel="1">集成开发环境</a>
+        
+        <a href="#Kibana" title="Kibana" rel="2">Kibana</a>
+        
+        <a href="#集群" title="集群" rel="2">集群</a>
+        
+        <a href="#k8s" title="k8s" rel="1">k8s</a>
+        
+        <a href="#架构" title="架构" rel="5">架构</a>
+        
+        <a href="#大数据" title="大数据" rel="5">大数据</a>
+        
+        <a href="#从网络到分布式" title="从网络到分布式" rel="5">从网络到分布式</a>
+        
+        <a href="#深度好文" title="深度好文" rel="2">深度好文</a>
+        
+        <a href="#数据结构" title="数据结构" rel="1">数据结构</a>
+        
+        <a href="#生活笔记" title="生活笔记" rel="1">生活笔记</a>
+        
+        <a href="#源码" title="源码" rel="1">源码</a>
+        
+        <a href="#源码解析" title="源码解析" rel="1">源码解析</a>
+        
+        <a href="#Websocket" title="Websocket" rel="1">Websocket</a>
+        
+        <a href="#ELK" title="ELK" rel="1">ELK</a>
+        
+        <a href="#多线程与高并发" title="多线程与高并发" rel="2">多线程与高并发</a>
+        
+      </div>
+
+      <!-- 标签列表 -->
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="面试题">
+          <span class="tag-text">面试题</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2019/2021面试题汇总/">
+            <h2 class="post-title">
+              面试题汇总
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Java">
+          <span class="tag-text">Java</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2019/BeanValidatorUtils-工具类/">
+            <h2 class="post-title">
+              BeanValidatorUtils 工具类
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Validator工具类
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/Java-8-Stream数据处理案例/">
+            <h2 class="post-title">
+              Java 8 Stream数据处理案例
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Java 8 Stream数据处理的案例，工作中常用到的，方便查阅
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2019/Java-内存分析/">
+            <h2 class="post-title">
+              Java 内存分析
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2017/Java-基础查漏补缺【IO篇】/">
+            <h2 class="post-title">
+              Java 基础查漏补缺【IO篇】
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2017/Java-基础查漏补缺【多线程机制篇】/">
+            <h2 class="post-title">
+              Java 基础查漏补缺【多线程机制篇】
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2017/Java-基础查漏补缺【网络篇】/">
+            <h2 class="post-title">
+              Java 基础查漏补缺【网络篇】 
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/Java类加载/">
+            <h2 class="post-title">
+              Java类加载
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/Java自定义Bean实体类对象转为Map类型对象/">
+            <h2 class="post-title">
+              Java自定义Bean实体类对象转为Map类型对象
+            </h2>
+            
+            <h3 class="post-subtitle">
+              可以封装为Java的工具类
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2019/Java获取并解析XML-JavaBean和XML的转化/">
+            <h2 class="post-title">
+              Java获取并解析XML(JavaBean和XML的转化)
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2018/Java里的位运算/">
+            <h2 class="post-title">
+              Java里的位运算
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/Java集合框架总结/">
+            <h2 class="post-title">
+              Java集合框架总结
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Java集合框架总结
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2018/Jaxb-解析XML的节点属性以及节点值/">
+            <h2 class="post-title">
+              Jaxb 解析XML的节点属性以及节点值
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2018/listener和filter/">
+            <h2 class="post-title">
+              listener和filter
+            </h2>
+            
+            <h3 class="post-subtitle">
+              listener和filter快速入门
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/位运算的奇技淫巧/">
+            <h2 class="post-title">
+              位运算的奇技淫巧
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2018/使用Postman工具对入参进行Base64处理/">
+            <h2 class="post-title">
+              使用Postman工具对入参进行Base64处理
+            </h2>
+            
+            <h3 class="post-subtitle">
+              请求参数是json格式，但是必须要对参数进行Bas e64加密处理在进行发送请求
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2018/使用Postman生成签名Sign作为参数发送请求/">
+            <h2 class="post-title">
+              使用Postman生成签名Sign作为参数发送请求
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2018/使用阿里云OSS-Java-SDK时org-apache-http-ssl-TrustStrategy/">
+            <h2 class="post-title">
+              使用阿里云OSS Java SDK时org/apache/http/ssl/TrustStrategy
+            </h2>
+            
+            <h3 class="post-subtitle">
+              在使用阿里云对象存储服务(Object Storage Service，简称 OSS)提供的Java SDK的时候,遇到的问题
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2018/命令行执行java命令提示【错误：找不到或无法加载主类】分析/">
+            <h2 class="post-title">
+              命令行执行java命令提示【错误：找不到或无法加载主类】问题分析
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/基于keepalived的LVS的搭建/">
+            <h2 class="post-title">
+              基于keepalived的LVS的搭建
+            </h2>
+            
+            <h3 class="post-subtitle">
+              负载均衡-基于keepalived的LVS的搭建
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/满足某个日期满足条件的周、月日期处理工具类/">
+            <h2 class="post-title">
+              满足某个日期满足条件的周、月日期处理工具类
+            </h2>
+            
+            <h3 class="post-subtitle">
+              满足某个日期满足条件的周、月日期处理工具类
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/网络负载均衡实践手册/">
+            <h2 class="post-title">
+              网络负载均衡实践手册
+            </h2>
+            
+            <h3 class="post-subtitle">
+              搭建负载均衡
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/网络高并发负载均衡（一）/">
+            <h2 class="post-title">
+              网络高并发负载均衡（一）
+            </h2>
+            
+            <h3 class="post-subtitle">
+              LVS的NAT模型推导
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/网络高并发负载均衡（三）/">
+            <h2 class="post-title">
+              网络高并发负载均衡（三）
+            </h2>
+            
+            <h3 class="post-subtitle">
+              LVS的TUN模型推导
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/网络高并发负载均衡（二）/">
+            <h2 class="post-title">
+              网络高并发负载均衡（二）
+            </h2>
+            
+            <h3 class="post-subtitle">
+              LVS的DR模型推导
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/ConCurrentHashMap-JDK1-7-源码解析/">
+            <h2 class="post-title">
+              ConCurrentHashMap(JDK1.7)源码解析
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2019/JDK1-7-HashMap源码解析/">
+            <h2 class="post-title">
+              JDK1.7 HashMap源码解析
+            </h2>
+            
+            <h3 class="post-subtitle">
+              JDK1.7 HashMap源码解析
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2017/Java-基础查漏补缺【持续更新-】/">
+            <h2 class="post-title">
+              Java 基础查漏补缺【基础篇】
+            </h2>
+            
+            <h3 class="post-subtitle">
+              持续更新...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/SpringBoot中集成WebSocket/">
+            <h2 class="post-title">
+              SpringBoot中集成WebSocket「支持多终端、共享session」
+            </h2>
+            
+            <h3 class="post-subtitle">
+              SpringBoot中集成WebSocket
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/SpringBoot整合ELK实现日志收集/">
+            <h2 class="post-title">
+              SpringBoot整合ELK实现日志收集
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Docker">
+          <span class="tag-text">Docker</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2021/Docker-构建报错failed-to-fetch-oauth-token/">
+            <h2 class="post-title">
+              Docker构建报错failed to fetch oauth-token
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Docker 构建报错failed to fetch oauth-token
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/在Mac系统上使用Dokcer搭建LNMP环境/">
+            <h2 class="post-title">
+              在Mac系统上使用Dokcer搭建LNMP环境
+            </h2>
+            
+            <h3 class="post-subtitle">
+              每次换电脑或者重装系统之后，开发环境的搭建很费事，整不好还遇到一些乱起八糟的大坑，所以最好是直接使用dokcer,换环境的时候，镜像拉起就OK了
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/基于k8s开发环境治理的利器-KT-Connect/">
+            <h2 class="post-title">
+              基于k8s开发环境治理的利器-KT Connect
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/强烈推荐的Docker可视化管理工具Portainer搭建/">
+            <h2 class="post-title">
+              强烈推荐的Docker可视化管理工具Portainer搭建
+            </h2>
+            
+            <h3 class="post-subtitle">
+              使用docker+pipline+jenkins部署spring cloud
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Elasticsearch">
+          <span class="tag-text">Elasticsearch</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2018/Elastcisearch中分词插件和同义词插件的安装及使用/">
+            <h2 class="post-title">
+              Elastcisearch中分词插件和同义词插件的安装及使用
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2018/在一台Linux上搭建Elasticsearch集群/">
+            <h2 class="post-title">
+              在一台Linux上搭建Elasticsearch集群+kibana
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Elasticsearch 作为一个搜索引擎，我们对它的基本要求就是存储海量数据并且可以在非常短的时间内查询到我们想要的信息
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2018/ELK-Stack学习笔记/">
+            <h2 class="post-title">
+              ELK Stack学习笔记
+            </h2>
+            
+            <h3 class="post-subtitle">
+              一个采用RestFulAPI标准的高扩展性和高可用性的实时数据分析的全文搜索工具
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Elasticsearch - 大数据">
+          <span class="tag-text">Elasticsearch - 大数据</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2021/Elasticsearch查询语法/">
+            <h2 class="post-title">
+              Elasticsearch查询语法
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="架构+大数据进阶">
+          <span class="tag-text">架构+大数据进阶</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2021/Elasticsearch查询语法/">
+            <h2 class="post-title">
+              Elasticsearch查询语法
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/Mysql-index/">
+            <h2 class="post-title">
+              Mysql 索引
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/Redis中的list、set、hash、sorted-set/">
+            <h2 class="post-title">
+              Redis中的list、set、hash、sorted_set
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/Redis的String类型和bitmap类型/">
+            <h2 class="post-title">
+              Redis的String类型和bitmap类型
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Redis基本的类型和位图bitmap
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/Redis集群之主从复制、CAP、PAXOS-1（二）/">
+            <h2 class="post-title">
+              Redis集群之分区方式及Redis Cluster
+            </h2>
+            
+            <h3 class="post-subtitle">
+              当数据量很大的时候，通常每台服务器就几个G,该如何存储；Redis集群方式三
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/algorithm-novice/">
+            <h2 class="post-title">
+              算法基础
+            </h2>
+            
+            <h3 class="post-subtitle">
+              学习算法必须掌握的一些知识点
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/break-parental-delegation/">
+            <h2 class="post-title">
+              （二）打破双亲委派？
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/jvm-tuning-01/">
+            <h2 class="post-title">
+              （三）JVM内存模型
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/kafka01/">
+            <h2 class="post-title">
+              kafka初始、架构模型、角色功能梳理
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/go-base/">
+            <h2 class="post-title">
+              go-base
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/zookeeper-principle/">
+            <h2 class="post-title">
+              Zookeeper原理知识以及Paxos、Zab、角色功能
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Zookeeper原理知识、paxos、ZAB、watch、API、callback等
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/基于keepalived的LVS的搭建/">
+            <h2 class="post-title">
+              基于keepalived的LVS的搭建
+            </h2>
+            
+            <h3 class="post-subtitle">
+              负载均衡-基于keepalived的LVS的搭建
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/网络负载均衡实践手册/">
+            <h2 class="post-title">
+              网络负载均衡实践手册
+            </h2>
+            
+            <h3 class="post-subtitle">
+              搭建负载均衡
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/网络高并发负载均衡（一）/">
+            <h2 class="post-title">
+              网络高并发负载均衡（一）
+            </h2>
+            
+            <h3 class="post-subtitle">
+              LVS的NAT模型推导
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/网络高并发负载均衡（三）/">
+            <h2 class="post-title">
+              网络高并发负载均衡（三）
+            </h2>
+            
+            <h3 class="post-subtitle">
+              LVS的TUN模型推导
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/网络高并发负载均衡（二）/">
+            <h2 class="post-title">
+              网络高并发负载均衡（二）
+            </h2>
+            
+            <h3 class="post-subtitle">
+              LVS的DR模型推导
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/Redis介绍及NIO原理介绍/">
+            <h2 class="post-title">
+              Redis介绍及NIO原理介绍
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/Redis持久化/">
+            <h2 class="post-title">
+              Redis持久化
+            </h2>
+            
+            <h3 class="post-subtitle">
+              redis的持久化RDB、fork、copyonwrite、AOF、RDB&AOF混合使用
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU/">
+            <h2 class="post-title">
+              Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU以及缓存常见问题
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/jvm-base/">
+            <h2 class="post-title">
+              （一）JVM入门以及Class文件架构、类加载器
+            </h2>
+            
+            <h3 class="post-subtitle">
+              JVM入门以及Class文件架构、类加载器 加载过程
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/mysql-interview-topic/">
+            <h2 class="post-title">
+              Mysql专题
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/redis-interview-problem/">
+            <h2 class="post-title">
+              Redis面试：击穿、穿透、雪崩、分布式锁、API
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Redis面试中常见的问题：击穿、穿透、雪崩、分布式锁、API（jedis、luttce、springboot:low/high level）
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/zookeeper-base/">
+            <h2 class="post-title">
+              Zookeeper基础知识
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Zookeeper介绍、安装、shell cli使用
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/Redis集群之主从复制、CAP、PAXOS-1（一）/">
+            <h2 class="post-title">
+              Redis集群之主从复制、哨兵模式
+            </h2>
+            
+            <h3 class="post-subtitle">
+              redis单节点可能存在的问题，以及CAP原则, Redis三种集群方式中其中两种方式
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/Redis集群实战/">
+            <h2 class="post-title">
+              Redis集群实战
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Redis集群实战、代理分区案例
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/gc-and-gctuning/">
+            <h2 class="post-title">
+              垃圾回收及JVM调优
+            </h2>
+            
+            <h3 class="post-subtitle">
+              GC相关
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/mysql-tuning01/">
+            <h2 class="post-title">
+              mysql调优（一）
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="GitHub">
+          <span class="tag-text">GitHub</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2019/Git同时推送到多个远程仓库/">
+            <h2 class="post-title">
+              Git同时推送到多个远程仓库
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/github-static-source-cdn/">
+            <h2 class="post-title">
+              GitHub静态资源访问免费CDN提速
+            </h2>
+            
+            <h3 class="post-subtitle">
+              GitHub静态资源访问免费CDN提速，以及使用Hexo-theme-livemylife主题后，
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/hexo-gitpage发布后，图片不展示/">
+            <h2 class="post-title">
+              hexo + gitpage发布后，图片不展示
+            </h2>
+            
+            <h3 class="post-subtitle">
+              hexo+gitpage部署博客之后遇到的问题
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="博客">
+          <span class="tag-text">博客</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2020/Hexo博客搭建-博客上传后访问页面返回404问题排查/">
+            <h2 class="post-title">
+              Hexo博客搭建-博客上传后访问页面返回404问题排查
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Java基础查漏补缺">
+          <span class="tag-text">Java基础查漏补缺</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2017/Java-基础查漏补缺【IO篇】/">
+            <h2 class="post-title">
+              Java 基础查漏补缺【IO篇】
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2017/Java-基础查漏补缺【多线程机制篇】/">
+            <h2 class="post-title">
+              Java 基础查漏补缺【多线程机制篇】
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2017/Java-基础查漏补缺【网络篇】/">
+            <h2 class="post-title">
+              Java 基础查漏补缺【网络篇】 
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/位运算的奇技淫巧/">
+            <h2 class="post-title">
+              位运算的奇技淫巧
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2017/Java-基础查漏补缺【持续更新-】/">
+            <h2 class="post-title">
+              Java 基础查漏补缺【基础篇】
+            </h2>
+            
+            <h3 class="post-subtitle">
+              持续更新...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="JVM">
+          <span class="tag-text">JVM</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2021/Java类加载/">
+            <h2 class="post-title">
+              Java类加载
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/break-parental-delegation/">
+            <h2 class="post-title">
+              （二）打破双亲委派？
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/jvm-tuning-01/">
+            <h2 class="post-title">
+              （三）JVM内存模型
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/jvm-base/">
+            <h2 class="post-title">
+              （一）JVM入门以及Class文件架构、类加载器
+            </h2>
+            
+            <h3 class="post-subtitle">
+              JVM入门以及Class文件架构、类加载器 加载过程
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/gc-and-gctuning/">
+            <h2 class="post-title">
+              垃圾回收及JVM调优
+            </h2>
+            
+            <h3 class="post-subtitle">
+              GC相关
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="XML">
+          <span class="tag-text">XML</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2019/Java获取并解析XML-JavaBean和XML的转化/">
+            <h2 class="post-title">
+              Java获取并解析XML(JavaBean和XML的转化)
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2018/Jaxb-解析XML的节点属性以及节点值/">
+            <h2 class="post-title">
+              Jaxb 解析XML的节点属性以及节点值
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Linux">
+          <span class="tag-text">Linux</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2017/Linux下查找Nginx的配置文件/">
+            <h2 class="post-title">
+              Linux下查找Nginx的配置文件
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/mac-install-centos7/">
+            <h2 class="post-title">
+              在Mac上安装Linux系统centos7以及基本配置
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/在Mac系统上使用Dokcer搭建LNMP环境/">
+            <h2 class="post-title">
+              在Mac系统上使用Dokcer搭建LNMP环境
+            </h2>
+            
+            <h3 class="post-subtitle">
+              每次换电脑或者重装系统之后，开发环境的搭建很费事，整不好还遇到一些乱起八糟的大坑，所以最好是直接使用dokcer,换环境的时候，镜像拉起就OK了
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Nginx">
+          <span class="tag-text">Nginx</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2017/Linux下查找Nginx的配置文件/">
+            <h2 class="post-title">
+              Linux下查找Nginx的配置文件
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/在Mac系统上使用Dokcer搭建LNMP环境/">
+            <h2 class="post-title">
+              在Mac系统上使用Dokcer搭建LNMP环境
+            </h2>
+            
+            <h3 class="post-subtitle">
+              每次换电脑或者重装系统之后，开发环境的搭建很费事，整不好还遇到一些乱起八糟的大坑，所以最好是直接使用dokcer,换环境的时候，镜像拉起就OK了
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="小工具">
+          <span class="tag-text">小工具</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2020/Mac上微信双开/">
+            <h2 class="post-title">
+              Mac和Windows微信双开
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="PHP">
+          <span class="tag-text">PHP</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2016/MongoDB-Extension-for-Yii-2/">
+            <h2 class="post-title">
+              MongoDB Extension for Yii 2
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2017/Yii2-中限制访问某控制器的-IP（IP-白名单）/">
+            <h2 class="post-title">
+              Yii2 中限制访问某控制器的 IP（IP 白名单）
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/在Mac系统上使用Dokcer搭建LNMP环境/">
+            <h2 class="post-title">
+              在Mac系统上使用Dokcer搭建LNMP环境
+            </h2>
+            
+            <h3 class="post-subtitle">
+              每次换电脑或者重装系统之后，开发环境的搭建很费事，整不好还遇到一些乱起八糟的大坑，所以最好是直接使用dokcer,换环境的时候，镜像拉起就OK了
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Yii2">
+          <span class="tag-text">Yii2</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2016/MongoDB-Extension-for-Yii-2/">
+            <h2 class="post-title">
+              MongoDB Extension for Yii 2
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2017/Yii2-中限制访问某控制器的-IP（IP-白名单）/">
+            <h2 class="post-title">
+              Yii2 中限制访问某控制器的 IP（IP 白名单）
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Mysql">
+          <span class="tag-text">Mysql</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2021/Mysql-index/">
+            <h2 class="post-title">
+              Mysql 索引
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/企业常用Mysql规范/">
+            <h2 class="post-title">
+              企业常用Mysql规范
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/在Mac系统上使用Dokcer搭建LNMP环境/">
+            <h2 class="post-title">
+              在Mac系统上使用Dokcer搭建LNMP环境
+            </h2>
+            
+            <h3 class="post-subtitle">
+              每次换电脑或者重装系统之后，开发环境的搭建很费事，整不好还遇到一些乱起八糟的大坑，所以最好是直接使用dokcer,换环境的时候，镜像拉起就OK了
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2017/记一次MySQL中Waiting-for-table-metadata-lock问题的处理/">
+            <h2 class="post-title">
+              记一次MySQL中Waiting for table metadata lock问题的处理
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/mysql-interview-topic/">
+            <h2 class="post-title">
+              Mysql专题
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2019/Mysql安装（Mac版）/">
+            <h2 class="post-title">
+              Mysql安装（Mac版）
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/mysql-tuning01/">
+            <h2 class="post-title">
+              mysql调优（一）
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Redis">
+          <span class="tag-text">Redis</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2020/Redis中的list、set、hash、sorted-set/">
+            <h2 class="post-title">
+              Redis中的list、set、hash、sorted_set
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/Redis的String类型和bitmap类型/">
+            <h2 class="post-title">
+              Redis的String类型和bitmap类型
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Redis基本的类型和位图bitmap
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/Redis集群之主从复制、CAP、PAXOS-1（二）/">
+            <h2 class="post-title">
+              Redis集群之分区方式及Redis Cluster
+            </h2>
+            
+            <h3 class="post-subtitle">
+              当数据量很大的时候，通常每台服务器就几个G,该如何存储；Redis集群方式三
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/Redis介绍及NIO原理介绍/">
+            <h2 class="post-title">
+              Redis介绍及NIO原理介绍
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/Redis持久化/">
+            <h2 class="post-title">
+              Redis持久化
+            </h2>
+            
+            <h3 class="post-subtitle">
+              redis的持久化RDB、fork、copyonwrite、AOF、RDB&AOF混合使用
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU/">
+            <h2 class="post-title">
+              Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU以及缓存常见问题
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/redis-interview-problem/">
+            <h2 class="post-title">
+              Redis面试：击穿、穿透、雪崩、分布式锁、API
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Redis面试中常见的问题：击穿、穿透、雪崩、分布式锁、API（jedis、luttce、springboot:low/high level）
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/Redis集群之主从复制、CAP、PAXOS-1（一）/">
+            <h2 class="post-title">
+              Redis集群之主从复制、哨兵模式
+            </h2>
+            
+            <h3 class="post-subtitle">
+              redis单节点可能存在的问题，以及CAP原则, Redis三种集群方式中其中两种方式
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/Redis集群实战/">
+            <h2 class="post-title">
+              Redis集群实战
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Redis集群实战、代理分区案例
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="重学Redis">
+          <span class="tag-text">重学Redis</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2020/Redis中的list、set、hash、sorted-set/">
+            <h2 class="post-title">
+              Redis中的list、set、hash、sorted_set
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/Redis的String类型和bitmap类型/">
+            <h2 class="post-title">
+              Redis的String类型和bitmap类型
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Redis基本的类型和位图bitmap
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/Redis集群之主从复制、CAP、PAXOS-1（二）/">
+            <h2 class="post-title">
+              Redis集群之分区方式及Redis Cluster
+            </h2>
+            
+            <h3 class="post-subtitle">
+              当数据量很大的时候，通常每台服务器就几个G,该如何存储；Redis集群方式三
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/Redis介绍及NIO原理介绍/">
+            <h2 class="post-title">
+              Redis介绍及NIO原理介绍
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/Redis持久化/">
+            <h2 class="post-title">
+              Redis持久化
+            </h2>
+            
+            <h3 class="post-subtitle">
+              redis的持久化RDB、fork、copyonwrite、AOF、RDB&AOF混合使用
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU/">
+            <h2 class="post-title">
+              Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU以及缓存常见问题
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/redis-interview-problem/">
+            <h2 class="post-title">
+              Redis面试：击穿、穿透、雪崩、分布式锁、API
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Redis面试中常见的问题：击穿、穿透、雪崩、分布式锁、API（jedis、luttce、springboot:low/high level）
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/Redis集群之主从复制、CAP、PAXOS-1（一）/">
+            <h2 class="post-title">
+              Redis集群之主从复制、哨兵模式
+            </h2>
+            
+            <h3 class="post-subtitle">
+              redis单节点可能存在的问题，以及CAP原则, Redis三种集群方式中其中两种方式
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/Redis集群实战/">
+            <h2 class="post-title">
+              Redis集群实战
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Redis集群实战、代理分区案例
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="科学上网">
+          <span class="tag-text">科学上网</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2021/SS客户端如何把代理分享给局域网内的其他设备/">
+            <h2 class="post-title">
+              SS客户端如何把代理分享给局域网内的其他设备
+            </h2>
+            
+            <h3 class="post-subtitle">
+              一台设备可以实现科学上网，其他设备不需要安装客户端也可以实现轻松科学上网
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/SS搭建/">
+            <h2 class="post-title">
+              使用Docker搭建SS
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/VPN-系统代理模式（直连模式、PAC模式、全局模式）/">
+            <h2 class="post-title">
+              VPN - 系统代理模式（直连模式、PAC模式、全局模式）
+            </h2>
+            
+            <h3 class="post-subtitle">
+              科学上网知识点
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="VPN">
+          <span class="tag-text">VPN</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2021/SS客户端如何把代理分享给局域网内的其他设备/">
+            <h2 class="post-title">
+              SS客户端如何把代理分享给局域网内的其他设备
+            </h2>
+            
+            <h3 class="post-subtitle">
+              一台设备可以实现科学上网，其他设备不需要安装客户端也可以实现轻松科学上网
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/VPN-系统代理模式（直连模式、PAC模式、全局模式）/">
+            <h2 class="post-title">
+              VPN - 系统代理模式（直连模式、PAC模式、全局模式）
+            </h2>
+            
+            <h3 class="post-subtitle">
+              科学上网知识点
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="shadowsocks">
+          <span class="tag-text">shadowsocks</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2020/SS搭建/">
+            <h2 class="post-title">
+              使用Docker搭建SS
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Python">
+          <span class="tag-text">Python</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2018/Selenium-support-for-PhantomJS-has-been-deprecated-please-use-headless-versions-of-Chrome-or-Firefox-instead/">
+            <h2 class="post-title">
+              Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/mysql-python-lib-error/">
+            <h2 class="post-title">
+              Python 安装MySQLdb出错问题排查
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Python安装MySQL-python提示Error:Command errored out with exit status 1:...的问题排查
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="爬虫">
+          <span class="tag-text">爬虫</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2018/Selenium-support-for-PhantomJS-has-been-deprecated-please-use-headless-versions-of-Chrome-or-Firefox-instead/">
+            <h2 class="post-title">
+              Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="PhantomJS">
+          <span class="tag-text">PhantomJS</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2018/Selenium-support-for-PhantomJS-has-been-deprecated-please-use-headless-versions-of-Chrome-or-Firefox-instead/">
+            <h2 class="post-title">
+              Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Selenim">
+          <span class="tag-text">Selenim</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2018/Selenium-support-for-PhantomJS-has-been-deprecated-please-use-headless-versions-of-Chrome-or-Firefox-instead/">
+            <h2 class="post-title">
+              Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="算法与数据结构">
+          <span class="tag-text">算法与数据结构</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2021/algorithm-novice/">
+            <h2 class="post-title">
+              算法基础
+            </h2>
+            
+            <h3 class="post-subtitle">
+              学习算法必须掌握的一些知识点
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="JVM调优">
+          <span class="tag-text">JVM调优</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2021/break-parental-delegation/">
+            <h2 class="post-title">
+              （二）打破双亲委派？
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/jvm-tuning-01/">
+            <h2 class="post-title">
+              （三）JVM内存模型
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/jvm-base/">
+            <h2 class="post-title">
+              （一）JVM入门以及Class文件架构、类加载器
+            </h2>
+            
+            <h3 class="post-subtitle">
+              JVM入门以及Class文件架构、类加载器 加载过程
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/gc-and-gctuning/">
+            <h2 class="post-title">
+              垃圾回收及JVM调优
+            </h2>
+            
+            <h3 class="post-subtitle">
+              GC相关
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="CDN加速">
+          <span class="tag-text">CDN加速</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2020/github-static-source-cdn/">
+            <h2 class="post-title">
+              GitHub静态资源访问免费CDN提速
+            </h2>
+            
+            <h3 class="post-subtitle">
+              GitHub静态资源访问免费CDN提速，以及使用Hexo-theme-livemylife主题后，
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Hexo">
+          <span class="tag-text">Hexo</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2020/github-static-source-cdn/">
+            <h2 class="post-title">
+              GitHub静态资源访问免费CDN提速
+            </h2>
+            
+            <h3 class="post-subtitle">
+              GitHub静态资源访问免费CDN提速，以及使用Hexo-theme-livemylife主题后，
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/hexo-gitpage发布后，图片不展示/">
+            <h2 class="post-title">
+              hexo + gitpage发布后，图片不展示
+            </h2>
+            
+            <h3 class="post-subtitle">
+              hexo+gitpage部署博客之后遇到的问题
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="jsdelivr">
+          <span class="tag-text">jsdelivr</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2020/github-static-source-cdn/">
+            <h2 class="post-title">
+              GitHub静态资源访问免费CDN提速
+            </h2>
+            
+            <h3 class="post-subtitle">
+              GitHub静态资源访问免费CDN提速，以及使用Hexo-theme-livemylife主题后，
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Kafka">
+          <span class="tag-text">Kafka</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2021/kafka01/">
+            <h2 class="post-title">
+              kafka初始、架构模型、角色功能梳理
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/大数据技术之Kafka/">
+            <h2 class="post-title">
+              大数据技术之Kafka
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="中间件">
+          <span class="tag-text">中间件</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2021/kafka01/">
+            <h2 class="post-title">
+              kafka初始、架构模型、角色功能梳理
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/zookeeper-principle/">
+            <h2 class="post-title">
+              Zookeeper原理知识以及Paxos、Zab、角色功能
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Zookeeper原理知识、paxos、ZAB、watch、API、callback等
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/大数据技术之Kafka/">
+            <h2 class="post-title">
+              大数据技术之Kafka
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/zookeeper-base/">
+            <h2 class="post-title">
+              Zookeeper基础知识
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Zookeeper介绍、安装、shell cli使用
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Mac">
+          <span class="tag-text">Mac</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2020/macOS-Catalina-已损坏无法打开解决办法/">
+            <h2 class="post-title">
+              macOS Catalina 已损坏无法打开解决办法
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Nodejs">
+          <span class="tag-text">Nodejs</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2020/macOS-Catalina下安装nvm、node/">
+            <h2 class="post-title">
+              macOS Catalina下安装nvm、node及每次需要重载配置文件问题解决
+            </h2>
+            
+            <h3 class="post-subtitle">
+              在使用hexo写博客的时候，经常需要执行一些命令，但是发现每次打开终端，输入命令就提示command not found，找到问题后记录下这个问题，以及在最新的Catalina系统下安装nvm
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Go">
+          <span class="tag-text">Go</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2021/go-base/">
+            <h2 class="post-title">
+              go-base
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="工具类">
+          <span class="tag-text">工具类</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2020/sign-generate-error/">
+            <h2 class="post-title">
+              生成的sign出现偶发性的签名验证失败问题排查
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/满足某个日期满足条件的周、月日期处理工具类/">
+            <h2 class="post-title">
+              满足某个日期满足条件的周、月日期处理工具类
+            </h2>
+            
+            <h3 class="post-subtitle">
+              满足某个日期满足条件的周、月日期处理工具类
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Zookeeper">
+          <span class="tag-text">Zookeeper</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2021/zookeeper-principle/">
+            <h2 class="post-title">
+              Zookeeper原理知识以及Paxos、Zab、角色功能
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Zookeeper原理知识、paxos、ZAB、watch、API、callback等
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/zookeeper-base/">
+            <h2 class="post-title">
+              Zookeeper基础知识
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Zookeeper介绍、安装、shell cli使用
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="每日一题">
+          <span class="tag-text">每日一题</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2020/【每日一题】Java-多线程中notify和notifyall的区别是/">
+            <h2 class="post-title">
+              【每日一题】Java 多线程中notify和notifyall的区别是?
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/【每日一题】如何解决ABA问题？为什么能解决？解决思路是什么？/">
+            <h2 class="post-title">
+              【每日一题】如何解决ABA问题？为什么能解决？解决思路是什么？
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/【每日一题】形成数据库死锁的原因有哪些？如何能避免死锁/">
+            <h2 class="post-title">
+              【每日一题】形成数据库死锁的原因有哪些？如何能避免死锁
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/【每日一题】聊一聊线上oom的排查方案？/">
+            <h2 class="post-title">
+              【每日一题】聊一聊线上oom的排查方案？
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Log">
+          <span class="tag-text">Log</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2020/企业常用Log规范/">
+            <h2 class="post-title">
+              企业常用Log规范
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Postman">
+          <span class="tag-text">Postman</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2018/使用Postman工具对入参进行Base64处理/">
+            <h2 class="post-title">
+              使用Postman工具对入参进行Base64处理
+            </h2>
+            
+            <h3 class="post-subtitle">
+              请求参数是json格式，但是必须要对参数进行Bas e64加密处理在进行发送请求
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2018/使用Postman生成签名Sign作为参数发送请求/">
+            <h2 class="post-title">
+              使用Postman生成签名Sign作为参数发送请求
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="OSS">
+          <span class="tag-text">OSS</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2018/使用阿里云OSS-Java-SDK时org-apache-http-ssl-TrustStrategy/">
+            <h2 class="post-title">
+              使用阿里云OSS Java SDK时org/apache/http/ssl/TrustStrategy
+            </h2>
+            
+            <h3 class="post-subtitle">
+              在使用阿里云对象存储服务(Object Storage Service，简称 OSS)提供的Java SDK的时候,遇到的问题
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2017/阿里云对象存储服务OSS的安装与使用/">
+            <h2 class="post-title">
+              阿里云对象存储服务OSS的安装与使用
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="签名">
+          <span class="tag-text">签名</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2016/公钥与私钥-加签与验签/">
+            <h2 class="post-title">
+              公钥与私钥&加签与验签
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="代理">
+          <span class="tag-text">代理</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2020/关于正向代理-反向代理最通俗易懂的解释/">
+            <h2 class="post-title">
+              关于正向代理&反向代理最通俗易懂的解释
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="集成开发环境">
+          <span class="tag-text">集成开发环境</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2020/在Mac系统上使用Dokcer搭建LNMP环境/">
+            <h2 class="post-title">
+              在Mac系统上使用Dokcer搭建LNMP环境
+            </h2>
+            
+            <h3 class="post-subtitle">
+              每次换电脑或者重装系统之后，开发环境的搭建很费事，整不好还遇到一些乱起八糟的大坑，所以最好是直接使用dokcer,换环境的时候，镜像拉起就OK了
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Kibana">
+          <span class="tag-text">Kibana</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2018/在一台Linux上搭建Elasticsearch集群/">
+            <h2 class="post-title">
+              在一台Linux上搭建Elasticsearch集群+kibana
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Elasticsearch 作为一个搜索引擎，我们对它的基本要求就是存储海量数据并且可以在非常短的时间内查询到我们想要的信息
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2018/ELK-Stack学习笔记/">
+            <h2 class="post-title">
+              ELK Stack学习笔记
+            </h2>
+            
+            <h3 class="post-subtitle">
+              一个采用RestFulAPI标准的高扩展性和高可用性的实时数据分析的全文搜索工具
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="集群">
+          <span class="tag-text">集群</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2018/在一台Linux上搭建Elasticsearch集群/">
+            <h2 class="post-title">
+              在一台Linux上搭建Elasticsearch集群+kibana
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Elasticsearch 作为一个搜索引擎，我们对它的基本要求就是存储海量数据并且可以在非常短的时间内查询到我们想要的信息
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2018/ELK-Stack学习笔记/">
+            <h2 class="post-title">
+              ELK Stack学习笔记
+            </h2>
+            
+            <h3 class="post-subtitle">
+              一个采用RestFulAPI标准的高扩展性和高可用性的实时数据分析的全文搜索工具
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="k8s">
+          <span class="tag-text">k8s</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2021/基于k8s开发环境治理的利器-KT-Connect/">
+            <h2 class="post-title">
+              基于k8s开发环境治理的利器-KT Connect
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="架构">
+          <span class="tag-text">架构</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2021/基于keepalived的LVS的搭建/">
+            <h2 class="post-title">
+              基于keepalived的LVS的搭建
+            </h2>
+            
+            <h3 class="post-subtitle">
+              负载均衡-基于keepalived的LVS的搭建
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/网络负载均衡实践手册/">
+            <h2 class="post-title">
+              网络负载均衡实践手册
+            </h2>
+            
+            <h3 class="post-subtitle">
+              搭建负载均衡
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/网络高并发负载均衡（一）/">
+            <h2 class="post-title">
+              网络高并发负载均衡（一）
+            </h2>
+            
+            <h3 class="post-subtitle">
+              LVS的NAT模型推导
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/网络高并发负载均衡（三）/">
+            <h2 class="post-title">
+              网络高并发负载均衡（三）
+            </h2>
+            
+            <h3 class="post-subtitle">
+              LVS的TUN模型推导
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/网络高并发负载均衡（二）/">
+            <h2 class="post-title">
+              网络高并发负载均衡（二）
+            </h2>
+            
+            <h3 class="post-subtitle">
+              LVS的DR模型推导
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="大数据">
+          <span class="tag-text">大数据</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2021/基于keepalived的LVS的搭建/">
+            <h2 class="post-title">
+              基于keepalived的LVS的搭建
+            </h2>
+            
+            <h3 class="post-subtitle">
+              负载均衡-基于keepalived的LVS的搭建
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/网络负载均衡实践手册/">
+            <h2 class="post-title">
+              网络负载均衡实践手册
+            </h2>
+            
+            <h3 class="post-subtitle">
+              搭建负载均衡
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/网络高并发负载均衡（一）/">
+            <h2 class="post-title">
+              网络高并发负载均衡（一）
+            </h2>
+            
+            <h3 class="post-subtitle">
+              LVS的NAT模型推导
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/网络高并发负载均衡（三）/">
+            <h2 class="post-title">
+              网络高并发负载均衡（三）
+            </h2>
+            
+            <h3 class="post-subtitle">
+              LVS的TUN模型推导
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/网络高并发负载均衡（二）/">
+            <h2 class="post-title">
+              网络高并发负载均衡（二）
+            </h2>
+            
+            <h3 class="post-subtitle">
+              LVS的DR模型推导
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="从网络到分布式">
+          <span class="tag-text">从网络到分布式</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2021/基于keepalived的LVS的搭建/">
+            <h2 class="post-title">
+              基于keepalived的LVS的搭建
+            </h2>
+            
+            <h3 class="post-subtitle">
+              负载均衡-基于keepalived的LVS的搭建
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/网络负载均衡实践手册/">
+            <h2 class="post-title">
+              网络负载均衡实践手册
+            </h2>
+            
+            <h3 class="post-subtitle">
+              搭建负载均衡
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/网络高并发负载均衡（一）/">
+            <h2 class="post-title">
+              网络高并发负载均衡（一）
+            </h2>
+            
+            <h3 class="post-subtitle">
+              LVS的NAT模型推导
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/网络高并发负载均衡（三）/">
+            <h2 class="post-title">
+              网络高并发负载均衡（三）
+            </h2>
+            
+            <h3 class="post-subtitle">
+              LVS的TUN模型推导
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/网络高并发负载均衡（二）/">
+            <h2 class="post-title">
+              网络高并发负载均衡（二）
+            </h2>
+            
+            <h3 class="post-subtitle">
+              LVS的DR模型推导
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="深度好文">
+          <span class="tag-text">深度好文</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2020/开学，致儿子/">
+            <h2 class="post-title">
+              开学，致儿子
+            </h2>
+            
+            <h3 class="post-subtitle">
+              转载自中国著名记者唐师曾的《开学致儿子》
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2020/从祁同伟到苟晶/">
+            <h2 class="post-title">
+              从祁同伟到苟晶：人间倘遇不公，拿什么去“胜天半子”？
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="数据结构">
+          <span class="tag-text">数据结构</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2020/数组查询为什么比链表快/">
+            <h2 class="post-title">
+              数组查询为什么比链表快
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="生活笔记">
+          <span class="tag-text">生活笔记</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2020/给自己，也给27岁以上的年轻人的财务建议/">
+            <h2 class="post-title">
+              给自己，也给27岁以上的年轻人的财务建议
+            </h2>
+            
+            <h3 class="post-subtitle">
+              推特上一位网友问到：“27岁以上的网友们，请给出你们觉得最有用的财务建议，金融知识是很重要的！”
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="源码">
+          <span class="tag-text">源码</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2020/ConCurrentHashMap-JDK1-7-源码解析/">
+            <h2 class="post-title">
+              ConCurrentHashMap(JDK1.7)源码解析
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="源码解析">
+          <span class="tag-text">源码解析</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2019/JDK1-7-HashMap源码解析/">
+            <h2 class="post-title">
+              JDK1.7 HashMap源码解析
+            </h2>
+            
+            <h3 class="post-subtitle">
+              JDK1.7 HashMap源码解析
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Websocket">
+          <span class="tag-text">Websocket</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2020/SpringBoot中集成WebSocket/">
+            <h2 class="post-title">
+              SpringBoot中集成WebSocket「支持多终端、共享session」
+            </h2>
+            
+            <h3 class="post-subtitle">
+              SpringBoot中集成WebSocket
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="ELK">
+          <span class="tag-text">ELK</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2020/SpringBoot整合ELK实现日志收集/">
+            <h2 class="post-title">
+              SpringBoot整合ELK实现日志收集
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="多线程与高并发">
+          <span class="tag-text">多线程与高并发</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/2020/多线程基础/">
+            <h2 class="post-title">
+              多线程与高并发（一）
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/2021/concurrent01/">
+            <h2 class="post-title">
+              多线程与高并发（全集）
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+
+    </div>
+  </div>
+</div>
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/shifpeng">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Steven
+          2021
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://shifpeng.cn">Steven</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/mouseclick.js"  content='' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "shifpeng";
+    let ghPages = gh + ".github.io";
+    let pagePath = "tags/index.html";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://www.shifpeng.cn/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

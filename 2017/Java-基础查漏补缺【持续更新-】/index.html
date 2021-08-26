@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="人最大的修养就是知人不评人"/>
+  <meta name="keyword" content="Java,Steven,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://www.shifpeng.cn/2017/Java-基础查漏补缺【持续更新-】/">
+  <title>
+    
+      Java 基础查漏补缺【基础篇】 - Steven | java
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'StevenBlog/community'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">石福鹏</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#Java" title="Java">Java</a>
+              
+              <a class="tag" href="/tags/#Java基础查漏补缺" title="Java基础查漏补缺">Java基础查漏补缺</a>
+              
+            </div>
+            <h1>Java 基础查漏补缺【基础篇】</h1>
+            <h2 class="subheading">持续更新...</h2>
+            <span class="meta">
+              Posted by 石福鹏 on
+              2017-04-28
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">17</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">4.1k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>由于本人最开始是从事<code>.NET</code>,<code>PHP</code>开发的，由于工作和自己的一些技术需要，开始准备将Java作为主要的开发语言，一开始都是直接开始上手公司的项目，因此利用空暇时间系统的学习Java知识体系，记录自己容易忽视的问题</p>
+<span id="more"></span>
+<p>Java的两种核心机制</p>
+<ul>
+<li>Java虚拟机</li>
+<li>垃圾回收机制</li>
+</ul>
+<p><img src="/2017/Java-%E5%9F%BA%E7%A1%80%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA%E3%80%90%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-%E3%80%91/image-20200610173208034.png" alt="image-20200610173208034"></p>
+<hr>
+<h4 id="知识点1：-Java数据类型的划分">知识点1： <code>Java</code>数据类型的划分</h4>
+<p><img src="/2017/Java-%E5%9F%BA%E7%A1%80%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA%E3%80%90%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-%E3%80%91/image-20200629193205696.png" alt="image-20200629193205696"></p>
+<hr>
+<h4 id="知识点2：容量小的类型自动转化为容量大的数据类型">知识点2：容量小的类型自动转化为容量大的数据类型</h4>
+<p>byte,short,char之间不会相互转化，他们三只直接在运算时首先会转化为int类型</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">byte</span> b1 = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">byte</span> b2 = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">int</span> a = b1 + b2;</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="知识点3：如何在内存中区分类和堆">知识点3：如何在内存中区分类和堆</h4>
+<ul>
+<li>
+<p>类是静态的概念，是放在代码区里面的</p>
+</li>
+<li>
+<p>对象是new出来的，位于堆内存（动态分配内存的），类的每个成员变量在不同的对象中都有不同的值（除了静态变量），而方法只有一份，执行的时候才占内存</p>
+</li>
+</ul>
+<hr>
+<h4 id="知识点4：对象内存分配">知识点4：对象内存分配</h4>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span>&#123;</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(<span class="keyword">String</span> args[])</span></span></span><br><span class="line"><span class="function">		Test test</span>=<span class="keyword">new</span> <span class="built_in">Test</span>();  <span class="comment">//这个时候应该在栈内存中有个test的局部变量，同时，凡是new，都要在堆内存中做分配，所以堆内存中有个test对象</span></span><br><span class="line">		</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2017/Java-%E5%9F%BA%E7%A1%80%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA%E3%80%90%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-%E3%80%91/image-20200630175848232.png" alt="image-20200630175848232"></p>
+<hr>
+<h4 id="知识点5-super：在Java类中使用super来引用基类的成分">知识点5: <code>super</code>：在Java类中使用<code>super</code>来引用基类的成分</h4>
+<p>this是当前对象的引用，super是当前对象的父类对象的引用</p>
+<hr>
+<h4 id="知识点6：子类和父类">知识点6：子类和父类</h4>
+<ul>
+<li>
+<p>子类的构造的过程中必须调用其基类的构造方法</p>
+</li>
+<li>
+<p>子类可以在自己的构造方法中使用super(args) 调用基类的构造方法</p>
+<ul>
+<li>使用this(args)调用自己的类的其他的构造方法</li>
+<li>如果调用了super，必须写在子类构造方法的第一行</li>
+</ul>
+</li>
+<li>
+<p>如果子类的构造方法中没有显示的调用基类构造方法，系统默认调用基类无参数的构造方法，</p>
+</li>
+<li>
+<p>如果子类构造方法中既没有显式调用基类构造方法，而基类中又没有无参的构造方法，则编译会出错</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SuperTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">(String args)</span> </span>&#123;</span><br><span class="line">        System.out.println(args);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    SuperTest() &#123;</span><br><span class="line">        print(<span class="string">&quot;SuperTest()&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> <span class="keyword">extends</span> <span class="title">SuperTest</span> </span>&#123;</span><br><span class="line">    Test() &#123;</span><br><span class="line">        print(<span class="string">&quot;Test()&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        print(<span class="string">&quot;Test：f()&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Test test = <span class="keyword">new</span> Test();</span><br><span class="line">        test.f();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//执行结果</span></span><br><span class="line">SuperTest()</span><br><span class="line">Test()</span><br><span class="line">Test：f()</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="知识点7：Object类">知识点7：<code>Object</code>类</h4>
+<p>Object类是所有的Java类的根基类，如果在类的声明中未使用extends关键字制定其基类，则默认基类为Object类</p>
+<hr>
+<h4 id="知识点8：-对象转型（casting）">知识点8： 对象转型（<code>casting</code>）</h4>
+<ul>
+<li>
+<p>一个基类的引用类型变量可以“指向”其子类的对象（即需要的是动物对象，你可以传递一只狗进来）</p>
+</li>
+<li>
+<p>一个基类的引用不可以访问其子类对象增加的成员（属性和方法）（需要的动物，传入一只狗的对象进来，那么这里是把这只狗当作一只动物传进来的，狗新增加的成员就不能使用）</p>
+</li>
+<li>
+<p>可以使用 引用 变量 instanceof 类名 来判断该引用型变量所指向的对象是否属于该类或者该类的子类（即一个对象是否为一个类的实例）<br>
+<strong>注意：编译器会检查 obj 是否能转换成右边的class类型，如果不能转换则直接报错，如果不能确定类型，则通过编译，具体看运行时定。</strong></p>
+</li>
+</ul>
+<p><img src="/2017/Java-%E5%9F%BA%E7%A1%80%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA%E3%80%90%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-%E3%80%91/image-20200924134319324.png" alt="image-20200924134319324"></p>
+<ul>
+<li>子类对象可以当作基类对象来使用称作为向上转型，反之称为向下转型</li>
+</ul>
+<hr>
+<h4 id="知识点9：-动态绑定和多态">知识点9： 动态绑定和多态</h4>
+<p>new的什么对象，调用的时候就会调用该对象的方法</p>
+<blockquote>
+<p>多态是同一个行为具有多个不同表现形式或形态的能力。</p>
+<p>多态就是同一个接口，使用不同的实例而执行不同操作。</p>
+</blockquote>
+<p>多态存在的三个必要条件</p>
+<blockquote>
+<ul>
+<li>继承</li>
+<li>重写</li>
+<li>父类引用指向子类对象</li>
+</ul>
+</blockquote>
+<p><img src="/2017/Java-%E5%9F%BA%E7%A1%80%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA%E3%80%90%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-%E3%80%91/image-20200709180649163.png" alt="image-20200709180649163"></p>
+<p><img src="/2017/Java-%E5%9F%BA%E7%A1%80%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA%E3%80%90%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-%E3%80%91/image-20200709181013045.png" alt="image-20200709181013045"></p>
+<hr>
+<h4 id="知识点10：-Final关键字">知识点10： <code>Final</code>关键字</h4>
+<ul>
+<li>final的变量不能被改变</li>
+<li>final的方法不能够被重写</li>
+<li>final的类不能够被继承</li>
+</ul>
+<hr>
+<h4 id="知识点11：-接口特性">知识点11： 接口特性</h4>
+<ul>
+<li>
+<p>接口中声明的属性<strong>默认</strong>为public static final的，也只能是public static final的（默认是省略的）；</p>
+</li>
+<li>
+<p>接口中只能定义抽象方法，而且这些方法默认为public的，也只能是public的</p>
+</li>
+</ul>
+<hr>
+<h4 id="知识点12：-Java中的异常">知识点12：<code> Java</code>中的异常</h4>
+<p><img src="/2017/Java-%E5%9F%BA%E7%A1%80%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA%E3%80%90%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-%E3%80%91/image-20200717095343234.png" alt="image-20200717095343234"></p>
+<p>Throwable：根异常：可被抛出的</p>
+<p>Error：系统的错误，虚拟机出错了，我们处理不了的错误</p>
+<p>Exception:我们可以catch的错误</p>
+<hr>
+<h4 id="知识点13：创建数组内存变化">知识点13：创建数组内存变化</h4>
+<p><img src="/2017/Java-%E5%9F%BA%E7%A1%80%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA%E3%80%90%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-%E3%80%91/image-20200729171846128.png" alt="image-20200729171846128"></p>
+<p><img src="/2017/Java-%E5%9F%BA%E7%A1%80%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA%E3%80%90%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-%E3%80%91/image-20200729171942983.png" alt="image-20200729171942983"></p>
+<p><img src="/2017/Java-%E5%9F%BA%E7%A1%80%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA%E3%80%90%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-%E3%80%91/image-20200729172028032.png" alt="image-20200729172028032"></p>
+<p>元素为引用数据类型 数组中每一个元素都需要实例化</p>
+<p><img src="/2017/Java-%E5%9F%BA%E7%A1%80%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA%E3%80%90%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-%E3%80%91/image-20200729172436251.png" alt="image-20200729172436251"></p>
+<hr>
+<h4 id="知识点14：数组元素的默认初始化">知识点14：数组元素的默认初始化</h4>
+<p>数组是引用类型，他的元素相当于类的成员变量，因此数组分配空间后，<strong>每个元素也被按照成员变量的规则被隐氏初始化</strong></p>
+<hr>
+<h4 id="知识点15：500个人，手拉手围成一圈。数三退一，最后剩下的人原来排在什么位置？">知识点15：500个人，手拉手围成一圈。数三退一，最后剩下的人原来排在什么位置？</h4>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">boolean</span>[] arr = <span class="keyword">new</span> <span class="keyword">boolean</span>[<span class="number">500</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            arr[i] = <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> leftCnt = arr.length;  <span class="comment">//剩余人数</span></span><br><span class="line">        <span class="keyword">int</span> index = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>; <span class="comment">//计数</span></span><br><span class="line">        <span class="keyword">while</span> (leftCnt &gt; <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (arr[index]) &#123;</span><br><span class="line">                count++;</span><br><span class="line">                <span class="keyword">if</span> (count == <span class="number">3</span>) &#123;</span><br><span class="line">                    count = <span class="number">0</span>;</span><br><span class="line">                    leftCnt--;</span><br><span class="line">                    arr[index] = <span class="keyword">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            index++;</span><br><span class="line">            <span class="keyword">if</span> (index == arr.length) &#123;</span><br><span class="line">                index = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++)</span><br><span class="line">            <span class="keyword">if</span> (arr[i]) &#123;</span><br><span class="line">                System.out.println(i);</span><br><span class="line">            &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>也可以用面向对象的方式实现</p>
+<hr>
+<h4 id="知识点16-数组拷贝System-arraycopy">知识点16: 数组拷贝<code>System.arraycopy()</code></h4>
+<p>一般的数据拷贝的方式有：</p>
+<ul>
+<li>for遍历：遍历源数组并将每个元素赋给目标数组。</li>
+<li>clone：原数组调用clone方法克隆新对象赋给目标数组</li>
+<li>System.arraycopy：JVM 提供的数组拷贝实现。</li>
+<li>Arrays.copyof：实际也是调用System.arraycopy</li>
+</ul>
+<p>参考：<a target="_blank" rel="noopener" href="https://juejin.im/post/6844903573545811981">https://juejin.im/post/6844903573545811981</a></p>
+<hr>
+<h4 id="知识点17-String类">知识点17: <code>String</code>类</h4>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String s1=<span class="string">&quot;hello&quot;</span>;</span><br><span class="line">String s2=<span class="string">&quot;hello&quot;</span>;</span><br><span class="line">System.out.println(s1==s2)  <span class="comment">//true   理论上这里比较的是引用，但是这里并不是new出来的，所以这里并不见得是两个对象，但是编译器通常对存在data数据区中的数据有所优化，发现已经有这个字符串的时候，不会再分配一个，而是直接指向那个对象的引用</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="知识点18-String类的常用方法">知识点18:<code>String</code>类的常用方法</h4>
+<p><img src="/2017/Java-%E5%9F%BA%E7%A1%80%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA%E3%80%90%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-%E3%80%91/image-20200831203118230.png" alt="image-20200831203118230">g</p>
+<p><img src="/2017/Java-%E5%9F%BA%E7%A1%80%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA%E3%80%90%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-%E3%80%91/image-20200831203216181.png" alt="image-20200831203216181"></p>
+<hr>
+<h4 id="知识点19：String类的静态重载方法">知识点19：<code>String</code>类的静态重载方法</h4>
+<p>String.valueof()：将基本类型数据转化为字符串</p>
+<hr>
+<h4 id="知识点20：判断一个字符是大写还是小写">知识点20：判断一个字符是大写还是小写</h4>
+<p>当一个char做运算的时候，或者说比较大小的时候，实际上是比较他们的ascii编码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">String s = <span class="string">&quot;AsaAAdFFASASSA*DSAAFDASA11554*saakda&quot;</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= s.length(); i++) &#123;</span><br><span class="line">    <span class="keyword">char</span> c = s.charAt(i);  <span class="comment">//charAt() 方法用于返回指定索引处的字符。索引范围为从 0 到 length() - 1</span></span><br><span class="line">    <span class="keyword">if</span> (c &gt;= <span class="string">&#x27;a&#x27;</span> &amp;&amp; c &lt; <span class="string">&#x27;z&#x27;</span>) &#123;  <span class="comment">//小写</span></span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (c &gt;= <span class="string">&#x27;A&#x27;</span> &amp;&amp; c &lt;= <span class="string">&#x27;Z&#x27;</span>) &#123; <span class="comment">//大写</span></span><br><span class="line"></span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;  <span class="comment">//非英文字母</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//方法2:</span></span><br><span class="line">Character.isUpperCase(c);</span><br><span class="line">Character.isLowerCase(c)</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="知识点21：StringBuffer">知识点21：<code>StringBuffer</code></h4>
+<p><strong>Buffer:</strong> 顾名思义，即缓冲区，通俗的来讲就是，内存里面有一小块区域，放什么东西先往这一小块区域放，然后再往其他地方放</p>
+<p><code>java.lang.StringBuffer</code> 代表可变的字符序列</p>
+<p>什么叫可变、不可变？</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String a = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">String b = <span class="string">&quot;world&quot;</span>;</span><br><span class="line">a += b; <span class="comment">//String是不可变的字符序列，为什么这么讲？内存中执行的过程是：从内存中新开辟一块内存，用来存放a+=b（）,然后再将a的引用指向到新开辟的内存，但是这样做明显效率不高（相对来说）</span></span><br></pre></td></tr></table></figure>
+<p>而使用<code>StringBuffer</code>的话，就是直接在屁股后面开辟内存，不用再copy了</p>
+<p><strong>结论：<code>StringBuffer</code>和<code>String</code>类似，但是<code>StringBuffer</code>可以对其字符串进行改变</strong></p>
+<p>举例：使用String对一个字符串进行操作，即删除字符串中间的某个字符，String就需要讲要删除的字符前后都先截取出来，再作处理，但是StringBuffer就可以直接删除</p>
+<hr>
+<h4 id="知识点22：基本数据类型包装类">知识点22：基本数据类型包装类</h4>
+<p>每一个基础的数据类型一般情况下都是分配到栈上，如果想把它封装成一个对象分配到堆上的话，使用基础数据类型的包装类</p>
+<p><code>Integer</code>、<code>Float</code>、<code>Long</code>、<code>Boolean</code>、<code>Byte</code>、<code>Short</code>、<code>Double</code>、<code>Character</code></p>
+<p><strong>装箱：</strong> 基本类型转变为包装器类型（引用类型）的过程。<br>
+<strong>拆箱：</strong> 包装器类型转变为基本类型（引用类型）的过程。<br>
+<strong>装箱是通过调用包装器类的 valueOf() 方法实现的</strong><br>
+<strong>拆箱是通过调用包装器类的 xxxValue() 方法实现的，xxx代表对应的基本数据类型。</strong></p>
+<hr>
+<h4 id="知识点23：File-类">知识点23：<code>File</code> 类</h4>
+<p><code>Java.io.File</code>类代笔爱系统<strong>文件名（路径和文件名）</strong></p>
+<p>常见的构造方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//以pathname为路径创建File对象，如果pathname是相对路径，则默认的当前路径在系统属性user.dir中存储</span></span><br><span class="line"><span class="comment">//注意：这里可不是在某个路径下创建一个真正的文件，而是在内存中创建一个file的对象</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">File</span><span class="params">(String pathname)</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//以parent为父路径，child为子路径，创建File对象</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">file</span>(<span class="keyword">String</span> parent,<span class="keyword">String</span> child)</span><br></pre></td></tr></table></figure>
+<p>File的静态属性<code>String separator</code> 存储了当前系统的路径分隔符</p>
+<p>比如，window下是反斜杠<code>\</code>,linux下是斜杠<code>/</code></p>
+<p><img src="/2017/Java-%E5%9F%BA%E7%A1%80%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA%E3%80%90%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-%E3%80%91/image-20200914140109761.png" alt="image-20200914140109761"></p>
+<p><img src="/2017/Java-%E5%9F%BA%E7%A1%80%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA%E3%80%90%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-%E3%80%91/image-20200914174651821.png" alt="image-20200914174651821"></p>
+<p><strong>例子</strong> ：递归查询文件及其子文件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">tree</span><span class="params">(File file, <span class="keyword">int</span> level)</span> </span>&#123;</span><br><span class="line">        String preStr = <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; level; i++) &#123;</span><br><span class="line">            preStr += <span class="string">&quot;    &quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        File[] childs = file.listFiles();</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">null</span> != childs) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= childs.length; i++) &#123;</span><br><span class="line">                System.out.println(preStr + childs[i].getName());</span><br><span class="line">                <span class="keyword">if</span> (childs[i].isDirectory()) &#123;</span><br><span class="line">                    level++;</span><br><span class="line">                    tree(childs[i], level);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        File file = <span class="keyword">new</span> File(<span class="string">&quot;/Users/Steven/downloads&quot;</span>);</span><br><span class="line">        tree(file, <span class="number">0</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="知识点24-容器">知识点24: 容器</h4>
+<p><img src="/2017/Java-%E5%9F%BA%E7%A1%80%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA%E3%80%90%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-%E3%80%91/image-20200915110851057.png" alt="image-20200915110851057"></p>
+<p>List、Set继承于Collection接口</p>
+<p>List：有序(元素存入集合的顺序和取出的顺序一致)，元素都有索引。元素可以重复。可以自动扩容</p>
+<p>Set：无序(存入和取出顺序有可能不一致)，不可以存储重复元素。必须保证元素唯一性。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Collection接口中定义的方法</span></span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">retainAll</span><span class="params">(Collection&lt;?&gt; c)</span></span>; <span class="comment">//用来取两个集合的交集</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Collection c = <span class="keyword">new</span> ArrayList();</span><br><span class="line">c.add(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">c.add(<span class="keyword">new</span> Integer(<span class="number">1</span>));  <span class="comment">//注意这里添加一定要添加对象，不能添加基础数据类型，因为基础数据类型往往是分配在栈上面的，因为栈里面的内容随时都有可能被清空</span></span><br><span class="line"><span class="comment">//但是，现在可以这样写了</span></span><br><span class="line"><span class="comment">//自动打包:基础数据类型转化为对象</span></span><br><span class="line">c.add(<span class="number">1</span>)  <span class="comment">//这里会被自动包装成Integer的对象（jdk1.5之后）</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>注意：</strong> 容器类的对象在调用<code>remove</code>、<code>contains</code>等方法时需要比较对象是否相等，这会涉及到对象类型的<code>equals</code>方法和<code>hashCode</code>方法实现<strong>自定义的对象相等规则</strong>。</p>
+<p>另外，相等的对象应该具有相等的<code>hash codes</code></p>
+<h5 id="Java8中中的运用–Stream-distinct-列表去重">Java8中中的运用–Stream.distinct() 列表去重</h5>
+<blockquote>
+<p><code>distinct</code>返回该流的不同元素组成的流，<code>distinct</code>是Stream接口的方法，<code>distinct()</code>使用<code>hashcode()</code>、<code>equals()</code>方法来获取不同的元素。因此，我们的类必须实现<code>hashcode()</code>、<code>equals()</code>。</p>
+<p>如果distinct（）正在处理有序流，那么对于重复元素，将保留以遭遇顺序首先出现的元素，并且以这种方式选择不同元素是稳定的。</p>
+</blockquote>
+<blockquote>
+<p>在无序流的情况下，不同元素的选择不一定是稳定的，是可以改变的。</p>
+</blockquote>
+<blockquote>
+<p>distinct（）执行有状态的中间操作。在有序流的并行流的情况下，保持distinct（）的稳定性是需要很高的代价的，因为它需要大量的缓冲开销。如果我们不需要保持遭遇顺序的一致性，那么我们应该可以使用通过BaseStream.unordered（）方法实现的无序流。</p>
+</blockquote>
+<ul>
+<li><code>Stream.distinct()</code></li>
+</ul>
+<p><code>distinct()</code>方法的声明如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Stream&lt;T&gt; <span class="title">distinct</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+<p>它是Stream接口的方法。在此示例中，我们有一个包含重复元素的字符串数据类型列表</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.concretepage;</span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.stream.Collectors;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DistinctSimpleDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        List&lt;String&gt; list = Arrays.asList(<span class="string">&quot;AA&quot;</span>, <span class="string">&quot;BB&quot;</span>, <span class="string">&quot;CC&quot;</span>, <span class="string">&quot;BB&quot;</span>, <span class="string">&quot;CC&quot;</span>, <span class="string">&quot;AA&quot;</span>, <span class="string">&quot;AA&quot;</span>);</span><br><span class="line">        <span class="keyword">long</span> l = list.stream().distinct().count();</span><br><span class="line">        System.out.println(<span class="string">&quot;No. of distinct elements:&quot;</span>+l);</span><br><span class="line">        String output = list.stream().distinct().collect(Collectors.joining(<span class="string">&quot;,&quot;</span>));</span><br><span class="line">        System.out.println(output);</span><br><span class="line">    &#125;</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//输出</span></span><br><span class="line"><span class="comment">//No. of distinct elements:3</span></span><br><span class="line"><span class="comment">//AA,BB,CC </span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p><code>List&lt;Object&gt;</code>使用<code>Stream.distinct()</code>去重<br>
+为了对列表进行去重，该类将重写hashCode（）和equals（）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Book</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> price;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Book</span><span class="params">(String name, <span class="keyword">int</span> price)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.price = price;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getPrice</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> price;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(<span class="keyword">final</span> Object obj)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (obj == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">final</span> Book book = (Book) obj;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span> == book) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> (<span class="keyword">this</span>.name.equals(book.name) &amp;&amp; <span class="keyword">this</span>.price == book.price);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> hashno = <span class="number">7</span>;</span><br><span class="line">        hashno = <span class="number">13</span> * hashno + (name == <span class="keyword">null</span> ? <span class="number">0</span> : name.hashCode());</span><br><span class="line">        <span class="keyword">return</span> hashno;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DistinctWithUserObjects</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        List&lt;Book&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        &#123;</span><br><span class="line">           list.add(<span class="keyword">new</span> Book(<span class="string">&quot;Core Java&quot;</span>, <span class="number">200</span>));</span><br><span class="line">           list.add(<span class="keyword">new</span> Book(<span class="string">&quot;Core Java&quot;</span>, <span class="number">200</span>));</span><br><span class="line">           list.add(<span class="keyword">new</span> Book(<span class="string">&quot;Learning Freemarker&quot;</span>, <span class="number">150</span>));        	</span><br><span class="line">           list.add(<span class="keyword">new</span> Book(<span class="string">&quot;Spring MVC&quot;</span>, <span class="number">300</span>));</span><br><span class="line">           list.add(<span class="keyword">new</span> Book(<span class="string">&quot;Spring MVC&quot;</span>, <span class="number">300</span>));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">long</span> l = list.stream().distinct().count();</span><br><span class="line">        System.out.println(<span class="string">&quot;No. of distinct books:&quot;</span>+l);</span><br><span class="line">        list.stream().distinct().forEach(b -&gt; System.out.println(b.getName()+ <span class="string">&quot;,&quot;</span> + b.getPrice()));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//No. of distinct books:3</span></span><br><span class="line"><span class="comment">//Core Java,200</span></span><br><span class="line"><span class="comment">//Learning Freemarker,150</span></span><br><span class="line"><span class="comment">//Spring MVC,300 </span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>按照属性对对象列表进行去重</p>
+</li>
+</ul>
+<p><code>distinct()</code>不提供按照属性对对象列表进行去重的直接实现。它是基于<code>hashCode（）</code>和<code>equals（）</code>工作的。如果我们想要按照对象的属性，对对象列表进行去重，我们可以通过其它方法来实现。如下代码段所示：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> &lt;T&gt; <span class="function">Predicate&lt;T&gt; <span class="title">distinctByKey</span><span class="params">(Function&lt;? <span class="keyword">super</span> T, ?&gt; keyExtractor)</span> </span>&#123;</span><br><span class="line">        Map&lt;Object,Boolean&gt; seen = <span class="keyword">new</span> ConcurrentHashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">return</span> t -&gt; seen.putIfAbsent(keyExtractor.apply(t), Boolean.TRUE) == <span class="keyword">null</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<p>上面的方法可以被Stream接口的 filter()接收为参数，如下所示：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list.stream().filter(distinctByKey(b -&gt; b.getName())); </span><br></pre></td></tr></table></figure>
+<p>distinctByKey()方法返回一个使用<em>ConcurrentHashMap</em> 来维护先前所见状态的 <em>Predicate</em> 实例，如下是一个完整的使用对象属性来进行去重的示例。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DistinctByProperty</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        List&lt;Book&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        &#123;</span><br><span class="line">        	list.add(<span class="keyword">new</span> Book(<span class="string">&quot;Core Java&quot;</span>, <span class="number">200</span>));</span><br><span class="line">        	list.add(<span class="keyword">new</span> Book(<span class="string">&quot;Core Java&quot;</span>, <span class="number">300</span>));</span><br><span class="line">        	list.add(<span class="keyword">new</span> Book(<span class="string">&quot;Learning Freemarker&quot;</span>, <span class="number">150</span>));</span><br><span class="line">        	list.add(<span class="keyword">new</span> Book(<span class="string">&quot;Spring MVC&quot;</span>, <span class="number">200</span>));</span><br><span class="line">        	list.add(<span class="keyword">new</span> Book(<span class="string">&quot;Hibernate&quot;</span>, <span class="number">300</span>));</span><br><span class="line">        &#125;</span><br><span class="line">        list.stream().filter(distinctByKey(b -&gt; b.getName()))</span><br><span class="line">              .forEach(b -&gt; System.out.println(b.getName()+ <span class="string">&quot;,&quot;</span> + b.getPrice()));   </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">Predicate&lt;T&gt; <span class="title">distinctByKey</span><span class="params">(Function&lt;? <span class="keyword">super</span> T, ?&gt; keyExtractor)</span> </span>&#123;</span><br><span class="line">        Map&lt;Object,Boolean&gt; seen = <span class="keyword">new</span> ConcurrentHashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">return</span> t -&gt; seen.putIfAbsent(keyExtractor.apply(t), Boolean.TRUE) == <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; </span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//Core Java,200</span></span><br><span class="line"><span class="comment">//Learning Freemarker,150</span></span><br><span class="line"><span class="comment">//Spring MVC,200</span></span><br><span class="line"><span class="comment">//Hibernate,300 </span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="知识点25：Iterator接口">知识点25：Iterator接口</h4>
+<p>所有实现了<code>Collection</code>接口的容器类都有一个<code>iterator</code>方法用于返回一个实现了<code>iterator</code>接口的对象</p>
+<p><code>iterator</code>对象称为迭代器，用于实现对容器内的元素进行遍历操作</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">hasnext</span><span class="params">()</span></span>; <span class="comment">//判断游标右边是否有元素</span></span><br><span class="line"><span class="function">Object <span class="title">next</span><span class="params">()</span></span>;  <span class="comment">//返回游标右边的元素，并将游标移动到下一个位置</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">remove</span><span class="params">()</span></span>; <span class="comment">//删除游标左边的元素 ，在执行完next之后该操作只能执行一次</span></span><br></pre></td></tr></table></figure>
+<p><code>iterator</code>对象的<code>remove</code>方法是在迭代过程中，删除元素的唯一的安全方法</p>
+<hr>
+<h4 id="知识点26：List常用算法">知识点26：List常用算法</h4>
+<p><code>void sort(List)</code>对list容器中的元素排序</p>
+<p><code>void shuffle(List)</code>对list容器内的对象进行随机排列</p>
+<p><code>void reverse</code>对容器中的对象进行逆序排列</p>
+<p><code>void fill(List,Object)</code>用一个特定的对象重写整个List容器</p>
+<p><code>void copy(List dest,List srv)</code>讲src  List容器内容拷贝到dest  List中</p>
+<p><code>int binarySearch(List,Object)</code> 对于顺序的List容器，采用折半查找的方法查找特定对象</p>
+<p><strong>上述算法根据什么确定容器中对对象的大小的？</strong></p>
+<p>所有可以排序的类都实现了java.lang,Comparable接口，并且该接口中只有一个方法<code>public int compareTo(object obj)</code></p>
+<p>==0：表示相等</p>
+<p>&gt;0：this&gt;obj</p>
+<p>&lt;0：this&lt;obj</p>
+<hr>
+<h4 id="知识点27：如何选择数据结构">知识点27：如何选择数据结构</h4>
+<p>衡量标准：读的效率和改的效率</p>
+<p><code>array</code>:读快改慢</p>
+<p><code>Linked</code>：改快写慢</p>
+<p>具体参考这篇文章<a href="https://www.shifpeng.cn/article/%E6%95%B0%E7%BB%84%E6%9F%A5%E8%AF%A2%E4%B8%BA%E4%BB%80%E4%B9%88%E6%AF%94%E9%93%BE%E8%A1%A8%E5%BF%AB/">数组查询为什么比链表快</a></p>
+<hr>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/2017/Java-基础查漏补缺【IO篇】/" data-toggle="tooltip" data-placement="top" title="Java 基础查漏补缺【IO篇】">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/2017/阿里云对象存储服务OSS的安装与使用/" data-toggle="tooltip" data-placement="top" title="阿里云对象存储服务OSS的安装与使用">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Java 基础查漏补缺【基础篇】&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2017/Java-基础查漏补缺【持续更新-】/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'a00494876d6f5f4bcbfd',
+      clientSecret: '33d3d0be81052a26f5a3535733b8b7854628564f',
+      repo: 'shifpeng.github.io',
+      owner: 'shifpeng',
+      admin: 'shifpeng',
+      id: 'Fri Apr 28 2017 08:22:00 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B91%EF%BC%9A-Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%88%92%E5%88%86"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">知识点1： Java数据类型的划分</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B92%EF%BC%9A%E5%AE%B9%E9%87%8F%E5%B0%8F%E7%9A%84%E7%B1%BB%E5%9E%8B%E8%87%AA%E5%8A%A8%E8%BD%AC%E5%8C%96%E4%B8%BA%E5%AE%B9%E9%87%8F%E5%A4%A7%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">知识点2：容量小的类型自动转化为容量大的数据类型</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B93%EF%BC%9A%E5%A6%82%E4%BD%95%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E5%8C%BA%E5%88%86%E7%B1%BB%E5%92%8C%E5%A0%86"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">知识点3：如何在内存中区分类和堆</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B94%EF%BC%9A%E5%AF%B9%E8%B1%A1%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">知识点4：对象内存分配</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B95-super%EF%BC%9A%E5%9C%A8Java%E7%B1%BB%E4%B8%AD%E4%BD%BF%E7%94%A8super%E6%9D%A5%E5%BC%95%E7%94%A8%E5%9F%BA%E7%B1%BB%E7%9A%84%E6%88%90%E5%88%86"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">知识点5: super：在Java类中使用super来引用基类的成分</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B96%EF%BC%9A%E5%AD%90%E7%B1%BB%E5%92%8C%E7%88%B6%E7%B1%BB"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">知识点6：子类和父类</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B97%EF%BC%9AObject%E7%B1%BB"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">知识点7：Object类</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B98%EF%BC%9A-%E5%AF%B9%E8%B1%A1%E8%BD%AC%E5%9E%8B%EF%BC%88casting%EF%BC%89"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">知识点8： 对象转型（casting）</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B99%EF%BC%9A-%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A%E5%92%8C%E5%A4%9A%E6%80%81"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">知识点9： 动态绑定和多态</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B910%EF%BC%9A-Final%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">知识点10： Final关键字</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B911%EF%BC%9A-%E6%8E%A5%E5%8F%A3%E7%89%B9%E6%80%A7"><span class="toc-nav-number">11.</span> <span class="toc-nav-text">知识点11： 接口特性</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B912%EF%BC%9A-Java%E4%B8%AD%E7%9A%84%E5%BC%82%E5%B8%B8"><span class="toc-nav-number">12.</span> <span class="toc-nav-text">知识点12： Java中的异常</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B913%EF%BC%9A%E5%88%9B%E5%BB%BA%E6%95%B0%E7%BB%84%E5%86%85%E5%AD%98%E5%8F%98%E5%8C%96"><span class="toc-nav-number">13.</span> <span class="toc-nav-text">知识点13：创建数组内存变化</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B914%EF%BC%9A%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0%E7%9A%84%E9%BB%98%E8%AE%A4%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-nav-number">14.</span> <span class="toc-nav-text">知识点14：数组元素的默认初始化</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B915%EF%BC%9A500%E4%B8%AA%E4%BA%BA%EF%BC%8C%E6%89%8B%E6%8B%89%E6%89%8B%E5%9B%B4%E6%88%90%E4%B8%80%E5%9C%88%E3%80%82%E6%95%B0%E4%B8%89%E9%80%80%E4%B8%80%EF%BC%8C%E6%9C%80%E5%90%8E%E5%89%A9%E4%B8%8B%E7%9A%84%E4%BA%BA%E5%8E%9F%E6%9D%A5%E6%8E%92%E5%9C%A8%E4%BB%80%E4%B9%88%E4%BD%8D%E7%BD%AE%EF%BC%9F"><span class="toc-nav-number">15.</span> <span class="toc-nav-text">知识点15：500个人，手拉手围成一圈。数三退一，最后剩下的人原来排在什么位置？</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B916-%E6%95%B0%E7%BB%84%E6%8B%B7%E8%B4%9DSystem-arraycopy"><span class="toc-nav-number">16.</span> <span class="toc-nav-text">知识点16: 数组拷贝System.arraycopy()</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B917-String%E7%B1%BB"><span class="toc-nav-number">17.</span> <span class="toc-nav-text">知识点17: String类</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B918-String%E7%B1%BB%E7%9A%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-nav-number">18.</span> <span class="toc-nav-text">知识点18:String类的常用方法</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B919%EF%BC%9AString%E7%B1%BB%E7%9A%84%E9%9D%99%E6%80%81%E9%87%8D%E8%BD%BD%E6%96%B9%E6%B3%95"><span class="toc-nav-number">19.</span> <span class="toc-nav-text">知识点19：String类的静态重载方法</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B920%EF%BC%9A%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E6%98%AF%E5%A4%A7%E5%86%99%E8%BF%98%E6%98%AF%E5%B0%8F%E5%86%99"><span class="toc-nav-number">20.</span> <span class="toc-nav-text">知识点20：判断一个字符是大写还是小写</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B921%EF%BC%9AStringBuffer"><span class="toc-nav-number">21.</span> <span class="toc-nav-text">知识点21：StringBuffer</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B922%EF%BC%9A%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8C%85%E8%A3%85%E7%B1%BB"><span class="toc-nav-number">22.</span> <span class="toc-nav-text">知识点22：基本数据类型包装类</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B923%EF%BC%9AFile-%E7%B1%BB"><span class="toc-nav-number">23.</span> <span class="toc-nav-text">知识点23：File 类</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B924-%E5%AE%B9%E5%99%A8"><span class="toc-nav-number">24.</span> <span class="toc-nav-text">知识点24: 容器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Java8%E4%B8%AD%E4%B8%AD%E7%9A%84%E8%BF%90%E7%94%A8%E2%80%93Stream-distinct-%E5%88%97%E8%A1%A8%E5%8E%BB%E9%87%8D"><span class="toc-nav-number">24.1.</span> <span class="toc-nav-text">Java8中中的运用–Stream.distinct() 列表去重</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B925%EF%BC%9AIterator%E6%8E%A5%E5%8F%A3"><span class="toc-nav-number">25.</span> <span class="toc-nav-text">知识点25：Iterator接口</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B926%EF%BC%9AList%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95"><span class="toc-nav-number">26.</span> <span class="toc-nav-text">知识点26：List常用算法</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B927%EF%BC%9A%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-nav-number">27.</span> <span class="toc-nav-text">知识点27：如何选择数据结构</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#Java" title="Java">Java</a>
+            
+            <a class="tag" href="/tags/#Java基础查漏补缺" title="Java基础查漏补缺">Java基础查漏补缺</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://cuiqingcai.com/" target="_blank">静 觅 崔庆才</a>
+          </li>
+          
+          <li>
+            <a href="http://www.52nlp.cn/" target="_blank">我爱自然语言处理</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cnblogs.com/Steven-shi/" target="_blank">博客园 石福鹏</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/shifpeng">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Steven
+          2021
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://shifpeng.cn">Steven</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/mouseclick.js"  content='' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "shifpeng";
+    let ghPages = gh + ".github.io";
+    let pagePath = "2017/Java-基础查漏补缺【持续更新-】/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://www.shifpeng.cn/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

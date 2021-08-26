@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="人最大的修养就是知人不评人"/>
+  <meta name="keyword" content="Java,Steven,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://www.shifpeng.cn/2021/mysql-tuning01/">
+  <title>
+    
+      mysql调优（一） - Steven | java
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'StevenBlog/community'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">石福鹏</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+              
+              <a class="tag" href="/tags/#Mysql" title="Mysql">Mysql</a>
+              
+            </div>
+            <h1>mysql调优（一）</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by Steven on
+              2021-06-01
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">29</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">7.4k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p><img src="/2021/mysql-tuning01/image-20210603193116508.png" alt="image-20210603193116508"></p>
+<h1>性能监控</h1>
+<h2 id="使用show-profile-查询剖析工具">使用<code>show profile</code> 查询剖析工具</h2>
+<h2 id="使用-performance-schema来更加容易的监控Mysql">使用 performance schema来更加容易的监控Mysql</h2>
+<h3 id="0、performance-schema的介绍">0、performance_schema的介绍</h3>
+<p>​       <em><strong>*MySQL的performance schema 用于监控MySQL server在一个较低级别的运行过程中的资源消耗、资源等待等情况*</strong></em>。</p>
+<p>​       特点如下：</p>
+<p>​       1、提供了一种在数据库运行时实时检查server的内部执行情况的方法。performance_schema 数据库中的表使用performance_schema存储引擎。该数据库主要关注数据库运行过程中的性能相关的数据，与information_schema不同，information_schema主要关注server运行过程中的元数据信息</p>
+<p>​       2、performance_schema通过监视server的事件来实现监视server内部运行情况， “事件”就是server内部活动中所做的任何事情以及对应的时间消耗，利用这些信息来判断server中的相关资源消耗在了哪里？一般来说，事件可以是函数调用、操作系统的等待、SQL语句执行的阶段（如sql语句执行过程中的parsing 或 sorting阶段）或者整个SQL语句与SQL语句集合。事件的采集可以方便的提供server中的相关存储引擎对磁盘文件、表I/O、表锁等资源的同步调用信息。</p>
+<p>​       3、performance_schema中的事件与写入二进制日志中的事件（描述数据修改的events）、事件计划调度程序（这是一种存储程序）的事件不同。performance_schema中的事件记录的是server执行某些活动对某些资源的消耗、耗时、这些活动执行的次数等情况。</p>
+<p>​       4、performance_schema中的事件只记录在本地server的performance_schema中，其下的这些表中数据发生变化时不会被写入binlog中，也不会通过复制机制被复制到其他server中。</p>
+<p>​       5、 当前活跃事件、历史事件和事件摘要相关的表中记录的信息。能提供某个事件的执行次数、使用时长。进而可用于分析某个特定线程、特定对象（如mutex或file）相关联的活动。</p>
+<p>​       6、PERFORMANCE_SCHEMA存储引擎使用server源代码中的“检测点”来实现事件数据的收集。对于performance_schema实现机制本身的代码没有相关的单独线程来检测，这与其他功能（如复制或事件计划程序）不同</p>
+<p>​       7、收集的事件数据存储在performance_schema数据库的表中。这些表可以使用SELECT语句查询，也可以使用SQL语句更新performance_schema数据库中的表记录（如动态修改performance_schema的setup_*开头的几个配置表，但要注意：配置表的更改会立即生效，这会影响数据收集）</p>
+<p>​       8、performance_schema的表中的数据不会持久化存储在磁盘中，而是保存在内存中，一旦服务器重启，这些数据会丢失（包括配置表在内的整个performance_schema下的所有数据）</p>
+<p>​       9、MySQL支持的所有平台中事件监控功能都可用，但不同平台中用于统计事件时间开销的计时器类型可能会有所差异。</p>
+<h3 id="1、performance-schema入门">1、performance schema入门</h3>
+<p>​       在mysql的5.7版本中，性能模式是默认开启的，如果想要显式的关闭的话需要修改配置文件，不能直接进行修改，会报错Variable ‘performance_schema’ is a read only variable。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--查看performance_schema的属性</span></span><br><span class="line"></span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">SHOW</span> VARIABLES <span class="keyword">LIKE</span> <span class="string">&#x27;performance_schema&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="operator">+</span><span class="comment">--------------------+-------+</span></span><br><span class="line"></span><br><span class="line"><span class="operator">|</span> Variable_name      <span class="operator">|</span> <span class="keyword">Value</span> <span class="operator">|</span></span><br><span class="line"></span><br><span class="line"><span class="operator">+</span><span class="comment">--------------------+-------+</span></span><br><span class="line"></span><br><span class="line"><span class="operator">|</span> performance_schema <span class="operator">|</span> <span class="keyword">ON</span>    <span class="operator">|</span></span><br><span class="line"></span><br><span class="line"><span class="operator">+</span><span class="comment">--------------------+-------+</span></span><br><span class="line"></span><br><span class="line"><span class="number">1</span> <span class="type">row</span> <span class="keyword">in</span> <span class="keyword">set</span> (<span class="number">0.01</span> sec)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--在配置文件中修改performance_schema的属性值，on表示开启，off表示关闭</span></span><br><span class="line"></span><br><span class="line">[mysqld]</span><br><span class="line"></span><br><span class="line">performance_schema<span class="operator">=</span><span class="keyword">ON</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--切换数据库</span></span><br><span class="line"></span><br><span class="line">use performance_schema;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--查看当前数据库下的所有表,会看到有很多表存储着相关的信息</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">show</span> tables;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--可以通过show create table tablename来查看创建表的时候的表结构</span></span><br><span class="line"></span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">show</span> <span class="keyword">create</span> <span class="keyword">table</span> setup_consumers;</span><br><span class="line"></span><br><span class="line"><span class="operator">+</span><span class="comment">-----------------+---------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="operator">|</span> <span class="keyword">Table</span>           <span class="operator">|</span> <span class="keyword">Create</span> <span class="keyword">Table</span>                    </span><br><span class="line"></span><br><span class="line"><span class="operator">+</span><span class="comment">-----------------+---------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="operator">|</span> setup_consumers <span class="operator">|</span> <span class="keyword">CREATE</span> <span class="keyword">TABLE</span> `setup_consumers` (</span><br><span class="line"></span><br><span class="line">  `NAME` <span class="type">varchar</span>(<span class="number">64</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span>,                      </span><br><span class="line"></span><br><span class="line">  `ENABLED` enum(<span class="string">&#x27;YES&#x27;</span>,<span class="string">&#x27;NO&#x27;</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span>               </span><br><span class="line"></span><br><span class="line">) ENGINE<span class="operator">=</span>PERFORMANCE_SCHEMA <span class="keyword">DEFAULT</span> CHARSET<span class="operator">=</span>utf8 <span class="operator">|</span>  </span><br><span class="line"></span><br><span class="line"><span class="operator">+</span><span class="comment">-----------------+---------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="number">1</span> <span class="type">row</span> <span class="keyword">in</span> <span class="keyword">set</span> (<span class="number">0.00</span> sec)                           </span><br></pre></td></tr></table></figure>
+<p>​       想要搞明白后续的内容，同学们需要理解两个基本概念：</p>
+<p>​       instruments: 生产者，用于采集mysql中各种各样的操作产生的事件信息，对应配置表中的配置项我们可以称为监控采集配置项。</p>
+<p>​       consumers:消费者，对应的消费者表用于存储来自instruments采集的数据，对应配置表中的配置项我们可以称为消费存储配置项。</p>
+<h3 id="2、performance-schema表的分类">2、performance_schema表的分类</h3>
+<p>​       performance_schema库下的表可以按照监视不同的纬度就行分组。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--语句事件记录表，这些表记录了语句事件信息，当前语句事件表events_statements_current、历史语句事件表events_statements_history和长语句历史事件表events_statements_history_long、以及聚合后的摘要表summary，其中，summary表还可以根据帐号(account)，主机(host)，程序(program)，线程(thread)，用户(user)和全局(global)再进行细分)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">show</span> tables <span class="keyword">like</span> <span class="string">&#x27;%statement%&#x27;</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--等待事件记录表，与语句事件类型的相关记录表类似：</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">show</span> tables <span class="keyword">like</span> <span class="string">&#x27;%wait%&#x27;</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--阶段事件记录表，记录语句执行的阶段事件的表</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">show</span> tables <span class="keyword">like</span> <span class="string">&#x27;%stage%&#x27;</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--事务事件记录表，记录事务相关的事件的表</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">show</span> tables <span class="keyword">like</span> <span class="string">&#x27;%transaction%&#x27;</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--监控文件系统层调用的表</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">show</span> tables <span class="keyword">like</span> <span class="string">&#x27;%file%&#x27;</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--监视内存使用的表</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">show</span> tables <span class="keyword">like</span> <span class="string">&#x27;%memory%&#x27;</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--动态对performance_schema进行配置的配置表</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">show</span> tables <span class="keyword">like</span> <span class="string">&#x27;%setup%&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="3、performance-schema的简单配置与使用">3、performance_schema的简单配置与使用</h3>
+<p>​       数据库刚刚初始化并启动时，并非所有instruments(事件采集项，在采集项的配置表中每一项都有一个开关字段，或为YES，或为NO)和consumers(与采集项类似，也有一个对应的事件类型保存表配置项，为YES就表示对应的表保存性能数据，为NO就表示对应的表不保存性能数据)都启用了，所以默认不会收集所有的事件，可能你需要检测的事件并没有打开，需要进行设置，可以使用如下两个语句打开对应的instruments和consumers（行计数可能会因MySQL版本而异)。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--打开等待事件的采集器配置项开关，需要修改setup_instruments配置表中对应的采集器配置项</span></span><br><span class="line"></span><br><span class="line">UPDATE setup_instruments <span class="keyword">SET</span> ENABLED <span class="operator">=</span> <span class="string">&#x27;YES&#x27;</span>, TIMED <span class="operator">=</span> <span class="string">&#x27;YES&#x27;</span><span class="keyword">where</span> name <span class="keyword">like</span> <span class="string">&#x27;wait%&#x27;</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--打开等待事件的保存表配置开关，修改setup_consumers配置表中对应的配置项</span></span><br><span class="line"></span><br><span class="line">UPDATE setup_consumers <span class="keyword">SET</span> ENABLED <span class="operator">=</span> <span class="string">&#x27;YES&#x27;</span><span class="keyword">where</span> name <span class="keyword">like</span> <span class="string">&#x27;%wait%&#x27;</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--当配置完成之后可以查看当前server正在做什么，可以通过查询events_waits_current表来得知，该表中每个线程只包含一行数据，用于显示每个线程的最新监视事件</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> events_waits_current\G</span><br><span class="line"></span><br><span class="line"><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span> <span class="number">1.</span> <span class="type">row</span> <span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span><span class="operator">*</span></span><br><span class="line"></span><br><span class="line">​            THREAD_ID: <span class="number">11</span></span><br><span class="line"></span><br><span class="line">​             EVENT_ID: <span class="number">570</span></span><br><span class="line"></span><br><span class="line">​         END_EVENT_ID: <span class="number">570</span></span><br><span class="line"></span><br><span class="line">​           EVENT_NAME: wait<span class="operator">/</span>synch<span class="operator">/</span>mutex<span class="operator">/</span>innodb<span class="operator">/</span>buf_dblwr_mutex</span><br><span class="line"></span><br><span class="line">​               SOURCE: </span><br><span class="line"></span><br><span class="line">​          TIMER_START: <span class="number">4508505105239280</span></span><br><span class="line"></span><br><span class="line">​            TIMER_END: <span class="number">4508505105270160</span></span><br><span class="line"></span><br><span class="line">​           TIMER_WAIT: <span class="number">30880</span></span><br><span class="line"></span><br><span class="line">​                SPINS: <span class="keyword">NULL</span></span><br><span class="line"></span><br><span class="line">​        OBJECT_SCHEMA: <span class="keyword">NULL</span></span><br><span class="line"></span><br><span class="line">​          OBJECT_NAME: <span class="keyword">NULL</span></span><br><span class="line"></span><br><span class="line">​           INDEX_NAME: <span class="keyword">NULL</span></span><br><span class="line"></span><br><span class="line">​          OBJECT_TYPE: <span class="keyword">NULL</span></span><br><span class="line"></span><br><span class="line">OBJECT_INSTANCE_BEGIN: <span class="number">67918392</span></span><br><span class="line"></span><br><span class="line">​     NESTING_EVENT_ID: <span class="keyword">NULL</span></span><br><span class="line"></span><br><span class="line">   NESTING_EVENT_TYPE: <span class="keyword">NULL</span></span><br><span class="line"></span><br><span class="line">​            OPERATION: lock</span><br><span class="line"></span><br><span class="line">​      NUMBER_OF_BYTES: <span class="keyword">NULL</span></span><br><span class="line"></span><br><span class="line">​                FLAGS: <span class="keyword">NULL</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*该信息表示线程id为11的线程正在等待buf_dblwr_mutex锁，等待事件为30880</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">属性说明：</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    id:事件来自哪个线程，事件编号是多少</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    event_name:表示检测到的具体的内容</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    source:表示这个检测代码在哪个源文件中以及行号</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    timer_start:表示该事件的开始时间</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    timer_end:表示该事件的结束时间</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    timer_wait:表示该事件总的花费时间</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">注意：_current表中每个线程只保留一条记录，一旦线程完成工作，该表中不会再记录该线程的事件信息</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">_history表中记录每个线程应该执行完成的事件信息，但每个线程的事件信息只会记录10条，再多就会被覆盖，*_history_long表中记录所有线程的事件信息，但总记录数量是10000，超过就会被覆盖掉</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> thread_id,event_id,event_name,timer_wait <span class="keyword">from</span> events_waits_history <span class="keyword">order</span> <span class="keyword">by</span> thread_id limit <span class="number">21</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">summary表提供所有事件的汇总信息，该组中的表以不同的方式汇总事件数据（如：按用户，按主机，按线程等等）。例如：要查看哪些instruments占用最多的时间，可以通过对events_waits_summary_global_by_event_name表的COUNT_STAR或SUM_TIMER_WAIT列进行查询（这两列是对事件的记录数执行COUNT（*）、事件记录的TIMER_WAIT列执行SUM（TIMER_WAIT）统计而来）</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> EVENT_NAME,COUNT_STAR <span class="keyword">FROM</span> events_waits_summary_global_by_event_name  <span class="keyword">ORDER</span> <span class="keyword">BY</span> COUNT_STAR <span class="keyword">DESC</span> LIMIT <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">instance表记录了哪些类型的对象会被检测。这些对象在被server使用时，在该表中将会产生一条事件记录，例如，file_instances表列出了文件I/O操作及其关联文件名</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> file_instances limit <span class="number">20</span>; </span><br></pre></td></tr></table></figure>
+<h3 id="4、常用配置项的参数说明">4、常用配置项的参数说明</h3>
+<p>1、启动选项</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line">performance_schema_consumer_events_statements_current<span class="operator">=</span><span class="literal">TRUE</span></span><br><span class="line"></span><br><span class="line">是否在mysql server启动时就开启events_statements_current表的记录功能(该表记录当前的语句事件信息)，启动之后也可以在setup_consumers表中使用UPDATE语句进行动态更新setup_consumers配置表中的events_statements_current配置项，默认值为<span class="literal">TRUE</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">performance_schema_consumer_events_statements_history<span class="operator">=</span><span class="literal">TRUE</span></span><br><span class="line"></span><br><span class="line">与performance_schema_consumer_events_statements_current选项类似，但该选项是用于配置是否记录语句事件短历史信息，默认为<span class="literal">TRUE</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">performance_schema_consumer_events_stages_history_long<span class="operator">=</span><span class="literal">FALSE</span></span><br><span class="line"></span><br><span class="line">与performance_schema_consumer_events_statements_current选项类似，但该选项是用于配置是否记录语句事件长历史信息，默认为<span class="literal">FALSE</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">除了statement(语句)事件之外，还支持：wait(等待)事件、state(阶段)事件、transaction(事务)事件，他们与statement事件一样都有三个启动项分别进行配置，但这些等待事件默认未启用，如果需要在MySQL Server启动时一同启动，则通常需要写进my.cnf配置文件中</span><br><span class="line"></span><br><span class="line">performance_schema_consumer_global_instrumentation<span class="operator">=</span><span class="literal">TRUE</span></span><br><span class="line"></span><br><span class="line">是否在MySQL Server启动时就开启全局表（如：mutex_instances、rwlock_instances、cond_instances、file_instances、users、hostsaccounts、socket_summary_by_event_name、file_summary_by_instance等大部分的全局对象计数统计和事件汇总统计信息表 ）的记录功能，启动之后也可以在setup_consumers表中使用UPDATE语句进行动态更新全局配置项</span><br><span class="line"></span><br><span class="line">默认值为<span class="literal">TRUE</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">performance_schema_consumer_statements_digest<span class="operator">=</span><span class="literal">TRUE</span></span><br><span class="line"></span><br><span class="line">是否在MySQL Server启动时就开启events_statements_summary_by_digest 表的记录功能，启动之后也可以在setup_consumers表中使用UPDATE语句进行动态更新digest配置项</span><br><span class="line"></span><br><span class="line">默认值为<span class="literal">TRUE</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">performance_schema_consumer_thread_instrumentation<span class="operator">=</span><span class="literal">TRUE</span></span><br><span class="line"></span><br><span class="line">是否在MySQL Server启动时就开启</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">events_xxx_summary_by_yyy_by_event_name表的记录功能，启动之后也可以在setup_consumers表中使用UPDATE语句进行动态更新线程配置项</span><br><span class="line"></span><br><span class="line">默认值为<span class="literal">TRUE</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">performance_schema_instrument[<span class="operator">=</span>name]</span><br><span class="line"></span><br><span class="line">是否在MySQL Server启动时就启用某些采集器，由于instruments配置项多达数千个，所以该配置项支持key<span class="operator">-</span><span class="keyword">value</span>模式，还支持<span class="operator">%</span>号进行通配等，如下:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">\# [<span class="operator">=</span>name]可以指定为具体的Instruments名称（但是这样如果有多个需要指定的时候，就需要使用该选项多次），也可以使用通配符，可以指定instruments相同的前缀<span class="operator">+</span>通配符，也可以使用<span class="operator">%</span>代表所有的instruments</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">\## 指定开启单个instruments</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--performance-schema-instrument= &#x27;instrument_name=value&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">\## 使用通配符指定开启多个instruments</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--performance-schema-instrument= &#x27;wait/synch/cond/%=COUNTED&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">\## 开关所有的instruments</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--performance-schema-instrument= &#x27;%=ON&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--performance-schema-instrument= &#x27;%=OFF&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">注意，这些启动选项要生效的前提是，需要设置performance_schema<span class="operator">=</span><span class="keyword">ON</span>。另外，这些启动选项虽然无法使用<span class="keyword">show</span> variables语句查看，但我们可以通过setup_instruments和setup_consumers表查询这些选项指定的值。</span><br></pre></td></tr></table></figure>
+<p>2、系统变量</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> variables <span class="keyword">like</span> <span class="string">&#x27;%performance_schema%&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">--重要的属性解释</span></span><br><span class="line"></span><br><span class="line">performance_schema<span class="operator">=</span><span class="keyword">ON</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">控制performance_schema功能的开关，要使用MySQL的performance_schema，需要在mysqld启动时启用，以启用事件收集功能</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">该参数在5.7.x之前支持performance_schema的版本中默认关闭，5.7.x版本开始默认开启</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">注意：如果mysqld在初始化performance_schema时发现无法分配任何相关的内部缓冲区，则performance_schema将自动禁用，并将performance_schema设置为OFF</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">performance_schema_digests_size<span class="operator">=</span><span class="number">10000</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">控制events_statements_summary_by_digest表中的最大行数。如果产生的语句摘要信息超过此最大值，便无法继续存入该表，此时performance_schema会增加状态变量</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line">performance_schema_events_statements_history_long_size<span class="operator">=</span><span class="number">10000</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">控制events_statements_history_long表中的最大行数，该参数控制所有会话在events_statements_history_long表中能够存放的总事件记录数，超过这个限制之后，最早的记录将被覆盖</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">全局变量，只读变量，整型值，5.6.3版本引入 * 5.6.x版本中，5.6.5及其之前的版本默认为10000，5.6.6及其之后的版本默认值为-1，通常情况下，自动计算的值都是10000 * 5.7.x版本中，默认值为-1，通常情况下，自动计算的值都是10000</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line">performance_schema_events_statements_history_size<span class="operator">=</span><span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">控制events_statements_history表中单个线程（会话）的最大行数，该参数控制单个会话在events_statements_history表中能够存放的事件记录数，超过这个限制之后，单个会话最早的记录将被覆盖</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">全局变量，只读变量，整型值，5.6.3版本引入 * 5.6.x版本中，5.6.5及其之前的版本默认为10，5.6.6及其之后的版本默认值为-1，通常情况下，自动计算的值都是10 * 5.7.x版本中，默认值为-1，通常情况下，自动计算的值都是10</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">除了statement(语句)事件之外，wait(等待)事件、state(阶段)事件、transaction(事务)事件，他们与statement事件一样都有三个参数分别进行存储限制配置，有兴趣的同学自行研究，这里不再赘述</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line">performance_schema_max_digest_length<span class="operator">=</span><span class="number">1024</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">用于控制标准化形式的SQL语句文本在存入performance_schema时的限制长度，该变量与max_digest_length变量相关(max_digest_length变量含义请自行查阅相关资料)</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">全局变量，只读变量，默认值1024字节，整型值，取值范围0~1048576</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line">performance_schema_max_sql_text_length<span class="operator">=</span><span class="number">1024</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">控制存入events_statements_current，events_statements_history和events_statements_history_long语句事件表中的SQL_TEXT列的最大SQL长度字节数。 超出系统变量performance_schema_max_sql_text_length的部分将被丢弃，不会记录，一般情况下不需要调整该参数，除非被截断的部分与其他SQL比起来有很大差异</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">全局变量，只读变量，整型值，默认值为1024字节，取值范围为0~1048576，5.7.6版本引入</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">降低系统变量performance_schema_max_sql_text_length值可以减少内存使用，但如果汇总的SQL中，被截断部分有较大差异，会导致没有办法再对这些有较大差异的SQL进行区分。 增加该系统变量值会增加内存使用，但对于汇总SQL来讲可以更精准地区分不同的部分。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="5、重要配置表的相关说明">5、重要配置表的相关说明</h3>
+<p>​       配置表之间存在相互关联关系，按照配置影响的先后顺序，可添加为</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">performance_timers表中记录了server中有哪些可用的事件计时器</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">字段解释：</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    timer_name:表示可用计时器名称，CYCLE是基于CPU周期计数器的定时器</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    timer_frequency:表示每秒钟对应的计时器单位的数量,CYCLE计时器的换算值与CPU的频率相关、</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    timer_resolution:计时器精度值，表示在每个计时器被调用时额外增加的值</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    timer_overhead:表示在使用定时器获取事件时开销的最小周期值</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> performance_timers;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">setup_timers表中记录当前使用的事件计时器信息</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">字段解释：</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    name:计时器类型，对应某个事件类别</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    timer_name:计时器类型名称</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> setup_timers;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">setup_consumers表中列出了consumers可配置列表项</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">字段解释：</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    NAME：consumers配置名称</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    ENABLED：consumers是否启用，有效值为YES或NO，此列可以使用UPDATE语句修改。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> setup_consumers;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">setup_instruments 表列出了instruments 列表配置项，即代表了哪些事件支持被收集：</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">字段解释：</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    NAME：instruments名称，instruments名称可能具有多个部分并形成层次结构</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    ENABLED：instrumetns是否启用，有效值为YES或NO，此列可以使用UPDATE语句修改。如果设置为NO，则这个instruments不会被执行，不会产生任何的事件信息</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    TIMED：instruments是否收集时间信息，有效值为YES或NO，此列可以使用UPDATE语句修改，如果设置为NO，则这个instruments不会收集时间信息</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> setup_instruments;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">setup_actors表的初始内容是匹配任何用户和主机，因此对于所有前台线程，默认情况下启用监视和历史事件收集功能</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">字段解释：</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    HOST：与grant语句类似的主机名，一个具体的字符串名字，或使用“％”表示“任何主机”</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    USER：一个具体的字符串名称，或使用“％”表示“任何用户”</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    ROLE：当前未使用，MySQL 8.0中才启用角色功能</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    ENABLED：是否启用与HOST，USER，ROLE匹配的前台线程的监控功能，有效值为：YES或NO</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    HISTORY：是否启用与HOST， USER，ROLE匹配的前台线程的历史事件记录功能，有效值为：YES或NO</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> setup_actors;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">setup_objects表控制performance_schema是否监视特定对象。默认情况下，此表的最大行数为100行。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">字段解释：</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    OBJECT_TYPE：instruments类型，有效值为：“EVENT”（事件调度器事件）、“FUNCTION”（存储函数）、“PROCEDURE”（存储过程）、“TABLE”（基表）、“TRIGGER”（触发器），TABLE对象类型的配置会影响表I/O事件（wait/io/table/sql/handler instrument）和表锁事件（wait/lock/table/sql/handler instrument）的收集</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    OBJECT_SCHEMA：某个监视类型对象涵盖的数据库名称，一个字符串名称，或“％”(表示“任何数据库”)</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    OBJECT_NAME：某个监视类型对象涵盖的表名，一个字符串名称，或“％”(表示“任何数据库内的对象”)</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    ENABLED：是否开启对某个类型对象的监视功能，有效值为：YES或NO。此列可以修改</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    TIMED：是否开启对某个类型对象的时间收集功能，有效值为：YES或NO，此列可以修改</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> setup_objects;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">threads表对于每个server线程生成一行包含线程相关的信息，</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">字段解释：</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    THREAD_ID：线程的唯一标识符（ID）</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    NAME：与server中的线程检测代码相关联的名称(注意，这里不是instruments名称)</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    TYPE：线程类型，有效值为：FOREGROUND、BACKGROUND。分别表示前台线程和后台线程</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    PROCESSLIST_ID：对应INFORMATION_SCHEMA.PROCESSLIST表中的ID列。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    PROCESSLIST_USER：与前台线程相关联的用户名，对于后台线程为NULL。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    PROCESSLIST_HOST：与前台线程关联的客户端的主机名，对于后台线程为NULL。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    PROCESSLIST_DB：线程的默认数据库，如果没有，则为NULL。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    PROCESSLIST_COMMAND：对于前台线程，该值代表着当前客户端正在执行的command类型，如果是sleep则表示当前会话处于空闲状态</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    PROCESSLIST_TIME：当前线程已处于当前线程状态的持续时间（秒）</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    PROCESSLIST_STATE：表示线程正在做什么事情。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    PROCESSLIST_INFO：线程正在执行的语句，如果没有执行任何语句，则为NULL。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    PARENT_THREAD_ID：如果这个线程是一个子线程（由另一个线程生成），那么该字段显示其父线程ID</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    ROLE：暂未使用</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    INSTRUMENTED：线程执行的事件是否被检测。有效值：YES、NO </span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    HISTORY：是否记录线程的历史事件。有效值：YES、NO * </span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">​    THREAD_OS_ID：由操作系统层定义的线程或任务标识符（ID）：</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> threads</span><br></pre></td></tr></table></figure>
+<p>注意：在performance_schema库中还包含了很多其他的库和表，能对数据库的性能做完整的监控，大家需要参考官网详细了解。</p>
+<h3 id="6、performance-schema实践操作">6、performance_schema实践操作</h3>
+<p>​       基本了解了表的相关信息之后，可以通过这些表进行实际的查询操作来进行实际的分析。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--1、哪类的SQL执行最多？</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> DIGEST_TEXT,COUNT_STAR,FIRST_SEEN,LAST_SEEN <span class="keyword">FROM</span> events_statements_summary_by_digest <span class="keyword">ORDER</span> <span class="keyword">BY</span> COUNT_STAR <span class="keyword">DESC</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--2、哪类SQL的平均响应时间最多？</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> DIGEST_TEXT,AVG_TIMER_WAIT <span class="keyword">FROM</span> events_statements_summary_by_digest <span class="keyword">ORDER</span> <span class="keyword">BY</span> COUNT_STAR <span class="keyword">DESC</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--3、哪类SQL排序记录数最多？</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> DIGEST_TEXT,SUM_SORT_ROWS <span class="keyword">FROM</span> events_statements_summary_by_digest <span class="keyword">ORDER</span> <span class="keyword">BY</span> COUNT_STAR <span class="keyword">DESC</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--4、哪类SQL扫描记录数最多？</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> DIGEST_TEXT,SUM_ROWS_EXAMINED <span class="keyword">FROM</span> events_statements_summary_by_digest <span class="keyword">ORDER</span> <span class="keyword">BY</span> COUNT_STAR <span class="keyword">DESC</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--5、哪类SQL使用临时表最多？</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> DIGEST_TEXT,SUM_CREATED_TMP_TABLES,SUM_CREATED_TMP_DISK_TABLES <span class="keyword">FROM</span> events_statements_summary_by_digest <span class="keyword">ORDER</span> <span class="keyword">BY</span> COUNT_STAR <span class="keyword">DESC</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--6、哪类SQL返回结果集最多？</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> DIGEST_TEXT,SUM_ROWS_SENT <span class="keyword">FROM</span> events_statements_summary_by_digest <span class="keyword">ORDER</span> <span class="keyword">BY</span> COUNT_STAR <span class="keyword">DESC</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--7、哪个表物理IO最多？</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> file_name,event_name,SUM_NUMBER_OF_BYTES_READ,SUM_NUMBER_OF_BYTES_WRITE <span class="keyword">FROM</span> file_summary_by_instance <span class="keyword">ORDER</span> <span class="keyword">BY</span> SUM_NUMBER_OF_BYTES_READ <span class="operator">+</span> SUM_NUMBER_OF_BYTES_WRITE <span class="keyword">DESC</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--8、哪个表逻辑IO最多？</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> object_name,COUNT_READ,COUNT_WRITE,COUNT_FETCH,SUM_TIMER_WAIT <span class="keyword">FROM</span> table_io_waits_summary_by_table <span class="keyword">ORDER</span> <span class="keyword">BY</span> sum_timer_wait <span class="keyword">DESC</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--9、哪个索引访问最多？</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> OBJECT_NAME,INDEX_NAME,COUNT_FETCH,COUNT_INSERT,COUNT_UPDATE,COUNT_DELETE <span class="keyword">FROM</span> table_io_waits_summary_by_index_usage <span class="keyword">ORDER</span> <span class="keyword">BY</span> SUM_TIMER_WAIT <span class="keyword">DESC</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--10、哪个索引从来没有用过？</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> OBJECT_SCHEMA,OBJECT_NAME,INDEX_NAME <span class="keyword">FROM</span> table_io_waits_summary_by_index_usage <span class="keyword">WHERE</span> INDEX_NAME <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">AND</span> COUNT_STAR <span class="operator">=</span> <span class="number">0</span> <span class="keyword">AND</span> OBJECT_SCHEMA <span class="operator">&lt;&gt;</span> <span class="string">&#x27;mysql&#x27;</span> <span class="keyword">ORDER</span> <span class="keyword">BY</span> OBJECT_SCHEMA,OBJECT_NAME;</span><br><span class="line"></span><br><span class="line"><span class="comment">--11、哪个等待事件消耗时间最多？</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> EVENT_NAME,COUNT_STAR,SUM_TIMER_WAIT,AVG_TIMER_WAIT <span class="keyword">FROM</span> events_waits_summary_global_by_event_name <span class="keyword">WHERE</span> event_name <span class="operator">!=</span> <span class="string">&#x27;idle&#x27;</span> <span class="keyword">ORDER</span> <span class="keyword">BY</span> SUM_TIMER_WAIT <span class="keyword">DESC</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--12-1、剖析某条SQL的执行情况，包括statement信息，stege信息，wait信息</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> EVENT_ID,sql_text <span class="keyword">FROM</span> events_statements_history <span class="keyword">WHERE</span> sql_text <span class="keyword">LIKE</span> <span class="string">&#x27;%count(*)%&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">--12-2、查看每个阶段的时间消耗</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> event_id,EVENT_NAME,SOURCE,TIMER_END <span class="operator">-</span> TIMER_START <span class="keyword">FROM</span> events_stages_history_long <span class="keyword">WHERE</span> NESTING_EVENT_ID <span class="operator">=</span> <span class="number">1553</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">--12-3、查看每个阶段的锁等待情况</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> event_id,event_name,source,timer_wait,object_name,index_name,operation,nesting_event_id <span class="keyword">FROM</span> events_waits_history_longWHERE nesting_event_id <span class="operator">=</span> <span class="number">1553</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="使用show-processlist查看连接的线程个数，来观察是否有大量线程处于不正常的状态或者其他不正常的特性">使用<code>show processlist</code>查看连接的线程个数，来观察是否有大量线程处于不正常的状态或者其他不正常的特性</h2>
+<h1>schema与数据类型优化</h1>
+<p><img src="/2021/mysql-tuning01/image-20210612140642506.png" alt="image-20210612140642506"></p>
+<p>存储文件：数据文件的组织形式，数据和索引是否存在一个文件</p>
+<p><img src="/2021/mysql-tuning01/image-20210612151009879.png" alt="image-20210612151009879"></p>
+<h1>执行计划</h1>
+<p>在企业的应用场景中，为了知道优化SQL语句的执行，需要查看SQL语句的具体执行过程，以加快SQL语句的执行效率。</p>
+<p>可以使用explain+SQL语句来模拟优化器执行SQL查询语句，从而知道mysql是如何处理sql语句的。</p>
+<p>官网地址： <a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/5.5/en/explain-output.html">https://dev.mysql.com/doc/refman/5.5/en/explain-output.html</a></p>
+<h2 id="1、执行计划中包含的信息">1、执行计划中包含的信息</h2>
+<p>|    Column     |                    Meaning                     |</p>
+<p>| :-----------: | :--------------------------------------------: |</p>
+<p>|      id       |            The <code>SELECT</code> identifier             |</p>
+<p>|  select_type  |               The <code>SELECT</code> type                |</p>
+<p>|     table     |          The table for the output row          |</p>
+<p>|  partitions   |            The matching partitions             |</p>
+<p>|     type      |                 The join type                  |</p>
+<p>| possible_keys |         The possible indexes to choose         |</p>
+<p>|      key      |           The index actually chosen            |</p>
+<p>|    key_len    |          The length of the chosen key          |</p>
+<p>|      ref      |       The columns compared to the index        |</p>
+<p>|     rows      |        Estimate of rows to be examined         |</p>
+<p>|   filtered    | Percentage of rows filtered by table condition |</p>
+<p>|     extra     |             Additional information             |</p>
+<h3 id="id"><code>id</code></h3>
+<p>select查询的序列号，包含一组数字，表示查询中执行select子句或者操作表的顺序</p>
+<p>id号分为三种情况：</p>
+<p>1、如果id相同，那么执行顺序从上到下</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp e <span class="keyword">join</span> dept d <span class="keyword">on</span> e.deptno <span class="operator">=</span> d.deptno <span class="keyword">join</span> salgrade sg <span class="keyword">on</span> e.sal <span class="keyword">between</span> sg.losal <span class="keyword">and</span> sg.hisal;</span><br></pre></td></tr></table></figure>
+<p>2、如果id不同，如果是子查询，id的序号会递增，id值越大优先级越高，越先被执行</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp e <span class="keyword">where</span> e.deptno <span class="keyword">in</span> (<span class="keyword">select</span> d.deptno <span class="keyword">from</span> dept d <span class="keyword">where</span> d.dname <span class="operator">=</span> <span class="string">&#x27;SALES&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>3、id相同和不同的，同时存在：相同的可以认为是一组，从上往下顺序执行，在所有组中，id值越大，优先级越高，越先执行</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp e <span class="keyword">join</span> dept d <span class="keyword">on</span> e.deptno <span class="operator">=</span> d.deptno <span class="keyword">join</span> salgrade sg <span class="keyword">on</span> e.sal <span class="keyword">between</span> sg.losal <span class="keyword">and</span> sg.hisal <span class="keyword">where</span> e.deptno <span class="keyword">in</span> (<span class="keyword">select</span> d.deptno <span class="keyword">from</span> dept d <span class="keyword">where</span> d.dname <span class="operator">=</span> <span class="string">&#x27;SALES&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="select-type"><code>select_type</code></h3>
+<p>主要用来分辨查询的类型，是普通查询还是联合查询还是子查询</p>
+<p>| <code>select_type</code> Value  |                           Meaning                            |</p>
+<p>| :------------------: | :----------------------------------------------------------: |</p>
+<p>|        SIMPLE        |        Simple SELECT (not using UNION or subqueries)         |</p>
+<p>|       PRIMARY        |                       Outermost SELECT                       |</p>
+<p>|        UNION         |         Second or later SELECT statement in a UNION          |</p>
+<p>|   DEPENDENT UNION    | Second or later SELECT statement in a UNION, dependent on outer query |</p>
+<p>|     UNION RESULT     |                      Result of a UNION.                      |</p>
+<p>|       SUBQUERY       |                   First SELECT in subquery                   |</p>
+<p>|  DEPENDENT SUBQUERY  |      First SELECT in subquery, dependent on outer query      |</p>
+<p>|       DERIVED        |                        Derived table                         |</p>
+<p>| UNCACHEABLE SUBQUERY | A subquery for which the result cannot be cached and must be re-evaluated for each row of the outer query |</p>
+<p>|  UNCACHEABLE UNION   | The second or later select in a UNION that belongs to an uncacheable subquery (see UNCACHEABLE SUBQUERY) |</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--sample:简单的查询，不包含子查询和union</span></span><br><span class="line"></span><br><span class="line">explain <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--primary:查询中若包含任何复杂的子查询，最外层查询则被标记为Primary</span></span><br><span class="line"></span><br><span class="line">explain <span class="keyword">select</span> staname,ename supname <span class="keyword">from</span> (<span class="keyword">select</span> ename staname,mgr <span class="keyword">from</span> emp) t <span class="keyword">join</span> emp <span class="keyword">on</span> t.mgr<span class="operator">=</span>emp.empno ;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--union:若第二个select出现在union之后，则被标记为union</span></span><br><span class="line"></span><br><span class="line">explain <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">where</span> deptno <span class="operator">=</span> <span class="number">10</span> <span class="keyword">union</span> <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">where</span> sal <span class="operator">&gt;</span><span class="number">2000</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--dependent union:跟union类似，此处的depentent表示union或union all联合而成的结果会受外部表影响</span></span><br><span class="line"></span><br><span class="line">explain <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp e <span class="keyword">where</span> e.empno  <span class="keyword">in</span> ( <span class="keyword">select</span> empno <span class="keyword">from</span> emp <span class="keyword">where</span> deptno <span class="operator">=</span> <span class="number">10</span> <span class="keyword">union</span> <span class="keyword">select</span> empno <span class="keyword">from</span> emp <span class="keyword">where</span> sal <span class="operator">&gt;</span><span class="number">2000</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--union result:从union表获取结果的select</span></span><br><span class="line"></span><br><span class="line">explain <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">where</span> deptno <span class="operator">=</span> <span class="number">10</span> <span class="keyword">union</span> <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">where</span> sal <span class="operator">&gt;</span><span class="number">2000</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--subquery:在select或者where列表中包含子查询</span></span><br><span class="line"></span><br><span class="line">explain <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">where</span> sal <span class="operator">&gt;</span> (<span class="keyword">select</span> <span class="built_in">avg</span>(sal) <span class="keyword">from</span> emp) ;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--dependent subquery:subquery的子查询要受到外部表查询的影响</span></span><br><span class="line"></span><br><span class="line">explain <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp e <span class="keyword">where</span> e.deptno <span class="keyword">in</span> (<span class="keyword">select</span> <span class="keyword">distinct</span> deptno <span class="keyword">from</span> dept);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--DERIVED: from子句中出现的子查询，也叫做派生类，</span></span><br><span class="line"></span><br><span class="line">explain <span class="keyword">select</span> staname,ename supname <span class="keyword">from</span> (<span class="keyword">select</span> ename staname,mgr <span class="keyword">from</span> emp) t <span class="keyword">join</span> emp <span class="keyword">on</span> t.mgr<span class="operator">=</span>emp.empno ;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--UNCACHEABLE SUBQUERY：表示使用子查询的结果不能被缓存</span></span><br><span class="line"></span><br><span class="line"> explain <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">where</span> empno <span class="operator">=</span> (<span class="keyword">select</span> empno <span class="keyword">from</span> emp <span class="keyword">where</span> deptno<span class="operator">=</span>@<span class="variable">@sort</span>_buffer_size);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--uncacheable union:表示union的查询结果不能被缓存：sql语句未验证</span></span><br></pre></td></tr></table></figure>
+<h3 id="table"><code>table</code></h3>
+<p>对应行正在访问哪一个表，表名或者别名，可能是临时表或者union合并结果集</p>
+<p>1、如果是具体的表名，则表明从实际的物理表中获取数据，当然也可以是表的别名</p>
+<p>2、表名是derivedN的形式，表示使用了id为N的查询产生的衍生表</p>
+<p>3、当有union result的时候，表名是union n1,n2等的形式，n1,n2表示参与union的id</p>
+<h3 id="type"><code>type</code></h3>
+<p>type显示的是访问类型，访问类型表示我是以何种方式去访问我们的数据，最容易想的是全表扫描，直接暴力的遍历一张表去寻找需要的数据，效率非常低下，访问的类型有很多，效率从最好到最坏依次是：</p>
+<p>system &gt; const &gt; eq_ref &gt; ref &gt; fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL</p>
+<p>一般情况下，得保证查询至少达到range级别，最好能达到ref</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--all:全表扫描，一般情况下出现这样的sql语句而且数据量比较大的话那么就需要进行优化。</span></span><br><span class="line"></span><br><span class="line">explain <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--index：全索引扫描这个比all的效率要好，主要有两种情况，一种是当前的查询时覆盖索引，即我们需要的数据在索引中就可以索取，或者是使用了索引进行排序，这样就避免数据的重排序</span></span><br><span class="line"></span><br><span class="line">explain  <span class="keyword">select</span> empno <span class="keyword">from</span> emp;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--range：表示利用索引查询的时候限制了范围，在指定范围内进行查询，这样避免了index的全索引扫描，适用的操作符： =, &lt;&gt;, &gt;, &gt;=, &lt;, &lt;=, IS NULL, BETWEEN, LIKE, or IN() </span></span><br><span class="line"></span><br><span class="line">explain <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">where</span> empno <span class="keyword">between</span> <span class="number">7000</span> <span class="keyword">and</span> <span class="number">7500</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--index_subquery：利用索引来关联子查询，不再扫描全表</span></span><br><span class="line"></span><br><span class="line">explain <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">where</span> emp.job <span class="keyword">in</span> (<span class="keyword">select</span> job <span class="keyword">from</span> t_job);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--unique_subquery:该连接类型类似与index_subquery,使用的是唯一索引</span></span><br><span class="line"></span><br><span class="line"> explain <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp e <span class="keyword">where</span> e.deptno <span class="keyword">in</span> (<span class="keyword">select</span> <span class="keyword">distinct</span> deptno <span class="keyword">from</span> dept);</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">--index_merge：在查询过程中需要多个索引组合使用，没有模拟出来</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--ref_or_null：对于某个字段即需要关联条件，也需要null值的情况下，查询优化器会选择这种访问方式</span></span><br><span class="line"></span><br><span class="line">explain <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp e <span class="keyword">where</span>  e.mgr <span class="keyword">is</span> <span class="keyword">null</span> <span class="keyword">or</span> e.mgr<span class="operator">=</span><span class="number">7369</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--ref：使用了非唯一性索引进行数据的查找</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">create</span> index idx_3 <span class="keyword">on</span> emp(deptno);</span><br><span class="line"></span><br><span class="line"> explain <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp e,dept d <span class="keyword">where</span> e.deptno <span class="operator">=</span>d.deptno;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--eq_ref ：使用唯一性索引进行数据查找</span></span><br><span class="line"></span><br><span class="line">explain <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp,emp2 <span class="keyword">where</span> emp.empno <span class="operator">=</span> emp2.empno;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--const：这个表至多有一个匹配行，</span></span><br><span class="line"></span><br><span class="line">explain <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">where</span> empno <span class="operator">=</span> <span class="number">7369</span>;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">--system：表只有一行记录（等于系统表），这是const类型的特例，平时不会出现</span></span><br></pre></td></tr></table></figure>
+<h3 id="possible-keys"><code>possible_keys</code></h3>
+<p>显示可能应用在这张表中的索引，一个或多个，查询涉及到的字段上若存在索引，则该索引将被列出，但不一定被查询实际使用</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp,dept <span class="keyword">where</span> emp.deptno <span class="operator">=</span> dept.deptno <span class="keyword">and</span> emp.deptno <span class="operator">=</span> <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="key"><code>key</code></h3>
+<p>实际使用的索引，如果为null，则没有使用索引，查询中若使用了覆盖索引，则该索引和查询的select字段重叠。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp,dept <span class="keyword">where</span> emp.deptno <span class="operator">=</span> dept.deptno <span class="keyword">and</span> emp.deptno <span class="operator">=</span> <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="key-len"><code>key_len</code></h3>
+<p>表示索引中使用的字节数，可以通过key_len计算查询中使用的索引长度，在不损失精度的情况下长度越短越好。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp,dept <span class="keyword">where</span> emp.deptno <span class="operator">=</span> dept.deptno <span class="keyword">and</span> emp.deptno <span class="operator">=</span> <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="ref"><code>ref</code></h3>
+<p>显示索引的哪一列被使用了，如果可能的话，是一个常数</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp,dept <span class="keyword">where</span> emp.deptno <span class="operator">=</span> dept.deptno <span class="keyword">and</span> emp.deptno <span class="operator">=</span> <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="rows"><code>rows</code></h3>
+<p>根据表的统计信息及索引使用情况，大致估算出找出所需记录需要读取的行数，此参数很重要，直接反应的sql找了多少数据，在完成目的的情况下越少越好</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp;</span><br></pre></td></tr></table></figure>
+<h3 id="extra"><code>extra</code></h3>
+<p>包含额外的信息。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">--using filesort:说明mysql无法利用索引进行排序，只能利用排序算法进行排序，会消耗额外的位置</span></span><br><span class="line"></span><br><span class="line">explain <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">order</span> <span class="keyword">by</span> sal;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--using temporary:建立临时表来保存中间结果，查询完成之后把临时表删除</span></span><br><span class="line"></span><br><span class="line">explain <span class="keyword">select</span> ename,<span class="built_in">count</span>(<span class="operator">*</span>) <span class="keyword">from</span> emp <span class="keyword">where</span> deptno <span class="operator">=</span> <span class="number">10</span> <span class="keyword">group</span> <span class="keyword">by</span> ename;</span><br><span class="line"></span><br><span class="line"><span class="comment">--using index:这个表示当前的查询时覆盖索引的，直接从索引中读取数据，而不用访问数据表。如果同时出现using where 表名索引被用来执行索引键值的查找，如果没有，表面索引被用来读取数据，而不是真的查找</span></span><br><span class="line"></span><br><span class="line">explain <span class="keyword">select</span> deptno,<span class="built_in">count</span>(<span class="operator">*</span>) <span class="keyword">from</span> emp <span class="keyword">group</span> <span class="keyword">by</span> deptno limit <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--using where:使用where进行条件过滤</span></span><br><span class="line"></span><br><span class="line">explain <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> t_user <span class="keyword">where</span> id <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--using join buffer:使用连接缓存，情况没有模拟出来</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--impossible where：where语句的结果总是false</span></span><br><span class="line"></span><br><span class="line">explain <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">where</span> empno <span class="operator">=</span> <span class="number">7469</span>;</span><br></pre></td></tr></table></figure>
+<hr>
+<h1>附</h1>
+<p>索引中的名词</p>
+<p>回表：</p>
+<p>覆盖索引</p>
+<p>组合索引</p>
+<p>最左匹配</p>
+<p>数据库设计的三范式</p>
+<p>为了解决什么问题？减少数据冗余</p>
+<p>1、每列不可再分，保持原子性</p>
+<p><img src="/2021/mysql-tuning01/image-20210612105505608.png" alt="image-20210612105505608"></p>
+<p><img src="/2021/mysql-tuning01/image-20210612110610468.png" alt="image-20210612110610468"></p>
+<p>2、第二范式：</p>
+<p>确保每列都与主键相关：如果一些列可以单独的构成一些实体，跟主键不是强关联，可以把这些抽出来</p>
+<p><img src="/2021/mysql-tuning01/image-20210612113501567.png" alt="image-20210612113501567"></p>
+<p><img src="/2021/mysql-tuning01/image-20210612133940968.png" alt="image-20210612133940968"></p>
+<p>3、第三范式</p>
+<p><img src="/2021/mysql-tuning01/image-20210612134715581.png" alt="image-20210612134715581"></p>
+<p><img src="/2021/mysql-tuning01/image-20210612134906159.png" alt="image-20210612134906159"></p>
+<p>总结：</p>
+<p><img src="/2021/mysql-tuning01/image-20210612135011891.png" alt="image-20210612135011891"></p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/2021/kafka01/" data-toggle="tooltip" data-placement="top" title="kafka初始、架构模型、角色功能梳理">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/2021/gc-and-gctuning/" data-toggle="tooltip" data-placement="top" title="垃圾回收及JVM调优">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=mysql调优（一）&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2021/mysql-tuning01/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'a00494876d6f5f4bcbfd',
+      clientSecret: '33d3d0be81052a26f5a3535733b8b7854628564f',
+      repo: 'shifpeng.github.io',
+      owner: 'shifpeng',
+      admin: 'shifpeng',
+      id: 'Tue Jun 01 2021 16:00:54 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">性能监控</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8show-profile-%E6%9F%A5%E8%AF%A2%E5%89%96%E6%9E%90%E5%B7%A5%E5%85%B7"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">使用show profile 查询剖析工具</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8-performance-schema%E6%9D%A5%E6%9B%B4%E5%8A%A0%E5%AE%B9%E6%98%93%E7%9A%84%E7%9B%91%E6%8E%A7Mysql"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">使用 performance schema来更加容易的监控Mysql</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#0%E3%80%81performance-schema%E7%9A%84%E4%BB%8B%E7%BB%8D"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">0、performance_schema的介绍</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81performance-schema%E5%85%A5%E9%97%A8"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">1、performance schema入门</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81performance-schema%E8%A1%A8%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-nav-number">1.2.3.</span> <span class="toc-nav-text">2、performance_schema表的分类</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3%E3%80%81performance-schema%E7%9A%84%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8"><span class="toc-nav-number">1.2.4.</span> <span class="toc-nav-text">3、performance_schema的简单配置与使用</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4%E3%80%81%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E9%A1%B9%E7%9A%84%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E"><span class="toc-nav-number">1.2.5.</span> <span class="toc-nav-text">4、常用配置项的参数说明</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5%E3%80%81%E9%87%8D%E8%A6%81%E9%85%8D%E7%BD%AE%E8%A1%A8%E7%9A%84%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E"><span class="toc-nav-number">1.2.6.</span> <span class="toc-nav-text">5、重要配置表的相关说明</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6%E3%80%81performance-schema%E5%AE%9E%E8%B7%B5%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">1.2.7.</span> <span class="toc-nav-text">6、performance_schema实践操作</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8show-processlist%E6%9F%A5%E7%9C%8B%E8%BF%9E%E6%8E%A5%E7%9A%84%E7%BA%BF%E7%A8%8B%E4%B8%AA%E6%95%B0%EF%BC%8C%E6%9D%A5%E8%A7%82%E5%AF%9F%E6%98%AF%E5%90%A6%E6%9C%89%E5%A4%A7%E9%87%8F%E7%BA%BF%E7%A8%8B%E5%A4%84%E4%BA%8E%E4%B8%8D%E6%AD%A3%E5%B8%B8%E7%9A%84%E7%8A%B6%E6%80%81%E6%88%96%E8%80%85%E5%85%B6%E4%BB%96%E4%B8%8D%E6%AD%A3%E5%B8%B8%E7%9A%84%E7%89%B9%E6%80%A7"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">使用show processlist查看连接的线程个数，来观察是否有大量线程处于不正常的状态或者其他不正常的特性</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">schema与数据类型优化</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">执行计划</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1%E3%80%81%E6%89%A7%E8%A1%8C%E8%AE%A1%E5%88%92%E4%B8%AD%E5%8C%85%E5%90%AB%E7%9A%84%E4%BF%A1%E6%81%AF"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">1、执行计划中包含的信息</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#id"><span class="toc-nav-number">3.1.1.</span> <span class="toc-nav-text">id</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#select-type"><span class="toc-nav-number">3.1.2.</span> <span class="toc-nav-text">select_type</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#table"><span class="toc-nav-number">3.1.3.</span> <span class="toc-nav-text">table</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#type"><span class="toc-nav-number">3.1.4.</span> <span class="toc-nav-text">type</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#possible-keys"><span class="toc-nav-number">3.1.5.</span> <span class="toc-nav-text">possible_keys</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#key"><span class="toc-nav-number">3.1.6.</span> <span class="toc-nav-text">key</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#key-len"><span class="toc-nav-number">3.1.7.</span> <span class="toc-nav-text">key_len</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ref"><span class="toc-nav-number">3.1.8.</span> <span class="toc-nav-text">ref</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#rows"><span class="toc-nav-number">3.1.9.</span> <span class="toc-nav-text">rows</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#extra"><span class="toc-nav-number">3.1.10.</span> <span class="toc-nav-text">extra</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">附</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+            
+            <a class="tag" href="/tags/#Mysql" title="Mysql">Mysql</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://cuiqingcai.com/" target="_blank">静 觅 崔庆才</a>
+          </li>
+          
+          <li>
+            <a href="http://www.52nlp.cn/" target="_blank">我爱自然语言处理</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cnblogs.com/Steven-shi/" target="_blank">博客园 石福鹏</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/shifpeng">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Steven
+          2021
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://shifpeng.cn">Steven</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/mouseclick.js"  content='' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "shifpeng";
+    let ghPages = gh + ".github.io";
+    let pagePath = "2021/mysql-tuning01/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://www.shifpeng.cn/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

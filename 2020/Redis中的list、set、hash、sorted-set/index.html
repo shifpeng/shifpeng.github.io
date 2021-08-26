@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="人最大的修养就是知人不评人"/>
+  <meta name="keyword" content="Java,Steven,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://www.shifpeng.cn/2020/Redis中的list、set、hash、sorted-set/">
+  <title>
+    
+      Redis中的list、set、hash、sorted_set - Steven | java
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'StevenBlog/community'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">石福鹏</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+              
+              <a class="tag" href="/tags/#Redis" title="Redis">Redis</a>
+              
+              <a class="tag" href="/tags/#重学Redis" title="重学Redis">重学Redis</a>
+              
+            </div>
+            <h1>Redis中的list、set、hash、sorted_set</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by 石福鹏 on
+              2020-03-18
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">17</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">3.6k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h2 id="一、List链表">一、<code>List</code>链表</h2>
+<p>list是一个链表，链表分为单向链表，双向链表，它是一个线性的。</p>
+<p>既能从前面找到我们想到的元素，也能总后面往前找，这叫双向的</p>
+<p>从最后一个能回到第一个，从第一个还能直接到最后一个，这叫有环。一般无环的双向链表，这叫做链表。</p>
+<p>Redis的key，包括两个东西，一个是<code>head</code>头指针，一个是<code>tail</code>尾指针，<code>head</code>可以指向到<code>value</code>链表中的第一个元素，<code>tail</code>可以指向到链表的最后一个元素</p>
+<blockquote>
+<p>好处：当value的类型是list的时候，可以通过这两个属性快速的访问value链表中的第一个元素和最后一个元素</p>
+</blockquote>
+<p><img src="/2020/Redis%E4%B8%AD%E7%9A%84list%E3%80%81set%E3%80%81hash%E3%80%81sorted-set/image-20210318142604104.png" alt="image-20210318142604104"></p>
+<p>通过Redis客户端提供的help,查看相关的命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; help @list</span><br><span class="line"></span><br><span class="line">  BLPOP key [key ...] timeout</span><br><span class="line">  summary: Remove and get the first element in a list, or block until one is available</span><br><span class="line">  since: 2.0.0</span><br><span class="line"></span><br><span class="line">  BRPOP key [key ...] timeout</span><br><span class="line">  summary: Remove and get the last element in a list, or block until one is available</span><br><span class="line">  since: 2.0.0</span><br><span class="line"></span><br><span class="line">  BRPOPLPUSH source destination timeout</span><br><span class="line">  summary: Pop an element from a list, push it to another list and return it; or block until one is available</span><br><span class="line">  since: 2.2.0</span><br><span class="line"></span><br><span class="line">  LINDEX key index</span><br><span class="line">  summary: Get an element from a list by its index</span><br><span class="line">  since: 1.0.0</span><br><span class="line"></span><br><span class="line">  LINSERT key BEFORE|AFTER pivot element</span><br><span class="line">  summary: Insert an element before or after another element in a list</span><br><span class="line">  since: 2.2.0</span><br><span class="line"></span><br><span class="line">  LLEN key</span><br><span class="line">  summary: Get the length of a list</span><br><span class="line">  since: 1.0.0</span><br><span class="line"></span><br><span class="line">  LPOP key</span><br><span class="line">  summary: Remove and get the first element in a list</span><br><span class="line">  since: 1.0.0</span><br><span class="line"></span><br><span class="line">  LPUSH key element [element ...]</span><br><span class="line">  summary: Prepend one or multiple elements to a list</span><br><span class="line">  since: 1.0.0</span><br><span class="line"></span><br><span class="line">  LPUSHX key element [element ...]</span><br><span class="line">  summary: Prepend an element to a list, only if the list exists</span><br><span class="line">  since: 2.2.0</span><br><span class="line"></span><br><span class="line">  LRANGE key start stop</span><br><span class="line">  summary: Get a range of elements from a list</span><br><span class="line">  since: 1.0.0</span><br><span class="line"></span><br><span class="line">  LREM key count element</span><br><span class="line">  summary: Remove elements from a list</span><br><span class="line">  since: 1.0.0</span><br><span class="line"></span><br><span class="line">  LSET key index element</span><br><span class="line">  summary: Set the value of an element in a list by its index</span><br><span class="line">  since: 1.0.0</span><br><span class="line"></span><br><span class="line">  LTRIM key start stop</span><br><span class="line">  summary: Trim a list to the specified range</span><br><span class="line">  since: 1.0.0</span><br><span class="line">  RPOP key</span><br><span class="line">  summary: Remove and get the last element in a list</span><br><span class="line">  since: 1.0.0</span><br><span class="line"></span><br><span class="line">  RPOPLPUSH source destination</span><br><span class="line">  summary: Remove the last element in a list, prepend it to another list and return it</span><br><span class="line">  since: 1.2.0</span><br><span class="line"></span><br><span class="line">  RPUSH key element [element ...]</span><br><span class="line">  summary: Append one or multiple elements to a list</span><br><span class="line">  since: 1.0.0</span><br><span class="line"></span><br><span class="line">  RPUSHX key element [element ...]</span><br><span class="line">  summary: Append an element to a list, only if the list exists</span><br><span class="line">  since: 2.2.0</span><br><span class="line"></span><br><span class="line">127.0.0.1:6380&gt; </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="1、lpush、rpush、lpop、LRANGE等">1、<code>lpush</code>、<code>rpush</code>、<code>lpop</code>、<code>LRANGE</code>等</h3>
+<p><code>lpush</code>从左边开往里面添加元素</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; lpush k1 a b c d e f </span><br><span class="line">6</span><br><span class="line"><span class="meta">#</span><span class="bash"> 存储顺序：f e d c b a</span> </span><br></pre></td></tr></table></figure>
+<p><code>rpush</code>从右边追加元素</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; rpush k2 a b c d e f </span><br><span class="line">6</span><br><span class="line"><span class="meta">#</span><span class="bash"> 存储顺序：a b c d e f</span> </span><br></pre></td></tr></table></figure>
+<p><code>lpop</code>，从左边弹出一个元素</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; lpop k1</span><br><span class="line">f</span><br><span class="line">127.0.0.1:6380&gt; lpop k1</span><br><span class="line">e</span><br><span class="line">127.0.0.1:6380&gt; </span><br></pre></td></tr></table></figure>
+<p>同向的命令描述的是Java中的栈</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; rpop k2</span><br><span class="line">f</span><br><span class="line">127.0.0.1:6380&gt; rpop k2</span><br><span class="line">e</span><br><span class="line">127.0.0.1:6380&gt; </span><br></pre></td></tr></table></figure>
+<p>list还能描述队列：反向命令描述的是Java中的队列，先进先出</p>
+<p><code>LRANGE</code>获取所有的元素</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; LRANGE k1 0 -1</span><br><span class="line">d</span><br><span class="line">c</span><br><span class="line">b</span><br><span class="line">a</span><br><span class="line">127.0.0.1:6380&gt; LRANGE k2 0 -1</span><br><span class="line">a</span><br><span class="line">b</span><br><span class="line">c</span><br><span class="line">d</span><br><span class="line">127.0.0.1:6380&gt; </span><br></pre></td></tr></table></figure>
+<p><code>lindex</code> 根据索引去除元素</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; lindex k1 2</span><br><span class="line">b</span><br><span class="line">127.0.0.1:6380&gt; lindex k1 -1</span><br><span class="line">a</span><br><span class="line">127.0.0.1:6380&gt; </span><br></pre></td></tr></table></figure>
+<p><code>lset</code> 根据索引给某个索引位置的元素赋值</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; lset k1 2 aaaa</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6380&gt; LRANGE k1 0 -1</span><br><span class="line">d</span><br><span class="line">c</span><br><span class="line">aaaa</span><br><span class="line">a</span><br><span class="line">127.0.0.1:6380&gt; </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>以上的这些操作，又向我们使用的数组，使用下标操作</p>
+<p><code>lrem</code>，移除元素</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6380</span>&gt; lpush k<span class="number">3</span> <span class="number">1</span> a <span class="number">2</span> b <span class="number">3</span> a <span class="number">4</span> c <span class="number">5</span> a <span class="number">6</span> d </span><br><span class="line"><span class="attribute">12</span></span><br><span class="line"><span class="attribute">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6380</span>&gt; LRANGE k<span class="number">3</span> <span class="number">0</span> -<span class="number">1</span> </span><br><span class="line"><span class="attribute">d</span></span><br><span class="line"><span class="attribute">6</span></span><br><span class="line"><span class="attribute">a</span></span><br><span class="line"><span class="attribute">5</span></span><br><span class="line"><span class="attribute">c</span></span><br><span class="line"><span class="attribute">4</span></span><br><span class="line"><span class="attribute">a</span></span><br><span class="line"><span class="attribute">3</span></span><br><span class="line"><span class="attribute">b</span></span><br><span class="line"><span class="attribute">2</span></span><br><span class="line"><span class="attribute">a</span></span><br><span class="line"><span class="attribute">1</span></span><br><span class="line"><span class="attribute">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6380</span>&gt; LREM k<span class="number">3</span> <span class="number">2</span> a  # 移除两个a</span><br><span class="line"><span class="attribute">2</span></span><br><span class="line"><span class="attribute">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6380</span>&gt; LRANGE k<span class="number">3</span> <span class="number">0</span> -<span class="number">1</span></span><br><span class="line"><span class="attribute">d</span></span><br><span class="line"><span class="attribute">6</span></span><br><span class="line"><span class="attribute">5</span></span><br><span class="line"><span class="attribute">c</span></span><br><span class="line"><span class="attribute">4</span></span><br><span class="line"><span class="attribute">3</span></span><br><span class="line"><span class="attribute">b</span></span><br><span class="line"><span class="attribute">2</span></span><br><span class="line"><span class="attribute">a</span></span><br><span class="line"><span class="attribute">1</span></span><br><span class="line"><span class="attribute">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6380</span>&gt; </span><br></pre></td></tr></table></figure>
+<p>我们先把刚remove的插回去<code>linsert</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; linsert k3 after 6 a  # 在6的后面插入一个a ，如果有两个6 ，就会在第一个后面追加</span><br><span class="line">11</span><br><span class="line">127.0.0.1:6380&gt; linsert k3 before 3 a  # 在3的前面插入一个a</span><br><span class="line">12</span><br><span class="line">127.0.0.1:6380&gt; LRANGE k3 0 -1</span><br><span class="line">d</span><br><span class="line">6</span><br><span class="line">a</span><br><span class="line">5</span><br><span class="line">c</span><br><span class="line">4</span><br><span class="line">a</span><br><span class="line">3</span><br><span class="line">b</span><br><span class="line">2</span><br><span class="line">a</span><br><span class="line">1</span><br><span class="line">127.0.0.1:6380&gt; </span><br></pre></td></tr></table></figure>
+<p>继续使用<code>lrem</code>从后面开始移除两个a</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; lrem k3 -2 a</span><br><span class="line">2</span><br><span class="line">127.0.0.1:6380&gt; LRANGE k3 0 -1</span><br><span class="line">d</span><br><span class="line">6</span><br><span class="line">a</span><br><span class="line">5</span><br><span class="line">c</span><br><span class="line">4</span><br><span class="line">3</span><br><span class="line">b</span><br><span class="line">2</span><br><span class="line">1</span><br><span class="line">127.0.0.1:6380&gt; </span><br></pre></td></tr></table></figure>
+<p><code>llen</code>统计元素的个数</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; LLEN k3</span><br><span class="line">10</span><br><span class="line">127.0.0.1:6380&gt; </span><br></pre></td></tr></table></figure>
+<h3 id="2、blpop、blpush、brpop、brpush">2、<code>blpop</code>、<code>blpush</code>、<code>brpop</code>、<code>brpush</code></h3>
+<p>阻塞弹出元素，同时开三个客户端，都连接同一个server,client01、client02分别执行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">blpop k5  0 </span><br></pre></td></tr></table></figure>
+<p>因为redis中都没有k5这个key,所以都会是阻塞状态，client03执行<code>rpush k5 hello</code>，会发现client01弹出了元素，但是client02依然阻塞</p>
+<p>，在client03中再次<code>rpush k5  world</code>，发现client02也弹出了元素</p>
+<p>因此，它其实还支持一个简单的阻塞队列，或者叫阻塞的单播队列</p>
+<p>什么叫阻塞的单播队列？</p>
+<p>先进先出，redis中有一个特征，后面会说到</p>
+<h3 id="3、ltrim">3、<code>ltrim</code></h3>
+<p>给出一个start、stop,然后对list中两端的数据进行删除，中间的不会删除</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; lpush k6  a b fd qwe 12d sdf </span><br><span class="line"></span><br><span class="line">6</span><br><span class="line">127.0.0.1:6380&gt; LRANGE k6 0 -1</span><br><span class="line">sdf</span><br><span class="line">12d</span><br><span class="line">qwe</span><br><span class="line">fd</span><br><span class="line">b</span><br><span class="line">a</span><br><span class="line">127.0.0.1:6380&gt; LTRIM k6 0 -1</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6380&gt; LRANGE k6 0 -1</span><br><span class="line">sdf</span><br><span class="line">12d</span><br><span class="line">qwe</span><br><span class="line">fd</span><br><span class="line">b</span><br><span class="line">a</span><br><span class="line">127.0.0.1:6380&gt; LTRIM k6 1 -2</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6380&gt; LRANGE k6 0 -1</span><br><span class="line">12d</span><br><span class="line">qwe</span><br><span class="line">fd</span><br><span class="line">b</span><br><span class="line">127.0.0.1:6380&gt; </span><br></pre></td></tr></table></figure>
+<h2 id="二、hash">二、<code>hash</code></h2>
+<p>说到<code>hash</code>，我们想到Java中的<code>hashmap</code>,map，那么一定是有键值对的</p>
+<p>这里说的是，redis键值对中，value的类型是hash，hash代表着自身里面又是一个键值对</p>
+<p>在没有学习<code>hash</code>之前，我们要想存一个用户的信息，姓名、年龄、地址等，我们可以那字符串按照一些字符拼接，或者按照某个属性一个兼职对进行存取，但是这个成本很廉价，属性很多的时候，取出来要么需要拆分遍历，要么直接遍历（通过<code>keys steven*</code>取回所有）</p>
+<p>这就引入了<code>hash</code>,<code>hash</code>一般都是以<code>h</code>开头，基本上都是在字符串的命令前加了<code>H</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; hset steven name 石福鹏  # hset</span><br><span class="line">1</span><br><span class="line">127.0.0.1:6380&gt; hset steven age 18</span><br><span class="line">1</span><br><span class="line">127.0.0.1:6380&gt; hset steven address china</span><br><span class="line">1</span><br><span class="line">127.0.0.1:6380&gt; hget steven name  # hget</span><br><span class="line">石福鹏</span><br><span class="line">127.0.0.1:6380&gt; hget steven age</span><br><span class="line">18</span><br><span class="line">127.0.0.1:6380&gt; HMGET steven name age address  # HMGET</span><br><span class="line">石福鹏</span><br><span class="line">18</span><br><span class="line">china</span><br><span class="line">127.0.0.1:6380&gt; hkeys steven  # hkeys</span><br><span class="line">name</span><br><span class="line">age</span><br><span class="line">address</span><br><span class="line">127.0.0.1:6380&gt; HVALS steven # HVALS</span><br><span class="line">石福鹏</span><br><span class="line">18</span><br><span class="line">china</span><br><span class="line">127.0.0.1:6380&gt; HGETALL steven # HGETALL</span><br><span class="line">name</span><br><span class="line">石福鹏</span><br><span class="line">age</span><br><span class="line">18</span><br><span class="line">address</span><br><span class="line">china</span><br><span class="line">127.0.0.1:6380&gt; </span><br></pre></td></tr></table></figure>
+<p>也支持数值计算</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; HINCRBYFLOAT steven age 0.5  # HINCRBYFLOAT </span><br><span class="line">18.5</span><br><span class="line">127.0.0.1:6380&gt; hget steven age</span><br><span class="line">18.5</span><br><span class="line">127.0.0.1:6380&gt; HINCRBYFLOAT steven age -1  # 没有减，但是加法也可以做减法 </span><br><span class="line">17.5</span><br><span class="line">127.0.0.1:6380&gt; </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="1、hash应用场景">1、<code>hash</code>应用场景</h3>
+<p>点赞、收藏、详情页等等，面向一个人或者一个事物的页面等场景</p>
+<h2 id="三、set-集合操作（用的比较多）">三、<code>set</code> 集合操作（用的比较多）</h2>
+<p><code>list</code>是可以重复出现的，并且是有序的（注意这个序只是存入的顺序，不会做排序）</p>
+<p><code>set</code>是去重的，里面不维护排序，也不维护插入和弹出的顺序，完全是乱序的</p>
+<p><strong>优点：</strong> 去重</p>
+<h3 id="1、set的命令">1、<code>set</code>的命令</h3>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6380</span>&gt; help @set</span><br><span class="line"></span><br><span class="line">  <span class="attribute">SADD</span> key member<span class="meta"> [member ...]</span></span><br><span class="line">  <span class="attribute">summary</span>: Add one or more members to a set</span><br><span class="line">  <span class="attribute">since</span>: <span class="number">1</span>.<span class="number">0</span>.<span class="number">0</span></span><br><span class="line"></span><br><span class="line">  <span class="attribute">SCARD</span> key</span><br><span class="line">  <span class="attribute">summary</span>: Get the number of members in a set</span><br><span class="line">  <span class="attribute">since</span>: <span class="number">1</span>.<span class="number">0</span>.<span class="number">0</span></span><br><span class="line"></span><br><span class="line">  <span class="attribute">SDIFF</span> key<span class="meta"> [key ...]</span></span><br><span class="line">  <span class="attribute">summary</span>: Subtract multiple sets</span><br><span class="line">  <span class="attribute">since</span>: <span class="number">1</span>.<span class="number">0</span>.<span class="number">0</span></span><br><span class="line"></span><br><span class="line">  <span class="attribute">SDIFFSTORE</span> destination key<span class="meta"> [key ...]</span></span><br><span class="line">  <span class="attribute">summary</span>: Subtract multiple sets and store the resulting set in a key</span><br><span class="line">  <span class="attribute">since</span>: <span class="number">1</span>.<span class="number">0</span>.<span class="number">0</span></span><br><span class="line"></span><br><span class="line">  <span class="attribute">SINTER</span> key<span class="meta"> [key ...]</span></span><br><span class="line">  <span class="attribute">summary</span>: Intersect multiple sets</span><br><span class="line">  <span class="attribute">since</span>: <span class="number">1</span>.<span class="number">0</span>.<span class="number">0</span></span><br><span class="line"></span><br><span class="line">  <span class="attribute">SINTERSTORE</span> destination key<span class="meta"> [key ...]</span></span><br><span class="line">  <span class="attribute">summary</span>: Intersect multiple sets and store the resulting set in a key</span><br><span class="line">  <span class="attribute">since</span>: <span class="number">1</span>.<span class="number">0</span>.<span class="number">0</span></span><br><span class="line"></span><br><span class="line">  <span class="attribute">SISMEMBER</span> key member</span><br><span class="line">  <span class="attribute">summary</span>: Determine if a given value is a member of a set</span><br><span class="line">  <span class="attribute">since</span>: <span class="number">1</span>.<span class="number">0</span>.<span class="number">0</span></span><br><span class="line"></span><br><span class="line">  <span class="attribute">SMEMBERS</span> key</span><br><span class="line">  <span class="attribute">summary</span>: Get <span class="literal">all</span> the members in a set</span><br><span class="line">  <span class="attribute">since</span>: <span class="number">1</span>.<span class="number">0</span>.<span class="number">0</span></span><br><span class="line"></span><br><span class="line">  <span class="attribute">SMOVE</span> source destination member</span><br><span class="line">  <span class="attribute">summary</span>: Move a member from one set to another</span><br><span class="line">  <span class="attribute">since</span>: <span class="number">1</span>.<span class="number">0</span>.<span class="number">0</span></span><br><span class="line"></span><br><span class="line">  <span class="attribute">SPOP</span> key<span class="meta"> [count]</span></span><br><span class="line">  <span class="attribute">summary</span>: Remove and return one or multiple random members from a set</span><br><span class="line">  <span class="attribute">since</span>: <span class="number">1</span>.<span class="number">0</span>.<span class="number">0</span></span><br><span class="line"></span><br><span class="line">  <span class="attribute">SRANDMEMBER</span> key<span class="meta"> [count]</span></span><br><span class="line">  <span class="attribute">summary</span>: Get one or multiple random members from a set</span><br><span class="line">  <span class="attribute">since</span>: <span class="number">1</span>.<span class="number">0</span>.<span class="number">0</span></span><br><span class="line"></span><br><span class="line">  <span class="attribute">SREM</span> key member<span class="meta"> [member ...]</span></span><br><span class="line">  <span class="attribute">summary</span>: Remove one or more members from a set</span><br><span class="line">  <span class="attribute">since</span>: <span class="number">1</span>.<span class="number">0</span>.<span class="number">0</span></span><br><span class="line"></span><br><span class="line">  <span class="attribute">SSCAN</span> key cursor<span class="meta"> [MATCH pattern] [COUNT count]</span></span><br><span class="line">  <span class="attribute">summary</span>: Incrementally iterate Set elements</span><br><span class="line">  <span class="attribute">since</span>: <span class="number">2</span>.<span class="number">8</span>.<span class="number">0</span></span><br><span class="line"></span><br><span class="line">  <span class="attribute">SUNION</span> key<span class="meta"> [key ...]</span></span><br><span class="line">  <span class="attribute">summary</span>: Add multiple sets</span><br><span class="line">  <span class="attribute">since</span>: <span class="number">1</span>.<span class="number">0</span>.<span class="number">0</span></span><br><span class="line"></span><br><span class="line">  <span class="attribute">SUNIONSTORE</span> destination key<span class="meta"> [key ...]</span></span><br><span class="line">  <span class="attribute">summary</span>: Add multiple sets and store the resulting set in a key</span><br><span class="line">  <span class="attribute">since</span>: <span class="number">1</span>.<span class="number">0</span>.<span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6380</span>&gt; </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><code>sadd</code>、<code>SMEMBERS </code>添加、查询</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; SADD key1 wqe 21 3e3 wqd xxww qwew324 3243 21 3e3</span><br><span class="line">0</span><br><span class="line">127.0.0.1:6380&gt; SMEMBERS key1</span><br><span class="line">wqe</span><br><span class="line">3e3</span><br><span class="line">qwew324</span><br><span class="line">21</span><br><span class="line">wqd</span><br><span class="line">xxww</span><br><span class="line">3243</span><br><span class="line">127.0.0.1:6380&gt;  </span><br></pre></td></tr></table></figure>
+<p><code>srem</code>移除</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; srem key1 wqe 3e3</span><br><span class="line">2</span><br><span class="line">127.0.0.1:6380&gt; SMEMBERS key1</span><br><span class="line">qwew324</span><br><span class="line">21</span><br><span class="line">wqd</span><br><span class="line">xxww</span><br><span class="line">3243</span><br><span class="line">127.0.0.1:6380&gt; </span><br></pre></td></tr></table></figure>
+<p>求交并差集</p>
+<p><code>SINTER</code>只求交集</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; sadd key2 11 22 33 44 55 </span><br><span class="line">5</span><br><span class="line">127.0.0.1:6380&gt; sadd key3 11 66 77 44 88 </span><br><span class="line">5</span><br><span class="line">127.0.0.1:6380&gt; SINTER key2 key3</span><br><span class="line">11</span><br><span class="line">44</span><br><span class="line">127.0.0.1:6380&gt; </span><br></pre></td></tr></table></figure>
+<p><code>SINTERSTORE</code>将交集存为另一个key，求出交集并将交集<code>sadd</code>到新的key,是在redis的server端完成的，所以不会产生I/O</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0.0.1:6380</span>&gt; SINTERSTORE key_des key2 key3</span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">127.0.0.1:6380</span>&gt; SMEMBERS key_des</span><br><span class="line"><span class="number">11</span></span><br><span class="line"><span class="number">44</span></span><br><span class="line"><span class="number">127.0.0.1:6380</span>&gt; </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><code>SUNION</code>求并集，当然也有<code>SUNIONSTORE</code>,与<code>SINTERSTORE</code>一样的道理</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; SUNION key2 key3</span><br><span class="line">11</span><br><span class="line">22</span><br><span class="line">33</span><br><span class="line">44</span><br><span class="line">55</span><br><span class="line">66</span><br><span class="line">77</span><br><span class="line">88</span><br><span class="line">127.0.0.1:6380&gt; SUNIONSTORE key_bingji key2 key3</span><br><span class="line">8</span><br><span class="line">127.0.0.1:6380&gt; SMEMBERS key_bingji</span><br><span class="line">11</span><br><span class="line">22</span><br><span class="line">33</span><br><span class="line">44</span><br><span class="line">55</span><br><span class="line">66</span><br><span class="line">77</span><br><span class="line">88</span><br><span class="line">127.0.0.1:6380&gt; </span><br></pre></td></tr></table></figure>
+<p><code>sdiff</code>差集，它是有方向的，需要哪边的差值出来，就把哪个key放在前面</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; SDIFF key2 key3 # 求差值 key2中有的，key3中没有的元素</span><br><span class="line">22</span><br><span class="line">33</span><br><span class="line">55</span><br><span class="line">127.0.0.1:6380&gt; SDIFF key3 key2 # 求差值 key3中有的，key2中没有的元素</span><br><span class="line">66</span><br><span class="line">77</span><br><span class="line">88</span><br><span class="line">127.0.0.1:6380&gt; </span><br></pre></td></tr></table></figure>
+<h3 id="2、SRANDMEMBER随机事件">2、<code>SRANDMEMBER</code>随机事件</h3>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0.0.1:6380</span>&gt; FLUSHALL </span><br><span class="line">OK</span><br><span class="line"><span class="number">127.0.0.1:6380</span>&gt; sadd k1 xxoo ooxx xoxo oxox xoox oxxo</span><br><span class="line"><span class="number">6</span></span><br><span class="line"><span class="number">127.0.0.1:6380</span>&gt; SMEMBERS k1</span><br><span class="line">ooxx</span><br><span class="line">xoxo</span><br><span class="line">xxoo</span><br><span class="line">oxox</span><br><span class="line">oxxo</span><br><span class="line">xoox</span><br><span class="line"><span class="number">127.0.0.1:6380</span>&gt; SRANDMEMBER k1 <span class="number">5</span></span><br><span class="line">oxox</span><br><span class="line">oxxo</span><br><span class="line">xxoo</span><br><span class="line">ooxx</span><br><span class="line">xoxo</span><br><span class="line"><span class="number">127.0.0.1:6380</span>&gt; </span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; <span class="built_in">help</span> SRANDMEMBER</span><br><span class="line"></span><br><span class="line">  SRANDMEMBER key [count]</span><br><span class="line">  summary: Get one or multiple random members from a <span class="built_in">set</span></span><br><span class="line">  since: 1.0.0</span><br><span class="line">  group: <span class="built_in">set</span></span><br></pre></td></tr></table></figure>
+<p>这个命令中的<code>[count]</code>：</p>
+<p>1、如果count为正数，取出一个去重的结果集（不能超过已有集）</p>
+<p>2、如果count为负数，取出带重复元素的结果集，且满足需要的数量</p>
+<p>3、如果count为0，不返回</p>
+<p><strong>可以解决什么问题呢？</strong></p>
+<p>抽奖：一个活动。有三个奖品，但是有很多的粉丝。所以，将粉丝存入数据集，然后从中抽取三个人，这个可以是每个人只能中一个，那么count就是正数；也可以不限制，那count就是-3，这种情况，有可能一个人中奖，。也有可能两个人中奖，也有可能三个人中奖</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; SRANDMEMBER k1 -20</span><br><span class="line">xxoo</span><br><span class="line">ooxx</span><br><span class="line">oxox</span><br><span class="line">xoox</span><br><span class="line">xoxo</span><br><span class="line">xxoo</span><br><span class="line">xoox</span><br><span class="line">ooxx</span><br><span class="line">xxoo</span><br><span class="line">xoxo</span><br><span class="line">xoxo</span><br><span class="line">ooxx</span><br><span class="line">oxox</span><br><span class="line">xxoo</span><br><span class="line">oxxo</span><br><span class="line">oxxo</span><br><span class="line">oxxo</span><br><span class="line">xxoo</span><br><span class="line">xoox</span><br><span class="line">ooxx</span><br><span class="line">127.0.0.1:6380&gt; </span><br></pre></td></tr></table></figure>
+<p><code>spop</code>这个也适用于抽奖，准确的说更符合一些，也就是中奖的就不能再参与抽奖了</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0.0.1:6380</span>&gt; SPOP key1</span><br><span class="line"></span><br><span class="line"><span class="number">127.0.0.1:6380</span>&gt; SPOP k1</span><br><span class="line">xoxo</span><br><span class="line"><span class="number">127.0.0.1:6380</span>&gt; SPOP k1</span><br><span class="line">xoox</span><br><span class="line"><span class="number">127.0.0.1:6380</span>&gt; SPOP k1</span><br><span class="line">oxxo</span><br><span class="line"><span class="number">127.0.0.1:6380</span>&gt; SPOP k1</span><br><span class="line">oxox</span><br><span class="line"><span class="number">127.0.0.1:6380</span>&gt; SPOP k1</span><br><span class="line">xxoo</span><br><span class="line"><span class="number">127.0.0.1:6380</span>&gt; SPOP k1</span><br><span class="line">ooxx</span><br><span class="line"><span class="number">127.0.0.1:6380</span>&gt; SPOP k1</span><br><span class="line"></span><br><span class="line"><span class="number">127.0.0.1:6380</span>&gt; SPOP k1</span><br></pre></td></tr></table></figure>
+<h3 id="3、sorted-set有序集">3、<code>sorted_set</code>有序集</h3>
+<p>首先它是一个set，是一个集合，所以是有元素，想让他们排序，如何排序</p>
+<p><code>zadd</code>添加元素，每个元素是带score分值的</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6380</span>&gt; help zadd</span><br><span class="line">				<span class="attribute">key</span> 存在再设置</span><br><span class="line">  <span class="attribute">ZADD</span> key<span class="meta"> [NX|XX] [CH] [INCR] score member [score member ...]</span></span><br><span class="line">  <span class="attribute">summary</span>: Add one or more members to a sorted set, or update its score if it already exists</span><br><span class="line">  <span class="attribute">since</span>: <span class="number">1</span>.<span class="number">2</span>.<span class="number">0</span></span><br><span class="line">  <span class="attribute">group</span>: sorted_set</span><br></pre></td></tr></table></figure>
+<p>存储后的结果，物理内存中是左小右大</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; ZADD k2 8 apple 2 banana 3 orange</span><br><span class="line">3</span><br><span class="line">127.0.0.1:6380&gt; ZRANGE k2 0 -1</span><br><span class="line">banana</span><br><span class="line">orange</span><br><span class="line">apple</span><br><span class="line">127.0.0.1:6380&gt; </span><br></pre></td></tr></table></figure>
+<p>也可以在结果中带分值<code>ZRANGE k2 0 -1 withscores</code></p>
+<p><code>ZRANGEBYSCORE</code>按照分值取</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; ZRANGEBYSCORE k2 3 8</span><br><span class="line">orange</span><br><span class="line">apple</span><br><span class="line">127.0.0.1:6380&gt;</span><br></pre></td></tr></table></figure>
+<p><code>ZREVRANGE</code>从高到低取出分值前两个</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; ZREVRANGE k2 0 1</span><br><span class="line">apple</span><br><span class="line">orange</span><br><span class="line">127.0.0.1:6380&gt;</span><br></pre></td></tr></table></figure>
+<p><code>ZSCORE</code>通过元素取分值</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; ZSCORE k2 apple</span><br><span class="line">8</span><br><span class="line">127.0.0.1:6380&gt; </span><br></pre></td></tr></table></figure>
+<p><code>ZRANK</code>取出排名</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; ZRANK k2 apple</span><br><span class="line">2</span><br><span class="line">127.0.0.1:6380&gt; </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><code>ZINCRBY</code>增加分值，并且还会根据新的分值排序</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; ZINCRBY k2 2.5 banana</span><br><span class="line">4.5</span><br><span class="line">127.0.0.1:6380&gt; ZRANGE k2 0 -1 withscores</span><br><span class="line">orange</span><br><span class="line">3</span><br><span class="line">banana</span><br><span class="line">4.5</span><br><span class="line">apple</span><br><span class="line">8</span><br><span class="line">127.0.0.1:6380&gt; </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>歌曲排行版：播放量、点播量、下载数等，初始时分值都是0，每个有变化，则按照上面的方式+1，会自动进行排序</p>
+</blockquote>
+<h4 id="集合操作-交集、并集、差集等">集合操作 交集、并集、差集等</h4>
+<p>首先，既然是一个集合，那么是可以做交并差集的，元素可以做，但是分值呢？</p>
+<p>分值可以求和，求最小值，求最大值</p>
+<p><code>  ZUNIONSTORE destination numkeys key [key ...] [WEIGHTS weight] [AGGREGATE SUM|MIN|MAX]</code></p>
+<p>ZUNIONSTORE  目标key   偏移量（即几个key参与）k1 k2 权重 分值计算方式（默认sum）</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6380</span>&gt; ZADD k<span class="number">3</span> <span class="number">80</span> tom <span class="number">60</span> sean <span class="number">70</span> steven</span><br><span class="line"><span class="attribute">3</span></span><br><span class="line"><span class="attribute">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6380</span>&gt; ZADD k<span class="number">4</span> <span class="number">60</span> tom <span class="number">100</span> sean  <span class="number">40</span> yiming</span><br><span class="line"><span class="attribute">3</span></span><br><span class="line"><span class="attribute">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6380</span>&gt; ZUNIONSTORE unkey <span class="number">2</span> k<span class="number">3</span>  k<span class="number">4</span> </span><br><span class="line"><span class="attribute">4</span></span><br><span class="line"><span class="attribute">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6380</span>&gt; ZRANGE unkey <span class="number">0</span> -<span class="number">1</span> withscores</span><br><span class="line"><span class="attribute">yiming</span></span><br><span class="line"><span class="attribute">40</span></span><br><span class="line"><span class="attribute">steven</span></span><br><span class="line"><span class="attribute">70</span></span><br><span class="line"><span class="attribute">tom</span></span><br><span class="line"><span class="attribute">140</span></span><br><span class="line"><span class="attribute">sean</span></span><br><span class="line"><span class="attribute">160</span></span><br><span class="line"><span class="attribute">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6380</span>&gt; </span><br></pre></td></tr></table></figure>
+<p>加入权重，先分值乘以权重，然后再进行<code>sum</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; ZUNIONSTORE unkey 2 k3 k4 weights 1 0.5   # 加入权重 1就是k1的分值乘以1，0.5就k2分值乘以0.5</span><br><span class="line">4</span><br><span class="line">127.0.0.1:6380&gt; ZRANGE unkey 0 -1 withscores</span><br><span class="line">yiming</span><br><span class="line">20</span><br><span class="line">steven</span><br><span class="line">70</span><br><span class="line">sean</span><br><span class="line">110</span><br><span class="line">tom</span><br><span class="line">110</span><br><span class="line">127.0.0.1:6380&gt; </span><br></pre></td></tr></table></figure>
+<p>加入分值规则</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; ZUNIONSTORE unkey 2 k3 k4  aggregate  max</span><br><span class="line">4</span><br><span class="line">127.0.0.1:6380&gt; ZRANGE unkey 0 -1 withscores</span><br><span class="line">yiming</span><br><span class="line">40</span><br><span class="line">steven</span><br><span class="line">70</span><br><span class="line">tom</span><br><span class="line">80</span><br><span class="line">sean</span><br><span class="line">100</span><br><span class="line">127.0.0.1:6380&gt; </span><br></pre></td></tr></table></figure>
+<p>在权重的基础上，加入分值规则</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; ZUNIONSTORE unkey 2 k3 k4 weights 1 0.5 aggregate max</span><br><span class="line">4</span><br><span class="line">127.0.0.1:6380&gt; ZRANGE unkey 0 -1 withscores</span><br><span class="line">yiming</span><br><span class="line">20</span><br><span class="line">sean</span><br><span class="line">60</span><br><span class="line">steven</span><br><span class="line">70</span><br><span class="line">tom</span><br><span class="line">80</span><br><span class="line">127.0.0.1:6380&gt; </span><br></pre></td></tr></table></figure>
+<h3 id="4、-面试题-使用sorted-set的时候，排序的原理是什么">4、(面试题)使用<code>sorted_set</code>的时候，排序的原理是什么</h3>
+<blockquote>
+<p>使用<code>sorted_set</code>的时候，排序的原理是什么,增删改的速度快不快？是怎样一个速度</p>
+</blockquote>
+<p>这里用到了一个数据结构，<code>Skip list</code>跳跃表</p>
+<p>我们都知道链表，有很多元素在这个链表中，如果给他排序的话，即当第二个元素出现的时候，跟第一个元素比较。无非就是放前放后的问题，第三个元素，需要跟第一个比较，如果比第一个元素大，再个第二个比较，随着元素越来越多，比如10000个元素，那么最大遍历10000次，复杂度就变高了</p>
+<p>什么是<strong>跳跃表</strong> ？</p>
+<p>其实是在链表的基础上，又在垂直方向，又多加了几层,牺牲存储空间来换查询速度</p>
+<p>指针修正、左右判定</p>
+<p><img src="/2020/Redis%E4%B8%AD%E7%9A%84list%E3%80%81set%E3%80%81hash%E3%80%81sorted-set/image-20210319155945838.png" alt="image-20210319155945838"></p>
+<p>他是类平衡树，即左旋右旋，让所有的深度基本保持一致。使得查找任何元素的复杂度比较均匀</p>
+<p>因此，跳跃表的<strong>平均值相对最优</strong> 。不只是看一个，增删改查都发生一次后，平均速度是最优的。</p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/2020/github-static-source-cdn/" data-toggle="tooltip" data-placement="top" title="GitHub静态资源访问免费CDN提速">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/2020/强烈推荐的Docker可视化管理工具Portainer搭建/" data-toggle="tooltip" data-placement="top" title="强烈推荐的Docker可视化管理工具Portainer搭建">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Redis中的list、set、hash、sorted_set&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2020/Redis中的list、set、hash、sorted-set/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'a00494876d6f5f4bcbfd',
+      clientSecret: '33d3d0be81052a26f5a3535733b8b7854628564f',
+      repo: 'shifpeng.github.io',
+      owner: 'shifpeng',
+      admin: 'shifpeng',
+      id: 'Wed Mar 18 2020 14:06:41 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81List%E9%93%BE%E8%A1%A8"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、List链表</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81lpush%E3%80%81rpush%E3%80%81lpop%E3%80%81LRANGE%E7%AD%89"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">1、lpush、rpush、lpop、LRANGE等</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81blpop%E3%80%81blpush%E3%80%81brpop%E3%80%81brpush"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">2、blpop、blpush、brpop、brpush</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3%E3%80%81ltrim"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">3、ltrim</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81hash"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、hash</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81hash%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">1、hash应用场景</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81set-%E9%9B%86%E5%90%88%E6%93%8D%E4%BD%9C%EF%BC%88%E7%94%A8%E7%9A%84%E6%AF%94%E8%BE%83%E5%A4%9A%EF%BC%89"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、set 集合操作（用的比较多）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81set%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">1、set的命令</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81SRANDMEMBER%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">2、SRANDMEMBER随机事件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3%E3%80%81sorted-set%E6%9C%89%E5%BA%8F%E9%9B%86"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">3、sorted_set有序集</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E9%9B%86%E5%90%88%E6%93%8D%E4%BD%9C-%E4%BA%A4%E9%9B%86%E3%80%81%E5%B9%B6%E9%9B%86%E3%80%81%E5%B7%AE%E9%9B%86%E7%AD%89"><span class="toc-nav-number">3.3.1.</span> <span class="toc-nav-text">集合操作 交集、并集、差集等</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4%E3%80%81-%E9%9D%A2%E8%AF%95%E9%A2%98-%E4%BD%BF%E7%94%A8sorted-set%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%8C%E6%8E%92%E5%BA%8F%E7%9A%84%E5%8E%9F%E7%90%86%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">4、(面试题)使用sorted_set的时候，排序的原理是什么</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+            
+            <a class="tag" href="/tags/#Redis" title="Redis">Redis</a>
+            
+            <a class="tag" href="/tags/#重学Redis" title="重学Redis">重学Redis</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://cuiqingcai.com/" target="_blank">静 觅 崔庆才</a>
+          </li>
+          
+          <li>
+            <a href="http://www.52nlp.cn/" target="_blank">我爱自然语言处理</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cnblogs.com/Steven-shi/" target="_blank">博客园 石福鹏</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/shifpeng">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Steven
+          2021
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://shifpeng.cn">Steven</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/mouseclick.js"  content='' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "shifpeng";
+    let ghPages = gh + ".github.io";
+    let pagePath = "2020/Redis中的list、set、hash、sorted-set/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://www.shifpeng.cn/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

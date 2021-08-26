@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="人最大的修养就是知人不评人"/>
+  <meta name="keyword" content="Java,Steven,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://www.shifpeng.cn/2021/Redis集群之主从复制、CAP、PAXOS-1（一）/">
+  <title>
+    
+      Redis集群之主从复制、哨兵模式 - Steven | java
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'StevenBlog/community'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">石福鹏</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+              
+              <a class="tag" href="/tags/#Redis" title="Redis">Redis</a>
+              
+              <a class="tag" href="/tags/#重学Redis" title="重学Redis">重学Redis</a>
+              
+            </div>
+            <h1>Redis集群之主从复制、哨兵模式</h1>
+            <h2 class="subheading">redis单节点可能存在的问题，以及CAP原则, Redis三种集群方式中其中两种方式</h2>
+            <span class="meta">
+              Posted by 石福鹏 on
+              2021-03-28
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">37</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">7.5k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h2 id="一、问题引入">一、问题引入</h2>
+<p>之前的几篇文章一直写的都是基于单机、或者单节点，或者单实例，那么他会有什么问题呢？</p>
+<p>1:单点故障</p>
+<p>2:容量有限</p>
+<p>3:压力(性能)</p>
+<p>如何解决？ <strong>如何分别解决上面三个独立的问题？有没有整合方案？</strong></p>
+<h2 id="二、解决问题">二、解决问题</h2>
+<p>AKF：描述的是XYZ三个轴，分别对技术的一种拆解</p>
+<blockquote>
+<p>AKF：</p>
+<p>x:全量、镜像</p>
+<p>y:业务、功能</p>
+<p>z:优先级、逻辑再拆分</p>
+</blockquote>
+<h3 id="1、解决单点故障问题（X轴）">1、解决单点故障问题（X轴）</h3>
+<p>1、如果只有一台实例的话，一般基于本地会有可靠性，即基于本磁盘的可靠，但是如果基于本地磁盘的物理机还是会挂，那就是做Redis的副本，或者说不是redis，是数据库的副本（一主多备），那么这样可以解决单点故障的问题</p>
+<p>这样，就可以让增删改使用主机，查使用备机，实现读写分离</p>
+<p>但是，这种方式不能解决容量有效和压力问题，因为这种方式是<strong>全量镜像</strong> ，即加入主机有10个G数据，那么备机也是10个G，Redis会一直同步数据的</p>
+<blockquote>
+<p>注意：主备、主从不是一个意思</p>
+</blockquote>
+<h3 id="2、解决容量有限问题（Y轴）">2、解决容量有限问题（Y轴）</h3>
+<p>Redis只有4G的容量，但是数据有10个G，要怎么存？</p>
+<p>对要存的数据，按照功能、业务划分来存，每个redis中存的数据不是一类数据数据，比如一个redis存订单信息，另一个redis存用户信息。Mysql中类似的解决方式即分库。当然，存订单信息的实例有可能挂了，这个时候，就需要从X轴扩展，即1中的主备。</p>
+<h3 id="3、解决压力问题（Z轴）">3、解决压力问题（Z轴）</h3>
+<p>数据量再大，按照优先级、逻辑再拆分，类似于微服务，或者说继续拿redis举例。使用一致性哈希，或者cluster的拆分原理，或者说按照业务直接划区，就像特斯拉在中国建工厂服务中国片区一样</p>
+<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210330135324730.png" alt="image-20210330135324730"></p>
+<h2 id="三、新的问题">三、新的问题</h2>
+<p>什么问题都是有两面性的，解决上面的问题就会带来一些其他的问题</p>
+<h3 id="1、数据一致性问题">1、数据一致性问题</h3>
+<p>首先主备数据的同步（数据一致性问题）</p>
+<h4 id="a、强一致性">a、强一致性</h4>
+<p>所有的节点阻塞直到数据全部一致</p>
+<p>缺点：破坏可用性，即一个节点出问题（比如其中一个备机进程异常退出了，或者执行慢超时了，或网络异常等），导致此次数据写失败</p>
+<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210330140033994.png" alt="image-20210330140033994"></p>
+<h4 id="b、弱一致性">b、弱一致性</h4>
+<p>通过异步方式处理数据同步</p>
+<p>缺点：可能会丢失一部分数据（同步失败）</p>
+<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210330140106930.png" alt="image-20210330140106930"></p>
+<h4 id="c、最终一致性">c、最终一致性</h4>
+<blockquote>
+<p>解决上面的问题，还有一种解决方案：</p>
+<p>那就是在主机和备机之间增加一种可靠的、集群、且响应速度足够快的东西，<strong>比如</strong> ：<code>kafka</code></p>
+<p>客户端告诉redis,redis把写的请求先发给<code>kafka</code> （同步阻塞）,<code>kafka</code>接受成功后立即返回，在由于redis返回给客户端，而数据同步，因为kafk足够可靠，所以两台redis备机最终从kafka中取回需要的东西，数据就会达到一致</p>
+<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210330141135677.png" alt="image-20210330141135677"></p>
+</blockquote>
+<p>但是，基于最终一致性的解决方案：</p>
+<p>因为是最终一致性，就有可能取到不一致性的数据，但是强调有中间可靠的东西来实现强一致性</p>
+<h3 id="2、高可用问题">2、高可用问题</h3>
+<blockquote>
+<p>主备：客户端只访问主，备是为了当主机挂掉之后，接替主，要客户端可以拿到数据</p>
+<p>主从：客户端除了访问主，也可以访问其他的</p>
+<p>redis,企业中常用的是主从复制的概念，</p>
+</blockquote>
+<p><strong>不论是主备还是主从，都有一个主，一般情况下，所有的增删改都发生在主上，备机要么不发生操作（备），要么只发生读操作（从）</strong></p>
+<p>所以又会引出一个问题：</p>
+<p>主又是一个单点，所以又要<strong>对主做高可用（HA）</strong> ，目的就是当主机挂掉的话，把备机变成一个主机，切换他。</p>
+<p>因为人肯定是不靠谱的，所以肯定要用一个程序来监控单点故障问题，同时只要是一个程序，程序依然有可能出现问题，所以<strong>监控程序本身也要成为一变多的集群</strong></p>
+<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210330150627550.png" alt="image-20210330150627550"></p>
+<blockquote>
+<p>为何建议的使用奇数台？</p>
+<p>以为偶数台和奇数台承担风险的能力是一致的，但是发生风险是不一样的</p>
+<p>三台和四台，最多只能有一台发生故障，否则不能进行投票，但是三台和四台，一台发生故障的可能性，4肯定比3的可能性要大</p>
+</blockquote>
+<p>以上，<strong>一致性、可用性、分区容错性（或分区容忍性），即CAP原则，这三个要素最多实现两点，不可能实现三者兼顾。</strong></p>
+<p>最基本的例子就是，一致性和可用性不可能同时满足强一致性或者绝对高可用，因为强一致性就回破坏可用性</p>
+<h2 id="四、主从复制">四、主从复制</h2>
+<blockquote>
+<p>Redis是异步复制，其特点是低延迟和高性能</p>
+</blockquote>
+<h3 id="1、实战">1、实战</h3>
+<h4 id="a、实例准备">a、实例准备</h4>
+<p>现在有了两个redis实例</p>
+<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]<span class="comment"># ps -fe | grep  redis</span></span><br><span class="line">root       <span class="number"> 858 </span>    <span class="number"> 1 </span><span class="number"> 0 </span>02:09 ?        00:01:37 /usr/local/bin/redis-server 127.0.0.1:6380</span><br><span class="line">root      <span class="number"> 2112 </span> <span class="number"> 1908 </span><span class="number"> 0 </span>13:43 pts/8    00:00:17 redis-server 127.0.0.1:6379</span><br><span class="line">root      <span class="number"> 2117 </span> <span class="number"> 1984 </span><span class="number"> 0 </span>13:43 pts/10   00:00:00 redis-cli -p<span class="number"> 6379 </span>--raw</span><br><span class="line">root      <span class="number"> 2443 </span> <span class="number"> 2386 </span><span class="number"> 0 </span>16:11 pts/0    00:00:00 grep --color=auto redis</span><br><span class="line">[root@hadoop01 ~]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
+<p>我们再启动一个</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 /]# cd /usr/local/redis-6.0.0/utils/</span><br><span class="line">[root@hadoop01 utils]# ./install_server.sh </span><br><span class="line">Welcome to the redis service installer</span><br><span class="line">This script will help you easily set up a running redis server</span><br><span class="line"></span><br><span class="line">Please select the redis port for this instance: [6379] 6381</span><br><span class="line">Please select the redis config file name [/etc/redis/6381.conf] </span><br><span class="line">Selected default - /etc/redis/6381.conf</span><br><span class="line">Please select the redis log file name [/var/log/redis_6381.log] </span><br><span class="line">Selected default - /var/log/redis_6381.log</span><br><span class="line">Please select the data directory for this instance [/var/lib/redis/6381] </span><br><span class="line">Selected default - /var/lib/redis/6381</span><br><span class="line">Please select the redis executable path [/usr/local/bin/redis-server] </span><br><span class="line">Selected config:</span><br><span class="line">Port           : 6381</span><br><span class="line">Config file    : /etc/redis/6381.conf</span><br><span class="line">Log file       : /var/log/redis_6381.log</span><br><span class="line">Data dir       : /var/lib/redis/6381</span><br><span class="line">Executable     : /usr/local/bin/redis-server</span><br><span class="line">Cli Executable : /usr/local/bin/redis-cli</span><br><span class="line">Is this ok? Then press ENTER to go on or Ctrl-C to abort.</span><br><span class="line">Copied /tmp/6381.conf =&gt; /etc/init.d/redis_6381</span><br><span class="line">Installing service...</span><br><span class="line">Successfully added to chkconfig!</span><br><span class="line">Successfully added to runlevels 345!</span><br><span class="line">Starting Redis server...</span><br><span class="line">Installation successful!</span><br><span class="line">[root@hadoop01 utils]# </span><br></pre></td></tr></table></figure>
+<p>因为是做测试，所以不直接在系统里修改，我们把redis配置文件拷贝出来一份</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 utils]# service redis_6381 stop</span><br><span class="line">Stopping ...</span><br><span class="line">Redis stopped</span><br><span class="line">[root@hadoop01 utils]# cd /</span><br><span class="line">[root@hadoop01 /]# mkdir test</span><br><span class="line">[root@hadoop01 /]# cd test</span><br><span class="line">[root@hadoop01 test]# cp /etc/redis/* ./</span><br><span class="line">[root@hadoop01 test]# ls</span><br><span class="line">6379.conf  6380.conf  6381.conf</span><br></pre></td></tr></table></figure>
+<h4 id="2、修改配置">2、修改配置</h4>
+<p>需要对配置文件做一些修改：(为了让这三台实例都是前台阻塞运行，没有AOF日志)</p>
+<p>先改成前台运行模式（后面会做前台阻塞运行，让日志直接打印到屏幕上）</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">daemonize no</span><br></pre></td></tr></table></figure>
+<p>先把6379日志文件位置注释掉</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> logfile /var/<span class="built_in">log</span>/redis_6379.log</span></span><br></pre></td></tr></table></figure>
+<p>把AOF日志关闭，也就是只有RDB(<code>appendonly</code>由<code>yes</code>改为<code>no</code>)</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">appendonly</span> <span class="literal">no</span></span><br></pre></td></tr></table></figure>
+<p>6380、6381两台实例同理</p>
+<h4 id="3、启动">3、启动</h4>
+<p>删除三台实例的持久化的目录</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 <span class="built_in">test</span>]<span class="comment"># cd /var/lib/redis/6379</span></span><br><span class="line">[root@hadoop01 6379]<span class="comment"># rm -rf *</span></span><br><span class="line">[root@hadoop01 6379]<span class="comment"># ll</span></span><br><span class="line">总用量 0</span><br><span class="line"></span><br><span class="line">//其他两台实例同理</span><br></pre></td></tr></table></figure>
+<p>运行(先保证几台实例都没启动),注意这里需要指定刚才编辑的配置文件</p>
+<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 redis]# redis-server /test/6379.conf </span><br><span class="line">2621:C 30 Mar 2021 17:10:<span class="number">49.733</span> # oO0OoO0OoO0Oo Redis <span class="keyword">is</span> starting oO0OoO0OoO0Oo</span><br><span class="line"><span class="number">2621</span>:C <span class="number">30</span> Mar <span class="number">2021</span> <span class="number">17</span>:<span class="number">10</span>:<span class="number">49.733</span> # Redis version=<span class="number">6.0</span><span class="number">.0</span>, bits=<span class="number">64</span>, <span class="keyword">commit</span>=<span class="number">00000000</span>, modified=<span class="number">0</span>, pid=<span class="number">2621</span>, just started</span><br><span class="line"><span class="number">2621</span>:C <span class="number">30</span> Mar <span class="number">2021</span> <span class="number">17</span>:<span class="number">10</span>:<span class="number">49.734</span> # Configuration loaded</span><br><span class="line"><span class="number">2621</span>:M <span class="number">30</span> Mar <span class="number">2021</span> <span class="number">17</span>:<span class="number">10</span>:<span class="number">49.734</span> * Increased maximum <span class="keyword">number</span> of open files <span class="keyword">to</span> <span class="number">10032</span> (it was originally <span class="keyword">set</span> <span class="keyword">to</span> <span class="number">1024</span>).</span><br><span class="line">                _._                                                  </span><br><span class="line">           _.-<span class="symbol">``</span>__ <span class="string">&#x27;&#x27;</span>-._                                             </span><br><span class="line">      _.-<span class="symbol">``</span>    <span class="symbol">`.  `</span>_.  <span class="string">&#x27;&#x27;</span>-._           Redis <span class="number">6.0</span><span class="number">.0</span> (<span class="number">00000000</span>/<span class="number">0</span>) <span class="number">64</span> bit</span><br><span class="line">  .-<span class="symbol">``</span> .-<span class="symbol">``</span><span class="symbol">`.  `</span><span class="symbol">``</span>\/    _.,_ <span class="string">&#x27;&#x27;</span>-._                                   </span><br><span class="line"> (    <span class="string">&#x27;      ,       .-`  | `,    )     Running in standalone mode</span></span><br><span class="line"><span class="string"> |`-._`-...-` __...-.``-._|&#x27;</span><span class="symbol">` _.-&#x27;|     Port: 6379</span></span><br><span class="line"><span class="symbol"> |    `</span>-._   <span class="symbol">`._    /     _.-&#x27;    |     PID: 2621</span></span><br><span class="line"><span class="symbol">  `</span>-._    <span class="symbol">`-._  `</span>-./  _.-<span class="string">&#x27;    _.-&#x27;</span>                                   </span><br><span class="line"> |<span class="symbol">`-._`</span>-._    <span class="symbol">`-.__.-&#x27;    _.-&#x27;_.-&#x27;|                                  </span></span><br><span class="line"><span class="symbol"> |    `</span>-._<span class="symbol">`-._        _.-&#x27;_.-&#x27;    |           http://redis.io        </span></span><br><span class="line"><span class="symbol">  `</span>-._    <span class="symbol">`-._`</span>-.__.-<span class="string">&#x27;_.-&#x27;</span>    _.-<span class="string">&#x27;                                   </span></span><br><span class="line"><span class="string"> |`-._`-._    `-.__.-&#x27;</span>    _.-<span class="string">&#x27;_.-&#x27;</span>|                                  </span><br><span class="line"> |    <span class="symbol">`-._`</span>-._        _.-<span class="string">&#x27;_.-&#x27;</span>    |                                  </span><br><span class="line">  <span class="symbol">`-._    `</span>-._<span class="symbol">`-.__.-&#x27;_.-&#x27;    _.-&#x27;                                   </span></span><br><span class="line"><span class="symbol">      `</span>-._    <span class="symbol">`-.__.-&#x27;    _.-&#x27;                                       </span></span><br><span class="line"><span class="symbol">          `</span>-._        _.-<span class="string">&#x27;                                           </span></span><br><span class="line"><span class="string">              `-.__.-&#x27;</span>                                               </span><br><span class="line"></span><br><span class="line"><span class="number">2621</span>:M <span class="number">30</span> Mar <span class="number">2021</span> <span class="number">17</span>:<span class="number">10</span>:<span class="number">49.736</span> # WARNING: The TCP backlog setting of <span class="number">511</span> cannot be enforced because /proc/sys/net/core/somaxconn <span class="keyword">is</span> <span class="keyword">set</span> <span class="keyword">to</span> the <span class="built_in">lower</span> <span class="keyword">value</span> of <span class="number">128.</span></span><br><span class="line"><span class="number">2621</span>:M <span class="number">30</span> Mar <span class="number">2021</span> <span class="number">17</span>:<span class="number">10</span>:<span class="number">49.736</span> # Server initialized</span><br><span class="line"><span class="number">2621</span>:M <span class="number">30</span> Mar <span class="number">2021</span> <span class="number">17</span>:<span class="number">10</span>:<span class="number">49.736</span> # WARNING overcommit_memory <span class="keyword">is</span> <span class="keyword">set</span> <span class="keyword">to</span> <span class="number">0</span>! Background save may fail <span class="keyword">under</span> low memory condition. <span class="keyword">To</span> fix this issue add <span class="string">&#x27;vm.overcommit_memory = 1&#x27;</span> <span class="keyword">to</span> /etc/sysctl.conf <span class="keyword">and</span> <span class="keyword">then</span> reboot <span class="keyword">or</span> run the command <span class="string">&#x27;sysctl vm.overcommit_memory=1&#x27;</span> <span class="keyword">for</span> this <span class="keyword">to</span> take effect.</span><br><span class="line"><span class="number">2621</span>:M <span class="number">30</span> Mar <span class="number">2021</span> <span class="number">17</span>:<span class="number">10</span>:<span class="number">49.736</span> # WARNING you have Transparent Huge Pages (THP) support enabled <span class="keyword">in</span> your kernel. This will <span class="keyword">create</span> latency <span class="keyword">and</span> memory usage issues <span class="keyword">with</span> Redis. <span class="keyword">To</span> fix this issue run the command <span class="string">&#x27;echo never &gt; /sys/kernel/mm/transparent_hugepage/enabled&#x27;</span> <span class="keyword">as</span> root, <span class="keyword">and</span> add it <span class="keyword">to</span> your /etc/rc.local <span class="keyword">in</span> <span class="keyword">order</span> <span class="keyword">to</span> retain the setting after a reboot. Redis must be restarted after THP <span class="keyword">is</span> disabled.</span><br><span class="line"><span class="number">2621</span>:M <span class="number">30</span> Mar <span class="number">2021</span> <span class="number">17</span>:<span class="number">10</span>:<span class="number">49.737</span> * Ready <span class="keyword">to</span> accept connections</span><br></pre></td></tr></table></figure>
+<p>再开两个tab,分别其他6380、6381</p>
+<p>期望，6379是主，6380、6381是主从复制中的从机</p>
+<h4 id="4、主从配置">4、主从配置</h4>
+<h5 id="a、【Redis集群方式一】通过命令配置（人为方式）">a、【Redis集群方式一】通过命令配置（人为方式）</h5>
+<p>主机不动，只需要6380、6381追随主机；</p>
+<p>老版本是<code>SLAVEOF host port</code>这个命令，redis5.0之后是<code>REPLICAOF host port</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; help SLAVEOF</span><br><span class="line"></span><br><span class="line">  SLAVEOF host port</span><br><span class="line">  summary: Make the server a replica of another instance, or promote it as master. Deprecated starting with Redis 5. Use REPLICAOF instead.</span><br><span class="line">  since: 1.0.0</span><br><span class="line">  group: server</span><br><span class="line"></span><br><span class="line">127.0.0.1:6380&gt; </span><br></pre></td></tr></table></figure>
+<p>ok ,我们到6380的客户端实施：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; REPLICAOF 127.0.0.1 6379</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6380&gt; </span><br></pre></td></tr></table></figure>
+<p>然后我们去主机6379控制台看看：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">3971:M 31 Mar 2021 10:22:35.933 * Ready to accept connections</span><br><span class="line">3971:M 31 Mar 2021 10:36:23.333 * Replica 127.0.0.1:6380 asks for synchronization</span><br><span class="line">3971:M 31 Mar 2021 10:36:23.333 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for &#x27;f7aea8d38b63623a3d66330aac8a128e45ef6e2c&#x27;, my replication IDs are &#x27;b0102be2fc0f8d3f08cd98c46b967bf8ee5f6544&#x27; and &#x27;0000000000000000000000000000000000000000&#x27;)</span><br><span class="line">3971:M 31 Mar 2021 10:36:23.333 * Starting BGSAVE for SYNC with target: disk</span><br><span class="line">3971:M 31 Mar 2021 10:36:23.338 * Background saving started by pid 3992</span><br><span class="line">3992:C 31 Mar 2021 10:36:23.344 * DB saved on disk</span><br><span class="line">3992:C 31 Mar 2021 10:36:23.345 * RDB: 4 MB of memory used by copy-on-write</span><br><span class="line">3971:M 31 Mar 2021 10:36:23.436 * Background saving terminated with success</span><br><span class="line">3971:M 31 Mar 2021 10:36:23.436 * Synchronization with replica 127.0.0.1:6380 succeeded</span><br></pre></td></tr></table></figure>
+<p>根据日志可以看出，当从机<code>REPLICAOF</code>到主机之后，从机请求同步，使用<code>bgsave</code>同步数据到磁盘，且同步成功。</p>
+<p>再看看6380的控制台(从机先把自己的数据删除掉)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">3976:S 31 Mar 2021 10:36:22.278 * Before turning into a replica, using my own master parameters to synthesize a cached master: I may be able to synchronize with the new master with just a partial transfer.</span><br><span class="line">3976:S 31 Mar 2021 10:36:22.278 * REPLICAOF 127.0.0.1:6379 enabled (user request from &#x27;id=4 addr=127.0.0.1:53660 fd=7 name= age=453 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=44 qbuf-free=32724 obl=0 oll=0 omem=0 events=r cmd=replicaof user=default&#x27;)</span><br><span class="line">3976:S 31 Mar 2021 10:36:23.332 * Connecting to MASTER 127.0.0.1:6379</span><br><span class="line">3976:S 31 Mar 2021 10:36:23.332 * MASTER &lt;-&gt; REPLICA sync started</span><br><span class="line">3976:S 31 Mar 2021 10:36:23.332 * Non blocking connect for SYNC fired the event.</span><br><span class="line">3976:S 31 Mar 2021 10:36:23.333 * Master replied to PING, replication can continue...</span><br><span class="line">3976:S 31 Mar 2021 10:36:23.333 * Trying a partial resynchronization (request f7aea8d38b63623a3d66330aac8a128e45ef6e2c:1).</span><br><span class="line">3976:S 31 Mar 2021 10:36:23.343 * Full resync from master: d4af9c563e480428c2a16e4c949e0b5558af4fd0:0</span><br><span class="line">3976:S 31 Mar 2021 10:36:23.343 * Discarding previously cached master state.</span><br><span class="line">3976:S 31 Mar 2021 10:36:23.437 * MASTER &lt;-&gt; REPLICA sync: receiving 175 bytes from master to disk</span><br><span class="line">3976:S 31 Mar 2021 10:36:23.437 * MASTER &lt;-&gt; REPLICA sync: Flushing old data  #这里是需要将自己的老的数据显删除</span><br><span class="line">3976:S 31 Mar 2021 10:36:23.437 * MASTER &lt;-&gt; REPLICA sync: Loading DB in memory</span><br><span class="line">3976:S 31 Mar 2021 10:36:23.437 * Loading RDB produced by version 6.0.0</span><br><span class="line">3976:S 31 Mar 2021 10:36:23.437 * RDB age 0 seconds</span><br><span class="line">3976:S 31 Mar 2021 10:36:23.437 * RDB memory usage when created 1.82 Mb</span><br><span class="line">3976:S 31 Mar 2021 10:36:23.437 * MASTER &lt;-&gt; REPLICA sync: Finished with success</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>我们在主机6379建立一个客户端，创建一个数据，在主机获取数据肯定也是没有问题的：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]# redis-cli -p 6379</span><br><span class="line">127.0.0.1:6379&gt; set k1 hello</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; keys *</span><br><span class="line">1) &quot;k1&quot;</span><br><span class="line">127.0.0.1:6379&gt; get k1</span><br><span class="line">&quot;hello&quot;</span><br><span class="line">127.0.0.1:6379&gt; </span><br></pre></td></tr></table></figure>
+<p>我们再去6380去看看有没有数据：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; keys *</span><br><span class="line">1) &quot;k1&quot;</span><br><span class="line">127.0.0.1:6380&gt; get k1</span><br><span class="line">&quot;hello&quot;</span><br><span class="line">127.0.0.1:6380&gt; </span><br></pre></td></tr></table></figure>
+<p>没有问题，所以说数据是同步过来了</p>
+<blockquote>
+<p>需要注意的是，如果我们去从机上执行<code>set key</code>，会发现不能写</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6380&gt; set k2 world</span><br><span class="line">(error) READONLY You can&#x27;t write against a read only replica.</span><br><span class="line">127.0.0.1:6380&gt; </span><br></pre></td></tr></table></figure>
+<p>这个是可以在配置文件中进行设置的</p>
+</blockquote>
+<p>我们如果这样操作，先在6381中创建一个key，然后再让6381追随6379，这个时候发现，从机上刚刚创建的k2是没有了（因为会先清除老的数据，再同步主机的数据），只有主机同步过来的数据了</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]# redis-cli -p 6381</span><br><span class="line">127.0.0.1:6381&gt; set k2 aaa</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6381&gt; keys *</span><br><span class="line">1) &quot;k2&quot;</span><br><span class="line">127.0.0.1:6381&gt; get k2</span><br><span class="line">&quot;aaa&quot;</span><br><span class="line">127.0.0.1:6381&gt; REPLICAOF 127.0.0.1 6379</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6381&gt; keys *</span><br><span class="line">1) &quot;k1&quot;</span><br></pre></td></tr></table></figure>
+<p>这个时候，再去看看持久化文件夹，发现都有<code>dump.rdb</code>文件了</p>
+<h6 id="增量同步-从机挂了">增量同步&amp;从机挂了</h6>
+<blockquote>
+<p>如果这个时候6381挂掉了，我们看到6379显示</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3971:M 31 Mar 2021 11:47:13.143 # Connection with replica 127.0.0.1:6381 lost.</span><br></pre></td></tr></table></figure>
+<p>然后主机还是写数据:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; set k3 qweqweqw</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; set k4 32f23f23</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; set k5 3d3dqdddq</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; set k6 3d33d12d</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; keys *</span><br><span class="line">1) &quot;k6&quot;</span><br><span class="line">2) &quot;k3&quot;</span><br><span class="line">3) &quot;k5&quot;</span><br><span class="line">4) &quot;k4&quot;</span><br><span class="line">5) &quot;k1&quot;</span><br><span class="line">127.0.0.1:6379&gt; </span><br></pre></td></tr></table></figure>
+<p>6380数据同步是没有问题的，这个时候6381恢复了</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]# redis-server /test/6381.conf --replicaof 127.0.0.1 6379</span><br></pre></td></tr></table></figure>
+<p>同时看到6380的日志：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">4172:S 31 Mar 2021 11:50:10.656 * Connecting to MASTER 127.0.0.1:6379</span><br><span class="line">4172:S 31 Mar 2021 11:50:10.657 * MASTER &lt;-&gt; REPLICA sync started</span><br><span class="line">4172:S 31 Mar 2021 11:50:10.657 * Non blocking connect for SYNC fired the event.</span><br><span class="line">4172:S 31 Mar 2021 11:50:10.657 * Master replied to PING, replication can continue...</span><br><span class="line">4172:S 31 Mar 2021 11:50:10.657 * Trying a partial resynchronization (request d4af9c563e480428c2a16e4c949e0b5558af4fd0:5936).</span><br><span class="line">4172:S 31 Mar 2021 11:50:10.658 * Successful partial resynchronization with master.</span><br><span class="line">4172:S 31 Mar 2021 11:50:10.658 * MASTER &lt;-&gt; REPLICA sync: Master accepted a Partial Resynchronization.</span><br></pre></td></tr></table></figure>
+<p>发现这个过程并没有落RDB的过程，但是</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6381&gt; keys *</span><br><span class="line">1) &quot;k1&quot;</span><br><span class="line">2) &quot;k5&quot;</span><br><span class="line">3) &quot;k3&quot;</span><br><span class="line">4) &quot;k4&quot;</span><br><span class="line">5) &quot;k6&quot;</span><br><span class="line">127.0.0.1:6381&gt; </span><br></pre></td></tr></table></figure>
+<p>数据确实同步过来了，这就是所谓的<strong>增量同步</strong> 的过程</p>
+</blockquote>
+<h6 id="遗留问题">遗留问题</h6>
+<p>这里有一点需要特殊说明一下，当我们重新结束6381服务，采取这种方式启动服务:</p>
+<p><code>redis-server /test/6381.conf --replicaof 127.0.0.1 6379 --appendonly yes</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]# redis-server /test/6381.conf --replicaof 127.0.0.1 6379 --appendonly yes</span><br><span class="line">1296:C 31 Mar 2021 14:59:57.942 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo</span><br><span class="line">1296:C 31 Mar 2021 14:59:57.942 # Redis version=6.0.0, bits=64, commit=00000000, modified=0, pid=1296, just started</span><br><span class="line">1296:C 31 Mar 2021 14:59:57.942 # Configuration loaded</span><br><span class="line">1296:S 31 Mar 2021 14:59:57.943 * Increased maximum number of open files to 10032 (it was originally set to 1024).</span><br><span class="line">                _._                                                  </span><br><span class="line">           _.-``__ &#x27;&#x27;-._                                             </span><br><span class="line">      _.-``    `.  `_.  &#x27;&#x27;-._           Redis 6.0.0 (00000000/0) 64 bit</span><br><span class="line">  .-`` .-```.  ```\/    _.,_ &#x27;&#x27;-._                                   </span><br><span class="line"> (    &#x27;      ,       .-`  | `,    )     Running in standalone mode</span><br><span class="line"> |`-._`-...-` __...-.``-._|&#x27;` _.-&#x27;|     Port: 6381</span><br><span class="line"> |    `-._   `._    /     _.-&#x27;    |     PID: 1296</span><br><span class="line">  `-._    `-._  `-./  _.-&#x27;    _.-&#x27;                                   </span><br><span class="line"> |`-._`-._    `-.__.-&#x27;    _.-&#x27;_.-&#x27;|                                  </span><br><span class="line"> |    `-._`-._        _.-&#x27;_.-&#x27;    |           http://redis.io        </span><br><span class="line">  `-._    `-._`-.__.-&#x27;_.-&#x27;    _.-&#x27;                                   </span><br><span class="line"> |`-._`-._    `-.__.-&#x27;    _.-&#x27;_.-&#x27;|                                  </span><br><span class="line"> |    `-._`-._        _.-&#x27;_.-&#x27;    |                                  </span><br><span class="line">  `-._    `-._`-.__.-&#x27;_.-&#x27;    _.-&#x27;                                   </span><br><span class="line">      `-._    `-.__.-&#x27;    _.-&#x27;                                       </span><br><span class="line">          `-._        _.-&#x27;                                           </span><br><span class="line">              `-.__.-&#x27;                                               </span><br><span class="line"></span><br><span class="line">1296:S 31 Mar 2021 14:59:57.944 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.</span><br><span class="line">1296:S 31 Mar 2021 14:59:57.944 # Server initialized</span><br><span class="line">1296:S 31 Mar 2021 14:59:57.944 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add &#x27;vm.overcommit_memory = 1&#x27; to /etc/sysctl.conf and then reboot or run the command &#x27;sysctl vm.overcommit_memory=1&#x27; for this to take effect.</span><br><span class="line">1296:S 31 Mar 2021 14:59:57.944 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command &#x27;echo never &gt; /sys/kernel/mm/transparent_hugepage/enabled&#x27; as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.</span><br><span class="line">1296:S 31 Mar 2021 14:59:57.946 * Ready to accept connections</span><br><span class="line">1296:S 31 Mar 2021 14:59:57.947 * Connecting to MASTER 127.0.0.1:6379</span><br><span class="line">1296:S 31 Mar 2021 14:59:57.948 * MASTER &lt;-&gt; REPLICA sync started</span><br><span class="line">1296:S 31 Mar 2021 14:59:57.949 * Non blocking connect for SYNC fired the event.</span><br><span class="line">1296:S 31 Mar 2021 14:59:57.968 * Master replied to PING, replication can continue...</span><br><span class="line">1296:S 31 Mar 2021 14:59:57.970 * Partial resynchronization not possible (no cached master)</span><br><span class="line">1296:S 31 Mar 2021 14:59:57.982 * Full resync from master: 99c61ed7f56cfb5c98c8e9fddf65a641731f7f7b:0</span><br><span class="line">1296:S 31 Mar 2021 14:59:58.070 * MASTER &lt;-&gt; REPLICA sync: receiving 243 bytes from master to disk</span><br><span class="line">1296:S 31 Mar 2021 14:59:58.070 * MASTER &lt;-&gt; REPLICA sync: Flushing old data</span><br><span class="line">1296:S 31 Mar 2021 14:59:58.071 * MASTER &lt;-&gt; REPLICA sync: Loading DB in memory</span><br><span class="line">1296:S 31 Mar 2021 14:59:58.071 * Loading RDB produced by version 6.0.0</span><br><span class="line">1296:S 31 Mar 2021 14:59:58.071 * RDB age 1 seconds</span><br><span class="line">1296:S 31 Mar 2021 14:59:58.071 * RDB memory usage when created 1.83 Mb</span><br><span class="line">1296:S 31 Mar 2021 14:59:58.071 * MASTER &lt;-&gt; REPLICA sync: Finished with success</span><br><span class="line">1296:S 31 Mar 2021 14:59:58.072 * Background append only file rewriting started by pid 1302</span><br><span class="line">1296:S 31 Mar 2021 14:59:58.099 * AOF rewrite child asks to stop sending diffs.</span><br><span class="line">1302:C 31 Mar 2021 14:59:58.100 * Parent agreed to stop sending diffs. Finalizing AOF...</span><br><span class="line">1302:C 31 Mar 2021 14:59:58.100 * Concatenating 0.00 MB of AOF diff received from parent.</span><br><span class="line">1302:C 31 Mar 2021 14:59:58.100 * SYNC append only file rewrite performed</span><br><span class="line">1302:C 31 Mar 2021 14:59:58.100 * AOF rewrite: 4 MB of memory used by copy-on-write</span><br><span class="line">1296:S 31 Mar 2021 14:59:58.151 * Background AOF rewrite terminated with success</span><br><span class="line">1296:S 31 Mar 2021 14:59:58.151 * Residual parent diff successfully flushed to the rewritten AOF (0.00 MB)</span><br><span class="line">1296:S 31 Mar 2021 14:59:58.151 * Background AOF rewrite finished successfully</span><br></pre></td></tr></table></figure>
+<p>发现一个问题：不开启AOF的时候，数据是增量同步，但是开启了AOF之后（根据上面33～41行代码可以看出），就变成了全量同步，这点没太理解就是这样设计的还是？</p>
+<p>RDB是会在<code>dump.rdb</code>记录追随主的xxid的，，那么我在进行数据同步的时候，这样我就可以判断是增量数据,但是开启AOF之后，<code>appendaof.aof</code>中并没有记录，前面部分就只是一个传统的RDB，并没有这个id,因此，在主机再写数据的时候，就无法判定是不是直接追加的，所以直接全量更新了。这个设计不知道是设计如此，还是一个bug,我目前还没搞懂。</p>
+<p><code>dump.rdb</code>文件</p>
+<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210331152452078.png" alt="image-20210331152452078"></p>
+<p><code>appendaof.aof</code>文件</p>
+<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210331152538929.png" alt="image-20210331152538929"></p>
+<p>所以，记住<strong>只要开启AOF,就是全量同步</strong> 这句话就可以了</p>
+<h6 id="主机挂了">主机挂了</h6>
+<p>首先，<strong>主机是知道有多少个从机的。</strong> 这句话需要记住，哨兵会用到，如果没有哨兵，是没法自动化的，那么<strong>人为</strong> 如何将其中一台变为主</p>
+<p>追随主的命令是<code>REPLICAOF HOST PORT</code> ，那么不想追随了，想自己（6380）变成主机，就是<code>REPLICAOF no one</code>,但是这个时候，其他的从因为之前追随的是6379，就会一直connecting 6379，这个时候就需要人为的让6381也追随6380</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">REPLICAOF 127.0.0.1 6380</span><br></pre></td></tr></table></figure>
+<h6 id="从机支持增删改">从机支持增删改</h6>
+<p>上面讲的都是基于主机支持增删改查，从机只支持查询，但是这个是可以配置的.找到</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">################################ REPLICATION #################################</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> replicaof &lt;masterip&gt; &lt;masterport&gt; <span class="comment"># 可以在这里指定追随者</span></span></span><br><span class="line">replica-serve-stale-data yes # 如果redis刚启动过，也追随了某一个主，这个时候需要同步数据，比如主有4g的数据，传输过程有一会，这个过程中，备机中老的数据要不要对外暴露，要不要支持查询</span><br><span class="line">replica-read-only yes # 备机是不是只支持查询 no时支持write</span><br><span class="line">repl-diskless-sync no # 同步数据有两种方式，一种是主先落RDB，再通过网络IO讲RDB同步到从，另一种是直接通过网络IO直接传输给从，默认是不直接通过网络，即no,默认走磁盘。 见下图</span><br><span class="line">repl-backlog-size 1mb # 增量复制的队列大小</span><br><span class="line"> min-replicas-to-write 3</span><br><span class="line"> min-replicas-max-lag 10</span><br></pre></td></tr></table></figure>
+<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210331200831197.png" alt="image-20210331200831197"></p>
+<h5 id="b、【Redis集群方式二】主从复制高可用-Sentinel（哨兵）">b、【Redis集群方式二】主从复制高可用-Sentinel（哨兵）</h5>
+<p>Redis的Sentinel系统用于管理多个redis服务器，其实上面有讲到额监控其实就是哨兵sentinel</p>
+<p>它的三个任务是：<strong>监控、提醒、故障自动迁移</strong></p>
+<p>要想启动一个哨兵，至少需要以下的配置：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> sentinel monitor mymaster 127.0.0.1 6379 2</span><br><span class="line"><span class="meta">#</span><span class="bash">sentinel monitor 监控谁    它的IP     端口号 投票的范围权重值</span></span><br><span class="line">sentinel down-after-milliseconds mymaster 60000</span><br><span class="line">sentinel failover-timeout mymaster 180000</span><br><span class="line">sentinel parallel-syncs mymaster 1</span><br></pre></td></tr></table></figure>
+<p>我们先把所有的redis-server停掉，然后准备配置文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]# cd /test/</span><br><span class="line">[root@hadoop01 test]# ll</span><br><span class="line">总用量 240</span><br><span class="line">-rw-r--r-- 1 root root 81553 3月  30 17:27 6379.conf</span><br><span class="line">-rw-r--r-- 1 root root 81553 3月  30 17:27 6380.conf</span><br><span class="line">-rw-r--r-- 1 root root 81553 3月  30 17:28 6381.conf</span><br><span class="line">[root@hadoop01 test]# vi sentinel_6379.conf</span><br><span class="line">port 26379</span><br><span class="line">sentinel monitor mymaster 127.0.0.1 6379 2</span><br><span class="line">:wq</span><br><span class="line">[root@hadoop01 test]# cp sentinel_6379.conf sentinel_6380.conf</span><br><span class="line">[root@hadoop01 test]# cp sentinel_6379.conf sentinel_6381.conf</span><br></pre></td></tr></table></figure>
+<p>同理，修改<code>sentinel_6380.conf</code>中<code>port</code>的值为<code>26380</code>,<code> sentinel_6381.conf</code>的<code>port</code>值为26381</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 test]# ll</span><br><span class="line">总用量 252</span><br><span class="line">-rw-r--r-- 1 root root 81553 3月  30 17:27 6379.conf</span><br><span class="line">-rw-r--r-- 1 root root 81553 3月  30 17:27 6380.conf</span><br><span class="line">-rw-r--r-- 1 root root 81553 3月  30 17:28 6381.conf</span><br><span class="line">-rw-r--r-- 1 root root    56 4月   2 16:39 sentinel_6379.conf</span><br><span class="line">-rw-r--r-- 1 root root    56 4月   2 16:41 sentinel_6380.conf</span><br><span class="line">-rw-r--r-- 1 root root    56 4月   2 16:41 sentinel_6381.conf</span><br><span class="line">[root@hadoop01 test]# </span><br></pre></td></tr></table></figure>
+<p>ok，配置文件写好之后，就可以启动服务了，分别启动,并让80，81追随79</p>
+<p><code>redis-server /test/6379.conf</code>、</p>
+<p><code> redis-server /test/6380.conf --replicaof 127.0.0.1 6379</code>、</p>
+<p><code>redis-server /test/6381.conf --replicaof 127.0.0.1 6379</code></p>
+<p>这样主从都跑起来了，接下来就需要启动哨兵了</p>
+<p>根据官方文档，两种方式</p>
+<blockquote>
+<p>对于 redis-sentinel 程序， 你可以用以下命令来启动 Sentinel 系统：</p>
+<p>对于 redis-server 程序， 你可以用以下命令来启动一个运行在 Sentinel 模式下的 Redis 服务器：</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-<span class="keyword">server</span> /<span class="type">path</span>/<span class="keyword">to</span>/sentinel.conf <span class="comment">--sentinel</span></span><br></pre></td></tr></table></figure>
+<p>两种方法都可以启动一个 Sentinel 实例。</p>
+<p>启动 Sentinel 实例必须指定相应的配置文件， 系统会使用配置文件来保存 Sentinel 的当前状态， 并在 Sentinel 重启时通过载入配置文件来进行状态还原。</p>
+<p>如果启动 Sentinel 时没有指定相应的配置文件， 或者指定的配置文件不可写（not writable）， 那么 Sentinel 会拒绝启动。</p>
+</blockquote>
+<p><code>redis-server /test/sentinel_6379.conf --sentinel</code>使用命令启动哨兵：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]# redis-server /test/sentinel_6379.conf --sentinel</span><br><span class="line">3016:X 02 Apr 2021 17:17:51.170 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo</span><br><span class="line">3016:X 02 Apr 2021 17:17:51.170 # Redis version=6.0.0, bits=64, commit=00000000, modified=0, pid=3016, just started</span><br><span class="line">3016:X 02 Apr 2021 17:17:51.170 # Configuration loaded</span><br><span class="line">3016:X 02 Apr 2021 17:17:51.170 * Increased maximum number of open files to 10032 (it was originally set to 1024).</span><br><span class="line">                _._                                                  </span><br><span class="line">           _.-``__ &#x27;&#x27;-._                                             </span><br><span class="line">      _.-``    `.  `_.  &#x27;&#x27;-._           Redis 6.0.0 (00000000/0) 64 bit</span><br><span class="line">  .-`` .-```.  ```\/    _.,_ &#x27;&#x27;-._                                   </span><br><span class="line"> (    &#x27;      ,       .-`  | `,    )     Running in sentinel mode</span><br><span class="line"> |`-._`-...-` __...-.``-._|&#x27;` _.-&#x27;|     Port: 26379</span><br><span class="line"> |    `-._   `._    /     _.-&#x27;    |     PID: 3016</span><br><span class="line">  `-._    `-._  `-./  _.-&#x27;    _.-&#x27;                                   </span><br><span class="line"> |`-._`-._    `-.__.-&#x27;    _.-&#x27;_.-&#x27;|                                  </span><br><span class="line"> |    `-._`-._        _.-&#x27;_.-&#x27;    |           http://redis.io        </span><br><span class="line">  `-._    `-._`-.__.-&#x27;_.-&#x27;    _.-&#x27;                                   </span><br><span class="line"> |`-._`-._    `-.__.-&#x27;    _.-&#x27;_.-&#x27;|                                  </span><br><span class="line"> |    `-._`-._        _.-&#x27;_.-&#x27;    |                                  </span><br><span class="line">  `-._    `-._`-.__.-&#x27;_.-&#x27;    _.-&#x27;                                   </span><br><span class="line">      `-._    `-.__.-&#x27;    _.-&#x27;                                       </span><br><span class="line">          `-._        _.-&#x27;                                           </span><br><span class="line">              `-.__.-&#x27;                                               </span><br><span class="line"></span><br><span class="line">3016:X 02 Apr 2021 17:17:51.171 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.</span><br><span class="line">3016:X 02 Apr 2021 17:17:51.173 # Sentinel ID is 73d67c4a5679af45c129a34d5b0761bbd430cf6e</span><br><span class="line">3016:X 02 Apr 2021 17:17:51.173 # +monitor master mymaster 127.0.0.1 6379 quorum 2</span><br><span class="line">3016:X 02 Apr 2021 17:17:51.174 * +slave slave 127.0.0.1:6380 127.0.0.1 6380 @ mymaster 127.0.0.1 6379</span><br><span class="line">3016:X 02 Apr 2021 17:17:51.175 * +slave slave 127.0.0.1:6381 127.0.0.1 6381 @ mymaster 127.0.0.1 6379</span><br></pre></td></tr></table></figure>
+<p>上面代码26～28行我们看到：我们配置文件中只给出了master是6379,但是发现了两个slave，这是因为：</p>
+<blockquote>
+<p>主是知道哪些从连接了它，所以哨兵只要监控了主，那么就会知道哪些从（其实实现用的就是redis的发布、订阅）</p>
+</blockquote>
+<p>我们再起一个哨兵</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]#  redis-server /test/sentinel_6380.conf --sentinel</span><br><span class="line">3084:X 02 Apr 2021 17:27:53.638 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo</span><br><span class="line">3084:X 02 Apr 2021 17:27:53.638 # Redis version=6.0.0, bits=64, commit=00000000, modified=0, pid=3084, just started</span><br><span class="line">3084:X 02 Apr 2021 17:27:53.638 # Configuration loaded</span><br><span class="line">3084:X 02 Apr 2021 17:27:53.639 * Increased maximum number of open files to 10032 (it was originally set to 1024).</span><br><span class="line">                _._                                                  </span><br><span class="line">           _.-``__ &#x27;&#x27;-._                                             </span><br><span class="line">      _.-``    `.  `_.  &#x27;&#x27;-._           Redis 6.0.0 (00000000/0) 64 bit</span><br><span class="line">  .-`` .-```.  ```\/    _.,_ &#x27;&#x27;-._                                   </span><br><span class="line"> (    &#x27;      ,       .-`  | `,    )     Running in sentinel mode</span><br><span class="line"> |`-._`-...-` __...-.``-._|&#x27;` _.-&#x27;|     Port: 26380</span><br><span class="line"> |    `-._   `._    /     _.-&#x27;    |     PID: 3084</span><br><span class="line">  `-._    `-._  `-./  _.-&#x27;    _.-&#x27;                                   </span><br><span class="line"> |`-._`-._    `-.__.-&#x27;    _.-&#x27;_.-&#x27;|                                  </span><br><span class="line"> |    `-._`-._        _.-&#x27;_.-&#x27;    |           http://redis.io        </span><br><span class="line">  `-._    `-._`-.__.-&#x27;_.-&#x27;    _.-&#x27;                                   </span><br><span class="line"> |`-._`-._    `-.__.-&#x27;    _.-&#x27;_.-&#x27;|                                  </span><br><span class="line"> |    `-._`-._        _.-&#x27;_.-&#x27;    |                                  </span><br><span class="line">  `-._    `-._`-.__.-&#x27;_.-&#x27;    _.-&#x27;                                   </span><br><span class="line">      `-._    `-.__.-&#x27;    _.-&#x27;                                       </span><br><span class="line">          `-._        _.-&#x27;                                           </span><br><span class="line">              `-.__.-&#x27;                                               </span><br><span class="line"></span><br><span class="line">3084:X 02 Apr 2021 17:27:53.640 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.</span><br><span class="line">3084:X 02 Apr 2021 17:27:53.644 # Sentinel ID is 036b70b06fa4111367c69e978031c9262d25db52</span><br><span class="line">3084:X 02 Apr 2021 17:27:53.644 # +monitor master mymaster 127.0.0.1 6379 quorum 2</span><br><span class="line">3084:X 02 Apr 2021 17:27:53.646 * +slave slave 127.0.0.1:6380 127.0.0.1 6380 @ mymaster 127.0.0.1 6379</span><br><span class="line">3084:X 02 Apr 2021 17:27:53.651 * +slave slave 127.0.0.1:6381 127.0.0.1 6381 @ mymaster 127.0.0.1 6379</span><br><span class="line">3084:X 02 Apr 2021 17:27:54.267 * +sentinel sentinel 73d67c4a5679af45c129a34d5b0761bbd430cf6e 127.0.0.1 26379 @ mymaster 127.0.0.1 6379</span><br></pre></td></tr></table></figure>
+<p>我们发现，这个哨兵给我们的信息和前一个哨兵的信息，除了可以看到有一个主，两个从，还有发现刚才的那个哨兵。这就是我们前面讲的，监控中，两两组要组建成势力，同样，我们再起一个</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]# redis-server /test/sentinel_6381.conf --sentinel</span><br><span class="line">3150:X 02 Apr 2021 17:32:57.175 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo</span><br><span class="line">3150:X 02 Apr 2021 17:32:57.175 # Redis version=6.0.0, bits=64, commit=00000000, modified=0, pid=3150, just started</span><br><span class="line">3150:X 02 Apr 2021 17:32:57.175 # Configuration loaded</span><br><span class="line">3150:X 02 Apr 2021 17:32:57.176 * Increased maximum number of open files to 10032 (it was originally set to 1024).</span><br><span class="line">                _._                                                  </span><br><span class="line">           _.-``__ &#x27;&#x27;-._                                             </span><br><span class="line">      _.-``    `.  `_.  &#x27;&#x27;-._           Redis 6.0.0 (00000000/0) 64 bit</span><br><span class="line">  .-`` .-```.  ```\/    _.,_ &#x27;&#x27;-._                                   </span><br><span class="line"> (    &#x27;      ,       .-`  | `,    )     Running in sentinel mode</span><br><span class="line"> |`-._`-...-` __...-.``-._|&#x27;` _.-&#x27;|     Port: 26381</span><br><span class="line"> |    `-._   `._    /     _.-&#x27;    |     PID: 3150</span><br><span class="line">  `-._    `-._  `-./  _.-&#x27;    _.-&#x27;                                   </span><br><span class="line"> |`-._`-._    `-.__.-&#x27;    _.-&#x27;_.-&#x27;|                                  </span><br><span class="line"> |    `-._`-._        _.-&#x27;_.-&#x27;    |           http://redis.io        </span><br><span class="line">  `-._    `-._`-.__.-&#x27;_.-&#x27;    _.-&#x27;                                   </span><br><span class="line"> |`-._`-._    `-.__.-&#x27;    _.-&#x27;_.-&#x27;|                                  </span><br><span class="line"> |    `-._`-._        _.-&#x27;_.-&#x27;    |                                  </span><br><span class="line">  `-._    `-._`-.__.-&#x27;_.-&#x27;    _.-&#x27;                                   </span><br><span class="line">      `-._    `-.__.-&#x27;    _.-&#x27;                                       </span><br><span class="line">          `-._        _.-&#x27;                                           </span><br><span class="line">              `-.__.-&#x27;                                               </span><br><span class="line"></span><br><span class="line">3150:X 02 Apr 2021 17:32:57.177 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.</span><br><span class="line">3150:X 02 Apr 2021 17:32:57.181 # Sentinel ID is 75fd04ec24a12fc2f563523b1d0ef3b45247ff51</span><br><span class="line">3150:X 02 Apr 2021 17:32:57.181 # +monitor master mymaster 127.0.0.1 6379 quorum 2</span><br><span class="line">3150:X 02 Apr 2021 17:32:57.184 * +slave slave 127.0.0.1:6380 127.0.0.1 6380 @ mymaster 127.0.0.1 6379</span><br><span class="line">3150:X 02 Apr 2021 17:32:57.185 * +slave slave 127.0.0.1:6381 127.0.0.1 6381 @ mymaster 127.0.0.1 6379</span><br><span class="line">3150:X 02 Apr 2021 17:32:57.815 * +sentinel sentinel 036b70b06fa4111367c69e978031c9262d25db52 127.0.0.1 26380 @ mymaster 127.0.0.1 6379</span><br><span class="line">3150:X 02 Apr 2021 17:32:58.175 * +sentinel sentinel 73d67c4a5679af45c129a34d5b0761bbd430cf6e 127.0.0.1 26379 @ mymaster 127.0.0.1 6379</span><br></pre></td></tr></table></figure>
+<p>主、从以及另外两台哨兵都知道了。</p>
+<p>那之前的故障转移都是人为操作的，有了哨兵之后呢？</p>
+<p>我们把7379（主）进程结束掉，来模拟主故障，看看效果（一般会有一会的延迟）</p>
+<p>我们可以在哨兵的控制台中看到，由于主挂了，由几个哨兵投票选举出了新的主6381</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">3150:X 02 Apr 2021 17:44:41.794 # +sdown master mymaster 127.0.0.1 6379</span><br><span class="line">3150:X 02 Apr 2021 17:44:41.862 # +odown master mymaster 127.0.0.1 6379 #quorum 2/2</span><br><span class="line">3150:X 02 Apr 2021 17:44:41.862 # +new-epoch 1</span><br><span class="line">3150:X 02 Apr 2021 17:44:41.862 # +try-failover master mymaster 127.0.0.1 6379</span><br><span class="line">3150:X 02 Apr 2021 17:44:41.864 # +vote-for-leader 75fd04ec24a12fc2f563523b1d0ef3b45247ff51 1</span><br><span class="line">3150:X 02 Apr 2021 17:44:41.875 # 73d67c4a5679af45c129a34d5b0761bbd430cf6e voted for 75fd04ec24a12fc2f563523b1d0ef3b45247ff51 1</span><br><span class="line">3150:X 02 Apr 2021 17:44:41.876 # 036b70b06fa4111367c69e978031c9262d25db52 voted for 75fd04ec24a12fc2f563523b1d0ef3b45247ff51 1</span><br><span class="line">3150:X 02 Apr 2021 17:44:41.920 # +elected-leader master mymaster 127.0.0.1 6379</span><br><span class="line">3150:X 02 Apr 2021 17:44:41.920 # +failover-state-select-slave master mymaster 127.0.0.1 6379</span><br><span class="line">3150:X 02 Apr 2021 17:44:41.987 # +selected-slave slave 127.0.0.1:6381 127.0.0.1 6381 @ mymaster 127.0.0.1 6379</span><br><span class="line">3150:X 02 Apr 2021 17:44:41.987 * +failover-state-send-slaveof-noone slave 127.0.0.1:6381 127.0.0.1 6381 @ mymaster 127.0.0.1 6379</span><br><span class="line">3150:X 02 Apr 2021 17:44:42.039 * +failover-state-wait-promotion slave 127.0.0.1:6381 127.0.0.1 6381 @ mymaster 127.0.0.1 6379</span><br><span class="line">3150:X 02 Apr 2021 17:44:42.749 # +promoted-slave slave 127.0.0.1:6381 127.0.0.1 6381 @ mymaster 127.0.0.1 6379</span><br><span class="line">3150:X 02 Apr 2021 17:44:42.749 # +failover-state-reconf-slaves master mymaster 127.0.0.1 6379</span><br><span class="line">3150:X 02 Apr 2021 17:44:42.831 * +slave-reconf-sent slave 127.0.0.1:6380 127.0.0.1 6380 @ mymaster 127.0.0.1 6379</span><br><span class="line">3150:X 02 Apr 2021 17:44:42.996 # -odown master mymaster 127.0.0.1 6379</span><br><span class="line">3150:X 02 Apr 2021 17:44:43.783 * +slave-reconf-inprog slave 127.0.0.1:6380 127.0.0.1 6380 @ mymaster 127.0.0.1 6379</span><br><span class="line">3150:X 02 Apr 2021 17:44:43.783 * +slave-reconf-done slave 127.0.0.1:6380 127.0.0.1 6380 @ mymaster 127.0.0.1 6379</span><br><span class="line">3150:X 02 Apr 2021 17:44:43.854 # +failover-end master mymaster 127.0.0.1 6379</span><br><span class="line">3150:X 02 Apr 2021 17:44:43.854 # +switch-master mymaster 127.0.0.1 6379 127.0.0.1 6381</span><br><span class="line">3150:X 02 Apr 2021 17:44:43.855 * +slave slave 127.0.0.1:6380 127.0.0.1 6380 @ mymaster 127.0.0.1 6381</span><br><span class="line">3150:X 02 Apr 2021 17:44:43.855 * +slave slave 127.0.0.1:6379 127.0.0.1 6379 @ mymaster 127.0.0.1 6381</span><br><span class="line">3150:X 02 Apr 2021 17:45:13.922 # +sdown slave 127.0.0.1:6379 127.0.0.1 6379 @ mymaster 127.0.0.1 6381</span><br></pre></td></tr></table></figure>
+<p>我们尝试去开一个6381的客户端，set一个值，然后在6380看数据是否同步过来了，这就完成了<strong>自动故障转移</strong></p>
+<blockquote>
+<p>注意：</p>
+<p>哨兵是会修改配置文件的，随便打开一个看看就会发现增加了很多东西</p>
+</blockquote>
+<blockquote>
+<p>那么前面有说过一个问题，哨兵是如何知道主从，以及其他的哨兵的，就是通过发布订阅，哨兵通过监控主redis，然后主通过发布订阅发现其他哨兵，可以开一个主redis的客户端，通过<code>psubcribe</code> 查看发布订阅信息。</p>
+<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E4%B9%8B%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81CAP%E3%80%81PAXOS-1%EF%BC%88%E4%B8%80%EF%BC%89/image-20210402175917508.png" alt="image-20210402175917508"></p>
+</blockquote>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/2021/Redis集群之主从复制、CAP、PAXOS-1（二）/" data-toggle="tooltip" data-placement="top" title="Redis集群之分区方式及Redis Cluster">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/2021/基于k8s开发环境治理的利器-KT-Connect/" data-toggle="tooltip" data-placement="top" title="基于k8s开发环境治理的利器-KT Connect">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Redis集群之主从复制、哨兵模式&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2021/Redis集群之主从复制、CAP、PAXOS-1（一）/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'a00494876d6f5f4bcbfd',
+      clientSecret: '33d3d0be81052a26f5a3535733b8b7854628564f',
+      repo: 'shifpeng.github.io',
+      owner: 'shifpeng',
+      admin: 'shifpeng',
+      id: 'Sun Mar 28 2021 23:16:04 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E9%97%AE%E9%A2%98%E5%BC%95%E5%85%A5"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、问题引入</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、解决问题</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E8%A7%A3%E5%86%B3%E5%8D%95%E7%82%B9%E6%95%85%E9%9A%9C%E9%97%AE%E9%A2%98%EF%BC%88X%E8%BD%B4%EF%BC%89"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">1、解决单点故障问题（X轴）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81%E8%A7%A3%E5%86%B3%E5%AE%B9%E9%87%8F%E6%9C%89%E9%99%90%E9%97%AE%E9%A2%98%EF%BC%88Y%E8%BD%B4%EF%BC%89"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2、解决容量有限问题（Y轴）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3%E3%80%81%E8%A7%A3%E5%86%B3%E5%8E%8B%E5%8A%9B%E9%97%AE%E9%A2%98%EF%BC%88Z%E8%BD%B4%EF%BC%89"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">3、解决压力问题（Z轴）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E6%96%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、新的问题</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E6%95%B0%E6%8D%AE%E4%B8%80%E8%87%B4%E6%80%A7%E9%97%AE%E9%A2%98"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">1、数据一致性问题</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#a%E3%80%81%E5%BC%BA%E4%B8%80%E8%87%B4%E6%80%A7"><span class="toc-nav-number">3.1.1.</span> <span class="toc-nav-text">a、强一致性</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#b%E3%80%81%E5%BC%B1%E4%B8%80%E8%87%B4%E6%80%A7"><span class="toc-nav-number">3.1.2.</span> <span class="toc-nav-text">b、弱一致性</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#c%E3%80%81%E6%9C%80%E7%BB%88%E4%B8%80%E8%87%B4%E6%80%A7"><span class="toc-nav-number">3.1.3.</span> <span class="toc-nav-text">c、最终一致性</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81%E9%AB%98%E5%8F%AF%E7%94%A8%E9%97%AE%E9%A2%98"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">2、高可用问题</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">四、主从复制</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E5%AE%9E%E6%88%98"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">1、实战</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#a%E3%80%81%E5%AE%9E%E4%BE%8B%E5%87%86%E5%A4%87"><span class="toc-nav-number">4.1.1.</span> <span class="toc-nav-text">a、实例准备</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2%E3%80%81%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">4.1.2.</span> <span class="toc-nav-text">2、修改配置</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3%E3%80%81%E5%90%AF%E5%8A%A8"><span class="toc-nav-number">4.1.3.</span> <span class="toc-nav-text">3、启动</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4%E3%80%81%E4%B8%BB%E4%BB%8E%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">4.1.4.</span> <span class="toc-nav-text">4、主从配置</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#a%E3%80%81%E3%80%90Redis%E9%9B%86%E7%BE%A4%E6%96%B9%E5%BC%8F%E4%B8%80%E3%80%91%E9%80%9A%E8%BF%87%E5%91%BD%E4%BB%A4%E9%85%8D%E7%BD%AE%EF%BC%88%E4%BA%BA%E4%B8%BA%E6%96%B9%E5%BC%8F%EF%BC%89"><span class="toc-nav-number">4.1.4.1.</span> <span class="toc-nav-text">a、【Redis集群方式一】通过命令配置（人为方式）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E5%A2%9E%E9%87%8F%E5%90%8C%E6%AD%A5-%E4%BB%8E%E6%9C%BA%E6%8C%82%E4%BA%86"><span class="toc-nav-number">4.1.4.1.1.</span> <span class="toc-nav-text">增量同步&amp;从机挂了</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E9%81%97%E7%95%99%E9%97%AE%E9%A2%98"><span class="toc-nav-number">4.1.4.1.2.</span> <span class="toc-nav-text">遗留问题</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E4%B8%BB%E6%9C%BA%E6%8C%82%E4%BA%86"><span class="toc-nav-number">4.1.4.1.3.</span> <span class="toc-nav-text">主机挂了</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E4%BB%8E%E6%9C%BA%E6%94%AF%E6%8C%81%E5%A2%9E%E5%88%A0%E6%94%B9"><span class="toc-nav-number">4.1.4.1.4.</span> <span class="toc-nav-text">从机支持增删改</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#b%E3%80%81%E3%80%90Redis%E9%9B%86%E7%BE%A4%E6%96%B9%E5%BC%8F%E4%BA%8C%E3%80%91%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E9%AB%98%E5%8F%AF%E7%94%A8-Sentinel%EF%BC%88%E5%93%A8%E5%85%B5%EF%BC%89"><span class="toc-nav-number">4.1.4.2.</span> <span class="toc-nav-text">b、【Redis集群方式二】主从复制高可用-Sentinel（哨兵）</span></a></li></ol></li></ol></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+            
+            <a class="tag" href="/tags/#Redis" title="Redis">Redis</a>
+            
+            <a class="tag" href="/tags/#重学Redis" title="重学Redis">重学Redis</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://cuiqingcai.com/" target="_blank">静 觅 崔庆才</a>
+          </li>
+          
+          <li>
+            <a href="http://www.52nlp.cn/" target="_blank">我爱自然语言处理</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cnblogs.com/Steven-shi/" target="_blank">博客园 石福鹏</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/shifpeng">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Steven
+          2021
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://shifpeng.cn">Steven</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/mouseclick.js"  content='' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "shifpeng";
+    let ghPages = gh + ".github.io";
+    let pagePath = "2021/Redis集群之主从复制、CAP、PAXOS-1（一）/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://www.shifpeng.cn/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

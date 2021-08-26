@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="人最大的修养就是知人不评人"/>
+  <meta name="keyword" content="Java,Steven,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://www.shifpeng.cn/2021/gc-and-gctuning/">
+  <title>
+    
+      垃圾回收及JVM调优 - Steven | java
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'StevenBlog/community'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">石福鹏</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+              
+              <a class="tag" href="/tags/#JVM" title="JVM">JVM</a>
+              
+              <a class="tag" href="/tags/#JVM调优" title="JVM调优">JVM调优</a>
+              
+            </div>
+            <h1>垃圾回收及JVM调优</h1>
+            <h2 class="subheading">GC相关</h2>
+            <span class="meta">
+              Posted by Steven on
+              2021-05-23
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">42</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">9.5k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h3 id="何为Garbage">何为Garbage?</h3>
+<p>没有任何引用的对象就是垃圾</p>
+<h3 id="找到垃圾的方式">找到垃圾的方式</h3>
+<p>1、引用计数 不能解决循环引用（一团互相引用，但是这一团整体没有引用，是一团垃圾）</p>
+<p>2、根可达算法</p>
+<p>线程栈变量、静态变量、常亮池、JNI指针（本地方法栈）</p>
+<p><img src="/2021/gc-and-gctuning/image-20210523174650471.png" alt="image-20210523174650471"></p>
+<h3 id="垃圾回收算法（GC算法）">垃圾回收算法（GC算法）</h3>
+<ul>
+<li>
+<p>Mark-Sweep(标记清除)<br>
+算法相对简单，适合存活对象比较多（需要清理的比较少）的时候效率较高<br>
+劣势：需要两遍扫描（第一遍找到存活的标记，第二遍找到没用的，清除），执行效率偏低，容易产生碎片</p>
+</li>
+<li>
+<p>Copying（拷贝）<br>
+内存一分为二，把有用的拷贝到下面，剩下的上面的全部清除掉</p>
+<p>适用于存活对象较少的，只扫描一次，效率提高，没有碎片<br>
+劣势：空间浪费，会发生移动复制对象，需要调整对象引用</p>
+<p><img src="/2021/gc-and-gctuning/image-20210523181345569.png" alt="image-20210523181345569"></p>
+</li>
+<li>
+<p>Mark-Compact（标记压缩）<br>
+“整理到房间的一个角落中“，剩下的空间就清理出来了<br>
+<img src="/2021/gc-and-gctuning/image-20210523181953834.png" alt="image-20210523181953834"></p>
+</li>
+</ul>
+<h3 id="JVM内存分代模型（用于分代垃圾回收算法）">JVM内存分代模型（用于分代垃圾回收算法）</h3>
+<p>是部分垃圾回收器使用的模型</p>
+<blockquote>
+<p>除了Epsilicon(用来做debug的垃圾回收器)、ZGC、Shenndoah之外的GC都是使用逻辑分带模型<br>
+G1是逻辑分区，物理不分带</p>
+<p>除此之外不仅逻辑分带，而且物理分带</p>
+</blockquote>
+<p>新生代+老年代+永久带（1.7）/元数据区（1.8）</p>
+<p><strong>新生代，老年代这是堆空间，MethodArea 这是堆之外的空间</strong></p>
+<p>MethodArea（方法区） 逻辑概念，以前1.7 的时候叫 永久带，1.8叫 元数据区，存的是c la ss的元信息，代码的编译信息，JIT编译好的代码信息等等</p>
+<p>1.7的时候这个空间需要限制大小，但是因为有了限制，所以容易溢出</p>
+<p>1.8之后受限于物理内存，</p>
+<p>字符串常亮，1,7在MethodArea中，1.8在堆内存中</p>
+<p>堆内存逻辑分区</p>
+<p><img src="/2021/gc-and-gctuning/image-20210524001006075.png" alt="image-20210524001006075"></p>
+<p><img src="/2021/gc-and-gctuning/image-20210523184247507.png" alt="image-20210523184247507"></p>
+<p>一个对象产生，尝试先往栈上仍，栈上扔不下，往（伊甸）Eden区仍，经过一次垃圾回收机制，就到了s1区（幸存区域或者叫from），再经过一次垃圾回收之后，进入s2(to）,经过多次垃圾回收机制，进入到old区</p>
+<p><img src="/2021/gc-and-gctuning/image-20210523185042384.png" alt="image-20210523185042384"></p>
+<p>上图凡是在年轻带进行回收的，叫MinorGC或者YGC,在年轻带空间耗尽时触发</p>
+<p>凡事在老年代进行回收的，叫MajorGC或者FullGC，在老年代无法继续分配空间时触发，新生代老年代同时进行回收</p>
+<p><img src="/2021/gc-and-gctuning/image-20210523232152451.png" alt="image-20210523232152451"></p>
+<p><img src="/2021/gc-and-gctuning/image-20210523233350850.png" alt="image-20210523233350850"></p>
+<h3 id="对象如何进入老年代">对象如何进入老年代</h3>
+<p>new 出来一个对象，首先尝试在栈上分配，如果栈上能分配，就直接分配到栈上（栈上有个好处，就是直接栈往出一弹pop,不需要垃圾回收）</p>
+<p>如果说分配不下，看这个对象大不大，这个大不大是有一个参数指定的，如果大的话，直接进入老年代,需要FGC才能结束</p>
+<p>如果不大的话，会进入TLAB,不管是<strong>线程本地分配</strong> ，还是直接到伊甸区，总而言之都是到伊甸区</p>
+<p>伊甸区经过GC清除，如果清除完了，直接结束</p>
+<p>如果没有清完，进入S1,S1再进行GC清除，如果年龄够了，进old区，如果年龄不够，进s2（这中间有动态年龄判断）</p>
+<p>S2重复上面的过程，GC清除，然后要么进s1，要么进入old区</p>
+<p><img src="/2021/gc-and-gctuning/image-20210523234039422.png" alt="image-20210523234039422"></p>
+<p><code>-Xms</code>起始堆内存大小</p>
+<p><code>-Xmx</code> 最大的堆内存大小</p>
+<p><code>java -XX:+PrintFlagsFinal -version</code></p>
+<h4 id="jvm误区–动态对象年龄判定">jvm误区–动态对象年龄判定</h4>
+<p>动态对象年龄判断，主要是被TargetSurvivorRatio这个参数来控制。而且算的是年龄从小到大的累加和，而不是某个年龄段对象的大小。看完后先记住这个参数吧TargetSurvivorRatio，虽然你以后基本不会调整他。</p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/989d3b06a49d">https://www.jianshu.com/p/989d3b06a49d</a></p>
+<p>分配担保：</p>
+<p>YGC</p>
+<p>期间，survivor区空格键不够了，空间担保直接进入老年代</p>
+<h3 id="常见的垃圾回收器">常见的垃圾回收器</h3>
+<p><img src="/2021/gc-and-gctuning/image-20210524012822842.png" alt="image-20210524012822842"></p>
+<p>常见的组合</p>
+<p><img src="/2021/gc-and-gctuning/image-20210524013039900.png" alt="image-20210524013039900"></p>
+<p>并且这三对不仅在逻辑上分年轻代和老年代，而且在物理上也分</p>
+<p>Serial  单线程</p>
+<p>Parallel 多线程</p>
+<h4 id="Serial">Serial</h4>
+<p>当进行垃圾回收的时候，所有的工作线程全部停止</p>
+<p>STW(stop-the-world)</p>
+<p>safe point（找一个安全的点停止线程）</p>
+<p><img src="/2021/gc-and-gctuning/image-20210524014110935.png" alt="image-20210524014110935"></p>
+<p>停顿时间较长，因此用的比较少</p>
+<h4 id="Serial-Old">Serial Old</h4>
+<p>用的是标记清除或者标记压缩算法，不过也是单线程</p>
+<p><img src="/2021/gc-and-gctuning/image-20210524014409748.png" alt="image-20210524014409748"></p>
+<hr>
+<h4 id="parallel-Scavenge（PS）-PS-PO">parallel Scavenge（PS） PS+PO</h4>
+<p>现在的jvm,如果在上线前没有做任何的调优，那么默认就是parallel Scavenge</p>
+<p>跟前面的区别就是，清理线程是多个的</p>
+<p><img src="/2021/gc-and-gctuning/image-20210524014825762.png" alt="image-20210524014825762"></p>
+<h4 id="parallel-old-PO">parallel old(PO)</h4>
+<p><img src="/2021/gc-and-gctuning/image-20210524014903195.png" alt="image-20210524014903195"></p>
+<hr>
+<p>ParNew+CMS</p>
+<h4 id="ParNew（PN）">ParNew（PN）</h4>
+<p>其实就是 parallel new</p>
+<p>只是对PS 做了一些增强，以便和CMS配合使用</p>
+<blockquote>
+<p>目前还没有不STW的垃圾回收器</p>
+</blockquote>
+<h4 id="CMS">CMS</h4>
+<p>即concurrent mark sweep（concurrent：并发）</p>
+<p>JDK诞生Serial追随 为了提高效率，诞生了PS,为了配合CMS,诞生了PN,CMS是1.4版本后期引入的，CMS是里程碑式的GC,它开启了并发回收的过程，但是CMS毛病很多，因此目前没有任何一个JDK版本默认是CMS的</p>
+<p>从线程角度理解</p>
+<p><img src="/2021/gc-and-gctuning/image-20210524020146862.png" alt="image-20210524020146862"></p>
+<p>就是与其他工作一起</p>
+<blockquote>
+<p>Parallel叫并行，是指多个线程同时回收，并发指的是我在进行垃圾回收的时候，你还可以产生新的垃圾</p>
+</blockquote>
+<p>并发垃圾回收的出现是因为无法忍受STW</p>
+<p>CMS的几个阶段</p>
+<p><strong>初始标记</strong> ：直接标记最根上的对象</p>
+<p><img src="/2021/gc-and-gctuning/image-20210524104307225.png" alt="image-20210524104307225"></p>
+<p><strong>并发标记</strong> ：这块是最浪费时间的（80% 的时间），同应用程序一起运行</p>
+<p><strong>重新标记</strong> ：上一步中多数垃圾在并发标记中已经标记完了，因此到这一步之后，基本都是在并发标记过程中，应用程序继续运行产生的新的垃圾，这部分垃圾很少，所以使用STW，最后进行一个并发清理</p>
+<p><strong>并发清理</strong> ：并发清理的时候也会产生新的垃圾，这种垃圾叫浮动垃圾，这种垃圾就需要下一次CMS运行清理</p>
+<h5 id="CMS的两大问题">CMS的两大问题</h5>
+<p>1、内存碎片化</p>
+<p>2、浮动垃圾</p>
+<p>当老年代的浮动垃圾满了之后，并且空间中还有浮动垃圾的时候，就需要请出老奶奶“Serial Old”拿着苕帚（单线程）在那扫垃圾</p>
+<p>CMS本来是为了解决停顿时间较长的问题， 因此一旦出现上面说的问题，那么垃圾回收的时间就会非常长</p>
+<blockquote>
+<p>疑问？ 上面的情况为啥不用PO多线程来清理垃圾，而是使用Serial Old</p>
+</blockquote>
+<p>解决方案：降低CMS触发的阈值</p>
+<p>有一个配置<code>-XX:CMSInitiatingOccupancyFraction</code>, 通过降低这个值（这个值默认是92%：是指达到92%的时候就会产生FGC），给浮动垃圾流出部分空间，即进行回收的时候，还留出空间让浮动垃圾进来</p>
+<p>CMS面对很大块内存的时候，会产生很长时间的卡顿</p>
+<p>例子：</p>
+<p>1、硬件升级系统反而卡顿的问题</p>
+<h5 id="concurrent-mark-阶段的算法（并发标记）">concurrent mark 阶段的算法（并发标记）</h5>
+<p>CMS使用的是三色标记+Incremental Update</p>
+<p>G1用的是三色标记+SATB</p>
+<p>ZGC用的是颜色指针+写屏障</p>
+<p>Shenandoah 用的是颜色指针+读屏障</p>
+<h4 id="垃圾收集器跟内存大小的关系">垃圾收集器跟内存大小的关系</h4>
+<p>1、Serial 几十兆</p>
+<p>2、PS 上百兆～几个G</p>
+<p>3、CMS 20G</p>
+<p>4、G1 上百G</p>
+<p>5、ZGC 4T</p>
+<h3 id="常见垃圾回收器组合参数设定：-1-8">常见垃圾回收器组合参数设定：(1.8)</h3>
+<ul>
+<li><code>-XX:+UseSerialGC</code> = Serial New (DefNew) + Serial Old
+<ul>
+<li>小型程序。默认情况下不会是这种选项，HotSpot会根据计算及配置和JDK版本自动选择收集器</li>
+</ul>
+</li>
+<li><code>-XX:+UseParNewGC</code> = ParNew + SerialOld（如果没有明确指定Old区的垃圾回收器，默认是SerialOld）
+<ul>
+<li>这个组合已经很少用（在某些版本中已经废弃）</li>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/34962257/why-remove-support-for-parnewserialold-anddefnewcms-in-the-future">https://stackoverflow.com/questions/34962257/why-remove-support-for-parnewserialold-anddefnewcms-in-the-future</a></li>
+</ul>
+</li>
+<li><code>-XX:+UseConc(urrent)MarkSweepGC</code> = ParNew + CMS + Serial Old</li>
+<li><code>-XX:+UseParallelGC</code> = Parallel Scavenge + Parallel Old (1.8默认) 【PS + SerialOld】</li>
+<li><code>-XX:+UseParallelOldGC</code> = Parallel Scavenge + Parallel Old</li>
+<li><code>-XX:+UseG1GC</code> = G1</li>
+<li>Linux中没找到默认GC的查看方法，而windows中会打印UseParallelGC
+<ul>
+<li>java +XX:+PrintCommandLineFlags -version</li>
+<li>通过GC的日志来分辨</li>
+</ul>
+</li>
+<li>Linux下1.8版本默认的垃圾回收器到底是什么？
+<ul>
+<li>1.8.0_181 默认（看不出来）Copy MarkCompact</li>
+<li>1.8.0_222 默认 PS + PO</li>
+</ul>
+</li>
+</ul>
+<h3 id="JVM调优第一步，JVM常用命令">JVM调优第一步，JVM常用命令</h3>
+<p>JVM的命令行参数参考：<a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html">https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html</a></p>
+<p>HotSpot参数分类</p>
+<blockquote>
+<p>标准： - 开头，所有的HotSpot都支持</p>
+<p>非标准：-X 开头，特定版本HotSpot支持特定命令</p>
+<p>不稳定：-XX 开头，下个版本可能取消</p>
+</blockquote>
+<p>java -version</p>
+<p>java -X</p>
+<blockquote>
+<p>区分两个概念</p>
+<p>区分概念：内存泄漏memory leak，内存溢出out of memory</p>
+<p>内存泄漏 ：一整块内存中有其中一小块内存分配了空间之后，其他人再也用不了这块内存，被一个废了的对象占用这，也没有回收它。泄漏不一定产生溢出</p>
+<p>内存溢出：不断地产生对象，内存满了</p>
+</blockquote>
+<ol>
+<li>java -XX:+PrintCommandLineFlags HelloGC</li>
+<li>java -Xmn10M -Xms40M -Xmx60M -XX:+PrintCommandLineFlags -XX:+PrintGC  HelloGC PrintGCDetails PrintGCTimeStamps PrintGCCauses</li>
+<li>java -XX:+UseConcMarkSweepGC -XX:+PrintCommandLineFlags -XX:+PrintGC HelloGC</li>
+<li>java -XX:+PrintFlagsInitial 默认参数值</li>
+<li>java -XX:+PrintFlagsFinal 最终参数值</li>
+<li>java -XX:+PrintFlagsFinal | grep xxx 找到对应的参数</li>
+<li>java -XX:+PrintFlagsFinal -version |grep GC</li>
+</ol>
+<p>测试程序</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.shifpeng.scaffold.service.jvm;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.LinkedList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Project</span>: scaffold</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>:</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span>: Steven</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloGC</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;HelloGC!&quot;</span>);</span><br><span class="line">        List list = <span class="keyword">new</span> LinkedList();</span><br><span class="line">        <span class="keyword">for</span>(;;) &#123;</span><br><span class="line">            <span class="keyword">byte</span>[] b = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>*<span class="number">1024</span>];</span><br><span class="line">            list.add(b);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>以下为运行时打印的信息：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">-XX:InitialHeapSize=41943040 -XX:MaxHeapSize=62914560 -XX:MaxNewSize=10485760 -XX:NewSize=10485760 -XX:+PrintCommandLineFlags -XX:+PrintGC -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:+UseParallelGC </span><br><span class="line">HelloGC!</span><br><span class="line"><span class="meta">#</span><span class="bash"> GC(指的是YGC)  （GC产生的原因：内存分配失败）  整个堆经过一次回收之后从多大变化到多大 消耗了多长时间</span></span><br><span class="line">[GC (Allocation Failure)  7307K-&gt;6760K(39936K), 0.0034057 secs]</span><br><span class="line">[GC (Allocation Failure)  14088K-&gt;13899K(39936K), 0.0028386 secs]</span><br><span class="line">[GC (Allocation Failure)  21384K-&gt;21032K(39936K), 0.0023978 secs]</span><br><span class="line">[GC (Allocation Failure)  28354K-&gt;28200K(39936K), 0.0022355 secs]</span><br><span class="line">[Full GC (Ergonomics)  28200K-&gt;28050K(54272K), 0.0066606 secs]</span><br><span class="line">[GC (Allocation Failure)  35374K-&gt;35378K(54272K), 0.0021788 secs]</span><br><span class="line">[GC (Allocation Failure)  42696K-&gt;42578K(54272K), 0.0028414 secs]</span><br><span class="line">[Full GC (Ergonomics)  42578K-&gt;42386K(60416K), 0.0031029 secs]</span><br><span class="line">[GC (Allocation Failure)  49708K-&gt;49714K(60416K), 0.0024475 secs]</span><br><span class="line">[Full GC (Ergonomics)  49714K-&gt;49555K(60416K), 0.0026874 secs]</span><br><span class="line">[Full GC (Ergonomics)  56871K-&gt;56723K(60416K), 0.0039821 secs]</span><br><span class="line">[Full GC (Ergonomics)  57747K-&gt;57747K(60416K), 0.0031147 secs]</span><br><span class="line">[Full GC (Allocation Failure)  57747K-&gt;57735K(60416K), 0.0056821 secs]</span><br><span class="line">Exception in thread &quot;main&quot; java.lang.OutOfMemoryError: Java heap space</span><br><span class="line">	at com.shifpeng.scaffold.service.jvm.HelloGC.main(HelloGC.java:17)</span><br><span class="line"></span><br><span class="line">Process finished with exit code 1</span><br></pre></td></tr></table></figure>
+<p>由于每次GC都回收不了新产生的字节，因为都会扔到List中</p>
+<p><code>Full GC </code>也搞不定了，内存溢出</p>
+<hr>
+<p>如果使用<code>-XX:+UseConcMarkSweepGC -XX:+PrintCommandLineFlags -XX:+PrintGC</code> 查看CMS的日志</p>
+<p>其实跟上面是差不多的，就多了CMS的几个阶段的日志</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line">-XX:InitialHeapSize=268435456 -XX:MaxHeapSize=4294967296 -XX:MaxNewSize=697933824 -XX:MaxTenuringThreshold=6 -XX:OldPLABSize=16 -XX:+PrintCommandLineFlags -XX:+PrintGC -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:+UseConcMarkSweepGC -XX:+UseParNewGC </span><br><span class="line">HelloGC!</span><br><span class="line">[GC (Allocation Failure)  69359K-&gt;67016K(253440K), 0.0248034 secs]</span><br><span class="line">[GC (Allocation Failure)  135972K-&gt;135675K(253440K), 0.0277760 secs]</span><br><span class="line">[GC (CMS Initial Mark)  136699K(253440K), 0.0001895 secs]</span><br><span class="line">[GC (Allocation Failure)  204630K-&gt;204235K(276056K), 0.0248144 secs]</span><br><span class="line">[GC (Allocation Failure)  273198K-&gt;272823K(344932K), 0.0251243 secs]</span><br><span class="line">[GC (Allocation Failure)  341791K-&gt;341432K(412780K), 0.0264183 secs]</span><br><span class="line">[GC (Allocation Failure)  410406K-&gt;410043K(481656K), 0.0282374 secs]</span><br><span class="line">[GC (Allocation Failure)  479017K-&gt;478651K(550532K), 0.0263303 secs]</span><br><span class="line">[GC (Allocation Failure)  547627K-&gt;547262K(619408K), 0.0305254 secs]</span><br><span class="line">[GC (Allocation Failure)  616238K-&gt;615875K(687256K), 0.0291081 secs]</span><br><span class="line">[GC (Allocation Failure)  684851K-&gt;684483K(756132K), 0.0273339 secs]</span><br><span class="line">[GC (Allocation Failure)  753459K-&gt;753096K(825008K), 0.0399627 secs]</span><br><span class="line">[GC (Allocation Failure)  822072K-&gt;821704K(892856K), 0.0287091 secs]</span><br><span class="line">[GC (Allocation Failure)  890681K-&gt;890317K(961732K), 0.0256037 secs]</span><br><span class="line">[GC (Allocation Failure)  959294K-&gt;958926K(1030608K), 0.0256964 secs]</span><br><span class="line">[GC (Allocation Failure)  1027902K-&gt;1027538K(1099484K), 0.0248517 secs]</span><br><span class="line">[GC (Allocation Failure)  1096515K-&gt;1096147K(1167332K), 0.0258776 secs]</span><br><span class="line">[GC (Allocation Failure)  1165124K-&gt;1164758K(1236208K), 0.0252731 secs]</span><br><span class="line">[GC (Allocation Failure)  1233734K-&gt;1233370K(1305084K), 0.0251292 secs]</span><br><span class="line">[GC (Allocation Failure)  1302347K-&gt;1301979K(1373960K), 0.0268682 secs]</span><br><span class="line">[GC (Allocation Failure)  1370955K-&gt;1370591K(1441808K), 0.0248420 secs]</span><br><span class="line">[GC (Allocation Failure)  1439568K-&gt;1439202K(1510684K), 0.0272582 secs]</span><br><span class="line">[GC (Allocation Failure)  1508179K-&gt;1507811K(1579560K), 0.0274426 secs]</span><br><span class="line">[GC (Allocation Failure)  1576787K-&gt;1576421K(1648436K), 0.0270085 secs]</span><br><span class="line">[GC (Allocation Failure)  1645398K-&gt;1645034K(1716284K), 0.0258314 secs]</span><br><span class="line">[GC (Allocation Failure)  1714010K-&gt;1713642K(1785160K), 0.0267543 secs]</span><br><span class="line">[GC (Allocation Failure)  1782619K-&gt;1782255K(1854036K), 0.0314271 secs]</span><br><span class="line">[GC (Allocation Failure)  1851232K-&gt;1850864K(1922912K), 0.0306285 secs]</span><br><span class="line">[GC (Allocation Failure)  1920216K-&gt;1918455K(1989732K), 0.0297121 secs]</span><br><span class="line">[GC (Allocation Failure)  1987421K-&gt;1987063K(2058608K), 0.0288689 secs]</span><br><span class="line">[GC (Allocation Failure)  2056034K-&gt;2055674K(2127484K), 0.0264972 secs]</span><br><span class="line">[GC (Allocation Failure)  2124697K-&gt;2122434K(2194304K), 0.0285294 secs]</span><br><span class="line">[GC (Allocation Failure)  2191523K-&gt;2190120K(2262152K), 0.0307858 secs]</span><br><span class="line">[GC (Allocation Failure)  2259534K-&gt;2258806K(2330000K), 0.0314064 secs]</span><br><span class="line">[GC (CMS Final Remark)  2259830K(2330000K), 0.0030712 secs]</span><br><span class="line">[GC (Allocation Failure)  2328141K-&gt;2326411K(3591424K), 0.0330988 secs]</span><br><span class="line">[GC (Allocation Failure)  2395368K-&gt;2394991K(3591424K), 0.0330699 secs]</span><br><span class="line">[GC (Allocation Failure)  2463954K-&gt;2463601K(3591424K), 0.0301940 secs]</span><br><span class="line">[GC (Allocation Failure)  2532569K-&gt;2532214K(3591424K), 0.0386445 secs]</span><br><span class="line">[GC (Allocation Failure)  2601185K-&gt;2600824K(3591424K), 0.0410251 secs]</span><br><span class="line">[GC (CMS Initial Mark)  2601848K(3591424K), 0.0001361 secs]</span><br><span class="line">[GC (Allocation Failure)  2669797K-&gt;2669433K(3591424K), 0.0314408 secs]</span><br><span class="line">[GC (Allocation Failure)  2738407K-&gt;2738043K(3591424K), 0.0618842 secs]</span><br><span class="line">[GC (CMS Final Remark)  2739067K(3591424K), 0.0040706 secs]</span><br><span class="line">[GC (Allocation Failure)  2806989K-&gt;2806623K(3591424K), 0.0846823 secs]</span><br><span class="line">[GC (CMS Initial Mark)  2807647K(3591424K), 0.0001551 secs]</span><br><span class="line">[GC (Allocation Failure)  2875598K-&gt;2875235K(3591424K), 0.0648956 secs]</span><br><span class="line">[GC (Allocation Failure)  2944211K-&gt;2943844K(3591424K), 0.0762293 secs]</span><br><span class="line">[GC (CMS Final Remark)  2944868K(3591424K), 0.0038512 secs]</span><br><span class="line">[GC (Allocation Failure)  3012820K-&gt;3012456K(3591424K), 0.1002818 secs]</span><br><span class="line">[GC (CMS Initial Mark)  3013480K(3591424K), 0.0002732 secs]</span><br><span class="line">[GC (Allocation Failure)  3081433K-&gt;3081067K(3591424K), 0.1141234 secs]</span><br><span class="line">[GC (Allocation Failure)  3150044K-&gt;3149676K(3591424K), 0.0989878 secs]</span><br><span class="line">[GC (CMS Final Remark)  3150700K(3591424K), 0.0028736 secs]</span><br><span class="line">[GC (Allocation Failure)  3218652K-&gt;3218288K(3591424K), 0.0516957 secs]</span><br><span class="line">[GC (CMS Initial Mark)  3220704K(3591424K), 0.0002281 secs]</span><br><span class="line">[GC (Allocation Failure)  3287265K-&gt;3286897K(3591424K), 0.0557199 secs]</span><br><span class="line">[GC (Allocation Failure)  3355874K-&gt;3355510K(3591424K), 0.0611115 secs]</span><br><span class="line">[GC (CMS Final Remark)  3356534K(3591424K), 0.0035585 secs]</span><br><span class="line">[GC (Allocation Failure)  3424486K-&gt;3424118K(3591424K), 0.0541929 secs]</span><br><span class="line">[GC (CMS Initial Mark)  3425142K(3591424K), 0.0001348 secs]</span><br><span class="line">[GC (Allocation Failure)  3493095K-&gt;3492731K(3591424K), 0.0525449 secs]</span><br><span class="line">[Full GC (Allocation Failure)  3561707K-&gt;3561321K(3591424K), 1.6774237 secs]</span><br><span class="line">[Full GC (Allocation Failure)  4124114K-&gt;4123518K(4126208K), 0.1210706 secs]</span><br><span class="line">[GC (CMS Initial Mark)  4124542K(4126208K), 0.0003247 secs]</span><br><span class="line">[Full GC (Allocation Failure)  4125095K-&gt;4124542K(4126208K), 0.0106620 secs]</span><br><span class="line">[Full GC (Allocation Failure)  4124542K-&gt;4124496K(4126208K), 1.7586102 secs]</span><br><span class="line">Exception in thread &quot;main&quot; java.lang.OutOfMemoryError: Java heap space</span><br><span class="line">	at com.shifpeng.scaffold.service.jvm.HelloGC.main(HelloGC.java:17)</span><br><span class="line"></span><br><span class="line">Process finished with exit code 1</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="GC日志详解">GC日志详解</h4>
+<p>已PS-PO GC为例：</p>
+<p><img src="/2021/gc-and-gctuning/image-20210524154540825.png" alt="image-20210524154540825"></p>
+<p>其中：total = eden + 1个survivor</p>
+<p>其中Time</p>
+<p><code>time ls</code>  <code>real</code> 总共占了多少时间  <code>user</code>:总共用户态用了多长时间;<code>sys</code>内核态占了多长时间</p>
+<p>heap dump部分：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">eden space 5632K, 94% used [0x00000000ff980000,0x00000000ffeb3e28,0x00000000fff00000)</span><br><span class="line">                            后面的内存地址指的是，起始地址，使用空间结束地址，整体空间结束地址</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="/2021/gc-and-gctuning/image-20210524155117251.png" alt="image-20210524155117251"></p>
+<h3 id="调优前的基础概念：">调优前的基础概念：</h3>
+<ol>
+<li>吞吐量：用户代码时间 /（用户代码执行时间 + 垃圾回收时间）<code>即拿出多少时间干正经事</code></li>
+<li>响应时间：STW越短，响应时间越好</li>
+</ol>
+<p><strong>所谓调优</strong> ，首先确定，追求啥？吞吐量优先，还是响应时间优先？还是在满足一定的响应时间的情况下，要求达到多大的吞吐量…</p>
+<p>比如：</p>
+<p>科学计算、数据挖掘，thrput：吞吐量优先。</p>
+<p>吞吐量优先的一般使用：（PS + PO）</p>
+<p>响应时间优先：比如网站 GUI API （1.8 G1）</p>
+<h3 id="什么是调优">什么是调优</h3>
+<ol>
+<li>根据需求进行JVM规划和预调优</li>
+<li>优化运行JVM运行环境（慢，卡顿）</li>
+<li>解决JVM运行过程中出现的各种问题(OOM)</li>
+</ol>
+<h3 id="调优，从规划开始">调优，从规划开始</h3>
+<ul>
+<li>
+<p>调优，<strong>从业务场景开始，没有业务场景的调优都是耍流氓</strong></p>
+</li>
+<li>
+<p>无监控（压力测试，能看到结果），不调优</p>
+</li>
+<li>
+<p>步骤：</p>
+<ol>
+<li>熟悉业务场景（没有最好的垃圾回收器，只有最合适的垃圾回收器）
+<ol>
+<li>响应时间、停顿时间 [CMS G1 ZGC] （需要给用户作响应）</li>
+<li>吞吐量 = 用户时间 /( 用户时间 + GC时间) [PS]</li>
+</ol>
+</li>
+<li>选择回收器组合</li>
+<li>计算内存需求（经验值 1.5G 16G）</li>
+<li>选定CPU（越高越好）</li>
+<li>设定年代大小、升级年龄</li>
+<li>设定日志参数（生产环境一定不是一个日志文件）
+<ol>
+<li>-Xloggc:/opt/xxx/logs/xxx-xxx-gc-%t.log -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=20M -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCCause</li>
+<li>或者每天产生一个日志文件</li>
+</ol>
+</li>
+<li>观察日志情况</li>
+</ol>
+</li>
+</ul>
+<h4 id="预调优案例">预调优案例</h4>
+<p>案例1：垂直电商，最高每日百万订单，处理订单系统需要什么样的服务器配置？</p>
+<blockquote>
+<p>这个问题比较业余，因为很多不同的服务器配置都能支撑(1.5G 16G)</p>
+<p>1小时360000集中时间段， 100个订单/秒，（找一小时内的高峰期，1000订单/秒）</p>
+<p>经验值，</p>
+<p>非要计算：一个订单产生需要多少内存？512K * 1000 500M内存</p>
+<p>专业一点儿问法：要求响应时间100ms</p>
+<p>压测！</p>
+</blockquote>
+<p>案例2：12306遭遇春节大规模抢票应该如何支撑？</p>
+<blockquote>
+<p>12306应该是中国并发量最大的秒杀网站：</p>
+<p>号称并发量100W最高</p>
+<p>CDN -&gt; LVS -&gt; NGINX -&gt; 业务系统 -&gt; 每台机器1W并发（10K问题） 100台机器</p>
+<p>普通电商订单 -&gt; 下单 -&gt;订单系统（IO）减库存 -&gt;等待用户付款</p>
+<p>12306的一种可能的模型： 下单 -&gt; 减库存 和 订单(redis kafka) 同时异步进行 -&gt;等付款</p>
+<p>减库存最后还会把压力压到一台服务器</p>
+<p>可以做分布式本地库存 + 单独服务器做库存均衡</p>
+<p>大流量的处理方法：分而治之</p>
+</blockquote>
+<p>怎么得到一个事务会消耗多少内存？</p>
+<blockquote>
+<ol>
+<li>弄台机器，看能承受多少TPS？是不是达到目标？扩容或调优，让它达到</li>
+<li>用压测来确定</li>
+</ol>
+</blockquote>
+<h3 id="优化环境">优化环境</h3>
+<ol>
+<li>有一个50万PV的资料类网站（从磁盘提取文档到内存）原服务器32位，1.5G 的堆，用户反馈网站比较缓慢，因此公司决定升级，新的服务器为64位，16G 的堆内存，结果用户反馈卡顿十分严重，反而比以前效率更低了
+<ol>
+<li>为什么原网站慢? 很多用户浏览数据，很多数据load到内存，内存不足，频繁GC，STW长，响应时间变慢</li>
+<li>为什么会更卡顿？ 内存越大，FGC时间越长</li>
+<li>咋办？ PS 换成PN + CMS 或者 G1</li>
+</ol>
+</li>
+<li>系统CPU经常100%，如何调优？(面试高频) CPU100%那么一定有线程在占用系统资源，
+<ol>
+<li>找出哪个进程cpu高（top）</li>
+<li>该进程中的哪个线程cpu高（top -Hp）</li>
+<li>导出该线程的堆栈 (jstack)</li>
+<li>查找哪个方法（栈帧）消耗时间 (jstack)</li>
+<li>工作线程占比高 | 垃圾回收线程占比高</li>
+</ol>
+</li>
+<li>系统内存飙高，如何查找问题？（面试高频）
+<ol>
+<li>导出堆内存 (jmap)</li>
+<li>分析 (jhat jvisualvm mat jprofiler … )</li>
+</ol>
+</li>
+<li>如何监控JVM
+<ol>
+<li>jstat jvisualvm jprofiler arthas top…</li>
+</ol>
+</li>
+<li></li>
+</ol>
+<h3 id="解决JVM运行中的问题">解决JVM运行中的问题</h3>
+<h4 id="一个案例理解常用工具">一个案例理解常用工具</h4>
+<ol>
+<li>
+<p>测试代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">package com.shifpeng.scaffold.service.jvm;</span><br><span class="line"></span><br><span class="line">import java.math.BigDecimal;</span><br><span class="line">import java.util.ArrayList;</span><br><span class="line">import java.util.Date;</span><br><span class="line">import java.util.List;</span><br><span class="line">import java.util.concurrent.ScheduledThreadPoolExecutor;</span><br><span class="line">import java.util.concurrent.ThreadPoolExecutor;</span><br><span class="line">import java.util.concurrent.TimeUnit;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 从数据库中读取信用数据，套用模型，并把结果进行记录和传输</span><br><span class="line"> * @Project: scaffold</span><br><span class="line"> * @Description:</span><br><span class="line"> * @Author: Steven</span><br><span class="line"> **/</span><br><span class="line">public class FullGC_Problem01 &#123;</span><br><span class="line">    private static class CardInfo &#123;</span><br><span class="line">        BigDecimal price = new BigDecimal(0.0);</span><br><span class="line">        String name = &quot;张三&quot;;</span><br><span class="line">        int age = 5;</span><br><span class="line">        Date birthdate = new Date();</span><br><span class="line"></span><br><span class="line">        public void m() &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private static ScheduledThreadPoolExecutor executor = new ScheduledThreadPoolExecutor(50,</span><br><span class="line">            new ThreadPoolExecutor.DiscardOldestPolicy());</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) throws Exception &#123;</span><br><span class="line">        executor.setMaximumPoolSize(50);</span><br><span class="line"></span><br><span class="line">        for (;;)&#123;</span><br><span class="line">            modelFit();</span><br><span class="line">            Thread.sleep(100);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private static void modelFit()&#123;</span><br><span class="line">        List&lt;CardInfo&gt; taskList = getAllCardInfo();</span><br><span class="line">        taskList.forEach(info -&gt; &#123;</span><br><span class="line">            // do something</span><br><span class="line">            executor.scheduleWithFixedDelay(() -&gt; &#123;</span><br><span class="line">                //do sth with info</span><br><span class="line">                info.m();</span><br><span class="line"></span><br><span class="line">            &#125;, 2, 3, TimeUnit.SECONDS);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private static List&lt;CardInfo&gt; getAllCardInfo()&#123;</span><br><span class="line">        List&lt;CardInfo&gt; taskList = new ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        for (int i = 0; i &lt; 100; i++) &#123;</span><br><span class="line">            CardInfo ci = new CardInfo();</span><br><span class="line">            taskList.add(ci);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return taskList;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>java -Xms200M -Xmx200M -XX:+PrintGC com.mashibing.jvm.gc.T15_FullGC_Problem01</p>
+</li>
+<li>
+<p>一般是运维团队首先受到报警信息（CPU Memory）</p>
+</li>
+<li>
+<p>top命令观察到问题：内存不断增长 CPU占用率居高不下</p>
+</li>
+<li>
+<p>top -Hp 观察进程中的线程，哪个线程CPU和内存占比高</p>
+</li>
+<li>
+<p>jps定位具体java进程 jstack 定位线程状况，重点关注：WAITING BLOCKED eg. waiting on &lt;0x0000000088ca3310&gt; (a java.lang.Object) 假如有一个进程中100个线程，很多线程都在waiting on  ，一定要找到是哪个线程持有这把锁 怎么找？搜索jstack dump的信息，找 ，看哪个线程持有这把锁RUNNABLE 作业：1：写一个死锁程序，用jstack观察 2 ：写一个程序，一个线程持有锁不释放，其他线程等待</p>
+</li>
+<li>
+<p>为什么阿里规范里规定，线程的名称（尤其是线程池）都要写有意义的名称 怎么样自定义线程池里的线程名称？（自定义ThreadFactory）<br>
+<img src="/2021/gc-and-gctuning/image-20210525111856214.png" alt="image-20210525111856214"></p>
+</li>
+<li>
+<p>jinfo pid</p>
+</li>
+<li>
+<p>jstat -gc 动态观察gc情况 / 阅读GC日志发现频繁GC / arthas观察 / jconsole/jvisualVM/ Jprofiler（最好用） jstat -gc 4655 500 : 每个500个毫秒打印GC的情况 如果面试官问你是怎么定位OOM问题的？如果你回答用图形界面（错误）<br>
+<strong>1：已经上线的系统不用图形界面用什么？（cmdline arthas）</strong><br>
+<strong>2：图形界面到底用在什么地方？测试！测试的时候进行监控！（压测观察）</strong></p>
+</li>
+<li>
+<p>jmap - histo 4655 | head -20，查找有多少对象产生（这个命令还是可以用的，影响不是很大，所以一般不在线上用）arthas没有这个功能</p>
+</li>
+<li>
+<p>jmap -dump:format=b,file=xxx pid ：（生产堆转储文件，但是这个命令对线上影响很大）</p>
+<p>线上系统，<strong>内存特别大，jmap执行期间会对进程产生很大影响，甚至卡顿（电商不适合）</strong><br>
+1：设定了参数HeapDump，OOM的时候会自动产生堆转储文件<br>
+2：很多服务器备份（高可用），停掉这台服务器对其他服务器不影响<br>
+3：在线定位(一般小点儿公司用不到)</p>
+</li>
+<li>
+<p>java -Xms20M -Xmx20M -XX:+UseParallelGC -XX:+HeapDumpOnOutOfMemoryError com.mashibing.jvm.gc.T15_FullGC_Problem01</p>
+</li>
+<li>
+<p>进行dump文件分析:<br>
+使用MAT 、 jhat、jvisualvm<br>
+进行dump文件分析 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/baihuitestsoftware/articles/6406271.html">https://www.cnblogs.com/baihuitestsoftware/articles/6406271.html</a><br>
+jhat -J-mx512M xxx.dump <a target="_blank" rel="noopener" href="http://192.168.17.11:7000">http://192.168.17.11:7000</a> 拉到最后：找到对应链接 可以使用OQL查找特定问题对象</p>
+</li>
+<li>
+<p>找到代码的问题</p>
+</li>
+</ol>
+<hr>
+<h3 id="怎么定位CPU飙升、OOM">怎么定位CPU飙升、OOM</h3>
+<p>先通过top命令找到占用高的进程Id</p>
+<p>再通过<code>top -Hp 进程Id</code>,查看该进程所有的线程，或者通过<code>jps</code>定位具体java进程</p>
+<p>通过jstack可以找到一些线程中死锁的情况</p>
+<p>比较麻烦的事OOM,OOM怎么定位呢？如果是测试的话，一般有图形化界面jconsole、jvisualVM,比如压测</p>
+<p>生产的话，一般会用到<code>jmap</code></p>
+<blockquote>
+<p>jmap - histo 4655 | head -20，查找有多少对象产生</p>
+</blockquote>
+<p>arthas</p>
+<h4 id="jconsole远程连接">jconsole远程连接</h4>
+<ol>
+<li>
+<p>程序启动加入参数：</p>
+<blockquote>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -Djava<span class="selector-class">.rmi</span><span class="selector-class">.server</span>.hostname=<span class="number">192.168</span>.<span class="number">17.11</span> -Dcom<span class="selector-class">.sun</span><span class="selector-class">.management</span><span class="selector-class">.jmxremote</span> -Dcom<span class="selector-class">.sun</span><span class="selector-class">.management</span><span class="selector-class">.jmxremote</span>.port=<span class="number">11111</span> -Dcom<span class="selector-class">.sun</span><span class="selector-class">.management</span><span class="selector-class">.jmxremote</span>.authenticate=false -Dcom<span class="selector-class">.sun</span><span class="selector-class">.management</span><span class="selector-class">.jmxremote</span>.ssl=false XXX</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li>
+<p>如果遭遇 Local host name unknown：XXX的错误，修改/etc/hosts文件，把XXX加入进去</p>
+<blockquote>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">192.168.17.11</span> basic localhost localhost.localdomain localhost4 localhost4.localdomain4</span><br><span class="line">::<span class="number">1</span>         localhost localhost.localdomain localhost6 localhost6.localdomain6</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li>
+<p>关闭linux防火墙（实战中应该打开对应端口）</p>
+<blockquote>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">service</span> iptables stop</span><br><span class="line">chkconfig iptables <span class="literal">off</span> <span class="comment">#永久关闭</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li>
+<p>windows上打开 jconsole远程连接 192.168.17.11:11111</p>
+</li>
+</ol>
+<h4 id="jvisualvm远程连接">jvisualvm远程连接</h4>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/liugh/p/7620336.html">https://www.cnblogs.com/liugh/p/7620336.html</a> （简单做法）</p>
+<h4 id="jprofiler-收费">jprofiler (收费)</h4>
+<h4 id="arthas在线排查工具">arthas在线排查工具</h4>
+<ul>
+<li>为什么需要在线排查？ 在生产上我们经常会碰到一些不好排查的问题，例如线程安全问题，用最简单的threaddump或者heapdump不好查到问题原因。为了排查这些问题，有时我们会临时加一些日志，比如在一些关键的函数里打印出入参，然后重新打包发布，如果打了日志还是没找到问题，继续加日志，重新打包发布。对于上线流程复杂而且审核比较严的公司，从改代码到上线需要层层的流转，会大大影响问题排查的进度。</li>
+<li><code>jvm</code>观察jvm信息</li>
+<li><code>thread</code>定位线程问题</li>
+<li><code>dashboard</code> 观察系统情况</li>
+<li><code>heapdump + jhat</code>分析</li>
+<li>jad反编译 动态代理生成类的问题定位 第三方的类（观察代码） 版本问题（确定自己最新提交的版本是不是被使用）</li>
+<li>redefine 热替换 目前有些限制条件：只能改方法实现（方法已经运行完成），不能改方法名， 不能改属性 m() -&gt; mm()</li>
+<li>sc  - search class</li>
+<li>watch  - watch method</li>
+<li>没有包含的功能：jmap</li>
+</ul>
+<h3 id="GC算法的基础概念">GC算法的基础概念</h3>
+<ul>
+<li>Card Table 由于做YGC时，需要扫描整个OLD区，效率非常低，所以JVM设计了CardTable， 如果一个OLD区CardTable中有对象指向Y区，就将它设为Dirty，下次扫描时，只需要扫描Dirty Card 在结构上，Card Table用BitMap来实现</li>
+</ul>
+<h3 id="CMS-2">CMS</h3>
+<h4 id="CMS的问题">CMS的问题</h4>
+<ol>
+<li>
+<p>Memory Fragmentation</p>
+<blockquote>
+<p>-XX:+UseCMSCompactAtFullCollection -XX:CMSFullGCsBeforeCompaction 默认为0 指的是经过多少次FGC才进行压缩</p>
+</blockquote>
+</li>
+<li>
+<p>Floating Garbage</p>
+<blockquote>
+<p>Concurrent Mode Failure 产生：if the concurrent collector is unable to finish reclaiming the unreachable objects before the tenured generation fills up, or if an allocation cannot be satisfiedwith the available free space blocks in the tenured generation, then theapplication is paused and the collection is completed with all the applicationthreads stopped</p>
+<p>解决方案：降低触发CMS的阈值</p>
+<p>PromotionFailed</p>
+<p>解决方案类似，保持老年代有足够的空间</p>
+<p>–XX:CMSInitiatingOccupancyFraction 92% 可以降低这个值，让CMS保持老年代足够的空间</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="CMS日志分析">CMS日志分析</h4>
+<p>执行命令：java -Xms20M -Xmx20M -XX:+PrintGCDetails -XX:+UseConcMarkSweepGC com.mashibing.jvm.gc.T15_FullGC_Problem01</p>
+<p>[GC (Allocation Failure) [ParNew: 6144K-&gt;640K(6144K), 0.0265885 secs] 6585K-&gt;2770K(19840K), 0.0268035 secs] [Times: user=0.02 sys=0.00, real=0.02 secs]</p>
+<blockquote>
+<p>ParNew：年轻代收集器</p>
+<p>6144-&gt;640：收集前后的对比</p>
+<p>（6144）：整个年轻代容量</p>
+<p>6585 -&gt; 2770：整个堆的情况</p>
+<p>（19840）：整个堆大小</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">[GC (CMS Initial Mark) [<span class="number">1</span> CMS-initial-mark: 8511K(13696K)] 9866K(19840K), <span class="number">0.0040321</span> secs] [Times: user=<span class="number">0.01</span> sys=<span class="number">0.00</span>, real=<span class="number">0.00</span> secs] </span><br><span class="line">	<span class="comment">//8511 (13696) : 老年代使用（最大）</span></span><br><span class="line">	<span class="comment">//9866 (19840) : 整个堆使用（最大）</span></span><br><span class="line">[CMS-concurrent-mark-start]</span><br><span class="line">[CMS-concurrent-mark: <span class="number">0.018</span>/<span class="number">0.018</span> secs] [Times: user=<span class="number">0.01</span> sys=<span class="number">0.00</span>, real=<span class="number">0.02</span> secs] </span><br><span class="line">	<span class="comment">//这里的时间意义不大，因为是并发执行</span></span><br><span class="line">[CMS-concurrent-preclean-start]</span><br><span class="line">[CMS-concurrent-preclean: <span class="number">0.000</span>/<span class="number">0.000</span> secs] [Times: user=<span class="number">0.00</span> sys=<span class="number">0.00</span>, real=<span class="number">0.00</span> secs] </span><br><span class="line">	<span class="comment">//标记Card为Dirty，也称为Card Marking</span></span><br><span class="line">[GC (CMS Final Remark) [YG occupancy: <span class="number">1597</span> K (<span class="number">6144</span> K)][Rescan (parallel) , <span class="number">0.0008396</span> secs][weak refs processing, <span class="number">0.0000138</span> secs][<span class="class"><span class="keyword">class</span> <span class="title">unloading</span>, 0.0005404 <span class="title">secs</span>][<span class="title">scrub</span> <span class="title">symbol</span> <span class="title">table</span>, 0.0006169 <span class="title">secs</span>][<span class="title">scrub</span> <span class="title">string</span> <span class="title">table</span>, 0.0004903 <span class="title">secs</span>][1 <span class="title">CMS</span>-<span class="title">remark</span>: 8511<span class="title">K</span>(13696<span class="title">K</span>)] 10108<span class="title">K</span>(19840<span class="title">K</span>), 0.0039567 <span class="title">secs</span>] [<span class="title">Times</span>: <span class="title">user</span></span>=<span class="number">0.00</span> sys=<span class="number">0.00</span>, real=<span class="number">0.00</span> secs] </span><br><span class="line">	<span class="comment">//STW阶段，YG occupancy:年轻代占用及容量</span></span><br><span class="line">	<span class="comment">//[Rescan (parallel)：STW下的存活对象标记</span></span><br><span class="line">	<span class="comment">//weak refs processing: 弱引用处理</span></span><br><span class="line">	<span class="comment">//class unloading: 卸载用不到的class</span></span><br><span class="line">	<span class="comment">//scrub symbol(string) table: </span></span><br><span class="line">		<span class="comment">//cleaning up symbol and string tables which hold class-level metadata and </span></span><br><span class="line">		<span class="comment">//internalized string respectively</span></span><br><span class="line">	<span class="comment">//CMS-remark: 8511K(13696K): 阶段过后的老年代占用及容量</span></span><br><span class="line">	<span class="comment">//10108K(19840K): 阶段过后的堆占用及容量</span></span><br><span class="line"></span><br><span class="line">[CMS-concurrent-sweep-start]</span><br><span class="line">[CMS-concurrent-sweep: <span class="number">0.005</span>/<span class="number">0.005</span> secs] [Times: user=<span class="number">0.00</span> sys=<span class="number">0.00</span>, real=<span class="number">0.01</span> secs] </span><br><span class="line">	<span class="comment">//标记已经完成，进行并发清理</span></span><br><span class="line">[CMS-concurrent-reset-start]</span><br><span class="line">[CMS-concurrent-reset: <span class="number">0.000</span>/<span class="number">0.000</span> secs] [Times: user=<span class="number">0.00</span> sys=<span class="number">0.00</span>, real=<span class="number">0.00</span> secs]</span><br><span class="line">	<span class="comment">//重置内部结构，为下次GC做准备</span></span><br></pre></td></tr></table></figure>
+<h3 id="G1">G1</h3>
+<ol>
+<li>▪https://www.oracle.com/technical-resources/articles/java/g1gc.html</li>
+<li></li>
+</ol>
+<p><img src="/2021/gc-and-gctuning/image-20210526114830218.png" alt="image-20210526114830218"></p>
+<p><img src="/2021/gc-and-gctuning/image-20210526114649724.png" alt="image-20210526114649724"></p>
+<h4 id="G1日志详解">G1日志详解</h4>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">[GC pause (G1 Evacuation Pause) (young) (initial-mark), 0.0015790 secs]</span></span><br><span class="line"><span class="comment">//young -&gt; 年轻代 Evacuation-&gt; 复制存活对象 </span></span><br><span class="line"><span class="comment">//initial-mark 混合回收的阶段，这里是YGC混合老年代回收</span></span><br><span class="line"><span class="string">   [Parallel Time: 1.5 ms, GC Workers: 1]</span> <span class="comment">//一个GC线程</span></span><br><span class="line"><span class="string">      [GC Worker Start (ms):  92635.7]</span></span><br><span class="line"><span class="string">      [Ext Root Scanning (ms):  1.1]</span></span><br><span class="line"><span class="string">      [Update RS (ms):  0.0]</span></span><br><span class="line"><span class="string">         [Processed Buffers:  1]</span></span><br><span class="line"><span class="string">      [Scan RS (ms):  0.0]</span></span><br><span class="line"><span class="string">      [Code Root Scanning (ms):  0.0]</span></span><br><span class="line"><span class="string">      [Object Copy (ms):  0.1]</span></span><br><span class="line"><span class="string">      [Termination (ms):  0.0]</span></span><br><span class="line"><span class="string">         [Termination Attempts:  1]</span></span><br><span class="line"><span class="string">      [GC Worker Other (ms):  0.0]</span></span><br><span class="line"><span class="string">      [GC Worker Total (ms):  1.2]</span></span><br><span class="line"><span class="string">      [GC Worker End (ms):  92636.9]</span></span><br><span class="line"><span class="string">   [Code Root Fixup: 0.0 ms]</span></span><br><span class="line"><span class="string">   [Code Root Purge: 0.0 ms]</span></span><br><span class="line"><span class="string">   [Clear CT: 0.0 ms]</span></span><br><span class="line"><span class="string">   [Other: 0.1 ms]</span></span><br><span class="line"><span class="string">      [Choose CSet: 0.0 ms]</span></span><br><span class="line"><span class="string">      [Ref Proc: 0.0 ms]</span></span><br><span class="line"><span class="string">      [Ref Enq: 0.0 ms]</span></span><br><span class="line"><span class="string">      [Redirty Cards: 0.0 ms]</span></span><br><span class="line"><span class="string">      [Humongous Register: 0.0 ms]</span></span><br><span class="line"><span class="string">      [Humongous Reclaim: 0.0 ms]</span></span><br><span class="line"><span class="string">      [Free CSet: 0.0 ms]</span></span><br><span class="line"><span class="string">   [Eden: 0.0B(1024.0K)-&gt;0.0B(1024.0K) Survivors: 0.0B-&gt;0.0B Heap: 18.8M(20.0M)-&gt;18.8M(20.0M)]</span></span><br><span class="line"><span class="string"> [Times: user=0.00 sys=0.00, real=0.00 secs]</span> </span><br><span class="line"><span class="comment">//以下是混合回收其他阶段</span></span><br><span class="line"><span class="string">[GC concurrent-root-region-scan-start]</span></span><br><span class="line"><span class="string">[GC concurrent-root-region-scan-end, 0.0000078 secs]</span></span><br><span class="line"><span class="string">[GC concurrent-mark-start]</span></span><br><span class="line"><span class="comment">//无法evacuation，进行FGC</span></span><br><span class="line"><span class="string">[Full GC (Allocation Failure)  18M-&gt;18M(20M), 0.0719656 secs]</span></span><br><span class="line"><span class="string">   [Eden: 0.0B(1024.0K)-&gt;0.0B(1024.0K) Survivors: 0.0B-&gt;0.0B Heap: 18.8M(20.0M)-&gt;18.8M(20.0M)]</span>, [Metaspace: <span class="number">38</span></span><br><span class="line"><span class="number">76</span>K-&gt;<span class="number">3876</span>K(<span class="number">1056768</span>K)] [Times: user=<span class="number">0.07</span> sys=<span class="number">0.00</span>, real=<span class="number">0.07</span> secs]</span><br></pre></td></tr></table></figure>
+<p><img src="/2021/gc-and-gctuning/image-20210526135013718.png" alt="image-20210526135013718"></p>
+<h3 id="案例汇总">案例汇总</h3>
+<p>OOM产生的原因多种多样，有些程序未必产生OOM，不断FGC(CPU飙高，但内存回收特别少) （上面案例）</p>
+<ol>
+<li>
+<p>硬件升级系统反而卡顿的问题（见上）</p>
+</li>
+<li>
+<p>线程池不当运用产生OOM问题（见上） 不断的往List里加对象（实在太LOW）</p>
+</li>
+<li>
+<p>smile jira问题<br>
+实际系统不断重启<br>
+解决问题 加内存 + 更换垃圾回收器 G1<br>
+真正问题在哪儿？不知道</p>
+</li>
+<li>
+<p>tomcat http-header-size过大问题（Hector）（相当于每个请求来的时候都会占这么大的内存） 通过jmap查看对象的时候，发现了一个叫什么http的对象https://juejin.cn/post/6844903834142113805</p>
+</li>
+<li>
+<p>lambda表达式导致方法区溢出问题(MethodArea / Perm Metaspace) LambdaGC.java<br>
+-XX:MaxMetaspaceSize=9M -XX:+PrintGCDetails</p>
+<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&quot;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\J</span>ava<span class="symbol">\j</span>dk1.8.0_181<span class="symbol">\b</span>in<span class="symbol">\j</span>ava.exe&quot; -XX:MaxMetaspaceSize=9M -XX:+PrintGCDetails &quot;-javaagent:C:<span class="symbol">\P</span>rogram Files<span class="symbol">\J</span>etBrains<span class="symbol">\I</span>ntelliJ IDEA Community Edition 2019.1<span class="symbol">\l</span>ib<span class="symbol">\i</span>dea_rt.jar=49316:C:<span class="symbol">\P</span>rogram Files<span class="symbol">\J</span>etBrains<span class="symbol">\I</span>ntelliJ IDEA Community Edition 2019.1<span class="symbol">\b</span>in&quot; -Dfile.encoding=UTF-8 -classpath &quot;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\J</span>ava<span class="symbol">\j</span>dk1.8.0_181<span class="symbol">\j</span>re<span class="symbol">\l</span>ib<span class="symbol">\c</span>harsets.jar;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\J</span>ava<span class="symbol">\j</span>dk1.8.0_181<span class="symbol">\j</span>re<span class="symbol">\l</span>ib<span class="symbol">\d</span>eploy.jar;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\J</span>ava<span class="symbol">\j</span>dk1.8.0_181<span class="symbol">\j</span>re<span class="symbol">\l</span>ib<span class="symbol">\e</span>xt<span class="symbol">\a</span>ccess-bridge-64.jar;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\J</span>ava<span class="symbol">\j</span>dk1.8.0_181<span class="symbol">\j</span>re<span class="symbol">\l</span>ib<span class="symbol">\e</span>xt<span class="symbol">\c</span>ldrdata.jar;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\J</span>ava<span class="symbol">\j</span>dk1.8.0_181<span class="symbol">\j</span>re<span class="symbol">\l</span>ib<span class="symbol">\e</span>xt<span class="symbol">\d</span>nsns.jar;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\J</span>ava<span class="symbol">\j</span>dk1.8.0_181<span class="symbol">\j</span>re<span class="symbol">\l</span>ib<span class="symbol">\e</span>xt<span class="symbol">\j</span>access.jar;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\J</span>ava<span class="symbol">\j</span>dk1.8.0_181<span class="symbol">\j</span>re<span class="symbol">\l</span>ib<span class="symbol">\e</span>xt<span class="symbol">\j</span>fxrt.jar;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\J</span>ava<span class="symbol">\j</span>dk1.8.0_181<span class="symbol">\j</span>re<span class="symbol">\l</span>ib<span class="symbol">\e</span>xt<span class="symbol">\l</span>ocaledata.jar;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\J</span>ava<span class="symbol">\j</span>dk1.8.0_181<span class="symbol">\j</span>re<span class="symbol">\l</span>ib<span class="symbol">\e</span>xt<span class="symbol">\n</span>ashorn.jar;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\J</span>ava<span class="symbol">\j</span>dk1.8.0_181<span class="symbol">\j</span>re<span class="symbol">\l</span>ib<span class="symbol">\e</span>xt<span class="symbol">\s</span>unec.jar;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\J</span>ava<span class="symbol">\j</span>dk1.8.0_181<span class="symbol">\j</span>re<span class="symbol">\l</span>ib<span class="symbol">\e</span>xt<span class="symbol">\s</span>unjce_provider.jar;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\J</span>ava<span class="symbol">\j</span>dk1.8.0_181<span class="symbol">\j</span>re<span class="symbol">\l</span>ib<span class="symbol">\e</span>xt<span class="symbol">\s</span>unmscapi.jar;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\J</span>ava<span class="symbol">\j</span>dk1.8.0_181<span class="symbol">\j</span>re<span class="symbol">\l</span>ib<span class="symbol">\e</span>xt<span class="symbol">\s</span>unpkcs11.jar;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\J</span>ava<span class="symbol">\j</span>dk1.8.0_181<span class="symbol">\j</span>re<span class="symbol">\l</span>ib<span class="symbol">\e</span>xt<span class="symbol">\z</span>ipfs.jar;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\J</span>ava<span class="symbol">\j</span>dk1.8.0_181<span class="symbol">\j</span>re<span class="symbol">\l</span>ib<span class="symbol">\j</span>avaws.jar;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\J</span>ava<span class="symbol">\j</span>dk1.8.0_181<span class="symbol">\j</span>re<span class="symbol">\l</span>ib<span class="symbol">\j</span>ce.jar;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\J</span>ava<span class="symbol">\j</span>dk1.8.0_181<span class="symbol">\j</span>re<span class="symbol">\l</span>ib<span class="symbol">\j</span>fr.jar;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\J</span>ava<span class="symbol">\j</span>dk1.8.0_181<span class="symbol">\j</span>re<span class="symbol">\l</span>ib<span class="symbol">\j</span>fxswt.jar;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\J</span>ava<span class="symbol">\j</span>dk1.8.0_181<span class="symbol">\j</span>re<span class="symbol">\l</span>ib<span class="symbol">\j</span>sse.jar;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\J</span>ava<span class="symbol">\j</span>dk1.8.0_181<span class="symbol">\j</span>re<span class="symbol">\l</span>ib<span class="symbol">\m</span>anagement-agent.jar;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\J</span>ava<span class="symbol">\j</span>dk1.8.0_181<span class="symbol">\j</span>re<span class="symbol">\l</span>ib<span class="symbol">\p</span>lugin.jar;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\J</span>ava<span class="symbol">\j</span>dk1.8.0_181<span class="symbol">\j</span>re<span class="symbol">\l</span>ib<span class="symbol">\r</span>esources.jar;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\J</span>ava<span class="symbol">\j</span>dk1.8.0_181<span class="symbol">\j</span>re<span class="symbol">\l</span>ib<span class="symbol">\r</span>t.jar;C:<span class="symbol">\w</span>ork<span class="symbol">\i</span>jprojects<span class="symbol">\J</span>VM<span class="symbol">\o</span>ut<span class="symbol">\p</span>roduction<span class="symbol">\J</span>VM;C:<span class="symbol">\w</span>ork<span class="symbol">\i</span>jprojects<span class="symbol">\O</span>bjectSize<span class="symbol">\o</span>ut<span class="symbol">\a</span>rtifacts<span class="symbol">\O</span>bjectSize_jar<span class="symbol">\O</span>bjectSize.jar&quot; com.mashibing.jvm.gc.LambdaGC</span><br><span class="line">[GC (Metadata GC Threshold) [PSYoungGen: 11341K-&gt;1880K(38400K)] 11341K-&gt;1888K(125952K), 0.0022190 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] </span><br><span class="line">[Full GC (Metadata GC Threshold) [PSYoungGen: 1880K-&gt;0K(38400K)] [ParOldGen: 8K-&gt;1777K(35328K)] 1888K-&gt;1777K(73728K), [Metaspace: 8164K-&gt;8164K(1056768K)], 0.0100681 secs] [Times: user=0.02 sys=0.00, real=0.01 secs] </span><br><span class="line">[GC (Last ditch collection) [PSYoungGen: 0K-&gt;0K(38400K)] 1777K-&gt;1777K(73728K), 0.0005698 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] </span><br><span class="line">[Full GC (Last ditch collection) [PSYoungGen: 0K-&gt;0K(38400K)] [ParOldGen: 1777K-&gt;1629K(67584K)] 1777K-&gt;1629K(105984K), [Metaspace: 8164K-&gt;8156K(1056768K)], 0.0124299 secs] [Times: user=0.06 sys=0.00, real=0.01 secs] </span><br><span class="line">java.lang.reflect.InvocationTargetException</span><br><span class="line">	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</span><br><span class="line">	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</span><br><span class="line">	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</span><br><span class="line">	at java.lang.reflect.Method.invoke(Method.java:498)</span><br><span class="line">	at sun.instrument.InstrumentationImpl.loadClassAndStartAgent(InstrumentationImpl.java:388)</span><br><span class="line">	at sun.instrument.InstrumentationImpl.loadClassAndCallAgentmain(InstrumentationImpl.java:411)</span><br><span class="line">Caused by: java.lang.OutOfMemoryError: Compressed class space</span><br><span class="line">	at sun.misc.Unsafe.defineClass(Native Method)</span><br><span class="line">	at sun.reflect.ClassDefiner.defineClass(ClassDefiner.java:63)</span><br><span class="line">	at sun.reflect.MethodAccessorGenerator$1.run(MethodAccessorGenerator.java:399)</span><br><span class="line">	at sun.reflect.MethodAccessorGenerator$1.run(MethodAccessorGenerator.java:394)</span><br><span class="line">	at java.security.AccessController.doPrivileged(Native Method)</span><br><span class="line">	at sun.reflect.MethodAccessorGenerator.generate(MethodAccessorGenerator.java:393)</span><br><span class="line">	at sun.reflect.MethodAccessorGenerator.generateSerializationConstructor(MethodAccessorGenerator.java:112)</span><br><span class="line">	at sun.reflect.ReflectionFactory.generateConstructor(ReflectionFactory.java:398)</span><br><span class="line">	at sun.reflect.ReflectionFactory.newConstructorForSerialization(ReflectionFactory.java:360)</span><br><span class="line">	at java.io.ObjectStreamClass.getSerializableConstructor(ObjectStreamClass.java:1574)</span><br><span class="line">	at java.io.ObjectStreamClass.access$1500(ObjectStreamClass.java:79)</span><br><span class="line">	at java.io.ObjectStreamClass$3.run(ObjectStreamClass.java:519)</span><br><span class="line">	at java.io.ObjectStreamClass$3.run(ObjectStreamClass.java:494)</span><br><span class="line">	at java.security.AccessController.doPrivileged(Native Method)</span><br><span class="line">	at java.io.ObjectStreamClass.&lt;init&gt;(ObjectStreamClass.java:494)</span><br><span class="line">	at java.io.ObjectStreamClass.lookup(ObjectStreamClass.java:391)</span><br><span class="line">	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1134)</span><br><span class="line">	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1548)</span><br><span class="line">	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1509)</span><br><span class="line">	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)</span><br><span class="line">	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)</span><br><span class="line">	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)</span><br><span class="line">	at javax.management.remote.rmi.RMIConnectorServer.encodeJRMPStub(RMIConnectorServer.java:727)</span><br><span class="line">	at javax.management.remote.rmi.RMIConnectorServer.encodeStub(RMIConnectorServer.java:719)</span><br><span class="line">	at javax.management.remote.rmi.RMIConnectorServer.encodeStubInAddress(RMIConnectorServer.java:690)</span><br><span class="line">	at javax.management.remote.rmi.RMIConnectorServer.start(RMIConnectorServer.java:439)</span><br><span class="line">	at sun.management.jmxremote.ConnectorBootstrap.startLocalConnectorServer(ConnectorBootstrap.java:550)</span><br><span class="line">	at sun.management.Agent.startLocalManagementAgent(Agent.java:137)</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>直接内存溢出问题（少见） 《深入理解Java虚拟机》P59，使用Unsafe分配直接内存，或者使用NIO的问题</p>
+</li>
+<li>
+<p>栈溢出问题 -Xss设定太小<br>
+写个程序造成栈溢出</p>
+</li>
+<li>
+<p>比较一下这两段程序的异同，分析哪一个是更优的写法：第一个</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Object o = <span class="keyword">null</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">100</span>; i++) &#123;</span><br><span class="line">	<span class="comment">//只有一个引用</span></span><br><span class="line">    o = <span class="keyword">new</span> Object();</span><br><span class="line">    <span class="comment">//业务处理</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">100</span>; i++) &#123;</span><br><span class="line">    Object o = <span class="keyword">new</span> Object(); </span><br><span class="line">    <span class="comment">//每次一个新的对象，指向一个新的o，有可能造成很多回收不掉的</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>重写finalize引发频繁GC 小米云，HBase同步系统，系统通过nginx访问超时报警，最后排查，C++程序员重写finalize(C++finalize()是Object中的方法，当垃圾回收器将要回收对象所占内存之前被调用，即当一个对象被虚拟机宣告死亡时会先调用它finalize()方法，让此对象处理它生前的最后事情（这个对象可以趁这个时机挣脱死亡的命运）)引发频繁GC问题 为什么C++程序员会重写finalize？（new delete） finalize耗时比较长（200ms）</p>
+</li>
+<li>
+<p>如果有一个系统，内存一直消耗不超过10%，但是观察GC日志，发现FGC总是频繁产生，会是什么引起的？<br>
+System.gc() (这个比较Low)</p>
+</li>
+<li>
+<p>Distuptor有个可以设置链的长度，如果过大，然后对象大，消费完不主动释放，会溢出 (来自 死物风情)</p>
+</li>
+<li>
+<p>用jvm都会溢出，mycat用崩过，1.6.5某个临时版本解析sql子查询算法有问题，9个exists的联合sql就导致生成几百万的对象（来自 死物风情）</p>
+</li>
+<li>
+<p>new 大量线程，会产生 native thread OOM，（low）应该用线程池， 解决方案：减少堆空间（太TMlow了）,预留更多内存产生native thread JVM内存占物理内存比例 50% - 80%</p>
+</li>
+</ol>
+<blockquote>
+<p>设计架构上的两大重要思想</p>
+<p>1、分而治之</p>
+<p>2、分层</p>
+</blockquote>
+<h3 id="GC常用参数">GC常用参数</h3>
+<ul>
+<li>-Xmn -Xms -Xmx -Xss 年轻代 最小堆 最大堆 栈空间</li>
+<li>-XX:+UseTLAB 使用TLAB，默认打开</li>
+<li>-XX:+PrintTLAB 打印TLAB的使用情况</li>
+<li>-XX:TLABSize 设置TLAB大小</li>
+<li>-XX:+DisableExplictGC 作用就是让<code>System.gc()</code>不管用 ，FGC</li>
+<li>-XX:+PrintGC</li>
+<li>-XX:+PrintGCDetails</li>
+<li>-XX:+PrintHeapAtGC</li>
+<li>-XX:+PrintGCTimeStamps</li>
+<li>-XX:+PrintGCApplicationConcurrentTime (低) 打印应用程序时间</li>
+<li>-XX:+PrintGCApplicationStoppedTime （低） 打印暂停时长</li>
+<li>-XX:+PrintReferenceGC （重要性低） 记录回收了多少种不同引用类型的引用</li>
+<li>-verbose:class 类加载详细过程</li>
+<li>-XX:+PrintVMOptions</li>
+<li><strong>-XX:+PrintFlagsFinal  -XX:+PrintFlagsInitial 必须会用</strong></li>
+<li>-Xloggc:opt/log/gc.log</li>
+<li>-XX:MaxTenuringThreshold 升代年龄，最大值15</li>
+<li>锁自旋次数 -XX:PreBlockSpin 热点代码检测参数-XX:CompileThreshold 逃逸分析 标量替换 … 这些不建议设置</li>
+</ul>
+<h3 id="Parallel常用参数">Parallel常用参数</h3>
+<ul>
+<li>-XX:SurvivorRatio</li>
+<li>-XX:PreTenureSizeThreshold 大对象到底多大</li>
+<li>-XX:MaxTenuringThreshold</li>
+<li>-XX:+ParallelGCThreads 并行收集器的线程数，同样适用于CMS，一般设为和CPU核数相同</li>
+<li>-XX:+UseAdaptiveSizePolicy 自动选择各区大小比例</li>
+</ul>
+<h3 id="CMS常用参数">CMS常用参数</h3>
+<ul>
+<li>-XX:+UseConcMarkSweepGC</li>
+<li>-XX:ParallelCMSThreads CMS线程数量</li>
+<li>-XX:CMSInitiatingOccupancyFraction 使用多少比例的老年代后开始CMS收集，默认是68%(近似值)，如果频繁发生SerialOld卡顿，应该调小，（频繁CMS回收）</li>
+<li>-XX:+UseCMSCompactAtFullCollection 在FGC时进行压缩</li>
+<li>-XX:CMSFullGCsBeforeCompaction 多少次FGC之后进行压缩</li>
+<li>-XX:+CMSClassUnloadingEnabled</li>
+<li>-XX:CMSInitiatingPermOccupancyFraction 达到什么比例时进行Perm回收</li>
+<li>GCTimeRatio 设置GC时间占用程序运行时间的百分比</li>
+<li>-XX:MaxGCPauseMillis 停顿时间，是一个建议时间，GC会尝试用各种手段达到这个时间，比如减小年轻代</li>
+</ul>
+<h3 id="G1常用参数">G1常用参数</h3>
+<ul>
+<li>-XX:+UseG1GC</li>
+<li>-XX:MaxGCPauseMillis 建议值，G1会尝试调整Young区的块数来达到这个值</li>
+<li>-XX:GCPauseIntervalMillis ？GC的间隔时间</li>
+<li>-XX:+G1HeapRegionSize 分区大小，建议逐渐增大该值，1 2 4 8 16 32。 随着size增加，垃圾的存活时间更长，GC间隔更长，但每次GC的时间也会更长 ZGC做了改进（动态区块大小）</li>
+<li>G1NewSizePercent 新生代最小比例，默认为5%</li>
+<li>G1MaxNewSizePercent 新生代最大比例，默认为60%</li>
+<li>GCTimeRatio GC时间建议比例，G1会根据这个值调整堆空间</li>
+<li>ConcGCThreads 线程数量</li>
+<li>InitiatingHeapOccupancyPercent 启动G1的堆空间占用比例</li>
+</ul>
+<h4 id="作业">作业</h4>
+<ol>
+<li>
+<p>-XX:MaxTenuringThreshold控制的是什么？ A: 对象升入老年代的年龄 B: 老年代触发FGC时的内存垃圾比例</p>
+</li>
+<li>
+<p>生产环境中，倾向于将最大堆内存和最小堆内存设置为：（为什么？） A: 相同 B：不同</p>
+</li>
+<li>
+<p>JDK1.8默认的垃圾回收器是： A: ParNew + CMS B: G1 C: PS + ParallelOld D: 以上都不是</p>
+</li>
+<li>
+<p>什么是响应时间优先？</p>
+</li>
+<li>
+<p>什么是吞吐量优先？</p>
+</li>
+<li>
+<p>ParNew和PS的区别是什么？</p>
+</li>
+<li>
+<p>ParNew和ParallelOld的区别是什么？（年代不同，算法不同）</p>
+</li>
+<li>
+<p>长时间计算的场景应该选择：A：停顿时间 B: 吞吐量</p>
+</li>
+<li>
+<p>大规模电商网站应该选择：A：停顿时间 B: 吞吐量</p>
+</li>
+<li>
+<p>HotSpot的垃圾收集器最常用有哪些？</p>
+</li>
+<li>
+<p>常见的HotSpot垃圾收集器组合有哪些？</p>
+</li>
+<li>
+<p>JDK1.7 1.8 1.9的默认垃圾回收器是什么？如何查看？</p>
+</li>
+<li>
+<p>所谓调优，到底是在调什么？</p>
+</li>
+<li>
+<p>如果采用PS + ParrallelOld组合，怎么做才能让系统基本不产生FGC</p>
+</li>
+<li>
+<p>如果采用ParNew + CMS组合，怎样做才能够让系统基本不产生FGC</p>
+<p>1.加大JVM内存</p>
+<p>2.加大Young的比例</p>
+<p>3.提高Y-O的年龄</p>
+<p>4.提高S区比例</p>
+<p>5.避免代码内存泄漏</p>
+</li>
+<li>
+<p>G1是否分代？G1垃圾回收器会产生FGC吗？</p>
+</li>
+<li>
+<p>如果G1产生FGC，你应该做什么？</p>
+<ol>
+<li>扩内存</li>
+<li>提高CPU性能（回收的快，业务逻辑产生对象的速度固定，垃圾回收越快，内存空间越大）</li>
+<li>降低MixedGC触发的阈值，让MixedGC提早发生（默认是45%）</li>
+</ol>
+</li>
+<li>
+<p>问：生产环境中能够随随便便的dump吗？ 小堆影响不大，大堆会有服务暂停或卡顿（加live可以缓解），dump前会有FGC</p>
+</li>
+<li>
+<p>问：常见的OOM问题有哪些？ 栈 堆 MethodArea 直接内存</p>
+</li>
+</ol>
+<h3 id="参考资料">参考资料</h3>
+<ol>
+<li>
+<p><a target="_blank" rel="noopener" href="https://blogs.oracle.com/jonthecollector/our-collectors">https://blogs.oracle.com/</a><a target="_blank" rel="noopener" href="https://blogs.oracle.com/jonthecollector/our-collectors">jonthecollector</a><a target="_blank" rel="noopener" href="https://blogs.oracle.com/jonthecollector/our-collectors">/our-collectors</a></p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html">https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html</a></p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="http://java.sun.com/javase/technologies/hotspot/vmoptions.jsp">http://java.sun.com/javase/technologies/hotspot/vmoptions.jsp</a></p>
+</li>
+<li>
+<p>JVM调优参考文档：<a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/13/gctuning/introduction-garbage-collection-tuning.html#GUID-8A443184-7E07-4B71-9777-4F12947C8184">https://docs.oracle.com/en/java/javase/13/gctuning/introduction-garbage-collection-tuning.html#GUID-8A443184-7E07-4B71-9777-4F12947C8184</a></p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/nxlhero/p/11660854.html">https://www.cnblogs.com/nxlhero/p/11660854.html</a> 在线排查工具</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/507f7e0cc3a3">https://www.jianshu.com/p/507f7e0cc3a3</a> arthas常用命令</p>
+</li>
+<li>
+<p>Arthas手册：</p>
+<ol>
+<li>启动arthas java -jar arthas-boot.jar</li>
+<li>绑定java进程</li>
+<li>dashboard命令观察系统整体情况</li>
+<li>help 查看帮助</li>
+<li>help xx 查看具体命令帮助</li>
+</ol>
+</li>
+<li>
+<p>jmap命令参考：</p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/507f7e0cc3a3">https://www.jianshu.com/p/507f7e0cc3a3</a></p>
+<ol>
+<li>jmap -heap pid</li>
+<li>jmap -histo pid</li>
+<li>jmap -clstats pid</li>
+</ol>
+</li>
+</ol>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/2021/mysql-tuning01/" data-toggle="tooltip" data-placement="top" title="mysql调优（一）">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/2021/memory-disk-network-io/" data-toggle="tooltip" data-placement="top" title="内存与IO，磁盘IO，网络IO">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=垃圾回收及JVM调优&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2021/gc-and-gctuning/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'a00494876d6f5f4bcbfd',
+      clientSecret: '33d3d0be81052a26f5a3535733b8b7854628564f',
+      repo: 'shifpeng.github.io',
+      owner: 'shifpeng',
+      admin: 'shifpeng',
+      id: 'Sun May 23 2021 17:37:07 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BD%95%E4%B8%BAGarbage"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">何为Garbage?</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%89%BE%E5%88%B0%E5%9E%83%E5%9C%BE%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">找到垃圾的方式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95%EF%BC%88GC%E7%AE%97%E6%B3%95%EF%BC%89"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">垃圾回收算法（GC算法）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#JVM%E5%86%85%E5%AD%98%E5%88%86%E4%BB%A3%E6%A8%A1%E5%9E%8B%EF%BC%88%E7%94%A8%E4%BA%8E%E5%88%86%E4%BB%A3%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95%EF%BC%89"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">JVM内存分代模型（用于分代垃圾回收算法）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AF%B9%E8%B1%A1%E5%A6%82%E4%BD%95%E8%BF%9B%E5%85%A5%E8%80%81%E5%B9%B4%E4%BB%A3"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">对象如何进入老年代</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#jvm%E8%AF%AF%E5%8C%BA%E2%80%93%E5%8A%A8%E6%80%81%E5%AF%B9%E8%B1%A1%E5%B9%B4%E9%BE%84%E5%88%A4%E5%AE%9A"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">jvm误区–动态对象年龄判定</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">常见的垃圾回收器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Serial"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">Serial</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Serial-Old"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">Serial Old</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#parallel-Scavenge%EF%BC%88PS%EF%BC%89-PS-PO"><span class="toc-nav-number">6.3.</span> <span class="toc-nav-text">parallel Scavenge（PS） PS+PO</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#parallel-old-PO"><span class="toc-nav-number">6.4.</span> <span class="toc-nav-text">parallel old(PO)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#ParNew%EF%BC%88PN%EF%BC%89"><span class="toc-nav-number">6.5.</span> <span class="toc-nav-text">ParNew（PN）</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#CMS"><span class="toc-nav-number">6.6.</span> <span class="toc-nav-text">CMS</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#CMS%E7%9A%84%E4%B8%A4%E5%A4%A7%E9%97%AE%E9%A2%98"><span class="toc-nav-number">6.6.1.</span> <span class="toc-nav-text">CMS的两大问题</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#concurrent-mark-%E9%98%B6%E6%AE%B5%E7%9A%84%E7%AE%97%E6%B3%95%EF%BC%88%E5%B9%B6%E5%8F%91%E6%A0%87%E8%AE%B0%EF%BC%89"><span class="toc-nav-number">6.6.2.</span> <span class="toc-nav-text">concurrent mark 阶段的算法（并发标记）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8%E8%B7%9F%E5%86%85%E5%AD%98%E5%A4%A7%E5%B0%8F%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-nav-number">6.7.</span> <span class="toc-nav-text">垃圾收集器跟内存大小的关系</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%B8%B8%E8%A7%81%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8%E7%BB%84%E5%90%88%E5%8F%82%E6%95%B0%E8%AE%BE%E5%AE%9A%EF%BC%9A-1-8"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">常见垃圾回收器组合参数设定：(1.8)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#JVM%E8%B0%83%E4%BC%98%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%8CJVM%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">JVM调优第一步，JVM常用命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#GC%E6%97%A5%E5%BF%97%E8%AF%A6%E8%A7%A3"><span class="toc-nav-number">8.1.</span> <span class="toc-nav-text">GC日志详解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%B0%83%E4%BC%98%E5%89%8D%E7%9A%84%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%EF%BC%9A"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">调优前的基础概念：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%B0%83%E4%BC%98"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">什么是调优</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%B0%83%E4%BC%98%EF%BC%8C%E4%BB%8E%E8%A7%84%E5%88%92%E5%BC%80%E5%A7%8B"><span class="toc-nav-number">11.</span> <span class="toc-nav-text">调优，从规划开始</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E9%A2%84%E8%B0%83%E4%BC%98%E6%A1%88%E4%BE%8B"><span class="toc-nav-number">11.1.</span> <span class="toc-nav-text">预调优案例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BC%98%E5%8C%96%E7%8E%AF%E5%A2%83"><span class="toc-nav-number">12.</span> <span class="toc-nav-text">优化环境</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%A7%A3%E5%86%B3JVM%E8%BF%90%E8%A1%8C%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-nav-number">13.</span> <span class="toc-nav-text">解决JVM运行中的问题</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%B8%80%E4%B8%AA%E6%A1%88%E4%BE%8B%E7%90%86%E8%A7%A3%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7"><span class="toc-nav-number">13.1.</span> <span class="toc-nav-text">一个案例理解常用工具</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%80%8E%E4%B9%88%E5%AE%9A%E4%BD%8DCPU%E9%A3%99%E5%8D%87%E3%80%81OOM"><span class="toc-nav-number">14.</span> <span class="toc-nav-text">怎么定位CPU飙升、OOM</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#jconsole%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5"><span class="toc-nav-number">14.1.</span> <span class="toc-nav-text">jconsole远程连接</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#jvisualvm%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5"><span class="toc-nav-number">14.2.</span> <span class="toc-nav-text">jvisualvm远程连接</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#jprofiler-%E6%94%B6%E8%B4%B9"><span class="toc-nav-number">14.3.</span> <span class="toc-nav-text">jprofiler (收费)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#arthas%E5%9C%A8%E7%BA%BF%E6%8E%92%E6%9F%A5%E5%B7%A5%E5%85%B7"><span class="toc-nav-number">14.4.</span> <span class="toc-nav-text">arthas在线排查工具</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#GC%E7%AE%97%E6%B3%95%E7%9A%84%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5"><span class="toc-nav-number">15.</span> <span class="toc-nav-text">GC算法的基础概念</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#CMS-2"><span class="toc-nav-number">16.</span> <span class="toc-nav-text">CMS</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#CMS%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-nav-number">16.1.</span> <span class="toc-nav-text">CMS的问题</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#CMS%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90"><span class="toc-nav-number">16.2.</span> <span class="toc-nav-text">CMS日志分析</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#G1"><span class="toc-nav-number">17.</span> <span class="toc-nav-text">G1</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#G1%E6%97%A5%E5%BF%97%E8%AF%A6%E8%A7%A3"><span class="toc-nav-number">17.1.</span> <span class="toc-nav-text">G1日志详解</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%A1%88%E4%BE%8B%E6%B1%87%E6%80%BB"><span class="toc-nav-number">18.</span> <span class="toc-nav-text">案例汇总</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#GC%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0"><span class="toc-nav-number">19.</span> <span class="toc-nav-text">GC常用参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Parallel%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0"><span class="toc-nav-number">20.</span> <span class="toc-nav-text">Parallel常用参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#CMS%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0"><span class="toc-nav-number">21.</span> <span class="toc-nav-text">CMS常用参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#G1%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0"><span class="toc-nav-number">22.</span> <span class="toc-nav-text">G1常用参数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BD%9C%E4%B8%9A"><span class="toc-nav-number">22.1.</span> <span class="toc-nav-text">作业</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-nav-number">23.</span> <span class="toc-nav-text">参考资料</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+            
+            <a class="tag" href="/tags/#JVM" title="JVM">JVM</a>
+            
+            <a class="tag" href="/tags/#JVM调优" title="JVM调优">JVM调优</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://cuiqingcai.com/" target="_blank">静 觅 崔庆才</a>
+          </li>
+          
+          <li>
+            <a href="http://www.52nlp.cn/" target="_blank">我爱自然语言处理</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cnblogs.com/Steven-shi/" target="_blank">博客园 石福鹏</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/shifpeng">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Steven
+          2021
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://shifpeng.cn">Steven</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/mouseclick.js"  content='' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "shifpeng";
+    let ghPages = gh + ".github.io";
+    let pagePath = "2021/gc-and-gctuning/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://www.shifpeng.cn/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

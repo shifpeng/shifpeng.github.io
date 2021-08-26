@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="人最大的修养就是知人不评人"/>
+  <meta name="keyword" content="Java,Steven,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://www.shifpeng.cn/2021/zookeeper-base/">
+  <title>
+    
+      Zookeeper基础知识 - Steven | java
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'StevenBlog/community'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">石福鹏</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+              
+              <a class="tag" href="/tags/#中间件" title="中间件">中间件</a>
+              
+              <a class="tag" href="/tags/#Zookeeper" title="Zookeeper">Zookeeper</a>
+              
+            </div>
+            <h1>Zookeeper基础知识</h1>
+            <h2 class="subheading">Zookeeper介绍、安装、shell cli使用</h2>
+            <span class="meta">
+              Posted by Steven on
+              2021-04-27
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">22</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">5.2k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h2 id="一、引入">一、引入</h2>
+<p>前面的关于Redis的文章中，关于Redis复制集群数据一致性，说过这么一张图</p>
+<p><img src="/2021/zookeeper-base/image-20210427111208362.png" alt="image-20210427111208362"></p>
+<blockquote>
+<p>完成分布式协调很难,因为在解决击穿和穿透都会用到分布式锁，即Redis中的数据没有了，这个时候并发请求获取一些数据，这样就会透传到数据库，有了锁之后，就不会存在并发一下全部压到数据库，其中一层层向后并发流量这个过程很复杂</p>
+<p><img src="/2021/zookeeper-base/image-20210427114553709.png" alt="image-20210427114553709"></p>
+</blockquote>
+<p>这就引出了<code>Zookeeper</code>，它可以减轻分布式应用程序从头开始实施协调服务的责任。</p>
+<h2 id="二、Zookeeper：分布式协调服务">二、<code>Zookeeper</code>：分布式协调服务</h2>
+<ul>
+<li>官网地址：<a target="_blank" rel="noopener" href="https://zookeeper.apache.org/">https://zookeeper.apache.org/</a></li>
+<li>下载地址：<a target="_blank" rel="noopener" href="https://zookeeper.apache.org/releases.html#download">https://zookeeper.apache.org/releases.html#download</a></li>
+</ul>
+<p>分布式应用程序的分布式协调服务</p>
+<blockquote>
+<p>ZooKeeper是用于分布式应用程序的分布式，开放源代码协调服务。它公开了一组简单的原语，分布式应用程序可以基于这些原语来实现用于同步，配置维护以及组和命名的更高级别的服务。它的设计易于编程，并使用了按照文件系统熟悉的目录树结构样式设置的数据模型。它以Java运行，并且具有Java和C的绑定。</p>
+</blockquote>
+<p><img src="/2021/zookeeper-base/image-20210427152723614.png" alt="image-20210427152723614"></p>
+<p>Zookeeper的数据是保存在内存中的</p>
+<p>Zookeeoper是一种复制集群，也就说每个节点上的数据都是一样的</p>
+<p><img src="/2021/zookeeper-base/image-20210427153823256.png" alt="image-20210427153823256"></p>
+<p>根据这张图，我们大概可以看出：</p>
+<ol>
+<li>整个<code>Zookeeoper</code>是当做一个服务来看的，对外提供服务，可以使用代码实现一些客户端来使用这些服务，</li>
+</ol>
+<p>另外，上面的<code>Zookeeoper</code>集群，一谈到集群，肯定就会想到角色，我们看到有其中一个标记为<code>Leader</code>,说明有点像Redis中的主从架构。一说到集群中是主动架构，一定要想到：</p>
+<ul>
+<li>一般主负责增删改、从负责读</li>
+<li>主从中的主节点是单点的，可能存在的单点故障问题</li>
+</ul>
+<ol start="2">
+<li>客户端想连谁就连谁，而增删改最终是要转到Leader节点上去的</li>
+</ol>
+<hr>
+<p>就要带着这些问题思考：</p>
+<p>1、Leader可能会挂，那么就会造成 a、服务不可用；b、不可靠的。   —但是事实上，zk集群是极其高可用的（说明有一种方式可以快速的恢复出一个Leader）</p>
+<p>2、因此，zk还有可能进入一种状态，就是<strong>无主模型</strong> ，即主挂了之后，即会进入无主模型</p>
+<p>3、zk从不可用状态恢复到可用状态应该越快越好</p>
+<blockquote>
+<p>因此，zk有两种运行状态：可用状态，不可用状态，他们的区别就是Leader是不是挂掉了</p>
+</blockquote>
+<p><img src="/2021/zookeeper-base/image-20210622154001888.png" alt="image-20210622154001888"></p>
+<blockquote>
+<p>通过文档，可以知道的其他点</p>
+<p>1、zk很快，他是读写分离的，并发的数量散在不同的server上，而且整个集群读和写的比例是10:1的话，效果的是好的，就单一个物理机，都可以hold住一秒钟10w读写量</p>
+<p>2、虽然名称空间很像文件系统，像个目录树，但是并不是文件和文件夹的概念，而叫做节点，这个节点可以存储数据，但是节点存的数据很少1M（zk旨在存储协调数据：状态信息，配置，位置信息等，不要把它当作数据库用）</p>
+<p>3、节点可以分为持久节点和临时节点，另外还有一个序列节点，这个节点不是独立存在的，是依托持久节点或者临时节点的</p>
+<p>4、每一个客户端连接到zk的时候，都会产生一个<code>session</code>，来代替这个客户端，</p>
+<blockquote>
+<p>redis是通过锁机制，然后这个锁是有过期时间的，如果设置的时间然后过期了，但是事情没做完，别人就会抢到这把锁，会造成脏数据，而且客户端很麻烦，因为为了解决这个问题需要多线程来解决，所以很麻烦；</p>
+</blockquote>
+<p><strong>而zk引入session概念，只要client在，session也在，如果client挂掉了或者主动断开链接，那么session也随之消失</strong></p>
+<p>也就是Redis存在的这块问题：需要加锁，但是锁会有过期时间，需要多线程解决</p>
+<p><img src="/2021/zookeeper-base/image-20210428144044227.png" alt="image-20210428144044227"></p>
+<p>而zk通过session概念就可以解决这两个问题</p>
+<p><img src="/2021/zookeeper-base/image-20210428151458501.png" alt="image-20210428151458501"></p>
+</blockquote>
+<h3 id="Zookeeper可以保证">Zookeeper可以保证</h3>
+<p>1、顺序一致性：客户端的更新将按照发送顺序应用</p>
+<p>2、原子性：要么成功，要么失败</p>
+<p>3、单个系统镜像（统一视图）：不论客户连的是哪个服务器，看到的都是相同的服务视图；因为是复制模型，所以不论连接谁，都能看到那个A</p>
+<p>4、可靠性/持久性：zk也有持久化，所以数据是可靠的或者说是持久的</p>
+<p>5、及时性/实时性：最主要说的是最终一致性的概念，所以说在特定时间范围内数据</p>
+<h2 id="三、安装、验证、使用">三、安装、验证、使用</h2>
+<p>这里我们准备了四台机器（我的环境是在Mac虚拟化软件中安装了四台虚拟机），最好是在安装好之后，每个给系统做一个干净的快照</p>
+<p><img src="/2021/zookeeper-base/image-20210429104725414.png" alt="image-20210429104725414"></p>
+<p>并且已经安装好了<code>java</code>环境</p>
+<h3 id="1、下载安装">1、下载安装</h3>
+<p>首先下载<code>zookeeper</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">[root@node01 /]# cd /soft/</span><br><span class="line">[root@node01 soft]# wget https://mirrors.bfsu.edu.cn/apache/zookeeper/zookeeper-3.7.0/apache-zookeeper-3.7.0-bin.tar.gz</span><br><span class="line">--2021-04-29 11:27:57--  https://mirrors.bfsu.edu.cn/apache/zookeeper/zookeeper-3.7.0/apache-zookeeper-3.7.0-bin.tar.gz</span><br><span class="line">正在解析主机 mirrors.bfsu.edu.cn (mirrors.bfsu.edu.cn)... 39.155.141.16, 2001:da8:20f:4435:4adf:37ff:fe55:2840</span><br><span class="line">正在连接 mirrors.bfsu.edu.cn (mirrors.bfsu.edu.cn)|39.155.141.16|:443... 已连接。</span><br><span class="line">已发出 HTTP 请求，正在等待回应... 200 OK</span><br><span class="line">长度：12387614 (12M) [application/octet-stream]</span><br><span class="line">正在保存至: “apache-zookeeper-3.7.0-bin.tar.gz”</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">100%</span><span class="bash">[============================================================================================================================================&gt;] 12,387,614  8.43MB/s 用时 1.4s</span>   </span><br><span class="line"></span><br><span class="line">2021-04-29 11:27:58 (8.43 MB/s) - 已保存 “apache-zookeeper-3.7.0-bin.tar.gz” [12387614/12387614])</span><br><span class="line"></span><br><span class="line">[root@node01 soft]# ll</span><br><span class="line">总用量 153640</span><br><span class="line">-rw-r--r--. 1 root root  12387614 3月  27 18:12 apache-zookeeper-3.7.0-bin.tar.gz</span><br><span class="line">-rw-r--r--. 1 root root 144935989 4月  11 05:47 jdk-8u291-linux-x64.tar.gz?AuthParam=1619666374_b85686b48f4eda0a86a55ac3f627a46b</span><br><span class="line">[root@node01 soft]# </span><br></pre></td></tr></table></figure>
+<p>解压</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@node01 soft]# mkdir /usr/local/zookeeper</span><br><span class="line">[root@node01 soft]# tar xf apache-zookeeper-3.7.0-bin.tar.gz  -C /usr/local/zookeeper/</span><br></pre></td></tr></table></figure>
+<h3 id="2、配置">2、配置</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[root@node01 soft]# cd /usr/local/zookeeper/</span><br><span class="line">[root@node01 zookeeper]# cd apache-zookeeper-3.7.0-bin/conf/</span><br><span class="line">[root@node01 conf]# ll</span><br><span class="line">总用量 12</span><br><span class="line">-rw-r--r--. 1 1000 1000  535 3月  17 17:45 configuration.xsl</span><br><span class="line">-rw-r--r--. 1 1000 1000 3435 3月  17 17:45 log4j.properties</span><br><span class="line">-rw-r--r--. 1 1000 1000 1148 3月  17 17:45 zoo_sample.cfg</span><br><span class="line">[root@node01 conf]# cp zoo_sample.cfg zoo.cfg # zk启动默认加载的配置文件是zoo.cfg</span><br><span class="line">[root@node01 conf]# ll</span><br><span class="line">总用量 16</span><br><span class="line">-rw-r--r--. 1 1000 1000  535 3月  17 17:45 configuration.xsl</span><br><span class="line">-rw-r--r--. 1 1000 1000 3435 3月  17 17:45 log4j.properties</span><br><span class="line">-rw-r--r--. 1 root root 1148 4月  29 11:48 zoo.cfg</span><br><span class="line">-rw-r--r--. 1 1000 1000 1148 3月  17 17:45 zoo_sample.cfg</span><br><span class="line">[root@node01 conf]# </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>编辑<code>zoo.cfg</code>文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> The number of milliseconds of each tick</span></span><br><span class="line">tickTime=2000 # 服务之间的心跳间隔时间2s</span><br><span class="line"><span class="meta">#</span><span class="bash"> The number of ticks that the initial</span> </span><br><span class="line"><span class="meta">#</span><span class="bash"> synchronization phase can take</span></span><br><span class="line">initLimit=10 # 在follower和Leader建立连接的时候，leader允许等待2s*10=20s的初始延迟</span><br><span class="line"><span class="meta">#</span><span class="bash"> The number of ticks that can pass between</span> </span><br><span class="line"><span class="meta">#</span><span class="bash"> sending a request and getting an acknowledgement</span></span><br><span class="line">syncLimit=5  # leader下发同步协作的时候，需要在2*5=10s做出回馈 </span><br><span class="line"><span class="meta">#</span><span class="bash"> the directory <span class="built_in">where</span> the snapshot is stored.</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="keyword">do</span> not use /tmp <span class="keyword">for</span> storage, /tmp here is just</span> </span><br><span class="line"><span class="meta">#</span><span class="bash"> example sakes.</span></span><br><span class="line">dataDir=/tmp/zookeeper  # 持久化目录，最好不要用tem 比如改成/var/zookeeper</span><br><span class="line"><span class="meta">#</span><span class="bash"> the port at <span class="built_in">which</span> the clients will connect</span></span><br><span class="line">clientPort=2181 # 客户端连接zk服务的端口号</span><br><span class="line"><span class="meta">#</span><span class="bash"> the maximum number of client connections.</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> increase this <span class="keyword">if</span> you need to handle more clients</span></span><br><span class="line"><span class="meta">#</span><span class="bash">maxClientCnxns=60  <span class="comment"># 当前的节点允许的最大客户端连接数</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"></span></span><br><span class="line"><span class="bash"><span class="comment"># Be sure to read the maintenance section of the</span></span> </span><br><span class="line"><span class="meta">#</span><span class="bash"> administrator guide before turning on autopurge.</span></span><br><span class="line"><span class="meta">#</span><span class="bash"></span></span><br><span class="line"><span class="bash"><span class="comment"># http://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_maintenance</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"></span></span><br><span class="line"><span class="bash"><span class="comment"># The number of snapshots to retain in dataDir</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">autopurge.snapRetainCount=3</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Purge task interval <span class="keyword">in</span> hours</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Set to <span class="string">&quot;0&quot;</span> to <span class="built_in">disable</span> auto purge feature</span></span><br><span class="line"><span class="meta">#</span><span class="bash">autopurge.purgeInterval=1  <span class="comment">#</span></span> </span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Metrics Providers</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"></span></span><br><span class="line"><span class="bash"><span class="comment"># https://prometheus.io Metrics Exporter</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">metricsProvider.className=org.apache.zookeeper.metrics.prometheus.PrometheusMetricsProvider</span></span><br><span class="line"><span class="meta">#</span><span class="bash">metricsProvider.httpPort=7000</span></span><br><span class="line"><span class="meta">#</span><span class="bash">metricsProvider.exportJvmInfo=<span class="literal">true</span></span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>由于zk不像redis那样，通过发布订阅就可以知道有哪些节点，所以zk需要人为配置，在上面<code>zoo.cfg</code>文件最后添加</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">server.1=node01:2888:3888 </span><br><span class="line">server.2=node02:2888:3888</span><br><span class="line">server.3=node03:2888:3888</span><br><span class="line">server.4=node04:2888:3888</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>1、<code>3888</code>端口号是在Leader挂掉之后，或者第一次启动的时候，通过3888建立连接，然后在3888这个端口中进行通信，投票选出Leader,然后leader会启一个2888的端口， 让其他的节点连接2888的端口建立socket连接。后续的，在有leader的情况下，创建节点这些操作都是通过2888 进行通信的</p>
+<p>2、server.1、2、3、4是做什么的呢？</p>
+<p>这个之前在说LVS的时候说过，在一众多个角色中选出一个leader,这个其实有很多种方式，比如投票最帅的😄，但是有个尴尬的现象就是每个都投自己，那这样一轮下来也选不出来，zk官方也说了200ms就可以选出一个leader,那如何快速的选出呢？</p>
+<p>其实不是选出来的，是谦让出来的，每个节点有个数字，数字最大的就是leader,只要启动的节点中之要（个数/2）+1，那么启动的这几台中数字最大的就是leader了</p>
+</blockquote>
+<p>另外，刚才我们把dataDir目录改成了<code>/var/zookeeper</code>,这个就是后面持久化的data目录，这个时候还需要创建一个文件</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root<span class="symbol">@node01</span> conf]<span class="meta"># cd /var/zookeeper/</span></span><br><span class="line">[root<span class="symbol">@node01</span> zookeeper]<span class="meta"># vi myid</span></span><br></pre></td></tr></table></figure>
+<p>刚才给了在配置的时候<code>server.1=node01:2888:3888 </code>给了1，所以在<code>myid</code>中写一个1即可，保存</p>
+<h3 id="3、配置分发">3、配置分发</h3>
+<p>刚才在node01上做了这些配置，那我们要给其他几个节点也要做这些配置，我们直接把当前的配置分发到其他几台机器上：</p>
+<p>拷贝到node02</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@node01 zookeeper]# cd /usr/local/</span><br><span class="line">[root@node01 local]# [root@node01 local]# scp -r ./zookeeper/ root@172.16.197.3:`pwd`</span><br><span class="line"><span class="meta">  #</span><span class="bash"> -r:拷贝 <span class="built_in">pwd</span>：相同的目录</span></span><br></pre></td></tr></table></figure>
+<p>输入密码即可完成拷贝，但是需要记住，每个节点中<code>/var/zookeeper</code>中的<code>myid</code>是唯一的，需要去相应节点做修改</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@node02 ~]# echo 2 &gt; /var/zookeeper/myid</span><br></pre></td></tr></table></figure>
+<p>同理完成<code>node03</code>的分发</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@node01 /]# scp -r /usr/local/zookeeper/  root@172.16.197.2:`pwd`</span><br><span class="line">The authenticity of host &#x27;172.16.197.2 (172.16.197.2)&#x27; can&#x27;t be established.</span><br><span class="line">ECDSA key fingerprint is SHA256:BfVLr3MJ33/z7l4LzGpWQaRGc9HTy583df1aRRhNAYg.</span><br><span class="line">ECDSA key fingerprint is MD5:77:03:35:3e:21:a7:04:e3:b5:a0:14:5f:ce:a4:eb:30.</span><br><span class="line">Are you sure you want to continue connecting (yes/no)? yes</span><br><span class="line">Warning: Permanently added &#x27;172.16.197.2&#x27; (ECDSA) to the list of known hosts.</span><br><span class="line">root@172.16.197.2&#x27;s password: </span><br></pre></td></tr></table></figure>
+<p>去<code>node03</code>：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@node03 ~]# mkdir /var/zookeeper</span><br><span class="line">[root@node03 ~]# echo 3 &gt; /var/zookeeper/myid</span><br><span class="line">[root@node03 ~]# cat /var/zookeeper/myid </span><br><span class="line">3</span><br><span class="line">[root@node03 ~]# </span><br></pre></td></tr></table></figure>
+<p>同理做node04的配置</p>
+<h3 id="4、配置环境变量">4、配置环境变量</h3>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root<span class="symbol">@node01</span> /]<span class="meta"># vi /etc/profile</span></span><br></pre></td></tr></table></figure>
+<p>添加</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export ZOOKEEPER_HOME=/usr/local/zookeeper/apache-zookeeper-3.7.0-bin/</span><br><span class="line"></span><br><span class="line">export PATH=$&#123;JAVA_HOME&#125;/bin:$PATH:$ZOOKEEPER_HOME/bin</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@node01 /]# source /etc/profile</span><br></pre></td></tr></table></figure>
+<p>然后在任何地方输入<code>zk</code>，然后按<code>TAB</code>，就会发现所有指令了。</p>
+<p>按照上面说的分发的方法给其他几个节点分发一下<code>/etc/profile</code></p>
+<h3 id="5、启动">5、启动</h3>
+<p>我们按照1、2、3、4的顺序启动</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@node01 /]# zkServer.sh help</span><br><span class="line">ZooKeeper JMX enabled by default</span><br><span class="line">Using config: /usr/local/zookeeper/apache-zookeeper-3.7.0-bin/bin/../conf/zoo.cfg</span><br><span class="line">Usage: /usr/local/zookeeper/apache-zookeeper-3.7.0-bin//bin/zkServer.sh [--config &lt;conf-dir&gt;] &#123;start|start-foreground|stop|version|restart|status|print-cmd&#125;</span><br><span class="line">[root@node01 /]# </span><br></pre></td></tr></table></figure>
+<p>根据help可以看到有这些命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zkServer.sh [--config &lt;conf-dir&gt;] &#123;start|start-foreground|stop|version|restart|status|print-cmd&#125;</span><br></pre></td></tr></table></figure>
+<p>启动一下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">[root@node01 ~]# zkServer.sh start-foreground</span><br><span class="line">ZooKeeper JMX enabled by default</span><br><span class="line">Using config: /usr/local/zookeeper/apache-zookeeper-3.7.0-bin/bin/../conf/zoo.cfg</span><br><span class="line">2021-04-30 09:58:37,822 [myid:] - INFO  [main:QuorumPeerConfig@174] - Reading configuration from: /usr/local/zookeeper/apache-zookeeper-3.7.0-bin/bin/../conf/zoo.cfg</span><br><span class="line">2021-04-30 09:58:37,917 [myid:] - INFO  [main:QuorumPeerConfig@444] - clientPortAddress is 0.0.0.0:2181</span><br><span class="line">2021-04-30 09:58:37,917 [myid:] - INFO  [main:QuorumPeerConfig@448] - secureClientPort is not set</span><br><span class="line">2021-04-30 09:58:37,917 [myid:] - INFO  [main:QuorumPeerConfig@464] - observerMasterPort is not set</span><br><span class="line">2021-04-30 09:58:37,918 [myid:] - INFO  [main:QuorumPeerConfig@481] - metricsProvider.className is org.apache.zookeeper.metrics.impl.DefaultMetricsProvider</span><br><span class="line">2021-04-30 09:58:37,961 [myid:] - ERROR [main:QuorumPeerMain@99] - Invalid config, exiting abnormally</span><br><span class="line">org.apache.zookeeper.server.quorum.QuorumPeerConfig$ConfigException: Address unresolved: node01:3888 </span><br><span class="line">        at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.initializeWithAddressString(QuorumPeer.java:357)</span><br><span class="line">        at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.&lt;init&gt;(QuorumPeer.java:278)</span><br><span class="line">        at org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer.&lt;init&gt;(QuorumPeer.java:273)</span><br><span class="line">        at org.apache.zookeeper.server.quorum.flexible.QuorumMaj.&lt;init&gt;(QuorumMaj.java:92)</span><br><span class="line">        at org.apache.zookeeper.server.quorum.QuorumPeerConfig.createQuorumVerifier(QuorumPeerConfig.java:658)</span><br><span class="line">        at org.apache.zookeeper.server.quorum.QuorumPeerConfig.parseDynamicConfig(QuorumPeerConfig.java:689)</span><br><span class="line">        at org.apache.zookeeper.server.quorum.QuorumPeerConfig.setupQuorumPeerConfig(QuorumPeerConfig.java:663)</span><br><span class="line">        at org.apache.zookeeper.server.quorum.QuorumPeerConfig.parseProperties(QuorumPeerConfig.java:491)</span><br><span class="line">        at org.apache.zookeeper.server.quorum.QuorumPeerConfig.parse(QuorumPeerConfig.java:194)</span><br><span class="line">        at org.apache.zookeeper.server.quorum.QuorumPeerMain.initializeAndRun(QuorumPeerMain.java:125)</span><br><span class="line">        at org.apache.zookeeper.server.quorum.QuorumPeerMain.main(QuorumPeerMain.java:91)</span><br><span class="line">Invalid config, exiting abnormally</span><br><span class="line">2021-04-30 09:58:37,983 [myid:] - INFO  [main:ZKAuditProvider@42] - ZooKeeper audit is disabled.</span><br><span class="line">2021-04-30 09:58:37,987 [myid:] - ERROR [main:ServiceUtils@42] - Exiting JVM with code 2</span><br><span class="line">[root@node01 ~]# </span><br></pre></td></tr></table></figure>
+<p>出错了，看到这句<code>Address unresolved: node01:3888 </code>，<code>node01</code>没有解析，看看<code>hosts</code>文件中对<code>node01</code>有没有映射</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">172.16.197.6 node01</span><br><span class="line">172.16.197.3 node02</span><br><span class="line">172.16.197.2 node03</span><br><span class="line">172.16.197.4 node04</span><br></pre></td></tr></table></figure>
+<p>我的配置好了，但是还是会出现上面的问题，那就是配置的问题了，自己检查下可能有异常字符之类的，经过排查发现</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">server</span>.<span class="number">1</span>=node<span class="number">01</span>:<span class="number">2888</span>:<span class="number">3888</span>(此处有个空格)</span><br><span class="line"><span class="attribute">server</span>.<span class="number">2</span>=node<span class="number">02</span>:<span class="number">2888</span>:<span class="number">3888</span></span><br><span class="line"><span class="attribute">server</span>.<span class="number">3</span>=node<span class="number">03</span>:<span class="number">2888</span>:<span class="number">3888</span></span><br><span class="line"><span class="attribute">server</span>.<span class="number">4</span>=node<span class="number">04</span>:<span class="number">2888</span>:<span class="number">3888</span></span><br></pre></td></tr></table></figure>
+<p>删除了存在的多余的空格，再试试就好了</p>
+<blockquote>
+<p>启动时会提示其他的节点<code>NoRouteToHostException: 没有到主机的路由 (Host unreachable)</code>，先不着急，继续启动其他的</p>
+</blockquote>
+<p>启动前记得先关闭防火墙</p>
+<p>四台都启动后，新打开客户端，执行<code>zkServer.sh status</code>发现，<code>node04</code>被推选为<code>leader</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@node04 ~]# zkServer.sh status</span><br><span class="line">ZooKeeper JMX enabled by default</span><br><span class="line">Using config: /usr/local/zookeeper/apache-zookeeper-3.7.0-bin/bin/../conf/zoo.cfg</span><br><span class="line">Client port found: 2181. Client address: localhost. Client SSL: false.</span><br><span class="line">Mode: leader</span><br><span class="line">[root@node04 ~]# </span><br></pre></td></tr></table></figure>
+<p>我把<code>node04</code>的zk结束，再次查看发现leader很快就变成了<code>node03</code>;重新启动<code>node04</code>，发现<code>leader</code>还是<code>node03</code>,新来的，已经有leader了，只能追随了</p>
+<h3 id="6、客户端连接">6、客户端连接</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@node04 ~]# zkCli.sh </span><br><span class="line">.....</span><br><span class="line">[zk: localhost:2181(CONNECTED) 0] </span><br></pre></td></tr></table></figure>
+<p>查看客户端相关命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">[zk: localhost:2181(CONNECTED) 2] help</span><br><span class="line">ZooKeeper -server host:port -client-configuration properties-file cmd args</span><br><span class="line">        addWatch [-m mode] path # optional mode is one of [PERSISTENT, PERSISTENT_RECURSIVE] - default is PERSISTENT_RECURSIVE</span><br><span class="line">        addauth scheme auth</span><br><span class="line">        close </span><br><span class="line">        config [-c] [-w] [-s]</span><br><span class="line">        connect host:port</span><br><span class="line">        create [-s] [-e] [-c] [-t ttl] path [data] [acl]</span><br><span class="line">        delete [-v version] path</span><br><span class="line">        deleteall path [-b batch size]</span><br><span class="line">        delquota [-n|-b|-N|-B] path</span><br><span class="line">        get [-s] [-w] path</span><br><span class="line">        getAcl [-s] path</span><br><span class="line">        getAllChildrenNumber path</span><br><span class="line">        getEphemerals path</span><br><span class="line">        history </span><br><span class="line">        listquota path</span><br><span class="line">        ls [-s] [-w] [-R] path</span><br><span class="line">        printwatches on|off</span><br><span class="line">        quit </span><br><span class="line">        reconfig [-s] [-v version] [[-file path] | [-members serverID=host:port1:port2;port3[,...]*]] | [-add serverId=host:port1:port2;port3[,...]]* [-remove serverId[,...]*]</span><br><span class="line">        redo cmdno</span><br><span class="line">        removewatches path [-c|-d|-a] [-l]</span><br><span class="line">        set [-s] [-v version] path data</span><br><span class="line">        setAcl [-s] [-v version] [-R] path acl</span><br><span class="line">        setquota -n|-b|-N|-B val path</span><br><span class="line">        stat [-w] path</span><br><span class="line">        sync path</span><br><span class="line">        version </span><br><span class="line">        whoami </span><br><span class="line">Command not found: Command not found help</span><br><span class="line">[zk: localhost:2181(CONNECTED) 3] </span><br></pre></td></tr></table></figure>
+<h4 id="a、持久节点">a、持久节点</h4>
+<p>创建<code>create</code>，就会多出来一个节点</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[zk: localhost:2181(CONNECTED) 3] create /ooxx &quot;&quot;</span><br><span class="line">Created /ooxx</span><br><span class="line">[zk: localhost:2181(CONNECTED) 4] ls /</span><br><span class="line">[ooxx, zookeeper]</span><br><span class="line">[zk: localhost:2181(CONNECTED) 5] </span><br></pre></td></tr></table></figure>
+<p><code>get</code>、<code>set</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[zk: localhost:2181(CONNECTED) 6] get /ooxx</span><br><span class="line"></span><br><span class="line">[zk: localhost:2181(CONNECTED) 7] set /ooxx &quot;hello&quot;</span><br><span class="line">[zk: localhost:2181(CONNECTED) 8] get /ooxx</span><br><span class="line">hello</span><br><span class="line">[zk: localhost:2181(CONNECTED) 9] </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>每个数据节点都会有<code>cZxid</code>，因为zk是顺序执行，顺序执行就是体现在这个Id上，所有的写操作，都会交给leader来处理，尔leader是单节点，单机维护一个单调递增的计数器很容易;</p>
+<p><code>mZxid</code>修改后的Id</p>
+<p><code>pZxid</code>是与 该节点的子节点（或该节点）的最近一次 创建 / 删除 的时间戳对应</p>
+<blockquote>
+<p>cZxid</p>
+<pre><code>对应为该节点的创建时间（Create）
+</code></pre>
+<p>mZxid</p>
+<pre><code>对应该节点的最近一次修改的时间（Mofify）
+
+与其子节点无关
+</code></pre>
+<p>pZxid</p>
+<pre><code>这个节点就和子节点有关啦！
+
+是与该节点的子节点（或该节点）的最近一次 创建 / 删除 的时间戳对应
+
+注：只与本节点/该节点的子节点，有关；与孙子节点无关。
+</code></pre>
+</blockquote>
+</blockquote>
+<h4 id="b、临时节点">b、临时节点</h4>
+<p><code>set -e /xxoo</code> 创建临时节点，伴随着session的，客户端退出，节点就会消失；而上面说的情况都是持久节点</p>
+<blockquote>
+<p>开启一个客户端，连接了某一台server,创建一个临时节点，如果这个时候这个server节点挂了，zk会连接到另外一个节点（重新建立socket连接），那这个临时节点数据会不会消失？</p>
+<p>1、答案是不会消失，其实session也会统一视图，也就是说客户端连接成功后，不止连接的server有这个session,其他的server也有这个session1、</p>
+<p>2、所以说所有的server上的任何一次事务操作就会有一个唯一的自增的id,比如开启一个新的客户端，也会消耗一个事务id,直观的体现就是因为开启新的客户端需要做数据同步，所以当再任何客户端在吃执行写操作，就会发现<code>cZxid</code>跳了一个id，比如，开启客户端之前，写操作的<code>cZxid</code>是12，开启之后，再次写操作<code>cZxid</code>变成了14</p>
+<p>3、综上，<strong>session也是需要消耗cZxid的</strong></p>
+</blockquote>
+<h4 id="c、序列节点">c、序列节点</h4>
+<p>如果我想在<code>/aaa</code>节点下创建数据，有很多的客户端都想在<code>/aaa</code>下创建节点来存储数据，这种在分布式的情况下，大家对这一个地方写东西的情况，有可能会出现一个现象：</p>
+<p><strong>数据会覆盖</strong> ，如何解决，这就是序列节点</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create -s /aaa/xxx</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[zk: localhost:2181(CONNECTED) 10] create /aaa &quot;&quot;</span><br><span class="line">Created /aaa</span><br><span class="line">[zk: localhost:2181(CONNECTED) 11] create -s /aaa/xxx &quot;sdadas&quot;</span><br><span class="line">Created /aaa/xxx0000000000</span><br><span class="line">[zk: localhost:2181(CONNECTED) 12] </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>只要带了<code>-s</code>,就不会覆盖创建，而是会在节点后面拼接一些东西，大家会拿到会是不会重复的节点名称,可以叫做分布式Id</p>
+<blockquote>
+<p>当我们把这个节点删除后，再新建一个，那么这个分布式Id就会是xxx0000000001，而不是xxx0000000000，这个zk内部会做维护</p>
+</blockquote>
+<h3 id="7、作用">7、作用</h3>
+<p>有了上面的知识，我们就能想到zk的一些作用了</p>
+<p>1、统一配置管理（基于所有的分布式节点只要记住一个path,记住一个ID，就可以找到节点中1M的数据），任何的客户端连接任何的sever都可以拿这个配置</p>
+<p>2、分组管理（基于path结构（命名空格键））</p>
+<p>3、统一命名（基于序列（<code>-s</code>（sequential））能力）</p>
+<p>4、分布式同步（基于临时节点能力）</p>
+<p><strong>应用场景</strong></p>
+<p>1、分布式锁-上面的第四点的应用场景就是分布式锁【需要客户端代码实现】</p>
+<p>设计一个临时节点，我在锁就在，我挂锁就没，别人就可以拿到这把锁</p>
+<p>如果依托一个父节点，且具备<code>-s</code>，代表父节点下可以有多把锁（队列式锁，事务的锁）</p>
+<p>2、高可用，选主</p>
+<p><img src="/2021/zookeeper-base/image-20210623135507538.png" alt="image-20210623135507538"></p>
+<h3 id="8、实战">8、实战</h3>
+<p>在node01上，我们看一下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@node01 ~]netstat -natp | egrep &#x27;(2888|3888)&#x27;</span><br><span class="line">tcp6       0      0 172.16.197.6:3888       :::*                    LISTEN      2296/java           </span><br><span class="line">tcp6       0      0 172.16.197.6:3888       172.16.197.2:55854      ESTABLISHED 2296/java           </span><br><span class="line">tcp6       0      0 172.16.197.6:3888       172.16.197.4:46846      ESTABLISHED 2296/java           </span><br><span class="line">tcp6       0      0 172.16.197.6:52702      172.16.197.2:2888       ESTABLISHED 2296/java           </span><br><span class="line">tcp6       0      0 172.16.197.6:3888       172.16.197.3:34402      ESTABLISHED 2296/java           </span><br><span class="line">[root@node01 ~]# </span><br></pre></td></tr></table></figure>
+<p>可以看到<code>node01</code>节点上关于<code>2888</code>、<code>3888</code>所有的连接信息</p>
+<p><code>node01</code>是整个配置文件中的第一个条目，且id号是最小的；</p>
+<p><code>node01</code>开启了一个3888的端口监听</p>
+<p>他自己的3888端口被其他三个节点连接了，且自己还拿了一个随机的端口连接了leader的2888端口</p>
+<hr>
+<p>再看node02</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@node02 ~]# netstat -natp | egrep &#x27;(2888|3888)&#x27;</span><br><span class="line">tcp6       0      0 172.16.197.3:3888       :::*                    LISTEN      2247/java           </span><br><span class="line">tcp6       0      0 172.16.197.3:55030      172.16.197.2:2888       ESTABLISHED 2247/java           </span><br><span class="line">tcp6       0      0 172.16.197.3:3888       172.16.197.2:47380      ESTABLISHED 2247/java           </span><br><span class="line">tcp6       0      0 172.16.197.3:3888       172.16.197.4:43374      ESTABLISHED 2247/java           </span><br><span class="line">tcp6       0      0 172.16.197.3:34402      172.16.197.6:3888       ESTABLISHED 2247/java           </span><br><span class="line">[root@node02 ~]# </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="/2021/zookeeper-base/image-20210508144539627.png" alt="image-20210508144539627"></p>
+<p>通过<code>zkServer.sh status</code>我们发现，，<code>node03</code>是Leader，查看<code>node03</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@node03 ~]# netstat -natp | egrep &#x27;(2888|3888)&#x27;</span><br><span class="line">tcp6       0      0 172.16.197.2:3888       :::*                    LISTEN      4438/java           </span><br><span class="line">tcp6       0      0 172.16.197.2:2888       :::*                    LISTEN      4438/java           </span><br><span class="line">tcp6       0      0 172.16.197.2:3888       172.16.197.4:47340      ESTABLISHED 4438/java           </span><br><span class="line">tcp6      20      0 172.16.197.2:2888       172.16.197.4:35302      ESTABLISHED 4438/java           </span><br><span class="line">tcp6       0      0 172.16.197.2:2888       172.16.197.3:59198      ESTABLISHED 4438/java           </span><br><span class="line">tcp6       0      0 172.16.197.2:54088      172.16.197.6:3888       ESTABLISHED 4438/java           </span><br><span class="line">tcp6       0      0 172.16.197.2:57278      172.16.197.3:3888       ESTABLISHED 4438/java           </span><br><span class="line">tcp6      20      0 172.16.197.2:2888       172.16.197.6:45850      ESTABLISHED 4438/java </span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>3888: 选主投票用的</p>
+<p>4888：leader接受write请求用的</p>
+</blockquote>
+<p>没必要每个节点都需要跟其他节点连接一次（不需要每个节点都开启3888跟其他节点连一次），只需要开启一个链接，即可开启双向通信</p>
+<p>这块东西在下一篇文章中要用到～</p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/2021/zookeeper-principle/" data-toggle="tooltip" data-placement="top" title="Zookeeper原理知识以及Paxos、Zab、角色功能">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/2021/redis-interview-problem/" data-toggle="tooltip" data-placement="top" title="Redis面试：击穿、穿透、雪崩、分布式锁、API">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Zookeeper基础知识&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2021/zookeeper-base/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'a00494876d6f5f4bcbfd',
+      clientSecret: '33d3d0be81052a26f5a3535733b8b7854628564f',
+      repo: 'shifpeng.github.io',
+      owner: 'shifpeng',
+      admin: 'shifpeng',
+      id: 'Tue Apr 27 2021 11:00:21 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E5%BC%95%E5%85%A5"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、引入</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81Zookeeper%EF%BC%9A%E5%88%86%E5%B8%83%E5%BC%8F%E5%8D%8F%E8%B0%83%E6%9C%8D%E5%8A%A1"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、Zookeeper：分布式协调服务</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Zookeeper%E5%8F%AF%E4%BB%A5%E4%BF%9D%E8%AF%81"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Zookeeper可以保证</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E5%AE%89%E8%A3%85%E3%80%81%E9%AA%8C%E8%AF%81%E3%80%81%E4%BD%BF%E7%94%A8"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、安装、验证、使用</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">1、下载安装</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">2、配置</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3%E3%80%81%E9%85%8D%E7%BD%AE%E5%88%86%E5%8F%91"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">3、配置分发</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4%E3%80%81%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">4、配置环境变量</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5%E3%80%81%E5%90%AF%E5%8A%A8"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">5、启动</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6%E3%80%81%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%BF%9E%E6%8E%A5"><span class="toc-nav-number">3.6.</span> <span class="toc-nav-text">6、客户端连接</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#a%E3%80%81%E6%8C%81%E4%B9%85%E8%8A%82%E7%82%B9"><span class="toc-nav-number">3.6.1.</span> <span class="toc-nav-text">a、持久节点</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#b%E3%80%81%E4%B8%B4%E6%97%B6%E8%8A%82%E7%82%B9"><span class="toc-nav-number">3.6.2.</span> <span class="toc-nav-text">b、临时节点</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#c%E3%80%81%E5%BA%8F%E5%88%97%E8%8A%82%E7%82%B9"><span class="toc-nav-number">3.6.3.</span> <span class="toc-nav-text">c、序列节点</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#7%E3%80%81%E4%BD%9C%E7%94%A8"><span class="toc-nav-number">3.7.</span> <span class="toc-nav-text">7、作用</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#8%E3%80%81%E5%AE%9E%E6%88%98"><span class="toc-nav-number">3.8.</span> <span class="toc-nav-text">8、实战</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+            
+            <a class="tag" href="/tags/#中间件" title="中间件">中间件</a>
+            
+            <a class="tag" href="/tags/#Zookeeper" title="Zookeeper">Zookeeper</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://cuiqingcai.com/" target="_blank">静 觅 崔庆才</a>
+          </li>
+          
+          <li>
+            <a href="http://www.52nlp.cn/" target="_blank">我爱自然语言处理</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cnblogs.com/Steven-shi/" target="_blank">博客园 石福鹏</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/shifpeng">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Steven
+          2021
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://shifpeng.cn">Steven</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/mouseclick.js"  content='' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "shifpeng";
+    let ghPages = gh + ".github.io";
+    let pagePath = "2021/zookeeper-base/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://www.shifpeng.cn/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

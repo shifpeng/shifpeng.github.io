@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="人最大的修养就是知人不评人"/>
+  <meta name="keyword" content="Java,Steven,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://www.shifpeng.cn/2021/Redis持久化/">
+  <title>
+    
+      Redis持久化 - Steven | java
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'StevenBlog/community'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">石福鹏</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+              
+              <a class="tag" href="/tags/#Redis" title="Redis">Redis</a>
+              
+              <a class="tag" href="/tags/#重学Redis" title="重学Redis">重学Redis</a>
+              
+            </div>
+            <h1>Redis持久化</h1>
+            <h2 class="subheading">redis的持久化RDB、fork、copyonwrite、AOF、RDB&amp;AOF混合使用</h2>
+            <span class="meta">
+              Posted by Steven on
+              2021-03-24
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">18</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">4.5k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>上一片文章中说到会拿redis做数据库，那么数据库就需要持久化，因为内存中的东西，掉电易失。</p>
+<p>首先是<strong>单机持久化</strong> ，再有单机也不靠谱的时候，<strong>主从复制</strong></p>
+<blockquote>
+<p>数据存储，都关心两类东西：1:快照/副本；2:日志</p>
+</blockquote>
+<p>在redis中，也有这两种持久化机制：</p>
+<p><code>RDB</code>（Redis DataBase）描述的就是快照/副本。</p>
+<p><code>AOF</code>（Append Only File）描述的就是日志。</p>
+<h2 id="一、RDB（Redis-DataBase）">一、RDB（Redis DataBase）</h2>
+<p>时点性：比如8点整开始备份，但a=1是8:00落的，等到备份到b=2的时候,已经是8:05分了，而8:00的时候，b可能还是0。时点混乱</p>
+<p><strong>期望：</strong></p>
+<p>1、非阻塞，即在对外提供服务的同时，依然可以将数据落地，持久化</p>
+<blockquote>
+<p>Linux中的一个小知识-<strong>管道</strong></p>
+<p>衔接，前一个命令的输出作为后一个命令的输入</p>
+<p>管道会触发创建子进程</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">echo</span> $$ <span class="comment"># 打印当前的进程ID</span></span></span><br><span class="line">echo $$  |  more  # 使用管道会创建一个新的子进程，但是这里$$优于管道的，所以会被转化成当前进程</span><br><span class="line">echo $BASHPID |  more # 这里就会创建一个子进程</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># $$ 高于 |</span></span>  </span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>使用linux的时候：父子进程</p>
+<blockquote>
+<p><strong>父进程的数据，子进程可不可以看得到？</strong></p>
+</blockquote>
+<p><strong>常规思想</strong> :进程是数据隔离的！</p>
+<p><strong>进阶思想</strong> :父进程其实可以让子进程看到数据！</p>
+<p>export的环境变量，</p>
+<p>子进程的修改不会破坏父进程</p>
+<p>父进程的修改也不会破坏子进程</p>
+</blockquote>
+<blockquote>
+<p>Tips:执行一个脚本的时候，想让他在后台执行。只需要在命令后面加上<code>&amp;</code>,比如：<code>./test.sh &amp;</code></p>
+</blockquote>
+<p>创建子进程的速度快吗？或者如果父进程是redis，内存数据有10个G，如果要做到非阻塞的情况下，还有做数据持久化，那么根据上面的知识，我们知道，我们可以在准备持久化的时候创建一个子进程，来处理数据持久化。那么：</p>
+<p>1、速度快吗？</p>
+<p>2、内存空间不够吗？父进程10g,那么子进程也是10个G，空间还够吗</p>
+<p>这个时候就有一种系统调用-<code>fork()</code></p>
+<h3 id="1、系统调用fork">1、系统调用<code>fork()</code></h3>
+<p>它其实使用的就是指针的引用，它可以达到效果：</p>
+<p>1、创建速度很快</p>
+<p>2、空间要求也是小的（子进程占用很小的空间）</p>
+<blockquote>
+<p>计算机中有物理内存，其实就是一个线性的地址空间，里面是很大的字节数组，redis会有一个虚拟地址，它里面的地址会映射到物理内存的某个地址</p>
+<p>而通过系统调用fork()出来的子进程，也是一块虚拟内存，它并不是说把数据拷贝过去了，而是指针指向物理内存中的地址</p>
+<p><img src="/2021/Redis%E6%8C%81%E4%B9%85%E5%8C%96/image-20210325145345195.png" alt="image-20210325145345195"></p>
+</blockquote>
+<h3 id="2、copy-on-write写时复制机制，（COW）">2、<code>copy on write</code>写时复制机制，（COW）</h3>
+<p>即创建子进程的时候并不发生复制（指针拷贝）</p>
+<p><strong>优势：</strong></p>
+<p>1、创建进程变快</p>
+<p>2、根据经验，父、子进程不可能把所有数据都改一遍</p>
+<blockquote>
+<p>a在redis虚拟内存中的地址是3，指向物理内存地址为8的地方，改之前物理内存a的值是x，现在要把a的值改成8，那么要怎么改呢，需要先出现w，然后再把w的值赋給某一个引用</p>
+</blockquote>
+<blockquote>
+<p>如果有多个调用者（callers）同时要求相同资源（如内存或磁盘上的数据存储），他们会共同获取相同的指针指向相同的资源，直到某个调用者试图修改资源的内容时，系统才会真正复制一份专用副本（private copy）给该调用者，而其他调用者所见到的最初的资源仍然保持不变。这过程对其他的调用者都是透明的（transparently）。此作法主要的优点是如果调用者没有修改该资源，就不会有副本（private copy）被创建，因此多个调用者只是读取操作时可以共享同一份资源。</p>
+</blockquote>
+<p>因此这就会<strong>解决上面时点混乱的问题</strong> 了，8点创建的子进程，那么这个时候子进程就有了8点时所有的数据的指针，这之后，父进程的数据修改，不会影响子进程的数据（父子进程对数据的修改，对方看不到（数据是隔离的）），也就是父进程中a已经指向到了一个新的内存地址，但是子进程中的依然是8点时的内存地址</p>
+<blockquote>
+<p>注意：<code>fork()</code>是系统调用,<code>COW</code>是内核机制</p>
+</blockquote>
+<h3 id="3、具体实现">3、具体实现</h3>
+<h4 id="a、使用命令">a、使用命令</h4>
+<p><code>save</code>前台阻塞、<code>bgsave</code>后端异步的非阻塞命令，<code>bgsave</code>会触发<code>fork</code>，创建子进程。</p>
+<p>但是人为的执行多少有些不靠谱，所以也支持在配置文件中编写一个<code>bgsave</code>规则</p>
+<blockquote>
+<p>注意在配置文件中用的是<code>save</code>这个标识，但是触发的是<code>bgsave</code></p>
+</blockquote>
+<p>那是不是<code>save</code>命令一点优势都没有了，也不是，会在哪里用到呢，只要是服务不关机，不做任何停服的时候，肯定使用<code>bgsave</code>，但是如果是关机维护的时候，就必须做一个<code>save</code>，存一个全量数据，否则就丢失数据了，虽然这种场景不是特别常见</p>
+<p>redis中关于这块的配置</p>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">################################ SNAPSHOTTING  ################################</span><br><span class="line">#</span><br><span class="line"># Save the DB on disk:</span><br><span class="line">#</span><br><span class="line">#   save &lt;seconds&gt; &lt;changes&gt;</span><br><span class="line">#</span><br><span class="line">#   In the example below the behaviour will be to save:</span><br><span class="line">#   after <span class="number">900</span> sec (<span class="number">15</span> min) <span class="keyword">if</span> at least <span class="number">1</span> key changed</span><br><span class="line">#   after <span class="number">300</span> sec (<span class="number">5</span> min) <span class="keyword">if</span> at least <span class="number">10</span> keys changed</span><br><span class="line">#   after <span class="number">60</span> sec <span class="keyword">if</span> at least <span class="number">10000</span> keys changed</span><br><span class="line">#</span><br><span class="line">#   Note: you can disable saving completely by commenting out all <span class="string">&quot;save&quot;</span> lines.</span><br><span class="line">#</span><br><span class="line">#   It is also possible to remove all the previously configured save</span><br><span class="line">#   points by adding a save directive <span class="keyword">with</span> a single empty string argument</span><br><span class="line">#   like <span class="keyword">in</span> the following example:</span><br><span class="line">#</span><br><span class="line">#   save <span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"># 下面的save只是一个标识，触发的是bgsave</span><br><span class="line"></span><br><span class="line">save <span class="number">900</span> <span class="number">1</span> # 当到达<span class="number">900</span>秒的时候，操作数超过<span class="number">1</span>的时候，就触发bgsave</span><br><span class="line">save <span class="number">300</span> <span class="number">10</span> # 当到达<span class="number">300</span>秒的时候，操作数超过<span class="number">10</span>的时候，就触发bgsave</span><br><span class="line">save <span class="number">60</span> <span class="number">10000</span>  # 当到达<span class="number">60</span>秒的时候，操作数超过<span class="number">10000</span>的时候，就触发bgsave</span><br></pre></td></tr></table></figure>
+<p>上面的配置，也可以关闭不用，<code>save &quot;&quot;</code>即可，即打开18行的注释。注释22～24行</p>
+<blockquote>
+<p>redis默认是开启了RDB（快照/副本）功能的</p>
+</blockquote>
+<p>其他配置：</p>
+<p><code>rdbcompression yes</code>：是否开启压缩</p>
+<p><code>rdbchecksum yes</code>：新版本增加的，会在文件的最后写一个交易位</p>
+<p><code>dbfilename dump.rdb</code>：给落下来的文件起个名字<code>dump.rdb</code></p>
+<p><code>dir /var/lib/redis/6379</code>：落下来的文件存放路径</p>
+<h3 id="4、弊端">4、弊端</h3>
+<p>1、不支持拉链，只有一个dump.rdb,需要运维定制定时策略，备份每个备份按照日期存储</p>
+<p>2、丢失数据相对多，因为他不是实时记录数据的变化，时点和时点之间窗口的数据容易丢失，比如8点备份了，9点的备份还没做，挂机了，那么就丢失了一个小时的数据，和<code>hdfs</code>、<code>fsimage</code>弊端是一样的</p>
+<h3 id="5、优点">5、优点</h3>
+<p>类似Java中的序列化，其实就是把内存中的字节数组，以最快的速度搬到磁盘中去，所以恢复的时候也直接恢复，即恢复的速度相对快</p>
+<p>基于4中所说的弊端，就有了AOF</p>
+<h2 id="二、AOF-Append-Only-File">二、<code>AOF</code>(<code>Append Only File</code>)</h2>
+<p>AOF，即只会向文件追加，所谓的追加即服务器的写操作。</p>
+<p>1、每一个写的操作，都会追加到文件，这样做的好处就是丢失的数据少</p>
+<p>2、RDB、AOP可以同时开启，但是注意，如果同时开启，重启服务器的时候，恢复的时候只会拿AOF恢复</p>
+<blockquote>
+<p>新版本4.0之后，AOF中包含RDB全量，增加记录新的写操作</p>
+</blockquote>
+<blockquote>
+<p>问题：Redis运行了10年，开启了AOF，在10年的时候挂了：</p>
+<p>a：AOF多大？</p>
+<p>​	AOF可以有10个T嘛？可以，因为是一直append，写、删操作，记录的操作记录（操作指令）</p>
+<p>b：恢复需要多久？会存在内存溢出的情况嘛？</p>
+<p>​	不会发生溢出操作，这10个T很多前面创建，后面删除，后面拿删除的空间再去创建，，所以只要线性的执行这个文件，最终就会恢复，不会溢出</p>
+<p>​	要溢出，在写入内存的时候就会发生溢出，不会写到文件中去的。</p>
+<p>​	恢复多久？恢复5年可不可以？当然是有可能的，因为存的是指令，需要一条一条的执行</p>
+</blockquote>
+<p>因此，会存在的弊端：</p>
+<p>1、体量无限变大</p>
+<p>2、恢复慢，</p>
+<p>那如果在不丢失数据的情况下，AOF足够小</p>
+<blockquote>
+<p>在<code>hdfs</code>、<code>fsimage</code>中，用<code>hdfs</code>、<code>fsimage</code>+<code>edits.log</code>,把日志中的东西记到一个镜像当中，日志就会被清空，到下一个时点，日志就只会记增量</p>
+</blockquote>
+<p>Redis中是如何实现的</p>
+<p>1、4.0以前，重写，抵消和整合命令，删除抵消的命令，合并重复命令</p>
+<blockquote>
+<p>比如：一个key，前面一系列的创建，删除，最后一个还是创建，那么其实前面的都不需要管了</p>
+<p>或者有一个list，10年一直在push 1,那么可以计数后，直接一次push总和个1</p>
+</blockquote>
+<p>但是恢复成本还是挺高</p>
+<p>2、4.0以后，重写时，先将老的数据RDB,写到AOF文件中，再将增量的以指令的方式Append到AOF中</p>
+<blockquote>
+<p>AOF是一个混合体，利用了RDB恢复快，利用了日志的全量</p>
+</blockquote>
+<h3 id="1、AOF的三个级别">1、AOF的三个级别</h3>
+<p>Redis是一个内存数据库，但是现在增删改的时候，就回触发I/O操作，因为要向磁盘中去写，所以会拖慢Redis内存速度，因此AOF有三个界别配置可以调</p>
+<p><code>NO</code>、<code>always</code>、<code>everysec</code>：</p>
+<blockquote>
+<p>一个常识：</p>
+<p>在Java编程的时候嘛，如果要打开一个文件往里面写东西，写完之后，必须要写一个<code>flush</code>,因为，在计算机中，所有对磁盘硬件的I/O操作就需要调用内核的，比如内核中的文件描述符是8，那么在调用内核的时候，内核会开一个buffer,Java程序写的时候，先是写到buffer中，buffer满了之后，内核就会向磁盘去刷写，或者通过<code>flush</code>刷写。</p>
+<p>那么Redis同理</p>
+<p><img src="/2021/Redis%E6%8C%81%E4%B9%85%E5%8C%96/image-20210326161033793.png" alt="image-20210326161033793"></p>
+</blockquote>
+<p>Redis配置文件中，有一些配置</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">appendonly no  # 默认是关闭AOF的</span><br><span class="line">appendfilename &quot;appendonly.aof&quot; # 文件名称，也会存储在跟RDB一样的目录下</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 三个级别</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> appendfsync always</span> </span><br><span class="line">appendfsync everysec # 每秒</span><br><span class="line"><span class="meta">#</span><span class="bash"> appendfsync no</span></span><br><span class="line"></span><br><span class="line">no-appendfsync-on-rewrite no </span><br><span class="line"><span class="meta">#</span><span class="bash">yes: 如果redis抛出一个子进程在处理进行rdb或者aof的重写(bgrewriteaof)的时候，那么父进程不论哪个级别都不会把缓冲区的数据刷写到磁盘，因为子进程正在对着磁盘做写操作，减少争抢I/O，但是容易丢数据</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> no：不会丢失数据，但是要忍受阻塞的问题</span></span><br><span class="line"></span><br><span class="line">aof-use-rdb-preamble yes # 重写时，先将老的数据RDB,写到AOF文件中，再将增量的以指令的方式Append到AOF中</span><br></pre></td></tr></table></figure>
+<p><strong>三个级别：</strong></p>
+<p><code>no</code>: redis收到N个写操作，每笔都会写到内核的buffer中，no的意思就是redis不调用<code>flush</code>，而是buffer什么时候满了，什么时候去刷写，这样存在的问题就是可能丢失一个buffer大小的数据</p>
+<p><code>always</code> redis发生一次写操作，就调用一次内核，再调用一次<code>flush</code>，把数据刷进磁盘。数据最可靠的</p>
+<p><code>everysec</code>:redis每一秒中调用一次<code>flush</code>，相对丢的数据较少</p>
+<h2 id="三、实战">三、实战</h2>
+<h3 id="1、修改配置">1、修改配置</h3>
+<h4 id="a、老版本的配置">a、老版本的配置</h4>
+<p>修改<code>daemonize</code>为<code>no</code>,即我们不让他作为后台进程服务运行，，在前台阻塞着运行，</p>
+<p>注释文件地址，让日志直接打印到控制台，不然就会写到日志文件<code># logfile /var/log/redis_6379.log</code></p>
+<p>修改<code>appendonly</code>为<code>yes</code>,开启AOF，</p>
+<p>暂时先关闭混合，修改<code>aof-use-rdb-preamble</code>为<code>no</code></p>
+<p>如果<code>/var/lib/redis/6379</code>下已经有生成的<code>dump.rdb</code>文件，先删除（⚠️注意，这里是为了学习测试使用，别把真实的有用的数据删除了）</p>
+<p>先确定redis是没有启动的，然后启动服务</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 6379]# redis-server /etc/redis/6379.conf </span><br><span class="line">1835:C 26 Mar 2021 16:46:13.276 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo</span><br><span class="line">1835:C 26 Mar 2021 16:46:13.276 # Redis version=6.0.0, bits=64, commit=00000000, modified=0, pid=1835, just started</span><br><span class="line">1835:C 26 Mar 2021 16:46:13.276 # Configuration loaded</span><br><span class="line">1835:M 26 Mar 2021 16:46:13.281 * Increased maximum number of open files to 10032 (it was originally set to 1024).</span><br><span class="line">                _._                                                  </span><br><span class="line">           _.-``__ &#x27;&#x27;-._                                             </span><br><span class="line">      _.-``    `.  `_.  &#x27;&#x27;-._           Redis 6.0.0 (00000000/0) 64 bit</span><br><span class="line">  .-`` .-```.  ```\/    _.,_ &#x27;&#x27;-._                                   </span><br><span class="line"> (    &#x27;      ,       .-`  | `,    )     Running in standalone mode</span><br><span class="line"> |`-._`-...-` __...-.``-._|&#x27;` _.-&#x27;|     Port: 6379</span><br><span class="line"> |    `-._   `._    /     _.-&#x27;    |     PID: 1835</span><br><span class="line">  `-._    `-._  `-./  _.-&#x27;    _.-&#x27;                                   </span><br><span class="line"> |`-._`-._    `-.__.-&#x27;    _.-&#x27;_.-&#x27;|                                  </span><br><span class="line"> |    `-._`-._        _.-&#x27;_.-&#x27;    |           http://redis.io        </span><br><span class="line">  `-._    `-._`-.__.-&#x27;_.-&#x27;    _.-&#x27;                                   </span><br><span class="line"> |`-._`-._    `-.__.-&#x27;    _.-&#x27;_.-&#x27;|                                  </span><br><span class="line"> |    `-._`-._        _.-&#x27;_.-&#x27;    |                                  </span><br><span class="line">  `-._    `-._`-.__.-&#x27;_.-&#x27;    _.-&#x27;                                   </span><br><span class="line">      `-._    `-.__.-&#x27;    _.-&#x27;                                       </span><br><span class="line">          `-._        _.-&#x27;                                           </span><br><span class="line">              `-.__.-&#x27;                                               </span><br><span class="line"></span><br><span class="line">1835:M 26 Mar 2021 16:46:13.286 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.</span><br><span class="line">1835:M 26 Mar 2021 16:46:13.286 # Server initialized</span><br><span class="line">1835:M 26 Mar 2021 16:46:13.286 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add &#x27;vm.overcommit_memory = 1&#x27; to /etc/sysctl.conf and then reboot or run the command &#x27;sysctl vm.overcommit_memory=1&#x27; for this to take effect.</span><br><span class="line">1835:M 26 Mar 2021 16:46:13.286 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command &#x27;echo never &gt; /sys/kernel/mm/transparent_hugepage/enabled&#x27; as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.</span><br><span class="line">1835:M 26 Mar 2021 16:46:13.287 * Ready to accept connections</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>查看刚才目录下生成了一个文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 6379]# pwd</span><br><span class="line">/var/lib/redis/6379</span><br><span class="line">[root@hadoop01 6379]# ll</span><br><span class="line">总用量 0</span><br><span class="line">-rw-r--r-- 1 root root 0 3月  26 16:46 appendonly.aof</span><br><span class="line">[root@hadoop01 6379]# </span><br></pre></td></tr></table></figure>
+<p>再开启一个客户端:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 6379]# redis-cli </span><br><span class="line">127.0.0.1:6379&gt; set k1 hello</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; </span><br></pre></td></tr></table></figure>
+<p>再次看持久化目录<code>/var/lib/redis/6379</code>，没有<code>dump.rdb</code>,因为没有触发那三个条件，查看<code> appendonly.aof</code>文件,这是文件中的内容</p>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">*2  # * 代表有几个元素，分别是下面的select和0</span></span><br><span class="line"><span class="meta"><span class="meta-keyword">$6</span>  # $ 表示下面这个select元素是由几个字符或者自己组成</span></span><br><span class="line">SELECT</span><br><span class="line"><span class="meta"><span class="meta-keyword">$1</span></span></span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="comment">*3</span></span><br><span class="line"><span class="meta"><span class="meta-keyword">$3</span></span></span><br><span class="line"><span class="keyword">set</span></span><br><span class="line">$2</span><br><span class="line">k1</span><br><span class="line">$5</span><br><span class="line">hello</span><br></pre></td></tr></table></figure>
+<p>继续添加，文件也会继续追加。</p>
+<p>因为目前还没有满足<code>save</code>的触发条件，所以我们可以使用<code>save</code>或者<code>bsave</code>写rdb文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 6379]# redis-cli </span><br><span class="line">127.0.0.1:6379&gt; set k1 hello</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; bgsave</span><br><span class="line">Background saving started</span><br><span class="line">127.0.0.1:6379&gt; </span><br></pre></td></tr></table></figure>
+<p>同时我们看到服务端：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">1835:M 26 Mar 2021 16:46:13.287 * Ready to accept connections</span><br><span class="line">1835:M 26 Mar 2021 16:56:50.778 * Background saving started by pid 1967 # 开辟了一个子进程</span><br><span class="line">1967:C 26 Mar 2021 16:56:50.787 * DB saved on disk</span><br><span class="line">1967:C 26 Mar 2021 16:56:50.791 * RDB: 4 MB of memory used by copy-on-write # 写时复制完成</span><br><span class="line">1835:M 26 Mar 2021 16:56:50.827 * Background saving terminated with success</span><br></pre></td></tr></table></figure>
+<p>响应的目录下也多了一个<code>dump.rdb</code>，可以查看这个文件，但是存的是序列化的，所以可以使用<code>redis-check-rdb dump.rdb</code>看一些信息：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 6379]# redis-check-rdb dump.rdb</span><br><span class="line">[offset 0] Checking RDB file dump.rdb</span><br><span class="line">[offset 26] AUX FIELD redis-ver = &#x27;6.0.0&#x27;</span><br><span class="line">[offset 40] AUX FIELD redis-bits = &#x27;64&#x27;</span><br><span class="line">[offset 52] AUX FIELD ctime = &#x27;1616749010&#x27;</span><br><span class="line">[offset 67] AUX FIELD used-mem = &#x27;865048&#x27;</span><br><span class="line">[offset 83] AUX FIELD aof-preamble = &#x27;0&#x27;</span><br><span class="line">[offset 85] Selecting DB ID 0</span><br><span class="line">--- RDB ERROR DETECTED ---</span><br><span class="line">[offset 107] RDB CRC error</span><br><span class="line">[additional info] While doing: check-sum</span><br><span class="line">[info] 1 keys read</span><br><span class="line">[info] 0 expires</span><br><span class="line">[info] 0 already expired</span><br><span class="line">[root@hadoop01 6379]# </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>我现在继续在客户端对k1设置值</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; set k1 1</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; set k1 2</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; set k1 3</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; set k1 a</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; set k1 b</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; set k1 c</span><br></pre></td></tr></table></figure>
+<p>这个时候，<code> appendonly.aof</code>文件就会将这些命令追加了，文件大小此时为158个字节</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 6379]# ll</span><br><span class="line">总用量 8</span><br><span class="line">-rw-r--r-- 1 root root 158 3月  26 17:09 appendonly.aof</span><br><span class="line">-rw-r--r-- 1 root root 107 3月  26 16:56 dump.rdb</span><br><span class="line">[root@hadoop01 6379]# </span><br></pre></td></tr></table></figure>
+<p>那其实这个文件中许多就是没用的，所以我们做一个重写<code>BGREWRITEAOF</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; BGREWRITEAOF </span><br><span class="line">Background append only file rewriting started</span><br><span class="line">127.0.0.1:6379&gt; </span><br></pre></td></tr></table></figure>
+<p>再次查看文件大小,发现已经减少到了52个字节</p>
+<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 6379]<span class="comment"># ll</span></span><br><span class="line">总用量 8</span><br><span class="line">-rw-r--r--<span class="number"> 1 </span>root root <span class="number"> 51 </span>3月 <span class="number"> 26 </span>17:10 appendonly.aof</span><br><span class="line">-rw-r--r--<span class="number"> 1 </span>root root<span class="number"> 107 </span>3月 <span class="number"> 26 </span>16:56 dump.rdb</span><br><span class="line">[root@hadoop01 6379]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
+<p>再去看<code>appendonly.aof</code>文件，发现中间的一些命令在文件中已经没有了，抵消掉了</p>
+<h4 id="b、新版本的配置">b、新版本的配置</h4>
+<p><code>Ctrl+C</code>结束服务端，关闭客户端，把刚才生成的两个文件都删除掉</p>
+<p>修改配置<code>aof-use-rdb-preamble</code>为<code>yes</code>,目录下就会多一个<code>appendonly.aof</code>文件，目前还是空的，开一个客户端</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 6379]# redis-cli -p 6379  --raw</span><br><span class="line">127.0.0.1:6379&gt; set k1 aa</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; set k1 bb</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; set k1 cc</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; set k1 dd</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; </span><br></pre></td></tr></table></figure>
+<p>此时的<code>appendonly.aof</code>文件,依然是存的上面的每条指令，这个时候再执行：</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0.0.1:6379</span>&gt; BGREWRITEAOF</span><br><span class="line">Background append only file rewriting started</span><br><span class="line"><span class="number">127.0.0.1:6379</span>&gt; </span><br></pre></td></tr></table></figure>
+<p>这个时候再看<code>appendonly.aof</code>文件的时候，发现存的是RDB的内容了</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">REDIS0009ú      redis-ver^E6.0.0ú</span><br><span class="line">redis-bitsÀ@ú^EctimeÂ8©]`ú^Hused-memÂ^H3^M^@ú^Laof-preambleÀ^Aþ^@û^A^@^@^Bk1^Bddÿ;§¸^LÁ&lt;8b&gt;¯¼                                                                                   </span><br></pre></td></tr></table></figure>
+<p>继续set</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6379</span>&gt; set k<span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="attribute">OK</span></span><br><span class="line"><span class="attribute">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6379</span>&gt; set k<span class="number">1</span> <span class="number">2</span></span><br><span class="line"><span class="attribute">OK</span></span><br><span class="line"><span class="attribute">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6379</span>&gt; </span><br></pre></td></tr></table></figure>
+<p>这个时候<code>appendonly.aof</code>文件中，这两条命了就会以AOF的方式追加到文件中（时点数据+增量日志）</p>
+<p><img src="/2021/Redis%E6%8C%81%E4%B9%85%E5%8C%96/image-20210326173258759.png" alt="image-20210326173258759"></p>
+<p>等到下次再<code>BGREWRITEAOF</code>，就会再次触发重写，把刚才一些命令做抵消，以RDB的方式重新存在<code>appendonly.aof</code>中</p>
+<blockquote>
+<p>因此需要注意了，加入你再这个时候，不小心输入了<code>flushall</code>,内存中的数据都没有了，那这个一定要注意不要执行<code>BGREWRITEAOF</code>，因为<code>appendonly.aof</code>文件的最后就是<code>flushall</code>,可以认为的删除<code>flushall</code>及前面的<code>*</code>、<code>$</code>,这样恢复数据的时候就不会丢失</p>
+</blockquote>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/2021/基于k8s开发环境治理的利器-KT-Connect/" data-toggle="tooltip" data-placement="top" title="基于k8s开发环境治理的利器-KT Connect">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/2021/Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU/" data-toggle="tooltip" data-placement="top" title="Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Redis持久化&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2021/Redis持久化/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'a00494876d6f5f4bcbfd',
+      clientSecret: '33d3d0be81052a26f5a3535733b8b7854628564f',
+      repo: 'shifpeng.github.io',
+      owner: 'shifpeng',
+      admin: 'shifpeng',
+      id: 'Wed Mar 24 2021 14:09:00 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81RDB%EF%BC%88Redis-DataBase%EF%BC%89"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、RDB（Redis DataBase）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8fork"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">1、系统调用fork()</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81copy-on-write%E5%86%99%E6%97%B6%E5%A4%8D%E5%88%B6%E6%9C%BA%E5%88%B6%EF%BC%8C%EF%BC%88COW%EF%BC%89"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">2、copy on write写时复制机制，（COW）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3%E3%80%81%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">3、具体实现</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#a%E3%80%81%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">1.3.1.</span> <span class="toc-nav-text">a、使用命令</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4%E3%80%81%E5%BC%8A%E7%AB%AF"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">4、弊端</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5%E3%80%81%E4%BC%98%E7%82%B9"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">5、优点</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81AOF-Append-Only-File"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、AOF(Append Only File)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81AOF%E7%9A%84%E4%B8%89%E4%B8%AA%E7%BA%A7%E5%88%AB"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">1、AOF的三个级别</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E5%AE%9E%E6%88%98"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、实战</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">1、修改配置</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#a%E3%80%81%E8%80%81%E7%89%88%E6%9C%AC%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">3.1.1.</span> <span class="toc-nav-text">a、老版本的配置</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#b%E3%80%81%E6%96%B0%E7%89%88%E6%9C%AC%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">3.1.2.</span> <span class="toc-nav-text">b、新版本的配置</span></a></li></ol></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+            
+            <a class="tag" href="/tags/#Redis" title="Redis">Redis</a>
+            
+            <a class="tag" href="/tags/#重学Redis" title="重学Redis">重学Redis</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://cuiqingcai.com/" target="_blank">静 觅 崔庆才</a>
+          </li>
+          
+          <li>
+            <a href="http://www.52nlp.cn/" target="_blank">我爱自然语言处理</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cnblogs.com/Steven-shi/" target="_blank">博客园 石福鹏</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/shifpeng">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Steven
+          2021
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://shifpeng.cn">Steven</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/mouseclick.js"  content='' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "shifpeng";
+    let ghPages = gh + ".github.io";
+    let pagePath = "2021/Redis持久化/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://www.shifpeng.cn/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

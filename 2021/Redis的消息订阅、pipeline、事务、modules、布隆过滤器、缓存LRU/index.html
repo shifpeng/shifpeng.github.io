@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="人最大的修养就是知人不评人"/>
+  <meta name="keyword" content="Java,Steven,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://www.shifpeng.cn/2021/Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU/">
+  <title>
+    
+      Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU - Steven | java
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'StevenBlog/community'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">石福鹏</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+              
+              <a class="tag" href="/tags/#Redis" title="Redis">Redis</a>
+              
+              <a class="tag" href="/tags/#重学Redis" title="重学Redis">重学Redis</a>
+              
+            </div>
+            <h1>Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU</h1>
+            <h2 class="subheading">Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU以及缓存常见问题</h2>
+            <span class="meta">
+              Posted by 石福鹏 on
+              2021-03-21
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">22</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">5k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>首先要注意拿Redis作为数据库或者缓存的区别，比如如果拿redis做缓存，那么常见的问题有哪些？击穿、雪崩、穿透、一致性等。</p>
+<h2 id="一、管道（Pipelining）">一、管道（Pipelining）</h2>
+<p>通常情况下，Redis一个请求会遵循：</p>
+<p>1)、客户端发送一个查询，并监听socket返回，通常是阻塞模式，等到服务端响应</p>
+<p>2)、服务端处理命令，，返回结果到客户端</p>
+<p>这个时间被称为RTT(Round Trip Time 往返时间)</p>
+<p>较多的系统调用，即伴随着网络I/O增加，为了减少系统调用、减少网络I/O，就有了管道。</p>
+<blockquote>
+<p>这就是在计算机编程中，我们会更多的使用buffer机制的原因，减少没必要的调来调去</p>
+</blockquote>
+<p>一次请求，未收到响应 ，但是服务器依然可以处理新的请求，所以就可以将多个命令发送到服务器。不用等待回复，最后在一个步骤中一次性读取所有回复</p>
+<p>比如使用管道操作Redis：</p>
+<p>通过NC建立一个socket通信(如果没有NC,需要安装一下<code> yum install nc</code>)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]# nc localhost 6379</span><br></pre></td></tr></table></figure>
+<p>然后就按照客户端输入，比如<code>keys *</code>等命令就可以操作</p>
+<p>如果想发更多,不打印出来，直接通过nc创建一个连接之后发出去</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo -e <span class="string">&quot;set k2 99<span class="subst">\n</span>incr k2<span class="subst">\n</span> get k2&quot;</span> | nc localhost <span class="number">6379</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>echo -e：-e可以识别换行符</p>
+</blockquote>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root<span class="symbol">@hadoop01</span> ~]<span class="meta"># echo -e <span class="string">&quot;set k2 99\nincr k2\n get k2&quot;</span> | nc localhost 6379</span></span><br><span class="line">+OK   <span class="meta"># set k2 99</span></span><br><span class="line">:<span class="number">100</span> <span class="meta"># nincr k2</span></span><br><span class="line">$3</span><br><span class="line"><span class="number">100</span> <span class="meta"># get k2</span></span><br><span class="line">[root<span class="symbol">@hadoop01</span> ~]<span class="meta"># </span></span><br></pre></td></tr></table></figure>
+<h3 id="a、知识延伸">a、知识延伸</h3>
+<p>Redis有个冷启动观念，redis冷启动的时候。我们期望在启动后预加载一部分数据，即涉及到批量插入，这里面就会用到管道的知识</p>
+<p>如果我们需要生成一个10亿的`keyN -&gt; ValueN’的大数据集，我们会创建一个如下的redis命令集的文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SET Key0 Value0</span><br><span class="line">SET Key1 Value1</span><br><span class="line">...</span><br><span class="line">SET KeyN ValueN</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat data.txt | redis-cli --pipe</span><br></pre></td></tr></table></figure>
+<h2 id="二、发布订阅（hub-sub）">二、发布订阅（hub/sub）</h2>
+<p>先看看帮助命令<code>help @pubsub</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; help @pubsub</span><br><span class="line"></span><br><span class="line">  PSUBSCRIBE pattern [pattern ...]</span><br><span class="line">  summary: Listen for messages published to channels matching the given patterns</span><br><span class="line">  since: 2.0.0</span><br><span class="line"></span><br><span class="line">  PUBLISH channel message</span><br><span class="line">  summary: Post a message to a channel</span><br><span class="line">  since: 2.0.0</span><br><span class="line"></span><br><span class="line">  PUBSUB subcommand [argument [argument ...]]</span><br><span class="line">  summary: Inspect the state of the Pub/Sub subsystem</span><br><span class="line">  since: 2.8.0</span><br><span class="line"></span><br><span class="line">  PUNSUBSCRIBE [pattern [pattern ...]]</span><br><span class="line">  summary: Stop listening for messages posted to channels matching the given patterns</span><br><span class="line">  since: 2.0.0</span><br><span class="line"></span><br><span class="line">  SUBSCRIBE channel [channel ...]</span><br><span class="line">  summary: Listen for messages published to the given channels</span><br><span class="line">  since: 2.0.0</span><br><span class="line"></span><br><span class="line">  UNSUBSCRIBE [channel [channel ...]]</span><br><span class="line">  summary: Stop listening for messages posted to the given channels</span><br><span class="line">  since: 2.0.0</span><br><span class="line"></span><br><span class="line">127.0.0.1:6379&gt; </span><br></pre></td></tr></table></figure>
+<p><code>PUBLISH</code>、<code>SUBSCRIBE</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; publish ooxx hello</span><br><span class="line">0</span><br><span class="line">127.0.0.1:6379&gt; </span><br></pre></td></tr></table></figure>
+<p>另外起一个客户端，也是6379,发现并没有收到&quot;hello&quot;</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0.0.1:6379</span>&gt; SUBSCRIBE ooxx</span><br><span class="line">subscribe</span><br><span class="line">ooxx</span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>需要注意的是，只有消费端监听之后，别人推送消息才能收到,此时再次推送一条消息<code>publish ooxx helloworld</code>,就会发现收到了</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; SUBSCRIBE ooxx</span><br><span class="line">subscribe</span><br><span class="line">ooxx</span><br><span class="line">1</span><br><span class="line">message</span><br><span class="line">ooxx</span><br><span class="line">helloworld</span><br></pre></td></tr></table></figure>
+<p><strong>思考一个问题</strong></p>
+<p>我们在使用微信或者QQ的时候，除了聊天新的消息外，还有聊天记录，那所有的这些数据应该放在哪里呢？关系型数据库，还是Redis,如果是数据库，数据全量可以保证，那查的人多的时候，微信要支持很多群，人的查询，成本会非常高</p>
+<blockquote>
+<p>Redis缓存通常解决的是数据的读请求。有时候也会解决写的请求，但是一般写的请求，就会考虑双写的复杂性；</p>
+<p>所以一般把数据完整性不是特别强的，直接就搬到redis作为数据库，存那些实时写的数据，比如购买数，浏览数，收藏数等</p>
+</blockquote>
+<p>所以，实时性的，就可以使用redis的发布订阅，三天以前的历史数据，直接从数据库中读取。三天内的数据，可以使用sorted_set（这里面有个zremrangebyrank、zremrangebyscore）,根据排名，给定一个外围，删除三天以前的数据。存放的时候，将时间作为分值</p>
+<p><img src="/2021/Redis%E7%9A%84%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85%E3%80%81pipeline%E3%80%81%E4%BA%8B%E5%8A%A1%E3%80%81modules%E3%80%81%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8%E3%80%81%E7%BC%93%E5%AD%98LRU/image-20210322145152718.png" alt="image-20210322145152718"></p>
+<blockquote>
+<p>这里其实是可以使用两个redis进程，一台redis服务器只负责发布订阅，同时做sorted_set排序，另外一个redis进程订阅第一台，收到订阅消息，后转给kafka来做消息写入</p>
+</blockquote>
+<p><img src="/2021/Redis%E7%9A%84%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85%E3%80%81pipeline%E3%80%81%E4%BA%8B%E5%8A%A1%E3%80%81modules%E3%80%81%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8%E3%80%81%E7%BC%93%E5%AD%98LRU/image-20210322153102071.png" alt="image-20210322153102071"></p>
+<hr>
+<h2 id="三、Redis事务">三、Redis事务</h2>
+<p>使用Redis,永远记住一句话，就是redis速度快，才会使用redis,如果你把这个特征抹杀了，还不如不用。</p>
+<h3 id="1-、-mutli、exec">1)、 <code>mutli</code>、<code>exec</code></h3>
+<p>如图，两个客户端，分别执行两个事务，顺序是1先开启事务，然后2也开启一个事务，2事务中执行<code>del k1</code>,1事务中执行<code>get k1</code>,然后，client2先执行<code>exec</code>,稍后client1d的<code>exec</code>，因为redis是单线程的，所以不可能同时执行 ，一定是挨个执行的。</p>
+<p><strong>其实就是关注的是<code>exec</code>的执行谁先执行</strong></p>
+<p><img src="/2021/Redis%E7%9A%84%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85%E3%80%81pipeline%E3%80%81%E4%BA%8B%E5%8A%A1%E3%80%81modules%E3%80%81%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8%E3%80%81%E7%BC%93%E5%AD%98LRU/image-20210322174705336.png" alt="image-20210322174705336"></p>
+<p><img src="/2021/Redis%E7%9A%84%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85%E3%80%81pipeline%E3%80%81%E4%BA%8B%E5%8A%A1%E3%80%81modules%E3%80%81%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8%E3%80%81%E7%BC%93%E5%AD%98LRU/image-20210322173459881.png" alt="image-20210322173459881"></p>
+<p>如上图，同一个客户端发来的命令是放在一个缓冲区的，所以对着这个例子，就是client2先执行，1排在后面。所以肯定是2先把<code>k1</code>先删除了,等到1执行的时候，就会说k1不存在了</p>
+<blockquote>
+<p>对于两个事务同时来，谁先执行<code>exec</code>，先执行谁的事务</p>
+</blockquote>
+<h3 id="2-、-discard、watch">2)、 <code>discard</code>、<code>watch</code></h3>
+<p><code>watch</code>：监听，通过乐观锁实现CAS(check-and-set)操作</p>
+<p>依然是上面的例子，如果在client1前先加一个<code>watch</code>，因为<code>client2</code>先执行<code>exec</code>,那么当执行到1的<code>exec</code>时，就不会发生任何变化，</p>
+<p>也就是说，如果在2中执行了<code>set k1 &quot;xxooo&quot;</code>,那么在2中执行命令<code>get k1</code>时，<strong>发现k1发生变化了，那么2的这些指令是不会执行的</strong></p>
+<p>至于这种情况怎么解决，需要客户端自己的去捕获这种情况，客户端自己修复造成的后果</p>
+<p><strong>为什么Redis不支持回滚？</strong> (以下为官方的解释)</p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">如果你有使用关系式数据库的经验， 那么 “Redis 在事务失败时不进行回滚，而是继续执行余下的命令”这种做法可能会让你觉得有点奇怪。</span><br><span class="line"></span><br><span class="line">以下是这种做法的优点：</span><br><span class="line"><span class="bullet">- </span>Redis 命令只会因为错误的语法而失败（并且这些问题不能在入队时发现），或是命令用在了错误类型的键上面：这也就是说，从实用性的角度来说，失败的命令是由编程错误造成的，而这些错误应该在开发的过程中被发现，而不应该出现在生产环境中。</span><br><span class="line"><span class="bullet">- </span>因为不需要对回滚进行支持，所以 Redis 的内部可以保持简单且快速。</span><br><span class="line">有种观点认为 Redis 处理事务的做法会产生 bug ， 然而需要注意的是， 在通常情况下， 回滚并不能解决编程错误带来的问题。 举个例子， 如果你本来想通过 INCR 命令将键的值加上 1 ， 却不小心加上了 2 ， 又或者对错误类型的键执行了 INCR ， 回滚是没有办法处理这些情况的。</span><br></pre></td></tr></table></figure>
+<h2 id="四、redis扩展模块-布隆过滤器">四、redis扩展模块-布隆过滤器</h2>
+<p>redis除了自己本身的功能外，其实还提供了一些模块，实现其他的功能，这个在中文的官网是没有的，在英文的官网导航栏是又的<code>https://redis.io/</code>-&gt;<code>[Modules](https://redis.io/modules)</code></p>
+<p>其中有一个redis的布隆过滤器<code>RedisBloom</code></p>
+<p>具体的安装方式参考<a target="_blank" rel="noopener" href="https://github.com/RedisBloom/RedisBloom">官方文档</a>下面是我集成RedisBloom的过程</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 local]# wget https://github.com/RedisBloom/RedisBloom/archive/refs/heads/master.zip</span><br><span class="line">--2021-03-23 12:05:08--  https://github.com/RedisBloom/RedisBloom/archive/refs/heads/master.zip</span><br><span class="line">正在解析主机 github.com (github.com)... 13.250.177.223</span><br><span class="line">正在连接 github.com (github.com)|13.250.177.223|:443... 已连接。</span><br><span class="line">已发出 HTTP 请求，正在等待回应... 302 Found</span><br><span class="line">位置：https://codeload.github.com/RedisBloom/RedisBloom/zip/refs/heads/master [跟随至新的 URL]</span><br><span class="line">--2021-03-23 12:05:09--  https://codeload.github.com/RedisBloom/RedisBloom/zip/refs/heads/master</span><br><span class="line">正在解析主机 codeload.github.com (codeload.github.com)... 13.229.189.0</span><br><span class="line">正在连接 codeload.github.com (codeload.github.com)|13.229.189.0|:443... 已连接。</span><br><span class="line">已发出 HTTP 请求，正在等待回应... 200 OK</span><br><span class="line">长度：未指定 [application/zip]</span><br><span class="line">正在保存至: “master.zip”</span><br><span class="line"></span><br><span class="line">    [   &lt;=&gt;                                                                                                                                                                        ] 114,470      201KB/s 用时 0.6s   </span><br><span class="line"></span><br><span class="line">2021-03-23 12:05:12 (201 KB/s) - “master.zip” 已保存 [114470]</span><br><span class="line"></span><br><span class="line">[root@hadoop01 local]# unzip master.zip </span><br><span class="line">Archive:  master.zip</span><br><span class="line">2ebe83623b32a96a1074f31c6e99da3c33f685bb</span><br><span class="line">   creating: RedisBloom-master/</span><br><span class="line">   creating: RedisBloom-master/.circleci/</span><br><span class="line">  inflating: RedisBloom-master/.circleci/config.yml  </span><br><span class="line">  inflating: RedisBloom-master/.clang-format  </span><br><span class="line">   creating: RedisBloom-master/.github/</span><br><span class="line">   creating: RedisBloom-master/.github/workflows/</span><br><span class="line">		.......</span><br><span class="line">  inflating: RedisBloom-master/tests/test_topk.c  </span><br><span class="line">  inflating: RedisBloom-master/tests/topk.py  </span><br><span class="line">[root@hadoop01 local]# cd RedisBloom-master/</span><br><span class="line">[root@hadoop01 RedisBloom-master]# make</span><br><span class="line">cc  -Wall -Wno-unused-function -g -ggdb -O2 -fPIC -std=gnu99 -D_GNU_SOURCE -I/usr/local/RedisBloom-master -I/usr/local/RedisBloom-master/contrib  -c -o /usr/local/RedisBloom-master/src/rebloom.o /usr/local/RedisBloom-master/src/rebloom.c</span><br><span class="line">cc  -Wall -Wno-unused-function -g -ggdb -O2 -fPIC -std=gnu99 -D_GNU_SOURCE -I/usr/local/RedisBloom-master -I/usr/local/RedisBloom-master/contrib  -c -o /usr/local/RedisBloom-master/contrib/MurmurHash2.o /usr/local/RedisBloom-master/contrib/MurmurHash2.c</span><br><span class="line">cc  -Wall -Wno-unused-function -g -ggdb -O2 -fPIC -std=gnu99 -D_GNU_SOURCE -I/usr/local/RedisBloom-master -I/usr/local/RedisBloom-master/contrib  -c -o /usr/local/RedisBloom-master/rmutil/util.o /usr/local/RedisBloom-master/rmutil/util.c</span><br><span class="line">cc  -Wall -Wno-unused-function -g -ggdb -O2 -fPIC -std=gnu99 -D_GNU_SOURCE -I/usr/local/RedisBloom-master -I/usr/local/RedisBloom-master/contrib  -c -o /usr/local/RedisBloom-master/src/sb.o /usr/local/RedisBloom-master/src/sb.c</span><br><span class="line">cc  -Wall -Wno-unused-function -g -ggdb -O2 -fPIC -std=gnu99 -D_GNU_SOURCE -I/usr/local/RedisBloom-master -I/usr/local/RedisBloom-master/contrib  -c -o /usr/local/RedisBloom-master/src/cf.o /usr/local/RedisBloom-master/src/cf.c</span><br><span class="line">cc  -Wall -Wno-unused-function -g -ggdb -O2 -fPIC -std=gnu99 -D_GNU_SOURCE -I/usr/local/RedisBloom-master -I/usr/local/RedisBloom-master/contrib  -c -o /usr/local/RedisBloom-master/src/rm_topk.o /usr/local/RedisBloom-master/src/rm_topk.c</span><br><span class="line">cc  -Wall -Wno-unused-function -g -ggdb -O2 -fPIC -std=gnu99 -D_GNU_SOURCE -I/usr/local/RedisBloom-master -I/usr/local/RedisBloom-master/contrib  -c -o /usr/local/RedisBloom-master/src/topk.o /usr/local/RedisBloom-master/src/topk.c</span><br><span class="line">cc  -Wall -Wno-unused-function -g -ggdb -O2 -fPIC -std=gnu99 -D_GNU_SOURCE -I/usr/local/RedisBloom-master -I/usr/local/RedisBloom-master/contrib  -c -o /usr/local/RedisBloom-master/src/rm_cms.o /usr/local/RedisBloom-master/src/rm_cms.c</span><br><span class="line">cc  -Wall -Wno-unused-function -g -ggdb -O2 -fPIC -std=gnu99 -D_GNU_SOURCE -I/usr/local/RedisBloom-master -I/usr/local/RedisBloom-master/contrib  -c -o /usr/local/RedisBloom-master/src/cms.o /usr/local/RedisBloom-master/src/cms.c</span><br><span class="line">cc /usr/local/RedisBloom-master/src/rebloom.o /usr/local/RedisBloom-master/contrib/MurmurHash2.o /usr/local/RedisBloom-master/rmutil/util.o /usr/local/RedisBloom-master/src/sb.o /usr/local/RedisBloom-master/src/cf.o /usr/local/RedisBloom-master/src/rm_topk.o /usr/local/RedisBloom-master/src/topk.o /usr/local/RedisBloom-master/src/rm_cms.o /usr/local/RedisBloom-master/src/cms.o -o /usr/local/RedisBloom-master/redisbloom.so -shared -Wl,-Bsymbolic,-Bsymbolic-functions -lm -lc</span><br><span class="line">[root@hadoop01 RedisBloom-master]# ll</span><br><span class="line">总用量 388</span><br><span class="line">-rw-r--r-- 1 root root    211 2月  25 14:48 changelog</span><br><span class="line">-rw-r--r-- 1 root root    520 2月  25 14:48 codecov.yml</span><br><span class="line">drwxr-xr-x 2 root root   4096 3月  23 12:05 contrib</span><br><span class="line">-rw-r--r-- 1 root root    431 2月  25 14:48 Dockerfile</span><br><span class="line">drwxr-xr-x 3 root root   4096 2月  25 14:48 docs</span><br><span class="line">-rw-r--r-- 1 root root   5794 2月  25 14:48 LICENSE</span><br><span class="line">-rw-r--r-- 1 root root   3639 2月  25 14:48 Makefile</span><br><span class="line">-rw-r--r-- 1 root root   1437 2月  25 14:48 mkdocs.yml</span><br><span class="line">drwxr-xr-x 4 root root   4096 2月  25 14:48 opt</span><br><span class="line">-rw-r--r-- 1 root root    543 2月  25 14:48 ramp.yml</span><br><span class="line">-rw-r--r-- 1 root root   4693 2月  25 14:48 README.md</span><br><span class="line">-rwxr-xr-x 1 root root 331656 3月  23 12:05 redisbloom.so</span><br><span class="line">drwxr-xr-x 2 root root   4096 3月  23 12:05 rmutil</span><br><span class="line">drwxr-xr-x 2 root root   4096 3月  23 12:05 src</span><br><span class="line">drwxr-xr-x 3 root root   4096 2月  25 14:48 tests</span><br><span class="line">[root@hadoop01 RedisBloom-master]# ps -fe | grep  redis</span><br><span class="line">root      18725      1  0 3月21 ?       00:04:37 /usr/local/bin/redis-server 127.0.0.1:6379</span><br><span class="line">root      22528      1  0 3月21 ?       00:05:08 /usr/local/bin/redis-server 127.0.0.1:6380</span><br><span class="line">root      68499  68090  0 13:37 pts/4    00:00:00 grep --color=auto redis</span><br><span class="line">[root@hadoop01 RedisBloom-master]# redis-cli  shutdown</span><br><span class="line">[root@hadoop01 RedisBloom-master]# ps -fe | grep  redis</span><br><span class="line">root      22528      1  0 3月21 ?       00:05:08 /usr/local/bin/redis-server 127.0.0.1:6380</span><br><span class="line">root      68502  68090  0 13:38 pts/4    00:00:00 grep --color=auto redis</span><br><span class="line">[root@hadoop01 RedisBloom-master]# redis-server  --loadmodule  /usr/local/redis-6.0.0/redisbloom.so </span><br><span class="line">68518:C 23 Mar 2021 13:40:43.296 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo</span><br><span class="line">68518:C 23 Mar 2021 13:40:43.296 # Redis version=6.0.0, bits=64, commit=00000000, modified=0, pid=68518, just started</span><br><span class="line">68518:C 23 Mar 2021 13:40:43.296 # Configuration loaded</span><br><span class="line">68518:M 23 Mar 2021 13:40:43.297 * Increased maximum number of open files to 10032 (it was originally set to 1024).</span><br><span class="line">                _._                                                  </span><br><span class="line">           _.-``__ &#x27;&#x27;-._                                             </span><br><span class="line">      _.-``    `.  `_.  &#x27;&#x27;-._           Redis 6.0.0 (00000000/0) 64 bit</span><br><span class="line">  .-`` .-```.  ```\/    _.,_ &#x27;&#x27;-._                                   </span><br><span class="line"> (    &#x27;      ,       .-`  | `,    )     Running in standalone mode</span><br><span class="line"> |`-._`-...-` __...-.``-._|&#x27;` _.-&#x27;|     Port: 6379</span><br><span class="line"> |    `-._   `._    /     _.-&#x27;    |     PID: 68518</span><br><span class="line">  `-._    `-._  `-./  _.-&#x27;    _.-&#x27;                                   </span><br><span class="line"> |`-._`-._    `-.__.-&#x27;    _.-&#x27;_.-&#x27;|                                  </span><br><span class="line"> |    `-._`-._        _.-&#x27;_.-&#x27;    |           http://redis.io        </span><br><span class="line">  `-._    `-._`-.__.-&#x27;_.-&#x27;    _.-&#x27;                                   </span><br><span class="line"> |`-._`-._    `-.__.-&#x27;    _.-&#x27;_.-&#x27;|                                  </span><br><span class="line"> |    `-._`-._        _.-&#x27;_.-&#x27;    |                                  </span><br><span class="line">  `-._    `-._`-.__.-&#x27;_.-&#x27;    _.-&#x27;                                   </span><br><span class="line">      `-._    `-.__.-&#x27;    _.-&#x27;                                       </span><br><span class="line">          `-._        _.-&#x27;                                           </span><br><span class="line">              `-.__.-&#x27;                                               </span><br><span class="line"></span><br><span class="line">68518:M 23 Mar 2021 13:40:43.298 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.</span><br><span class="line">68518:M 23 Mar 2021 13:40:43.298 # Server initialized</span><br><span class="line">68518:M 23 Mar 2021 13:40:43.298 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add &#x27;vm.overcommit_memory = 1&#x27; to /etc/sysctl.conf and then reboot or run the command &#x27;sysctl vm.overcommit_memory=1&#x27; for this to take effect.</span><br><span class="line">68518:M 23 Mar 2021 13:40:43.298 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command &#x27;echo never &gt; /sys/kernel/mm/transparent_hugepage/enabled&#x27; as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.</span><br><span class="line">68518:M 23 Mar 2021 13:40:43.298 * Module &#x27;bf&#x27; loaded from /usr/local/redis-6.0.0/redisbloom.so</span><br><span class="line">68518:M 23 Mar 2021 13:40:43.299 * Ready to accept connections</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>此时,输入<code>bf</code>命令，按<code>TAB</code>键，就会发现相关的命令可以执行了，当然上面的第67行加载扩展也可以直接在配置文件中<code>include</code>。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]# redis-cli -p 6379  --raw</span><br><span class="line">127.0.0.1:6379&gt; BF.DEBUG key ...options...</span><br></pre></td></tr></table></figure>
+<p>另外，还多出来了一些<code>CF</code>的命令，即布谷鸟过滤器，可以了解一下</p>
+<p>那布隆过滤器可以解决什么问题呢？</p>
+<p><strong>缓存穿透</strong> 缓存穿透是指缓存和数据库中都没有的数据，而用户不断发起请求，如发起为id为“-1”的数据或id为特别大不存在的数据。这时的用户很可能是攻击者，攻击会导致数据库压力过大。</p>
+<p><strong>布隆过滤器如何解决这个问题呢？</strong> ，就是用小的空间去解决大的数据匹配的一个过程，也就是说，在redis中要将全量数据体现出来，客户端搜索的时候，在redis中做对比，如果没有找到，就不用去数据库了</p>
+<p>但是既然在数据库中都有大量的数据，放在内存中，肯定也大，这时候我们想到redis的<code>bitmap</code>，如果用几个二进制位来代表每件商品，或者每条记录，那么整体的体积会很小。</p>
+<p>采用二进制位来标记，比如每个元素，，然后经历n或者k个哈希函数或者映射函数，将二进制的某一位标记成了1，每个元素都会经历这个过程。但是有一个元素，在经过运算，这个时候可能会发生<code>碰撞</code>,也就是说，元素1和元素2 ，虽然他们的元素不同，但是某个函数重叠了，但是依然还有一些函数的位置是不重叠的</p>
+<p>但是即使有些搜索的东西数据库没有，也有可能放行过去。即元素3出现的位置即覆盖了元素1的某一个函数标，也覆盖了函数2的某个函数标，，虽然内存是数据库都没有，但是的确映射到了，也就是说：</p>
+<p><strong>有一定概率是</strong> 依然出现缓存穿透的情况的，但是这个概率是很低的，小于1%（应该是0.000x）,但是成本很低，速度很快</p>
+<p><img src="/2021/Redis%E7%9A%84%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85%E3%80%81pipeline%E3%80%81%E4%BA%8B%E5%8A%A1%E3%80%81modules%E3%80%81%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8%E3%80%81%E7%BC%93%E5%AD%98LRU/image-20210323113956128.png" alt="image-20210323113956128"></p>
+<p>以下三种方式解决缓存击穿问题：</p>
+<p><img src="/2021/Redis%E7%9A%84%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85%E3%80%81pipeline%E3%80%81%E4%BA%8B%E5%8A%A1%E3%80%81modules%E3%80%81%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8%E3%80%81%E7%BC%93%E5%AD%98LRU/image-20210323114238695.png" alt="image-20210323114238695"></p>
+<blockquote>
+<p>需要自己学习了解一下<code>counting bloom</code>、<code>布谷鸟过滤器cukcoo</code>，面试的时候也可以多说一点</p>
+</blockquote>
+<p>关于布隆过滤器的原理理解还可以看看这篇文章https://blog.csdn.net/qq_33709582/article/details/108407706</p>
+<p>对于部分穿透的，如何解决？</p>
+<p>1）、如果经过数据库发现不存在，可以在redis中增加key，value标记为某个值，下次客户端请求时，直接返回</p>
+<p>2）、如果数据库有了新增加的数据，那么要完成元素对bloom过滤器的添加</p>
+<hr>
+<h2 id="五、Redis作为数据库、缓存的区别">五、Redis作为数据库、缓存的区别</h2>
+<p>1、缓存数据“不重要”，不是全量数据，缓存应该随着访问变化（热数据）</p>
+<p>那么redis中的数据如何随着业务的变化，保留热数据，因为内存的大小是有限制的，也就是瓶颈</p>
+<p><strong>1）key的有效期</strong> ：期望到期之后就清除掉，因为会有新的数据，这是随着业务逻辑推导的</p>
+<blockquote>
+<p>注意：</p>
+<p>A：如果k1设置了有效期，但是在有效期之内，重新设置了k1的值，但是没有设置过期时间，那么之前设置的过期时间会被踢除</p>
+<p>B：有效期除了设置一个时间，也可以设置一个时间点，比如到晚上12点过期（<code>EXPIREAT key timestamp</code>）</p>
+</blockquote>
+<p><strong>2）淘汰冷数据</strong> ：是有业务运转来的，由于内存是有限的，所以要淘汰掉冷数据</p>
+<p>另外还有一些常用的配置要了解：<code>vi /etc/redis/6379.conf</code></p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">################################## INCLUDES ###################################</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># 一个主机中有多个实例，有些配置是通用的，有些是私有的，可以写一个配置文件是基础的，可以再写一个是个性化配置</span></span><br><span class="line"><span class="meta"># include /path/to/local.conf</span></span><br><span class="line"><span class="meta"># include /path/to/other.conf</span></span><br><span class="line"></span><br><span class="line"><span class="meta">################################## MODULES #####################################</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># 前面load扩展是通过命令，也可以在这里配置（绝对路径）</span></span><br><span class="line"><span class="meta"># loadmodule /path/to/my_module.so</span></span><br><span class="line"><span class="meta"># loadmodule /path/to/other_module.so</span></span><br><span class="line"></span><br><span class="line"><span class="meta">################################## NETWORK #####################################</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># 绑定IP地址，只有来源是下面配置的这些目标地址的，才允许访问</span></span><br><span class="line"><span class="meta"># bind 192.168.1.100 10.0.0.1</span></span><br><span class="line"><span class="meta"># bind 127.0.0.1 ::1</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span></span><br><span class="line">bind <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># 是否可以远程访问</span></span><br><span class="line"><span class="keyword">protected</span>-mode yes</span><br><span class="line"></span><br><span class="line"><span class="meta"># 端口号配置</span></span><br><span class="line">port <span class="number">6379</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">################################# GENERAL #####################################</span></span><br><span class="line"><span class="meta"># 全局配置</span></span><br><span class="line"><span class="meta"># 是否是后台服务模式</span></span><br><span class="line">daemonize yes</span><br><span class="line"></span><br><span class="line"><span class="meta"># 启动时候的进程ID文件</span></span><br><span class="line">pidfile /<span class="keyword">var</span>/run/redis_6379.pid</span><br><span class="line"></span><br><span class="line"><span class="meta"># 日志级别</span></span><br><span class="line">loglevel notice</span><br><span class="line"></span><br><span class="line"><span class="meta"># 日志目录</span></span><br><span class="line">logfile /<span class="keyword">var</span>/log/redis_6379.log</span><br><span class="line"></span><br><span class="line"><span class="meta"># 默认数据库的数量</span></span><br><span class="line">databases <span class="number">16</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">################################## SECURITY ###################################</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># 其他客户端连接redis需要提供密码</span></span><br><span class="line"><span class="meta"># requirepass foobared</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># 为了安全起见，可以把一些命令重命名，比如flushall、flushdb</span></span><br><span class="line"><span class="meta"># rename-command CONFIG &quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">################################### CLIENTS ####################################</span></span><br><span class="line"><span class="meta"># 配置连接数</span></span><br><span class="line"><span class="meta"># maxclients 10000</span></span><br><span class="line"></span><br><span class="line"><span class="meta">############################## MEMORY MANAGEMENT ################################</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># redis最大内存</span></span><br><span class="line"><span class="meta"># maxmemory &lt;bytes&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span></span><br><span class="line"><span class="meta"># volatile-lru -&gt; Evict using approximated LRU, only keys with an expire set.</span></span><br><span class="line"><span class="meta"># allkeys-lru -&gt; Evict any key using approximated LRU.</span></span><br><span class="line"><span class="meta"># volatile-lfu -&gt; Evict using approximated LFU, only keys with an expire set.</span></span><br><span class="line"><span class="meta"># allkeys-lfu -&gt; Evict any key using approximated LFU.</span></span><br><span class="line"><span class="meta"># volatile-random -&gt; Remove a random key having an expire set.</span></span><br><span class="line"><span class="meta"># allkeys-random -&gt; Remove a random key, any key.</span></span><br><span class="line"><span class="meta"># volatile-ttl -&gt; Remove the key with the nearest expire time (minor TTL)</span></span><br><span class="line"><span class="meta"># noeviction -&gt; Don&#x27;t evict anything, just return an error on write operations.</span></span><br><span class="line"><span class="meta">#</span></span><br><span class="line"><span class="meta"># LRU means Least Recently Used</span></span><br><span class="line"><span class="meta"># LFU means Least Frequently Used</span></span><br><span class="line"><span class="meta"># 回收策略</span></span><br><span class="line"><span class="meta">#LRU表示最近最少使用</span></span><br><span class="line"><span class="meta">#LFU表示使用频率最低</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># LRU:强调多久没碰（时间）</span></span><br><span class="line"><span class="meta"># LFU:碰了多少次（次数）</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span></span><br><span class="line"><span class="meta"># Both LRU, LFU and volatile-ttl are implemented using approximated</span></span><br><span class="line"><span class="meta"># randomized algorithms.</span></span><br><span class="line"><span class="meta">#</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta"># 内存满了之后怎么处理，👆的就是枚举</span></span><br><span class="line"><span class="meta"># maxmemory-policy noeviction</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="六、过期">六、过期</h2>
+<p>Redis如何淘汰过期的keys(过期判定)</p>
+<blockquote>
+<p>Redis keys过期有两种方式：被动和主动方式。</p>
+<p>当一些客户端尝试访问它时，key会被发现并主动的过期。</p>
+<p>当然，这样是不够的，因为有些过期的keys，永远不会访问他们。 无论如何，这些keys应该过期，所以定时随机测试设置keys的过期时间。所有这些过期的keys将会从密钥空间删除。</p>
+<p>具体就是Redis每秒10次做的事情：</p>
+<ol>
+<li>测试随机的20个keys进行相关过期检测。</li>
+<li>删除所有已经过期的keys。</li>
+<li>如果有多于25%的keys过期，重复步奏1.</li>
+</ol>
+<p>这是一个平凡的概率算法，基本上的假设是，我们的样本是这个密钥控件，并且我们不断重复过期检测，直到过期的keys的百分百低于25%,这意味着，在任何给定的时刻，最多会清除1/4的过期keys。</p>
+</blockquote>
+<h2 id="七、缓存常见问题">七、缓存常见问题</h2>
+<p>击穿、雪崩、穿透，一致性（双写）</p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/2021/Redis持久化/" data-toggle="tooltip" data-placement="top" title="Redis持久化">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/2021/Redis的String类型和bitmap类型/" data-toggle="tooltip" data-placement="top" title="Redis的String类型和bitmap类型">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2021/Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'a00494876d6f5f4bcbfd',
+      clientSecret: '33d3d0be81052a26f5a3535733b8b7854628564f',
+      repo: 'shifpeng.github.io',
+      owner: 'shifpeng',
+      admin: 'shifpeng',
+      id: 'Sun Mar 21 2021 15:34:15 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E7%AE%A1%E9%81%93%EF%BC%88Pipelining%EF%BC%89"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、管道（Pipelining）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#a%E3%80%81%E7%9F%A5%E8%AF%86%E5%BB%B6%E4%BC%B8"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">a、知识延伸</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%EF%BC%88hub-sub%EF%BC%89"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、发布订阅（hub&#x2F;sub）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81Redis%E4%BA%8B%E5%8A%A1"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、Redis事务</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-%E3%80%81-mutli%E3%80%81exec"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">1)、 mutli、exec</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-%E3%80%81-discard%E3%80%81watch"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">2)、 discard、watch</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81redis%E6%89%A9%E5%B1%95%E6%A8%A1%E5%9D%97-%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">四、redis扩展模块-布隆过滤器</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%94%E3%80%81Redis%E4%BD%9C%E4%B8%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%81%E7%BC%93%E5%AD%98%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">五、Redis作为数据库、缓存的区别</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%85%AD%E3%80%81%E8%BF%87%E6%9C%9F"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">六、过期</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%83%E3%80%81%E7%BC%93%E5%AD%98%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">七、缓存常见问题</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+            
+            <a class="tag" href="/tags/#Redis" title="Redis">Redis</a>
+            
+            <a class="tag" href="/tags/#重学Redis" title="重学Redis">重学Redis</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://cuiqingcai.com/" target="_blank">静 觅 崔庆才</a>
+          </li>
+          
+          <li>
+            <a href="http://www.52nlp.cn/" target="_blank">我爱自然语言处理</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cnblogs.com/Steven-shi/" target="_blank">博客园 石福鹏</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/shifpeng">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Steven
+          2021
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://shifpeng.cn">Steven</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/mouseclick.js"  content='' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "shifpeng";
+    let ghPages = gh + ".github.io";
+    let pagePath = "2021/Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://www.shifpeng.cn/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

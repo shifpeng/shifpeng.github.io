@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="人最大的修养就是知人不评人"/>
+  <meta name="keyword" content="Java,Steven,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://www.shifpeng.cn/2021/Redis介绍及NIO原理介绍/">
+  <title>
+    
+      Redis介绍及NIO原理介绍 - Steven | java
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'StevenBlog/community'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">石福鹏</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+              
+              <a class="tag" href="/tags/#Redis" title="Redis">Redis</a>
+              
+              <a class="tag" href="/tags/#重学Redis" title="重学Redis">重学Redis</a>
+              
+            </div>
+            <h1>Redis介绍及NIO原理介绍</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by 石福鹏 on
+              2021-03-13
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">19</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">4.9k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h2 id="一、引言">一、引言</h2>
+<p>刚有计算机的时候，数据可以存在文件里，那如果我们要查询数据的话，Linux中有<code>grep</code>、<code>awk</code>等这样的命令，用Java语言的话，写一个程序，基于这个文件的IO流读写操作，那还有什么其他问题嘛？</p>
+<h3 id="一些常识">一些常识</h3>
+<blockquote>
+<p>在计算机中，数据是存在磁盘中的，磁盘有两个指标：</p>
+<p>​	1、寻址：寻址的速度是毫秒级的</p>
+<p>​	2、带宽：即单位时间内可以有多少个字节流过，多大的数据量流过去，一般是G或者M级别的</p>
+<p>另外，还有一点就是内存，内存也有一个寻址，它的<strong>寻址速度是纳秒</strong> （秒-&gt;毫秒-&gt;微妙-&gt;纳秒[换算是1000]）</p>
+<p>磁盘比内存慢了100万倍，是在寻址上慢了100万倍（因为内存是直接怼在了CPU的前端总线）,所以带宽会占用很大</p>
+</blockquote>
+<blockquote>
+<p><strong>IOBuffer：</strong></p>
+<p>这是一个成本问题，磁盘有磁道和扇区，一个扇区512字节，如果访问一个硬盘，都是最小粒度512个字节来找，而一块硬盘一般是1T、2T,会有非常多的512字节,如果区域足够小，那么索引成本就会变大，也就是说如果有1T空间里面都是512字节的小格子，那么上层操作系统中就需要准备一个索引，这个索引可能就不是4个字节了，可能得8个字节或者更大，他要一个能表示很大数的区间，才能索引出这么多的小格子，所以索引成本会变大。<br>
+所以在格式化磁盘的时候，有个4k对齐，也就是真正使用磁盘的时候，并不是按照512字节为一次读写量，它会把这个变得大一点，即不管你读512字节也好，读1k也好，硬盘都是直接给你返回4k。512字节和4k就差了非常多，所以索索引体量就会随之变小。因此一般磁盘模式格式化4k操作系统，即无论读多少都是最少4k从磁盘拿的。</p>
+<p>因此，如果数据是存放在文件中的，随着数据慢慢变大，查询速度就会变慢。也就是硬盘成为瓶颈了，即I/O成为瓶颈。</p>
+</blockquote>
+<p>这个时候，数据库就出现了，数据库有一个<code>data page</code>的概念，<code>data page</code> 的大小也是4k,现在有一张表，物理存储到磁盘的时候，用了许多的4k这个的小格子，而这个4k小格子，刚好跟硬件上的磁盘的最小读写量4k一致，也就是说，如果要读取4k里面的数据，正好符合磁盘的一次I/O,就没有浪费这个I/O</p>
+<p>因为假如<code>data page</code>是1k，那到底层还是4k，这就是上面说的浪费，数据库读1k，底层还是读4k,索性直接读4k.</p>
+<p>如果只是4k的小格子，其实查找数据的成本复杂度还是跟前面差不多，因为还是要从第一个4k开始，先读到内存中，挨个去找，所以还是走的是全量I/O，如何变快呢？</p>
+<p>这就是索引，索引依然是使用的的4k这种存储模型对应的模型，无非就是4k的格子存的是一行一行的数据，而4k索引中存的是前面格子中的某一列，比如身份证那一列。索引中每一个身份证号指向某一个<code>data page</code>，这个指向关系就是<strong>索引</strong></p>
+<img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210314214450434.png" alt="image-20210314214450434" style="zoom:70%;">
+<blockquote>
+<p>知识点：建立关系型数据库表的时候，一般使用什么存储方式？</p>
+<p>通常我们建关系型数据库表的时候，必须给出<code>schema</code>,即这个表的列数，每个列的类型是什么，约束是什么。</p>
+<p>每个列的类型其实就是字节宽度，当插入数据的时候，即使是空的字段，也会用0或者空的取填充，这样做的好处是什么呢？</p>
+<p>表中有个概念，就是存储的时候更倾向于<strong>行级存储</strong> ，这样，不管插入什么时候，不管有没有空，字段都会去占位，占位又个好处，后面的增删改，，不用移动数据，直接拿数据往这个位置复写就好了</p>
+</blockquote>
+<p>另外，数据和索引都是存储在硬盘当中的，查询的时候，会用到B+Tree,B+树的所有的叶子就是这些4k格子，B+Tree树干是在内存中的，查询的时候，where条件中命中某个索引，这个查询就会走树干，找到某个叶子，也就能找到对应的<code>data page</code>。但是如果把这些索引都存在内存中，数据量很大的时候，索引也会随之变大，内存不一定够用，所以索引也是存在磁盘中，只把树干存在内存中，只存一些区间；</p>
+<p>所以，充分利用各自的能力，磁盘可以存很多东西，内存速度快，然后用一种数据结构可以加快遍历查找的速度，这样最终的目的就是减少I/O的流量，即不让他发生大量的I/O以及减少寻址的这个过程。</p>
+<hr>
+<p>那么当表中的数据很大的时候，性能会下降嘛？</p>
+<p>首先对于增删改来说，如果表是有索引的，那么增删改需要修改索引或调整它的位置，即因为维度索引，导致增删改变慢。</p>
+<p>那么查询速度会变慢嘛？</p>
+<p><strong>「1」、</strong> 1个或者少量的查询速度依然很快；</p>
+<p><strong>「2」、</strong> 并发大的时候会受硬盘的带宽影响</p>
+<blockquote>
+<p>硬盘的慢，不止寻址慢，带宽也会是影响慢的一个重要因素</p>
+</blockquote>
+<blockquote>
+<p>数据在磁盘和内存中存储的体积是不一样的。</p>
+</blockquote>
+<p>解决上面这些问题的折中方案，就是<strong>缓存</strong></p>
+<h2 id="二、Redis">二、Redis</h2>
+<h3 id="官方描述">官方描述</h3>
+<p>Redis 是一个开源（BSD许可）的，内存中的数据结构存储系统，它可以用作数据库、缓存和消息中间件。</p>
+<p>它支持多种类型的数据结构，如 字符串（strings）， 散列（hashes）， 列表（lists）， 集合（sets）， 有序集合（sorted sets） 与范围查询， bitmaps， hyperloglogs 和 地理空间（geospatial） 索引半径查询。</p>
+<p>Redis 内置了 复制（replication），LUA脚本（Lua scripting）， LRU驱动事件（LRU eviction），事务（transactions） 和不同级别的 磁盘持久化（persistence）， 并通过 Redis哨兵（Sentinel）和自动 分区（Cluster）提供高可用性（high availability）。</p>
+<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210315163233037.png" alt="image-20210315163233037"></p>
+<p>​</p>
+<p>如果客户端想通过缓存系统，取回value中的某一个元素，成本是不一样的，memchche需要返回所有的数据到client,server网卡IO就会是瓶颈，另外，client需要有实现的代码去解析。而redis，因为他有类型，其实类型不是很重要，重要的是redis server 中对每种类型都有自己的方法。用大数据中的词描述就是<strong>计算是向数据移动</strong> 的；</p>
+<blockquote>
+<p>计算是向数据移动:memcache获取需要的数据是需要返回后在客户端计算，而redis是在server中进行计算，只返回需要的少量数据</p>
+</blockquote>
+<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210315164344933.png" alt="image-20210315164344933"></p>
+<h2 id="三、安装Redis">三、安装Redis</h2>
+<h3 id="对于Linux">对于Linux</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//如果没有wget，需要使用`yum install wget`安装一个</span><br><span class="line">wget http://download.redis.io/releases/redis-6.0.6.tar.gz</span><br></pre></td></tr></table></figure>
+<p>即可下载安装包到当前文件夹，解压</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar xf redis-6.0.6.tar.gz</span><br></pre></td></tr></table></figure>
+<p>解压完之后，进入到redis的源码目录</p>
+<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210315222508661.png" alt="image-20210315222508661"></p>
+<p>源码安装的，记得第一步需要看一下<code>README.me</code>,基本上就会告诉你怎么编译、清除、安装等等</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line">Building Redis   # 编译Redis</span><br><span class="line">--------------</span><br><span class="line"></span><br><span class="line">Redis can be compiled and used on Linux, OSX, OpenBSD, NetBSD, FreeBSD.</span><br><span class="line">We support big endian and little endian architectures, and both 32 bit</span><br><span class="line">and 64 bit systems.</span><br><span class="line"></span><br><span class="line">It may compile on Solaris derived systems (for instance SmartOS) but our</span><br><span class="line">support for this platform is *best effort* and Redis is not guaranteed to</span><br><span class="line">work as well as in Linux, OSX, and \*BSD there.</span><br><span class="line"></span><br><span class="line">It is as simple as:</span><br><span class="line"></span><br><span class="line">    % make   #直接执行make就可以编译</span><br><span class="line"></span><br><span class="line">To build with TLS support, you&#x27;ll need OpenSSL development libraries (e.g.</span><br><span class="line">libssl-dev on Debian/Ubuntu) and run:</span><br><span class="line"></span><br><span class="line">    % make BUILD_TLS=yes</span><br><span class="line"></span><br><span class="line">You can run a 32 bit Redis binary using:</span><br><span class="line"></span><br><span class="line">    % make 32bit   #也可以编译成32位的</span><br><span class="line"></span><br><span class="line">After building Redis, it is a good idea to test it using:</span><br><span class="line"></span><br><span class="line">    % make test</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">When you update the source code with `git pull` or when code inside the</span><br><span class="line">dependencies tree is modified in any other way, make sure to use the following</span><br><span class="line">command in order to really clean everything and rebuild from scratch:</span><br><span class="line"></span><br><span class="line">    make distclean   # 如果你之前编译出错的话，还可以清除，重新编译</span><br><span class="line"></span><br><span class="line">This will clean: jemalloc, lua, hiredis, linenoise.</span><br><span class="line"></span><br><span class="line">Running Redis  # 编译完可以找到可执行程序在源码中</span><br><span class="line">-------------</span><br><span class="line"></span><br><span class="line">To run Redis with the default configuration just type:</span><br><span class="line"></span><br><span class="line">    % cd src</span><br><span class="line">    % ./redis-server</span><br><span class="line"></span><br><span class="line">If you want to provide your redis.conf, you have to run it using an additional</span><br><span class="line">parameter (the path of the configuration file):</span><br><span class="line"></span><br><span class="line">    % cd src</span><br><span class="line">    % ./redis-server /path/to/redis.conf</span><br><span class="line"></span><br><span class="line">It is possible to alter the Redis configuration by passing parameters directly</span><br><span class="line">as options using the command line. Examples:</span><br><span class="line"></span><br><span class="line">    % ./redis-server --port 9999 --replicaof 127.0.0.1 6379</span><br><span class="line">    % ./redis-server /etc/redis/6379.conf --loglevel debug</span><br><span class="line"></span><br><span class="line">All the options in redis.conf are also supported as options using the command</span><br><span class="line">line, with exactly the same name.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Installing Redis  # 还可以安装到系统中直接使用它</span><br><span class="line">-----------------</span><br><span class="line">。</span><br><span class="line"></span><br><span class="line">In order to install Redis binaries into /usr/local/bin just use:</span><br><span class="line"></span><br><span class="line">    % make install</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 并且可以修改安装位置</span></span><br><span class="line">You can use `make PREFIX=/some/other/directory install` if you wish to use a</span><br><span class="line">different destination.</span><br><span class="line"></span><br><span class="line">Make install will just install binaries in your system, but will not configure</span><br><span class="line">init scripts and configuration files in the appropriate place. This is not</span><br><span class="line">needed if you want just to play a bit with Redis, but if you are installing</span><br><span class="line">it the proper way for a production system, we have a script doing this</span><br><span class="line">for Ubuntu and Debian systems:</span><br><span class="line"></span><br><span class="line">    % cd utils</span><br><span class="line">    % ./install_server.sh</span><br><span class="line"></span><br><span class="line">_Note_: `install_server.sh` will not work on Mac OSX; it is built for Linux only.</span><br><span class="line"></span><br><span class="line">The script will ask you a few questions and will setup everything you need</span><br><span class="line">to run Redis properly as a background daemon that will start again on</span><br><span class="line">system reboots.</span><br><span class="line"></span><br><span class="line">You&#x27;ll be able to stop and start Redis using the script named</span><br><span class="line">`/etc/init.d/redis_&lt;portnumber&gt;`, for instance `/etc/init.d/redis_6379`.</span><br><span class="line"></span><br><span class="line">Code contributions</span><br><span class="line">-----------------</span><br></pre></td></tr></table></figure>
+<p>所以，阅读<code>README.me</code>非常重要。</p>
+<blockquote>
+<p><code>make</code>的原理：make其实跟源码没有关系，make是Linux操作系统带的编译命令，他是不知道你下载的不同的源码包应该怎么编译，他必须找到一个文件叫<code>Makefile</code>;</p>
+<blockquote>
+<p>这里需要注意，我们之前安装nginx的时候，是没有<code>Makefile</code>的，所以要先执行<code>config</code>之后就会生成<code>Makefile</code>文件，这个在nginx的readme中都有说明的</p>
+</blockquote>
+<p>所以<code>make</code>命令直接执行的时候，其实是读取<code>Makefile</code>,它里面就是编译脚本</p>
+</blockquote>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># `Makefile`文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Top level makefile, the real shit is at src/Makefile</span></span><br><span class="line"></span><br><span class="line"><span class="section">default: all</span></span><br><span class="line"></span><br><span class="line"><span class="section">.DEFAULT:</span></span><br><span class="line">        cd src &amp;&amp; <span class="variable">$(MAKE)</span> <span class="variable">$@</span></span><br><span class="line"></span><br><span class="line"><span class="section">install:</span></span><br><span class="line">        cd src &amp;&amp; <span class="variable">$(MAKE)</span> <span class="variable">$@</span></span><br><span class="line"></span><br><span class="line"><span class="meta"><span class="meta-keyword">.PHONY</span>: install</span></span><br></pre></td></tr></table></figure>
+<p>如果什么都不输入的话，执行<code>make</code>命令，其实是<code>cd src</code>目录下，并执行<code>make</code>命令，当然，如果执行的是<code>make install</code> 其实就会走上面的第10行脚本</p>
+<p>所以其实真的执行是在<code>src</code>下，这里面会有一个<code>Makefile</code></p>
+<p>我们到源码的根目录下，执行<code>make</code>,发现报错了</p>
+<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210315230411544.png" alt="image-20210315230411544"></p>
+<p>发现系统中没有c语言的编译器，那就安装一下</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum <span class="keyword">install</span> gcc</span><br></pre></td></tr></table></figure>
+<p>安装完成之后，我们先执行一下clean<code>make distclean</code>,要清理一下刚才报错的那些临时文件，清理完之后，再次执行<code>make</code>,等到编译完成.执行<code>make test</code>测试一下.</p>
+<blockquote>
+<p>这里需要注意，一些人在编译的时候，会报错，报很多类似于这样的错误</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">server</span>.c:<span class="number">4210</span>:<span class="number">35</span>: 错误：‘struct redisServer’没有名为‘aof_rewrite_base_size’的成员</span><br></pre></td></tr></table></figure>
+<p>这是因为安装6版本的redis，gcc版本一定要5.3以上，centos6.6默认安装4.4.7；centos7.5.1804默认安装4.8.5，这里要升级gcc了。<br>
+解决：<code>gcc -v</code>可以查看gcc的版本，检查版本是否过低。升级命令</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y <span class="keyword">install </span>centos-release-<span class="keyword">scl </span>&amp;&amp; yum -y <span class="keyword">install </span>devtoolset<span class="number">-9</span>-gcc devtoolset<span class="number">-9</span>-gcc-c++ devtoolset<span class="number">-9</span>-<span class="keyword">binutils </span>&amp;&amp; <span class="keyword">scl </span>enable devtoolset<span class="number">-9</span> <span class="keyword">bash</span></span><br></pre></td></tr></table></figure>
+<p>然后重新<code>make distclean</code>，再次编译。</p>
+</blockquote>
+<p>这个时候，在src下面就会有一堆的可执行文件,其中包括<code>redis server</code>和<code>redis cli</code>,这个时候，其实直接执行<code>./redis-server</code>就可以把服务跑起来了，但是这种启动方式比较low。我们肯定是期望是把redis的一个进程制更像一个软件。</p>
+<p>根据readme文件中的指示进行安装</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install PREFIX=<span class="regexp">/opt/</span>redis  <span class="comment"># PREFIX指定自定义安装目录</span></span><br></pre></td></tr></table></figure>
+<p>这里我安装到默认的安装目录，即不指定PREFIX.</p>
+<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316104400345.png" alt="image-20210316104400345"></p>
+<p>就可以在<code>/usr/local/bin</code>下看到可执行程序。</p>
+<p>最后一步，把它变成服务。</p>
+<p>在utils目录下，有个<code>install_server.sh</code>，但是这个脚本需要知道程序安装在哪个文件了，所以需要创建环境变量</p>
+<p>编辑<code>vi /etc/profile</code>,在文件的最后面加上：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export REDIS_HOME=/usr/local/bin</span><br><span class="line">export REDIS_PATH=$PATH:$REDIS_HOME/bin</span><br></pre></td></tr></table></figure>
+<p>保存之后，<code>source /etc/profile</code>。这样的话，就可以在任何地方直接可以使用<code>redis-cli</code>来启用客户端了.</p>
+<p>然后在<code>utils</code>当前目录下执行<code>./install_server.sh</code></p>
+<blockquote>
+<p>如果出现</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">This systems seems <span class="built_in">to</span> use systemd.</span><br><span class="line">Please take <span class="keyword">a</span> look <span class="keyword">at</span> <span class="keyword">the</span> provided example service unit <span class="built_in">files</span> <span class="keyword">in</span> this <span class="built_in">directory</span>, <span class="keyword">and</span> adapt <span class="keyword">and</span> install them. Sorry!</span><br></pre></td></tr></table></figure>
+<p>解决方案：<code>vi ./install_server.sh</code></p>
+<p>注视这段代码：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">bail <span class="keyword">if</span> this system is managed by systemd</span></span><br><span class="line"><span class="meta">#</span><span class="bash">_pid_1_exe=<span class="string">&quot;<span class="subst">$(readlink -f /proc/1/exe)</span>&quot;</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$&#123;_pid_1_exe##*/&#125;</span>&quot;</span> = systemd ]</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="keyword">then</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">       <span class="built_in">echo</span> <span class="string">&quot;This systems seems to use systemd.&quot;</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">       <span class="built_in">echo</span> <span class="string">&quot;Please take a look at the provided example service unit files in this directory, and adapt and install them. Sorry!&quot;</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">       <span class="built_in">exit</span> 1</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="keyword">fi</span></span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>然后重新运行 <code>./install_server.sh</code>即可。</p>
+</blockquote>
+<p>这过程中，会让你选择端口好，所以说其实如果指定不同的端口，可以起多个；另外还有日志目录，数据目录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 utils]# vi install_server.sh </span><br><span class="line">[root@hadoop01 utils]# ./install_server.sh </span><br><span class="line">Welcome to the redis service installer</span><br><span class="line">This script will help you easily set up a running redis server</span><br><span class="line"></span><br><span class="line">Please select the redis port for this instance: [6379] </span><br><span class="line">Selecting default: 6379</span><br><span class="line">Please select the redis config file name [/etc/redis/6379.conf] </span><br><span class="line">Selected default - /etc/redis/6379.conf</span><br><span class="line">Please select the redis log file name [/var/log/redis_6379.log] </span><br><span class="line">Selected default - /var/log/redis_6379.log</span><br><span class="line">Please select the data directory for this instance [/var/lib/redis/6379] </span><br><span class="line">Selected default - /var/lib/redis/6379</span><br><span class="line">Please select the redis executable path [/usr/local/bin/redis-server] </span><br><span class="line">Selected config:</span><br><span class="line">Port           : 6379</span><br><span class="line">Config file    : /etc/redis/6379.conf</span><br><span class="line">Log file       : /var/log/redis_6379.log</span><br><span class="line">Data dir       : /var/lib/redis/6379</span><br><span class="line">Executable     : /usr/local/bin/redis-server</span><br><span class="line">Cli Executable : /usr/local/bin/redis-cli</span><br><span class="line">Is this ok? Then press ENTER to go on or Ctrl-C to abort.</span><br><span class="line">Copied /tmp/6379.conf =&gt; /etc/init.d/redis_6379</span><br><span class="line">Installing service...</span><br><span class="line">Successfully added to chkconfig!</span><br><span class="line">Successfully added to runlevels 345!</span><br><span class="line">Starting Redis server...</span><br><span class="line">Installation successful!</span><br><span class="line">[root@hadoop01 utils]# </span><br></pre></td></tr></table></figure>
+<p>这样就安装完成了，此时，应该在<code>/etc/init.d</code>目录下有个脚本</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 utils]# cd /etc/init.d/</span><br><span class="line">[root@hadoop01 init.d]# ls</span><br><span class="line">functions  netconsole  network  README  redis_6379</span><br><span class="line">[root@hadoop01 init.d]# </span><br></pre></td></tr></table></figure>
+<p>即<code>redis_6379</code>.</p>
+<p>这个时候我们就可以在任何目录中，使用</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">service</span> redis_<span class="number">6379</span> start</span><br></pre></td></tr></table></figure>
+<h4 id="多实例安装">多实例安装</h4>
+<p>当然，我们也可以安装多个实例，还是到<code>utils</code>目录下。执行<code>./install_server.sh</code>,指定一个不同的端口好，比如6380</p>
+<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316111417960.png" alt="image-20210316111417960"></p>
+<p>执行<code>ps -fe | grep redis</code>,不同的端口好，不同的进程</p>
+<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316111507495.png" alt="image-20210316111507495"></p>
+<h3 id="对于Mac-OS">对于Mac OS</h3>
+<p>直接执行</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span><span class="keyword">install </span>redis</span><br></pre></td></tr></table></figure>
+<h2 id="四、NIO原理介绍">四、NIO原理介绍</h2>
+<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316113510609.png" alt="image-20210316113510609"></p>
+<p>每个计算机中可以有多个redis进程。另外。redis 是单进程，单线程，单实例，那么当并发很多的时候是如何变得很快的。</p>
+<blockquote>
+<p>操作系统是由一个内核（kernel）的概念的,所有的客户端的连接先到达内核，tcp握手，有很多的socket.</p>
+<p>redis进程和kernel之间使用的是<code>epoll</code>,即非阻塞的多路复用</p>
+</blockquote>
+<h3 id="什么是epoll？">什么是epoll？</h3>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%86%85%E6%A0%B8/108410">内核</a>（kernel）利用文件描述符FD（file descriptor）来访问文件。文件描述符是<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%9D%9E%E8%B4%9F%E6%95%B4%E6%95%B0/2951833">非负整数</a>。打开现存文件或新建文件时，内核会返回一个文件描述符。读写文件也需要使用文件描述符来指定待读写的文件</p>
+<p>Java中使用Object代表一个对象，代表一个输入输出流（inputstream、outputstream）,linux不是面向对象的，一切皆文件，所以都是拿着文件或文件描述符来表示</p>
+</blockquote>
+<hr>
+<h4 id="1、BIO时期">1、BIO时期</h4>
+<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316114628976.png" alt="image-20210316114628976"></p>
+<p>因为socket在这个时期是阻塞的（blocking）,即socket产生的文件描述符，你读它的时候，在数据包还没到的时候，<code>read</code>命令就不能返回，就在这阻塞着</p>
+<p>这就是**<code>BIO</code>**.抛出一个线程来读取网卡的连接，有数据就处理，没数据就阻塞着，如果只有一颗CPU的话，某一时间片上只有一个线程可以处理。</p>
+<blockquote>
+<p>查看一个进程有多少个文件描述符，或者说有多少个I/O?(linux系统中一切皆文件)</p>
+<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 utils]<span class="comment"># cd /proc/18725/fd</span></span><br><span class="line">[root@hadoop01 fd]<span class="comment"># ll</span></span><br><span class="line">总用量 0</span><br><span class="line">lrwx------<span class="number"> 1 </span>root root<span class="number"> 64 </span>3月 <span class="number"> 16 </span>14:39<span class="number"> 0 </span>-&gt; /dev/null   <span class="comment"># 0:标准输入</span></span><br><span class="line">lrwx------<span class="number"> 1 </span>root root<span class="number"> 64 </span>3月 <span class="number"> 16 </span>14:39<span class="number"> 1 </span>-&gt; /dev/null   <span class="comment"># 1:标准输出</span></span><br><span class="line">lrwx------<span class="number"> 1 </span>root root<span class="number"> 64 </span>3月 <span class="number"> 16 </span>14:39<span class="number"> 2 </span>-&gt; /dev/null		<span class="comment"># 2:报错输出</span></span><br><span class="line">lr-x------<span class="number"> 1 </span>root root<span class="number"> 64 </span>3月 <span class="number"> 16 </span>14:39<span class="number"> 3 </span>-&gt; pipe:[119354]</span><br><span class="line">l-wx------<span class="number"> 1 </span>root root<span class="number"> 64 </span>3月 <span class="number"> 16 </span>14:39<span class="number"> 4 </span>-&gt; pipe:[119354]</span><br><span class="line">lrwx------<span class="number"> 1 </span>root root<span class="number"> 64 </span>3月 <span class="number"> 16 </span>14:39<span class="number"> 5 </span>-&gt; anon_inode:[eventpoll]</span><br><span class="line">lrwx------<span class="number"> 1 </span>root root<span class="number"> 64 </span>3月 <span class="number"> 16 </span>14:39<span class="number"> 6 </span>-&gt; socket:[119358]</span><br><span class="line">[root@hadoop01 fd]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
+<p>0、1、2是每个进程中都会有的</p>
+</blockquote>
+<blockquote>
+<p>为什么说这种一个线程对应一个连接会有问题？（100个client连接就有1000个线程）</p>
+<p>在JVM中，一个线程的成本（Java内存中，堆是共享的，线程栈是独立的），栈的大小默认可以是1M,也可以调。</p>
+<p>1、线程多了，调度成本CPU浪费</p>
+<p>2、内存成本，按照上面的，1000个线程光线程栈就是近1g</p>
+</blockquote>
+<hr>
+<h4 id="2、NIO时期">2、NIO时期</h4>
+<p>这个时候内核发生了变化</p>
+<p>内核当中，socket可以是非阻塞的（nonblock）,不阻塞了就可以<strong>使用一个线程</strong> ，采用轮训（while死循环），因此称为同步非阻塞（NIO）</p>
+<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316145251293.png" alt="image-20210316145251293"></p>
+<p>成本问题：如果有1000fd，代表用户进程轮询调用1000次kernel，如何解决？</p>
+<p>根据描述，那就是减少调用内核次数，这个用户是无法实现的，所以还是要从内核出发</p>
+<hr>
+<h4 id="3、多路复用的NIO（依然是同步非阻塞）">3、多路复用的NIO（依然是同步非阻塞）</h4>
+<p>就是将用户空间轮训的操作移到内核中，内核里从而多了一个系统调用<code>select</code>,内核监控更多的文件描述符。即以前调用1000次，现在调用1次，发现了50个，再拿这50个挨个挨个去read.–多路复用的NIO</p>
+<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316152241961.png" alt="image-20210316152241961"></p>
+<p>但是文件描述符fd传来传去，成为累赘了</p>
+<hr>
+<h4 id="4、共享空间（mmap）">4、共享空间（<code>mmap</code>）</h4>
+<p>共享空间（<code>mmap</code>）（内核实现的），即用户态、内核台有一个空间是共享的，</p>
+<p>将之前的1000个文件描述符存储在共享空间</p>
+<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316153732236.png" alt="image-20210316153732236"></p>
+<blockquote>
+<p>这点是为了解决文件描述符来回拷贝的问题，我们一般都会想到如果做到零拷贝，但是这里跟零拷贝是没有关系的，零拷贝是另外一个系统调用</p>
+<p>内核中多了一个系统调用<code>sendfile</code></p>
+<p>文件的数据先到内核的buffer缓冲区，再read到用户空间，然后再write回来，最后再发出去，这里是由拷贝过程的，但是有了<code>sendfile</code>之后，是直接调用了<code>sendfile</code>，内核读file放到缓冲区，再发出去，就不考来考去了</p>
+<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316154943064.png" alt="image-20210316154943064"></p>
+</blockquote>
+<p>拓展：<code>sendfile</code>加上<code>mmap</code>就组建了一项高效的技术<code>kafka</code></p>
+<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316154054742.png" alt="image-20210316154054742"></p>
+<p>以上就epoll最终出现的历程</p>
+<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210316160214373.png" alt="image-20210316160214373"></p>
+<p>有了以上epoll的知识，再回到这张图上来</p>
+<p><img src="/2021/Redis%E4%BB%8B%E7%BB%8D%E5%8F%8ANIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D/image-20210317115753806.png" alt="image-20210317115753806"></p>
+<p>有很多client都连接了redis，站在redis的角度来说，就是进来的socket很多。redis-server是一个进程，进程就会调用epoll来遍历寻找那一个socket进来了，redis是单进程，单线程来处理用户的数据</p>
+<blockquote>
+<p>但是redis就是一个线程么？不是，它还有其他线程再处理其他事，只是处理用户的数据操作是redis中的一个线程完成的。</p>
+<p>这样会有一个好处，就是顺序性；这个顺序性是指每个连接内的命令顺序。即每个连接里面是顺序到达，顺序处理的</p>
+</blockquote>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/2021/Redis的String类型和bitmap类型/" data-toggle="tooltip" data-placement="top" title="Redis的String类型和bitmap类型">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/2021/基于keepalived的LVS的搭建/" data-toggle="tooltip" data-placement="top" title="基于keepalived的LVS的搭建">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Redis介绍及NIO原理介绍&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2021/Redis介绍及NIO原理介绍/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'a00494876d6f5f4bcbfd',
+      clientSecret: '33d3d0be81052a26f5a3535733b8b7854628564f',
+      repo: 'shifpeng.github.io',
+      owner: 'shifpeng',
+      admin: 'shifpeng',
+      id: 'Sat Mar 13 2021 16:18:03 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E5%BC%95%E8%A8%80"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、引言</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%AF%86"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">一些常识</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81Redis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、Redis</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%98%E6%96%B9%E6%8F%8F%E8%BF%B0"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">官方描述</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E5%AE%89%E8%A3%85Redis"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、安装Redis</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AF%B9%E4%BA%8ELinux"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">对于Linux</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%A4%9A%E5%AE%9E%E4%BE%8B%E5%AE%89%E8%A3%85"><span class="toc-nav-number">3.1.1.</span> <span class="toc-nav-text">多实例安装</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AF%B9%E4%BA%8EMac-OS"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">对于Mac OS</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81NIO%E5%8E%9F%E7%90%86%E4%BB%8B%E7%BB%8D"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">四、NIO原理介绍</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFepoll%EF%BC%9F"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">什么是epoll？</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1%E3%80%81BIO%E6%97%B6%E6%9C%9F"><span class="toc-nav-number">4.1.1.</span> <span class="toc-nav-text">1、BIO时期</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2%E3%80%81NIO%E6%97%B6%E6%9C%9F"><span class="toc-nav-number">4.1.2.</span> <span class="toc-nav-text">2、NIO时期</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3%E3%80%81%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8%E7%9A%84NIO%EF%BC%88%E4%BE%9D%E7%84%B6%E6%98%AF%E5%90%8C%E6%AD%A5%E9%9D%9E%E9%98%BB%E5%A1%9E%EF%BC%89"><span class="toc-nav-number">4.1.3.</span> <span class="toc-nav-text">3、多路复用的NIO（依然是同步非阻塞）</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4%E3%80%81%E5%85%B1%E4%BA%AB%E7%A9%BA%E9%97%B4%EF%BC%88mmap%EF%BC%89"><span class="toc-nav-number">4.1.4.</span> <span class="toc-nav-text">4、共享空间（mmap）</span></a></li></ol></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+            
+            <a class="tag" href="/tags/#Redis" title="Redis">Redis</a>
+            
+            <a class="tag" href="/tags/#重学Redis" title="重学Redis">重学Redis</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://cuiqingcai.com/" target="_blank">静 觅 崔庆才</a>
+          </li>
+          
+          <li>
+            <a href="http://www.52nlp.cn/" target="_blank">我爱自然语言处理</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cnblogs.com/Steven-shi/" target="_blank">博客园 石福鹏</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/shifpeng">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Steven
+          2021
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://shifpeng.cn">Steven</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/mouseclick.js"  content='' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "shifpeng";
+    let ghPages = gh + ".github.io";
+    let pagePath = "2021/Redis介绍及NIO原理介绍/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://www.shifpeng.cn/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

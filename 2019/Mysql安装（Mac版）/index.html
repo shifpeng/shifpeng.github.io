@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="人最大的修养就是知人不评人"/>
+  <meta name="keyword" content="Java,Steven,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://www.shifpeng.cn/2019/Mysql安装（Mac版）/">
+  <title>
+    
+      Mysql安装（Mac版） - Steven | java
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'StevenBlog/community'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">石福鹏</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#Mysql" title="Mysql">Mysql</a>
+              
+            </div>
+            <h1>Mysql安装（Mac版）</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by 石福鹏 on
+              2019-11-16
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">13</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">2.3k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>这里推荐使用<code>homebrew</code>安装，所以下面就按照此方式安装</p>
+<h4 id="一、安装">一、安装</h4>
+<p>打开终端，执行命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install mysql</span><br></pre></td></tr></table></figure>
+<p>如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br></pre></td><td class="code"><pre><span class="line"> ~ </span><br><span class="line"> ✔  brew install mysql                                                                                           ✔  175  15:00:40</span><br><span class="line">Updating Homebrew...</span><br><span class="line">==&gt; Auto-updated Homebrew!</span><br><span class="line">Updated 3 taps (homebrew/core, homebrew/cask and homebrew/cask-fonts).</span><br><span class="line">==&gt; New Formulae</span><br><span class="line">cfn-flip              easy-rsa              k3sup                 markdownlint-cli      rm-improved           xbitmaps</span><br><span class="line">chars                 fizz                  kube-linter           mesa-glu              showkey               xcb-util</span><br><span class="line">checkov               flux                  lab                   overdrive             strace                xkeyboardconfig</span><br><span class="line">condure               glab                  libcap                ox                    tree-sitter           xorgrgb</span><br><span class="line">dog                   gosec                 libxp                 phive                 vulture               xterm</span><br><span class="line">dotenv-linter         isl@0.18              linux-headers         regipy                wangle                yh</span><br><span class="line">==&gt; Updated Formulae</span><br><span class="line">Updated 2775 formulae.</span><br><span class="line">==&gt; Deleted Formulae</span><br><span class="line">confluent-platform                fmsx                              ori                               pgplot</span><br><span class="line">==&gt; New Casks</span><br><span class="line">aleo-studio                       flrig                             metaimage                         sky-ticket</span><br><span class="line">archi                             font-genjyuugothic-l              mmhmm                             spitfire-audio</span><br><span class="line">caramba-switcher                  font-last-resort                  obs-ndi                           teamviewermeeting</span><br><span class="line">coin-wallet                       font-last-resort-high-efficiency  obs-websocket                     tunein</span><br><span class="line">deltachat                         font-mamelon                      pitch                             tyme</span><br><span class="line">desktoppr                         ibm-aspera-connect                pomatez                           winx-hd-video-converter</span><br><span class="line">deviceinfo                        lofi                              protoio-overflow                  wombat</span><br><span class="line">electricbinary                    lunar-client                      remote-wake-up</span><br><span class="line">ev3-classroom                     macx-video                        retroactive</span><br><span class="line">==&gt; Updated Casks</span><br><span class="line">010-editor                                   google-cloud-sdk                             qiyimedia</span><br><span class="line">4k-video-downloader                          google-featured-photos                       qlcolorcode</span><br><span class="line">4k-youtube-to-mp3                            gotomeeting                                  qlimagesize</span><br><span class="line">5kplayer                                     gpxsee                                       qlmarkdown</span><br><span class="line">abstract                                     grandperspective                             qownnotes</span><br><span class="line">acorn                                        grandtotal                                   qq</span><br><span class="line">adguard                                      graphicconverter                             qsync-client</span><br><span class="line">adobe-acrobat-reader                         guild-wars2                                  querious</span><br><span class="line">adobe-creative-cloud-cleaner-tool            gzdoom                                       quickbooks-online</span><br><span class="line">agenda                                       hackintool                                   quip</span><br><span class="line">aimersoft-video-converter-ultimate           harmony                                      qv2ray</span><br><span class="line">airfoil                                      hazel                                        qview</span><br><span class="line">airparrot                                    hazeover                                     racket</span><br><span class="line">airtable                                     hbuilderx                                    racket-cs</span><br><span class="line">ajour                                        hiarcs-chess-explorer                        raindropio</span><br><span class="line">alfaview                                     hookshot                                     rapidweaver</span><br><span class="line">alfred                                       hstracker                                    raven-reader</span><br><span class="line">alt-tab                                      hydrogen                                     razorsql</span><br><span class="line">altair-graphql-client                        icab                                         rcse</span><br><span class="line">amazon-chime                                 iconizer                                     react-studio</span><br><span class="line">amazon-music                                 iconjar                                      realforce</span><br><span class="line">amazon-workspaces                            icons8                                       recaf</span><br><span class="line">android-file-transfer                        icq                                          rectangle</span><br><span class="line">android-platform-tools                       iexplorer                                    redcine-x-pro</span><br><span class="line">android-studio                               iina                                         refined-github-safari</span><br><span class="line">another-redis-desktop-manager                imazing                                      regexhibit</span><br><span class="line">anybar                                       inkdrop                                      rescuetime</span><br><span class="line">anydesk                                      insync                                       responsively</span><br><span class="line">anydo                                        ioquake3                                     retrobatch</span><br><span class="line">app-tamer                                    iridient-developer                           retroshare</span><br><span class="line">apparency                                    iridium                                      reunion</span><br><span class="line">appcode                                      istat-menus                                  rhinoceros</span><br><span class="line">appgate-sdp-client                           iterm2                                       ridibooks</span><br><span class="line">apple-juice                                  ithoughtsx                                   ringcentral</span><br><span class="line">appstudio                                    itsycal                                      ringcentral-classic</span><br><span class="line">aptible                                      itubedownloader                              ripcord</span><br><span class="line">arq                                          ivpn                                         river-sparkle</span><br><span class="line">astropad                                     jabt-flow                                    roboform</span><br><span class="line">astropad-studio                              jalview                                      rocket-chat</span><br><span class="line">atom                                         jamf-migrator                                rocket-typist</span><br><span class="line">audio-hijack                                 jami                                         rocks-n-diamonds</span><br><span class="line">audirvana                                    jamulus                                      rolisteam</span><br><span class="line">autodesk-fusion360                           jcryptool                                    rotato</span><br><span class="line">aware                                        jetbrains-toolbox                            rotki</span><br><span class="line">axure-rp                                     jitouch                                      royal-tsx</span><br><span class="line">azure-data-studio                            joplin                                       rsyncosx</span><br><span class="line">backblaze-downloader                         jtool2                                       runjs</span><br><span class="line">backuploupe                                  julia                                        runway</span><br><span class="line">balenaetcher                                 jumpshare                                    sabnzbd</span><br><span class="line">balsamiq-wireframes                          kaleidoscope                                 sage</span><br><span class="line">banking-4                                    karabiner-elements                           saoimageds9</span><br><span class="line">banktivity                                   kdiff3                                       scaleft</span><br><span class="line">bartender                                    keep-it                                      scratch</span><br><span class="line">base                                         keepassxc                                    screenflick</span><br><span class="line">batteries                                    keepingyouawake                              screens</span><br><span class="line">battle-net                                   keka                                         seadrive</span><br><span class="line">bbedit                                       kext-updater                                 second-life-viewer</span><br><span class="line">beatunes                                     keyboard-lock                                secretive</span><br><span class="line">bettertouchtool                              keyboard-maestro                             securesafe</span><br><span class="line">bibdesk                                      keymanager                                   segger-embedded-studio-for-arm</span><br><span class="line">bilimini                                     keysmith                                     sequel-ace</span><br><span class="line">binance                                      kicad                                        serial</span><br><span class="line">biscuit                                      kid3                                         session</span><br><span class="line">bitrix24                                     kite                                         sherlock</span><br><span class="line">bitwarden                                    kitty                                        shift</span><br><span class="line">blitz                                        klokki                                       shotcut</span><br><span class="line">blobby-volley2                               knime                                        shutter-encoder</span><br><span class="line">blocs                                        kodelife                                     sia-ui</span><br><span class="line">bloomrpc                                     ksdiff                                       sidenotes</span><br><span class="line">bluefish                                     kubernetic                                   sidequest</span><br><span class="line">blueharvest                                  lark                                         sigil</span><br><span class="line">bluejeans                                    lastpass                                     signal</span><br><span class="line">bluestacks                                   lego-mindstorms-ev3                          silentknight</span><br><span class="line">bonitastudiocommunity                        lehreroffice                                 simplenote</span><br><span class="line">boost-note                                   lens                                         sipgate-softphone</span><br><span class="line">bootstrap-studio                             liclipse                                     sitebulb</span><br><span class="line">bot-framework-emulator                       lidarr                                       sizzy</span><br><span class="line">boxcryptor                                   lifesize                                     skim</span><br><span class="line">boxy-suite                                   lingo                                        skitch</span><br><span class="line">brave-browser                                lingon-x                                     skyfonts</span><br><span class="line">breaktimer                                   listen1                                      skype</span><br><span class="line">bricklink-partdesigner                       little-snitch                                slack</span><br><span class="line">bricklink-studio                             loaf                                         slite</span><br><span class="line">brooklyn                                     local                                        smoothscroll</span><br><span class="line">buildsettingextractor                        localizationeditor                           snagit</span><br><span class="line">burp-suite                                   lockrattler                                  softorino-youtube-converter</span><br><span class="line">busycal                                      logdna-agent                                 solar2d</span><br><span class="line">busycontacts                                 loom                                         sonic-visualiser</span><br><span class="line">cacher                                       loopback                                     soulver</span><br><span class="line">calibre                                      lrtimelapse                                  soundsource</span><br><span class="line">camo-studio                                  lulu                                         spires</span><br><span class="line">camunda-modeler                              lumen                                        splice</span><br><span class="line">cctalk                                       lx-music                                     spotify</span><br><span class="line">charles                                      maccy                                        sqlectron</span><br><span class="line">checkra1n                                    macdive                                      sqlpro-for-postgres</span><br><span class="line">chromium                                     macjournal                                   stack-stack</span><br><span class="line">chronosync                                   macpilot                                     standard-notes</span><br><span class="line">cinebench                                    mactracker                                   staruml</span><br><span class="line">cityofzion-neon                              mailbutler                                   stats</span><br><span class="line">ckan                                         mailplane                                    steam</span><br><span class="line">clamxav                                      malus                                        steermouse</span><br><span class="line">clash-for-windows                            mamp                                         stella</span><br><span class="line">clashx                                       manico                                       strawberry</span><br><span class="line">cleanmymac                                   marathon2                                    streamlabs-obs</span><br><span class="line">cleanshot                                    marsedit                                     stretchly</span><br><span class="line">clip-studio-paint                            mater                                        subethaedit</span><br><span class="line">clipgrab                                     matterhorn                                   subler</span><br><span class="line">cljstyle                                     mcreator                                     sublercli</span><br><span class="line">clockify                                     medibangpaintpro                             sublime-merge</span><br><span class="line">coconutbattery                               meetingbar                                   subsurface</span><br><span class="line">coderunner                                   megasync                                     surge</span><br><span class="line">codespace                                    melodics                                     swiftformat-for-xcode</span><br><span class="line">colorpicker-materialdesign                   memo                                         swifty</span><br><span class="line">colorpicker-propicker                        mendeley-reference-manager                   swinsian</span><br><span class="line">colorsnapper                                 menubar-stats                                swish</span><br><span class="line">colour-contrast-analyser                     menumeters                                   switchhosts</span><br><span class="line">coteditor                                    merlin-project                               symboliclinker</span><br><span class="line">craftmanager                                 metabase                                     sysex-librarian</span><br><span class="line">crossover                                    metasploit                                   tableau</span><br><span class="line">crystalmaker                                 mgba                                         tableau-public</span><br><span class="line">curio                                        mi                                           tableau-reader</span><br><span class="line">cyberduck                                    mia-for-gmail                                tagspaces</span><br><span class="line">cytoscape                                    microsoft-auto-update                        tandem</span><br><span class="line">daedalus-mainnet                             microsoft-azure-storage-explorer             taskpaper</span><br><span class="line">dangerzone                                   microsoft-edge                               tastyworks</span><br><span class="line">dash-dash                                    microsoft-excel                              teamspeak-client</span><br><span class="line">db-browser-for-sqlite                        microsoft-office                             techsmith-capture</span><br><span class="line">dbeaver-community                            microsoft-outlook                            telavox-flow</span><br><span class="line">dbschema                                     microsoft-powerpoint                         telegram</span><br><span class="line">dcommander                                   microsoft-teams                              telegram-desktop</span><br><span class="line">dcv-viewer                                   microsoft-word                               tempo</span><br><span class="line">debookee                                     middle                                       tencent-lemon</span><br><span class="line">deezer                                       midi-monitor                                 texmacs</span><br><span class="line">default-folder-x                             miktex-console                               texmaker</span><br><span class="line">dictionaries                                 min                                          texpad</span><br><span class="line">difffork                                     minecraftpe                                  texshop</span><br><span class="line">disk-drill                                   minishift                                    the-clock</span><br><span class="line">displays                                     minizincide                                  thingsmacsandboxhelper</span><br><span class="line">docker                                       missive                                      thonny-xxl</span><br><span class="line">dosbox-x                                     mochi                                        thunderbird</span><br><span class="line">dotnet-sdk                                   mockoon                                      ticktick</span><br><span class="line">drawio                                       modern-csv                                   tiger-trade</span><br><span class="line">drivedx                                      monero-wallet                                tiles</span><br><span class="line">dropbox-passwords                            mongodb-compass                              timche-gmail-desktop</span><br><span class="line">droplr                                       mongodb-compass-isolated-edition             timemator</span><br><span class="line">dropshare                                    mongodb-compass-readonly                     timing</span><br><span class="line">eaglefiler                                   mongodb-realm-studio                         tipp10</span><br><span class="line">electerm                                     moom                                         toggl-track</span><br><span class="line">electronmail                                 morpheus                                     tongbu</span><br><span class="line">element                                      mountain-duck                                toolreleases</span><br><span class="line">eloston-chromium                             movist-pro                                   tor-browser</span><br><span class="line">endurance                                    mqttx                                        touchdesigner</span><br><span class="line">epic                                         mtgaprotracker                               touchosc-bridge</span><br><span class="line">epichrome                                    mudlet                                       touchosc-editor</span><br><span class="line">eset-cyber-security-pro                      multipass                                    tower</span><br><span class="line">eudic                                        multiscan-3b                                 trailer</span><br><span class="line">eul                                          multitouch                                   transcribe</span><br><span class="line">eurkey                                       mumu                                         transmit</span><br><span class="line">evernote                                     murus                                        transnomino</span><br><span class="line">exodus                                       musaicfm                                     trezor-bridge</span><br><span class="line">extraterm                                    musicbrainz-picard                           trilium-notes</span><br><span class="line">fantastical                                  muzzle                                       trim-enabler</span><br><span class="line">feishu                                       neo4j                                        tripmode</span><br><span class="line">final-cut-library-manager                    netnewswire                                  tunnelblick</span><br><span class="line">find-any-file                                netron                                       tuple</span><br><span class="line">fing                                         network-radar                                turbo-boost-switcher</span><br><span class="line">firefox                                      nextcloud                                    ultimaker-cura</span><br><span class="line">fission                                      nightowl                                     unetbootin</span><br><span class="line">fl-studio                                    nordvpn                                      uninstallpkg</span><br><span class="line">flash-npapi                                  nosqlbooster-for-mongodb                     unite</span><br><span class="line">flash-player                                 nova                                         unity</span><br><span class="line">flash-player-debugger                        novabench                                    unity-android-support-for-editor</span><br><span class="line">flash-player-debugger-npapi                  nvidia-geforce-now                           unity-hub</span><br><span class="line">flash-player-debugger-ppapi                  obsidian                                     unity-ios-support-for-editor</span><br><span class="line">flash-ppapi                                  octoscreen                                   unity-lumin-support-for-editor</span><br><span class="line">fldigi                                       odrive                                       unity-webgl-support-for-editor</span><br><span class="line">flightgear                                   omnidb                                       unity-windows-support-for-editor</span><br><span class="line">flipper                                      omnifocus                                    universal-media-server</span><br><span class="line">flock                                        omnigraffle                                  unnaturalscrollwheels</span><br><span class="line">flutter                                      omnioutliner                                 upic</span><br><span class="line">fme                                          omniplan                                     upwork</span><br><span class="line">font-iosevka                                 omnipresence                                 usb-overdrive</span><br><span class="line">font-iosevka-aile                            onedrive                                     use-engine</span><br><span class="line">font-iosevka-curly                           openoffice                                   usenapp</span><br><span class="line">font-iosevka-curly-slab                      openrct2                                     uu-booster</span><br><span class="line">font-iosevka-etoile                          openvanilla                                  v2rayx</span><br><span class="line">font-iosevka-slab                            openvpn-connect                              vagrant</span><br><span class="line">font-iosevka-sparkle                         opera                                        vagrant-vmware-utility</span><br><span class="line">font-iosevka-ss01                            opera-gx                                     vanilla</span><br><span class="line">font-iosevka-ss02                            orange                                       vassal</span><br><span class="line">font-iosevka-ss03                            osxfuse                                      vellum</span><br><span class="line">font-iosevka-ss04                            outline                                      vienna</span><br><span class="line">font-iosevka-ss05                            overdrive-media-console                      virtualbox</span><br><span class="line">font-iosevka-ss06                            owasp-zap                                    virtualc64</span><br><span class="line">font-iosevka-ss07                            pacifist                                     viscosity</span><br><span class="line">font-iosevka-ss08                            pagico                                       visual-paradigm</span><br><span class="line">font-iosevka-ss09                            panoply                                      visual-paradigm-ce</span><br><span class="line">font-iosevka-ss10                            pdf-expert                                   visual-studio</span><br><span class="line">font-iosevka-ss11                            pdf-squeezer                                 visual-studio-code</span><br><span class="line">font-iosevka-ss12                            pdfsam-basic                                 vitamin-r</span><br><span class="line">font-iosevka-ss13                            peakhour                                     vivaldi</span><br><span class="line">font-iosevka-ss14                            perimeter81                                  vrew</span><br><span class="line">font-jetbrains-mono                          pext                                         vscodium</span><br><span class="line">font-juliamono                               pgadmin4                                     vuescan</span><br><span class="line">font-league-gothic                           photosweeper-x                               vyprvpn</span><br><span class="line">font-source-sans-pro                         piezo                                        webcatalog</span><br><span class="line">font-stix                                    plex                                         wechatwork</span><br><span class="line">font-urw-base35                              plex-media-server                            welly</span><br><span class="line">font-xits                                    plexamp                                      whalebird</span><br><span class="line">fontforge                                    pocket-casts                                 whatsapp</span><br><span class="line">fork                                         poedit                                       wickrme</span><br><span class="line">forklift                                     polycom-realpresence                         wifi-explorer</span><br><span class="line">franz                                        popo                                         winclone</span><br><span class="line">freac                                        portfolioperformance                         windows95</span><br><span class="line">free-download-manager                        posterazor                                   wingpersonal</span><br><span class="line">freecad                                      postgres                                     wire</span><br><span class="line">freeplane                                    power-manager                                wireshark</span><br><span class="line">freetube                                     powerphotos                                  wondershare-filmora</span><br><span class="line">freeyourmusic                                powershell                                   wondershare-uniconverter</span><br><span class="line">frhelper                                     praat                                        wordpresscom</span><br><span class="line">fsnotes                                      printopia                                    workflowy</span><br><span class="line">futuniuniu                                   pritunl                                      wormhole</span><br><span class="line">garagebuy                                    private-internet-access                      wrike</span><br><span class="line">garagesale                                   pro-fit                                      xamarin-ios</span><br><span class="line">geany                                        profind                                      xamarin-mac</span><br><span class="line">geekbench                                    propresenter                                 xscope</span><br><span class="line">gemini                                       protonmail-bridge                            yate</span><br><span class="line">ghidra                                       protonvpn                                    yed</span><br><span class="line">ghost-browser                                protopie                                     youku</span><br><span class="line">gifox                                        prowritingaid                                yyets</span><br><span class="line">gitfinder                                    proxifier                                    zalo</span><br><span class="line">github                                       proxyman                                     zeplin</span><br><span class="line">glyphs                                       prudent                                      zipcleaner</span><br><span class="line">gns3                                         psychopy                                     zoc</span><br><span class="line">go64                                         publii                                       zoom-for-it-admins</span><br><span class="line">gobdokumente                                 pulse-sms                                    zoomus</span><br><span class="line">golly                                        pycharm-ce-with-anaconda-plugin              zotero</span><br><span class="line">goodsync                                     pycharm-with-anaconda-plugin                 zprint</span><br><span class="line">google-chrome                                pyfa</span><br><span class="line">==&gt; Deleted Casks</span><br><span class="line">aliwangwang        aspera-connect     blizz              daedalus           docear             yandexradio        zoomin</span><br><span class="line"></span><br><span class="line">==&gt; Downloading https://homebrew.bintray.com/bottles/openssl%401.1-1.1.1h.catalina.bottle.tar.gz</span><br><span class="line">==&gt; Downloading from https://d29vzk4ow07wi7.cloudfront.net/4e5357c0cfd55cfa4ef0b632c6fc9f49d39337dd070dc12d3c862e28bd28f079?response-c</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">####################################################################### 100.0%</span></span></span><br><span class="line">==&gt; Downloading https://homebrew.bintray.com/bottles/protobuf-3.13.0_1.catalina.bottle.tar.gz</span><br><span class="line">==&gt; Downloading from https://d29vzk4ow07wi7.cloudfront.net/10df8a94c8077b4d2578e4db9410b586b865e4299cd6e7199993ca1c5a88af97?response-c</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">####################################################################### 100.0%</span></span></span><br><span class="line">==&gt; Downloading https://homebrew.bintray.com/bottles/mysql-8.0.22.catalina.bottle.tar.gz</span><br><span class="line">==&gt; Downloading from https://d29vzk4ow07wi7.cloudfront.net/b56dd0f401abab4a2dff51706e78b7b7fedb2d4bf747b24e45bbcd4418d13eec?response-c</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">####################################################################### 100.0%</span></span></span><br><span class="line">==&gt; Installing dependencies for mysql: openssl@1.1 and protobuf</span><br><span class="line">==&gt; Installing mysql dependency: openssl@1.1</span><br><span class="line">==&gt; Pouring openssl@1.1-1.1.1h.catalina.bottle.tar.gz</span><br><span class="line">==&gt; Caveats</span><br><span class="line">A CA file has been bootstrapped using certificates from the system</span><br><span class="line">keychain. To add additional certificates, place .pem files in</span><br><span class="line">  /usr/local/etc/openssl@1.1/certs</span><br><span class="line"></span><br><span class="line">and run</span><br><span class="line">  /usr/local/opt/openssl@1.1/bin/c_rehash</span><br><span class="line"></span><br><span class="line">openssl@1.1 is keg-only, which means it was not symlinked into /usr/local,</span><br><span class="line">because macOS provides LibreSSL.</span><br><span class="line"></span><br><span class="line">If you need to have openssl@1.1 first in your PATH run:</span><br><span class="line">  echo &#x27;export PATH=&quot;/usr/local/opt/openssl@1.1/bin:$PATH&quot;&#x27; &gt;&gt; ~/.zshrc</span><br><span class="line"></span><br><span class="line">For compilers to find openssl@1.1 you may need to set:</span><br><span class="line">  export LDFLAGS=&quot;-L/usr/local/opt/openssl@1.1/lib&quot;</span><br><span class="line">  export CPPFLAGS=&quot;-I/usr/local/opt/openssl@1.1/include&quot;</span><br><span class="line"></span><br><span class="line">==&gt; Summary</span><br><span class="line">🍺  /usr/local/Cellar/openssl@1.1/1.1.1h: 8,067 files, 18.5MB</span><br><span class="line">==&gt; Installing mysql dependency: protobuf</span><br><span class="line">==&gt; Pouring protobuf-3.13.0_1.catalina.bottle.tar.gz</span><br><span class="line">==&gt; Caveats</span><br><span class="line">Emacs Lisp files have been installed to:</span><br><span class="line">  /usr/local/share/emacs/site-lisp/protobuf</span><br><span class="line">==&gt; Summary</span><br><span class="line">🍺  /usr/local/Cellar/protobuf/3.13.0_1: 266 files, 19.8MB</span><br><span class="line">==&gt; Installing mysql</span><br><span class="line">==&gt; Pouring mysql-8.0.22.catalina.bottle.tar.gz</span><br><span class="line">==&gt; /usr/local/Cellar/mysql/8.0.22/bin/mysqld --initialize-insecure --user=steven --basedir=/usr/local/Cellar/mysql/8.0.22 --datadir=/</span><br><span class="line">==&gt; Caveats</span><br><span class="line">We&#x27;ve installed your MySQL database without a root password. To secure it run:</span><br><span class="line">    mysql_secure_installation</span><br><span class="line"></span><br><span class="line">MySQL is configured to only allow connections from localhost by default</span><br><span class="line"></span><br><span class="line">To connect run:</span><br><span class="line">    mysql -uroot</span><br><span class="line"></span><br><span class="line">To have launchd start mysql now and restart at login:</span><br><span class="line">  brew services start mysql</span><br><span class="line">Or, if you don&#x27;t want/need a background service you can just run:</span><br><span class="line">  mysql.server start</span><br><span class="line">==&gt; Summary</span><br><span class="line">🍺  /usr/local/Cellar/mysql/8.0.22: 294 files, 296.5MB</span><br><span class="line">==&gt; Caveats</span><br><span class="line">==&gt; openssl@1.1</span><br><span class="line">A CA file has been bootstrapped using certificates from the system</span><br><span class="line">keychain. To add additional certificates, place .pem files in</span><br><span class="line">  /usr/local/etc/openssl@1.1/certs</span><br><span class="line"></span><br><span class="line">and run</span><br><span class="line">  /usr/local/opt/openssl@1.1/bin/c_rehash</span><br><span class="line"></span><br><span class="line">openssl@1.1 is keg-only, which means it was not symlinked into /usr/local,</span><br><span class="line">because macOS provides LibreSSL.</span><br><span class="line"></span><br><span class="line">If you need to have openssl@1.1 first in your PATH run:</span><br><span class="line">  echo &#x27;export PATH=&quot;/usr/local/opt/openssl@1.1/bin:$PATH&quot;&#x27; &gt;&gt; ~/.zshrc</span><br><span class="line"></span><br><span class="line">For compilers to find openssl@1.1 you may need to set:</span><br><span class="line">  export LDFLAGS=&quot;-L/usr/local/opt/openssl@1.1/lib&quot;</span><br><span class="line">  export CPPFLAGS=&quot;-I/usr/local/opt/openssl@1.1/include&quot;</span><br><span class="line"></span><br><span class="line">==&gt; protobuf</span><br><span class="line">Emacs Lisp files have been installed to:</span><br><span class="line">  /usr/local/share/emacs/site-lisp/protobuf</span><br><span class="line">==&gt; mysql</span><br><span class="line">We&#x27;ve installed your MySQL database without a root password. To secure it run:</span><br><span class="line">    mysql_secure_installation</span><br><span class="line"></span><br><span class="line">MySQL is configured to only allow connections from localhost by default</span><br><span class="line"></span><br><span class="line">To connect run:</span><br><span class="line">    mysql -uroot</span><br><span class="line"></span><br><span class="line">To have launchd start mysql now and restart at login:</span><br><span class="line">  brew services start mysql</span><br><span class="line">Or, if you don&#x27;t want/need a background service you can just run:</span><br><span class="line">  mysql.server start</span><br><span class="line"></span><br><span class="line"> ~ </span><br></pre></td></tr></table></figure>
+<p>安装成功，其实在上面的日志中，也会看到许多配置的方法，就按照它所提示的方式进行配置</p>
+<h4 id="二、配置">二、配置</h4>
+<ol>
+<li>
+<p>配置环境变量<br>
+直接在命令行输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;export PATH=&quot;/usr/local/opt/openssl@1.1/bin:$PATH&quot;&#x27; &gt;&gt; ~/.zshrc</span><br></pre></td></tr></table></figure>
+<p>由于我的mac系统是 ，所以终端默认的是zsh,而不再是bash，所以配置文件是<code>.zshrc</code>，具体参考<a href="https://www.shifpeng.cn/article/macOS-Catalina-install-nvm/">macOS Catalina下安装nvm、node及每次需要重载配置文件问题解决</a>,</p>
+</li>
+<li>
+<p>初始化</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql_secure_installation</span><br></pre></td></tr></table></figure>
+<p>提示需要设置密码，设置密码后，继续，报错了：</p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Error: </span>Can&#x27;t connect to local MySQL server through socket &#x27;/tmp/mysql.sock&#x27; (2)</span><br></pre></td></tr></table></figure>
+<p>这是环境中安装数据库中经常出现的错误<br>
+<strong>解决方案：</strong></p>
+<p>先执行<code>mysql.server start</code>启动一下服务，然后再次执行<code>mysql_secure_installation</code>，重新设置密码<br>
+设置密码的时候，注意密码的强度设置，否则容易失败</p>
+</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line"> ~/GitRepository/order   dev </span><br><span class="line"> ✔  echo &#x27;export PATH=&quot;/usr/local/opt/openssl@1.1/bin:$PATH&quot;&#x27; &gt;&gt; ~/.zshrc                                         ✔  175  15:00:39</span><br><span class="line"></span><br><span class="line"> ~/GitRepository/order   dev </span><br><span class="line"> ✔  mysql_secure_installation                                                                                     ✔  177  15:03:56</span><br><span class="line"></span><br><span class="line">Securing the MySQL server deployment.</span><br><span class="line"></span><br><span class="line">Enter password for user root:</span><br><span class="line">Error: Can&#x27;t connect to local MySQL server through socket &#x27;/tmp/mysql.sock&#x27; (2)</span><br><span class="line"></span><br><span class="line"> ~/GitRepository/order   dev </span><br><span class="line"> ↵ 1  mysql.server start                                                                                        1 ↵  178  15:04:38</span><br><span class="line">Starting MySQL</span><br><span class="line">. SUCCESS!</span><br><span class="line"></span><br><span class="line"> ~/GitRepository/order   dev </span><br><span class="line"> ✔  mysql_secure_installation                                                                                     ✔  179  15:04:56</span><br><span class="line"></span><br><span class="line">Securing the MySQL server deployment.</span><br><span class="line"></span><br><span class="line">Connecting to MySQL using a blank password.</span><br><span class="line"></span><br><span class="line">VALIDATE PASSWORD COMPONENT can be used to test passwords</span><br><span class="line">and improve security. It checks the strength of password</span><br><span class="line">and allows the users to set only those passwords which are</span><br><span class="line">secure enough. Would you like to setup VALIDATE PASSWORD component?</span><br><span class="line"></span><br><span class="line">Press y|Y for Yes, any other key for No: Y</span><br><span class="line"></span><br><span class="line">There are three levels of password validation policy:</span><br><span class="line"></span><br><span class="line">LOW    Length &gt;= 8</span><br><span class="line">MEDIUM Length &gt;= 8, numeric, mixed case, and special characters</span><br><span class="line">STRONG Length &gt;= 8, numeric, mixed case, special characters and dictionary                  file</span><br><span class="line"></span><br><span class="line">Please enter 0 = LOW, 1 = MEDIUM and 2 = STRONG: 0</span><br><span class="line">Please set the password for root here.</span><br><span class="line"></span><br><span class="line">New password:</span><br><span class="line"></span><br><span class="line">Re-enter new password:</span><br><span class="line"></span><br><span class="line">Estimated strength of the password: 25</span><br><span class="line">Do you wish to continue with the password provided?(Press y|Y for Yes, any other key for No) : y</span><br><span class="line"> ... Failed! Error: Your password does not satisfy the current policy requirements</span><br><span class="line"></span><br><span class="line">New password:</span><br><span class="line"></span><br><span class="line">Re-enter new password:</span><br><span class="line"></span><br><span class="line">Estimated strength of the password: 50</span><br><span class="line">Do you wish to continue with the password provided?(Press y|Y for Yes, any other key for No) : Y</span><br><span class="line">By default, a MySQL installation has an anonymous user,</span><br><span class="line">allowing anyone to log into MySQL without having to have</span><br><span class="line">a user account created for them. This is intended only for</span><br><span class="line">testing, and to make the installation go a bit smoother.</span><br><span class="line">You should remove them before moving into a production</span><br><span class="line">environment.</span><br><span class="line"></span><br><span class="line">Remove anonymous users? (Press y|Y for Yes, any other key for No) : Y</span><br><span class="line">Success.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Normally, root should only be allowed to connect from</span><br><span class="line">&#x27;localhost&#x27;. This ensures that someone cannot guess at</span><br><span class="line">the root password from the network.</span><br><span class="line"></span><br><span class="line">Disallow root login remotely? (Press y|Y for Yes, any other key for No) : Y</span><br><span class="line">Success.</span><br><span class="line"></span><br><span class="line">By default, MySQL comes with a database named &#x27;test&#x27; that</span><br><span class="line">anyone can access. This is also intended only for testing,</span><br><span class="line">and should be removed before moving into a production</span><br><span class="line">environment.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Remove test database and access to it? (Press y|Y for Yes, any other key for No) : Y</span><br><span class="line"> - Dropping test database...</span><br><span class="line">Success.</span><br><span class="line"></span><br><span class="line"> - Removing privileges on test database...</span><br><span class="line">Success.</span><br><span class="line"></span><br><span class="line">Reloading the privilege tables will ensure that all changes</span><br><span class="line">made so far will take effect immediately.</span><br><span class="line"></span><br><span class="line">Reload privilege tables now? (Press y|Y for Yes, any other key for No) : Y</span><br><span class="line">Success.</span><br><span class="line"></span><br><span class="line">All done!</span><br></pre></td></tr></table></figure>
+<h4 id="三、重启服务">三、重启服务</h4>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql.server start</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> ~/GitRepository/order   dev </span><br><span class="line"> ✔  mysql.server start                                                                                            ✔  180  15:12:45</span><br><span class="line">Starting MySQL</span><br><span class="line"> SUCCESS!</span><br><span class="line">2020-11-16T07:13:25.6NZ mysqld_safe A mysqld process already exists</span><br></pre></td></tr></table></figure>
+<p>至此，安装完毕</p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/2019/Java获取并解析XML-JavaBean和XML的转化/" data-toggle="tooltip" data-placement="top" title="Java获取并解析XML(JavaBean和XML的转化)">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/2019/JDK1-7-HashMap源码解析/" data-toggle="tooltip" data-placement="top" title="JDK1.7 HashMap源码解析">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Mysql安装（Mac版）&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2019/Mysql安装（Mac版）/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'a00494876d6f5f4bcbfd',
+      clientSecret: '33d3d0be81052a26f5a3535733b8b7854628564f',
+      repo: 'shifpeng.github.io',
+      owner: 'shifpeng',
+      admin: 'shifpeng',
+      id: 'Sat Nov 16 2019 15:21:03 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E5%AE%89%E8%A3%85"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、安装</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、配置</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E9%87%8D%E5%90%AF%E6%9C%8D%E5%8A%A1"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、重启服务</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#Mysql" title="Mysql">Mysql</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://cuiqingcai.com/" target="_blank">静 觅 崔庆才</a>
+          </li>
+          
+          <li>
+            <a href="http://www.52nlp.cn/" target="_blank">我爱自然语言处理</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cnblogs.com/Steven-shi/" target="_blank">博客园 石福鹏</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/shifpeng">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Steven
+          2021
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://shifpeng.cn">Steven</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/mouseclick.js"  content='' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "shifpeng";
+    let ghPages = gh + ".github.io";
+    let pagePath = "2019/Mysql安装（Mac版）/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://www.shifpeng.cn/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

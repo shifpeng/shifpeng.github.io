@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="人最大的修养就是知人不评人"/>
+  <meta name="keyword" content="Java,Steven,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://www.shifpeng.cn/2020/从祁同伟到苟晶/">
+  <title>
+    
+      从祁同伟到苟晶：人间倘遇不公，拿什么去“胜天半子”？ - Steven | java
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'StevenBlog/community'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">石福鹏</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#深度好文" title="深度好文">深度好文</a>
+              
+            </div>
+            <h1>从祁同伟到苟晶：人间倘遇不公，拿什么去“胜天半子”？</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by Steven on
+              2020-09-07
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">16</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">4.9k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>作者：栩先生</p>
+<p>本文转载自：栩先生（ID:superMr_xu）</p>
+<p>这篇文章，写了风险很大，不写，我良心不安。</p>
+<h4 id="part-1">part 1</h4>
+<p>2017年，《人民的名义》大火。</p>
+<p>电视剧里的祁同伟，让人感慨万千。</p>
+<p>一开始，他是一个绝对的反派，投机、贪污、腐化、暗杀，给逃跑的丁义珍通风报信，所作所为，没几件好事。</p>
+<p>但越往后看，越发现他性格和命运里的复杂。</p>
+<p>他出生贫寒，靠着资助上了大学，聪明好进，是班长、学生会主席，人也长得阳光、帅气，连梁璐、陈阳这样的“官二代”、“白富美”，都对他另眼相看。</p>
+<p>但在毕业的时候，因为拒绝了比他大十几岁的梁璐的爱意。</p>
+<p>梁璐的父亲将他打发到了偏远小地方的司法所。</p>
+<p>所有的激情、所有的热血，瞬间凉透。</p>
+<p>更何况那时候，祁同伟深爱的陈阳已经去了北京。</p>
+<p>为了能跳出那个司法所，调到北京追随所爱之人的脚步。</p>
+<p>祁同伟申请去了缉毒一线，在孤鹰岭面对毒贩，他九死一生，身中3弹，以命搏命换来了“一级战斗英雄”的称号，原以为终于可以跳出深山老林了。</p>
+<p>没想到，仍然没有换来他想要的晋升以及和所爱的人在一起。</p>
+<p><strong>“英雄在权利面前是拗不过的，英雄在权力面前是什么啊，只是工具。”——祁同伟</strong></p>
+<p><img src="/2020/%E4%BB%8E%E7%A5%81%E5%90%8C%E4%BC%9F%E5%88%B0%E8%8B%9F%E6%99%B6/5-1593325484.png" alt="从祁同伟到苟晶：人间倘遇不公，拿什么去“胜天半子”？"></p>
+<p>于是，英雄的祁同伟屈服了，他选择在操场向那个大他十多岁的梁璐下跪求爱，抛弃了所有尊严，彻底黑化，到电视剧最后，已经是罪无可赦、无路可走了。</p>
+<p>用他的话说，<strong>“那一跪可以说把我的人生轨迹都改变了。”</strong></p>
+<p>然而，事实上，祁同伟的人生轨迹改变，是从大学毕业开始的。</p>
+<p>作为汉东大学政法系最优秀的学生，毕业后的他不仅没有得到任何发展的好机会。</p>
+<p>反而被一撸到底，发配到了边远山区的司法所。</p>
+<p>而所有的这一切，不过只是因为梁璐的父亲梁群峰有意打压他一下而已。</p>
+<p>作为汉东省省委常委兼政法委书记，梁群峰打压祁同伟，用侯亮平的老婆钟小艾地话来说：</p>
+<p><strong>不过是权力小小的任性了一下。</strong></p>
+<p><img src="/2020/%E4%BB%8E%E7%A5%81%E5%90%8C%E4%BC%9F%E5%88%B0%E8%8B%9F%E6%99%B6/8-1593325484.png" alt="从祁同伟到苟晶：人间倘遇不公，拿什么去“胜天半子”？"></p>
+<p>但就是这小小的任性，改变的却是祁同伟的全部命运，成为了他一生悲剧的起点。</p>
+<h4 id="part-2">part 2</h4>
+<p>看电视的时候，我以为像这样的故事，不过是小说或者电视里杜撰的情节，用来丰富一下人物的性格。</p>
+<p>直到最近接连爆出的“高考顶替案”，才让我震惊地发现，生活永远是艺术的源泉。</p>
+<p><img src="/2020/%E4%BB%8E%E7%A5%81%E5%90%8C%E4%BC%9F%E5%88%B0%E8%8B%9F%E6%99%B6/1-1593325485.jpeg" alt="从祁同伟到苟晶：人间倘遇不公，拿什么去“胜天半子”？"></p>
+<p>△苟晶微博</p>
+<p>山东济宁人苟晶，1997年参加高考，原本全班前几名的成绩，最后的分数却腰斩，名落孙山。</p>
+<p>很多年以后，她才知道，自己的高考成绩被人顶替了，顶替者是班主任邱老师的女儿。</p>
+<p>1998年，苟晶复读再考。</p>
+<p>更诡异的事情来了，模拟考试全区第四名，结果高考成绩居然是惊人的全班倒数第一名，最后被一所不用分数、不用学籍的野鸡中专录取。</p>
+<p>多年以后，苟晶怀疑第二次高考，她可能再次被人顶替了。</p>
+<p>“两次被顶替高考”也成了全网热点。</p>
+<p>（上述文字及苟晶的相关故事，整合于互联网相关新闻报道）</p>
+<p>当然，如果苟晶所言属实。</p>
+<p>那么苟晶所经历的，恰恰就像是当年祁同伟所遇到的，“权力的任性”。</p>
+<p>而第二次高考被顶替，则可能比想象中还要复杂。</p>
+<p>一个小小的中学班主任，能有如此大的能量操作两次高考录取？</p>
+<p>还是说，这背后早已形成了某些心照不宣的“黑暗链条”？</p>
+<p>细一想，让人不寒而栗。</p>
+<h4 id="part-3">part 3</h4>
+<p>《人民的名义》里，黑化后的祁同伟，堕落得非常彻底。</p>
+<p>他不仅抛弃了尊严，更突破了原则底线，只要有利于升官发财的事，不择手段也要去干；凡是挡道的人，千方百计也要除掉。</p>
+<p>看前面十多集的时候，你会为祁同伟的这种“坏”所愤怒，恨不得立马判他极刑。</p>
+<p>但从第26集开始，当他一步步地展示自己当年是如何被打压，如何改变三观的时候，你才会发现，这个人所有的坏都有了一个起点。</p>
+<p>他原本也是一个善良、单纯，有着英雄气的天之骄子。</p>
+<p>直到，他遭遇了那一次“权力的任性”。</p>
+<p>这时候才发现，很多人对祁同伟恨不起来了。</p>
+<p>因为相对于一路开挂“伟光正”的侯亮平，祁同伟所展示的才更像是血淋淋的真实人生。</p>
+<p>这也是现实里，多数普通人的黑化之路。</p>
+<p>从天真、单纯，到被震惊被颠覆，从善良、正直，到被欺侮、被欺骗，从满怀希望，到失望、再失望、更失望，直到绝望，有着清晰的心路历程。</p>
+<p>这世界上最悲剧的，不是善良的人被欺侮，而是被欺侮的人不能坚持到底。</p>
+<p>当然，我这样说，并不是为黑化后的祁同伟开脱。</p>
+<p>我曾经写过：<strong>不是见过了污浊，就一定要选择同流合污。</strong></p>
+<p>祁同伟被权力伤害了，但黑化的他却彻底地屈服于权力，成为了权力、欲望的奴隶。</p>
+<p>甚至于，抽刀向更弱者，成为了当年他最鄙视的人。</p>
+<p>电视剧里有一集，祁同伟的老家的亲戚找到他，让他帮忙摆平一起“轮奸案”，祁同伟居然很自然地准备动用权力去庇护自己的亲戚。</p>
+<p><img src="/2020/%E4%BB%8E%E7%A5%81%E5%90%8C%E4%BC%9F%E5%88%B0%E8%8B%9F%E6%99%B6/9-1593325485.png" alt="从祁同伟到苟晶：人间倘遇不公，拿什么去“胜天半子”？"></p>
+<p>他没有想过，如果他真的通过权力保护了自己的亲戚，那个惨遭强奸的女孩又到哪里伸冤？</p>
+<p>他当年因为“权力的任性”而黑化，这个被他的权力“任性”的女孩又该经历怎样的绝望？</p>
+<h4 id="part-4">part 4</h4>
+<p>值得庆幸的是，现实生活里那个被“权力任性”，遭遇人生不公的苟晶，并没有像祁同伟那样，走向人生反面。</p>
+<p>相反，她花了半辈子的时间，终于扳回了一局。</p>
+<p>1999年，浙江温州的一家工厂到了苟晶就读的野鸡中专招工，名额20个，苟晶从300多人里脱颖而出，从此走上了打工之路。</p>
+<p>2000年，苟晶和老公一起到了杭州，开始各种打零工，工厂、推销，什么都干过。</p>
+<p>那时候阿里巴巴刚成立不久，苟晶想去，却因为学历低，多次被阿里巴巴拒之门外。</p>
+<p>2005年，一个在某中学里当老师的苟晶同学，听说学校里新来了一个叫“苟晶”的老师，原本以为是她，结果一看，是当年她们班主任的女儿。从那时候起，苟晶当年高考被顶替的事情，就在同学里传开了。</p>
+<p>2007年，苟晶在自己家里开起了电商小店。</p>
+<p>十多年的时间后，她已经是一家电商企业的合伙人，他们一家在杭州成功立足，有车有房，生活无忧。</p>
+<p>而那个当年顶替她的人，现在也不过一所学校的后勤人员。</p>
+<p>“高考顶替案”曝出来后，有人将苟晶的经历整理出来，包装成了励志偶像，似乎这就是他们能从这件事里唯一得出的东西了。</p>
+<p>实事求是地讲，现在的苟晶过得并不差，人生也比那个当年顶替她的人要成功得多。</p>
+<p>但，就应该如此去感谢这两次被顶替的高考经历吗？</p>
+<p>狗屁！</p>
+<p><strong>没有任何苦难值得歌颂，何况是这种人为的苦难！</strong></p>
+<p>苟晶原本根本不需要吃那么多无谓的苦。她班主任的这两次“操作”，改变的不仅仅是苟晶一个人的命运，还包括了当年为了供她复读而辍学的妹妹的命运。</p>
+<p>更何况，以苟晶当时的成绩，如果能顺利考上大学，毕业后很可能比现在还要成功。</p>
+<p>毕竟，她当年的同班同学里，已经有了8个博士、5个教授。</p>
+<p>这还是因为苟晶本人比较优秀，上限比较高，而且舍得吃苦，才从一无所有的人生低谷走到今天。</p>
+<p>还有多少上限没有她高的人，遭遇高考顶替，一辈子就毁了。</p>
+<p>甚至于，下一代、下下一代，也都毁了。</p>
+<p>比如更早被曝出来的“陈春秀”。</p>
+<p>16年前，陈春秀以546分的成绩考入山东理工大学，却没能等到录取通知书。</p>
+<p>她的父亲说，当时他问过女儿是否复读一年，女儿拒绝了。</p>
+<p>因为陈春秀知道贫困的家境，其实无法支持她再次经历一次高考。</p>
+<p>为了她的学业，哥哥已经辍学打工去了。</p>
+<p>于是，陈春秀选择了放弃。</p>
+<p><img src="/2020/%E4%BB%8E%E7%A5%81%E5%90%8C%E4%BC%9F%E5%88%B0%E8%8B%9F%E6%99%B6/1-1593325486.jpeg" alt="从祁同伟到苟晶：人间倘遇不公，拿什么去“胜天半子”？"></p>
+<p>整整16年，她当过电子厂的工人，做过餐厅的服务员……从事着这个社会最底层的工作。</p>
+<p>如果不是现在网络发达，学籍重复被曝光。</p>
+<p>陈春秀不会想到在城市的另一端，一名叫陈艳平的女子，在16年前，拿着她的录取通知书，前往山东理工大学报到，成为了一名大学生。</p>
+<p>毕业后也回到家乡，入职街道办审计所。</p>
+<p>而更为可怕的是， “当你在厨房发现一只蟑螂的时候，往往意味着角落里已经有了无数只”，这句网络流行语在这种事上得到了完美印证。</p>
+<p>有媒体统计检索发现，2018～2019年，山东高等学历数据清查工作中，有14所高校曾公示清查结果，其中有242人被发现涉嫌冒名顶替入学取得学历，其中还涉及中国海洋大学等985高校。</p>
+<p>山东省教育厅6月19日在官方微博发文表示，无论是历史原因，还是顶风违纪，该厅始终坚持零容忍的态度，发现一起，坚决查处一起。</p>
+<p><img src="/2020/%E4%BB%8E%E7%A5%81%E5%90%8C%E4%BC%9F%E5%88%B0%E8%8B%9F%E6%99%B6/5-1593325486.jpeg" alt="从祁同伟到苟晶：人间倘遇不公，拿什么去“胜天半子”？"></p>
+<h4 id="part-5">part 5</h4>
+<p>陈春秀的新闻曝光后，那个顶替她的人的同事居然说陈春秀做得太过了。</p>
+<p>无独有偶，苟晶发文自曝自己曾经被两次顶替高考后，也遭受了极大的压力，包括家里的亲戚都劝她，事情过了这么久，何必非得要较真。</p>
+<p><img src="/2020/%E4%BB%8E%E7%A5%81%E5%90%8C%E4%BC%9F%E5%88%B0%E8%8B%9F%E6%99%B6/4-1593325486.jpeg" alt="从祁同伟到苟晶：人间倘遇不公，拿什么去“胜天半子”？"></p>
+<p>包括网上的一些评价，居然也有人在为顶替者叫屈，觉得当年这些人之所以要使出如此手段，顶替别人的名字去高考，肯定也有不得已的苦衷，现在被这么一曝光，工作生活肯定都完了。</p>
+<p>我觉得，持有这种观点、说这种话的人，郭德纲有一句话特别适合他们：</p>
+<p><strong>那些不明白情况就劝你一定要大度的人，你要离他远一点。因为雷劈他的时候会连累到你。</strong></p>
+<p>想想电视剧里的祁同伟，都已经顺利读完大学了，只是在工作的时候被“阴了一把”，就黑化成那样，大家还都很理解，一副感同身受的样子。</p>
+<p>这还只是电视剧，而在现实生活里，那个人是完完全全顶替了你的名字去上的大学，彻底剥夺了你上大学的权力，对于这样的人，这样的事，不应该追究到底吗？</p>
+<p>更可恨的是，从现在已经曝光的“顶替案”来看，那些被顶替的对象，往往都是品学兼优、但没有任何家世背景的贫寒子女。</p>
+<p>甚至于，那些操作“顶替”的人下手的时候，都是专门挑过的，找的那些被顶替者，家里老实巴交，也没有关系，遇到这样的事，上天入地都无门。</p>
+<p>多少农村孩子，父母面朝黄土背朝天，省吃俭用，就为了供出一个大学生来改变家庭的命运，结果寒窗苦读数十载，在最后的关头，却被别人动了手脚，“摘了果实”，功亏一篑。</p>
+<p>这样的结局，这样的命运，该多让人绝望？</p>
+<p>苟晶的班主任曾经给苟晶写过一封道歉信，信里的主要内容，是让苟晶体会他作为父亲，帮助女儿读大学的心情。</p>
+<p>“我的女儿没有像你这样聪慧，智商有点欠缺，她不争气。我作为一个父亲，非常不容易。1997年，我在很无奈的情况之下，才让她顶替了你的成绩去上大学。作为一个老师，我这样做，的确有违师德，但是请你原谅我。”</p>
+<p>但她的班主任却忘了，苟晶也是一个父亲的女儿。</p>
+<p>苟晶曾说过：“我全家人都是农民，没有人脉关系，也不知道要走什么路子找回公道，我爸爸一直在自责，我也自责我自己。”</p>
+<p>她的父亲两年前病逝，在最后几天，父亲主动说起了她被顶替的事情，表达了一阵愤怒。</p>
+<p>苟晶说：<strong>“那老师有没有去换位思考一下，我的老父亲他有没有苦心，我的老父亲谁来替我去考虑？”</strong></p>
+<h4 id="part-6">part 6</h4>
+<p>相对于前面那些站着说话不腰疼，觉得苟晶不要赶尽杀绝，甚至劝她算了的人。</p>
+<p>我觉得苟晶的做法，才真的让人感动。</p>
+<p>现在的苟晶，有车、有房、有事业，自己的孩子也已经高考去读了大学，她原本真的可以不再闹这么大动静的。</p>
+<p>苟晶想要的是道歉吗？是赔偿吗？</p>
+<p><strong>都不是，要的是一个公道，一个真相。</strong></p>
+<p><img src="/2020/%E4%BB%8E%E7%A5%81%E5%90%8C%E4%BC%9F%E5%88%B0%E8%8B%9F%E6%99%B6/7-1593325486.png" alt="从祁同伟到苟晶：人间倘遇不公，拿什么去“胜天半子”？"></p>
+<p>正如她自己所说。她现在生活也好了，也有孩子有家庭了，她之所以持续不断的说这些，不停举报不停斗争，其实是为了现在或者将来的所有孩子。高考应该是公平的。</p>
+<p>在中国，高考是被人骂得最多，又最受到珍惜的制度。</p>
+<p><strong>在有限的条件下，它创造了当今中国最大的公平。</strong></p>
+<p><strong>1977年，恢复高考后的录取率仅为4.8％，绝大多数考生榜上无名。但他们面对这样的考试结果并无怨言，“分数面前人人平等”虽然只是一种初级的平等，但却为人们期盼已久。</strong></p>
+<p>2007年，教育部考试中心等单位联合主办了“纪念恢复高考30年大型公众调查”，在参与调查的38087人中，当年参加高考时属于农村考生的占58.6%。</p>
+<p>无数面朝黄土背朝天、手握锄把的农家娃通过自己的努力，进入了城市，改变了人生际遇。</p>
+<p>十年寒窗苦读，慈母的泪水，父亲的汗水，背负的一整个家庭的期望，在一场中国公平的考试后，迎来自己的艳阳高照，或是大雨滂沱。</p>
+<p>仅从这一点讲，只要有高考在，阶层流动性就在，而高考的地位也就无可取代。</p>
+<p>这一连串的高考顶替案，该引起多少人的反思。</p>
+<p><strong>连高考都不能做到公平，还有什么能做到公平？</strong></p>
+<hr>
+<p>最后再多说一点。</p>
+<p>如果说苟晶从一个被顶替后只能读野鸡中专，毕业后四处打工的农家女，逆袭走到今天的企业管理者，唯一要感谢的。</p>
+<p>应该是社会的发展，特别是互联网的发展。</p>
+<p>是互联网给了无数人不用学历去拼搏竞争的机会。</p>
+<p>祁同伟的悲剧在于，在他那个年代，除了体制，其实并没有什么其他可以选择道路，被发配到了基层司法所后，要么认命，平平淡淡过一生；要么认怂，抛弃尊严屈服权力。</p>
+<p>祁同伟选择了后者。</p>
+<p>用《无间道》里的话来说：给个机会，我也想做个好人。</p>
+<p><img src="/2020/%E4%BB%8E%E7%A5%81%E5%90%8C%E4%BC%9F%E5%88%B0%E8%8B%9F%E6%99%B6/0-1593325487.jpeg" alt="从祁同伟到苟晶：人间倘遇不公，拿什么去“胜天半子”？"></p>
+<p>但不公的世道，没有给他这个机会。</p>
+<p><strong>而苟晶的幸运在于，她还有得选。</strong></p>
+<p>这个时代，还有一些不需要学历的工作，可以让她发挥个人的能力，闯出一片天空来。</p>
+<p>这有点像过去的“个人档案”。</p>
+<p>电视剧《玉观音》里，曾有过一个画面。</p>
+<p>孙俪扮演的安心在一家跆拳道馆做勤杂工，佟大为扮演的杨瑞觉得很不能理解，一个这么漂亮这么聪明的姑娘为什么会选择干这种粗活呢。</p>
+<p>安心回答说：<strong>因为我犯过错，所以只能找一家不要档案的单位工作。</strong></p>
+<p>现在的人很难理解那个年代里，档案对一个人有多重要。对八十年代以前出生的人而言，档案里的东西，基本就是一个人的一生，同时也是关于你政治历史、个人能力等的一切证明。</p>
+<p>而如果你档案里真的有“黑历史”，那基本就代表了你只能生活在这个社会的夹缝中，对于那个几乎100%的单位都是公有制的时代来说，一份有问题的档案，决定了你永远也跨进不了单位的大门。</p>
+<p>然而时至今日，我们应该感到庆幸，即使你档案里真的记录了你的各种问题，只要你不考公、不进体制内，都没人会去查你的档案，然后一巴掌把你拍死：这个人档案有问题，不能用。</p>
+<p>因为这个社会上，已经有太多不需要个人档案的工作了，去干IT、去外企、去创业、去开面馆、去拍视频、做直播、写公众号……你照样可以活得很精彩。</p>
+<p>苟晶所从事的电商互联网，同样如此。否则，现在的苟晶，多半还是像她的父亲一样，只能一辈子被拴在土地上，早早地衰老。</p>
+<p>另一方面，也正是因为互联网的到来，可以让每个人都有查询信息和发声的机会，才能让这些动辄一二十年前的丑陋事件重见天日。</p>
+<p>同样，电脑和手机屏幕前的我们，才能去关注这样的事件，去表达自己的关切，去引发舆论的热点。</p>
+<p>我们的关注，包括我写这篇文章，不只是为了苟晶。</p>
+<p>也是为了我们自己。</p>
+<p><strong>为了让社会的不公在阳光下无所遁形，让更多的人能不再遭遇“小小的任性”。</strong></p>
+<p><strong>毕竟，归根到底，一个黑化的祁同伟并不可怕，可怕的是千千万万个可以让他黑化的阴暗角落。</strong></p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/2020/多线程基础/" data-toggle="tooltip" data-placement="top" title="多线程与高并发（一）">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/2020/Mac上微信双开/" data-toggle="tooltip" data-placement="top" title="Mac和Windows微信双开">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=从祁同伟到苟晶：人间倘遇不公，拿什么去“胜天半子”？&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2020/从祁同伟到苟晶/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'a00494876d6f5f4bcbfd',
+      clientSecret: '33d3d0be81052a26f5a3535733b8b7854628564f',
+      repo: 'shifpeng.github.io',
+      owner: 'shifpeng',
+      admin: 'shifpeng',
+      id: 'Mon Sep 07 2020 19:12:18 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#part-1"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">part 1</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#part-2"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">part 2</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#part-3"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">part 3</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#part-4"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">part 4</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#part-5"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">part 5</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#part-6"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">part 6</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#深度好文" title="深度好文">深度好文</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://cuiqingcai.com/" target="_blank">静 觅 崔庆才</a>
+          </li>
+          
+          <li>
+            <a href="http://www.52nlp.cn/" target="_blank">我爱自然语言处理</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cnblogs.com/Steven-shi/" target="_blank">博客园 石福鹏</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/shifpeng">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Steven
+          2021
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://shifpeng.cn">Steven</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/mouseclick.js"  content='' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "shifpeng";
+    let ghPages = gh + ".github.io";
+    let pagePath = "2020/从祁同伟到苟晶/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://www.shifpeng.cn/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

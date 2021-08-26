@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="人最大的修养就是知人不评人"/>
+  <meta name="keyword" content="Java,Steven,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://www.shifpeng.cn/2021/Redis集群实战/">
+  <title>
+    
+      Redis集群实战 - Steven | java
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'StevenBlog/community'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">石福鹏</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+              
+              <a class="tag" href="/tags/#Redis" title="Redis">Redis</a>
+              
+              <a class="tag" href="/tags/#重学Redis" title="重学Redis">重学Redis</a>
+              
+            </div>
+            <h1>Redis集群实战</h1>
+            <h2 class="subheading">Redis集群实战、代理分区案例</h2>
+            <span class="meta">
+              Posted by 石福鹏 on
+              2021-04-08
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">36</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">7k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>无论是为了解决redis的高可用问题、还是为了可扩展性、或者是为了维护方便，用一款redis代理都是上佳的选择。在github上有众多开源的redis代理。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/joyieldInc/predixy">predixy</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/twitter/twemproxy">twemproxy</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CodisLabs/codis/">codis</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/projecteru/redis-cerberus">redis-cerberus</a></li>
+</ul>
+<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E5%AE%9E%E6%88%98/image-20210408165309225.png" alt="image-20210408165309225"></p>
+<h2 id="一、twemproxy">一、twemproxy</h2>
+<p><a target="_blank" rel="noopener" href="https://github.com/twitter/twemproxy">GitHub地址</a></p>
+<h3 id="1、安装部署">1、安装部署</h3>
+<p>先连接一台机器：然后下载源码</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]# cd /usr/local/</span><br><span class="line">[root@hadoop01 local]# mkdir twemproxy</span><br><span class="line">[root@hadoop01 local]# cd twemproxy/</span><br><span class="line">[root@hadoop01 twemproxy]# git clone https://github.com/twitter/twemproxy.git</span><br><span class="line">正克隆到 &#x27;twemproxy&#x27;...</span><br><span class="line">remote: Enumerating objects: 2984, done.</span><br><span class="line">remote: Total 2984 (delta 0), reused 0 (delta 0), pack-reused 2984</span><br><span class="line">接收对象中: 100% (2984/2984), 2.12 MiB | 91.00 KiB/s, done.</span><br><span class="line">处理 delta 中: 100% (2061/2061), done.</span><br><span class="line">[root@hadoop01 twemproxy]# </span><br></pre></td></tr></table></figure>
+<p>在readme中Build-&gt;A quick checklist中有这样一句话</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">auto</span>reconf -fvi &amp;&amp; ./configure needs <span class="built_in">auto</span>make <span class="keyword">and</span> libtool to be installed</span><br></pre></td></tr></table></figure>
+<p>所以，在编译安装之前，需要先安装<code>automake</code>、<code>libtool</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 twemproxy]# yum install automake libtool -y</span><br></pre></td></tr></table></figure>
+<p>然后根据readme中的教程：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 twemproxy]# cd twemproxy/</span><br><span class="line">[root@hadoop01 twemproxy]# ls</span><br><span class="line">ChangeLog  conf  configure.ac  contrib  Dockerfile  LICENSE  m4  Makefile.am  man  notes  NOTICE  README.md  scripts  src  tests  travis.sh</span><br><span class="line">[root@hadoop01 twemproxy]# autoreconf -fvi</span><br><span class="line">autoreconf: Entering directory `.&#x27;</span><br><span class="line">autoreconf: configure.ac: not using Gettext</span><br><span class="line">autoreconf: running: aclocal --force -I m4</span><br><span class="line">autoreconf: configure.ac: tracing</span><br><span class="line">autoreconf: configure.ac: adding subdirectory contrib/yaml-0.1.4 to autoreconf</span><br><span class="line">autoreconf: Entering directory `contrib/yaml-0.1.4&#x27;</span><br><span class="line">autoreconf: configure.ac: not using Autoconf</span><br><span class="line">autoreconf: Leaving directory `contrib/yaml-0.1.4&#x27;</span><br><span class="line">autoreconf: configure.ac: creating directory config</span><br><span class="line">autoreconf: running: libtoolize --copy --force</span><br><span class="line">libtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, `config&#x27;.</span><br><span class="line">libtoolize: copying file `config/ltmain.sh&#x27;</span><br><span class="line">libtoolize: putting macros in AC_CONFIG_MACRO_DIR, `m4&#x27;.</span><br><span class="line">libtoolize: copying file `m4/libtool.m4&#x27;</span><br><span class="line">libtoolize: copying file `m4/ltoptions.m4&#x27;</span><br><span class="line">libtoolize: copying file `m4/ltsugar.m4&#x27;</span><br><span class="line">libtoolize: copying file `m4/ltversion.m4&#x27;</span><br><span class="line">libtoolize: copying file `m4/lt~obsolete.m4&#x27;</span><br><span class="line">libtoolize: `AC_PROG_RANLIB&#x27; is rendered obsolete by `LT_INIT&#x27;</span><br><span class="line">autoreconf: running: /usr/bin/autoconf --force</span><br><span class="line">autoreconf: running: /usr/bin/autoheader --force</span><br><span class="line">autoreconf: running: automake --add-missing --copy --force-missing</span><br><span class="line">configure.ac:36: installing &#x27;config/config.guess&#x27;</span><br><span class="line">configure.ac:36: installing &#x27;config/config.sub&#x27;</span><br><span class="line">configure.ac:16: installing &#x27;config/install-sh&#x27;</span><br><span class="line">configure.ac:16: installing &#x27;config/missing&#x27;</span><br><span class="line">src/Makefile.am: installing &#x27;config/depcomp&#x27;</span><br><span class="line">autoreconf: Leaving directory `.&#x27;</span><br><span class="line">[root@hadoop01 twemproxy]# </span><br></pre></td></tr></table></figure>
+<p>执行完之后，就会发现目录下多了一个<code>configure</code>,然后执行<code>./configure --enable-debug=full</code>,完成之后，执行<code>make</code>，编译完成之后就会有可执行文件。去<code>src</code>目录下，可以看到一个<code>nutcracker</code></p>
+<p>我们顺便来看一下目录下的Scripts文件夹，这里面会有程序的<code>.init</code>，可以看到有一个<code>nutcracker</code>程序的<code>nutcracker.init</code>，打开可以看一下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">! /bin/sh</span></span><br><span class="line"><span class="meta">#</span><span class="bash"></span></span><br><span class="line"><span class="bash"><span class="comment"># chkconfig: - 55 45</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> description:  Twitter<span class="string">&#x27;s twemproxy nutcracker</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> processname: nutcracker</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> config: /etc/sysconfig/nutcracker</span></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> Source function library.</span></span></span><br><span class="line">. /etc/rc.d/init.d/functions</span><br><span class="line"></span><br><span class="line">USER=&quot;nobody&quot;</span><br><span class="line">OPTIONS=&quot;-d -c /etc/nutcracker/nutcracker.yml&quot;</span><br><span class="line"></span><br><span class="line">if [ -f /etc/sysconfig/nutcracker ];then</span><br><span class="line">    . /etc/sysconfig/nutcracker</span><br><span class="line">fi</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> Check that networking is up.</span></span></span><br><span class="line">if [ &quot;$NETWORKING&quot; = &quot;no&quot; ]</span><br><span class="line">then</span><br><span class="line">    exit 0</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">RETVAL=0</span><br><span class="line">prog=&quot;nutcracker&quot;</span><br><span class="line"></span><br><span class="line">start () &#123;</span><br><span class="line">    echo -n $&quot;Starting $prog: &quot;</span><br><span class="line">    #Test the config before start.</span><br><span class="line">    daemon --user $&#123;USER&#125; $&#123;prog&#125; $OPTIONS -t &gt;/dev/null  2&gt;&amp;1</span><br><span class="line">    RETVAL=$?</span><br><span class="line">    if [ $RETVAL -ne 0 ] ; then</span><br><span class="line">...</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>我们可以看到其实就是服务的启动和停止脚本</p>
+<blockquote>
+<p><code>/etc/init.d</code>下会有一些脚本，包含许多系统各种服务的启动和停止脚本，即做一些软件的服务，另外，用<code>service</code>命令可执行<code>init.d</code>目录中相应服务的脚本</p>
+<p><code>/etc/init.d</code>是指向<code>/etc/rc.d/init.d</code>的软连接</p>
+</blockquote>
+<p>那我们把这个文件拷贝过来,并给它重新起一个服务名</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 scripts]# cp nutcracker.init /etc/init.d/twemproxy</span><br><span class="line">[root@hadoop01 scripts]# cd /etc/init.d/</span><br><span class="line">[root@hadoop01 init.d]# ll</span><br><span class="line">总用量 56</span><br><span class="line">-rw-r--r--. 1 root root 18281 5月  22 2020 functions</span><br><span class="line">-rwxr-xr-x. 1 root root  4569 5月  22 2020 netconsole</span><br><span class="line">-rwxr-xr-x. 1 root root  7928 5月  22 2020 network</span><br><span class="line">-rw-r--r--. 1 root root  1160 10月  2 2020 README</span><br><span class="line">-rwxr-xr-x  1 root root  1702 3月  16 11:04 redis_6379</span><br><span class="line">-rwxr-xr-x  1 root root  1702 3月  16 11:14 redis_6380</span><br><span class="line">-rwxr-xr-x  1 root root  1702 3月  30 16:38 redis_6381</span><br><span class="line">-rw-r--r--  1 root root  1467 4月   9 15:19 twemproxy</span><br><span class="line">[root@hadoop01 init.d]# </span><br></pre></td></tr></table></figure>
+<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E5%AE%9E%E6%88%98/image-20210409152104662.png" alt="image-20210409152104662"></p>
+<p>虽然拷贝过去了，但是文件的颜色还没有变绿，说明文件还不能执行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 init.d]# chmod +x twemproxy </span><br></pre></td></tr></table></figure>
+<p>这样文件颜色就变绿了，但是还没好，因为这个init文件中的一些东西还需要准备,比如：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">OPTIONS</span>=<span class="string">&quot;-d -c /etc/nutcracker/nutcracker.yml&quot;</span></span><br></pre></td></tr></table></figure>
+<p>那就需要在上面的路径下有一个文件：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir <span class="regexp">/etc/</span>nutcracker</span><br></pre></td></tr></table></figure>
+<p>然后渠道源码目录下，把文件拷贝过来</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]# cd /usr/local/twemproxy/twemproxy/conf</span><br><span class="line">[root@hadoop01 conf]# ll</span><br><span class="line">总用量 12</span><br><span class="line">-rw-r--r-- 1 root root  209 4月   8 17:35 nutcracker.leaf.yml</span><br><span class="line">-rw-r--r-- 1 root root  151 4月   8 17:35 nutcracker.root.yml</span><br><span class="line">-rw-r--r-- 1 root root 1301 4月   8 17:35 nutcracker.yml</span><br><span class="line">[root@hadoop01 conf]# cp ./*  /etc/nutcracker/</span><br><span class="line">[root@hadoop01 conf]# cd /etc/nutcracker/</span><br><span class="line">[root@hadoop01 nutcracker]# ll</span><br><span class="line">总用量 12</span><br><span class="line">-rw-r--r-- 1 root root  209 4月   9 15:28 nutcracker.leaf.yml</span><br><span class="line">-rw-r--r-- 1 root root  151 4月   9 15:28 nutcracker.root.yml</span><br><span class="line">-rw-r--r-- 1 root root 1301 4月   9 15:28 nutcracker.yml</span><br><span class="line">[root@hadoop01 nutcracker]# </span><br></pre></td></tr></table></figure>
+<p>这个就配置好了，接着看，twemproxy文件中下面还有个<code>prog=&quot;nutcracker&quot;</code>，指定这个程序，但是没有路径，那么就是在它的环境变量path的基本目录下，比如根目录下的<code>bin</code>、<code>sbin</code>、<code>/usr/bin</code>目录，因此把刚才编译完的可执行程序拷贝一份放到<code>/usr/bin</code>下面</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 twemproxy]# cd /usr/local/twemproxy/twemproxy/src/</span><br><span class="line">[root@hadoop01 src]# cp nutcracker /usr/bin/</span><br></pre></td></tr></table></figure>
+<p>这个时候就可以在系统的任何地方直接使用<code> service twemproxy start</code>、<code> service twemproxy stop</code>等命令。</p>
+<h3 id="2、配置">2、配置</h3>
+<p>但是我们还没有修改twemproxy代理的配置文件，打开看看：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 src]# cd /etc/nutcracker/</span><br><span class="line">[root@hadoop01 nutcracker]# ll</span><br><span class="line">总用量 12</span><br><span class="line">-rw-r--r-- 1 root root  209 4月   9 15:28 nutcracker.leaf.yml</span><br><span class="line">-rw-r--r-- 1 root root  151 4月   9 15:28 nutcracker.root.yml</span><br><span class="line">-rw-r--r-- 1 root root 1301 4月   9 15:28 nutcracker.yml</span><br><span class="line">[root@hadoop01 nutcracker]# cp nutcracker.yml nutcracker.yml.bak</span><br><span class="line">[root@hadoop01 nutcracker]# vi nutcracker.yml</span><br><span class="line">[root@hadoop01 nutcracker]# </span><br></pre></td></tr></table></figure>
+<p>这个时候就可以按照github上的<a target="_blank" rel="noopener" href="https://github.com/twitter/twemproxy#readme">README.md</a>-<a target="_blank" rel="noopener" href="https://github.com/twitter/twemproxy#configuration">Configuration</a>来修改了,配置文件是这样的：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">alpha:</span> <span class="comment"># 名称随便起</span></span><br><span class="line">  <span class="attr">listen:</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span><span class="string">:22121</span>  <span class="comment"># 服务监听的端口号</span></span><br><span class="line">  <span class="attr">client_connections:</span> <span class="number">10</span><span class="string">.</span> <span class="comment"># 客户端连接数</span></span><br><span class="line">  <span class="attr">hash:</span> <span class="string">fnv1a_64</span>  <span class="comment"># 使用的hash算法</span></span><br><span class="line">  <span class="attr">distribution:</span> <span class="string">ketama</span> <span class="comment"># 分布式数据使用的哪种模型</span></span><br><span class="line">  <span class="attr">auto_eject_hosts:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">redis:</span> <span class="literal">true</span> <span class="comment"># 这里指定redis，因为这个程序即可以代理redis,也可以代理memcache</span></span><br><span class="line">  <span class="attr">server_retry_timeout:</span> <span class="number">2000</span></span><br><span class="line">  <span class="attr">server_failure_limit:</span> <span class="number">1</span></span><br><span class="line">  <span class="attr">servers:</span> <span class="comment"># redis服务，有几个节点就写几个 </span></span><br><span class="line">   <span class="bullet">-</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span><span class="string">:6379:1</span>  <span class="comment"># 最后的1表示权重</span></span><br></pre></td></tr></table></figure>
+<p>我们只需要监听一个，负载两个redis就可以了</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">alpha:</span></span><br><span class="line">  <span class="attr">listen:</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span><span class="string">:22121</span></span><br><span class="line">  <span class="attr">hash:</span> <span class="string">fnv1a_64</span></span><br><span class="line">  <span class="attr">distribution:</span> <span class="string">ketama</span></span><br><span class="line">  <span class="attr">auto_eject_hosts:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">redis:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">server_retry_timeout:</span> <span class="number">2000</span></span><br><span class="line">  <span class="attr">server_failure_limit:</span> <span class="number">1</span></span><br><span class="line">  <span class="attr">servers:</span></span><br><span class="line">   <span class="bullet">-</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span><span class="string">:6379:1</span></span><br><span class="line">   <span class="bullet">-</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span><span class="string">:6380:1</span></span><br></pre></td></tr></table></figure>
+<h3 id="3、使用">3、使用</h3>
+<p>先起两个临时的实例，既然是临时的，就先给这两个实例创建两个文件夹（这样就会拿当前目录作为它的持久化目录）</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root<span class="symbol">@hadoop01</span> nutcracker]<span class="meta"># cd /</span></span><br><span class="line">[root<span class="symbol">@hadoop01</span> /]<span class="meta"># mkdir data</span></span><br><span class="line">[root<span class="symbol">@hadoop01</span> /]<span class="meta"># cd data/</span></span><br><span class="line">[root<span class="symbol">@hadoop01</span> data]<span class="meta"># mkdir 6379</span></span><br><span class="line">[root<span class="symbol">@hadoop01</span> data]<span class="meta"># mkdir 6380</span></span><br><span class="line">[root<span class="symbol">@hadoop01</span> data]<span class="meta"># </span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>然后分别在6379、6380中启动两个实例(记得先把之前起的关掉)：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 data]# ps -fe | grep redis</span><br><span class="line">root       2944      1  0 4月07 ?       00:19:15 redis-server 127.0.0.1:6380</span><br><span class="line">root       2950      1  0 4月07 ?       00:20:11 redis-server 127.0.0.1:6381</span><br><span class="line">root       3016      1  1 4月07 ?       00:42:28 redis-server *:26379 [sentinel]</span><br><span class="line">root       3084      1  1 4月07 ?       00:42:20 redis-server *:26380 [sentinel]</span><br><span class="line">root       3150      1  1 4月07 ?       00:42:19 redis-server *:26381 [sentinel]</span><br><span class="line">root      12263  12180  0 16:00 pts/3    00:00:00 grep --color=auto redis</span><br><span class="line">[root@hadoop01 data]# kill -9 2944 2950 3016 3084 3150</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 data]# cd 6379/</span><br><span class="line">[root@hadoop01 6379]# redis-server --port 6379</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 data]# cd 6380/</span><br><span class="line">[root@hadoop01 6380]# redis-server --port 6380</span><br></pre></td></tr></table></figure>
+<p>启动代理服务:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]# service twemproxy start</span><br><span class="line">Reloading systemd:                                         [  确定  ]</span><br><span class="line">Starting twemproxy (via systemctl):                        [  确定  ]</span><br><span class="line">[root@hadoop01 ~]# </span><br></pre></td></tr></table></figure>
+<p>现在我们连接代理使用</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]# redis-cli -p 22121</span><br><span class="line">127.0.0.1:22121&gt; set k1 1111</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:22121&gt; set k2 2222</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:22121&gt; get k1</span><br><span class="line">&quot;1111&quot;</span><br><span class="line">127.0.0.1:22121&gt;</span><br></pre></td></tr></table></figure>
+<p>那么数据写到哪里去了,可以直接跳过代理连接redis查看</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]# redis-cli -p 6379</span><br><span class="line">127.0.0.1:6379&gt; keys *</span><br><span class="line">(empty array)</span><br><span class="line">127.0.0.1:6379&gt; </span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]# redis-cli -p 6380</span><br><span class="line">127.0.0.1:6380&gt; keys *</span><br><span class="line">1) &quot;k2&quot;</span><br><span class="line">2) &quot;k1&quot;</span><br><span class="line">127.0.0.1:6380&gt; </span><br></pre></td></tr></table></figure>
+<p>我们发现都存到6380里面了，这其实是代理中的算法分配的问题，我们在通过redis代理客户端设置一个值：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:22121&gt; set 1 323123</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:22121&gt; </span><br></pre></td></tr></table></figure>
+<p>再看6379:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; keys *</span><br><span class="line">1) &quot;1&quot;</span><br><span class="line">127.0.0.1:6379&gt; </span><br></pre></td></tr></table></figure>
+<h3 id="4、注意">4、注意</h3>
+<p>需要注意的是，通过代理，有一些命令是无法使用的：</p>
+<p><code>keys *</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:22121&gt; keys *</span><br><span class="line">Error: Server closed the connection</span><br><span class="line">127.0.0.1:22121&gt; </span><br></pre></td></tr></table></figure>
+<p>数据都分治了，所以命令不能用的</p>
+<p>这样的还有<code>watch</code>、事务<code>multi</code></p>
+<h2 id="二、predixy">二、predixy</h2>
+<p><a target="_blank" rel="noopener" href="https://github.com/joyieldInc/predixy/blob/master/README_CN.md">GitHub地址</a></p>
+<h3 id="1、安装">1、安装</h3>
+<p>查看Readme的Build,看着编译安装很简单，但是注意有一句话</p>
+<p><img src="/2021/Redis%E9%9B%86%E7%BE%A4%E5%AE%9E%E6%88%98/image-20210409162722428.png" alt="image-20210409162722428"></p>
+<p>但如果系统的Centos6版本，是没有11版本的编译器的，要升级挺麻烦的，所以直接拿编译好的直接使用：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 /]# mkdir soft</span><br><span class="line">[root@hadoop01 /]# cd soft/</span><br><span class="line">[root@hadoop01 soft]# wget https://github.com/joyieldInc/predixy/releases/download/1.0.5/predixy-1.0.5-bin-amd64-linux.tar.gz</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 soft]# tar xf predixy-1.0.5-bin-amd64-linux.tar.gz </span><br><span class="line">[root@hadoop01 soft]# ll</span><br><span class="line">总用量 5924</span><br><span class="line">drwxr-xr-x 6  501  501    4096 10月 20 2018 predixy-1.0.5</span><br><span class="line">-rw-r--r-- 1 root root 6061804 10月 20 2018 predixy-1.0.5-bin-amd64-linux.tar.gz</span><br><span class="line">[root@hadoop01 soft]# </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>然后继续按照<a target="_blank" rel="noopener" href="https://github.com/joyieldInc/predixy/blob/master/doc/config_CN.md">github上面的提示</a>配置使用</p>
+<h3 id="2、配置-2">2、配置</h3>
+<p>先看一下配置文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 predixy-1.0.5]# cd conf/</span><br><span class="line">[root@hadoop01 conf]# ll</span><br><span class="line">总用量 36</span><br><span class="line">-rw-rw-r-- 1 501 501 2395 10月 20 2018 auth.conf</span><br><span class="line">-rw-rw-r-- 1 501 501 1041 10月 20 2018 cluster.conf</span><br><span class="line">-rw-rw-r-- 1 501 501 3426 10月 20 2018 command.conf</span><br><span class="line">-rw-rw-r-- 1 501 501  781 10月 20 2018 dc.conf</span><br><span class="line">-rw-rw-r-- 1 501 501 2121 10月 20 2018 latency.conf</span><br><span class="line">-rw-rw-r-- 1 501 501 2547 10月 20 2018 predixy.conf</span><br><span class="line">-rw-rw-r-- 1 501 501 1421 10月 20 2018 sentinel.conf</span><br><span class="line">-rw-rw-r-- 1 501 501 2016 10月 20 2018 standalone.conf</span><br><span class="line">-rw-rw-r-- 1 501 501   98 10月 20 2018 try.conf</span><br><span class="line">[root@hadoop01 conf]# vi predixy.conf</span><br></pre></td></tr></table></figure>
+<h4 id="a、predixy-conf">a、<code>predixy.conf</code></h4>
+<p>我们先配置一下<code> predixy.conf</code>,有这么几个配置需要修改</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">################################## GENERAL ####################################</span></span></span><br><span class="line">Bind 127.0.0.1:7617 # 打开注释</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">################################## SERVERS ####################################</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Include cluster.conf</span></span><br><span class="line">Include sentinel.conf # 先打开哨兵模式（哨兵模式和cluster模式不能同时使用，只能使用一种）</span><br><span class="line"><span class="meta">#</span><span class="bash"> Include try.conf <span class="comment"># 这个先注释</span></span></span><br></pre></td></tr></table></figure>
+<h4 id="b、sentinel-conf">b、<code>sentinel.conf</code></h4>
+<p>修改哨兵的配置<code>vi sentinel.conf </code>：复制一份<code>#SentinelServerPool</code></p>
+<blockquote>
+<p>tips:(常识)</p>
+<p>1、光标放在下面的第二行最前面，然后按住shift,输入<code>:</code>，开启冒号模式，再按<code>.</code>，代表光标位置，再按<code>,$</code>代表到最后一行，然后按下<code>y</code>，代表复制的意思，然后回车。这样，这一段就复制完了，最后把光标移动道最后，按下<code>np</code>即可粘贴</p>
+<p>2、另外还需要把复制的内容注释去掉，依然是光标停留在复制内容的开始，然后输入<code>:</code>，开启冒号模式，再按<code>.</code>，代表光标位置，再按<code>,$</code>代表到最后一行，然后按下<code>s</code>,然后把#替换成什么都没有，即<code>/#//</code>,完整的就是<code>:.,$s/#//</code>,然后回车</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Examples:</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">SentinelServerPool &#123;</span></span><br><span class="line"><span class="meta">#</span><span class="bash">    Databases 16</span></span><br><span class="line"><span class="meta">#</span><span class="bash">    Hash crc16 <span class="comment"># hash算法</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">    HashTag <span class="string">&quot;&#123;&#125;&quot;</span> <span class="comment"># 讲带&#123;xx&#125;相同的的扔到一个节点中</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">    Distribution modula</span></span><br><span class="line"><span class="meta">#</span><span class="bash">    MasterReadPriority 60</span></span><br><span class="line"><span class="meta">#</span><span class="bash">    StaticSlaveReadPriority 50</span></span><br><span class="line"><span class="meta">#</span><span class="bash">    DynamicSlaveReadPriority 50</span></span><br><span class="line"><span class="meta">#</span><span class="bash">    RefreshInterval 1</span></span><br><span class="line"><span class="meta">#</span><span class="bash">    ServerTimeout 1</span></span><br><span class="line"><span class="meta">#</span><span class="bash">    ServerFailureLimit 10</span></span><br><span class="line"><span class="meta">#</span><span class="bash">    ServerRetryTimeout 1</span></span><br><span class="line"><span class="meta">#</span><span class="bash">    KeepAlive 120</span></span><br><span class="line"><span class="meta">#</span><span class="bash">    Sentinels &#123;</span></span><br><span class="line"><span class="meta">#</span><span class="bash">        + 10.2.2.2:7500</span></span><br><span class="line"><span class="meta">#</span><span class="bash">        + 10.2.2.3:7500</span></span><br><span class="line"><span class="meta">#</span><span class="bash">        + 10.2.2.4:7500</span></span><br><span class="line"><span class="meta">#</span><span class="bash">    &#125;</span></span><br><span class="line"><span class="meta">#</span><span class="bash">    Group shard001 &#123;</span></span><br><span class="line"><span class="meta">#</span><span class="bash">    &#125;</span></span><br><span class="line"><span class="meta">#</span><span class="bash">    Group shard002 &#123;</span></span><br><span class="line"><span class="meta">#</span><span class="bash">    &#125;</span></span><br><span class="line"><span class="meta">#</span><span class="bash">&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>比如配置如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">SentinelServerPool &#123;</span><br><span class="line">    Databases 16</span><br><span class="line">    Hash crc16</span><br><span class="line">    HashTag &quot;&#123;&#125;&quot;</span><br><span class="line">    Distribution modula</span><br><span class="line">    MasterReadPriority 60</span><br><span class="line">    StaticSlaveReadPriority 50</span><br><span class="line">    DynamicSlaveReadPriority 50</span><br><span class="line">    RefreshInterval 1</span><br><span class="line">    ServerTimeout 1</span><br><span class="line">    ServerFailureLimit 10</span><br><span class="line">    ServerRetryTimeout 1</span><br><span class="line">    KeepAlive 120</span><br><span class="line">    Sentinels &#123; # 哨兵的ip+端口</span><br><span class="line">        + 127.0.0.1:26379</span><br><span class="line">        + 127.0.0.1:26380</span><br><span class="line">        + 127.0.0.1:26381</span><br><span class="line">    &#125;</span><br><span class="line">    Group mymaster01 &#123;  # 哨兵配置文件中监控的master的名称</span><br><span class="line">    &#125;</span><br><span class="line">    Group mymaster02 &#123; # 如果监控的是两套主从复制，那就要再加一个group，Distribution指定的模型就会在这里列出的两套主从做hash+取模，然后放到计算后的里面</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3、使用-2">3、使用</h3>
+<p>之前我们做过一些哨兵的配置</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 conf]# cd /test/</span><br><span class="line">[root@hadoop01 test]# ll</span><br><span class="line">总用量 252</span><br><span class="line">-rw-r--r-- 1 root root 81553 3月  30 17:27 6379.conf</span><br><span class="line">-rw-r--r-- 1 root root 81635 4月   2 17:44 6380.conf</span><br><span class="line">-rw-r--r-- 1 root root 81610 4月   2 17:44 6381.conf</span><br><span class="line">-rw-r--r-- 1 root root   602 4月   2 17:44 sentinel_6379.conf</span><br><span class="line">-rw-r--r-- 1 root root   602 4月   2 17:44 sentinel_6380.conf</span><br><span class="line">-rw-r--r-- 1 root root   602 4月   2 17:44 sentinel_6381.conf</span><br><span class="line">[root@hadoop01 test]# </span><br></pre></td></tr></table></figure>
+<h4 id="a、修改哨兵配置，监控两台主从">a、修改哨兵配置，监控两台主从</h4>
+<p>这里我们把哨兵的配置文件做一些修改，比如<code>sentinel_6379.conf</code>，修改节点的端口号为<code>36381</code>，再增加一个<code>46381</code>(到时候我们需要指定端口起几个服务)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 把文件中不用的先删掉，留下下面的两行</span></span><br><span class="line">port 26379</span><br><span class="line">sentinel monitor mymaster01 127.0.0.1 36379 2</span><br><span class="line">sentinel monitor mymaster02 127.0.0.1 46379 2</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意这里的名称跟上面predixy中<code>sentinel.conf</code>的配置中group指定是必须是一样的</p>
+</blockquote>
+<p>同理：<code>sentinel_6380.conf</code>，除了哨兵自己的端口不同之外，其他都一样</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 把文件中不用的先删掉，留下下面的两行</span></span><br><span class="line">port 26380</span><br><span class="line">sentinel monitor mymaster01 127.0.0.1 36379 2</span><br><span class="line">sentinel monitor mymaster02 127.0.0.1 46379 2</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 把文件中不用的先删掉，留下下面的两行</span></span><br><span class="line">port 26381</span><br><span class="line">sentinel monitor mymaster01 127.0.0.1 36379 2</span><br><span class="line">sentinel monitor mymaster02 127.0.0.1 46379 2</span><br></pre></td></tr></table></figure>
+<p>所以这个时候应该有两套主从，分别是<code>363xx</code>,其中<code>36379</code>是主；<code>463xx</code>,其中<code>46379</code>是主</p>
+<h4 id="b、启动哨兵">b、启动哨兵</h4>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 test]# redis-server sentinel_6379.conf  --sentinel</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]# cd /test/</span><br><span class="line">[root@hadoop01 test]# redis-server sentinel_6380.conf  --sentinel</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]# cd /test/</span><br><span class="line">[root@hadoop01 test]# redis-server sentinel_6381.conf  --sentinel</span><br></pre></td></tr></table></figure>
+<h4 id="c、启动两对主从解节点">c、启动两对主从解节点</h4>
+<p>因为临时为了演示，所以单独创建文件夹</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]# cd /test/</span><br><span class="line">[root@hadoop01 test]# mkdir 36379</span><br><span class="line">[root@hadoop01 test]# mkdir 36380</span><br><span class="line">[root@hadoop01 test]# mkdir 46380</span><br><span class="line">[root@hadoop01 test]# mkdir 46379</span><br></pre></td></tr></table></figure>
+<p>启动第一个主</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 test]# cd 36379/</span><br><span class="line">[root@hadoop01 36379]# redis-server --port 36379</span><br></pre></td></tr></table></figure>
+<p>启动第一个主对应的从</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 test]# cd 36380</span><br><span class="line">[root@hadoop01 36380]# redis-server --port 36380 --replicaof 127.0.0.1 36379</span><br></pre></td></tr></table></figure>
+<p>再起另一对：</p>
+<p>先起主：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]# cd /test/</span><br><span class="line">[root@hadoop01 test]# cd 46379/</span><br><span class="line">[root@hadoop01 46379]# redis-server --port 46379</span><br></pre></td></tr></table></figure>
+<p>启从：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]# cd /test/</span><br><span class="line">[root@hadoop01 test]# cd 46380/</span><br><span class="line">[root@hadoop01 46380]# redis-server --port 46380 --replicaof 127.0.0.1 46379</span><br></pre></td></tr></table></figure>
+<h4 id="d、-启动predixy代理">d、 启动<code>predixy</code>代理</h4>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 test]# cd /soft/predixy-1.0.5/bin/</span><br><span class="line">[root@hadoop01 bin]# ./predixy  ../conf/predixy.conf </span><br><span class="line">2021-04-12 17:04:58.409822 N Proxy.cpp:112 predixy listen in 127.0.0.1:7617</span><br><span class="line">2021-04-12 17:04:58.410092 N Proxy.cpp:143 predixy running with Name:PredixyExample Workers:1</span><br><span class="line">2021-04-12 17:04:58.412247 N Handler.cpp:454 h 0 create connection pool for server 127.0.0.1:26381</span><br><span class="line">2021-04-12 17:04:58.413050 N ConnectConnectionPool.cpp:42 h 0 create server connection 127.0.0.1:26381 5</span><br><span class="line">2021-04-12 17:04:58.413144 N Handler.cpp:454 h 0 create connection pool for server 127.0.0.1:26380</span><br><span class="line">2021-04-12 17:04:58.413158 N ConnectConnectionPool.cpp:42 h 0 create server connection 127.0.0.1:26380 6</span><br><span class="line">2021-04-12 17:04:58.414741 N StandaloneServerPool.cpp:422 sentinel server pool group mymaster01 create master server 127.0.0.1:36379 </span><br><span class="line">2021-04-12 17:04:58.414760 N StandaloneServerPool.cpp:472 sentinel server pool group mymaster01 create slave server 127.0.0.1:36380 </span><br><span class="line">2021-04-12 17:04:58.414771 N StandaloneServerPool.cpp:472 sentinel server pool group mymaster02 create slave server 127.0.0.1:46380 </span><br><span class="line">2021-04-12 17:04:58.414784 N StandaloneServerPool.cpp:422 sentinel server pool group mymaster02 create master server 127.0.0.1:46379 </span><br></pre></td></tr></table></figure>
+<p>根据日志就可以看到两对主从都发现了，同时<code>predixy</code>监听的是<code>7617</code>端口</p>
+<h4 id="e、客户端连接代理">e、客户端连接代理</h4>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]# redis-cli -p 7617</span><br><span class="line">127.0.0.1:7617&gt; set k1 aaaa</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:7617&gt; get k1</span><br><span class="line">&quot;aaaa&quot;</span><br></pre></td></tr></table></figure>
+<p>这个时候我们看下数据落在哪里了，查看两个主</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]# redis-cli -p 36379</span><br><span class="line">127.0.0.1:36379&gt; keys *</span><br><span class="line">1) &quot;k1&quot;</span><br><span class="line">127.0.0.1:36379&gt; </span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]# redis-cli -p 46379</span><br><span class="line">127.0.0.1:46379&gt; keys *</span><br><span class="line">1) &quot;k2&quot;</span><br><span class="line">127.0.0.1:46379&gt; </span><br></pre></td></tr></table></figure>
+<h5 id="使用hash-tag">使用<code>hash_tag</code></h5>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:7617&gt; set &#123;goods&#125;k1 asdsadasdas</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:7617&gt; set &#123;goods&#125;k2 5h5g5h5h5h5</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:76</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]# redis-cli -p 36379</span><br><span class="line">127.0.0.1:36379&gt; keys *</span><br><span class="line">1) &quot;&#123;goods&#125;k2&quot;</span><br><span class="line">2) &quot;k1&quot;</span><br><span class="line">3) &quot;&#123;goods&#125;k1&quot;</span><br><span class="line">127.0.0.1:36379&gt; </span><br></pre></td></tr></table></figure>
+<blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:7617&gt; WATCH &#123;goods&#125;k1 </span><br><span class="line">(error) ERR forbid transaction in current server pool</span><br><span class="line">127.0.0.1:7617&gt; </span><br></pre></td></tr></table></figure>
+<p>因为上面配置了两套主从，数据被分治了，所以会直接报错。</p>
+<p>但是<code>predixy</code>说支持事务，即只支持单个Group</p>
+<p>所以：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 ~]# cd /soft/predixy-1.0.5/conf/</span><br><span class="line">[root@hadoop01 conf]# vi sentinel.conf </span><br><span class="line">[root@hadoop01 conf]#</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> Group mymaster01 &#123;</span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line"><span class="meta">#</span><span class="bash"> Group mymaster02 &#123;</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> &#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>注释掉Group mymaster02，这个时候，重新启动<code>predixy</code>，这个时候数据就只会往第一个主从中写了</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 bin]# ./predixy  ../conf/predixy.conf </span><br><span class="line">2021-04-12 17:22:54.165155 N Proxy.cpp:112 predixy listen in 127.0.0.1:7617</span><br><span class="line">2021-04-12 17:22:54.165271 N Proxy.cpp:143 predixy running with Name:PredixyExample Workers:1</span><br><span class="line">2021-04-12 17:22:54.165778 N Handler.cpp:454 h 0 create connection pool for server 127.0.0.1:26381</span><br><span class="line">2021-04-12 17:22:54.166242 N ConnectConnectionPool.cpp:42 h 0 create server connection 127.0.0.1:26381 5</span><br><span class="line">2021-04-12 17:22:54.166929 N Handler.cpp:454 h 0 create connection pool for server 127.0.0.1:26380</span><br><span class="line">2021-04-12 17:22:54.166952 N ConnectConnectionPool.cpp:42 h 0 create server connection 127.0.0.1:26380 6</span><br><span class="line">2021-04-12 17:22:54.170039 N StandaloneServerPool.cpp:472 sentinel server pool group mymaster01 create slave server 127.0.0.1:36380 </span><br><span class="line">2021-04-12 17:22:54.170068 N StandaloneServerPool.cpp:422 sentinel server pool group mymaster01 create master server 127.0.0.1:36379 </span><br></pre></td></tr></table></figure>
+<p>这个时候也就只能发现一组的主从了，</p>
+<p>这个时候使用<code>Watch</code>、事务等就没问题了</p>
+</blockquote>
+<h4 id="f、主节点挂了">f、主节点挂了</h4>
+<p>如果主节点挂了，哨兵会根据配置的时间，进行投票。选举出新的主，这个过程对客户端来说是无感知的，这里就不进行演示了</p>
+<p>挂掉<code>36379</code>节点，下面是哨兵的日志，可以看出：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1528:X 12 Apr 2021 17:35:46.683 # +sdown master mymaster01 127.0.0.1 36379</span><br><span class="line">1528:X 12 Apr 2021 17:35:46.723 # +new-epoch 1</span><br><span class="line">1528:X 12 Apr 2021 17:35:46.725 # +vote-for-leader d008b1f4dda68f2cd7b937208cab3c3501f9407a 1</span><br><span class="line">1528:X 12 Apr 2021 17:35:46.767 # +odown master mymaster01 127.0.0.1 36379 #quorum 3/2</span><br><span class="line">1528:X 12 Apr 2021 17:35:46.770 # Next failover delay: I will not start a failover before Mon Apr 12 17:41:47 2021</span><br><span class="line">1528:X 12 Apr 2021 17:35:48.552 # +config-update-from sentinel d008b1f4dda68f2cd7b937208cab3c3501f9407a 127.0.0.1 26381 @ mymaster01 127.0.0.1 36379</span><br><span class="line">1528:X 12 Apr 2021 17:35:48.552 # +switch-master mymaster01 127.0.0.1 36379 127.0.0.1 36380</span><br><span class="line">1528:X 12 Apr 2021 17:35:48.552 * +slave slave 127.0.0.1:36379 127.0.0.1 36379 @ mymaster01 127.0.0.1 36380</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>客户端依然可以获取到数据</p>
+<h2 id="三、Redis-Cluster-集群-（Redis自身的集群）">三、Redis Cluster(集群)（Redis自身的集群）</h2>
+<p>期望：Redis可以组建一套无主模型的多节点的cluster,每个节点认领一些槽位</p>
+<p>那么引出问题：</p>
+<p>需要启动几台？每台分配哪些槽位？等等</p>
+<p>redis有一套脚本可供<strong>演练</strong> 使用:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 test]# cd /usr/local/redis-6.0.0/utils/create-cluster/</span><br><span class="line">[root@hadoop01 create-cluster]# ll</span><br><span class="line">总用量 8</span><br><span class="line">-rwxrwxr-x 1 root root 2694 4月  30 2020 create-cluster</span><br><span class="line">-rw-rw-r-- 1 root root 1436 4月  30 2020 README</span><br><span class="line">[root@hadoop01 create-cluster]# </span><br></pre></td></tr></table></figure>
+<p>其中RAEADME中会给出步骤：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">Create-custer is a small script used to easily start a big number of Redis</span><br><span class="line">instances configured to run in cluster mode. Its main goal is to allow manual</span><br><span class="line">testing in a condition which is not easy to replicate with the Redis cluster</span><br><span class="line">unit tests, for example when a lot of instances are needed in order to trigger</span><br><span class="line">a given bug.</span><br><span class="line"></span><br><span class="line">The tool can also be used just to easily create a number of instances in a</span><br><span class="line">Redis Cluster in order to experiment a bit with the system.</span><br><span class="line"></span><br><span class="line"><span class="section">USAGE</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line">To create a cluster, follow these steps:</span><br><span class="line"></span><br><span class="line"><span class="bullet">1.</span> Edit create-cluster and change the start / end port, depending on the</span><br><span class="line">number of instances you want to create.</span><br><span class="line"><span class="bullet">2.</span> Use &quot;./create-cluster start&quot; in order to run the instances.</span><br><span class="line"><span class="bullet">3.</span> Use &quot;./create-cluster create&quot; in order to execute redis-cli --cluster create, so that</span><br><span class="line">an actual Redis cluster will be created. (If you&#x27;re accessing your setup via a local container, ensure that the CLUSTER<span class="emphasis">_HOST value is changed to your local IP)</span></span><br><span class="line"><span class="emphasis">4. Now you are ready to play with the cluster. AOF files and logs for each instances are created in the current directory.</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">In order to stop a cluster:</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">1. Use &quot;./create-cluster stop&quot; to stop all the instances. After you stopped the instances you can use &quot;./create-cluster start&quot; to restart them if you change your mind.</span></span><br><span class="line"><span class="emphasis">2. Use &quot;./create-cluster clean&quot; to remove all the AOF / log files to restart with a clean environment.</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">Use the command &quot;./create-cluster help&quot; to get the full list of features.</span></span><br><span class="line"><span class="emphasis"></span></span><br></pre></td></tr></table></figure>
+<h3 id="1、启动节点">1、启动节点</h3>
+<p>根据<code>create-cluster</code>中的配置，会启动6个节点</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 create-cluster]# ./create-cluster start </span><br><span class="line">Starting 30001</span><br><span class="line">Starting 30002</span><br><span class="line">Starting 30003</span><br><span class="line">Starting 30004</span><br><span class="line">Starting 30005</span><br><span class="line">Starting 30006</span><br><span class="line">[root@hadoop01 create-cluster]#</span><br></pre></td></tr></table></figure>
+<h3 id="2、分配槽位">2、分配槽位</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 create-cluster]# ./create-cluster create</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; Performing <span class="built_in">hash</span> slots allocation on 6 nodes...</span></span><br><span class="line">Master[0] -&gt; Slots 0 - 5460  # 主节点1分配了0～5460个槽位</span><br><span class="line">Master[1] -&gt; Slots 5461 - 10922</span><br><span class="line">Master[2] -&gt; Slots 10923 - 16383</span><br><span class="line">Adding replica 127.0.0.1:30005 to 127.0.0.1:30001</span><br><span class="line">Adding replica 127.0.0.1:30006 to 127.0.0.1:30002</span><br><span class="line">Adding replica 127.0.0.1:30004 to 127.0.0.1:30003</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; Trying to optimize slaves allocation <span class="keyword">for</span> anti-affinity</span></span><br><span class="line">[WARNING] Some slaves are in the same host as their master</span><br><span class="line">M: 2fdfba4c063aa6fca428f4fced8427da28ec12be 127.0.0.1:30001</span><br><span class="line">   slots:[0-5460] (5461 slots) master</span><br><span class="line">M: 849e6ddf02017ce713c7a1dc2480d3870f2aee00 127.0.0.1:30002</span><br><span class="line">   slots:[5461-10922] (5462 slots) master</span><br><span class="line">M: c5faf88b4462b2ff62d150165d82e338c3dde013 127.0.0.1:30003</span><br><span class="line">   slots:[10923-16383] (5461 slots) master</span><br><span class="line">S: 70c0cedacdbef28a09def8343000ab365f1026d7 127.0.0.1:30004</span><br><span class="line">   replicates c5faf88b4462b2ff62d150165d82e338c3dde013</span><br><span class="line">S: 75be43142db225ca741728740c061c58f2a0d946 127.0.0.1:30005</span><br><span class="line">   replicates 2fdfba4c063aa6fca428f4fced8427da28ec12be</span><br><span class="line">S: 538e3647ec21e1a0957ff91145163e0f4a16fcb8 127.0.0.1:30006</span><br><span class="line">   replicates 849e6ddf02017ce713c7a1dc2480d3870f2aee00</span><br><span class="line">Can I set the above configuration? (type &#x27;yes&#x27; to accept): yes</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; Nodes configuration updated</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; Assign a different config epoch to each node</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; Sending CLUSTER MEET messages to join the cluster</span></span><br><span class="line">Waiting for the cluster to join</span><br><span class="line">..</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; Performing Cluster Check (using node 127.0.0.1:30001)</span></span><br><span class="line">M: 2fdfba4c063aa6fca428f4fced8427da28ec12be 127.0.0.1:30001</span><br><span class="line">   slots:[0-5460] (5461 slots) master</span><br><span class="line">   1 additional replica(s)</span><br><span class="line">S: 70c0cedacdbef28a09def8343000ab365f1026d7 127.0.0.1:30004</span><br><span class="line">   slots: (0 slots) slave</span><br><span class="line">   replicates c5faf88b4462b2ff62d150165d82e338c3dde013</span><br><span class="line">M: c5faf88b4462b2ff62d150165d82e338c3dde013 127.0.0.1:30003</span><br><span class="line">   slots:[10923-16383] (5461 slots) master</span><br><span class="line">   1 additional replica(s)</span><br><span class="line">M: 849e6ddf02017ce713c7a1dc2480d3870f2aee00 127.0.0.1:30002</span><br><span class="line">   slots:[5461-10922] (5462 slots) master</span><br><span class="line">   1 additional replica(s)</span><br><span class="line">S: 538e3647ec21e1a0957ff91145163e0f4a16fcb8 127.0.0.1:30006</span><br><span class="line">   slots: (0 slots) slave</span><br><span class="line">   replicates 849e6ddf02017ce713c7a1dc2480d3870f2aee00</span><br><span class="line">S: 75be43142db225ca741728740c061c58f2a0d946 127.0.0.1:30005</span><br><span class="line">   slots: (0 slots) slave</span><br><span class="line">   replicates 2fdfba4c063aa6fca428f4fced8427da28ec12be</span><br><span class="line">[OK] All nodes agree about slots configuration.</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; Check <span class="keyword">for</span> open slots...</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; Check slots coverage...</span></span><br><span class="line">[OK] All 16384 slots covered.</span><br><span class="line">[root@hadoop01 create-cluster]# </span><br></pre></td></tr></table></figure>
+<h3 id="3、使用-3">3、使用</h3>
+<p>比如我们现在创建一个普通客户端连接<code>30001</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 create-cluster]# redis-cli -p 30001</span><br><span class="line">127.0.0.1:30001&gt; set k1 qweqweqw</span><br><span class="line">(error) MOVED 12706 127.0.0.1:30003</span><br><span class="line">127.0.0.1:30001&gt; </span><br></pre></td></tr></table></figure>
+<p>发现报错了，其实就是前面讲的，传进去的key经过hash+取模之后，发现车存储的槽位和节点不在30001上，而这种普通的连接方式只能以报错+<code>MOCED</code>关键字的形式返回</p>
+<p>要正确处理就需要加上<code>-c</code>:<code>-c</code>即<code>cluster</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 create-cluster]# redis-cli -c -p 30001</span><br><span class="line">127.0.0.1:30001&gt; set k1 12313123123	 # 会跳到节点30003</span><br><span class="line"><span class="meta">-&gt;</span><span class="bash"> Redirected to slot [12706] located at 127.0.0.1:30003</span></span><br><span class="line">OK</span><br><span class="line">127.0.0.1:30003&gt; set k2 3ed33d3d</span><br><span class="line"><span class="meta">-&gt;</span><span class="bash"> Redirected to slot [449] located at 127.0.0.1:30001 <span class="comment"># 会跳到节点30001</span></span></span><br><span class="line">OK</span><br><span class="line">127.0.0.1:30001&gt; get k2</span><br><span class="line">&quot;3ed33d3d&quot;</span><br><span class="line">127.0.0.1:30001&gt; get k1</span><br><span class="line"><span class="meta">-&gt;</span><span class="bash"> Redirected to slot [12706] located at 127.0.0.1:30003 <span class="comment"># 会跳到节点30003</span></span></span><br><span class="line">&quot;12313123123&quot;</span><br><span class="line">127.0.0.1:30003&gt; </span><br></pre></td></tr></table></figure>
+<p>需要注意一件事：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:30003&gt; WATCH k2</span><br><span class="line"><span class="meta">-&gt;</span><span class="bash"> Redirected to slot [449] located at 127.0.0.1:30001</span></span><br><span class="line">OK</span><br><span class="line">127.0.0.1:30001&gt; MULTI  # 事务时开在30001上的，即命令时缓存在30001上的</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:30001&gt; set k1 34rf34434rf</span><br><span class="line"><span class="meta">-&gt;</span><span class="bash"> Redirected to slot [12706] located at 127.0.0.1:30003</span></span><br><span class="line">OK</span><br><span class="line">127.0.0.1:30003&gt; set key sadasdas</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:30003&gt; exec  # 所以这里执行的时候，就会报错</span><br><span class="line">(error) ERR EXEC without MULTI</span><br><span class="line">127.0.0.1:30003&gt; </span><br></pre></td></tr></table></figure>
+<p>那如何解决：用<code>hash_tag</code>，就可以正常使用了</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:30003&gt; set &#123;oo&#125;k1  321312312312</span><br><span class="line"><span class="meta">-&gt;</span><span class="bash"> Redirected to slot [1629] located at 127.0.0.1:30001</span></span><br><span class="line">OK</span><br><span class="line">127.0.0.1:30001&gt; set &#123;oo&#125;k2  32wed323f23</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:30001&gt; WATCH &#123;oo&#125;k1</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:30001&gt; MULTI</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:30001&gt; set &#123;oo&#125;k2 2x32d32d3 </span><br><span class="line">QUEUED</span><br><span class="line">127.0.0.1:30001&gt; exec</span><br><span class="line">1) OK</span><br><span class="line">127.0.0.1:30001&gt; </span><br></pre></td></tr></table></figure>
+<h3 id="4、结束节点">4、结束节点</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 create-cluster]# ./create-cluster stop</span><br><span class="line">Stopping 30001</span><br><span class="line">Stopping 30002</span><br><span class="line">Stopping 30003</span><br><span class="line">Stopping 30004</span><br><span class="line">Stopping 30005</span><br><span class="line">Stopping 30006</span><br><span class="line">[root@hadoop01 create-cluster]# ./create-cluster clean</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="5、自定义节点">5、自定义节点</h3>
+<p>当然也可以不使用脚本，而是使用客户端命令指定,可以使用<code>redis-cli --cluster help</code>查看</p>
+<p>注意这种情况需要在集群的配置文件中开启：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cluster-<span class="builtin-name">enable</span> <span class="literal">yes</span></span><br></pre></td></tr></table></figure>
+<p>我们先把那6台机器启动：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 create-cluster]# ./create-cluster start</span><br><span class="line">Starting 30001</span><br><span class="line">Starting 30002</span><br><span class="line">Starting 30003</span><br><span class="line">Starting 30004</span><br><span class="line">Starting 30005</span><br><span class="line">Starting 30006</span><br></pre></td></tr></table></figure>
+<p>槽位分配我自己指定，</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 create-cluster]# redis-cli --cluster  create 127.0.0.1:30001 127.0.0.1:30002 127.0.0.1:30003 127.0.0.1:30004  127.0.0.1:30005  127.0.0.1:30006 --cluster-replicas 1</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; Performing <span class="built_in">hash</span> slots allocation on 6 nodes...</span></span><br><span class="line">Master[0] -&gt; Slots 0 - 5460</span><br><span class="line">Master[1] -&gt; Slots 5461 - 10922</span><br><span class="line">Master[2] -&gt; Slots 10923 - 16383</span><br><span class="line">Adding replica 127.0.0.1:30005 to 127.0.0.1:30001</span><br><span class="line">Adding replica 127.0.0.1:30006 to 127.0.0.1:30002</span><br><span class="line">Adding replica 127.0.0.1:30004 to 127.0.0.1:30003</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; Trying to optimize slaves allocation <span class="keyword">for</span> anti-affinity</span></span><br><span class="line">[WARNING] Some slaves are in the same host as their master</span><br><span class="line">M: 999245f7a1472d76a466eb77e5affc0ca014d8bf 127.0.0.1:30001</span><br><span class="line">   slots:[0-5460] (5461 slots) master</span><br><span class="line">M: 7f7d6d96810d33cef99401a3d02dad959b266d39 127.0.0.1:30002</span><br><span class="line">   slots:[5461-10922] (5462 slots) master</span><br><span class="line">M: 9431d5aebbc8d2ccd3a7494067dc559b948cc623 127.0.0.1:30003</span><br><span class="line">   slots:[10923-16383] (5461 slots) master</span><br><span class="line">S: 841944826c05e8275375fb4d164f16eb46f4a9a2 127.0.0.1:30004</span><br><span class="line">   replicates 7f7d6d96810d33cef99401a3d02dad959b266d39</span><br><span class="line">S: 0fedc1b0730a888c38e9fb8a024e8aa3be9b0ee5 127.0.0.1:30005</span><br><span class="line">   replicates 9431d5aebbc8d2ccd3a7494067dc559b948cc623</span><br><span class="line">S: 81bda6c470225a0cd7c4287b47d037cbbb81f608 127.0.0.1:30006</span><br><span class="line">   replicates 999245f7a1472d76a466eb77e5affc0ca014d8bf</span><br><span class="line">Can I set the above configuration? (type &#x27;yes&#x27; to accept): yes</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; Nodes configuration updated</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; Assign a different config epoch to each node</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; Sending CLUSTER MEET messages to join the cluster</span></span><br><span class="line">Waiting for the cluster to join</span><br><span class="line">..</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; Performing Cluster Check (using node 127.0.0.1:30001)</span></span><br><span class="line">M: 999245f7a1472d76a466eb77e5affc0ca014d8bf 127.0.0.1:30001</span><br><span class="line">   slots:[0-5460] (5461 slots) master</span><br><span class="line">   1 additional replica(s)</span><br><span class="line">S: 81bda6c470225a0cd7c4287b47d037cbbb81f608 127.0.0.1:30006</span><br><span class="line">   slots: (0 slots) slave</span><br><span class="line">   replicates 999245f7a1472d76a466eb77e5affc0ca014d8bf</span><br><span class="line">S: 841944826c05e8275375fb4d164f16eb46f4a9a2 127.0.0.1:30004</span><br><span class="line">   slots: (0 slots) slave</span><br><span class="line">   replicates 7f7d6d96810d33cef99401a3d02dad959b266d39</span><br><span class="line">M: 9431d5aebbc8d2ccd3a7494067dc559b948cc623 127.0.0.1:30003</span><br><span class="line">   slots:[10923-16383] (5461 slots) master</span><br><span class="line">   1 additional replica(s)</span><br><span class="line">S: 0fedc1b0730a888c38e9fb8a024e8aa3be9b0ee5 127.0.0.1:30005</span><br><span class="line">   slots: (0 slots) slave</span><br><span class="line">   replicates 9431d5aebbc8d2ccd3a7494067dc559b948cc623</span><br><span class="line">M: 7f7d6d96810d33cef99401a3d02dad959b266d39 127.0.0.1:30002</span><br><span class="line">   slots:[5461-10922] (5462 slots) master</span><br><span class="line">   1 additional replica(s)</span><br><span class="line">[OK] All nodes agree about slots configuration.</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; Check <span class="keyword">for</span> open slots...</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; Check slots coverage...</span></span><br><span class="line">[OK] All 16384 slots covered.</span><br><span class="line">[root@hadoop01 create-cluster]# </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这样做的好处就是，现在写的是本地127.0.0.1，实际上可以给到6台机器的IP地址，这样就可以启动一个分布式的集群了</p>
+</blockquote>
+<p>使用客户端链接<code>redis-cli -c -p 30001</code>连接：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 create-cluster]# redis-cli -c -p 30001</span><br><span class="line">127.0.0.1:30001&gt; set k1 assdas</span><br><span class="line"><span class="meta">-&gt;</span><span class="bash"> Redirected to slot [12706] located at 127.0.0.1:30003</span></span><br><span class="line">OK</span><br><span class="line">127.0.0.1:30003&gt; get k1</span><br><span class="line">&quot;assdas&quot;</span><br><span class="line">127.0.0.1:30003&gt; </span><br></pre></td></tr></table></figure>
+<p>跟刚才一样，会跳到其他节点。</p>
+<h3 id="6、reshard">6、<code>reshard</code></h3>
+<p>数据有倾斜，如何移动它</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 create-cluster]# redis-cli --cluster reshard 127.0.0.1:30001 # 最后面随意指定一个活动的结点即可</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; Performing Cluster Check (using node 127.0.0.1:30001)</span></span><br><span class="line">M: 0a4d824cdd85e2410dbc29b61b5cc9be21ec36b2 127.0.0.1:30001</span><br><span class="line">   slots:[0-5460] (5461 slots) master</span><br><span class="line">   1 additional replica(s)</span><br><span class="line">S: 90b6d51390cfa0147e83db4491407b2dc1b7e596 127.0.0.1:30004</span><br><span class="line">   slots: (0 slots) slave</span><br><span class="line">   replicates 3db0c4c048bc7295949004f2e4f1c5a7fc0b4794</span><br><span class="line">S: 0675d7ddf10a76683a8895f5039c94e5ca4c9d89 127.0.0.1:30006</span><br><span class="line">   slots: (0 slots) slave</span><br><span class="line">   replicates 25744a44d3435da17f26d5a8aa509b5ef74e74b1</span><br><span class="line">S: 0cbb694a6524d40faab057ef12db117d1e59a541 127.0.0.1:30005</span><br><span class="line">   slots: (0 slots) slave</span><br><span class="line">   replicates 0a4d824cdd85e2410dbc29b61b5cc9be21ec36b2</span><br><span class="line">M: 3db0c4c048bc7295949004f2e4f1c5a7fc0b4794 127.0.0.1:30003</span><br><span class="line">   slots:[10923-16383] (5461 slots) master</span><br><span class="line">   1 additional replica(s)</span><br><span class="line">M: 25744a44d3435da17f26d5a8aa509b5ef74e74b1 127.0.0.1:30002</span><br><span class="line">   slots:[5461-10922] (5462 slots) master</span><br><span class="line">   1 additional replica(s)</span><br><span class="line">[OK] All nodes agree about slots configuration.</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; Check <span class="keyword">for</span> open slots...</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; Check slots coverage...</span></span><br><span class="line">[OK] All 16384 slots covered.</span><br><span class="line">How many slots do you want to move (from 1 to 16384)? 2000  # 你想移动多少槽位，比如这里设置为2000</span><br><span class="line">What is the receiving node ID? 25744a44d3435da17f26d5a8aa509b5ef74e74b1   # 要把这2000个槽位发给谁（根据上面的现实指定id）</span><br><span class="line">Please enter all the source node IDs.</span><br><span class="line">  Type &#x27;all&#x27; to use all the nodes as source nodes for the hash slots.  # all：就是在其他节点均衡的抽一些</span><br><span class="line">  Type &#x27;done&#x27; once you entered all the source nodes IDs.  </span><br><span class="line">Source node #1: 0a4d824cdd85e2410dbc29b61b5cc9be21ec36b2  # 从某一台抽取（从第一台抽取 ）</span><br><span class="line">Source node #2: done </span><br><span class="line"></span><br><span class="line">Ready to move 2000 slots.</span><br><span class="line">  Source nodes:</span><br><span class="line">    M: 0a4d824cdd85e2410dbc29b61b5cc9be21ec36b2 127.0.0.1:30001</span><br><span class="line">       slots:[0-5460] (5461 slots) master</span><br><span class="line">       1 additional replica(s)</span><br><span class="line">  Destination node:</span><br><span class="line">    M: 25744a44d3435da17f26d5a8aa509b5ef74e74b1 127.0.0.1:30002</span><br><span class="line">       slots:[5461-10922] (5462 slots) master</span><br><span class="line">       1 additional replica(s)</span><br><span class="line">  Resharding plan:</span><br><span class="line">    Moving slot 0 from 0a4d824cdd85e2410dbc29b61b5cc9be21ec36b2</span><br><span class="line">    Moving slot 1 from 0a4d824cdd85e2410dbc29b61b5cc9be21ec36b2</span><br><span class="line">    Moving slot 2 from 0a4d824cdd85e2410dbc29b61b5cc9be21ec36b2</span><br><span class="line">    Moving slot 3 from 0a4d824cdd85e2410dbc29b61b5cc9be21ec36b2</span><br><span class="line">    Moving slot 4 from 0a4d824cdd85e2410dbc29b61b5cc9be21ec36b2</span><br><span class="line">		...</span><br><span class="line">    Moving slot 1998 from 0a4d824cdd85e2410dbc29b61b5cc9be21ec36b2</span><br><span class="line">    Moving slot 1999 from 0a4d824cdd85e2410dbc29b61b5cc9be21ec36b2</span><br><span class="line">Do you want to proceed with the proposed reshard plan (yes/no)? yes # 输入yes即可开始移动</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>通过查看槽位信息就可以知道变化了，因为之前是均匀的</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 create-cluster]# redis-cli --cluster info 127.0.0.1 30001</span><br><span class="line">127.0.0.1:30001 (0a4d824c...) -&gt; 0 keys | 3461 slots | 1 slaves.</span><br><span class="line">127.0.0.1:30003 (3db0c4c0...) -&gt; 1 keys | 5461 slots | 1 slaves.</span><br><span class="line">127.0.0.1:30002 (25744a44...) -&gt; 0 keys | 7462 slots | 1 slaves.</span><br><span class="line">[OK] 1 keys in 3 masters.</span><br><span class="line">0.00 keys per slot on average.</span><br><span class="line">[root@hadoop01 create-cluster]# </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>或者通过<code>check</code>查看，发现第一台1～2000的槽位没有了</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop01 create-cluster]# redis-cli --cluster check 127.0.0.1 30001</span><br><span class="line">127.0.0.1:30001 (0a4d824c...) -&gt; 0 keys | 3461 slots | 1 slaves.</span><br><span class="line">127.0.0.1:30003 (3db0c4c0...) -&gt; 1 keys | 5461 slots | 1 slaves.</span><br><span class="line">127.0.0.1:30002 (25744a44...) -&gt; 0 keys | 7462 slots | 1 slaves.</span><br><span class="line">[OK] 1 keys in 3 masters.</span><br><span class="line">0.00 keys per slot on average.</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; Performing Cluster Check (using node 127.0.0.1:30001)</span></span><br><span class="line">M: 0a4d824cdd85e2410dbc29b61b5cc9be21ec36b2 127.0.0.1:30001</span><br><span class="line">   slots:[2000-5460] (3461 slots) master</span><br><span class="line">   1 additional replica(s)</span><br><span class="line">S: 90b6d51390cfa0147e83db4491407b2dc1b7e596 127.0.0.1:30004</span><br><span class="line">   slots: (0 slots) slave</span><br><span class="line">   replicates 3db0c4c048bc7295949004f2e4f1c5a7fc0b4794</span><br><span class="line">S: 0675d7ddf10a76683a8895f5039c94e5ca4c9d89 127.0.0.1:30006</span><br><span class="line">   slots: (0 slots) slave</span><br><span class="line">   replicates 25744a44d3435da17f26d5a8aa509b5ef74e74b1</span><br><span class="line">S: 0cbb694a6524d40faab057ef12db117d1e59a541 127.0.0.1:30005</span><br><span class="line">   slots: (0 slots) slave</span><br><span class="line">   replicates 0a4d824cdd85e2410dbc29b61b5cc9be21ec36b2</span><br><span class="line">M: 3db0c4c048bc7295949004f2e4f1c5a7fc0b4794 127.0.0.1:30003</span><br><span class="line">   slots:[10923-16383] (5461 slots) master</span><br><span class="line">   1 additional replica(s)</span><br><span class="line">M: 25744a44d3435da17f26d5a8aa509b5ef74e74b1 127.0.0.1:30002</span><br><span class="line">   slots:[0-1999],[5461-10922] (7462 slots) master</span><br><span class="line">   1 additional replica(s)</span><br><span class="line">[OK] All nodes agree about slots configuration.</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; Check <span class="keyword">for</span> open slots...</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; Check slots coverage...</span></span><br><span class="line">[OK] All 16384 slots covered.</span><br><span class="line">[root@hadoop01 create-cluster]# </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>Redis提供了这种比较灵活的方案，即可以收工配置。</p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/2021/SS客户端如何把代理分享给局域网内的其他设备/" data-toggle="tooltip" data-placement="top" title="SS客户端如何把代理分享给局域网内的其他设备">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/2021/Redis集群之主从复制、CAP、PAXOS-1（二）/" data-toggle="tooltip" data-placement="top" title="Redis集群之分区方式及Redis Cluster">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Redis集群实战&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2021/Redis集群实战/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'a00494876d6f5f4bcbfd',
+      clientSecret: '33d3d0be81052a26f5a3535733b8b7854628564f',
+      repo: 'shifpeng.github.io',
+      owner: 'shifpeng',
+      admin: 'shifpeng',
+      id: 'Thu Apr 08 2021 15:45:51 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81twemproxy"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、twemproxy</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">1、安装部署</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">2、配置</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3%E3%80%81%E4%BD%BF%E7%94%A8"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">3、使用</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4%E3%80%81%E6%B3%A8%E6%84%8F"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">4、注意</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81predixy"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、predixy</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">1、安装</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81%E9%85%8D%E7%BD%AE-2"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2、配置</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#a%E3%80%81predixy-conf"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">a、predixy.conf</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#b%E3%80%81sentinel-conf"><span class="toc-nav-number">2.2.2.</span> <span class="toc-nav-text">b、sentinel.conf</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3%E3%80%81%E4%BD%BF%E7%94%A8-2"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">3、使用</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#a%E3%80%81%E4%BF%AE%E6%94%B9%E5%93%A8%E5%85%B5%E9%85%8D%E7%BD%AE%EF%BC%8C%E7%9B%91%E6%8E%A7%E4%B8%A4%E5%8F%B0%E4%B8%BB%E4%BB%8E"><span class="toc-nav-number">2.3.1.</span> <span class="toc-nav-text">a、修改哨兵配置，监控两台主从</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#b%E3%80%81%E5%90%AF%E5%8A%A8%E5%93%A8%E5%85%B5"><span class="toc-nav-number">2.3.2.</span> <span class="toc-nav-text">b、启动哨兵</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#c%E3%80%81%E5%90%AF%E5%8A%A8%E4%B8%A4%E5%AF%B9%E4%B8%BB%E4%BB%8E%E8%A7%A3%E8%8A%82%E7%82%B9"><span class="toc-nav-number">2.3.3.</span> <span class="toc-nav-text">c、启动两对主从解节点</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#d%E3%80%81-%E5%90%AF%E5%8A%A8predixy%E4%BB%A3%E7%90%86"><span class="toc-nav-number">2.3.4.</span> <span class="toc-nav-text">d、 启动predixy代理</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#e%E3%80%81%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%BF%9E%E6%8E%A5%E4%BB%A3%E7%90%86"><span class="toc-nav-number">2.3.5.</span> <span class="toc-nav-text">e、客户端连接代理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8hash-tag"><span class="toc-nav-number">2.3.5.1.</span> <span class="toc-nav-text">使用hash_tag</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#f%E3%80%81%E4%B8%BB%E8%8A%82%E7%82%B9%E6%8C%82%E4%BA%86"><span class="toc-nav-number">2.3.6.</span> <span class="toc-nav-text">f、主节点挂了</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81Redis-Cluster-%E9%9B%86%E7%BE%A4-%EF%BC%88Redis%E8%87%AA%E8%BA%AB%E7%9A%84%E9%9B%86%E7%BE%A4%EF%BC%89"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、Redis Cluster(集群)（Redis自身的集群）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E5%90%AF%E5%8A%A8%E8%8A%82%E7%82%B9"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">1、启动节点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81%E5%88%86%E9%85%8D%E6%A7%BD%E4%BD%8D"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">2、分配槽位</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3%E3%80%81%E4%BD%BF%E7%94%A8-3"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">3、使用</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4%E3%80%81%E7%BB%93%E6%9D%9F%E8%8A%82%E7%82%B9"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">4、结束节点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5%E3%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E8%8A%82%E7%82%B9"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">5、自定义节点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6%E3%80%81reshard"><span class="toc-nav-number">3.6.</span> <span class="toc-nav-text">6、reshard</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+            
+            <a class="tag" href="/tags/#Redis" title="Redis">Redis</a>
+            
+            <a class="tag" href="/tags/#重学Redis" title="重学Redis">重学Redis</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://cuiqingcai.com/" target="_blank">静 觅 崔庆才</a>
+          </li>
+          
+          <li>
+            <a href="http://www.52nlp.cn/" target="_blank">我爱自然语言处理</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cnblogs.com/Steven-shi/" target="_blank">博客园 石福鹏</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/shifpeng">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Steven
+          2021
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://shifpeng.cn">Steven</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/mouseclick.js"  content='' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "shifpeng";
+    let ghPages = gh + ".github.io";
+    let pagePath = "2021/Redis集群实战/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://www.shifpeng.cn/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
