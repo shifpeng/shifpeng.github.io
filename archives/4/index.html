@@ -245,8 +245,6 @@
 
           
           
-          
-          
           <li>
             <a href="/categories/">
               
@@ -266,6 +264,8 @@
               
             </a>
           </li>
+          
+          
           
           
           
@@ -446,6 +446,53 @@
       <!-- Main Content -->
 
 
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/2021/网络高并发负载均衡（三）/">
+    <h2 class="post-title">
+      网络高并发负载均衡（三）
+    </h2>
+    <h3 class="post-subtitle">
+      LVS的TUN模型推导
+    </h3>
+    <div class="post-content-preview">
+      我们按照DR模型，要求负载均衡服务器和real-server在一个局域网内，那我们就从这里出发，能不能让他们不在同一个局域网
+TUN隧道技术
+
+如果想从DIP到RIP,如果能单独产生一个数据包，从DIP-&gt;RIP（1），当请求的数据包（携带CIP-&gt;VIP（2））到VIP后，让1携带2，因为2是可以到达RIP的；
+生活中用到隧道技术的案例也很多，比如：
+
+家里设置路由器的时候，也......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by 石福鹏 on
+    2021-03-11
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Java" title="Java">Java</a>
+    
+    <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+    
+    <a href="/tags/#架构" title="架构">架构</a>
+    
+    <a href="/tags/#大数据" title="大数据">大数据</a>
+    
+    <a href="/tags/#从网络到分布式" title="从网络到分布式">从网络到分布式</a>
+    
+  </div>
+  
+
+</div>
+<hr>
 
 <div class="post-preview">
   
@@ -753,6 +800,47 @@ kafka是一个分布式的基于发布/订阅模式的消息队列（Message Que
   <!-- top end -->
   
 
+  <a href="/2020/mysql-interview-topic/">
+    <h2 class="post-title">
+      Mysql专题
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      1、描述一下数据库事务隔离级别？
+ACID
+原子性： 通过undo log实现的，要么成功，要么失败，如果失败了就回滚，记录原来的数据到undo log中，具体的实现用到了MVCC
+一致性： 最核心和最本质的要求，其他三个共同保证一致性
+隔离性： 通过锁来实现
+持久性： redo log
+数据库的事务隔离级别有四种，分别是读未提交、读已提交、可重复读、序列化，不同的隔离级别下会产生脏读、幻读......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Steven on
+    2020-12-03
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+    
+    <a href="/tags/#Mysql" title="Mysql">Mysql</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/2020/在Mac系统上使用Dokcer搭建LNMP环境/">
     <h2 class="post-title">
       在Mac系统上使用Dokcer搭建LNMP环境
@@ -783,84 +871,6 @@ kafka是一个分布式的基于发布/订阅模式的消息队列（Message Que
     <a href="/tags/#Mysql" title="Mysql">Mysql</a>
     
     <a href="/tags/#集成开发环境" title="集成开发环境">集成开发环境</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2020/sign-generate-error/">
-    <h2 class="post-title">
-      生成的sign出现偶发性的签名验证失败问题排查
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      最近做了一个微信企业付款，即微信企业账户给用户下发红包的功能，从测试开始就出现偶发性的报SIGN_ERROR签名错误,因为自己的项目比较多，就让同时帮忙debug排查了，排查的结果就是没问题，红包发放正常。
-但是一上测试，就会偶发；
-发现问题
-无奈之下，我就把每次请求的request、response都打印出来了，通过微信支付接口签名校验工具测试了下，发现sign并不一致
-
-发现一个问题，后......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by 石福鹏 on
-    2020-11-24
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#工具类" title="工具类">工具类</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2020/macOS-Catalina下安装nvm、node/">
-    <h2 class="post-title">
-      macOS Catalina下安装nvm、node及每次需要重载配置文件问题解决
-    </h2>
-    <h3 class="post-subtitle">
-      在使用hexo写博客的时候，经常需要执行一些命令，但是发现每次打开终端，输入命令就提示command not found，找到问题后记录下这个问题，以及在最新的Catalina系统下安装nvm
-    </h3>
-    <div class="post-content-preview">
-      每次需要重载配置文件的问题解决
-先说几个概念，做前端开发的伙伴肯定都知道，但是做后端的，虽然偶然能用到，但是基本上都是按照网上的教程，并不清楚nvm、npm、nodejs三者的区别
-
-nvm：是nodejs的版本管理工具
-也就是说一个nvm可以管理很多node版本和npm版本
-nodejs：项目开发时所需要的代码库
-npm：nodejs包管理工具
-在安装nodejs的时候，npm也会跟着一起......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by 石福鹏 on
-    2020-10-30
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Nodejs" title="Nodejs">Nodejs</a>
     
   </div>
   
@@ -936,11 +946,11 @@ npm：nodejs包管理工具
     
     
     
-    <a href="/tags/#Elasticsearch - 大数据" title="Elasticsearch - 大数据" rel="1">Elasticsearch - 大数据</a>
+    <a href="/tags/#Elasticsearch - 大数据" title="Elasticsearch - 大数据" rel="4">Elasticsearch - 大数据</a>
     
     
     
-    <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶" rel="27">架构+大数据进阶</a>
+    <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶" rel="30">架构+大数据进阶</a>
     
     
     
@@ -1032,6 +1042,10 @@ npm：nodejs包管理工具
     
     
     
+    <a href="/tags/#Go" title="Go" rel="1">Go</a>
+    
+    
+    
     <a href="/tags/#CDN加速" title="CDN加速" rel="1">CDN加速</a>
     
     
@@ -1057,10 +1071,6 @@ npm：nodejs包管理工具
     
     
     <a href="/tags/#Nodejs" title="Nodejs" rel="1">Nodejs</a>
-    
-    
-    
-    <a href="/tags/#Go" title="Go" rel="1">Go</a>
     
     
     
@@ -1233,24 +1243,24 @@ npm：nodejs包管理工具
 <div class="widget">
   <ul>
     
-    <a href="../../2021/mysql-interview-topic/">
-      <li>Mysql专题</li>
+    <a href="../../2021/es-optimization/">
+      <li>Elasticsearch调优</li>
     </a>
     
-    <a href="../../2021/concurrent01/">
-      <li>多线程与高并发（全集）</li>
+    <a href="../../2021/elasticsearch-aggregation-detailed/">
+      <li>Elasticsearch之aggregation详解</li>
     </a>
     
-    <a href="../../2021/Elasticsearch%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/">
+    <a href="../../2021/elasticsearch-mapping-agg/">
+      <li>Elasticsearch之Mapping和聚合查询</li>
+    </a>
+    
+    <a href="../../2021/Elasticsearch-query/">
       <li>Elasticsearch查询语法</li>
     </a>
     
     <a href="../../2021/mysql-python-lib-error/">
       <li>Python 安装MySQLdb出错问题排查</li>
-    </a>
-    
-    <a href="../../2021/go-base/">
-      <li>go-base</li>
     </a>
     
   </ul>
@@ -1279,7 +1289,7 @@ npm：nodejs包管理工具
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/11/">November 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/07/">July 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/06/">June 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/04/">April 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/02/">February 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/06/">June 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/05/">May 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/03/">March 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/02/">February 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/07/">July 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/11/">November 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/08/">August 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/05/">May 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/10/">October 2016</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2021/09/">September 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/07/">July 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/06/">June 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/04/">April 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/02/">February 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/06/">June 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/05/">May 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/03/">March 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/02/">February 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/07/">July 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/11/">November 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/08/">August 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/05/">May 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/10/">October 2016</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1315,6 +1325,10 @@ npm：nodejs包管理工具
       <li>算法与数据结构</li>
     </a>
     
+    <a href="/categories/#Go">
+      <li>Go</li>
+    </a>
+    
     <a href="/categories/#CDN加速">
       <li>CDN加速</li>
     </a>
@@ -1333,10 +1347,6 @@ npm：nodejs包管理工具
     
     <a href="/categories/#Python">
       <li>Python</li>
-    </a>
-    
-    <a href="/categories/#Go">
-      <li>Go</li>
     </a>
     
     <a href="/categories/#Zookeeper">
