@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="人最大的修养就是知人不评人"/>
+  <meta name="keyword" content="Java,Steven,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://www.shifpeng.cn/2021/Linux-install-mysql5-7/">
+  <title>
+    
+      Linux安装Mysql5.7以及常见问题 - Steven | java
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'StevenBlog/community'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">石福鹏</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io//img/header_img/archive_bg3.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+            </div>
+            <h1>Linux安装Mysql5.7以及常见问题</h1>
+            <h2 class="subheading">Mysql,架构+大数据进阶</h2>
+            <span class="meta">
+              Posted by Steven on
+              2021-09-18
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">37</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">6k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br><span class="line">391</span><br><span class="line">392</span><br><span class="line">393</span><br><span class="line">394</span><br><span class="line">395</span><br><span class="line">396</span><br><span class="line">397</span><br><span class="line">398</span><br><span class="line">399</span><br><span class="line">400</span><br><span class="line">401</span><br><span class="line">402</span><br><span class="line">403</span><br><span class="line">404</span><br><span class="line">405</span><br><span class="line">406</span><br><span class="line">407</span><br><span class="line">408</span><br><span class="line">409</span><br><span class="line">410</span><br><span class="line">411</span><br><span class="line">412</span><br><span class="line">413</span><br><span class="line">414</span><br><span class="line">415</span><br><span class="line">416</span><br><span class="line">417</span><br><span class="line">418</span><br><span class="line">419</span><br><span class="line">420</span><br><span class="line">421</span><br><span class="line">422</span><br><span class="line">423</span><br><span class="line">424</span><br><span class="line">425</span><br><span class="line">426</span><br><span class="line">427</span><br><span class="line">428</span><br><span class="line">429</span><br><span class="line">430</span><br><span class="line">431</span><br><span class="line">432</span><br><span class="line">433</span><br><span class="line">434</span><br><span class="line">435</span><br><span class="line">436</span><br><span class="line">437</span><br><span class="line">438</span><br><span class="line">439</span><br><span class="line">440</span><br><span class="line">441</span><br><span class="line">442</span><br><span class="line">443</span><br><span class="line">444</span><br><span class="line">445</span><br><span class="line">446</span><br><span class="line">447</span><br><span class="line">448</span><br><span class="line">449</span><br><span class="line">450</span><br><span class="line">451</span><br><span class="line">452</span><br><span class="line">453</span><br><span class="line">454</span><br><span class="line">455</span><br><span class="line">456</span><br><span class="line">457</span><br><span class="line">458</span><br><span class="line">459</span><br><span class="line">460</span><br><span class="line">461</span><br><span class="line">462</span><br><span class="line">463</span><br><span class="line">464</span><br><span class="line">465</span><br><span class="line">466</span><br><span class="line">467</span><br><span class="line">468</span><br><span class="line">469</span><br><span class="line">470</span><br><span class="line">471</span><br><span class="line">472</span><br><span class="line">473</span><br><span class="line">474</span><br><span class="line">475</span><br><span class="line">476</span><br><span class="line">477</span><br><span class="line">478</span><br><span class="line">479</span><br><span class="line">480</span><br><span class="line">481</span><br><span class="line">482</span><br><span class="line">483</span><br><span class="line">484</span><br><span class="line">485</span><br><span class="line">486</span><br><span class="line">487</span><br><span class="line">488</span><br><span class="line">489</span><br><span class="line">490</span><br><span class="line">491</span><br><span class="line">492</span><br><span class="line">493</span><br><span class="line">494</span><br><span class="line">495</span><br><span class="line">496</span><br><span class="line">497</span><br><span class="line">498</span><br><span class="line">499</span><br><span class="line">500</span><br><span class="line">501</span><br><span class="line">502</span><br><span class="line">503</span><br><span class="line">504</span><br><span class="line">505</span><br><span class="line">506</span><br><span class="line">507</span><br><span class="line">508</span><br><span class="line">509</span><br><span class="line">510</span><br><span class="line">511</span><br><span class="line">512</span><br><span class="line">513</span><br><span class="line">514</span><br><span class="line">515</span><br><span class="line">516</span><br><span class="line">517</span><br><span class="line">518</span><br><span class="line">519</span><br><span class="line">520</span><br><span class="line">521</span><br><span class="line">522</span><br><span class="line">523</span><br><span class="line">524</span><br><span class="line">525</span><br><span class="line">526</span><br><span class="line">527</span><br><span class="line">528</span><br><span class="line">529</span><br><span class="line">530</span><br><span class="line">531</span><br><span class="line">532</span><br><span class="line">533</span><br><span class="line">534</span><br><span class="line">535</span><br><span class="line">536</span><br><span class="line">537</span><br><span class="line">538</span><br><span class="line">539</span><br><span class="line">540</span><br><span class="line">541</span><br><span class="line">542</span><br><span class="line">543</span><br><span class="line">544</span><br><span class="line">545</span><br><span class="line">546</span><br><span class="line">547</span><br><span class="line">548</span><br><span class="line">549</span><br><span class="line">550</span><br><span class="line">551</span><br><span class="line">552</span><br><span class="line">553</span><br><span class="line">554</span><br><span class="line">555</span><br><span class="line">556</span><br><span class="line">557</span><br><span class="line">558</span><br><span class="line">559</span><br><span class="line">560</span><br><span class="line">561</span><br><span class="line">562</span><br><span class="line">563</span><br><span class="line">564</span><br><span class="line">565</span><br><span class="line">566</span><br><span class="line">567</span><br><span class="line">568</span><br><span class="line">569</span><br><span class="line">570</span><br><span class="line">571</span><br><span class="line">572</span><br><span class="line">573</span><br><span class="line">574</span><br><span class="line">575</span><br><span class="line">576</span><br><span class="line">577</span><br><span class="line">578</span><br><span class="line">579</span><br><span class="line">580</span><br><span class="line">581</span><br><span class="line">582</span><br><span class="line">583</span><br><span class="line">584</span><br><span class="line">585</span><br><span class="line">586</span><br><span class="line">587</span><br><span class="line">588</span><br><span class="line">589</span><br><span class="line">590</span><br><span class="line">591</span><br><span class="line">592</span><br><span class="line">593</span><br><span class="line">594</span><br><span class="line">595</span><br><span class="line">596</span><br><span class="line">597</span><br><span class="line">598</span><br><span class="line">599</span><br><span class="line">600</span><br><span class="line">601</span><br><span class="line">602</span><br><span class="line">603</span><br><span class="line">604</span><br><span class="line">605</span><br><span class="line">606</span><br></pre></td><td class="code"><pre><span class="line">[root@VM-229-169-centos home]# tar -zxvf ft_local/mysql-5.7.34-linux-glibc2.12-x86_64</span><br><span class="line">tar (child): ft_local/mysql-5.7.34-linux-glibc2.12-x86_64: Cannot open: No such file or directory</span><br><span class="line">tar (child): Error is not recoverable: exiting now</span><br><span class="line">tar: Child returned status 2</span><br><span class="line">tar: Error is not recoverable: exiting now</span><br><span class="line">[root@VM-229-169-centos home]# tar -zxvf ft_local/mysql-5.7.34-linux-glibc2.12-x86_64</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64 (1).tar.gz  mysql-5.7.34-linux-glibc2.12-x86_64.tar.gz      </span><br><span class="line">[root@VM-229-169-centos home]# tar -zxvf ft_local/mysql-5.7.34-linux-glibc2.12-x86_64</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64 (1).tar.gz  mysql-5.7.34-linux-glibc2.12-x86_64.tar.gz      </span><br><span class="line">[root@VM-229-169-centos home]# tar -zxvf ft_local/mysql-5.7.34-linux-glibc2.12-x86_64.tar.gz </span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/myisam_ftdump</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/myisamchk</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/myisamlog</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/myisampack</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/mysql</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/mysql_client_test_embedded</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/mysql_config_editor</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/mysql_embedded</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/mysql_install_db</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/mysql_plugin</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/mysql_secure_installation</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/mysql_ssl_rsa_setup</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/mysql_tzinfo_to_sql</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/mysql_upgrade</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/mysqladmin</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/mysqlbinlog</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/mysqlcheck</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/mysqldump</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/mysqlimport</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/mysqlpump</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/mysqlshow</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/mysqlslap</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/mysqltest_embedded</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/mysqlxtest</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/mysqld-debug</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/libmysqld-debug.a</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysqlx_ername.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysqlx_error.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysqlx_version.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/mysql_config</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/big_endian.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/binary_log_types.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/byte_order_generic.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/byte_order_generic_x86.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/decimal.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/errmsg.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/keycache.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/little_endian.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/m_ctype.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/m_string.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/my_alloc.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/my_byteorder.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/my_command.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/my_compiler.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/my_config.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/my_dbug.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/my_dir.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/my_getopt.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/my_global.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/my_list.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/my_sys.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/my_thread.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/my_thread_local.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/my_xml.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/client_authentication.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/client_plugin.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/client_plugin.h.pp</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/com_data.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/get_password.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/group_replication_priv.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/innodb_priv.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/mysql_lex_string.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/plugin.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/plugin_audit.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/plugin_audit.h.pp</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/plugin_auth.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/plugin_auth.h.pp</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/plugin_auth_common.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/plugin_ftparser.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/plugin_ftparser.h.pp</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/plugin_group_replication.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/plugin_keyring.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/plugin_keyring.h.pp</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/plugin_trace.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/plugin_validate_password.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/psi/mysql_file.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/psi/mysql_idle.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/psi/mysql_mdl.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/psi/mysql_memory.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/psi/mysql_ps.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/psi/mysql_socket.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/psi/mysql_sp.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/psi/mysql_stage.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/psi/mysql_statement.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/psi/mysql_table.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/psi/mysql_thread.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/psi/mysql_transaction.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/psi/psi.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/psi/psi_base.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/psi/psi_memory.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/service_command.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/service_locking.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/service_my_plugin_log.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/service_my_snprintf.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/service_mysql_alloc.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/service_mysql_keyring.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/service_mysql_password_policy.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/service_mysql_string.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/service_parser.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/service_rpl_transaction_ctx.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/service_rpl_transaction_write_set.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/service_rules_table.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/service_security_context.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/service_srv_session.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/service_srv_session_info.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/service_ssl_wrapper.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/service_thd_alloc.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/service_thd_engine_lock.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/service_thd_wait.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/service_thread_scheduler.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/services.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/services.h.pp</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/thread_pool_priv.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql/thread_type.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql_com.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql_com_server.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql_embed.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql_time.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysql_version.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysqld_ername.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/mysqld_error.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/plugin.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/plugin_audit.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/plugin_ftparser.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/plugin_group_replication.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/plugin_keyring.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/plugin_validate_password.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/sql_common.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/sql_state.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/sslopt-case.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/sslopt-longopts.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/sslopt-vars.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/thr_cond.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/thr_mutex.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/thr_rwlock.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/include/typelib.h</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/libmysqlclient.a</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/libmysqlservices.a</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/pkgconfig/mysqlclient.pc</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/aclocal/mysql.m4</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/docs/ChangeLog</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/docs/INFO_SRC</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/libmysqld.a</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/comp_err.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/innochecksum.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/lz4_decompress.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/my_print_defaults.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/myisam_ftdump.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/myisamchk.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/myisamlog.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/myisampack.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/mysql.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/mysql.server.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/mysql_config.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/mysql_config_editor.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/mysql_install_db.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/mysql_plugin.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/mysql_secure_installation.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/mysql_ssl_rsa_setup.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/mysql_tzinfo_to_sql.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/mysql_upgrade.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/mysqladmin.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/mysqlbinlog.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/mysqlcheck.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/mysqld_multi.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/mysqld_safe.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/mysqldump.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/mysqldumpslow.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/mysqlimport.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/mysqlman.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/mysqlpump.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/mysqlshow.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/mysqlslap.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/perror.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/replace.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/resolve_stack_dump.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/resolveip.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man1/zlib_decompress.1</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/man/man8/mysqld.8</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/LICENSE</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/README</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/innochecksum</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/lz4_decompress</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/my_print_defaults</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/mysqld</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/mysqld_multi</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/mysqld_safe</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/mysqldumpslow</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/perror</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/replace</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/resolve_stack_dump</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/resolveip</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/bin/zlib_decompress</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/dic/ipadic_euc-jp/char.bin</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/dic/ipadic_euc-jp/dicrc</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/dic/ipadic_euc-jp/left-id.def</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/dic/ipadic_euc-jp/matrix.bin</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/dic/ipadic_euc-jp/pos-id.def</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/dic/ipadic_euc-jp/rewrite.def</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/dic/ipadic_euc-jp/right-id.def</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/dic/ipadic_euc-jp/sys.dic</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/dic/ipadic_euc-jp/unk.dic</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/dic/ipadic_sjis/char.bin</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/dic/ipadic_sjis/dicrc</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/dic/ipadic_sjis/left-id.def</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/dic/ipadic_sjis/matrix.bin</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/dic/ipadic_sjis/pos-id.def</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/dic/ipadic_sjis/rewrite.def</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/dic/ipadic_sjis/right-id.def</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/dic/ipadic_sjis/sys.dic</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/dic/ipadic_sjis/unk.dic</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/dic/ipadic_utf-8/char.bin</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/dic/ipadic_utf-8/dicrc</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/dic/ipadic_utf-8/left-id.def</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/dic/ipadic_utf-8/matrix.bin</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/dic/ipadic_utf-8/pos-id.def</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/dic/ipadic_utf-8/rewrite.def</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/dic/ipadic_utf-8/right-id.def</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/dic/ipadic_utf-8/sys.dic</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/dic/ipadic_utf-8/unk.dic</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/mecab/etc/mecabrc</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/adt_null.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/auth_socket.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/authentication_ldap_sasl_client.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/connection_control.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/adt_null.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/auth_socket.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/authentication_ldap_sasl_client.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/connection_control.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/group_replication.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/ha_example.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/innodb_engine.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/keyring_file.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/keyring_udf.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/libmemcached.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/libpluginmecab.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/libtest_framework.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/libtest_services.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/libtest_services_threaded.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/libtest_session_detach.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/libtest_session_in_thd.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/libtest_session_info.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/libtest_sql_2_sessions.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/libtest_sql_all_col_types.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/libtest_sql_cmds_1.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/libtest_sql_commit.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/libtest_sql_complex.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/libtest_sql_errors.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/libtest_sql_lock.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/libtest_sql_processlist.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/libtest_sql_replication.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/libtest_sql_shutdown.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/libtest_sql_sqlmode.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/libtest_sql_stored_procedures_functions.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/libtest_sql_views_triggers.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/libtest_x_sessions_deinit.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/libtest_x_sessions_init.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/locking_service.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/mypluglib.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/mysql_no_login.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/mysqlx.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/rewrite_example.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/rewriter.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/semisync_master.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/semisync_slave.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/test_security_context.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/test_udf_services.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/validate_password.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/debug/version_token.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/group_replication.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/ha_example.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/innodb_engine.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/keyring_file.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/keyring_udf.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/libmemcached.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/libpluginmecab.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/libtest_framework.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/libtest_services.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/libtest_services_threaded.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/libtest_session_detach.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/libtest_session_in_thd.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/libtest_session_info.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/libtest_sql_2_sessions.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/libtest_sql_all_col_types.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/libtest_sql_cmds_1.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/libtest_sql_commit.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/libtest_sql_complex.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/libtest_sql_errors.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/libtest_sql_lock.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/libtest_sql_processlist.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/libtest_sql_replication.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/libtest_sql_shutdown.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/libtest_sql_sqlmode.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/libtest_sql_stored_procedures_functions.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/libtest_sql_views_triggers.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/libtest_x_sessions_deinit.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/libtest_x_sessions_init.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/locking_service.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/mypluglib.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/mysql_no_login.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/mysqlx.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/rewrite_example.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/rewriter.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/semisync_master.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/semisync_slave.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/test_security_context.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/test_udf_services.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/validate_password.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/plugin/version_token.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/bulgarian/errmsg.sys</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/charsets/Index.xml</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/charsets/README</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/charsets/armscii8.xml</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/charsets/ascii.xml</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/charsets/cp1250.xml</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/charsets/cp1251.xml</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/charsets/cp1256.xml</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/charsets/cp1257.xml</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/charsets/cp850.xml</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/charsets/cp852.xml</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/charsets/cp866.xml</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/charsets/dec8.xml</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/charsets/geostd8.xml</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/charsets/greek.xml</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/charsets/hebrew.xml</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/charsets/hp8.xml</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/charsets/keybcs2.xml</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/charsets/koi8r.xml</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/charsets/koi8u.xml</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/charsets/latin1.xml</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/charsets/latin2.xml</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/charsets/latin5.xml</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/charsets/latin7.xml</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/charsets/macce.xml</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/charsets/macroman.xml</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/charsets/swe7.xml</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/czech/errmsg.sys</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/danish/errmsg.sys</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/dictionary.txt</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/dutch/errmsg.sys</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/english/errmsg.sys</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/errmsg-utf8.txt</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/estonian/errmsg.sys</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/fill_help_tables.sql</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/french/errmsg.sys</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/german/errmsg.sys</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/greek/errmsg.sys</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/hungarian/errmsg.sys</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/innodb_memcached_config.sql</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/italian/errmsg.sys</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/japanese/errmsg.sys</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/korean/errmsg.sys</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/mysql_security_commands.sql</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/mysql_sys_schema.sql</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/mysql_system_tables.sql</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/mysql_system_tables_data.sql</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/mysql_test_data_timezone.sql</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/norwegian-ny/errmsg.sys</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/norwegian/errmsg.sys</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/polish/errmsg.sys</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/portuguese/errmsg.sys</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/romanian/errmsg.sys</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/russian/errmsg.sys</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/serbian/errmsg.sys</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/slovak/errmsg.sys</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/spanish/errmsg.sys</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/swedish/errmsg.sys</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/ukrainian/errmsg.sys</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/support-files/mysql-log-rotate</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/support-files/mysqld_multi.server</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/libmysqlclient.so</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/libmysqlclient.so.20</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/lib/libmysqlclient.so.20.3.21</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/install_rewriter.sql</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/share/uninstall_rewriter.sql</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/support-files/magic</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/support-files/mysql.server</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/docs/INFO_BIN</span><br><span class="line">mysql-5.7.34-linux-glibc2.12-x86_64/docs/INFO_SRC</span><br><span class="line">[root@VM-229-169-centos home]# mv mysql-5.7.34-linux-glibc2.12-x86_64 /usr/local/</span><br><span class="line">[root@VM-229-169-centos home]# cd /usr/local/</span><br><span class="line">[root@VM-229-169-centos local]# ll</span><br><span class="line">total 64</span><br><span class="line">drwxr-xr-x 3 root root 4096 Feb 27  2020 agenttools</span><br><span class="line">drwxr-xr-x 2 root root 4096 Nov  2  2020 bin</span><br><span class="line">drwxr-xr-x 2 root root 4096 Feb 10  2020 etc</span><br><span class="line">drwxr-xr-x 2 root root 4096 Feb 10  2020 games</span><br><span class="line">drwxr-xr-x 2 root root 4096 Feb 10  2020 include</span><br><span class="line">drwxr-xr-x 3 root root 4096 Nov  2  2020 lib</span><br><span class="line">drwxr-xr-x 2 root root 4096 Feb 10  2020 lib64</span><br><span class="line">drwxr-xr-x 2 root root 4096 Feb 10  2020 libexec</span><br><span class="line">drwxr-xr-x 9 root root 4096 Sep 18 00:09 mysql-5.7.34-linux-glibc2.12-x86_64</span><br><span class="line">drwxr-xr-x 9 root root 4096 Jan  8  2021 qcloud</span><br><span class="line">drwxr-xr-x 3 root root 4096 May 29  2020 sa</span><br><span class="line">drwxr-xr-x 2 root root 4096 Feb 10  2020 sbin</span><br><span class="line">drwxr-xr-x 5 root root 4096 Apr 13  2020 share</span><br><span class="line">drwxr-xr-x 2 root root 4096 Feb 10  2020 src</span><br><span class="line">drwxr-xr-x 2 root root 4096 Jul 14  2020 tencent</span><br><span class="line">drwxr-xr-x 9 root root 4096 Oct 28  2020 TsysAgent</span><br><span class="line">[root@VM-229-169-centos local]# mv mysql-5.7.34-linux-glibc2.12-x86_64/ mysql5.7</span><br><span class="line">[root@VM-229-169-centos local]# ll</span><br><span class="line">total 64</span><br><span class="line">drwxr-xr-x 3 root root 4096 Feb 27  2020 agenttools</span><br><span class="line">drwxr-xr-x 2 root root 4096 Nov  2  2020 bin</span><br><span class="line">drwxr-xr-x 2 root root 4096 Feb 10  2020 etc</span><br><span class="line">drwxr-xr-x 2 root root 4096 Feb 10  2020 games</span><br><span class="line">drwxr-xr-x 2 root root 4096 Feb 10  2020 include</span><br><span class="line">drwxr-xr-x 3 root root 4096 Nov  2  2020 lib</span><br><span class="line">drwxr-xr-x 2 root root 4096 Feb 10  2020 lib64</span><br><span class="line">drwxr-xr-x 2 root root 4096 Feb 10  2020 libexec</span><br><span class="line">drwxr-xr-x 9 root root 4096 Sep 18 00:09 mysql5.7</span><br><span class="line">drwxr-xr-x 9 root root 4096 Jan  8  2021 qcloud</span><br><span class="line">drwxr-xr-x 3 root root 4096 May 29  2020 sa</span><br><span class="line">drwxr-xr-x 2 root root 4096 Feb 10  2020 sbin</span><br><span class="line">drwxr-xr-x 5 root root 4096 Apr 13  2020 share</span><br><span class="line">drwxr-xr-x 2 root root 4096 Feb 10  2020 src</span><br><span class="line">drwxr-xr-x 2 root root 4096 Jul 14  2020 tencent</span><br><span class="line">drwxr-xr-x 9 root root 4096 Oct 28  2020 TsysAgent</span><br><span class="line">[root@VM-229-169-centos local]# groupadd mysql</span><br><span class="line">[root@VM-229-169-centos local]# useradd -r -g mysql mysql</span><br><span class="line">[root@VM-229-169-centos local]# mkdir /data/mysql</span><br><span class="line">[root@VM-229-169-centos local]# chown mysql:mysql -R /data/mysql</span><br><span class="line">[root@VM-229-169-centos local]# vim /etc/my.cnf</span><br><span class="line">[root@VM-229-169-centos local]# cd /usr/local/mysql5.7/bin/</span><br><span class="line">[root@VM-229-169-centos bin]# ./mysqld --defaults-file=/etc/my.cnf --basedir=/usr/local/mysql5.7/ --datadir=/data/mysql/ --user=mysql --initialize</span><br><span class="line">[root@VM-229-169-centos bin]# vim /data/mysql/mysql.err</span><br><span class="line">[root@VM-229-169-centos bin]# service mysqld start</span><br><span class="line">Redirecting to /bin/systemctl start mysqld.service</span><br><span class="line">Failed to start mysqld.service: Unit mysqld.service not found.</span><br><span class="line">[root@VM-229-169-centos bin]# service mysql start</span><br><span class="line">Redirecting to /bin/systemctl start mysql.service</span><br><span class="line">Failed to start mysql.service: Unit mysql.service not found.</span><br><span class="line">[root@VM-229-169-centos bin]# vi /etc/profile</span><br><span class="line">[root@VM-229-169-centos bin]# source /etc/profile</span><br><span class="line">[root@VM-229-169-centos bin]# service mysqld start</span><br><span class="line">Redirecting to /bin/systemctl start mysqld.service</span><br><span class="line">Failed to start mysqld.service: Unit mysqld.service not found.</span><br><span class="line">[root@VM-229-169-centos bin]# service mysql start</span><br><span class="line">Redirecting to /bin/systemctl start mysql.service</span><br><span class="line">Failed to start mysql.service: Unit mysql.service not found.</span><br><span class="line">[root@VM-229-169-centos bin]# /etc/init.d/ | grep mysql</span><br><span class="line">-bash: /etc/init.d/: Is a directory</span><br><span class="line">[root@VM-229-169-centos bin]# cp /usr/local/mysql5.7/support-files/mysql.server  /etc/init.d/mysql</span><br><span class="line">[root@VM-229-169-centos bin]# service mysql start</span><br><span class="line">Starting MySQL. SUCCESS! </span><br><span class="line">[root@VM-229-169-centos bin]# mysql -u root -p</span><br><span class="line">mysql: error while loading shared libraries: libncurses.so.5: cannot open shared object file: No such file or directory</span><br><span class="line">[root@VM-229-169-centos bin]# mysql -uroot -p</span><br><span class="line">mysql: error while loading shared libraries: libncurses.so.5: cannot open shared object file: No such file or directory</span><br><span class="line">[root@VM-229-169-centos bin]# yum install make cmake gcc gcc-c++ bison bison-devel ncurses ncurses-devel antoconf automake</span><br><span class="line">Last metadata expiration check: 0:32:06 ago on Fri 17 Sep 2021 11:46:19 PM CST.</span><br><span class="line">Package make-1:4.2.1-10.tl3.x86_64 is already installed.</span><br><span class="line">Package gcc-8.3.1-5.el8.0.2.x86_64 is already installed.</span><br><span class="line">Package gcc-c++-8.3.1-5.el8.0.2.x86_64 is already installed.</span><br><span class="line">Package bison-3.0.4-10.tl3.x86_64 is already installed.</span><br><span class="line">Package ncurses-6.1-7.20180224.tl3.x86_64 is already installed.</span><br><span class="line">Package ncurses-devel-6.1-7.20180224.tl3.x86_64 is already installed.</span><br><span class="line">No match for argument: antoconf</span><br><span class="line">Package automake-1.16.1-6.tl3.noarch is already installed.</span><br><span class="line">Error: Unable to find a match: antoconf</span><br><span class="line">[root@VM-229-169-centos bin]# mysql -uroot -p</span><br><span class="line">mysql: error while loading shared libraries: libncurses.so.5: cannot open shared object file: No such file or directory</span><br><span class="line">[root@VM-229-169-centos bin]# yum install libncurses*</span><br><span class="line">Last metadata expiration check: 0:32:29 ago on Fri 17 Sep 2021 11:46:19 PM CST.</span><br><span class="line">Package ncurses-c++-libs-6.1-7.20180224.tl3.x86_64 is already installed.</span><br><span class="line">Package ncurses-libs-6.1-7.20180224.tl3.x86_64 is already installed.</span><br><span class="line">Dependencies resolved.</span><br><span class="line">======================================================================================================================================================================================================================================================</span><br><span class="line"> Package                                                          Architecture                                        Version                                                            Repository                                              Size</span><br><span class="line">======================================================================================================================================================================================================================================================</span><br><span class="line">Installing:</span><br><span class="line"> ncurses-compat-libs                                              x86_64                                              6.1-7.20180224.tl3                                                 TencentOS                                              327 k</span><br><span class="line"></span><br><span class="line">Transaction Summary</span><br><span class="line">======================================================================================================================================================================================================================================================</span><br><span class="line">Install  1 Package</span><br><span class="line"></span><br><span class="line">Total download size: 327 k</span><br><span class="line">Installed size: 1.0 M</span><br><span class="line">Is this ok [y/N]: y</span><br><span class="line">Downloading Packages:</span><br><span class="line">ncurses-compat-libs-6.1-7.20180224.tl3.x86_64.rpm                                                                                                                                                                     1.0 MB/s | 327 kB     00:00    </span><br><span class="line">------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">Total                                                                                                                                                                                                                 1.0 MB/s | 327 kB     00:00     </span><br><span class="line">Running transaction check</span><br><span class="line">Transaction check succeeded.</span><br><span class="line">Running transaction test</span><br><span class="line">Transaction test succeeded.</span><br><span class="line">Running transaction</span><br><span class="line">  Preparing        :                                                                                                                                                                                                                              1/1 </span><br><span class="line">  Installing       : ncurses-compat-libs-6.1-7.20180224.tl3.x86_64                                                                                                                                                                                1/1 </span><br><span class="line">  Running scriptlet: ncurses-compat-libs-6.1-7.20180224.tl3.x86_64                                                                                                                                                                                1/1 </span><br><span class="line">  Verifying        : ncurses-compat-libs-6.1-7.20180224.tl3.x86_64                                                                                                                                                                                1/1 </span><br><span class="line"></span><br><span class="line">Installed:</span><br><span class="line">  ncurses-compat-libs-6.1-7.20180224.tl3.x86_64                                                                                                                                                                                                       </span><br><span class="line"></span><br><span class="line">Complete!</span><br><span class="line">[root@VM-229-169-centos bin]# mysql -uroot -p</span><br><span class="line">Enter password: </span><br><span class="line">Welcome to the MySQL monitor.  Commands end with ; or \g.</span><br><span class="line">Your MySQL connection id is 2</span><br><span class="line">Server version: 5.7.34</span><br><span class="line"></span><br><span class="line">Copyright (c) 2000, 2021, Oracle and/or its affiliates.</span><br><span class="line"></span><br><span class="line">Oracle is a registered trademark of Oracle Corporation and/or its</span><br><span class="line">affiliates. Other names may be trademarks of their respective</span><br><span class="line">owners.</span><br><span class="line"></span><br><span class="line">Type &#x27;help;&#x27; or &#x27;\h&#x27; for help. Type &#x27;\c&#x27; to clear the current input statement.</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> SET PASSWORD = PASSWORD(<span class="string">&#x27;root&#x27;</span>);</span></span><br><span class="line">Query OK, 0 rows affected, 1 warning (0.00 sec)</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> ALTER USER <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> PASSWORD EXPIRE NEVER;</span></span><br><span class="line">Query OK, 0 rows affected (0.00 sec)</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> flush privileges;</span></span><br><span class="line">Query OK, 0 rows affected (0.00 sec)</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> show databases;</span></span><br><span class="line">+--------------------+</span><br><span class="line">| Database           |</span><br><span class="line">+--------------------+</span><br><span class="line">| information_schema |</span><br><span class="line">| mysql              |</span><br><span class="line">| performance_schema |</span><br><span class="line">| sys                |</span><br><span class="line">+--------------------+</span><br><span class="line">4 rows in set (0.00 sec)</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> use mysql;</span></span><br><span class="line">Reading table information for completion of table and column names</span><br><span class="line">You can turn off this feature to get a quicker startup with -A</span><br><span class="line"></span><br><span class="line">Database changed</span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> select * from users;</span></span><br><span class="line">ERROR 1146 (42S02): Table &#x27;mysql.users&#x27; doesn&#x27;t exist</span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> select * from user;</span></span><br><span class="line">+-----------+---------------+-------------+-------------+-------------+-------------+-------------+-----------+-------------+---------------+--------------+-----------+------------+-----------------+------------+------------+--------------+------------+-----------------------+------------------+--------------+-----------------+------------------+------------------+----------------+---------------------+--------------------+------------------+------------+--------------+------------------------+----------+------------+-------------+--------------+---------------+-------------+-----------------+----------------------+-----------------------+-------------------------------------------+------------------+-----------------------+-------------------+----------------+</span><br><span class="line">| Host      | User          | Select_priv | Insert_priv | Update_priv | Delete_priv | Create_priv | Drop_priv | Reload_priv | Shutdown_priv | Process_priv | File_priv | Grant_priv | References_priv | Index_priv | Alter_priv | Show_db_priv | Super_priv | Create_tmp_table_priv | Lock_tables_priv | Execute_priv | Repl_slave_priv | Repl_client_priv | Create_view_priv | Show_view_priv | Create_routine_priv | Alter_routine_priv | Create_user_priv | Event_priv | Trigger_priv | Create_tablespace_priv | ssl_type | ssl_cipher | x509_issuer | x509_subject | max_questions | max_updates | max_connections | max_user_connections | plugin                | authentication_string                     | password_expired | password_last_changed | password_lifetime | account_locked |</span><br><span class="line">+-----------+---------------+-------------+-------------+-------------+-------------+-------------+-----------+-------------+---------------+--------------+-----------+------------+-----------------+------------+------------+--------------+------------+-----------------------+------------------+--------------+-----------------+------------------+------------------+----------------+---------------------+--------------------+------------------+------------+--------------+------------------------+----------+------------+-------------+--------------+---------------+-------------+-----------------+----------------------+-----------------------+-------------------------------------------+------------------+-----------------------+-------------------+----------------+</span><br><span class="line">| localhost | root          | Y           | Y           | Y           | Y           | Y           | Y         | Y           | Y             | Y            | Y         | Y          | Y               | Y          | Y          | Y            | Y          | Y                     | Y                | Y            | Y               | Y                | Y                | Y              | Y                   | Y                  | Y                | Y          | Y            | Y                      |          |            |             |              |             0 |           0 |               0 |                    0 | mysql_native_password | *81F5E21E35407D884A6CD4A731AEBFB6AF209E1B | N                | 2021-09-18 00:19:27   |                 0 | N              |</span><br><span class="line">| localhost | mysql.session | N           | N           | N           | N           | N           | N         | N           | N             | N            | N         | N          | N               | N          | N          | N            | Y          | N                     | N                | N            | N               | N                | N                | N              | N                   | N                  | N                | N          | N            | N                      |          |            |             |              |             0 |           0 |               0 |                    0 | mysql_native_password | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE | N                | 2021-09-18 00:13:03   |              NULL | Y              |</span><br><span class="line">| localhost | mysql.sys     | N           | N           | N           | N           | N           | N         | N           | N             | N            | N         | N          | N               | N          | N          | N            | N          | N                     | N                | N            | N               | N                | N                | N              | N                   | N                  | N                | N          | N            | N                      |          |            |             |              |             0 |           0 |               0 |                    0 | mysql_native_password | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE | N                | 2021-09-18 00:13:03   |              NULL | Y              |</span><br><span class="line">+-----------+---------------+-------------+-------------+-------------+-------------+-------------+-----------+-------------+---------------+--------------+-----------+------------+-----------------+------------+------------+--------------+------------+-----------------------+------------------+--------------+-----------------+------------------+------------------+----------------+---------------------+--------------------+------------------+------------+--------------+------------------------+----------+------------+-------------+--------------+---------------+-------------+-----------------+----------------------+-----------------------+-------------------------------------------+------------------+-----------------------+-------------------+----------------+</span><br><span class="line">3 rows in set (0.00 sec)</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> GRANT ALL PRIVILEGES ON *.* TO <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;%&#x27;</span> IDENTIFIED BY <span class="string">&#x27;root&#x27;</span> WITH GRANT OPTION;</span></span><br><span class="line">Query OK, 0 rows affected, 1 warning (0.00 sec)</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> FLUSH PRIVILEGES;</span></span><br><span class="line">Query OK, 0 rows affected (0.00 sec)</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> select user,host from mysql.user;</span></span><br><span class="line">+---------------+-----------+</span><br><span class="line">| user          | host      |</span><br><span class="line">+---------------+-----------+</span><br><span class="line">| root          | %         |</span><br><span class="line">| mysql.session | localhost |</span><br><span class="line">| mysql.sys     | localhost |</span><br><span class="line">| root          | localhost |</span><br><span class="line">+---------------+-----------+</span><br><span class="line">4 rows in set (0.00 sec)</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> <span class="built_in">exit</span>;</span></span><br><span class="line">Bye</span><br><span class="line">[root@VM-229-169-centos bin]# mysql</span><br><span class="line">ERROR 1045 (28000): Access denied for user &#x27;root&#x27;@&#x27;localhost&#x27; (using password: NO)</span><br><span class="line">[root@VM-229-169-centos bin]# mysql -uroot -p</span><br><span class="line">Enter password: </span><br><span class="line">Welcome to the MySQL monitor.  Commands end with ; or \g.</span><br><span class="line">Your MySQL connection id is 9</span><br><span class="line">Server version: 5.7.34 MySQL Community Server (GPL)</span><br><span class="line"></span><br><span class="line">Copyright (c) 2000, 2021, Oracle and/or its affiliates.</span><br><span class="line"></span><br><span class="line">Oracle is a registered trademark of Oracle Corporation and/or its</span><br><span class="line">affiliates. Other names may be trademarks of their respective</span><br><span class="line">owners.</span><br><span class="line"></span><br><span class="line">Type &#x27;help;&#x27; or &#x27;\h&#x27; for help. Type &#x27;\c&#x27; to clear the current input statement.</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> <span class="built_in">exit</span>;</span></span><br><span class="line">Bye</span><br><span class="line">[root@VM-229-169-centos bin]# service mysql restart</span><br><span class="line">Shutting down MySQL.... SUCCESS! </span><br><span class="line">Starting MySQL. SUCCESS! </span><br><span class="line">[root@VM-229-169-centos bin]# mysql</span><br><span class="line">ERROR 1045 (28000): Access denied for user &#x27;root&#x27;@&#x27;localhost&#x27; (using password: NO)</span><br><span class="line">[root@VM-229-169-centos bin]# service mysql restart</span><br><span class="line">Shutting down MySQL.. SUCCESS! </span><br><span class="line">Starting MySQL. SUCCESS! </span><br><span class="line">[root@VM-229-169-centos bin]# service mysql restart</span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1451186">https://cloud.tencent.com/developer/article/1451186</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/bbdong/p/9579794.html">https://www.cnblogs.com/bbdong/p/9579794.html</a></p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/2021/cloud-computing-01/" data-toggle="tooltip" data-placement="top" title="云计算初步">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/2021/es-optimization/" data-toggle="tooltip" data-placement="top" title="Elasticsearch调优">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Linux安装Mysql5.7以及常见问题&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2021/Linux-install-mysql5-7/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'a00494876d6f5f4bcbfd',
+      clientSecret: '33d3d0be81052a26f5a3535733b8b7854628564f',
+      repo: 'shifpeng.github.io',
+      owner: 'shifpeng',
+      admin: 'shifpeng',
+      id: 'Sat Sep 18 2021 00:25:54 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="nav">none</ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://cuiqingcai.com/" target="_blank">静 觅 崔庆才</a>
+          </li>
+          
+          <li>
+            <a href="http://www.52nlp.cn/" target="_blank">我爱自然语言处理</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cnblogs.com/Steven-shi/" target="_blank">博客园 石福鹏</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/shifpeng">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/Steven0T">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Steven
+          2021
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://shifpeng.cn">Steven</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/mouseclick.js"  content='' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "shifpeng";
+    let ghPages = gh + ".github.io";
+    let pagePath = "2021/Linux-install-mysql5-7/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://www.shifpeng.cn/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

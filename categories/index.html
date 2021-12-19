@@ -245,10 +245,12 @@
 
           
           
+          
+          
           <li>
-            <a href="/categories/">
+            <a href="/about/">
               
-              分类
+              关于
               
               
             </a>
@@ -267,12 +269,10 @@
           
           
           
-          
-          
           <li>
-            <a href="/about/">
+            <a href="/categories/">
               
-              关于
+              分类
               
               
             </a>
@@ -445,15 +445,15 @@
         
         <a href="#JVM" title="JVM" rel="5">JVM</a>
         
-        <a href="#Mysql" title="Mysql" rel="3">Mysql</a>
+        <a href="#Mysql" title="Mysql" rel="4">Mysql</a>
         
         <a href="#深度好文" title="深度好文" rel="2">深度好文</a>
         
         <a href="#算法与数据结构" title="算法与数据结构" rel="1">算法与数据结构</a>
         
-        <a href="#Go" title="Go" rel="1">Go</a>
-        
         <a href="#CDN加速" title="CDN加速" rel="1">CDN加速</a>
+        
+        <a href="#Go" title="Go" rel="1">Go</a>
         
         <a href="#Hexo" title="Hexo" rel="1">Hexo</a>
         
@@ -577,9 +577,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/2021/es-optimization/">
+          <a href="/2021/elasticsearch-mapping-agg/">
             <h2 class="post-title">
-              Elasticsearch调优
+              Elasticsearch之Mapping和聚合查询
             </h2>
             
           </a>
@@ -592,9 +592,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/2021/elasticsearch-mapping-agg/">
+          <a href="/2021/es-optimization/">
             <h2 class="post-title">
-              Elasticsearch之Mapping和聚合查询
+              Elasticsearch调优
             </h2>
             
           </a>
@@ -744,6 +744,25 @@
         </div>
         <hr>
         
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
+          <a href="/2021/Linux-install-mysql5-7/">
+            <h2 class="post-title">
+              Linux安装Mysql5.7以及常见问题
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Mysql,架构+大数据进阶
+            </h3>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
       </div>
       
       <div class="one-tag-list">
@@ -818,28 +837,6 @@
       </div>
       
       <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="Go">
-          <span class="tag-text">Go</span>
-        </span>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/2021/go-base/">
-            <h2 class="post-title">
-              go-base
-            </h2>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
         <span class="fa fa-tag listing-seperator" id="CDN加速">
           <span class="tag-text">CDN加速</span>
         </span>
@@ -857,6 +854,28 @@
             <h3 class="post-subtitle">
               GitHub静态资源访问免费CDN提速，以及使用Hexo-theme-livemylife主题后，
             </h3>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Go">
+          <span class="tag-text">Go</span>
+        </span>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
+          <a href="/2021/go-base/">
+            <h2 class="post-title">
+              Golang基础
+            </h2>
             
           </a>
           <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->

@@ -143,7 +143,7 @@
   <link rel="canonical" href="https://www.shifpeng.cn/2021/go-base/">
   <title>
     
-      go-base - Steven | java
+      Golang基础 - Steven | java
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -245,10 +245,12 @@
 
           
           
+          
+          
           <li>
-            <a href="/categories/">
+            <a href="/about/">
               
-              分类
+              关于
               
               
             </a>
@@ -267,12 +269,10 @@
           
           
           
-          
-          
           <li>
-            <a href="/about/">
+            <a href="/categories/">
               
-              关于
+              分类
               
               
             </a>
@@ -392,7 +392,7 @@
               <a class="tag" href="/tags/#Go" title="Go">Go</a>
               
             </div>
-            <h1>go-base</h1>
+            <h1>Golang基础</h1>
             <h2 class="subheading"></h2>
             <span class="meta">
               Posted by Steven on
@@ -408,7 +408,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">293</span> In Total
+              Words <span class="post-count">433</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -470,9 +470,10 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="一、指针和取地址符">一、指针和取地址符<code>&amp;</code></h2>
-<h3 id="1、取地址符">1、取地址符<code>&amp;</code></h3>
-<p>​	Go语言中的这个符号就是取地址符（没有其他含义），而在C++中即是引用，同时也是取地址符</p>
+        <p>主要针对从Java转Go的人，比较适用（Javaer转Go有一点小的门槛）</p>
+<h2 id="一、指针和取地址符-amp"><a href="#一、指针和取地址符-amp" class="headerlink" title="一、指针和取地址符&amp;"></a>一、指针和取地址符<code>&amp;</code></h2><p>Java中，<code>T t =new T();</code>这里的<code>t</code>就是一个指针，根据这个<code>t</code>就可以找到<code>T</code>对象，只不过在Java中，没有办法输出这个地址，但是Go中不一样</p>
+<p>Go中有指针描述符<code>*</code>,取地址符<code>&amp;</code></p>
+<h3 id="1、取地址符-amp"><a href="#1、取地址符-amp" class="headerlink" title="1、取地址符&amp;"></a>1、取地址符<code>&amp;</code></h3><p>​    Go语言中的这个符号就是取地址符（没有其他含义），而在C++中即是引用，同时也是取地址符</p>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">var</span> i <span class="keyword">int</span> = <span class="number">8</span></span><br><span class="line">	fmt.Println(&amp;i)</span><br><span class="line">	fmt.Println(i)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//打印：</span></span><br><span class="line"><span class="number">0xc000018080</span></span><br><span class="line"><span class="number">8</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">	<span class="keyword">var</span> i <span class="keyword">int</span> = <span class="number">8</span>	</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">var</span> pi *<span class="keyword">int</span> <span class="comment">//申明一个类型，这个类型不是int类型，而是指向int类型指针的这种类型  可以认为pi里面装了个内存地址，这个地址指向内存只能中的int类型</span></span><br><span class="line">	pi = &amp;i</span><br><span class="line">	fmt.Println(pi)</span><br><span class="line"></span><br><span class="line"><span class="comment">//打印</span></span><br><span class="line"><span class="number">0xc000018080</span></span><br></pre></td></tr></table></figure>
 <p>所以说</p>
@@ -480,10 +481,10 @@
 <p><strong>指针</strong> 是一个值，这个值，这个值就是一个<strong>地址</strong></p>
 </blockquote>
 <p>在Java类型中，是没有一种引用类型是指向基础类型变量的，比如int,如果想用就要用Integer包装类型</p>
-<h3 id="2、指针">2、指针</h3>
-<p>C语言的指针只要是计算机相关专业的伙伴都知道，C指针比较繁琐的地方在于指针运算。比如：指针加一就直接索引了数组的下一个元素了，但是Go语言里面是没有指针运算的。</p>
+<p>那Go中的指针到底有什么用呢？很多时候是用来传递参数的，就是往函数里面穿参数，只有一种方式，就是传值。不像java中传值、传引用</p>
+<h3 id="2、指针"><a href="#2、指针" class="headerlink" title="2、指针"></a>2、指针</h3><p>C语言的指针只要是计算机相关专业的伙伴都知道，C指针比较繁琐的地方在于 <strong>指针运算</strong> 。比如：指针加一就直接索引了数组的下一个元素了，但是 <strong>Go语言里面是没有指针运算</strong> 的。</p>
 <p><code>Go</code> Vs <code>Java</code></p>
-<p>1、指针</p>
+<p>1、指针 </p>
 
 
         <hr>
@@ -545,7 +546,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=go-base&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2021/go-base/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Golang基础&body=Hi,I found this website and thought you might like it https://www.shifpeng.cn/2021/go-base/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -632,7 +633,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E6%8C%87%E9%92%88%E5%92%8C%E5%8F%96%E5%9C%B0%E5%9D%80%E7%AC%A6"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、指针和取地址符&amp;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E5%8F%96%E5%9C%B0%E5%9D%80%E7%AC%A6"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">1、取地址符&amp;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81%E6%8C%87%E9%92%88"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">2、指针</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E6%8C%87%E9%92%88%E5%92%8C%E5%8F%96%E5%9C%B0%E5%9D%80%E7%AC%A6-amp"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、指针和取地址符&amp;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E5%8F%96%E5%9C%B0%E5%9D%80%E7%AC%A6-amp"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">1、取地址符&amp;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81%E6%8C%87%E9%92%88"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">2、指针</span></a></li></ol></li></ol>
         
         </div>
       </aside>

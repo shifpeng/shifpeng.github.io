@@ -245,10 +245,12 @@
 
           
           
+          
+          
           <li>
-            <a href="/categories/">
+            <a href="/about/">
               
-              分类
+              关于
               
               
             </a>
@@ -267,12 +269,10 @@
           
           
           
-          
-          
           <li>
-            <a href="/about/">
+            <a href="/categories/">
               
-              关于
+              分类
               
               
             </a>
@@ -446,6 +446,88 @@
       <!-- Main Content -->
 
 
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/2021/Redis的String类型和bitmap类型/">
+    <h2 class="post-title">
+      Redis的String类型和bitmap类型
+    </h2>
+    <h3 class="post-subtitle">
+      Redis基本的类型和位图bitmap
+    </h3>
+    <div class="post-content-preview">
+      首先确定Redis服务是启动的
+12345[root@hadoop01 ~]# ps -fe | grep redisroot      18725      1  0 05:29 ?        00:00:54 /usr/local/bin/redis-server 127.0.0.1:6379root      22528      1  0 05:39 ?        00:00......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by 石福鹏 on
+    2021-03-16
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+    
+    <a href="/tags/#Redis" title="Redis">Redis</a>
+    
+    <a href="/tags/#重学Redis" title="重学Redis">重学Redis</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/2021/Redis介绍及NIO原理介绍/">
+    <h2 class="post-title">
+      Redis介绍及NIO原理介绍
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      一、引言
+刚有计算机的时候，数据可以存在文件里，那如果我们要查询数据的话，Linux中有grep、awk等这样的命令，用Java语言的话，写一个程序，基于这个文件的IO流读写操作，那还有什么其他问题嘛？
+一些常识
+
+在计算机中，数据是存在磁盘中的，磁盘有两个指标：
+​	1、寻址：寻址的速度是毫秒级的
+​	2、带宽：即单位时间内可以有多少个字节流过，多大的数据量流过去，一般是G或者M级别的
+另......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by 石福鹏 on
+    2021-03-13
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+    
+    <a href="/tags/#Redis" title="Redis">Redis</a>
+    
+    <a href="/tags/#重学Redis" title="重学Redis">重学Redis</a>
+    
+  </div>
+  
+
+</div>
+<hr>
 
 <div class="post-preview">
   
@@ -793,91 +875,6 @@ kafka是一个分布式的基于发布/订阅模式的消息队列（Message Que
 </div>
 <hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2020/mysql-interview-topic/">
-    <h2 class="post-title">
-      Mysql专题
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      1、描述一下数据库事务隔离级别？
-ACID
-原子性： 通过undo log实现的，要么成功，要么失败，如果失败了就回滚，记录原来的数据到undo log中，具体的实现用到了MVCC
-一致性： 最核心和最本质的要求，其他三个共同保证一致性
-隔离性： 通过锁来实现
-持久性： redo log
-数据库的事务隔离级别有四种，分别是读未提交、读已提交、可重复读、序列化，不同的隔离级别下会产生脏读、幻读......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Steven on
-    2020-12-03
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
-    
-    <a href="/tags/#Mysql" title="Mysql">Mysql</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2020/在Mac系统上使用Dokcer搭建LNMP环境/">
-    <h2 class="post-title">
-      在Mac系统上使用Dokcer搭建LNMP环境
-    </h2>
-    <h3 class="post-subtitle">
-      每次换电脑或者重装系统之后，开发环境的搭建很费事，整不好还遇到一些乱起八糟的大坑，所以最好是直接使用dokcer,换环境的时候，镜像拉起就OK了
-    </h3>
-    <div class="post-content-preview">
-      最开始准备自己头搭建一套，即直接在Mac上分别安装Nginx、Mysql、PHP，对于新手来说，刚毕业的同学来说，一定自己一步一步搭，刚开始会趟好多的坑，这些坑你一定要趟，这样也就知道了一些服务运行的原理，在服务架构上处于什么位置，发挥什么作用，都是通过一次一次的实践去理解的。
-但是我这里就不这样玩了，因为我就是为了省时间，并且也不再Docker上一个一个的搭建，有现成的轮子，拿过来，修改一......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by 石福鹏 on
-    2020-12-01
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Docker" title="Docker">Docker</a>
-    
-    <a href="/tags/#Linux" title="Linux">Linux</a>
-    
-    <a href="/tags/#Nginx" title="Nginx">Nginx</a>
-    
-    <a href="/tags/#PHP" title="PHP">PHP</a>
-    
-    <a href="/tags/#Mysql" title="Mysql">Mysql</a>
-    
-    <a href="/tags/#集成开发环境" title="集成开发环境">集成开发环境</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -946,15 +943,15 @@ ACID
     
     
     
+    <a href="/tags/#GitHub" title="GitHub" rel="3">GitHub</a>
+    
+    
+    
     <a href="/tags/#Elasticsearch - 大数据" title="Elasticsearch - 大数据" rel="4">Elasticsearch - 大数据</a>
     
     
     
     <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶" rel="30">架构+大数据进阶</a>
-    
-    
-    
-    <a href="/tags/#GitHub" title="GitHub" rel="3">GitHub</a>
     
     
     
@@ -1042,10 +1039,6 @@ ACID
     
     
     
-    <a href="/tags/#Go" title="Go" rel="1">Go</a>
-    
-    
-    
     <a href="/tags/#CDN加速" title="CDN加速" rel="1">CDN加速</a>
     
     
@@ -1055,6 +1048,10 @@ ACID
     
     
     <a href="/tags/#jsdelivr" title="jsdelivr" rel="1">jsdelivr</a>
+    
+    
+    
+    <a href="/tags/#Go" title="Go" rel="1">Go</a>
     
     
     
@@ -1165,6 +1162,14 @@ ACID
     <a href="/tags/#多线程与高并发" title="多线程与高并发" rel="2">多线程与高并发</a>
     
     
+    
+    <a href="/tags/#与计算" title="与计算" rel="1">与计算</a>
+    
+    
+    
+    <a href="/tags/#云原生" title="云原生" rel="1">云原生</a>
+    
+    
   </div>
 </section>
 
@@ -1243,6 +1248,14 @@ ACID
 <div class="widget">
   <ul>
     
+    <a href="../../2021/cloud-computing-01/">
+      <li>云计算初步</li>
+    </a>
+    
+    <a href="../../2021/Linux-install-mysql5-7/">
+      <li>Linux安装Mysql5.7以及常见问题</li>
+    </a>
+    
     <a href="../../2021/es-optimization/">
       <li>Elasticsearch调优</li>
     </a>
@@ -1253,14 +1266,6 @@ ACID
     
     <a href="../../2021/elasticsearch-mapping-agg/">
       <li>Elasticsearch之Mapping和聚合查询</li>
-    </a>
-    
-    <a href="../../2021/Elasticsearch-query/">
-      <li>Elasticsearch查询语法</li>
-    </a>
-    
-    <a href="../../2021/mysql-python-lib-error/">
-      <li>Python 安装MySQLdb出错问题排查</li>
     </a>
     
   </ul>
@@ -1289,7 +1294,7 @@ ACID
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2021/09/">September 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/07/">July 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/06/">June 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/04/">April 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/02/">February 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/06/">June 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/05/">May 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/03/">March 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/02/">February 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/07/">July 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/11/">November 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/08/">August 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/05/">May 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/10/">October 2016</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/09/">September 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/07/">July 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/06/">June 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/04/">April 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/02/">February 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/06/">June 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/05/">May 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/03/">March 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/02/">February 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/07/">July 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/11/">November 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/08/">August 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/05/">May 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/10/">October 2016</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1325,12 +1330,12 @@ ACID
       <li>算法与数据结构</li>
     </a>
     
-    <a href="/categories/#Go">
-      <li>Go</li>
-    </a>
-    
     <a href="/categories/#CDN加速">
       <li>CDN加速</li>
+    </a>
+    
+    <a href="/categories/#Go">
+      <li>Go</li>
     </a>
     
     <a href="/categories/#Hexo">
