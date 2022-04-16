@@ -248,9 +248,20 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/categories/">
               
-              关于
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
               
               
             </a>
@@ -270,20 +281,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/about/">
               
-              分类
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/tags/">
-              
-              标签
+              关于
               
               
             </a>
@@ -351,12 +351,12 @@
       /* intro-header */
       --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
       --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io');
-      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/categories_bg.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/lml_bg.jpg');
       --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/archive_bg3.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/shifpeng/shifpeng.github.io/img/header_img/categories_bg.jpg');
     }
     header.intro-header {
        /*config*/
@@ -898,10 +898,6 @@ notify唤醒在此对象监视器上等待的单个线程。
   <div class="tags">
     
     
-    <a href="/tags/#面试题" title="面试题" rel="1">面试题</a>
-    
-    
-    
     <a href="/tags/#Java" title="Java" rel="29">Java</a>
     
     
@@ -927,6 +923,10 @@ notify唤醒在此对象监视器上等待的单个线程。
     
     
     <a href="/tags/#博客" title="博客" rel="1">博客</a>
+    
+    
+    
+    <a href="/tags/#面试题" title="面试题" rel="1">面试题</a>
     
     
     
@@ -978,11 +978,11 @@ notify唤醒在此对象监视器上等待的单个线程。
     
     
     
-    <a href="/tags/#shadowsocks" title="shadowsocks" rel="1">shadowsocks</a>
-    
-    
-    
     <a href="/tags/#VPN" title="VPN" rel="2">VPN</a>
+    
+    
+    
+    <a href="/tags/#shadowsocks" title="shadowsocks" rel="1">shadowsocks</a>
     
     
     
@@ -1006,15 +1006,15 @@ notify唤醒在此对象监视器上等待的单个线程。
     
     
     
+    <a href="/tags/#JVM调优" title="JVM调优" rel="4">JVM调优</a>
+    
+    
+    
     <a href="/tags/#与计算" title="与计算" rel="1">与计算</a>
     
     
     
     <a href="/tags/#云原生" title="云原生" rel="1">云原生</a>
-    
-    
-    
-    <a href="/tags/#JVM调优" title="JVM调优" rel="4">JVM调优</a>
     
     
     
@@ -1030,10 +1030,6 @@ notify唤醒在此对象监视器上等待的单个线程。
     
     
     
-    <a href="/tags/#Go" title="Go" rel="1">Go</a>
-    
-    
-    
     <a href="/tags/#Kafka" title="Kafka" rel="2">Kafka</a>
     
     
@@ -1042,11 +1038,15 @@ notify唤醒在此对象监视器上等待的单个线程。
     
     
     
+    <a href="/tags/#Nodejs" title="Nodejs" rel="1">Nodejs</a>
+    
+    
+    
     <a href="/tags/#Mac" title="Mac" rel="1">Mac</a>
     
     
     
-    <a href="/tags/#Nodejs" title="Nodejs" rel="1">Nodejs</a>
+    <a href="/tags/#Go" title="Go" rel="1">Go</a>
     
     
     
@@ -1054,11 +1054,11 @@ notify唤醒在此对象监视器上等待的单个线程。
     
     
     
-    <a href="/tags/#每日一题" title="每日一题" rel="4">每日一题</a>
-    
-    
-    
     <a href="/tags/#Zookeeper" title="Zookeeper" rel="2">Zookeeper</a>
+    
+    
+    
+    <a href="/tags/#每日一题" title="每日一题" rel="4">每日一题</a>
     
     
     
@@ -1070,11 +1070,11 @@ notify唤醒在此对象监视器上等待的单个线程。
     
     
     
-    <a href="/tags/#签名" title="签名" rel="1">签名</a>
-    
-    
-    
     <a href="/tags/#OSS" title="OSS" rel="2">OSS</a>
+    
+    
+    
+    <a href="/tags/#签名" title="签名" rel="1">签名</a>
     
     
     
@@ -1220,7 +1220,7 @@ notify唤醒在此对象监视器上等待的单个线程。
   <ul>
     
     <a href="../../2022/python-setup-py-egg-info-did-not-run-successfully/">
-      <li>Python安装插件出现的错误解决</li>
+      <li>Python安装插件出现Can not execute setup.py since setuptools is not available的错误解决</li>
     </a>
     
     <a href="../../2021/cloud-computing-01/">
@@ -1305,10 +1305,6 @@ notify唤醒在此对象监视器上等待的单个线程。
       <li>CDN加速</li>
     </a>
     
-    <a href="/categories/#Go">
-      <li>Go</li>
-    </a>
-    
     <a href="/categories/#Hexo">
       <li>Hexo</li>
     </a>
@@ -1323,6 +1319,10 @@ notify唤醒在此对象监视器上等待的单个线程。
     
     <a href="/categories/#Python">
       <li>Python</li>
+    </a>
+    
+    <a href="/categories/#Go">
+      <li>Go</li>
     </a>
     
     <a href="/categories/#Zookeeper">
