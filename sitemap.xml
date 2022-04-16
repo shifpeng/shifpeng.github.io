@@ -781,6 +781,13 @@
 
   
   <url>
+    <loc>https://www.shifpeng.cn/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/</loc>
+    <lastmod>2022-04-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.shifpeng.cn/tags/Java/</loc>
     <lastmod>2022-04-16</lastmod>
     <changefreq>daily</changefreq>
@@ -824,13 +831,6 @@
   
   <url>
     <loc>https://www.shifpeng.cn/tags/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2022-04-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.shifpeng.cn/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/</loc>
     <lastmod>2022-04-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1012,6 +1012,13 @@
   </url>
   
   <url>
+    <loc>https://www.shifpeng.cn/tags/Go/</loc>
+    <lastmod>2022-04-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.shifpeng.cn/tags/Kafka/</loc>
     <lastmod>2022-04-16</lastmod>
     <changefreq>daily</changefreq>
@@ -1026,13 +1033,6 @@
   </url>
   
   <url>
-    <loc>https://www.shifpeng.cn/tags/Nodejs/</loc>
-    <lastmod>2022-04-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.shifpeng.cn/tags/Mac/</loc>
     <lastmod>2022-04-16</lastmod>
     <changefreq>daily</changefreq>
@@ -1040,7 +1040,7 @@
   </url>
   
   <url>
-    <loc>https://www.shifpeng.cn/tags/Go/</loc>
+    <loc>https://www.shifpeng.cn/tags/Nodejs/</loc>
     <lastmod>2022-04-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1266,6 +1266,13 @@
   </url>
   
   <url>
+    <loc>https://www.shifpeng.cn/categories/Go/</loc>
+    <lastmod>2022-04-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.shifpeng.cn/categories/kafka/</loc>
     <lastmod>2022-04-16</lastmod>
     <changefreq>daily</changefreq>
@@ -1281,13 +1288,6 @@
   
   <url>
     <loc>https://www.shifpeng.cn/categories/Python/</loc>
-    <lastmod>2022-04-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.shifpeng.cn/categories/Go/</loc>
     <lastmod>2022-04-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
