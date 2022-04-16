@@ -454,6 +454,50 @@
   <!-- top end -->
   
 
+  <a href="/2021/zookeeper-principle/">
+    <h2 class="post-title">
+      Zookeeper原理知识以及Paxos、Zab、角色功能
+    </h2>
+    <h3 class="post-subtitle">
+      Zookeeper原理知识、paxos、ZAB、watch、API、callback等
+    </h3>
+    <div class="post-content-preview">
+      上一篇文章中说到Zookeeper的特征：可扩展（可以很多节点）、可靠性、时序性、快速
+首先扩展性
+一、扩展性
+一般在说到架构、框架的时候，都会谈到一个角色问题
+
+因为现在大多数架构都是分布式，分布式就会有分布不同的角色，角色之前相互通信，联系，以及各自的职能
+
+对于zookeeper来说，角色有leader、follower,这是一种主从的架构，是需要通信的，一个主，多个存，其实除了这两者......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Steven on
+    2021-05-10
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+    
+    <a href="/tags/#中间件" title="中间件">中间件</a>
+    
+    <a href="/tags/#Zookeeper" title="Zookeeper">Zookeeper</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/2021/zookeeper-base/">
     <h2 class="post-title">
       Zookeeper基础知识
@@ -828,44 +872,6 @@ AOF（Append Only File）描述的就是日志。
 </div>
 <hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2021/Redis的String类型和bitmap类型/">
-    <h2 class="post-title">
-      Redis的String类型和bitmap类型
-    </h2>
-    <h3 class="post-subtitle">
-      Redis基本的类型和位图bitmap
-    </h3>
-    <div class="post-content-preview">
-      首先确定Redis服务是启动的
-12345[root@hadoop01 ~]# ps -fe | grep redisroot      18725      1  0 05:29 ?        00:00:54 /usr/local/bin/redis-server 127.0.0.1:6379root      22528      1  0 05:39 ?        00:00......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by 石福鹏 on
-    2021-03-16
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
-    
-    <a href="/tags/#Redis" title="Redis">Redis</a>
-    
-    <a href="/tags/#重学Redis" title="重学Redis">重学Redis</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -934,15 +940,15 @@ AOF（Append Only File）描述的就是日志。
     
     
     
-    <a href="/tags/#GitHub" title="GitHub" rel="3">GitHub</a>
-    
-    
-    
     <a href="/tags/#Elasticsearch - 大数据" title="Elasticsearch - 大数据" rel="4">Elasticsearch - 大数据</a>
     
     
     
     <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶" rel="30">架构+大数据进阶</a>
+    
+    
+    
+    <a href="/tags/#GitHub" title="GitHub" rel="3">GitHub</a>
     
     
     
@@ -998,11 +1004,11 @@ AOF（Append Only File）描述的就是日志。
     
     
     
-    <a href="/tags/#VPN" title="VPN" rel="2">VPN</a>
-    
-    
-    
     <a href="/tags/#shadowsocks" title="shadowsocks" rel="1">shadowsocks</a>
+    
+    
+    
+    <a href="/tags/#VPN" title="VPN" rel="2">VPN</a>
     
     
     
@@ -1023,6 +1029,14 @@ AOF（Append Only File）描述的就是日志。
     
     
     <a href="/tags/#算法与数据结构" title="算法与数据结构" rel="1">算法与数据结构</a>
+    
+    
+    
+    <a href="/tags/#与计算" title="与计算" rel="1">与计算</a>
+    
+    
+    
+    <a href="/tags/#云原生" title="云原生" rel="1">云原生</a>
     
     
     
@@ -1066,11 +1080,11 @@ AOF（Append Only File）描述的就是日志。
     
     
     
-    <a href="/tags/#Zookeeper" title="Zookeeper" rel="2">Zookeeper</a>
-    
-    
-    
     <a href="/tags/#每日一题" title="每日一题" rel="4">每日一题</a>
+    
+    
+    
+    <a href="/tags/#Zookeeper" title="Zookeeper" rel="2">Zookeeper</a>
     
     
     
@@ -1082,11 +1096,11 @@ AOF（Append Only File）描述的就是日志。
     
     
     
-    <a href="/tags/#OSS" title="OSS" rel="2">OSS</a>
-    
-    
-    
     <a href="/tags/#签名" title="签名" rel="1">签名</a>
+    
+    
+    
+    <a href="/tags/#OSS" title="OSS" rel="2">OSS</a>
     
     
     
@@ -1151,14 +1165,6 @@ AOF（Append Only File）描述的就是日志。
     
     
     <a href="/tags/#多线程与高并发" title="多线程与高并发" rel="2">多线程与高并发</a>
-    
-    
-    
-    <a href="/tags/#与计算" title="与计算" rel="1">与计算</a>
-    
-    
-    
-    <a href="/tags/#云原生" title="云原生" rel="1">云原生</a>
     
     
   </div>
@@ -1239,6 +1245,10 @@ AOF（Append Only File）描述的就是日志。
 <div class="widget">
   <ul>
     
+    <a href="../../2022/python-setup-py-egg-info-did-not-run-successfully/">
+      <li>Python安装插件出现的错误解决</li>
+    </a>
+    
     <a href="../../2021/cloud-computing-01/">
       <li>云计算初步</li>
     </a>
@@ -1253,10 +1263,6 @@ AOF（Append Only File）描述的就是日志。
     
     <a href="../../2021/elasticsearch-mapping-agg/">
       <li>Elasticsearch之Mapping和聚合查询</li>
-    </a>
-    
-    <a href="../../2021/Elasticsearch-query/">
-      <li>Elasticsearch查询语法</li>
     </a>
     
   </ul>
@@ -1285,7 +1291,7 @@ AOF（Append Only File）描述的就是日志。
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/09/">September 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/07/">July 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/06/">June 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/04/">April 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/02/">February 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/06/">June 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/05/">May 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/03/">March 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/02/">February 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/07/">July 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/11/">November 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/08/">August 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/05/">May 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/10/">October 2016</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2022/03/">March 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/09/">September 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/07/">July 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/06/">June 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/04/">April 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/02/">February 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/06/">June 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/05/">May 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/03/">March 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/02/">February 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/07/">July 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/11/">November 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/08/">August 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/05/">May 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/10/">October 2016</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1425,7 +1431,7 @@ AOF（Append Only File）描述的就是日志。
         <p class="copyright text-muted">
           Copyright &copy;
           Steven
-          2021
+          2022
           <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
