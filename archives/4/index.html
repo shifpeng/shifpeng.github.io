@@ -454,6 +454,94 @@
   <!-- top end -->
   
 
+  <a href="/2021/Redis持久化/">
+    <h2 class="post-title">
+      Redis持久化
+    </h2>
+    <h3 class="post-subtitle">
+      redis的持久化RDB、fork、copyonwrite、AOF、RDB&AOF混合使用
+    </h3>
+    <div class="post-content-preview">
+      上一片文章中说到会拿redis做数据库，那么数据库就需要持久化，因为内存中的东西，掉电易失。
+首先是单机持久化 ，再有单机也不靠谱的时候，主从复制
+
+数据存储，都关心两类东西：1:快照/副本；2:日志
+
+在redis中，也有这两种持久化机制：
+RDB（Redis DataBase）描述的就是快照/副本。
+AOF（Append Only File）描述的就是日志。
+一、RDB（Redis Da......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Steven on
+    2021-03-24
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+    
+    <a href="/tags/#Redis" title="Redis">Redis</a>
+    
+    <a href="/tags/#重学Redis" title="重学Redis">重学Redis</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/2021/Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU/">
+    <h2 class="post-title">
+      Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU
+    </h2>
+    <h3 class="post-subtitle">
+      Redis的消息订阅、pipeline、事务、modules、布隆过滤器、缓存LRU以及缓存常见问题
+    </h3>
+    <div class="post-content-preview">
+      首先要注意拿Redis作为数据库或者缓存的区别，比如如果拿redis做缓存，那么常见的问题有哪些？击穿、雪崩、穿透、一致性等。
+一、管道（Pipelining）
+通常情况下，Redis一个请求会遵循：
+1)、客户端发送一个查询，并监听socket返回，通常是阻塞模式，等到服务端响应
+2)、服务端处理命令，，返回结果到客户端
+这个时间被称为RTT(Round Trip Time 往返时间)
+较......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by 石福鹏 on
+    2021-03-21
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+    
+    <a href="/tags/#Redis" title="Redis">Redis</a>
+    
+    <a href="/tags/#重学Redis" title="重学Redis">重学Redis</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/2021/Redis的String类型和bitmap类型/">
     <h2 class="post-title">
       Redis的String类型和bitmap类型
@@ -796,85 +884,6 @@ c) 在java堆中生成一个代表这个类的java.lang.Cla......
 </div>
 <hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2021/大数据技术之Kafka/">
-    <h2 class="post-title">
-      大数据技术之Kafka
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      Kafka概述
-1、定义
-kafka是一个分布式的基于发布/订阅模式的消息队列（Message Queue）
-2、消息队列
-好处：
-
-解藕： 允许你独立的扩展或者修改两边的处理过程，只要确保他们遵守同样的接口约束
-可恢复性： 系统的一部分组建失效时，不会影响到整个系统，即使一个处理消息的进程挂掉，加入队列中的消息仍然可以在系统恢复后被处理
-缓冲： 有助于控制和优化系统的速度，解决生产消息和消......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by 石福鹏 on
-    2021-01-29
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Kafka" title="Kafka">Kafka</a>
-    
-    <a href="/tags/#中间件" title="中间件">中间件</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2020/满足某个日期满足条件的周、月日期处理工具类/">
-    <h2 class="post-title">
-      满足某个日期满足条件的周、月日期处理工具类
-    </h2>
-    <h3 class="post-subtitle">
-      满足某个日期满足条件的周、月日期处理工具类
-    </h3>
-    <div class="post-content-preview">
-      主要用法看一下main方法中的说明就知道了
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by 石福鹏 on
-    2020-12-04
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Java" title="Java">Java</a>
-    
-    <a href="/tags/#工具类" title="工具类">工具类</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -1178,6 +1187,14 @@ kafka是一个分布式的基于发布/订阅模式的消息队列（Message Que
     <a href="/tags/#笔记" title="笔记" rel="1">笔记</a>
     
     
+    
+    <a href="/tags/#PSTN" title="PSTN" rel="2">PSTN</a>
+    
+    
+    
+    <a href="/tags/#号码保护业务" title="号码保护业务" rel="1">号码保护业务</a>
+    
+    
   </div>
 </section>
 
@@ -1256,6 +1273,14 @@ kafka是一个分布式的基于发布/订阅模式的消息队列（Message Que
 <div class="widget">
   <ul>
     
+    <a href="../../2022/tencent-pstn-introduce/">
+      <li>腾讯云语音产品接受（PSTN）</li>
+    </a>
+    
+    <a href="../../2022/pstn-number-protection-service/">
+      <li>腾讯云语音产品（PSTN）-号码保护业务</li>
+    </a>
+    
     <a href="../../2022/python-setup-py-egg-info-did-not-run-successfully/">
       <li>Python安装插件出现Can not execute setup.py since setuptools is not available的错误解决</li>
     </a>
@@ -1266,14 +1291,6 @@ kafka是一个分布式的基于发布/订阅模式的消息队列（Message Que
     
     <a href="../../2021/es-optimization/">
       <li>Elasticsearch调优</li>
-    </a>
-    
-    <a href="../../2021/elasticsearch-aggregation-detailed/">
-      <li>Elasticsearch之aggregation详解</li>
-    </a>
-    
-    <a href="../../2021/elasticsearch-mapping-agg/">
-      <li>Elasticsearch之Mapping和聚合查询</li>
     </a>
     
   </ul>
@@ -1302,7 +1319,7 @@ kafka是一个分布式的基于发布/订阅模式的消息队列（Message Que
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2022/03/">March 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/09/">September 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/07/">July 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/06/">June 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/04/">April 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/02/">February 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/06/">June 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/05/">May 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/03/">March 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/02/">February 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/07/">July 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/11/">November 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/08/">August 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/05/">May 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/10/">October 2016</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2022/11/">November 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/03/">March 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/09/">September 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/07/">July 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/06/">June 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/04/">April 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/02/">February 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/06/">June 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/05/">May 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/03/">March 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/02/">February 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/07/">July 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/11/">November 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/08/">August 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/05/">May 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/10/">October 2016</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1380,6 +1397,10 @@ kafka是一个分布式的基于发布/订阅模式的消息队列（Message Que
     
     <a href="/categories/#笔记">
       <li>笔记</li>
+    </a>
+    
+    <a href="/categories/#PSTN">
+      <li>PSTN</li>
     </a>
     
   </ul>

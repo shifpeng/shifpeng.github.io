@@ -454,6 +454,84 @@
   <!-- top end -->
   
 
+  <a href="/2021/Elasticsearch-query/">
+    <h2 class="post-title">
+      Elasticsearch查询语法
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      一、查询语法
+1、Searchtimeout：
+(1)  设置：默认没有timeout，如果设置了timeout，那么会执行timeout机制。
+(2)  Timeout机制：假设用户查询结果有1W条数据，但是需要10″才能查询完毕，但是用户设置了1″的timeout，那么不管当前一共查询到了多少数据，都会在1″后ES讲停止查询，并返回当前数据。
+(3)  用法：GET /_search?t......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Steven on
+    2021-08-26
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Elasticsearch - 大数据" title="Elasticsearch - 大数据">Elasticsearch - 大数据</a>
+    
+    <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/2021/mysql-python-lib-error/">
+    <h2 class="post-title">
+      Python 安装MySQLdb出错问题排查
+    </h2>
+    <h3 class="post-subtitle">
+      Python安装MySQL-python提示Error:Command errored out with exit status 1:...的问题排查
+    </h3>
+    <div class="post-content-preview">
+      使用pip在安装第三方库时：
+1pip install MySQL-Python
+时，报错：
+
+google了好多原因，不乏于：
+需要安装mysql-connector-c、权限用户、安装其他的依赖等等，试了好多都不行，最终还是尝试再次读抛错的异常信息，发现自己刚才没有看到的一点信息
+1xcrun: error: invalid active developer path (/Library......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Steven on
+    2021-07-18
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Python" title="Python">Python</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/2021/go-base/">
     <h2 class="post-title">
       Golang基础 For Javaer
@@ -788,107 +866,6 @@ Resolution：把class文件中常量池用到的符号引用。转化成内存�
 </div>
 <hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2021/break-parental-delegation/">
-    <h2 class="post-title">
-      （二）打破双亲委派？
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      上篇文章中说到，双亲委派是在ClassLoader类的loadClass()方法中实现的，因此想打破，那就是
-
-
-重写loadClass()
-
-
-打破过双亲委派机制的情况(周志明写的《深入理解java虚拟机》中有说)
-
-
-JDK1.2之前，自定义ClassLoader都必须重写loadClass()方法
-
-
-可以在一个线程设定自己线程上下文的ClassLoader
-ThreadContext......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Steven on
-    2021-05-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
-    
-    <a href="/tags/#JVM" title="JVM">JVM</a>
-    
-    <a href="/tags/#JVM调优" title="JVM调优">JVM调优</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2021/jvm-base/">
-    <h2 class="post-title">
-      （一）JVM入门以及Class文件架构、类加载器
-    </h2>
-    <h3 class="post-subtitle">
-      JVM入门以及Class文件架构、类加载器 加载过程
-    </h3>
-    <div class="post-content-preview">
-      一、引言
-首先看一张图
-
-
-Java 是编译型语言还是解释型语言?
-
-有人说Java是编译型的。因为所有的Java代码都是要编译的，.java不经过编译就无法执行。
-也有人说Java是解释型的。因为java代码编译后不能直接运行，它是解释运行在JVM上的，所以它是解释型的。
-可以说Java是兼具编译型语言与解释型语言的特点的。
-
-
-另外，一些常用的代码，其实会被JIT即时编译器进行编译
-
-
-......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Steven on
-    2021-05-11
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
-    
-    <a href="/tags/#JVM" title="JVM">JVM</a>
-    
-    <a href="/tags/#JVM调优" title="JVM调优">JVM调优</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -1192,6 +1169,14 @@ Java 是编译型语言还是解释型语言?
     <a href="/tags/#笔记" title="笔记" rel="1">笔记</a>
     
     
+    
+    <a href="/tags/#PSTN" title="PSTN" rel="2">PSTN</a>
+    
+    
+    
+    <a href="/tags/#号码保护业务" title="号码保护业务" rel="1">号码保护业务</a>
+    
+    
   </div>
 </section>
 
@@ -1270,6 +1255,14 @@ Java 是编译型语言还是解释型语言?
 <div class="widget">
   <ul>
     
+    <a href="../../2022/tencent-pstn-introduce/">
+      <li>腾讯云语音产品接受（PSTN）</li>
+    </a>
+    
+    <a href="../../2022/pstn-number-protection-service/">
+      <li>腾讯云语音产品（PSTN）-号码保护业务</li>
+    </a>
+    
     <a href="../../2022/python-setup-py-egg-info-did-not-run-successfully/">
       <li>Python安装插件出现Can not execute setup.py since setuptools is not available的错误解决</li>
     </a>
@@ -1280,14 +1273,6 @@ Java 是编译型语言还是解释型语言?
     
     <a href="../../2021/es-optimization/">
       <li>Elasticsearch调优</li>
-    </a>
-    
-    <a href="../../2021/elasticsearch-aggregation-detailed/">
-      <li>Elasticsearch之aggregation详解</li>
-    </a>
-    
-    <a href="../../2021/elasticsearch-mapping-agg/">
-      <li>Elasticsearch之Mapping和聚合查询</li>
     </a>
     
   </ul>
@@ -1316,7 +1301,7 @@ Java 是编译型语言还是解释型语言?
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2022/03/">March 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/09/">September 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/07/">July 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/06/">June 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/04/">April 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/02/">February 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/06/">June 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/05/">May 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/03/">March 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/02/">February 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/07/">July 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/11/">November 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/08/">August 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/05/">May 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/10/">October 2016</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2022/11/">November 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/03/">March 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/09/">September 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/07/">July 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/06/">June 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/04/">April 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/02/">February 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/06/">June 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/05/">May 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/03/">March 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/02/">February 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/07/">July 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/11/">November 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/08/">August 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/05/">May 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/10/">October 2016</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1394,6 +1379,10 @@ Java 是编译型语言还是解释型语言?
     
     <a href="/categories/#笔记">
       <li>笔记</li>
+    </a>
+    
+    <a href="/categories/#PSTN">
+      <li>PSTN</li>
     </a>
     
   </ul>
