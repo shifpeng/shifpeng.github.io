@@ -732,15 +732,14 @@ GitHub地址
     <div class="post-content-preview">
       一、关于云计算市场
 
-
 重磅！2021年中国及31省市云计算软件行业政策汇总及解读（全）
 
 
 “现在仅大数据、人工智能、云计算这些学科为代表的新一代信息技术产业，人才缺口就有150万。”CCF大数据专家委员会常委、信息技术新工科产学研联盟大数据与智能计算工作委员会主任王元卓说，“到2050年，人才缺口会达到950万人。
 
 1、 EDC和IDC
-
-数据中心从建设用途上可分为IDC和EDC两类。......
+数据中心从建设用途上可分为IDC和EDC两类。
+I......
     </div>
   </a>
   
@@ -1930,5 +1929,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>
