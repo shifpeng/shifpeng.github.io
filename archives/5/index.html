@@ -259,9 +259,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              分类
+              归档
               
               
             </a>
@@ -270,9 +270,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              归档
+              分类
               
               
             </a>
@@ -446,6 +446,47 @@
       <!-- Main Content -->
 
 
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/2021/Java类加载/">
+    <h2 class="post-title">
+      Java类加载
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      类加载机制
+虚拟机把class文件加载到内存，并对数据进行校验，转换解析和初始化，形成可以被虚拟机直接使用的java类型，即java.lang.Class
+1. 装载（Load）
+查找和导入class文件
+a) 通过一个类的全限定名获取定义次类的二进制字节流
+b) 将这个字节流所代表的静态存储结构转化为方法区的运行时数据结构
+c) 在java堆中生成一个代表这个类的java.lang.Cla......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Steven on
+    2021-02-14
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Java" title="Java">Java</a>
+    
+    <a href="/tags/#JVM" title="JVM">JVM</a>
+    
+  </div>
+  
+
+</div>
+<hr>
 
 <div class="post-preview">
   
@@ -808,42 +849,6 @@ aba问题出现在cas机制的操作中，cas 比较并更新，比如说cas(期
 </div>
 <hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2020/【每日一题】Java-多线程中notify和notifyall的区别是/">
-    <h2 class="post-title">
-      【每日一题】Java 多线程中notify和notifyall的区别是?
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      notify
-notify唤醒在此对象监视器上等待的单个线程。
-如果所有线程都在此对象上等待，则会选择唤醒其中一个线程。选择是任意性的，并在对实现做出决定时发生。线程通过调用其中一个 wait 方法，在对象的监视器上等待。 直到当前线程放弃此对象上的锁定，才能继续执行被唤醒的线程。被唤醒的线程将以常规方式与在该对象上主动同步的其他所有线程进行竞争；
-例如，唤醒的线程在作为锁定此对象的下一个线......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by 石福鹏 on
-    2020-10-14
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#每日一题" title="每日一题">每日一题</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -900,7 +905,7 @@ notify唤醒在此对象监视器上等待的单个线程。
     
     
     
-    <a href="/tags/#Java" title="Java" rel="29">Java</a>
+    <a href="/tags/#Java" title="Java" rel="30">Java</a>
     
     
     
@@ -924,11 +929,11 @@ notify唤醒在此对象监视器上等待的单个线程。
     
     
     
-    <a href="/tags/#Java基础查漏补缺" title="Java基础查漏补缺" rel="5">Java基础查漏补缺</a>
-    
-    
-    
     <a href="/tags/#博客" title="博客" rel="1">博客</a>
+    
+    
+    
+    <a href="/tags/#Java基础查漏补缺" title="Java基础查漏补缺" rel="5">Java基础查漏补缺</a>
     
     
     
@@ -1028,7 +1033,7 @@ notify唤醒在此对象监视器上等待的单个线程。
     
     
     
-    <a href="/tags/#Go" title="Go" rel="1">Go</a>
+    <a href="/tags/#Base64" title="Base64" rel="1">Base64</a>
     
     
     
@@ -1045,6 +1050,22 @@ notify唤醒在此对象监视器上等待的单个线程。
     
     
     <a href="/tags/#Nodejs" title="Nodejs" rel="1">Nodejs</a>
+    
+    
+    
+    <a href="/tags/#PSTN" title="PSTN" rel="2">PSTN</a>
+    
+    
+    
+    <a href="/tags/#号码保护业务" title="号码保护业务" rel="1">号码保护业务</a>
+    
+    
+    
+    <a href="/tags/#笔记" title="笔记" rel="1">笔记</a>
+    
+    
+    
+    <a href="/tags/#RPC" title="RPC" rel="1">RPC</a>
     
     
     
@@ -1128,31 +1149,19 @@ notify唤醒在此对象监视器上等待的单个线程。
     
     
     
-    <a href="/tags/#ELK" title="ELK" rel="1">ELK</a>
-    
-    
-    
     <a href="/tags/#Websocket" title="Websocket" rel="1">Websocket</a>
     
     
     
+    <a href="/tags/#ELK" title="ELK" rel="1">ELK</a>
+    
+    
+    
+    <a href="/tags/#Go" title="Go" rel="1">Go</a>
+    
+    
+    
     <a href="/tags/#多线程与高并发" title="多线程与高并发" rel="2">多线程与高并发</a>
-    
-    
-    
-    <a href="/tags/#RPC" title="RPC" rel="1">RPC</a>
-    
-    
-    
-    <a href="/tags/#笔记" title="笔记" rel="1">笔记</a>
-    
-    
-    
-    <a href="/tags/#PSTN" title="PSTN" rel="2">PSTN</a>
-    
-    
-    
-    <a href="/tags/#号码保护业务" title="号码保护业务" rel="1">号码保护业务</a>
     
     
   </div>
@@ -1233,6 +1242,10 @@ notify唤醒在此对象监视器上等待的单个线程。
 <div class="widget">
   <ul>
     
+    <a href="../../2022/java-base64-encoder-and-decoder/">
+      <li>JDK1.8中java.util.Base64 编码解码</li>
+    </a>
+    
     <a href="../../2022/pstn-number-protection-service/">
       <li>腾讯云语音产品（PSTN）-号码保护业务</li>
     </a>
@@ -1247,10 +1260,6 @@ notify唤醒在此对象监视器上等待的单个线程。
     
     <a href="../../2021/cloud-computing-01/">
       <li>云计算初步</li>
-    </a>
-    
-    <a href="../../2021/es-optimization/">
-      <li>Elasticsearch调优</li>
     </a>
     
   </ul>
@@ -1279,7 +1288,7 @@ notify唤醒在此对象监视器上等待的单个线程。
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2022/11/">November 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/03/">March 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/09/">September 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/07/">July 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/06/">June 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/04/">April 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/02/">February 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/06/">June 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/05/">May 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/03/">March 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/02/">February 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/07/">July 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/11/">November 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/08/">August 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/05/">May 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/10/">October 2016</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2022/12/">December 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/11/">November 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/03/">March 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/09/">September 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/07/">July 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/06/">June 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/04/">April 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/02/">February 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/12/">December 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/06/">June 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/05/">May 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/03/">March 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/02/">February 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/07/">July 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/11/">November 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/08/">August 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/05/">May 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2016/10/">October 2016</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1319,10 +1328,6 @@ notify唤醒在此对象监视器上等待的单个线程。
       <li>CDN加速</li>
     </a>
     
-    <a href="/categories/#Go">
-      <li>Go</li>
-    </a>
-    
     <a href="/categories/#Hexo">
       <li>Hexo</li>
     </a>
@@ -1339,6 +1344,18 @@ notify唤醒在此对象监视器上等待的单个线程。
       <li>Python</li>
     </a>
     
+    <a href="/categories/#笔记">
+      <li>笔记</li>
+    </a>
+    
+    <a href="/categories/#RPC">
+      <li>RPC</li>
+    </a>
+    
+    <a href="/categories/#PSTN">
+      <li>PSTN</li>
+    </a>
+    
     <a href="/categories/#Zookeeper">
       <li>Zookeeper</li>
     </a>
@@ -1347,20 +1364,12 @@ notify唤醒在此对象监视器上等待的单个线程。
       <li>源码解析</li>
     </a>
     
+    <a href="/categories/#Go">
+      <li>Go</li>
+    </a>
+    
     <a href="/categories/#Redis">
       <li>Redis</li>
-    </a>
-    
-    <a href="/categories/#RPC">
-      <li>RPC</li>
-    </a>
-    
-    <a href="/categories/#笔记">
-      <li>笔记</li>
-    </a>
-    
-    <a href="/categories/#PSTN">
-      <li>PSTN</li>
     </a>
     
   </ul>

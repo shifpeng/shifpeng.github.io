@@ -259,9 +259,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              分类
+              归档
               
               
             </a>
@@ -270,9 +270,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              归档
+              分类
               
               
             </a>
@@ -613,6 +613,44 @@ GitHub地址
   <!-- top end -->
   
 
+  <a href="/2022/java-base64-encoder-and-decoder/">
+    <h2 class="post-title">
+      JDK1.8中java.util.Base64 编码解码
+    </h2>
+    <h3 class="post-subtitle">
+      由于最近的开发中，在进行加解密的时候，抛异常Illegal base64 character d,顾这里记录一下问题所在及处理方式
+    </h3>
+    <div class="post-content-preview">
+      一、问题发现
+工作中遇到的加签、验签的时候，我们有如下几个方法：
+验证签名：
+1234567891011121314151617181920212223242526272829303132333435/** * 签名验证 JAVA示例 * * @param httpBody * @param publicKey * @param signStr * @param timestamp * @p......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Steven on
+    2022-12-06
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Java" title="Java">Java</a>
+    
+    <a href="/tags/#Base64" title="Base64">Base64</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/2022/pstn-number-protection-service/">
     <h2 class="post-title">
       腾讯云语音产品（PSTN）-号码保护业务
@@ -621,11 +659,14 @@ GitHub地址
       
     </h3>
     <div class="post-content-preview">
-      一、业务介绍1、产品定义
+      一、业务介绍
+1、产品定义
+
 随着网购、网络求职、网约车、快递、外卖送餐等产业蓬勃发展，接听/拨打陌生人电话的场景越来越多，随之而来的用户隐私问题也日益凸显。如何使 App 有效保护用户手机号码不被泄漏，防止用户在正常的订单完成之后被频繁骚扰，是现有 App 产品和开发人员面临比较大的新的挑战。而腾讯云提供的 PSTN 号码保护方案，有效解决了用户号码隐私保护的问题.
 
 
-2、业务场景介绍多用于......
+2、业务场景介绍
+......
     </div>
   </a>
   
@@ -732,14 +773,15 @@ GitHub地址
     <div class="post-content-preview">
       一、关于云计算市场
 
+
 重磅！2021年中国及31省市云计算软件行业政策汇总及解读（全）
 
 
 “现在仅大数据、人工智能、云计算这些学科为代表的新一代信息技术产业，人才缺口就有150万。”CCF大数据专家委员会常委、信息技术新工科产学研联盟大数据与智能计算工作委员会主任王元卓说，“到2050年，人才缺口会达到950万人。
 
 1、 EDC和IDC
-数据中心从建设用途上可分为IDC和EDC两类。
-I......
+
+数据中心从建设用途上可分为IDC和EDC两类。......
     </div>
   </a>
   
@@ -841,46 +883,6 @@ I......
 </div>
 <hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/2021/elasticsearch-mapping-agg/">
-    <h2 class="post-title">
-      Elasticsearch之Mapping和聚合查询
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      一、Mapping：
-1、概念
-mapping就是ES数据字段field的type元数据，ES在创建索引的时候，dynamic mapping会自动为不同的数据指定相应mapping，mapping中包含了字段的类型、搜索方式（exact value或者full text）、分词器等。
-2、查看mapping
-1GET /product/_mappings
-3、Dynamic mapping......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Steven on
-    2021-08-26
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Elasticsearch - 大数据" title="Elasticsearch - 大数据">Elasticsearch - 大数据</a>
-    
-    <a href="/tags/#架构+大数据进阶" title="架构+大数据进阶">架构+大数据进阶</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -933,7 +935,7 @@ mapping就是ES数据字段field的type元数据，ES在创建索引的时候，
     
     
     
-    <a href="/tags/#Java" title="Java" rel="29">Java</a>
+    <a href="/tags/#Java" title="Java" rel="30">Java</a>
     
     
     
@@ -957,11 +959,11 @@ mapping就是ES数据字段field的type元数据，ES在创建索引的时候，
     
     
     
-    <a href="/tags/#Java基础查漏补缺" title="Java基础查漏补缺" rel="5">Java基础查漏补缺</a>
-    
-    
-    
     <a href="/tags/#博客" title="博客" rel="1">博客</a>
+    
+    
+    
+    <a href="/tags/#Java基础查漏补缺" title="Java基础查漏补缺" rel="5">Java基础查漏补缺</a>
     
     
     
@@ -1061,7 +1063,7 @@ mapping就是ES数据字段field的type元数据，ES在创建索引的时候，
     
     
     
-    <a href="/tags/#Go" title="Go" rel="1">Go</a>
+    <a href="/tags/#Base64" title="Base64" rel="1">Base64</a>
     
     
     
@@ -1078,6 +1080,22 @@ mapping就是ES数据字段field的type元数据，ES在创建索引的时候，
     
     
     <a href="/tags/#Nodejs" title="Nodejs" rel="1">Nodejs</a>
+    
+    
+    
+    <a href="/tags/#PSTN" title="PSTN" rel="2">PSTN</a>
+    
+    
+    
+    <a href="/tags/#号码保护业务" title="号码保护业务" rel="1">号码保护业务</a>
+    
+    
+    
+    <a href="/tags/#笔记" title="笔记" rel="1">笔记</a>
+    
+    
+    
+    <a href="/tags/#RPC" title="RPC" rel="1">RPC</a>
     
     
     
@@ -1161,31 +1179,19 @@ mapping就是ES数据字段field的type元数据，ES在创建索引的时候，
     
     
     
-    <a href="/tags/#ELK" title="ELK" rel="1">ELK</a>
-    
-    
-    
     <a href="/tags/#Websocket" title="Websocket" rel="1">Websocket</a>
     
     
     
+    <a href="/tags/#ELK" title="ELK" rel="1">ELK</a>
+    
+    
+    
+    <a href="/tags/#Go" title="Go" rel="1">Go</a>
+    
+    
+    
     <a href="/tags/#多线程与高并发" title="多线程与高并发" rel="2">多线程与高并发</a>
-    
-    
-    
-    <a href="/tags/#RPC" title="RPC" rel="1">RPC</a>
-    
-    
-    
-    <a href="/tags/#笔记" title="笔记" rel="1">笔记</a>
-    
-    
-    
-    <a href="/tags/#PSTN" title="PSTN" rel="2">PSTN</a>
-    
-    
-    
-    <a href="/tags/#号码保护业务" title="号码保护业务" rel="1">号码保护业务</a>
     
     
   </div>
@@ -1266,6 +1272,10 @@ mapping就是ES数据字段field的type元数据，ES在创建索引的时候，
 <div class="widget">
   <ul>
     
+    <a href="2022/java-base64-encoder-and-decoder/">
+      <li>JDK1.8中java.util.Base64 编码解码</li>
+    </a>
+    
     <a href="2022/pstn-number-protection-service/">
       <li>腾讯云语音产品（PSTN）-号码保护业务</li>
     </a>
@@ -1280,10 +1290,6 @@ mapping就是ES数据字段field的type元数据，ES在创建索引的时候，
     
     <a href="2021/cloud-computing-01/">
       <li>云计算初步</li>
-    </a>
-    
-    <a href="2021/es-optimization/">
-      <li>Elasticsearch调优</li>
     </a>
     
   </ul>
@@ -1312,7 +1318,7 @@ mapping就是ES数据字段field的type元数据，ES在创建索引的时候，
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/11/">November 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/03/">March 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/12/">December 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/09/">September 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/08/">August 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/07/">July 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/06/">June 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/04/">April 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/03/">March 2021</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/02/">February 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/12/">December 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/11/">November 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/10/">October 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/09/">September 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/08/">August 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/07/">July 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/06/">June 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/05/">May 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/04/">April 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/03/">March 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/02/">February 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2019/07/">July 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/11/">November 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/08/">August 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2017/05/">May 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2016/10/">October 2016</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/12/">December 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/11/">November 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/03/">March 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/12/">December 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/09/">September 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/08/">August 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/07/">July 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/06/">June 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/04/">April 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/03/">March 2021</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/02/">February 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/12/">December 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/11/">November 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/10/">October 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/09/">September 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/08/">August 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/07/">July 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/06/">June 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/05/">May 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/04/">April 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/03/">March 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/02/">February 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2019/07/">July 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/11/">November 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/08/">August 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2017/05/">May 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2016/10/">October 2016</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1352,10 +1358,6 @@ mapping就是ES数据字段field的type元数据，ES在创建索引的时候，
       <li>CDN加速</li>
     </a>
     
-    <a href="/categories/#Go">
-      <li>Go</li>
-    </a>
-    
     <a href="/categories/#Hexo">
       <li>Hexo</li>
     </a>
@@ -1372,6 +1374,18 @@ mapping就是ES数据字段field的type元数据，ES在创建索引的时候，
       <li>Python</li>
     </a>
     
+    <a href="/categories/#笔记">
+      <li>笔记</li>
+    </a>
+    
+    <a href="/categories/#RPC">
+      <li>RPC</li>
+    </a>
+    
+    <a href="/categories/#PSTN">
+      <li>PSTN</li>
+    </a>
+    
     <a href="/categories/#Zookeeper">
       <li>Zookeeper</li>
     </a>
@@ -1380,20 +1394,12 @@ mapping就是ES数据字段field的type元数据，ES在创建索引的时候，
       <li>源码解析</li>
     </a>
     
+    <a href="/categories/#Go">
+      <li>Go</li>
+    </a>
+    
     <a href="/categories/#Redis">
       <li>Redis</li>
-    </a>
-    
-    <a href="/categories/#RPC">
-      <li>RPC</li>
-    </a>
-    
-    <a href="/categories/#笔记">
-      <li>笔记</li>
-    </a>
-    
-    <a href="/categories/#PSTN">
-      <li>PSTN</li>
     </a>
     
   </ul>
